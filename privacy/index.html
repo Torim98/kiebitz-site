@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-title-de="Datenschutzerklärung · Kiebitz" data-title-en="Privacy Policy · Kiebitz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Kiebitz</title>
+<meta name="description" content="Datenschutzerklärung der App Kiebitz (deutsch und englisch): lokale Speicherung, Netzzugriffe, Berechtigungen, LAN-Sync, kein Tracking. · Privacy policy for the Kiebitz app in German and English.">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+(function () {
+  var l = "en";
+  try {
+    var s = localStorage.getItem("kiebitz-lang");
+    if (s === "de" || s === "en") l = s;
+    else if ((navigator.language || "").toLowerCase().indexOf("de") === 0) l = "de";
+  } catch (e) { /* egal */ }
+  document.documentElement.setAttribute("data-lang", l);
+  document.documentElement.setAttribute("lang", l);
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../index.html" aria-label="Kiebitz">
+      <img src="../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="de">Zug um Zugvogel</span><span lang="en">Moves take flight</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="../index.html#features"><span lang="de">Funktionen</span><span lang="en">Features</span></a>
+      <a href="../index.html#download"><span lang="de">Download</span><span lang="en">Download</span></a>
+      <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Sprache / Language">
+      <button type="button" data-set-lang="de" aria-pressed="false">DE</button>
+      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+    </div>
+    <a class="btn btn-sm" href="../index.html"><span lang="de">Zurück</span><span lang="en">Back</span></a>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap doc-grid">
+    <aside class="toc" aria-label="Inhalt">
+      <p class="toc-h"><span lang="de">Inhalt</span><span lang="en">Contents</span></p>
+      <ul>
+        <li><a href="#c1">1 <span lang="de">Verantwortlicher</span><span lang="en">Controller</span></a></li>
+        <li><a href="#c2">2 <span lang="de">Grundsatz</span><span lang="en">Principle</span></a></li>
+        <li><a href="#c3">3 <span lang="de">Lokal gespeicherte Daten</span><span lang="en">Data stored locally</span></a></li>
+        <li><a href="#c4">4 <span lang="de">Netzverbindungen</span><span lang="en">Network connections</span></a></li>
+        <li><a href="#c5">5 <span lang="de">Berechtigungen</span><span lang="en">Permissions</span></a></li>
+        <li><a href="#c6">6 <span lang="de">Geräte-Sync</span><span lang="en">Device sync</span></a></li>
+        <li><a href="#c7">7 <span lang="de">Kein Tracking</span><span lang="en">No tracking</span></a></li>
+        <li><a href="#c8">8 <span lang="de">Rechtsgrundlagen</span><span lang="en">Legal bases</span></a></li>
+        <li><a href="#c9">9 <span lang="de">Speicherdauer &amp; Löschung</span><span lang="en">Retention &amp; deletion</span></a></li>
+        <li><a href="#c10">10 <span lang="de">Kinder</span><span lang="en">Children</span></a></li>
+        <li><a href="#c11">11 <span lang="de">Deine Rechte</span><span lang="en">Your rights</span></a></li>
+        <li><a href="#c12">12 <span lang="de">Diese Website</span><span lang="en">This website</span></a></li>
+        <li><a href="#c13">13 <span lang="de">Änderungen</span><span lang="en">Changes</span></a></li>
+      </ul>
+    </aside>
+
+    <article>
+      <p class="eyebrow"><b>DE / EN</b> <span lang="de">Rechtstext</span><span lang="en">Legal text</span></p>
+      <h1><span lang="de">Datenschutzerklärung</span><span lang="en">Privacy Policy</span></h1>
+      <p class="doc-sub">
+        <span lang="de">Für die App <strong>Kiebitz</strong> (Windows und Android) und diese Website. Kiebitz ist eine local-first Anwendung: Die Daten bleiben auf deinen Geräten, der Anbieter betreibt keinen Server, der deine Inhalte empfängt.</span>
+        <span lang="en">For the <strong>Kiebitz</strong> app (Windows and Android) and this website. Kiebitz is a local-first application: your data stays on your devices, and the provider operates no server that receives your content.</span>
+      </p>
+      <p class="doc-meta">
+        <span lang="de">Stand: 26. Juli 2026 · gültig für alle Kiebitz-Versionen der Beta</span>
+        <span lang="en">Last updated: 26 July 2026 · applies to all Kiebitz beta versions</span>
+      </p>
+
+      <section id="c1">
+        <h2><span class="num">01</span><span lang="de">Verantwortlicher</span><span lang="en">Controller</span></h2>
+        <p lang="de">Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) für die Bereitstellung der App und dieser Website ist:</p>
+        <p lang="en">The controller within the meaning of the General Data Protection Regulation (GDPR) for providing the app and this website is:</p>
+        <div class="panel">
+          <address>
+            Tom Maurer<br>
+            Heidegarten 3<br>
+            56244 Helferskirchen<br>
+            <span lang="de">Deutschland</span><span lang="en">Germany</span><br>
+            <a href="mailto:tommaurerhof@gmail.com">tommaurerhof@gmail.com</a>
+          </address>
+        </div>
+        <p style="margin-top:14px">
+          <span lang="de">Ein Datenschutzbeauftragter ist nicht bestellt, da die Voraussetzungen des Art. 37 DSGVO nicht vorliegen. Für alle Fragen zum Datenschutz genügt eine E-Mail an die oben genannte Adresse.</span>
+          <span lang="en">No data protection officer has been appointed, as the conditions of Art. 37 GDPR are not met. For any privacy question, an email to the address above is enough.</span>
+        </p>
+      </section>
+
+      <section id="c2">
+        <h2><span class="num">02</span><span lang="de">Grundsatz: local-first</span><span lang="en">Principle: local-first</span></h2>
+        <p lang="de">Kiebitz verarbeitet deine Schachdaten ausschließlich auf deinen eigenen Geräten. Es gibt kein Nutzerkonto, keine Registrierung, keinen Cloud-Speicher und keinen Server des Anbieters, an den Partien, Analysen, Trainingsfortschritte oder Nutzungsdaten übertragen werden. Der Anbieter erhält im Regelbetrieb der App keine personenbezogenen Daten von dir und kann daher auch keine Auswertung oder Profilbildung vornehmen.</p>
+        <p lang="de">Die einzigen Netzverbindungen, die die App aufbaut, richten sich an Dritte, die du selbst ausgewählt hast (chess.com, Lichess, optional chessdb.cn) sowie an GitHub für die Update-Prüfung. Diese Verbindungen sind in Abschnitt 4 vollständig aufgeführt.</p>
+        <p lang="en">Kiebitz processes your chess data exclusively on your own devices. There is no user account, no registration, no cloud storage and no provider server that games, analyses, training progress or usage data are transmitted to. In normal operation of the app, the provider receives no personal data from you and therefore cannot analyse it or build any profile.</p>
+        <p lang="en">The only network connections the app establishes go to third parties you chose yourself (chess.com, Lichess, optionally chessdb.cn) and to GitHub for the update check. These connections are listed in full in section 4.</p>
+      </section>
+
+      <section id="c3">
+        <h2><span class="num">03</span><span lang="de">Welche Daten die App lokal speichert</span><span lang="en">What the app stores locally</span></h2>
+        <p lang="de">Kiebitz legt seine Daten in einer lokalen SQLite-Datenbank und in lokalen Konfigurationsdateien im anwendungseigenen Datenverzeichnis des Betriebssystems ab (Windows: Anwendungsdatenverzeichnis deines Benutzerkontos; Android: privates App-Verzeichnis, für andere Apps nicht lesbar). Gespeichert werden:</p>
+        <ul class="bul" lang="de">
+          <li>importierte Partien mit Metadaten (Datum, Gegnername, Elo-Werte, Zeitkontrolle, Eröffnung, Ergebnis, Zugfolge, Quelle)</li>
+          <li>Analyseergebnisse der Engine (Bewertungen pro Zug, Zugklassifizierung, Genauigkeit)</li>
+          <li>Repertoire-Baum und FSRS-Wiederholungsdaten, Puzzle-Fortschritt und Puzzle-Elo, Endspiel-Ergebnisse, Lernplan und Checklisten</li>
+          <li>deine eigenen Notizen und Tags zu Partien und Zügen</li>
+          <li>Einstellungen, darunter die von dir eingetragenen chess.com- und Lichess-Benutzernamen, Sprache, Engine-Optionen sowie – falls du das Handy gekoppelt hast – Adresse, Kopplungscode und Zertifikats-Fingerprint des Sync-Hubs</li>
+          <li>zwischengespeicherte Antworten des optionalen Online-Eröffnungsbuchs (bis zu 30 Tage)</li>
+        </ul>
+        <p lang="de" style="margin-top:14px">Diese Daten verlassen dein Gerät nicht, außer du exportierst sie selbst (z. B. als PGN-Datei) oder du synchronisierst sie mit einem eigenen zweiten Gerät (Abschnitt 6).</p>
+        <p lang="en">Kiebitz keeps its data in a local SQLite database and in local configuration files inside the operating system's application data directory (Windows: the application data directory of your user account; Android: the app's private directory, not readable by other apps). Stored are:</p>
+        <ul class="bul" lang="en">
+          <li>imported games with metadata (date, opponent name, Elo values, time control, opening, result, moves, source)</li>
+          <li>engine analysis results (evaluations per move, move classification, accuracy)</li>
+          <li>repertoire tree and FSRS review data, puzzle progress and puzzle Elo, endgame results, study plan and checklists</li>
+          <li>your own notes and tags on games and moves</li>
+          <li>settings, including the chess.com and Lichess usernames you entered, language, engine options and, if you paired a phone, the address, pairing code and certificate fingerprint of the sync hub</li>
+          <li>cached responses of the optional online opening book (up to 30 days)</li>
+        </ul>
+        <p lang="en" style="margin-top:14px">This data does not leave your device unless you export it yourself (for example as a PGN file) or synchronise it with a second device of your own (section 6).</p>
+      </section>
+
+      <section id="c4">
+        <h2><span class="num">04</span><span lang="de">Netzverbindungen der App</span><span lang="en">Network connections made by the app</span></h2>
+        <p lang="de">Die App baut ausschließlich die folgenden Verbindungen auf. Alle anderen Funktionen arbeiten offline.</p>
+        <p lang="en">The app establishes only the following connections. All other functions work offline.</p>
+        <table>
+          <thead>
+            <tr lang="de"><th>Ziel</th><th>Wann</th><th>Übertragene Daten</th></tr>
+            <tr lang="en"><th>Destination</th><th>When</th><th>Data transmitted</th></tr>
+          </thead>
+          <tbody>
+            <tr lang="de">
+              <td>api.chess.com</td>
+              <td>beim Partien-Import, den du auslöst (bzw. automatisch, wenn du den Auto-Import einschaltest)</td>
+              <td>der von dir eingetragene chess.com-Benutzername als Teil der Abfrage sowie technisch notwendige Verbindungsdaten (IP-Adresse deines Anschlusses)</td>
+            </tr>
+            <tr lang="de">
+              <td>lichess.org</td>
+              <td>beim Partien-Import, den du auslöst</td>
+              <td>der von dir eingetragene Lichess-Benutzername sowie technisch notwendige Verbindungsdaten</td>
+            </tr>
+            <tr lang="de">
+              <td>chessdb.cn</td>
+              <td>nur wenn du das Online-Eröffnungsbuch in den Einstellungen aktiviert hast, und nur auf der Analyse-Seite</td>
+              <td>die aktuell betrachtete Stellung (FEN) sowie technisch notwendige Verbindungsdaten. Ohne aktivierte Option findet keine Abfrage statt.</td>
+            </tr>
+            <tr lang="de">
+              <td>github.com / objects.githubusercontent.com</td>
+              <td>bei der Update-Prüfung der Desktop-App und wenn du ein Update installierst</td>
+              <td>Abruf der Release-Informationen und der Update-Datei sowie technisch notwendige Verbindungsdaten</td>
+            </tr>
+            <tr lang="en">
+              <td>api.chess.com</td>
+              <td>on the game import you trigger (or automatically if you enable auto-import)</td>
+              <td>the chess.com username you entered as part of the request, plus technically necessary connection data (the IP address of your connection)</td>
+            </tr>
+            <tr lang="en">
+              <td>lichess.org</td>
+              <td>on the game import you trigger</td>
+              <td>the Lichess username you entered, plus technically necessary connection data</td>
+            </tr>
+            <tr lang="en">
+              <td>chessdb.cn</td>
+              <td>only if you enabled the online opening book in the settings, and only on the Analysis page</td>
+              <td>the position currently shown (FEN) plus technically necessary connection data. With the option disabled, no request is made.</td>
+            </tr>
+            <tr lang="en">
+              <td>github.com / objects.githubusercontent.com</td>
+              <td>on the desktop app's update check and when you install an update</td>
+              <td>retrieval of release information and the update file, plus technically necessary connection data</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top:16px">
+          <span lang="de">Diese Dienste sind unabhängige Dritte und verarbeiten die Anfragen nach ihren eigenen Datenschutzbestimmungen. Die App überträgt an sie keine Inhalte, die über die genannten Angaben hinausgehen, insbesondere keine Kennungen, die dich geräteseitig identifizieren.</span>
+          <span lang="en">These services are independent third parties and process the requests under their own privacy terms. The app transmits nothing to them beyond the data named above, in particular no identifiers that would identify you on the device level.</span>
+        </p>
+        <ul class="bul" style="margin-top:14px">
+          <li><a href="https://www.chess.com/legal/privacy" rel="noopener noreferrer">chess.com: <span lang="de">Datenschutzerklärung</span><span lang="en">privacy policy</span></a></li>
+          <li><a href="https://lichess.org/privacy" rel="noopener noreferrer">Lichess: <span lang="de">Datenschutzerklärung</span><span lang="en">privacy policy</span></a></li>
+          <li><a href="https://www.chessdb.cn/" rel="noopener noreferrer">chessdb.cn: <span lang="de">Anbieterseite</span><span lang="en">provider site</span></a></li>
+          <li><a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">GitHub: <span lang="de">Datenschutzerklärung</span><span lang="en">privacy statement</span></a></li>
+        </ul>
+      </section>
+
+      <section id="c5">
+        <h2><span class="num">05</span><span lang="de">Berechtigungen auf dem Gerät</span><span lang="en">Device permissions</span></h2>
+        <ul class="bul" lang="de">
+          <li><strong>Kamera (Android):</strong> ausschließlich zum Scannen des QR-Codes für die Geräte-Kopplung. Die Berechtigung wird erst in diesem Moment angefragt. Es werden keine Fotos oder Videos gespeichert, verarbeitet oder übertragen; ausgelesen wird nur der im QR-Code enthaltene Text.</li>
+          <li><strong>Internet / Netzwerkzugriff:</strong> für die in Abschnitt 4 genannten Abrufe und für den Sync im lokalen Netz.</li>
+          <li><strong>Benachrichtigungen:</strong> optional, für lokale Trainings-Erinnerungen. Sie werden auf dem Gerät erzeugt, ohne Push-Dienst.</li>
+          <li><strong>Dateizugriff:</strong> nur wenn du selbst eine PGN-Datei importierst oder exportierst, über die Dateiauswahl des Betriebssystems.</li>
+        </ul>
+        <ul class="bul" lang="en">
+          <li><strong>Camera (Android):</strong> solely to scan the QR code for device pairing. The permission is requested only at that moment. No photos or videos are stored, processed or transmitted; only the text contained in the QR code is read.</li>
+          <li><strong>Internet / network access:</strong> for the requests listed in section 4 and for sync on the local network.</li>
+          <li><strong>Notifications:</strong> optional, for local training reminders. They are generated on the device, without any push service.</li>
+          <li><strong>File access:</strong> only when you import or export a PGN file yourself, through the operating system's file picker.</li>
+        </ul>
+      </section>
+
+      <section id="c6">
+        <h2><span class="num">06</span><span lang="de">Geräte-Sync im lokalen Netz</span><span lang="en">Device sync on the local network</span></h2>
+        <p lang="de">Wenn du Desktop und Handy koppelst, verbinden sich ausschließlich deine eigenen Geräte miteinander. Der Desktop dient als Hub; das Handy erhält Adresse, Kopplungscode und den Fingerprint des TLS-Zertifikats über den angezeigten QR-Code. Die Übertragung läuft verschlüsselt (TLS mit Fingerprint-Prüfung) direkt über dein lokales Netz oder ein von dir eingerichtetes VPN.</p>
+        <p lang="de">Es gibt keinen Vermittlungsserver, keinen Relay und keinen Anbieterzugriff. Ohne Kopplung findet kein Sync statt; die Kopplung kannst du in den Einstellungen jederzeit entfernen.</p>
+        <p lang="en">When you pair desktop and phone, only your own devices connect to each other. The desktop acts as the hub; the phone receives the address, pairing code and TLS certificate fingerprint from the QR code shown on screen. The transfer runs encrypted (TLS with fingerprint verification) directly over your local network or a VPN you set up yourself.</p>
+        <p lang="en">There is no intermediary server, no relay and no provider access. Without pairing there is no sync; you can remove the pairing in the settings at any time.</p>
+      </section>
+
+      <section id="c7">
+        <h2><span class="num">07</span><span lang="de">Kein Tracking, keine Werbung</span><span lang="en">No tracking, no advertising</span></h2>
+        <ul class="bul" lang="de">
+          <li>keine Analyse- oder Statistik-SDKs, kein Crash-Reporting, keine Fernprotokollierung</li>
+          <li>keine Werbung, keine Werbe-IDs, keine Werbenetzwerke, kein Ad-Tracking</li>
+          <li>keine Weitergabe oder Verkauf von Daten an Dritte</li>
+          <li>keine automatisierte Entscheidungsfindung und kein Profiling im Sinne des Art. 22 DSGVO</li>
+          <li>keine Cookies in der App</li>
+        </ul>
+        <ul class="bul" lang="en">
+          <li>no analytics or statistics SDKs, no crash reporting, no remote logging</li>
+          <li>no advertising, no advertising IDs, no ad networks, no ad tracking</li>
+          <li>no sharing or selling of data to third parties</li>
+          <li>no automated decision-making and no profiling within the meaning of Art. 22 GDPR</li>
+          <li>no cookies in the app</li>
+        </ul>
+      </section>
+
+      <section id="c8">
+        <h2><span class="num">08</span><span lang="de">Rechtsgrundlagen</span><span lang="en">Legal bases</span></h2>
+        <p lang="de">Da die App die Daten lokal auf deinem Gerät verarbeitet und der Anbieter dabei keinen Zugriff darauf hat, liegt insoweit keine Verarbeitung durch den Verantwortlichen vor. Soweit einzelne Vorgänge dennoch datenschutzrechtlich relevant sind, gelten:</p>
+        <ul class="bul" lang="de">
+          <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong>: Bereitstellung der von dir angeforderten Funktionen, insbesondere der Import deiner Partien von chess.com bzw. Lichess und der Sync zwischen deinen Geräten.</li>
+          <li><strong>Art. 6 Abs. 1 lit. a DSGVO</strong>: Einwilligung, wo du eine Funktion selbst einschaltest: optionales Online-Eröffnungsbuch (chessdb.cn), Kamera-Zugriff für das QR-Pairing, Benachrichtigungen. Du kannst sie jederzeit in den Einstellungen bzw. den Systemeinstellungen widerrufen.</li>
+          <li><strong>Art. 6 Abs. 1 lit. f DSGVO</strong>: berechtigtes Interesse an einer sicheren, aktuellen Software: Prüfung auf Programm-Updates.</li>
+        </ul>
+        <p lang="en">Because the app processes data locally on your device and the provider has no access to it, there is no processing by the controller in that respect. Where individual operations are nevertheless relevant under data protection law, the following apply:</p>
+        <ul class="bul" lang="en">
+          <li><strong>Art. 6(1)(b) GDPR</strong>: providing the functions you requested, in particular importing your games from chess.com or Lichess and syncing between your devices.</li>
+          <li><strong>Art. 6(1)(a) GDPR</strong>: consent, wherever you switch a function on yourself: the optional online opening book (chessdb.cn), camera access for QR pairing, notifications. You can withdraw it at any time in the app or system settings.</li>
+          <li><strong>Art. 6(1)(f) GDPR</strong>: legitimate interest in secure, up-to-date software: checking for program updates.</li>
+        </ul>
+      </section>
+
+      <section id="c9">
+        <h2><span class="num">09</span><span lang="de">Speicherdauer und Löschung</span><span lang="en">Retention and deletion</span></h2>
+        <p lang="de">Die lokalen Daten bleiben so lange gespeichert, wie du sie behalten möchtest; es gibt keine serverseitige Aufbewahrung und daher keine Löschfristen beim Anbieter. Du kannst jederzeit:</p>
+        <ul class="bul" lang="de">
+          <li>einzelne Partien, Notizen, Tags oder Repertoire-Einträge in der App löschen,</li>
+          <li>die Kopplung mit einem anderen Gerät entfernen,</li>
+          <li>die App deinstallieren; damit werden die lokalen App-Daten entfernt (unter Android zusätzlich über „App-Daten löschen“, unter Windows durch Löschen des Anwendungsdatenverzeichnisses),</li>
+          <li>deine Daten vorher als PGN exportieren, wenn du sie behalten willst.</li>
+        </ul>
+        <p lang="en">Local data stays stored for as long as you want to keep it; there is no server-side retention and therefore no deletion periods at the provider. At any time you can:</p>
+        <ul class="bul" lang="en">
+          <li>delete individual games, notes, tags or repertoire entries inside the app,</li>
+          <li>remove the pairing with another device,</li>
+          <li>uninstall the app, which removes the local app data (on Android additionally via “clear app data”, on Windows by deleting the application data directory),</li>
+          <li>export your data as PGN beforehand if you want to keep it.</li>
+        </ul>
+      </section>
+
+      <section id="c10">
+        <h2><span class="num">10</span><span lang="de">Kinder und Jugendliche</span><span lang="en">Children</span></h2>
+        <p lang="de">Kiebitz richtet sich nicht speziell an Kinder und erhebt keine Daten über den Anbieter; unabhängig vom Alter der nutzenden Person werden keine personenbezogenen Daten an den Anbieter übertragen. Beim Import von Partien gelten die Bedingungen des jeweiligen Schachportals.</p>
+        <p lang="en">Kiebitz is not specifically directed at children and collects no data via the provider; regardless of the user's age, no personal data is transmitted to the provider. When importing games, the terms of the respective chess platform apply.</p>
+      </section>
+
+      <section id="c11">
+        <h2><span class="num">11</span><span lang="de">Deine Rechte</span><span lang="en">Your rights</span></h2>
+        <p lang="de">Dir stehen nach der DSGVO die Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21) zu, ebenso das Recht, eine erteilte Einwilligung jederzeit zu widerrufen (Art. 7 Abs. 3).</p>
+        <p lang="de">In der Praxis gilt: Da der Anbieter keine Daten über dich speichert, können Auskunft und Löschung in der Regel nur die Daten betreffen, die auf deinem eigenen Gerät liegen und die du dort selbst einsehen, exportieren und löschen kannst. Für Anfragen genügt eine E-Mail an <a href="mailto:tommaurerhof@gmail.com">tommaurerhof@gmail.com</a>.</p>
+        <p lang="de">Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz; du kannst dich auch an die Behörde deines Wohnorts wenden.</p>
+        <p lang="en">Under the GDPR you have the rights of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and objection (Art. 21), as well as the right to withdraw consent at any time (Art. 7(3)).</p>
+        <p lang="en">In practice: since the provider stores no data about you, access and erasure will normally only concern the data on your own device, which you can view, export and delete there yourself. An email to <a href="mailto:tommaurerhof@gmail.com">tommaurerhof@gmail.com</a> is enough for any request.</p>
+        <p lang="en">You also have the right to lodge a complaint with a data protection supervisory authority. The competent authority is the State Commissioner for Data Protection and Freedom of Information of Rhineland-Palatinate, Germany; you may also contact the authority where you live.</p>
+      </section>
+
+      <section id="c12">
+        <h2><span class="num">12</span><span lang="de">Diese Website</span><span lang="en">This website</span></h2>
+        <p lang="de">Diese Website ist statisch und wird über GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) ausgeliefert. Beim Aufruf verarbeitet GitHub als Hoster technisch notwendige Verbindungsdaten, insbesondere deine IP-Adresse, Datum und Uhrzeit, angeforderte Datei, Referrer und Browserkennung, in Server-Logfiles. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sicherer, störungsfreier Betrieb). Der Anbieter dieser Website hat keinen Zugriff auf diese Logdaten.</p>
+        <p lang="de">Die Website setzt keine Cookies, kein Analytics, keine Werbe- oder Social-Media-Skripte und lädt keine Inhalte von Drittanbietern nach; Schriftarten, Stile und Bilder liegen auf demselben Server. Die von dir gewählte Sprache wird ausschließlich lokal in deinem Browser (localStorage) gespeichert, damit die Seite beim nächsten Besuch in derselben Sprache erscheint; diese Angabe wird nicht übertragen. Datenschutzerklärung von GitHub: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>.</p>
+        <p lang="en">This website is static and delivered via GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). When you visit it, GitHub as the host processes technically necessary connection data in server log files, in particular your IP address, date and time, the file requested, referrer and browser identification. The legal basis is Art. 6(1)(f) GDPR (secure, trouble-free operation). The provider of this website has no access to these log files.</p>
+        <p lang="en">The website sets no cookies, uses no analytics and no advertising or social media scripts, and loads no third-party content; fonts, styles and images are served from the same server. The language you choose is stored only locally in your browser (localStorage) so the page appears in the same language next time; that setting is not transmitted. GitHub's privacy statement: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>.</p>
+      </section>
+
+      <section id="c13">
+        <h2><span class="num">13</span><span lang="de">Änderungen dieser Erklärung</span><span lang="en">Changes to this policy</span></h2>
+        <p lang="de">Wird die App um Funktionen erweitert, die neue Datenverarbeitungen mit sich bringen, wird diese Erklärung vorher angepasst. Der jeweils aktuelle Stand ist oben datiert und dauerhaft unter dieser Adresse erreichbar.</p>
+        <p lang="en">If the app gains functions that involve new data processing, this policy will be updated beforehand. The current version is dated above and permanently available at this address.</p>
+        <div class="panel" style="margin-top:22px">
+          <p>
+            <span lang="de">Fragen zum Datenschutz? Schreib an <a href="mailto:tommaurerhof@gmail.com">tommaurerhof@gmail.com</a>. Der Quellcode der App ist einsehbar unter <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+            <span lang="en">Questions about privacy? Write to <a href="mailto:tommaurerhof@gmail.com">tommaurerhof@gmail.com</a>. The app's source code can be inspected at <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+          </p>
+        </div>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="small" style="margin-top:8px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="../index.html"><span lang="de">Startseite</span><span lang="en">Home</span></a>
+      <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span></a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span></a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

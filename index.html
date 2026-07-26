@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-title-de="Kiebitz · Zug um Zugvogel. Local-first Schach-App für Windows und Android" data-title-en="Kiebitz · Moves take flight. A local-first chess app for Windows and Android">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiebitz · Moves take flight. A local-first chess app for Windows and Android</title>
+<meta name="description" content="Kiebitz importiert deine chess.com- und Lichess-Partien, analysiert sie mit einem nativen Stockfish und zeigt, wo du wirklich schlecht spielst. Kein Konto, keine Cloud, keine Telemetrie. · Kiebitz imports your chess.com and Lichess games, analyzes them with a native Stockfish and shows where you actually play badly. No account, no cloud, no telemetry.">
+<meta name="theme-color" content="#0e0e0d">
+<link rel="icon" href="assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kiebitz · Moves take flight">
+<meta property="og:description" content="Local-first chess companion for Windows and Android. Import, analyze, understand, all on your own devices.">
+<meta property="og:url" content="https://torim98.github.io/kiebitz-site/">
+<meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/icon.png">
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<script>
+(function () {
+  var l = "en";
+  try {
+    var s = localStorage.getItem("kiebitz-lang");
+    if (s === "de" || s === "en") l = s;
+    else if ((navigator.language || "").toLowerCase().indexOf("de") === 0) l = "de";
+  } catch (e) { /* egal */ }
+  document.documentElement.setAttribute("data-lang", l);
+  document.documentElement.setAttribute("lang", l);
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="index.html" aria-label="Kiebitz">
+      <img src="assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="de">Zug um Zugvogel</span><span lang="en">Moves take flight</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="#features"><span lang="de">Funktionen</span><span lang="en">Features</span></a>
+      <a href="#local"><span lang="de">Local-first</span><span lang="en">Local-first</span></a>
+      <a href="#download"><span lang="de">Download</span><span lang="en">Download</span></a>
+      <a href="privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Sprache / Language">
+      <button type="button" data-set-lang="de" aria-pressed="false">DE</button>
+      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+    </div>
+    <a class="btn btn-primary btn-sm" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+      <span lang="de">Download</span><span lang="en">Download</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="de">Beta · offener Test</span><span lang="en">Beta · early access</span></p>
+        <h1>
+          <span lang="de">Kiebitz <span class="flight">kiebitzt</span> bei deinen Partien.</span>
+          <span lang="en">Kiebitz <span class="flight">looks over</span> your shoulder.</span>
+        </h1>
+        <p class="hero-sub" lang="de">Ein Kiebitz ist ein Vogel, und im Deutschen der Zuschauer, der beim Spiel über die Schulter sieht. Diese App importiert deine Partien von chess.com und Lichess, lässt einen nativen Stockfish durch die ganze Historie laufen und sagt dir, wo du wirklich schlecht spielst. <strong>Alles bleibt auf deinen Geräten.</strong></p>
+        <p class="hero-sub" lang="en">A <i>Kiebitz</i> is a bird, and in German the onlooker who watches your game over your shoulder. This app imports your chess.com and Lichess games, runs a native Stockfish across your whole history and tells you where you actually play badly. <strong>Everything stays on your own devices.</strong></p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="de">Für Windows laden</span><span lang="en">Get it for Windows</span>
+          </a>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="de">Android (APK)</span><span lang="en">Android (APK)</span>
+          </a>
+        </div>
+        <p class="cta-note"><span lang="de">Kostenlos · GitHub Releases · kein Konto nötig</span><span lang="en">Free · GitHub Releases · no account needed</span></p>
+      </div>
+
+      <div class="board-card" aria-hidden="true">
+        <div class="board-head">
+          <span>b1 → e8</span>
+          <span data-square-label>b1</span>
+        </div>
+        <div class="board-stage">
+          <div class="board-lattice"></div>
+          <svg class="board-path" viewBox="0 0 8 8" preserveAspectRatio="none" focusable="false"></svg>
+        </div>
+        <div class="board-coords"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        <div class="board-foot">
+          <span class="pill"><span lang="de">Stockfish · nativ</span><span lang="en">Stockfish · native</span></span>
+          <span><span lang="de">Die Analyse läuft auf deinem Gerät.</span><span lang="en">Analysis runs on your device.</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 01 Local-first ────────────────────────────────────────────────── -->
+  <section class="section" id="local">
+    <div class="wrap">
+      <p class="eyebrow"><b>01</b> <span lang="de">Local-first</span><span lang="en">Local-first</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
+        <span lang="de">Deine Partien sind deine Partien.</span>
+        <span lang="en">Your games are your games.</span>
+      </h2>
+      <p class="lede" style="margin-top:18px">
+        <span lang="de">Kiebitz hat keinen Server. Es gibt nichts, wo du dich einloggen musst, nichts, was hochgeladen wird, und keine Analyse, die woanders passiert. Die Datenbank ist eine SQLite-Datei auf deinem Rechner.</span>
+        <span lang="en">Kiebitz has no server. There is nothing to log into, nothing that gets uploaded, and no analysis that happens somewhere else. The database is a SQLite file on your own machine.</span>
+      </p>
+      <dl class="promise rv" style="margin-top:32px">
+        <div>
+          <dt><span lang="de">Kein Konto</span><span lang="en">No account</span></dt>
+          <dd><span lang="de">Keine Registrierung, keine E-Mail, kein Login.</span><span lang="en">No sign-up, no email, no login.</span></dd>
+        </div>
+        <div>
+          <dt><span lang="de">Keine Cloud</span><span lang="en">No cloud</span></dt>
+          <dd><span lang="de">Partien, Analysen und Fortschritt liegen lokal.</span><span lang="en">Games, analyses and progress stay local.</span></dd>
+        </div>
+        <div>
+          <dt><span lang="de">Keine Telemetrie</span><span lang="en">No telemetry</span></dt>
+          <dd><span lang="de">Kein Tracking, keine Werbung, keine Absturzberichte.</span><span lang="en">No tracking, no ads, no crash reports.</span></dd>
+        </div>
+        <div>
+          <dt><span lang="de">Sync im eigenen Netz</span><span lang="en">Sync on your own network</span></dt>
+          <dd><span lang="de">Handy und Desktop reden verschlüsselt direkt miteinander.</span><span lang="en">Phone and desktop talk to each other directly, encrypted.</span></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ── 02 Ablauf ─────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow"><b>02</b> <span lang="de">Ablauf</span><span lang="en">How it works</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:24ch">
+        <span lang="de">Importieren, analysieren, verstehen.</span>
+        <span lang="en">Import, analyze, understand.</span>
+      </h2>
+      <div class="flow rv" style="margin-top:34px">
+        <article class="step">
+          <p class="step-n">01</p>
+          <h3><span lang="de">Importieren</span><span lang="en">Import</span></h3>
+          <p><span lang="de">Benutzername eintragen, fertig. Kiebitz holt die komplette Historie: duplikatsicher, auch als PGN für Brettpartien.</span><span lang="en">Enter your username, that's it. Kiebitz pulls your whole history: duplicate-safe, and PGN for over-the-board games.</span></p>
+          <div class="step-viz srcrow">
+            <span class="srcpill cc">chess.com</span>
+            <span class="srcpill li">lichess</span>
+            <span class="srcpill pgn">PGN</span>
+          </div>
+        </article>
+        <article class="step">
+          <p class="step-n">02</p>
+          <h3><span lang="de">Analysieren</span><span lang="en">Analyze</span></h3>
+          <p><span lang="de">Ein nativer Stockfish arbeitet die Warteschlange im Hintergrund ab: Bewertung pro Zug, Ungenauigkeit, Fehler, Blunder, Genauigkeit.</span><span lang="en">A native Stockfish works through the queue in the background: eval per move, inaccuracy, mistake, blunder, accuracy.</span></p>
+          <div class="step-viz">
+            <div class="evalbar" aria-hidden="true"><span class="w" style="width:52%"></span><span class="b"></span></div>
+            <div class="evalticks" aria-hidden="true"><span>1. e4</span><span class="bad">24. Sf3?? −3.1</span><span>41. Kg2</span></div>
+          </div>
+        </article>
+        <article class="step">
+          <p class="step-n">03</p>
+          <h3><span lang="de">Verstehen</span><span lang="en">Understand</span></h3>
+          <p><span lang="de">Nicht „gut gespielt“, sondern: in welcher Phase, in welcher Eröffnung, unter welcher Bedenkzeit es kippt.</span><span lang="en">Not “well played”, but: which phase, which opening, which time control is where it falls apart.</span></p>
+          <div class="step-viz bars" aria-hidden="true">
+            <div class="bar"><span class="bar-l"><span lang="de">Eröffnung</span><span lang="en">Opening</span></span><span class="bar-t"><i data-w="22"></i></span><span class="bar-v">0.4</span></div>
+            <div class="bar hot"><span class="bar-l"><span lang="de">Mittelspiel</span><span lang="en">Middlegame</span></span><span class="bar-t"><i data-w="78"></i></span><span class="bar-v">1.9</span></div>
+            <div class="bar"><span class="bar-l"><span lang="de">Endspiel</span><span lang="en">Endgame</span></span><span class="bar-t"><i data-w="46"></i></span><span class="bar-v">0.9</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 Funktionen ─────────────────────────────────────────────────── -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <p class="eyebrow"><b>03</b> <span lang="de">Funktionen</span><span lang="en">Features</span></p>
+
+      <div class="feature rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Insights</p>
+          <h3><span lang="de">Wo du wirklich schlecht spielst</span><span lang="en">Where you actually play badly</span></h3>
+          <p><span lang="de">Vier Auswertungsseiten über die ganze Historie statt einer Zahl pro Partie: Spielstärke, Eröffnungen getrennt nach Farbe, Verhaltensmuster und die Phasen, in denen deine Fehler passieren.</span><span lang="en">Four in-depth pages across your whole history instead of one number per game: playing strength, openings by colour, behavioural patterns, and the phases where your errors happen.</span></p>
+          <ul class="ticks">
+            <li><span lang="de">Genauigkeit und Fehlerrate über Monate, nicht über eine Partie</span><span lang="en">Accuracy and error rate over months, not over one game</span></li>
+            <li><span lang="de">Eröffnungen mit Ergebnis, Abweichung und Trefferquote</span><span lang="en">Openings with results, deviation and hit rate</span></li>
+            <li><span lang="de">Muster: Zeitnot, lange Serien, Revanche-Partien</span><span lang="en">Patterns: time trouble, long sessions, revenge games</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" aria-label="Screenshot"><img src="assets/shots/insights.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Insights"></button>
+          <figcaption>
+            <span lang="de">Insights · Genauigkeit und Fehler nach Spielphase</span><span lang="en">Insights · accuracy and errors by game phase</span>
+            <span><span lang="de">1.483 Partien</span><span lang="en">1,483 games</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Repertoire · FSRS</p>
+          <h3><span lang="de">Eröffnungen, die tatsächlich sitzen</span><span lang="en">An opening book that actually sticks</span></h3>
+          <p><span lang="de">Dein Repertoire ist ein Stellungsbaum, der mit FSRS wiederholt wird, derselbe Ansatz wie bei guten Vokabeltrainern. Jeder Zug hat sein eigenes Intervall, fällige Wiederholungen stehen morgens auf dem Dashboard.</span><span lang="en">Your repertoire is a position tree trained with FSRS spaced repetition, the same approach good flashcard apps use. Every move has its own interval; due reviews are on the dashboard each morning.</span></p>
+          <ul class="ticks">
+            <li><span lang="de">Züge aus eigenen Partien direkt ins Buch übernehmen</span><span lang="en">Add moves from your own games straight into the book</span></li>
+            <li><span lang="de">Abdeckung pro Eröffnung, getrennt nach Weiß und Schwarz</span><span lang="en">Coverage per opening, split by white and black</span></li>
+            <li><span lang="de">Serie und fällige Karten statt Dauerbeschäftigung</span><span lang="en">Streak and due cards instead of endless drilling</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" aria-label="Screenshot"><img src="assets/shots/repertoire.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Repertoire"></button>
+          <figcaption>
+            <span lang="de">Repertoire · Varianten als Weiß und Schwarz</span><span lang="en">Repertoire · variations as white and black</span>
+            <span><span lang="de">17 Züge im Buch · Abdeckung 42 %</span><span lang="en">17 moves in book · 42 % coverage</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature rv">
+        <div class="feature-text">
+          <p class="feature-kicker"><span lang="de">Puzzles &amp; Endspiele</span><span lang="en">Puzzles &amp; endgames</span></p>
+          <h3><span lang="de">Taktik aus deinen eigenen Fehlern</span><span lang="en">Tactics made from your own mistakes</span></h3>
+          <p><span lang="de">Neben der offline verfügbaren Lichess-Puzzledatenbank baut Kiebitz Aufgaben aus den Stellungen, in denen du selbst den Gewinnzug übersehen hast. Dazu kuratierte Endspiel-Drills gegen die Engine, optional mit Syzygy-Tabellen.</span><span lang="en">Alongside the offline Lichess puzzle database, Kiebitz builds problems from the positions where you missed the winning move yourself. Plus curated endgame drills against the engine, optionally with Syzygy tablebases.</span></p>
+          <ul class="ticks">
+            <li><span lang="de">Puzzle-Elo und Trefferquote pro Motiv</span><span lang="en">Puzzle Elo and hit rate per theme</span></li>
+            <li><span lang="de">Endspiele: Bauernumwandlung, Turmendspiele, Mattführungen</span><span lang="en">Endgames: promotion, rook endings, forced mates</span></li>
+            <li><span lang="de">Alles offline spielbar, auch ohne Netz</span><span lang="en">All playable offline, no connection needed</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" aria-label="Screenshot"><img src="assets/shots/puzzles.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Puzzles"></button>
+          <figcaption>
+            <span lang="de">Puzzles · Trefferquote pro Motiv</span><span lang="en">Puzzles · hit rate per theme</span>
+            <span><span lang="de">285 Aufgaben aus eigenen Partien</span><span lang="en">285 puzzles from your own games</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Study</p>
+          <h3><span lang="de">Ein Plan, der aus deinen Daten kommt</span><span lang="en">A plan that comes out of your data</span></h3>
+          <p><span lang="de">Der Lernplaner liest deine Schwächen aus den Analysen und schlägt vor, was heute dran ist: Wiederholungen, ein Motiv, ein Endspiel. Als Tages-Checkliste und als Wochenplan, den du selbst umsortieren kannst.</span><span lang="en">The study planner reads your weaknesses from the analyses and suggests what to do today: reviews, one theme, one endgame. As a daily checklist and a weekly plan you can rearrange yourself.</span></p>
+          <ul class="ticks">
+            <li><span lang="de">Empfehlungen mit Begründung aus deinen Partien</span><span lang="en">Recommendations with reasons taken from your games</span></li>
+            <li><span lang="de">Drag-and-drop-Planer für die Woche</span><span lang="en">Drag-and-drop planner for the week</span></li>
+            <li><span lang="de">Erinnerungen lokal auf dem Gerät</span><span lang="en">Reminders locally on the device</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" aria-label="Screenshot"><img src="assets/shots/study.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Study"></button>
+          <figcaption>
+            <span lang="de">Study · Coach-Empfehlungen und Wochenplan</span><span lang="en">Study · coach recommendations and weekly plan</span>
+            <span><span lang="de">Tagesziel und Serie</span><span lang="en">daily goal and streak</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="more rv" style="margin-top:clamp(48px,6vw,84px)">
+        <div>
+          <h4><span lang="de">Dashboard</span><span lang="en">Dashboard</span></h4>
+          <p><span lang="de">Rating-Verlauf, letzte Partien, fällige Wiederholungen, Analyse-Warteschlange auf einem Blick.</span><span lang="en">Rating history, recent games, due reviews and the analysis queue at a glance.</span></p>
+        </div>
+        <div>
+          <h4><span lang="de">Partien-Datenbank</span><span lang="en">Game database</span></h4>
+          <p><span lang="de">Filter, Tags, Notizen pro Partie und pro Zug, Stellungssuche, PGN-Import und -Export.</span><span lang="en">Filters, tags, notes per game and per move, position search, PGN import and export.</span></p>
+        </div>
+        <div>
+          <h4><span lang="de">Live-Analyse</span><span lang="en">Live analysis</span></h4>
+          <p><span lang="de">Brett mit Engine-Linien, Zugqualität, Pfeilen, optional mit dem Eröffnungsbuch von chessdb.cn.</span><span lang="en">Board with engine lines, move quality, arrows, optionally with the chessdb.cn opening book.</span></p>
+        </div>
+        <div>
+          <h4><span lang="de">Deutsch &amp; Englisch</span><span lang="en">German &amp; English</span></h4>
+          <p><span lang="de">Die ganze App in beiden Sprachen, ein sorgfältig gemachtes dunkles Theme.</span><span lang="en">The whole app in both languages, one carefully made dark theme.</span></p>
+        </div>
+        <div>
+          <h4><span lang="de">Windows &amp; Android</span><span lang="en">Windows &amp; Android</span></h4>
+          <p><span lang="de">Desktop-App mit Auto-Update, Android-Build mit nativem Stockfish pro ABI.</span><span lang="en">Desktop app with auto-update, Android build with native Stockfish per ABI.</span></p>
+        </div>
+        <div>
+          <h4><span lang="de">Quellcode einsehbar</span><span lang="en">Source available</span></h4>
+          <p><span lang="de">Source-available, nicht Open Source: lesen und selbst bauen ja, Weiterverbreitung nein.</span><span lang="en">Source-available, not open source: read it and build it yourself, no redistribution.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 Sync ───────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow"><b>04</b> <span lang="de">Geräte-Sync</span><span lang="en">Device sync</span></p>
+      <div class="feature rv">
+        <div class="feature-text">
+          <h3><span lang="de">Zwei Geräte, ein Netz, kein Dazwischen</span><span lang="en">Two devices, one network, nothing in between</span></h3>
+          <p><span lang="de">Der Desktop ist der Hub, das Handy koppelt sich per QR-Code. Danach synchronisieren beide verschlüsselt direkt über dein Heimnetz oder VPN; Adresse, Code und Zertifikats-Fingerprint stecken im QR. Kein Server dazwischen, weil es keinen gibt.</span><span lang="en">The desktop is the hub; the phone pairs with a QR code. From then on both sync encrypted, directly over your home network or VPN; address, code and certificate fingerprint are inside the QR. No server in between, because there isn't one.</span></p>
+          <ul class="ticks">
+            <li><span lang="de">Unterwegs auf dem Handy trainieren, am Abend am Desktop analysieren</span><span lang="en">Train on the phone on the move, analyze on the desktop in the evening</span></li>
+            <li><span lang="de">Die Kamera wird ausschließlich für das QR-Scannen benutzt</span><span lang="en">The camera is used for QR scanning and nothing else</span></li>
+            <li><span lang="de">Ohne Kopplung läuft jedes Gerät völlig eigenständig</span><span lang="en">Without pairing, each device works entirely on its own</span></li>
+          </ul>
+        </div>
+        <div class="sync-viz" aria-hidden="true">
+          <div class="device"><span>Desktop<br>Hub</span></div>
+          <div class="wire"><span class="wire-label">LAN · TLS</span></div>
+          <div class="device phone"><span>Android</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 05 Datenschutz ────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow"><b>05</b> <span lang="de">Datenschutz</span><span lang="en">Privacy</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:28ch">
+        <span lang="de">Was Kiebitz sendet, und was nicht.</span>
+        <span lang="en">What Kiebitz sends, and what it doesn't.</span>
+      </h2>
+      <div class="privacy-grid rv">
+        <div>
+          <h4><span lang="de">Netzzugriff nur beim Import</span><span lang="en">Network access only on import</span></h4>
+          <p><span lang="de">Beim Partien-Import ruft Kiebitz die öffentlichen Schnittstellen von chess.com und Lichess mit dem Benutzernamen auf, den du selbst eingetragen hast.</span><span lang="en">When importing games, Kiebitz calls the public APIs of chess.com and Lichess with the username you entered yourself.</span></p>
+        </div>
+        <div>
+          <h4><span lang="de">chessdb.cn nur wenn du willst</span><span lang="en">chessdb.cn only if you want it</span></h4>
+          <p><span lang="de">Das Online-Eröffnungsbuch ist eine Option in den Einstellungen. Ist sie aus, wird chessdb.cn nie angefragt.</span><span lang="en">The online opening book is an option in the settings. Turned off, chessdb.cn is never queried.</span></p>
+        </div>
+        <div>
+          <h4><span lang="de">Kamera nur für den QR-Code</span><span lang="en">Camera only for the QR code</span></h4>
+          <p><span lang="de">Auf Android fragt Kiebitz die Kamera erst, wenn du den Pairing-Code scannst. Es werden keine Bilder gespeichert oder gesendet.</span><span lang="en">On Android, Kiebitz asks for the camera only when you scan the pairing code. No images are stored or sent.</span></p>
+        </div>
+        <div class="no">
+          <h4><span lang="de">Kein Server des Anbieters</span><span lang="en">No provider server</span></h4>
+          <p><span lang="de">Es gibt keinen Kiebitz-Server, kein Analytics-SDK, keine Werbe-IDs, keine Absturzberichte, keine Konten.</span><span lang="en">There is no Kiebitz server, no analytics SDK, no advertising IDs, no crash reports, no accounts.</span></p>
+        </div>
+      </div>
+      <p style="margin-top:26px">
+        <a class="btn btn-sm" href="privacy/index.html"><span lang="de">Vollständige Datenschutzerklärung</span><span lang="en">Full privacy policy</span></a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── 06 Download ───────────────────────────────────────────────────── -->
+  <section class="section section-alt" id="download">
+    <div class="wrap">
+      <p class="eyebrow"><b>06</b> <span lang="de">Download</span><span lang="en">Download</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
+        <span lang="de">Beta laden und loslegen.</span>
+        <span lang="en">Grab the beta and start.</span>
+      </h2>
+      <p class="lede" style="margin-top:16px">
+        <span lang="de">Kiebitz ist zunächst kostenlos, ohne Werbung und ohne In-App-Käufe. Beide Builds liegen als Anhang am aktuellen Release im App-Repository.</span>
+        <span lang="en">Kiebitz is free for now, with no ads and no in-app purchases. Both builds are attached to the latest release in the app repository.</span>
+      </p>
+      <div class="dl rv" style="margin-top:32px">
+        <article class="dl-card">
+          <h3>Windows</h3>
+          <p><span lang="de">Installer für den Desktop. Enthält den nativen Stockfish und aktualisiert sich selbst.</span><span lang="en">Desktop installer. Ships the native Stockfish and updates itself.</span></p>
+          <p class="dl-meta"><span lang="de">Installer · Auto-Update</span><span lang="en">Installer · auto-update</span></p>
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="de">Windows-Installer</span><span lang="en">Windows installer</span>
+          </a>
+        </article>
+        <article class="dl-card">
+          <h3>Android</h3>
+          <p><span lang="de">APK zum direkten Installieren, mit nativem Stockfish pro ABI. Die Play-Store-Einreichung ist in Vorbereitung.</span><span lang="en">APK for direct installation, with native Stockfish per ABI. The Play Store submission is in preparation.</span></p>
+          <p class="dl-meta"><span lang="de">APK · LAN-Sync</span><span lang="en">APK · LAN sync</span></p>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="de">Android-APK</span><span lang="en">Android APK</span>
+          </a>
+        </article>
+      </div>
+      <p class="small" style="margin-top:22px">
+        <span lang="de">Beta: Funktionen ändern sich, und einzelne Rauheiten sind eingeplant. Fehler und Wünsche gern im Repository melden: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+        <span lang="en">Beta: features still change and some rough edges are expected. Bugs and wishes are welcome in the repository: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="flock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="foot-note" style="margin-top:8px">
+        <span lang="de">Zug um Zugvogel. Local-first Schach-Begleiter für Windows und Android. Source-available, nicht Open Source. Stockfish steht unter GPL-3.0.</span>
+        <span lang="en">Moves take flight. A local-first chess companion for Windows and Android. Source-available, not open source. Stockfish is licensed under GPL-3.0.</span>
+      </p>
+      <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span></a>
+      <a href="impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span></a>
+      <a href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">Releases</a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span></a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
