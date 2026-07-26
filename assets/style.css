@@ -801,11 +801,50 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
+  html:not([data-motion="on"]) { scroll-behavior: auto; }
+  html:not([data-motion="on"]) *,
+  html:not([data-motion="on"]) *::before,
+  html:not([data-motion="on"]) *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
-  .rv { opacity: 1; transform: none; }
+  html:not([data-motion="on"]) .rv { opacity: 1; transform: none; }
 }
+
+/* Manuell abgeschaltet, unabhängig von der Systemeinstellung */
+html[data-motion="off"] { scroll-behavior: auto; }
+html[data-motion="off"] *,
+html[data-motion="off"] *::before,
+html[data-motion="off"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+html[data-motion="off"] .rv { opacity: 1; transform: none; }
+
+/* Bewegungsschalter: nur sichtbar, wenn er etwas ändert */
+.motion-toggle { display: none; }
+html[data-motion] .motion-toggle,
+html[data-motion-relevant] .motion-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--ink3);
+  font: inherit;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.motion-toggle:hover { color: var(--accent); }
+.motion-toggle::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--line2);
+}
+html[data-motion="on"] .motion-toggle::before { background: var(--accent); }

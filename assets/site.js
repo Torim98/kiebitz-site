@@ -3,7 +3,37 @@
 (function () {
   "use strict";
 
-  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var systemReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var motionPref = null;
+  try { motionPref = localStorage.getItem("kiebitz-motion"); } catch (e) { /* egal */ }
+  if (motionPref !== "on" && motionPref !== "off") motionPref = null;
+  var reduced = motionPref ? motionPref === "off" : systemReduced;
+
+  /* ── Bewegungsschalter ──────────────────────────────────────────────────── */
+  (function () {
+    var root = document.documentElement;
+    if (motionPref) root.setAttribute("data-motion", motionPref);
+    // Schalter nur anbieten, wenn Bewegung sonst unterdrückt würde
+    if (!systemReduced && !motionPref) return;
+    root.setAttribute("data-motion-relevant", "");
+
+    var host = document.querySelector(".foot-links");
+    if (!host) return;
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "motion-toggle";
+    btn.setAttribute("aria-pressed", reduced ? "false" : "true");
+    btn.innerHTML =
+      '<span lang="de">Animationen</span><span lang="en">Animations</span>';
+    btn.addEventListener("click", function () {
+      var next = root.getAttribute("data-motion") === "on" ? "off" : "on";
+      root.setAttribute("data-motion", next);
+      btn.setAttribute("aria-pressed", next === "on" ? "true" : "false");
+      try { localStorage.setItem("kiebitz-motion", next); } catch (e) { /* egal */ }
+      location.reload();
+    });
+    host.appendChild(btn);
+  })();
 
   /* ── Sprache ────────────────────────────────────────────────────────────── */
   var root = document.documentElement;

@@ -25,6 +25,10 @@
   } catch (e) { /* egal */ }
   document.documentElement.setAttribute("data-lang", l);
   document.documentElement.setAttribute("lang", l);
+  try {
+    var m = localStorage.getItem("kiebitz-motion");
+    if (m === "on" || m === "off") document.documentElement.setAttribute("data-motion", m);
+  } catch (e) { /* egal */ }
 })();
 </script>
 </head>
