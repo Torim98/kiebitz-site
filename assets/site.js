@@ -191,8 +191,61 @@
     }
   }
 
-  // Springerbahn in (Spalte, Reihe), Reihe 0 = Grundreihe Weiß.
-  var tour = [[1, 0], [3, 1], [5, 2], [6, 4], [4, 5], [2, 6], [4, 7]];
+  // Springerbahnen in (Spalte, Reihe), Reihe 0 = Grundreihe Weiß.
+  // Aus fünf handverlesenen Bahnen entstehen durch Spiegeln, Drehen und
+  // Umkehren mehr als 70 unterschiedliche, aber stets gültige Zugabfolgen.
+  var baseTours = [
+    [[1, 0], [3, 1], [5, 2], [6, 4], [4, 5], [2, 6], [4, 7]],
+    [[0, 0], [2, 1], [4, 0], [6, 1], [7, 3], [5, 4], [7, 5]],
+    [[3, 0], [5, 1], [7, 2], [6, 4], [4, 3], [2, 4], [0, 5]],
+    [[7, 0], [5, 1], [3, 2], [1, 3], [0, 5], [2, 6], [4, 7]],
+    [[2, 0], [0, 1], [1, 3], [3, 4], [5, 3], [7, 4], [6, 6]]
+  ];
+
+  function transformSquare(sq, variant) {
+    var x = sq[0];
+    var y = sq[1];
+    switch (variant) {
+      case 1: return [7 - y, x];
+      case 2: return [7 - x, 7 - y];
+      case 3: return [y, 7 - x];
+      case 4: return [7 - x, y];
+      case 5: return [x, 7 - y];
+      case 6: return [y, x];
+      case 7: return [7 - y, 7 - x];
+      default: return [x, y];
+    }
+  }
+
+  var tours = [];
+  var tourKeys = {};
+  function addTour(candidate) {
+    var key = candidate.map(function (sq) { return sq[0] + "," + sq[1]; }).join(";");
+    if (tourKeys[key]) return;
+    tourKeys[key] = true;
+    tours.push(candidate);
+  }
+  baseTours.forEach(function (base) {
+    for (var variant = 0; variant < 8; variant++) {
+      var transformed = base.map(function (sq) {
+        return transformSquare(sq, variant);
+      });
+      addTour(transformed);
+      addTour(transformed.slice().reverse());
+    }
+  });
+
+  var lastTourIndex = -1;
+  function chooseTour() {
+    var next = Math.floor(Math.random() * tours.length);
+    if (tours.length > 1) {
+      while (next === lastTourIndex) next = Math.floor(Math.random() * tours.length);
+    }
+    lastTourIndex = next;
+    return tours[next];
+  }
+
+  var tour = chooseTour();
   var px = function (col) { return col + 0.5; };
   var py = function (row) { return 7 - row + 0.5; };
 
@@ -203,10 +256,6 @@
   line.setAttribute("stroke-width", "0.055");
   line.setAttribute("stroke-linejoin", "round");
   line.setAttribute("stroke-linecap", "round");
-  line.setAttribute(
-    "points",
-    tour.map(function (s) { return px(s[0]) + "," + py(s[1]); }).join(" ")
-  );
   svg.appendChild(line);
 
   var marker = document.createElementNS(ns, "circle");
@@ -228,21 +277,37 @@
     birds.push(bird);
   }
 
+  var squareLabel = stage.parentNode.querySelector("[data-square-label]");
+  var routeLabel = stage.parentNode.querySelector("[data-route-label]");
   var total = 0;
   var segs = [];
-  for (var s = 1; s < tour.length; s++) {
-    var dx = px(tour[s][0]) - px(tour[s - 1][0]);
-    var dy = py(tour[s][1]) - py(tour[s - 1][1]);
-    var len = Math.sqrt(dx * dx + dy * dy);
-    segs.push(len);
-    total += len;
-  }
-  line.setAttribute("stroke-dasharray", total);
+  var names = [];
 
-  var squareLabel = stage.parentNode.querySelector("[data-square-label]");
-  var names = tour.map(function (sq) {
-    return "abcdefgh".charAt(sq[0]) + (sq[1] + 1);
-  });
+  function useTour(nextTour) {
+    tour = nextTour;
+    segs = [];
+    names = [];
+    total = 0;
+
+    line.setAttribute(
+      "points",
+      tour.map(function (s) { return px(s[0]) + "," + py(s[1]); }).join(" ")
+    );
+    names = tour.map(function (sq) {
+      return "abcdefgh".charAt(sq[0]) + (sq[1] + 1);
+    });
+    for (var s = 1; s < tour.length; s++) {
+      var dx = px(tour[s][0]) - px(tour[s - 1][0]);
+      var dy = py(tour[s][1]) - py(tour[s - 1][1]);
+      var len = Math.sqrt(dx * dx + dy * dy);
+      segs.push(len);
+      total += len;
+    }
+    line.setAttribute("stroke-dasharray", total);
+    if (routeLabel) routeLabel.textContent = names[0] + " → " + names[names.length - 1];
+  }
+
+  useTour(tour);
 
   function paintFull() {
     line.setAttribute("stroke-dashoffset", 0);
@@ -272,8 +337,13 @@
   function reset() {
     idx = 0;
     drawn = 0;
+    [marker].concat(birds).forEach(function (el) {
+      if (el.getAnimations) {
+        el.getAnimations().forEach(function (animation) { animation.cancel(); });
+      }
+    });
     line.setAttribute("stroke-dashoffset", total);
-    for (var i = 0; i < tour.length; i++) cells[tour[i][1] * 8 + tour[i][0]].classList.remove("on");
+    for (var i = 0; i < cells.length; i++) cells[i].classList.remove("on");
     marker.setAttribute("cx", px(tour[0][0]));
     marker.setAttribute("cy", py(tour[0][1]));
     marker.setAttribute("opacity", "1");
@@ -320,6 +390,7 @@
     fly(birds[2], 1.3, -2.2, 380, 1600);
     later(function () {
       if (!running) return;
+      useTour(chooseTour());
       reset();
       later(hop, 700);
     }, 2600);
