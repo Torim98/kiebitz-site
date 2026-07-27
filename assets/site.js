@@ -47,6 +47,7 @@
     }
     var t = document.querySelector("[data-title-" + lang + "]");
     if (t) document.title = t.getAttribute("data-title-" + lang);
+    document.dispatchEvent(new Event("kiebitz:langchange"));
     if (persist) {
       try { localStorage.setItem("kiebitz-lang", lang); } catch (e) { /* egal */ }
     }
@@ -173,7 +174,7 @@
     });
   }
 
-  /* ── Brett: Springerbahn b1–e8, dann hebt der Zug ab ───────────────────── */
+  /* ── Brett: Figurenbahnen, dann hebt der Zug ab ────────────────────────── */
   var stage = document.querySelector(".board-stage");
   if (!stage) return;
 
@@ -191,15 +192,48 @@
     }
   }
 
-  // Springerbahnen in (Spalte, Reihe), Reihe 0 = Grundreihe Weiß.
-  // Aus fünf handverlesenen Bahnen entstehen durch Spiegeln, Drehen und
-  // Umkehren mehr als 70 unterschiedliche, aber stets gültige Zugabfolgen.
-  var baseTours = [
-    [[1, 0], [3, 1], [5, 2], [6, 4], [4, 5], [2, 6], [4, 7]],
-    [[0, 0], [2, 1], [4, 0], [6, 1], [7, 3], [5, 4], [7, 5]],
-    [[3, 0], [5, 1], [7, 2], [6, 4], [4, 3], [2, 4], [0, 5]],
-    [[7, 0], [5, 1], [3, 2], [1, 3], [0, 5], [2, 6], [4, 7]],
-    [[2, 0], [0, 1], [1, 3], [3, 4], [5, 3], [7, 4], [6, 6]]
+  // Zugfolgen in (Spalte, Reihe), Reihe 0 = Grundreihe Weiß.
+  // Spiegelungen, Drehungen und Umkehrungen erzeugen über 200 gültige Bahnen.
+  var pieces = [
+    {
+      id: "knight", de: "Springer", en: "Knight",
+      bases: [
+        [[1, 0], [3, 1], [5, 2], [6, 4], [4, 5], [2, 6], [4, 7]],
+        [[0, 0], [2, 1], [4, 0], [6, 1], [7, 3], [5, 4], [7, 5]],
+        [[3, 0], [5, 1], [7, 2], [6, 4], [4, 3], [2, 4], [0, 5]],
+        [[7, 0], [5, 1], [3, 2], [1, 3], [0, 5], [2, 6], [4, 7]],
+        [[2, 0], [0, 1], [1, 3], [3, 4], [5, 3], [7, 4], [6, 6]]
+      ]
+    },
+    {
+      id: "rook", de: "Turm", en: "Rook",
+      bases: [
+        [[0, 0], [0, 3], [4, 3], [4, 6], [1, 6], [1, 1], [7, 1]],
+        [[3, 0], [3, 5], [7, 5], [7, 2], [1, 2], [1, 7], [5, 7]]
+      ]
+    },
+    {
+      id: "queen", de: "Dame", en: "Queen",
+      bases: [
+        [[3, 0], [7, 4], [7, 7], [0, 7], [0, 0], [4, 4], [4, 7]],
+        [[2, 0], [6, 4], [6, 7], [1, 7], [1, 2], [4, 5], [7, 2]]
+      ]
+    },
+    {
+      id: "bishop", de: "Läufer", en: "Bishop",
+      bases: [
+        [[0, 0], [2, 2], [4, 4], [6, 6], [7, 7], [5, 5], [3, 3]],
+        [[2, 0], [4, 2], [6, 4], [7, 5], [5, 7], [3, 5], [1, 3]]
+      ]
+    },
+    {
+      id: "king", de: "König", en: "King",
+      bases: [
+        [[1, 0], [2, 1], [3, 1], [4, 2], [5, 2], [6, 3], [7, 4]],
+        [[4, 0], [3, 1], [2, 1], [1, 2], [1, 3], [2, 4], [3, 5]]
+      ]
+    },
+    { id: "pawn", de: "Bauer", en: "Pawn", bases: [] }
   ];
 
   function transformSquare(sq, variant) {
@@ -217,35 +251,93 @@
     }
   }
 
-  var tours = [];
-  var tourKeys = {};
-  function addTour(candidate) {
-    var key = candidate.map(function (sq) { return sq[0] + "," + sq[1]; }).join(";");
-    if (tourKeys[key]) return;
-    tourKeys[key] = true;
-    tours.push(candidate);
-  }
-  baseTours.forEach(function (base) {
-    for (var variant = 0; variant < 8; variant++) {
-      var transformed = base.map(function (sq) {
-        return transformSquare(sq, variant);
-      });
-      addTour(transformed);
-      addTour(transformed.slice().reverse());
-    }
+  var routesByPiece = {};
+  var routeKeys = {};
+  pieces.forEach(function (piece) {
+    routesByPiece[piece.id] = [];
+    routeKeys[piece.id] = {};
   });
 
-  var lastTourIndex = -1;
-  function chooseTour() {
-    var next = Math.floor(Math.random() * tours.length);
-    if (tours.length > 1) {
-      while (next === lastTourIndex) next = Math.floor(Math.random() * tours.length);
-    }
-    lastTourIndex = next;
-    return tours[next];
+  function addRoute(pieceId, candidate) {
+    var key = candidate.map(function (sq) { return sq[0] + "," + sq[1]; }).join(";");
+    if (routeKeys[pieceId][key]) return;
+    routeKeys[pieceId][key] = true;
+    routesByPiece[pieceId].push(candidate);
   }
 
-  var tour = chooseTour();
+  pieces.forEach(function (piece) {
+    piece.bases.forEach(function (base) {
+      for (var variant = 0; variant < 8; variant++) {
+        var transformed = base.map(function (sq) {
+          return transformSquare(sq, variant);
+        });
+        addRoute(piece.id, transformed);
+        addRoute(piece.id, transformed.slice().reverse());
+      }
+    });
+  });
+
+  // Bauern dürfen nicht gedreht werden: Weiß zieht nach oben, Schwarz nach unten.
+  for (var file = 0; file < 8; file++) {
+    var straightPawn = [];
+    for (var rank = 1; rank < 8; rank++) straightPawn.push([file, rank]);
+    addRoute("pawn", straightPawn);
+    addRoute("pawn", straightPawn.map(function (sq) { return [sq[0], 7 - sq[1]]; }));
+  }
+  [
+    [[0, 1], [0, 2], [0, 3], [1, 4], [1, 5], [2, 6], [2, 7]],
+    [[2, 1], [2, 2], [3, 3], [3, 4], [4, 5], [4, 6], [4, 7]]
+  ].forEach(function (pawnRoute) {
+    [pawnRoute, pawnRoute.map(function (sq) { return [7 - sq[0], sq[1]]; })]
+      .forEach(function (whiteRoute) {
+        addRoute("pawn", whiteRoute);
+        addRoute("pawn", whiteRoute.map(function (sq) {
+          return [sq[0], 7 - sq[1]];
+        }));
+      });
+  });
+
+  var pieceBag = [];
+  var lastPieceId = "";
+  var lastRouteIndex = {};
+
+  function shuffle(list) {
+    for (var i = list.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var swap = list[i];
+      list[i] = list[j];
+      list[j] = swap;
+    }
+  }
+
+  function refillPieceBag() {
+    pieceBag = pieces.slice();
+    shuffle(pieceBag);
+    var nextIndex = pieceBag.length - 1;
+    if (pieceBag.length > 1 && pieceBag[nextIndex].id === lastPieceId) {
+      var swap = pieceBag[0];
+      pieceBag[0] = pieceBag[nextIndex];
+      pieceBag[nextIndex] = swap;
+    }
+  }
+
+  function chooseSequence() {
+    if (!pieceBag.length) refillPieceBag();
+    var piece = pieceBag.pop();
+    var routes = routesByPiece[piece.id];
+    var next = Math.floor(Math.random() * routes.length);
+    if (routes.length > 1) {
+      while (next === lastRouteIndex[piece.id]) {
+        next = Math.floor(Math.random() * routes.length);
+      }
+    }
+    lastRouteIndex[piece.id] = next;
+    lastPieceId = piece.id;
+    return { piece: piece, tour: routes[next] };
+  }
+
+  var sequence = chooseSequence();
+  var tour = sequence.tour;
   var px = function (col) { return col + 0.5; };
   var py = function (row) { return 7 - row + 0.5; };
 
@@ -283,8 +375,16 @@
   var segs = [];
   var names = [];
 
-  function useTour(nextTour) {
-    tour = nextTour;
+  function updateRouteLabel() {
+    if (!routeLabel) return;
+    var lang = root.getAttribute("data-lang") === "de" ? "de" : "en";
+    routeLabel.textContent =
+      sequence.piece[lang] + " · " + names[0] + " → " + names[names.length - 1];
+  }
+
+  function useSequence(nextSequence) {
+    sequence = nextSequence;
+    tour = sequence.tour;
     segs = [];
     names = [];
     total = 0;
@@ -304,10 +404,11 @@
       total += len;
     }
     line.setAttribute("stroke-dasharray", total);
-    if (routeLabel) routeLabel.textContent = names[0] + " → " + names[names.length - 1];
+    updateRouteLabel();
   }
 
-  useTour(tour);
+  useSequence(sequence);
+  document.addEventListener("kiebitz:langchange", updateRouteLabel);
 
   function paintFull() {
     line.setAttribute("stroke-dashoffset", 0);
@@ -390,7 +491,7 @@
     fly(birds[2], 1.3, -2.2, 380, 1600);
     later(function () {
       if (!running) return;
-      useTour(chooseTour());
+      useSequence(chooseSequence());
       reset();
       later(hop, 700);
     }, 2600);
