@@ -597,7 +597,7 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
   text-align: center;
   padding: 8px;
 }
-.device.phone { aspect-ratio: 9 / 16; max-width: 92px; justify-self: center; }
+.device.phone { aspect-ratio: 9 / 16; max-width: 92px; justify-self: end; }
 .wire { position: relative; width: clamp(56px, 12vw, 130px); height: 2px; background: var(--line2); }
 .wire::after {
   content: "";
@@ -791,6 +791,7 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
   .wire::after { animation-name: travel-v; top: 0; left: -3px; }
   .wire-label { top: 50%; left: 14px; transform: translateY(-50%); }
   .device { width: 100%; max-width: 220px; }
+  .device.phone { justify-self: center; }
   @keyframes travel-v {
     0% { top: 0; opacity: 0; }
     12% { opacity: 1; }
