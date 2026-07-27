@@ -725,9 +725,12 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
 .doc p, .doc li { font-size: 14.5px; color: var(--ink2); }
 .doc p + p { margin-top: 12px; }
 .doc ul.bul { margin-top: 12px; display: grid; gap: 8px; }
-.doc ul.bul li { display: grid; grid-template-columns: 15px 1fr; gap: 10px; }
+.doc ul.bul li { position: relative; padding-left: 25px; }
 .doc ul.bul li::before {
   content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 6px;
   height: 6px;
   margin-top: 8px;
