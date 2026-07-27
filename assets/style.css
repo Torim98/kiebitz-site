@@ -597,7 +597,7 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
   text-align: center;
   padding: 8px;
 }
-.device.phone { aspect-ratio: 9 / 16; max-width: 92px; justify-self: end; }
+.device.phone { aspect-ratio: 9 / 16; max-width: 92px; justify-self: start; }
 .wire { position: relative; width: clamp(56px, 12vw, 130px); height: 2px; background: var(--line2); }
 .wire::after {
   content: "";
