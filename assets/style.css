@@ -529,6 +529,118 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
 }
 @keyframes lb-in { from { opacity: 0; } to { opacity: 1; } }
 
+/* ── Banner (Android Closed Test) ─────────────────────────────────────────── */
+/* Randloses Band über die volle Breite: links die Einladung,
+   rechts die drei Schritte als Zugfolge auf angedeutetem Brett. */
+.band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: clamp(38px, 5vw, 62px) 0;
+  background:
+    radial-gradient(90% 120% at 78% 0%, rgba(34, 192, 138, 0.13), transparent 64%),
+    linear-gradient(180deg, #131312, var(--bg));
+}
+/* Angedeutetes Schachbrett, das nach links ausblendet */
+.band-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: repeating-conic-gradient(
+    rgba(242, 241, 236, 0.022) 0% 25%,
+    transparent 0% 50%
+  );
+  background-size: 68px 68px;
+  background-position: right top;
+  -webkit-mask-image: linear-gradient(90deg, transparent 12%, #000 78%);
+  mask-image: linear-gradient(90deg, transparent 12%, #000 78%);
+}
+.band-in {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  gap: clamp(30px, 5vw, 64px);
+  align-items: center;
+}
+.band-text h2 {
+  margin-top: 18px;
+  font-size: clamp(23px, 3vw, 34px);
+  max-width: 20ch;
+}
+.band-sub {
+  margin-top: 14px;
+  font-size: 15px;
+  color: var(--ink2);
+  max-width: 46ch;
+}
+.band-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 24px;
+}
+.band-alt { font-size: 13.5px; border-bottom: 1px solid transparent; }
+.band-alt:hover { border-bottom-color: currentColor; }
+.band-note {
+  margin-top: 16px;
+  font: 400 12px/1.6 var(--mono);
+  color: var(--ink3);
+  max-width: 44ch;
+}
+
+/* Die Züge: nummerierte Felder, durch eine Linie verbunden */
+.route {
+  list-style: none;
+  margin: 0;
+  padding: 22px 24px;
+  display: grid;
+  gap: 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(23, 23, 22, 0.72);
+  backdrop-filter: blur(3px);
+}
+.route li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+.route li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 38px;
+  bottom: -22px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--accent-dim), var(--line));
+}
+.route-n {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  border: 1px solid var(--accent-dim);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font: 600 13px/1 var(--mono);
+}
+.route-txt { min-width: 0; padding-top: 2px; }
+.route-txt b { display: block; font-size: 14.5px; font-weight: 600; }
+.route-txt > span { display: block; margin-top: 3px; font-size: 13px; color: var(--ink3); }
+
+@media (max-width: 900px) {
+  .band-in { grid-template-columns: minmax(0, 1fr); }
+  .band-text h2, .band-sub { max-width: none; }
+  /* Einspaltig liegt der Text über dem Muster, also nimmt es sich zurück. */
+  .band-grid { opacity: 0.5; }
+  .route { padding: 20px 18px; }
+}
+
 /* ── Dialog (Android Closed Test) ─────────────────────────────────────────── */
 .modal {
   position: fixed;
