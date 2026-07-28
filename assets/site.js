@@ -174,6 +174,76 @@
     });
   }
 
+  /* ── Dialog: Android Closed Test ────────────────────────────────────────── */
+  (function () {
+    var modal = document.getElementById("beta-android");
+    var openers = document.querySelectorAll("[data-beta-open]");
+    if (!modal || !openers.length) return;
+
+    var card = modal.querySelector(".modal-card");
+    var closeBtn = modal.querySelector("[data-beta-close]");
+    var last = null;
+
+    function focusables() {
+      var all = card.querySelectorAll("a[href], button:not([disabled])");
+      var out = [];
+      for (var i = 0; i < all.length; i++) {
+        if (all[i].offsetParent !== null || all[i].getClientRects().length) out.push(all[i]);
+      }
+      return out;
+    }
+
+    function open(trigger) {
+      last = trigger || document.activeElement;
+      modal.hidden = false;
+      document.documentElement.style.overflow = "hidden";
+      closeBtn.focus();
+    }
+
+    function close() {
+      if (modal.hidden) return;
+      modal.hidden = true;
+      document.documentElement.style.overflow = "";
+      if (last && last.focus) last.focus();
+      last = null;
+    }
+
+    for (var i = 0; i < openers.length; i++) {
+      openers[i].addEventListener("click", function (ev) {
+        // Ohne JavaScript bleibt der Link die APK auf GitHub.
+        ev.preventDefault();
+        open(this);
+      });
+    }
+
+    closeBtn.addEventListener("click", close);
+    modal.addEventListener("click", function (ev) {
+      if (ev.target === modal) close();
+    });
+    // Links im Dialog führen weg oder öffnen einen neuen Tab: Dialog schließen.
+    var links = card.querySelectorAll("a[href]");
+    for (var j = 0; j < links.length; j++) {
+      links[j].addEventListener("click", function () { close(); });
+    }
+
+    document.addEventListener("keydown", function (ev) {
+      if (modal.hidden) return;
+      if (ev.key === "Escape" || ev.key === "Esc") { close(); return; }
+      if (ev.key !== "Tab") return;
+      var list = focusables();
+      if (!list.length) return;
+      var first = list[0];
+      var lastEl = list[list.length - 1];
+      if (ev.shiftKey && (document.activeElement === first || !card.contains(document.activeElement))) {
+        ev.preventDefault();
+        lastEl.focus();
+      } else if (!ev.shiftKey && document.activeElement === lastEl) {
+        ev.preventDefault();
+        first.focus();
+      }
+    });
+  })();
+
   /* ── Brett: Figurenbahnen, dann hebt der Zug ab ────────────────────────── */
   var stage = document.querySelector(".board-stage");
   if (!stage) return;

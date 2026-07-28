@@ -77,11 +77,11 @@
           <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
             <span lang="de">Für Windows laden</span><span lang="en">Get it for Windows</span>
           </a>
-          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
-            <span lang="de">Android (APK)</span><span lang="en">Android (APK)</span>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="de">Android (Beta-Test)</span><span lang="en">Android (beta test)</span>
           </a>
         </div>
-        <p class="cta-note"><span lang="de">Kostenlos · GitHub Releases · kein Konto nötig</span><span lang="en">Free · GitHub Releases · no account needed</span></p>
+        <p class="cta-note"><span lang="de">Kostenlos · Windows über GitHub · Android im geschlossenen Test</span><span lang="en">Free · Windows via GitHub · Android in closed testing</span></p>
       </div>
 
       <div class="board-card" aria-hidden="true">
@@ -355,8 +355,8 @@
         <span lang="en">Grab the beta and start.</span>
       </h2>
       <p class="lede" style="margin-top:16px">
-        <span lang="de">Kiebitz ist zunächst kostenlos, ohne Werbung und ohne In-App-Käufe. Beide Builds liegen als Anhang am aktuellen Release im App-Repository.</span>
-        <span lang="en">Kiebitz is free for now, with no ads and no in-app purchases. Both builds are attached to the latest release in the app repository.</span>
+        <span lang="de">Kiebitz ist zunächst kostenlos, ohne Werbung und ohne In-App-Käufe. Die Desktop-Version ist fertig, für Android läuft gerade ein geschlossener Test bei Google Play. Beide Builds liegen zusätzlich als Anhang am aktuellen Release im App-Repository.</span>
+        <span lang="en">Kiebitz is free for now, with no ads and no in-app purchases. The desktop version is ready; for Android a closed test is currently running on Google Play. Both builds are also attached to the latest release in the app repository.</span>
       </p>
       <div class="dl rv" style="margin-top:32px">
         <article class="dl-card">
@@ -369,10 +369,10 @@
         </article>
         <article class="dl-card">
           <h3>Android</h3>
-          <p><span lang="de">APK zum direkten Installieren, mit nativem Stockfish pro ABI. Die Play-Store-Einreichung ist in Vorbereitung.</span><span lang="en">APK for direct installation, with native Stockfish per ABI. The Play Store submission is in preparation.</span></p>
-          <p class="dl-meta"><span lang="de">APK · LAN-Sync</span><span lang="en">APK · LAN sync</span></p>
-          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
-            <span lang="de">Android-APK</span><span lang="en">Android APK</span>
+          <p><span lang="de">Läuft gerade als geschlossener Test bei Google Play, mit nativem Stockfish pro ABI. Wer nicht am Test teilnehmen will, installiert die APK direkt.</span><span lang="en">Currently running as a closed test on Google Play, with native Stockfish per ABI. If you would rather not join the test, install the APK directly.</span></p>
+          <p class="dl-meta"><span lang="de">Closed Test · APK · LAN-Sync</span><span lang="en">Closed test · APK · LAN sync</span></p>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="de">Android · Beta-Test &amp; APK</span><span lang="en">Android · beta test &amp; APK</span>
           </a>
         </article>
       </div>
@@ -403,6 +403,87 @@
     </nav>
   </div>
 </footer>
+
+<!-- ── Dialog: Android Closed Test ─────────────────────────────────────── -->
+<div class="modal" id="beta-android" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="beta-title" aria-describedby="beta-lede">
+    <div class="modal-head">
+      <span class="modal-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="9" width="14" height="10" rx="3"></rect>
+          <path d="M8.2 9 6.7 6.3M15.8 9l1.5-2.7"></path>
+          <circle cx="9.6" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
+          <circle cx="14.4" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
+        </svg>
+      </span>
+      <div class="modal-titles">
+        <p class="modal-eyebrow">Kiebitz</p>
+        <h2 id="beta-title">
+          <span lang="de">Android läuft im geschlossenen Test</span>
+          <span lang="en">Android is in closed testing</span>
+        </h2>
+      </div>
+      <button class="modal-x" type="button" data-beta-close aria-label="Schließen / Close">&#10005;</button>
+    </div>
+
+    <div class="modal-body">
+      <p class="modal-lede" id="beta-lede">
+        <span lang="de">Die Desktop-Version ist bereits verfügbar. Für die Android-App läuft gerade ein geschlossener Test bei Google Play, und über ein paar zusätzliche Tester würde ich mich sehr freuen. Zum Mitmachen sind es drei Schritte:</span>
+        <span lang="en">The desktop version is already available, and I’m currently running a closed test for the Android app. I would be very grateful for a few more testers. To participate, there are three steps:</span>
+      </p>
+
+      <ol class="steps">
+        <li>
+          <a class="step" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">1</span>
+            <span class="step-txt">
+              <b><span lang="de">Der Google-Gruppe beitreten</span><span lang="en">Join the Google Group</span></b>
+              <span class="step-sub"><span lang="de">Die Mitgliedschaft schaltet den Test für dein Google-Konto frei.</span><span lang="en">Membership unlocks the test for your Google account.</span></span>
+              <span class="step-url">groups.google.com/g/kiebitz-beta-test</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a class="step" href="https://play.google.com/apps/testing/de.torim.kiebitz" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">2</span>
+            <span class="step-txt">
+              <b><span lang="de">Dem geschlossenen Test beitreten</span><span lang="en">Join the closed test</span></b>
+              <span class="step-sub"><span lang="de">Mit demselben Google-Konto anmelden wie in Schritt 1.</span><span lang="en">Opt in with the same Google account as in step 1.</span></span>
+              <span class="step-url">play.google.com/apps/testing/de.torim.kiebitz</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a class="step" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">3</span>
+            <span class="step-txt">
+              <b><span lang="de">Auf Android installieren</span><span lang="en">Install it on Android</span></b>
+              <span class="step-sub"><span lang="de">Play-Store-Eintrag öffnen und Kiebitz installieren.</span><span lang="en">Open the Play Store listing and install Kiebitz.</span></span>
+              <span class="step-url">play.google.com/store/apps/details?id=de.torim.kiebitz</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+      </ol>
+
+      <p class="modal-note">
+        <span lang="de">Google verlangt, dass Tester mindestens 14 Tage angemeldet bleiben. Noch hilfreicher ist es natürlich, die App wirklich auszuprobieren und ehrliches Feedback dazulassen.</span>
+        <span lang="en">Google requires testers to remain opted in for at least 14 days. Actually trying the app and sharing some honest feedback would, of course, be even more helpful.</span>
+      </p>
+    </div>
+
+    <div class="modal-foot">
+      <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+        <span lang="de">Stattdessen APK von GitHub</span><span lang="en">Get the APK from GitHub instead</span>
+      </a>
+      <a class="btn btn-primary" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
+        <span lang="de">Mit Schritt 1 starten</span><span lang="en">Start with step 1</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 <script src="assets/site.js" defer></script>
 </body>

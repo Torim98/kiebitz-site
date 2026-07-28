@@ -528,6 +528,144 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
   padding: 0 20px;
 }
 @keyframes lb-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* ── Dialog (Android Closed Test) ─────────────────────────────────────────── */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  display: grid;
+  place-items: center;
+  padding: clamp(12px, 3vw, 40px);
+  background: rgba(8, 8, 7, 0.82);
+  backdrop-filter: blur(4px);
+  animation: lb-in 0.18s var(--ease);
+}
+.modal[hidden] { display: none; }
+.modal-card {
+  width: min(560px, 100%);
+  max-height: min(86vh, 780px);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line2);
+  border-radius: 16px;
+  background: var(--panel);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+/* Bei reduzierter Bewegung greifen die globalen Regeln am Ende der Datei. */
+.modal-card { animation: modal-in 0.22s var(--ease); }
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+
+.modal-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px 22px 18px;
+  border-bottom: 1px solid var(--line);
+}
+.modal-icon {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  border: 1px solid var(--accent-dim);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.modal-titles { min-width: 0; }
+.modal-eyebrow {
+  font: 500 10.5px/1 var(--mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 7px;
+}
+.modal-head h2 { font-size: 19px; letter-spacing: -0.018em; }
+.modal-x {
+  flex: none;
+  margin-left: auto;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  background: var(--panel2);
+  color: var(--ink3);
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+}
+.modal-x:hover { color: var(--ink); border-color: var(--line2); }
+
+.modal-body { padding: 20px 22px 22px; overflow-y: auto; }
+.modal-lede { font-size: 14.5px; color: var(--ink2); }
+.modal-note {
+  margin-top: 16px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink3);
+  border-left: 2px solid var(--line2);
+  padding-left: 12px;
+}
+
+.steps { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel2);
+  color: var(--ink);
+  transition: border-color 0.15s, background 0.15s;
+}
+.step:hover { border-color: var(--accent-dim); background: var(--panel3); color: var(--ink); }
+.step-n {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-dim);
+  color: var(--accent);
+  font: 600 12px/1 var(--mono);
+}
+.step-txt { min-width: 0; display: block; }
+.step-txt b { display: block; font-size: 14px; font-weight: 600; }
+.step-sub { display: block; font-size: 12.5px; line-height: 1.5; color: var(--ink3); margin-top: 2px; }
+.step-url {
+  display: block;
+  margin-top: 5px;
+  font: 400 11px/1.4 var(--mono);
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+.step-go { flex: none; margin-left: auto; color: var(--ink3); font-size: 14px; line-height: 1.4; }
+.step:hover .step-go { color: var(--accent); }
+
+.modal-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 22px;
+  border-top: 1px solid var(--line);
+  background: var(--panel2);
+}
+.modal-foot .btn { flex: 1 1 auto; }
+@media (min-width: 560px) {
+  .modal-foot .btn { flex: 0 0 auto; }
+}
 .shot-frame {
   position: relative;
   aspect-ratio: 16 / 10;

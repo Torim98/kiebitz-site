@@ -53,6 +53,19 @@ committed here:
 
 - Windows installer and Android APK: <https://github.com/Torim98/Kiebitz/releases/latest>
 
+Both Android buttons (hero and download section) carry `data-beta-open` and open
+a dialog about the closed test on Google Play instead of following their `href`.
+Without JavaScript the `href` still leads to the GitHub release, so the page keeps
+working. The dialog lists the three steps and is defined at the end of
+`index.html` (`#beta-android`), styled under `/* Dialog */` in `assets/style.css`:
+
+1. Google Group: <https://groups.google.com/g/kiebitz-beta-test/>
+2. Closed test: <https://play.google.com/apps/testing/de.torim.kiebitz>
+3. Play listing: <https://play.google.com/store/apps/details?id=de.torim.kiebitz>
+
+Once the app is in open testing or production, drop `data-beta-open` from both
+buttons and the dialog disappears on its own.
+
 ## Notes
 
 - The site is separate from the app repository on purpose: website deploys stay
