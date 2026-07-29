@@ -260,6 +260,9 @@
     var button = form.querySelector("[data-feedback-send]");
     var status = form.querySelector("[data-feedback-status]");
     var subject = form.querySelector("[data-feedback-subject]");
+    var message = form.querySelector("#feedback-message");
+    var counter = form.querySelector("[data-feedback-count]");
+    var urlField = form.querySelector('input[name="_url"]');
     var endpoint = form.getAttribute("data-feedback-endpoint");
     if (!button || !status || !subject || !endpoint) return;
 
@@ -272,6 +275,17 @@
       status.setAttribute("data-state", state);
       status.innerHTML = '<span lang="de">' + de + '</span><span lang="en">' + en + "</span>";
     }
+
+    function updateCount() {
+      if (message && counter) counter.textContent = message.value.length + " / 4000";
+    }
+
+    if (message) message.addEventListener("input", updateCount);
+    form.addEventListener("input", function () {
+      if (button.getAttribute("aria-busy") === "true" || !status.textContent) return;
+      status.textContent = "";
+      status.removeAttribute("data-state");
+    });
 
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
@@ -289,6 +303,7 @@
 
       var reportType = typeValue();
       subject.value = "Kiebitz · " + reportType;
+      if (urlField) urlField.value = window.location.href.split("#")[0] + "#feedback";
       button.disabled = true;
       button.setAttribute("aria-busy", "true");
       setStatus("sending", "Meldung wird sicher übermittelt …", "Sending your report securely …");
@@ -307,11 +322,17 @@
         body: JSON.stringify(payload)
       })
         .then(function (response) {
-          if (!response.ok) throw new Error("submit failed");
-          return response.json();
+          return response.json().then(function (data) {
+            var confirmed = data && (data.success === true || data.success === "true");
+            if (!response.ok || !confirmed) {
+              throw new Error(data && data.message ? data.message : "submit failed");
+            }
+            return data;
+          });
         })
         .then(function () {
           form.reset();
+          updateCount();
           setStatus(
             "success",
             "Danke — deine Meldung ist unterwegs. Jeder Hinweis hilft Kiebitz weiter.",
@@ -321,8 +342,8 @@
         .catch(function () {
           setStatus(
             "error",
-            'Das hat nicht geklappt. Bitte versuche es noch einmal oder schreib direkt an <a href="mailto:kiebitz@gmail.com">kiebitz@gmail.com</a>.',
-            'That did not work. Please try again or email <a href="mailto:kiebitz@gmail.com">kiebitz@gmail.com</a> directly.'
+            'Die Zustellung konnte nicht bestätigt werden. Bitte versuche es noch einmal oder schreib direkt an <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>.',
+            'Delivery could not be confirmed. Please try again or email <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> directly.'
           );
         })
         .then(function () {

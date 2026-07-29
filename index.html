@@ -459,12 +459,21 @@
           </div>
         </div>
 
-        <form class="feedback-form rv" action="https://formsubmit.co/kiebitz@gmail.com" method="POST" data-feedback-form data-feedback-endpoint="https://formsubmit.co/ajax/kiebitz@gmail.com">
+        <form class="feedback-form rv" action="https://formsubmit.co/kiebitz.chess@gmail.com" method="POST" data-feedback-form data-feedback-endpoint="https://formsubmit.co/ajax/kiebitz.chess@gmail.com">
           <input type="hidden" name="_subject" value="Kiebitz · New feedback" data-feedback-subject>
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_url" value="https://torim98.github.io/kiebitz-site/#feedback">
           <label class="honey" aria-hidden="true">Website<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+
+          <div class="feedback-route">
+            <span class="feedback-route-mark" aria-hidden="true"></span>
+            <span>
+              <span class="feedback-route-kicker"><span lang="de">Direkter Draht</span><span lang="en">Direct line</span></span>
+              <strong>kiebitz.chess@gmail.com</strong>
+            </span>
+            <span class="feedback-route-note"><span lang="de">Kein Konto nötig</span><span lang="en">No account required</span></span>
+          </div>
 
           <fieldset class="report-types">
             <legend><span lang="de">Was möchtest du melden?</span><span lang="en">What would you like to report?</span></legend>
@@ -497,8 +506,11 @@
           </div>
 
           <div class="form-field">
-            <label for="feedback-message"><span lang="de">Details</span><span lang="en">Details</span></label>
-            <textarea id="feedback-message" name="message" required minlength="20" maxlength="4000" rows="7" data-placeholder-de="Beschreibe den Ablauf, das erwartete Verhalten oder deine Idee möglichst konkret." data-placeholder-en="Describe the steps, expected behaviour or your idea as concretely as possible."></textarea>
+            <span class="field-label">
+              <label for="feedback-message"><span lang="de">Details</span><span lang="en">Details</span></label>
+              <span class="field-count" data-feedback-count>0 / 4000</span>
+            </span>
+            <textarea id="feedback-message" name="message" required minlength="20" maxlength="4000" rows="6" data-placeholder-de="Beschreibe den Ablauf, das erwartete Verhalten oder deine Idee möglichst konkret." data-placeholder-en="Describe the steps, expected behaviour or your idea as concretely as possible."></textarea>
             <span class="field-hint"><span lang="de">Keine Passwörter, privaten Partien oder anderen sensiblen Daten einfügen.</span><span lang="en">Do not include passwords, private games or other sensitive data.</span></span>
           </div>
 
@@ -515,12 +527,12 @@
             </div>
             <div class="form-field">
               <label for="feedback-version"><span lang="de">App-Version</span><span lang="en">App version</span> <small><span lang="de">optional</span><span lang="en">optional</span></small></label>
-              <input id="feedback-version" name="app_version" type="text" maxlength="40" autocomplete="off" placeholder="z. B. / e.g. 0.9.4">
+              <input id="feedback-version" name="app_version" type="text" maxlength="40" autocomplete="off" data-placeholder-de="z. B. 0.9.4" data-placeholder-en="e.g. 0.9.4">
             </div>
           </div>
 
           <div class="form-field">
-            <label for="feedback-email">E-Mail <small><span lang="de">optional · nur für eine Antwort</span><span lang="en">optional · only for a reply</span></small></label>
+            <label for="feedback-email"><span lang="de">E-Mail</span><span lang="en">Email</span> <small><span lang="de">optional · nur für eine Antwort</span><span lang="en">optional · only for a reply</span></small></label>
             <input id="feedback-email" name="email" type="email" maxlength="160" autocomplete="email" placeholder="name@example.com">
           </div>
 

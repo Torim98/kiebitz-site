@@ -74,12 +74,12 @@ drop `data-beta-open` from the two remaining buttons; the dialog then never open
 
 The landing page contains a feedback form for general feedback, crash reports
 and feature requests. JavaScript sends it in the background to FormSubmit's
-AJAX endpoint, which forwards submissions to `kiebitz@gmail.com`; the regular
+AJAX endpoint, which forwards submissions to `kiebitz.chess@gmail.com`; the regular
 form action remains as a no-JavaScript fallback. The form uses a honeypot and
 disables the provider captcha so it can stay inside the page.
 
 FormSubmit requires one initial confirmation for the recipient address. After
-the first submission, open the activation email sent to `kiebitz@gmail.com` and
+the first submission, open the activation email sent to `kiebitz.chess@gmail.com` and
 confirm it. Until then, FormSubmit retains submissions and delivers them after
 activation.
 
