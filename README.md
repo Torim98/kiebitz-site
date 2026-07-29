@@ -76,7 +76,9 @@ The landing page contains a feedback form for general feedback, crash reports
 and feature requests. JavaScript sends it in the background to FormSubmit's
 AJAX endpoint, which forwards submissions to `kiebitz.chess@gmail.com`; the regular
 form action remains as a no-JavaScript fallback. The form uses a honeypot and
-disables the provider captcha so it can stay inside the page.
+disables the provider captcha so it can stay inside the page. A native
+`details` wrapper presents the form as a compact sealed move line by default
+and expands it accessibly without depending on JavaScript.
 
 FormSubmit requires one initial confirmation for the recipient address. After
 the first submission, open the activation email sent to `kiebitz.chess@gmail.com` and
