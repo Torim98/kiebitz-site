@@ -970,6 +970,7 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
 }
 .feedback-package {
   position: relative;
+  align-self: center;
   min-width: 0;
   border: 1px solid var(--line2);
   border-radius: 16px;
