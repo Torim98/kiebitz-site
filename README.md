@@ -70,6 +70,19 @@ working. The dialog lists the three steps and is defined at the end of
 Once the app is in open testing or production, remove the `.band` section and
 drop `data-beta-open` from the two remaining buttons; the dialog then never opens.
 
+## Feedback form
+
+The landing page contains a feedback form for general feedback, crash reports
+and feature requests. JavaScript sends it in the background to FormSubmit's
+AJAX endpoint, which forwards submissions to `kiebitz@gmail.com`; the regular
+form action remains as a no-JavaScript fallback. The form uses a honeypot and
+disables the provider captcha so it can stay inside the page.
+
+FormSubmit requires one initial confirmation for the recipient address. After
+the first submission, open the activation email sent to `kiebitz@gmail.com` and
+confirm it. Until then, FormSubmit retains submissions and delivers them after
+activation.
+
 ## Notes
 
 - The site is separate from the app repository on purpose: website deploys stay

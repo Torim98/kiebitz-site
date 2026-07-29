@@ -48,6 +48,7 @@
       <a href="#features"><span lang="de">Funktionen</span><span lang="en">Features</span></a>
       <a href="#local"><span lang="de">Local-first</span><span lang="en">Local-first</span></a>
       <a href="#download"><span lang="de">Download</span><span lang="en">Download</span></a>
+      <a href="#feedback"><span lang="de">Feedback</span><span lang="en">Feedback</span></a>
       <a href="privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span></a>
     </nav>
     <div class="lang" role="group" aria-label="Sprache / Language">
@@ -391,7 +392,7 @@
         </div>
         <div class="no">
           <h4><span lang="de">Kein Server des Anbieters</span><span lang="en">No provider server</span></h4>
-          <p><span lang="de">Es gibt keinen Kiebitz-Server, kein Analytics-SDK, keine Werbe-IDs, keine Absturzberichte, keine Konten.</span><span lang="en">There is no Kiebitz server, no analytics SDK, no advertising IDs, no crash reports, no accounts.</span></p>
+          <p><span lang="de">Es gibt keinen Kiebitz-Server, kein Analytics-SDK, keine Werbe-IDs, keine automatischen Absturzberichte, keine Konten.</span><span lang="en">There is no Kiebitz server, no analytics SDK, no advertising IDs, no automatic crash reports, no accounts.</span></p>
         </div>
       </div>
       <p style="margin-top:26px">
@@ -436,6 +437,107 @@
       </p>
     </div>
   </section>
+
+  <!-- ── 07 Feedback ─────────────────────────────────────────────────────── -->
+  <section class="section feedback-section" id="feedback">
+    <div class="wrap">
+      <p class="eyebrow"><b>07</b> <span lang="de">Feedback</span><span lang="en">Feedback</span></p>
+      <div class="feedback-grid">
+        <div class="feedback-copy">
+          <h2>
+            <span lang="de">Sag dem Kiebitz, was dir auffällt.</span>
+            <span lang="en">Tell Kiebitz what you notice.</span>
+          </h2>
+          <p class="lede">
+            <span lang="de">Ob kurzer Eindruck, reproduzierbarer Absturz oder Idee für den nächsten Zug: Jede Meldung landet direkt beim Entwickler.</span>
+            <span lang="en">Whether it is a quick impression, a reproducible crash or an idea for the next move: every report goes straight to the developer.</span>
+          </p>
+          <div class="feedback-notes" aria-label="Hinweise / Notes">
+            <p><b>01</b><span><strong><span lang="de">Kontext hilft.</span><span lang="en">Context helps.</span></strong><span lang="de">Bei Fehlern bitte kurz beschreiben, was direkt davor passiert ist.</span><span lang="en">For bugs, briefly describe what happened immediately before.</span></span></p>
+            <p><b>02</b><span><strong><span lang="de">Antwort ist optional.</span><span lang="en">A reply is optional.</span></strong><span lang="de">Ohne E-Mail bleibt deine Meldung anonym.</span><span lang="en">Without an email address, your report stays anonymous.</span></span></p>
+            <p><b>03</b><span><strong><span lang="de">Keine Telemetrie.</span><span lang="en">No telemetry.</span></strong><span lang="de">Es wird nur gesendet, was du hier selbst einträgst.</span><span lang="en">Only what you enter here is sent.</span></span></p>
+          </div>
+        </div>
+
+        <form class="feedback-form rv" action="https://formsubmit.co/kiebitz@gmail.com" method="POST" data-feedback-form data-feedback-endpoint="https://formsubmit.co/ajax/kiebitz@gmail.com">
+          <input type="hidden" name="_subject" value="Kiebitz · New feedback" data-feedback-subject>
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_url" value="https://torim98.github.io/kiebitz-site/#feedback">
+          <label class="honey" aria-hidden="true">Website<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+
+          <fieldset class="report-types">
+            <legend><span lang="de">Was möchtest du melden?</span><span lang="en">What would you like to report?</span></legend>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Feedback" checked>
+              <span class="report-type-card">
+                <span class="report-type-n">01</span>
+                <span><b>Feedback</b><small><span lang="de">Eindruck oder Hinweis</span><span lang="en">Impression or note</span></small></span>
+              </span>
+            </label>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Crash report">
+              <span class="report-type-card">
+                <span class="report-type-n">02</span>
+                <span><b><span lang="de">Absturz</span><span lang="en">Crash</span></b><small><span lang="de">Fehler nachvollziehen</span><span lang="en">Reproduce a failure</span></small></span>
+              </span>
+            </label>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Feature request">
+              <span class="report-type-card">
+                <span class="report-type-n">03</span>
+                <span><b><span lang="de">Wunsch</span><span lang="en">Feature</span></b><small><span lang="de">Idee für Kiebitz</span><span lang="en">An idea for Kiebitz</span></small></span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="form-field">
+            <label for="feedback-title"><span lang="de">Kurzfassung</span><span lang="en">Summary</span></label>
+            <input id="feedback-title" name="summary" type="text" required maxlength="120" autocomplete="off" data-placeholder-de="Was ist passiert oder was wünschst du dir?" data-placeholder-en="What happened or what would you like to see?">
+          </div>
+
+          <div class="form-field">
+            <label for="feedback-message"><span lang="de">Details</span><span lang="en">Details</span></label>
+            <textarea id="feedback-message" name="message" required minlength="20" maxlength="4000" rows="7" data-placeholder-de="Beschreibe den Ablauf, das erwartete Verhalten oder deine Idee möglichst konkret." data-placeholder-en="Describe the steps, expected behaviour or your idea as concretely as possible."></textarea>
+            <span class="field-hint"><span lang="de">Keine Passwörter, privaten Partien oder anderen sensiblen Daten einfügen.</span><span lang="en">Do not include passwords, private games or other sensitive data.</span></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="feedback-platform"><span lang="de">Plattform</span><span lang="en">Platform</span> <small><span lang="de">optional</span><span lang="en">optional</span></small></label>
+              <select id="feedback-platform" name="platform">
+                <option value="">—</option>
+                <option value="Windows">Windows</option>
+                <option value="Android">Android</option>
+                <option value="Website">Website</option>
+                <option value="Other" data-label-de="Andere" data-label-en="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="feedback-version"><span lang="de">App-Version</span><span lang="en">App version</span> <small><span lang="de">optional</span><span lang="en">optional</span></small></label>
+              <input id="feedback-version" name="app_version" type="text" maxlength="40" autocomplete="off" placeholder="z. B. / e.g. 0.9.4">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="feedback-email">E-Mail <small><span lang="de">optional · nur für eine Antwort</span><span lang="en">optional · only for a reply</span></small></label>
+            <input id="feedback-email" name="email" type="email" maxlength="160" autocomplete="email" placeholder="name@example.com">
+          </div>
+
+          <div class="form-submit">
+            <p>
+              <span lang="de">Mit dem Absenden werden deine Angaben über FormSubmit per E-Mail übermittelt. <a href="privacy/index.html#c12">Details zum Datenschutz</a>.</span>
+              <span lang="en">When you send this form, your entries are transmitted by email via FormSubmit. <a href="privacy/index.html#c12">Privacy details</a>.</span>
+            </p>
+            <button class="btn btn-primary feedback-send" type="submit" data-feedback-send>
+              <span lang="de">Meldung absenden</span><span lang="en">Send report</span>
+            </button>
+          </div>
+          <p class="form-status" data-feedback-status role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="foot">
@@ -450,6 +552,7 @@
       <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
     </div>
     <nav class="foot-links" aria-label="Footer">
+      <a href="#feedback"><span lang="de">Feedback melden</span><span lang="en">Send feedback</span></a>
       <a href="privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span></a>
       <a href="impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span></a>
       <a href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">Releases</a>

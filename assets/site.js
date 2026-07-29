@@ -1,5 +1,5 @@
-/* Kiebitz website — Sprachumschaltung, Reveal, Brett-Choreografie.
-   Kein Framework, keine externen Requests. */
+/* Kiebitz website — Sprachumschaltung, Feedback, Reveal, Brett-Choreografie.
+   Kein Framework; externe Anfrage nur beim bewussten Absenden des Feedback-Formulars. */
 (function () {
   "use strict";
 
@@ -47,6 +47,14 @@
     }
     var t = document.querySelector("[data-title-" + lang + "]");
     if (t) document.title = t.getAttribute("data-title-" + lang);
+    var placeholders = document.querySelectorAll("[data-placeholder-" + lang + "]");
+    for (var p = 0; p < placeholders.length; p++) {
+      placeholders[p].setAttribute("placeholder", placeholders[p].getAttribute("data-placeholder-" + lang));
+    }
+    var labels = document.querySelectorAll("[data-label-" + lang + "]");
+    for (var l = 0; l < labels.length; l++) {
+      labels[l].textContent = labels[l].getAttribute("data-label-" + lang);
+    }
     document.dispatchEvent(new Event("kiebitz:langchange"));
     if (persist) {
       try { localStorage.setItem("kiebitz-lang", lang); } catch (e) { /* egal */ }
@@ -241,6 +249,86 @@
         ev.preventDefault();
         first.focus();
       }
+    });
+  })();
+
+  /* ── Feedback-Formular ──────────────────────────────────────────────────── */
+  (function () {
+    var form = document.querySelector("[data-feedback-form]");
+    if (!form || !window.fetch) return;
+
+    var button = form.querySelector("[data-feedback-send]");
+    var status = form.querySelector("[data-feedback-status]");
+    var subject = form.querySelector("[data-feedback-subject]");
+    var endpoint = form.getAttribute("data-feedback-endpoint");
+    if (!button || !status || !subject || !endpoint) return;
+
+    function typeValue() {
+      var selected = form.querySelector('input[name="report_type"]:checked');
+      return selected ? selected.value : "Feedback";
+    }
+
+    function setStatus(state, de, en) {
+      status.setAttribute("data-state", state);
+      status.innerHTML = '<span lang="de">' + de + '</span><span lang="en">' + en + "</span>";
+    }
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      var honey = form.querySelector('input[name="_honey"]');
+      if (honey && honey.value) {
+        form.reset();
+        setStatus("success", "Danke — deine Meldung wurde übermittelt.", "Thank you — your report has been sent.");
+        return;
+      }
+
+      var reportType = typeValue();
+      subject.value = "Kiebitz · " + reportType;
+      button.disabled = true;
+      button.setAttribute("aria-busy", "true");
+      setStatus("sending", "Meldung wird sicher übermittelt …", "Sending your report securely …");
+
+      var payload = {};
+      new FormData(form).forEach(function (value, key) {
+        payload[key] = value;
+      });
+
+      fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error("submit failed");
+          return response.json();
+        })
+        .then(function () {
+          form.reset();
+          setStatus(
+            "success",
+            "Danke — deine Meldung ist unterwegs. Jeder Hinweis hilft Kiebitz weiter.",
+            "Thank you — your report is on its way. Every note helps Kiebitz improve."
+          );
+        })
+        .catch(function () {
+          setStatus(
+            "error",
+            'Das hat nicht geklappt. Bitte versuche es noch einmal oder schreib direkt an <a href="mailto:kiebitz@gmail.com">kiebitz@gmail.com</a>.',
+            'That did not work. Please try again or email <a href="mailto:kiebitz@gmail.com">kiebitz@gmail.com</a> directly.'
+          );
+        })
+        .then(function () {
+          button.disabled = false;
+          button.removeAttribute("aria-busy");
+        });
     });
   })();
 
