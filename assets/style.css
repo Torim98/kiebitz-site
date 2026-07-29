@@ -647,6 +647,7 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
   inset: 0;
   z-index: 95;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   place-items: center;
   padding: clamp(12px, 3vw, 40px);
   background: rgba(8, 8, 7, 0.82);
@@ -655,7 +656,9 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
 }
 .modal[hidden] { display: none; }
 .modal-card {
-  width: min(560px, 100%);
+  width: 100%;
+  max-width: 560px;
+  min-width: 0;
   max-height: min(86vh, 780px);
   display: flex;
   flex-direction: column;
@@ -728,7 +731,7 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
 }
 
 .steps { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
-.step {
+.steps .step {
   display: flex;
   align-items: flex-start;
   gap: 13px;
@@ -739,8 +742,8 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
   color: var(--ink);
   transition: border-color 0.15s, background 0.15s;
 }
-.step:hover { border-color: var(--accent-dim); background: var(--panel3); color: var(--ink); }
-.step-n {
+.steps .step:hover { border-color: var(--accent-dim); background: var(--panel3); color: var(--ink); }
+.steps .step-n {
   flex: none;
   width: 24px;
   height: 24px;
@@ -752,18 +755,18 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
   color: var(--accent);
   font: 600 12px/1 var(--mono);
 }
-.step-txt { min-width: 0; display: block; }
-.step-txt b { display: block; font-size: 14px; font-weight: 600; }
-.step-sub { display: block; font-size: 12.5px; line-height: 1.5; color: var(--ink3); margin-top: 2px; }
-.step-url {
+.steps .step-txt { min-width: 0; display: block; }
+.steps .step-txt b { display: block; font-size: 14px; font-weight: 600; }
+.steps .step-sub { display: block; font-size: 12.5px; line-height: 1.5; color: var(--ink3); margin-top: 2px; }
+.steps .step-url {
   display: block;
   margin-top: 5px;
   font: 400 11px/1.4 var(--mono);
   color: var(--accent);
   overflow-wrap: anywhere;
 }
-.step-go { flex: none; margin-left: auto; color: var(--ink3); font-size: 14px; line-height: 1.4; }
-.step:hover .step-go { color: var(--accent); }
+.steps .step-go { flex: none; margin-left: auto; color: var(--ink3); font-size: 14px; line-height: 1.4; }
+.steps .step:hover .step-go { color: var(--accent); }
 
 .modal-foot {
   display: flex;
