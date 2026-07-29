@@ -297,7 +297,7 @@
       var honey = form.querySelector('input[name="_honey"]');
       if (honey && honey.value) {
         form.reset();
-        setStatus("success", "Danke — deine Meldung wurde übermittelt.", "Thank you — your report has been sent.");
+        setStatus("success", "Danke. Deine Meldung wurde übermittelt.", "Thank you. Your report has been sent.");
         return;
       }
 
@@ -335,8 +335,8 @@
           updateCount();
           setStatus(
             "success",
-            "Danke — deine Meldung ist unterwegs. Jeder Hinweis hilft Kiebitz weiter.",
-            "Thank you — your report is on its way. Every note helps Kiebitz improve."
+            "Danke. Deine Meldung ist unterwegs. Jeder Hinweis hilft Kiebitz weiter.",
+            "Thank you. Your report is on its way. Every note helps Kiebitz improve."
           );
         })
         .catch(function () {
