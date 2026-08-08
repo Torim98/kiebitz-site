@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en" data-title-de="Datenschutzerklärung · Kiebitz" data-title-en="Privacy Policy · Kiebitz">
+<html lang="en" dir="ltr" data-lang="en" data-title-de="Datenschutzerklärung · Kiebitz" data-title-en="Privacy Policy · Kiebitz" data-title-fr="Politique de confidentialité · Kiebitz" data-title-es="Política de privacidad · Kiebitz" data-title-zh="隐私政策 · Kiebitz" data-title-hi="गोपनीयता नीति · Kiebitz" data-title-ar="سياسة الخصوصية · Kiebitz">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · Kiebitz</title>
-<meta name="description" content="Datenschutzerklärung der App Kiebitz (deutsch und englisch): lokale Speicherung, Netzzugriffe, Berechtigungen, LAN-Sync, kein Tracking. · Privacy policy for the Kiebitz app in German and English.">
+<meta name="description" content="Datenschutzerklärung der App Kiebitz: lokale Speicherung, Netzzugriffe, Berechtigungen, LAN-Sync, kein Tracking. · Privacy policy for the Kiebitz app. · Deutsch, English, Français, Español, 中文, हिन्दी, العربية.">
 <meta name="theme-color" content="#0e0e0d">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="../assets/icon-128.png" type="image/png">
@@ -13,23 +13,36 @@
 <link rel="stylesheet" href="../assets/style.css">
 <script>
 (function () {
+  var LANGS = { de: 1, en: 1, fr: 1, es: 1, zh: 1, hi: 1, ar: 1 };
+  var TAG = { de: "de", en: "en", fr: "fr", es: "es", zh: "zh-Hans", hi: "hi", ar: "ar" };
   var l = "en";
   try {
     var s = localStorage.getItem("kiebitz-lang");
-    if (s === "de" || s === "en") l = s;
-    else if ((navigator.language || "").toLowerCase().indexOf("de") === 0) l = "de";
+    if (s && LANGS[s]) {
+      l = s;
+    } else {
+      var list = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || ""];
+      for (var i = 0; i < list.length; i++) {
+        var c = String(list[i]).toLowerCase().split("-")[0];
+        if (LANGS[c]) { l = c; break; }
+      }
+    }
   } catch (e) { /* egal */ }
-  document.documentElement.setAttribute("data-lang", l);
-  document.documentElement.setAttribute("lang", l);
+  var d = document.documentElement;
+  d.setAttribute("data-lang", l);
+  d.setAttribute("lang", TAG[l]);
+  d.setAttribute("dir", l === "ar" ? "rtl" : "ltr");
   try {
     var m = localStorage.getItem("kiebitz-motion");
-    if (m === "on" || m === "off") document.documentElement.setAttribute("data-motion", m);
+    if (m === "on" || m === "off") d.setAttribute("data-motion", m);
   } catch (e) { /* egal */ }
 })();
 </script>
 </head>
 <body>
-<a class="skip" href="#main"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span></a>
+<a class="skip" href="#main"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span><span lang="fr">Aller au contenu</span><span lang="es">Ir al contenido</span><span lang="zh">跳到主要内容</span><span lang="hi">सामग्री पर जाएँ</span><span lang="ar">تخطَّ إلى المحتوى</span></a>
 
 <header class="top">
   <div class="wrap top-in">
@@ -37,84 +50,125 @@
       <img src="../assets/icon-128.png" width="30" height="30" alt="">
       <span>
         <span class="mark-name">Kiebitz</span>
-        <span class="mark-tag"><span lang="de">Zug um Zugvogel</span><span lang="en">Moves take flight</span></span>
+        <span class="mark-tag"><span lang="de">Zug um Zugvogel</span><span lang="en">Moves take flight</span><span lang="fr">Coup d’aile</span><span lang="es">Jugadas que vuelan</span><span lang="zh">步步高飞</span><span lang="hi">हर चाल, एक उड़ान</span><span lang="ar">نقلة تُحلّق</span></span>
       </span>
     </a>
     <nav class="top-nav" aria-label="Kiebitz">
-      <a href="../index.html#features"><span lang="de">Funktionen</span><span lang="en">Features</span></a>
-      <a href="../index.html#download"><span lang="de">Download</span><span lang="en">Download</span></a>
-      <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span></a>
+      <a href="../index.html#features"><span lang="de">Funktionen</span><span lang="en">Features</span><span lang="fr">Fonctions</span><span lang="es">Funciones</span><span lang="zh">功能</span><span lang="hi">विशेषताएँ</span><span lang="ar">المزايا</span></a>
+      <a href="../index.html#download"><span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></a>
+      <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
     </nav>
-    <div class="lang" role="group" aria-label="Sprache / Language">
-      <button type="button" data-set-lang="de" aria-pressed="false">DE</button>
-      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="Sprache · Language · Langue · Idioma · 语言 · भाषा · اللغة">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
     </div>
-    <a class="btn btn-sm" href="../index.html"><span lang="de">Zurück</span><span lang="en">Back</span></a>
+    <a class="btn btn-sm" href="../index.html"><span lang="de">Zurück</span><span lang="en">Back</span><span lang="fr">Retour</span><span lang="es">Volver</span><span lang="zh">返回</span><span lang="hi">वापस</span><span lang="ar">رجوع</span></a>
   </div>
 </header>
 
 <main id="main" class="doc">
   <div class="wrap doc-grid">
     <aside class="toc" aria-label="Inhalt">
-      <p class="toc-h"><span lang="de">Inhalt</span><span lang="en">Contents</span></p>
+      <p class="toc-h"><span lang="de">Inhalt</span><span lang="en">Contents</span><span lang="fr">Sommaire</span><span lang="es">Contenido</span><span lang="zh">目录</span><span lang="hi">विषय-सूची</span><span lang="ar">المحتويات</span></p>
       <ul>
-        <li><a href="#c1">1 <span lang="de">Verantwortlicher</span><span lang="en">Controller</span></a></li>
-        <li><a href="#c2">2 <span lang="de">Grundsatz</span><span lang="en">Principle</span></a></li>
-        <li><a href="#c3">3 <span lang="de">Lokal gespeicherte Daten</span><span lang="en">Data stored locally</span></a></li>
-        <li><a href="#c4">4 <span lang="de">Netzverbindungen</span><span lang="en">Network connections</span></a></li>
-        <li><a href="#c5">5 <span lang="de">Berechtigungen</span><span lang="en">Permissions</span></a></li>
-        <li><a href="#c6">6 <span lang="de">Geräte-Sync</span><span lang="en">Device sync</span></a></li>
-        <li><a href="#c7">7 <span lang="de">Kein Tracking</span><span lang="en">No tracking</span></a></li>
-        <li><a href="#c8">8 <span lang="de">Rechtsgrundlagen</span><span lang="en">Legal bases</span></a></li>
-        <li><a href="#c9">9 <span lang="de">Speicherdauer &amp; Löschung</span><span lang="en">Retention &amp; deletion</span></a></li>
-        <li><a href="#c10">10 <span lang="de">Kinder</span><span lang="en">Children</span></a></li>
-        <li><a href="#c11">11 <span lang="de">Deine Rechte</span><span lang="en">Your rights</span></a></li>
-        <li><a href="#c12">12 <span lang="de">Diese Website</span><span lang="en">This website</span></a></li>
-        <li><a href="#c13">13 <span lang="de">Änderungen</span><span lang="en">Changes</span></a></li>
+        <li><a href="#c1">1 <span lang="de">Verantwortlicher</span><span lang="en">Controller</span><span lang="fr">Responsable du traitement</span><span lang="es">Responsable</span><span lang="zh">数据控制者</span><span lang="hi">नियंत्रक</span><span lang="ar">المسؤول عن المعالجة</span></a></li>
+        <li><a href="#c2">2 <span lang="de">Grundsatz</span><span lang="en">Principle</span><span lang="fr">Principe</span><span lang="es">Principio</span><span lang="zh">基本原则</span><span lang="hi">सिद्धांत</span><span lang="ar">المبدأ</span></a></li>
+        <li><a href="#c3">3 <span lang="de">Lokal gespeicherte Daten</span><span lang="en">Data stored locally</span><span lang="fr">Données stockées en local</span><span lang="es">Datos guardados en local</span><span lang="zh">本地保存的数据</span><span lang="hi">स्थानीय रूप से संग्रहीत डेटा</span><span lang="ar">البيانات المخزَّنة محليًا</span></a></li>
+        <li><a href="#c4">4 <span lang="de">Netzverbindungen</span><span lang="en">Network connections</span><span lang="fr">Connexions réseau</span><span lang="es">Conexiones de red</span><span lang="zh">网络连接</span><span lang="hi">नेटवर्क कनेक्शन</span><span lang="ar">اتصالات الشبكة</span></a></li>
+        <li><a href="#c5">5 <span lang="de">Berechtigungen</span><span lang="en">Permissions</span><span lang="fr">Autorisations</span><span lang="es">Permisos</span><span lang="zh">权限</span><span lang="hi">अनुमतियाँ</span><span lang="ar">الأذونات</span></a></li>
+        <li><a href="#c6">6 <span lang="de">Geräte-Sync</span><span lang="en">Device sync</span><span lang="fr">Sync entre appareils</span><span lang="es">Sync entre dispositivos</span><span lang="zh">设备同步</span><span lang="hi">डिवाइस सिंक</span><span lang="ar">مزامنة الأجهزة</span></a></li>
+        <li><a href="#c7">7 <span lang="de">Kein Tracking</span><span lang="en">No tracking</span><span lang="fr">Pas de pistage</span><span lang="es">Sin rastreo</span><span lang="zh">不做追踪</span><span lang="hi">कोई ट्रैकिंग नहीं</span><span lang="ar">بلا تتبُّع</span></a></li>
+        <li><a href="#c8">8 <span lang="de">Rechtsgrundlagen</span><span lang="en">Legal bases</span><span lang="fr">Bases légales</span><span lang="es">Bases jurídicas</span><span lang="zh">法律依据</span><span lang="hi">क़ानूनी आधार</span><span lang="ar">الأسس القانونية</span></a></li>
+        <li><a href="#c9">9 <span lang="de">Speicherdauer &amp; Löschung</span><span lang="en">Retention &amp; deletion</span><span lang="fr">Conservation &amp; suppression</span><span lang="es">Conservación &amp; borrado</span><span lang="zh">保存期限与删除</span><span lang="hi">भंडारण अवधि और विलोपन</span><span lang="ar">مدة الحفظ والحذف</span></a></li>
+        <li><a href="#c10">10 <span lang="de">Kinder</span><span lang="en">Children</span><span lang="fr">Enfants</span><span lang="es">Menores</span><span lang="zh">未成年人</span><span lang="hi">बच्चे</span><span lang="ar">الأطفال</span></a></li>
+        <li><a href="#c11">11 <span lang="de">Deine Rechte</span><span lang="en">Your rights</span><span lang="fr">Vos droits</span><span lang="es">Tus derechos</span><span lang="zh">你的权利</span><span lang="hi">आपके अधिकार</span><span lang="ar">حقوقك</span></a></li>
+        <li><a href="#c12">12 <span lang="de">Diese Website</span><span lang="en">This website</span><span lang="fr">Ce site web</span><span lang="es">Este sitio web</span><span lang="zh">本网站</span><span lang="hi">यह वेबसाइट</span><span lang="ar">هذا الموقع</span></a></li>
+        <li><a href="#c13">13 <span lang="de">Änderungen</span><span lang="en">Changes</span><span lang="fr">Modifications</span><span lang="es">Cambios</span><span lang="zh">变更</span><span lang="hi">परिवर्तन</span><span lang="ar">التعديلات</span></a></li>
       </ul>
     </aside>
 
     <article>
-      <p class="eyebrow"><b>DE / EN</b> <span lang="de">Rechtstext</span><span lang="en">Legal text</span></p>
-      <h1><span lang="de">Datenschutzerklärung</span><span lang="en">Privacy Policy</span></h1>
+      <p class="eyebrow"><b>§</b> <span lang="de">Rechtstext</span><span lang="en">Legal text</span><span lang="fr">Texte juridique</span><span lang="es">Texto legal</span><span lang="zh">法律文本</span><span lang="hi">क़ानूनी पाठ</span><span lang="ar">نص قانوني</span></p>
+      <h1><span lang="de">Datenschutzerklärung</span><span lang="en">Privacy Policy</span><span lang="fr">Politique de confidentialité</span><span lang="es">Política de privacidad</span><span lang="zh">隐私政策</span><span lang="hi">गोपनीयता नीति</span><span lang="ar">سياسة الخصوصية</span></h1>
       <p class="doc-sub">
         <span lang="de">Für die App <strong>Kiebitz</strong> (Windows und Android) und diese Website. Kiebitz ist eine local-first Anwendung: Die Daten bleiben auf deinen Geräten, der Anbieter betreibt keinen Server, der deine Inhalte empfängt.</span>
         <span lang="en">For the <strong>Kiebitz</strong> app (Windows and Android) and this website. Kiebitz is a local-first application: your data stays on your devices, and the provider operates no server that receives your content.</span>
+        <span lang="fr">Pour l’application <strong>Kiebitz</strong> (Windows et Android) et pour ce site. Kiebitz est une application local-first : les données restent sur vos appareils et l’éditeur n’exploite aucun serveur qui recevrait vos contenus.</span>
+        <span lang="es">Para la app <strong>Kiebitz</strong> (Windows y Android) y para este sitio web. Kiebitz es una aplicación local-first: los datos se quedan en tus dispositivos y el proveedor no opera ningún servidor que reciba tus contenidos.</span>
+        <span lang="zh">适用于 <strong>Kiebitz</strong> 应用（Windows 与 Android）以及本网站。Kiebitz 是一款本地优先的应用：数据留在你的设备上，开发者不运营任何接收你内容的服务器。</span>
+        <span lang="hi"><strong>Kiebitz</strong> ऐप (Windows और Android) और इस वेबसाइट के लिए। Kiebitz एक लोकल-फ़र्स्ट अनुप्रयोग है: डेटा आपके उपकरणों पर रहता है, और प्रदाता कोई ऐसा सर्वर नहीं चलाता जो आपकी सामग्री प्राप्त करे।</span>
+        <span lang="ar">لتطبيق <strong>Kiebitz</strong> (على Windows وAndroid) ولهذا الموقع. ‏Kiebitz تطبيق محلي أولًا: تبقى البيانات على أجهزتك، ولا يشغّل المزوّد أي خادم يتلقّى محتواك.</span>
       </p>
       <p class="doc-meta">
         <span lang="de">Stand: 29. Juli 2026 · gültig für alle Kiebitz-Versionen der Beta</span>
         <span lang="en">Last updated: 29 July 2026 · applies to all Kiebitz beta versions</span>
+        <span lang="fr">Mise à jour : 29 juillet 2026 · s’applique à toutes les versions bêta de Kiebitz. Traduction fournie à titre d’information ; en cas de divergence, la version allemande fait foi.</span>
+        <span lang="es">Actualizado: 29 de julio de 2026 · válido para todas las versiones beta de Kiebitz. Traducción a título informativo; en caso de discrepancia prevalece la versión alemana.</span>
+        <span lang="zh">更新日期：2026 年 7 月 29 日 · 适用于所有 Kiebitz 测试版。译文仅供参考；如有出入，以德文版本为准。</span>
+        <span lang="hi">अद्यतन: 29 जुलाई 2026 · सभी Kiebitz बीटा संस्करणों पर लागू। अनुवाद केवल जानकारी के लिए है; भिन्नता होने पर जर्मन संस्करण मान्य होगा।</span>
+        <span lang="ar">آخر تحديث: 29 يوليو 2026 · تسري على جميع نسخ Kiebitz التجريبية. هذه الترجمة للاطّلاع فقط، وعند الاختلاف يُعتدّ بالنسخة الألمانية.</span>
       </p>
 
       <section id="c1">
-        <h2><span class="num">01</span><span lang="de">Verantwortlicher</span><span lang="en">Controller</span></h2>
+        <h2><span class="num">01</span><span lang="de">Verantwortlicher</span><span lang="en">Controller</span><span lang="fr">Responsable du traitement</span><span lang="es">Responsable del tratamiento</span><span lang="zh">数据控制者</span><span lang="hi">नियंत्रक</span><span lang="ar">المسؤول عن المعالجة</span></h2>
         <p lang="de">Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) für die Bereitstellung der App und dieser Website ist:</p>
         <p lang="en">The controller within the meaning of the General Data Protection Regulation (GDPR) for providing the app and this website is:</p>
+        <p lang="fr">Le responsable du traitement au sens du Règlement général sur la protection des données (RGPD) pour la mise à disposition de l’application et de ce site est :</p>
+        <p lang="es">El responsable del tratamiento en el sentido del Reglamento General de Protección de Datos (RGPD) para la puesta a disposición de la app y de este sitio es:</p>
+        <p lang="zh">就本应用与本网站的提供而言，《通用数据保护条例》（GDPR）意义上的数据控制者为：</p>
+        <p lang="hi">ऐप और इस वेबसाइट को उपलब्ध कराने के संबंध में सामान्य डेटा संरक्षण विनियम (GDPR) के अर्थ में नियंत्रक हैं:</p>
+        <p lang="ar">المسؤول عن المعالجة بمفهوم اللائحة العامة لحماية البيانات (GDPR) فيما يخصّ توفير التطبيق وهذا الموقع هو:</p>
         <div class="panel">
           <address>
             Tom Maurer<br>
             Heidegarten 3<br>
             56244 Helferskirchen<br>
-            <span lang="de">Deutschland</span><span lang="en">Germany</span><br>
+            <span lang="de">Deutschland</span><span lang="en">Germany</span><span lang="fr">Allemagne</span><span lang="es">Alemania</span><span lang="zh">德国</span><span lang="hi">जर्मनी</span><span lang="ar">ألمانيا</span><br>
             <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>
           </address>
         </div>
         <p style="margin-top:14px">
           <span lang="de">Ein Datenschutzbeauftragter ist nicht bestellt, da die Voraussetzungen des Art. 37 DSGVO nicht vorliegen. Für alle Fragen zum Datenschutz genügt eine E-Mail an die oben genannte Adresse.</span>
           <span lang="en">No data protection officer has been appointed, as the conditions of Art. 37 GDPR are not met. For any privacy question, an email to the address above is enough.</span>
+          <span lang="fr">Aucun délégué à la protection des données n’a été désigné, les conditions de l’art. 37 du RGPD n’étant pas réunies. Pour toute question relative à la protection des données, un e-mail à l’adresse ci-dessus suffit.</span>
+          <span lang="es">No se ha designado un delegado de protección de datos, ya que no concurren las condiciones del art. 37 del RGPD. Para cualquier cuestión de privacidad basta con un correo a la dirección indicada arriba.</span>
+          <span lang="zh">未指定数据保护官，因为不满足 GDPR 第 37 条的条件。任何隐私相关问题，发邮件到上述地址即可。</span>
+          <span lang="hi">कोई डेटा संरक्षण अधिकारी नियुक्त नहीं किया गया है, क्योंकि GDPR के अनुच्छेद 37 की शर्तें पूरी नहीं होतीं। गोपनीयता से जुड़े किसी भी प्रश्न के लिए ऊपर दिए पते पर एक ई-मेल पर्याप्त है।</span>
+          <span lang="ar">لم يُعيَّن مسؤول لحماية البيانات لأن شروط المادة 37 من اللائحة غير متحقّقة. ولأي سؤال عن الخصوصية تكفي رسالة إلى العنوان أعلاه.</span>
         </p>
       </section>
 
       <section id="c2">
-        <h2><span class="num">02</span><span lang="de">Grundsatz: local-first</span><span lang="en">Principle: local-first</span></h2>
+        <h2><span class="num">02</span><span lang="de">Grundsatz: local-first</span><span lang="en">Principle: local-first</span><span lang="fr">Principe : local-first</span><span lang="es">Principio: local-first</span><span lang="zh">基本原则：本地优先</span><span lang="hi">सिद्धांत: लोकल-फ़र्स्ट</span><span lang="ar">المبدأ: محلي أولًا</span></h2>
         <p lang="de">Kiebitz verarbeitet deine Schachdaten ausschließlich auf deinen eigenen Geräten. Es gibt kein Nutzerkonto, keine Registrierung, keinen Cloud-Speicher und keinen Server des Anbieters, an den Partien, Analysen, Trainingsfortschritte oder Nutzungsdaten übertragen werden. Der Anbieter erhält im Regelbetrieb der App keine personenbezogenen Daten von dir und kann daher auch keine Auswertung oder Profilbildung vornehmen.</p>
         <p lang="de">Die einzigen Netzverbindungen, die die App aufbaut, richten sich an Dritte, die du selbst ausgewählt hast (chess.com, Lichess, optional chessdb.cn) sowie an GitHub für die Update-Prüfung. Diese Verbindungen sind in Abschnitt 4 vollständig aufgeführt.</p>
         <p lang="en">Kiebitz processes your chess data exclusively on your own devices. There is no user account, no registration, no cloud storage and no provider server that games, analyses, training progress or usage data are transmitted to. In normal operation of the app, the provider receives no personal data from you and therefore cannot analyse it or build any profile.</p>
         <p lang="en">The only network connections the app establishes go to third parties you chose yourself (chess.com, Lichess, optionally chessdb.cn) and to GitHub for the update check. These connections are listed in full in section 4.</p>
+        <p lang="fr">Kiebitz traite vos données d’échecs exclusivement sur vos propres appareils. Il n’y a ni compte utilisateur, ni inscription, ni stockage cloud, ni serveur de l’éditeur auquel seraient transmis parties, analyses, progression d’entraînement ou données d’usage. En fonctionnement normal, l’éditeur ne reçoit aucune donnée personnelle de votre part et ne peut donc procéder à aucune analyse ni à aucun profilage.</p>
+        <p lang="fr">Les seules connexions réseau établies par l’application visent des tiers que vous avez choisis vous-même (chess.com, Lichess, éventuellement chessdb.cn) ainsi que GitHub pour la vérification des mises à jour. Ces connexions sont listées de façon exhaustive à la section 4.</p>
+        <p lang="es">Kiebitz procesa tus datos de ajedrez exclusivamente en tus propios dispositivos. No hay cuenta de usuario, ni registro, ni almacenamiento en la nube, ni servidor del proveedor al que se transmitan partidas, análisis, progreso de entrenamiento o datos de uso. En el funcionamiento normal de la app, el proveedor no recibe ningún dato personal tuyo y, por tanto, no puede analizarlo ni elaborar perfiles.</p>
+        <p lang="es">Las únicas conexiones de red que establece la app se dirigen a terceros elegidos por ti (chess.com, Lichess y, opcionalmente, chessdb.cn) y a GitHub para la comprobación de actualizaciones. Estas conexiones se enumeran íntegramente en la sección 4.</p>
+        <p lang="zh">Kiebitz 仅在你自己的设备上处理你的国际象棋数据。没有用户账号，没有注册，没有云端存储，也没有任何用于接收对局、分析、训练进度或使用数据的开发者服务器。在应用的常规使用中，开发者不会收到你的任何个人数据，因此也无法进行分析或画像。</p>
+        <p lang="zh">应用建立的唯一网络连接指向你自己选择的第三方（chess.com、Lichess，以及可选的 chessdb.cn），以及用于检查更新的 GitHub。这些连接在第 4 节中完整列出。</p>
+        <p lang="hi">Kiebitz आपके शतरंज डेटा को केवल आपके अपने उपकरणों पर संसाधित करता है। कोई उपयोगकर्ता खाता, कोई पंजीकरण, कोई क्लाउड भंडारण और कोई ऐसा प्रदाता-सर्वर नहीं है जिसे बाज़ियाँ, विश्लेषण, प्रशिक्षण-प्रगति या उपयोग-डेटा भेजा जाता हो। ऐप के सामान्य संचालन में प्रदाता को आपसे कोई व्यक्तिगत डेटा नहीं मिलता, इसलिए वह न कोई मूल्यांकन कर सकता है और न प्रोफ़ाइल बना सकता है।</p>
+        <p lang="hi">ऐप केवल उन्हीं नेटवर्क कनेक्शनों को स्थापित करता है जो आपके ही चुने हुए तीसरे पक्षों (chess.com, Lichess, वैकल्पिक रूप से chessdb.cn) और अपडेट जाँच के लिए GitHub की ओर जाते हैं। ये कनेक्शन खंड 4 में पूरी तरह सूचीबद्ध हैं।</p>
+        <p lang="ar">يعالج Kiebitz بيانات شطرنجك على أجهزتك وحدها. لا يوجد حساب مستخدم ولا تسجيل ولا تخزين سحابي ولا خادم للمزوّد تُنقل إليه المباريات أو التحليلات أو تقدّم التدريب أو بيانات الاستخدام. وفي التشغيل المعتاد للتطبيق لا يتلقّى المزوّد أي بيانات شخصية منك، ومن ثَمّ لا يمكنه إجراء أي تحليل أو بناء أي ملف تعريفي.</p>
+        <p lang="ar">الاتصالات الشبكية الوحيدة التي ينشئها التطبيق موجَّهة إلى أطراف ثالثة اخترتها بنفسك (chess.com وLichess واختياريًا chessdb.cn)، وإلى GitHub للتحقّق من التحديثات. وهذه الاتصالات مذكورة بالكامل في القسم 4.</p>
       </section>
 
       <section id="c3">
-        <h2><span class="num">03</span><span lang="de">Welche Daten die App lokal speichert</span><span lang="en">What the app stores locally</span></h2>
+        <h2><span class="num">03</span><span lang="de">Welche Daten die App lokal speichert</span><span lang="en">What the app stores locally</span><span lang="fr">Ce que l’application stocke en local</span><span lang="es">Qué guarda la app en local</span><span lang="zh">应用在本地保存哪些数据</span><span lang="hi">ऐप स्थानीय रूप से क्या संग्रहीत करता है</span><span lang="ar">ما الذي يخزّنه التطبيق محليًا</span></h2>
         <p lang="de">Kiebitz legt seine Daten in einer lokalen SQLite-Datenbank und in lokalen Konfigurationsdateien im anwendungseigenen Datenverzeichnis des Betriebssystems ab (Windows: Anwendungsdatenverzeichnis deines Benutzerkontos; Android: privates App-Verzeichnis, für andere Apps nicht lesbar). Gespeichert werden:</p>
         <ul class="bul" lang="de">
           <li>importierte Partien mit Metadaten (Datum, Gegnername, Elo-Werte, Zeitkontrolle, Eröffnung, Ergebnis, Zugfolge, Quelle)</li>
@@ -135,16 +189,77 @@
           <li>cached responses of the optional online opening book (up to 30 days)</li>
         </ul>
         <p lang="en" style="margin-top:14px">This data does not leave your device unless you export it yourself (for example as a PGN file) or synchronise it with a second device of your own (section 6).</p>
+        <p lang="fr">Kiebitz enregistre ses données dans une base SQLite locale et dans des fichiers de configuration locaux, à l’intérieur du répertoire de données applicatives du système d’exploitation (Windows : le répertoire de données applicatives de votre compte utilisateur ; Android : le répertoire privé de l’application, illisible pour les autres applications). Sont enregistrés :</p>
+        <ul class="bul" lang="fr">
+          <li>les parties importées avec leurs métadonnées (date, nom de l’adversaire, Elo, cadence, ouverture, résultat, suite de coups, source)</li>
+          <li>les résultats d’analyse du moteur (évaluations par coup, classification des coups, précision)</li>
+          <li>l’arbre du répertoire et les données de révision FSRS, la progression et l’Elo des problèmes, les résultats de finales, le plan d’étude et les listes de contrôle</li>
+          <li>vos propres notes et étiquettes sur les parties et les coups</li>
+          <li>les réglages, dont les pseudos chess.com et Lichess que vous avez saisis, la langue, les options du moteur et, si vous avez appairé un téléphone, l’adresse, le code d’appairage et l’empreinte du certificat du hub de synchronisation</li>
+          <li>les réponses mises en cache du livre d’ouvertures en ligne facultatif (jusqu’à 30 jours)</li>
+        </ul>
+        <p lang="fr" style="margin-top:14px">Ces données ne quittent pas votre appareil, sauf si vous les exportez vous-même (par exemple sous forme de fichier PGN) ou si vous les synchronisez avec un second appareil vous appartenant (section 6).</p>
+        <p lang="es">Kiebitz guarda sus datos en una base de datos SQLite local y en archivos de configuración locales dentro del directorio de datos de aplicación del sistema operativo (Windows: el directorio de datos de aplicación de tu cuenta de usuario; Android: el directorio privado de la app, ilegible para otras aplicaciones). Se guardan:</p>
+        <ul class="bul" lang="es">
+          <li>las partidas importadas con sus metadatos (fecha, nombre del rival, valores Elo, ritmo de juego, apertura, resultado, secuencia de jugadas, origen)</li>
+          <li>los resultados de análisis del motor (evaluaciones por jugada, clasificación de jugadas, precisión)</li>
+          <li>el árbol del repertorio y los datos de repaso FSRS, el progreso y el Elo de ejercicios, los resultados de finales, el plan de estudio y las listas de tareas</li>
+          <li>tus propias notas y etiquetas sobre partidas y jugadas</li>
+          <li>los ajustes, incluidos los nombres de usuario de chess.com y Lichess que has introducido, el idioma, las opciones del motor y, si has emparejado un móvil, la dirección, el código de emparejamiento y la huella del certificado del hub de sincronización</li>
+          <li>las respuestas en caché del libro de aperturas en línea opcional (hasta 30 días)</li>
+        </ul>
+        <p lang="es" style="margin-top:14px">Estos datos no salen de tu dispositivo salvo que los exportes tú (por ejemplo como archivo PGN) o los sincronices con un segundo dispositivo propio (sección 6).</p>
+        <p lang="zh">Kiebitz 将数据存放在本地 SQLite 数据库和本地配置文件中，位于操作系统的应用数据目录内（Windows：你的用户账户的应用数据目录；Android：应用私有目录，其他应用无法读取）。保存的内容包括：</p>
+        <ul class="bul" lang="zh">
+          <li>导入的对局及其元数据（日期、对手名称、Elo 值、用时规则、开局、结果、着法序列、来源）</li>
+          <li>引擎的分析结果（逐着评分、着法分类、准确率）</li>
+          <li>开局库的局面树与 FSRS 复习数据、战术题进度与 Elo、残局成绩、学习计划与清单</li>
+          <li>你自己为对局和着法写下的笔记与标签</li>
+          <li>设置，包括你填写的 chess.com 与 Lichess 用户名、语言、引擎选项，以及在你配对过手机时的同步枢纽地址、配对码和证书指纹</li>
+          <li>可选在线开局库的缓存响应（最长 30 天）</li>
+        </ul>
+        <p lang="zh" style="margin-top:14px">除非你自己导出（例如导出为 PGN 文件），或与你自己的第二台设备同步（第 6 节），这些数据不会离开你的设备。</p>
+        <p lang="hi">Kiebitz अपना डेटा एक स्थानीय SQLite डेटाबेस और स्थानीय कॉन्फ़िगरेशन फ़ाइलों में, ऑपरेटिंग सिस्टम की एप्लिकेशन-डेटा डायरेक्टरी के भीतर रखता है (Windows: आपके उपयोगकर्ता खाते की एप्लिकेशन-डेटा डायरेक्टरी; Android: ऐप की निजी डायरेक्टरी, जिसे दूसरे ऐप नहीं पढ़ सकते)। संग्रहीत किया जाता है:</p>
+        <ul class="bul" lang="hi">
+          <li>आयातित बाज़ियाँ और उनका मेटाडेटा (तारीख़, प्रतिद्वंद्वी का नाम, Elo मान, टाइम कंट्रोल, ओपनिंग, परिणाम, चालों का क्रम, स्रोत)</li>
+          <li>इंजन के विश्लेषण-परिणाम (हर चाल का मूल्यांकन, चाल का वर्गीकरण, सटीकता)</li>
+          <li>रेपर्टवार-ट्री और FSRS दोहराव-डेटा, पहेली-प्रगति और पहेली-Elo, अंतिम-खेल के परिणाम, अध्ययन योजना और चेकलिस्ट</li>
+          <li>बाज़ियों और चालों पर आपके अपने नोट और टैग</li>
+          <li>सेटिंग्स, जिनमें आपके डाले हुए chess.com और Lichess यूज़रनेम, भाषा, इंजन विकल्प, और यदि आपने फ़ोन जोड़ा है तो सिंक हब का पता, पेयरिंग कोड और सर्टिफ़िकेट फ़िंगरप्रिंट शामिल हैं</li>
+          <li>वैकल्पिक ऑनलाइन ओपनिंग बुक की कैश्ड प्रतिक्रियाएँ (30 दिन तक)</li>
+        </ul>
+        <p lang="hi" style="margin-top:14px">यह डेटा आपके उपकरण से बाहर नहीं जाता, बशर्ते आप इसे स्वयं निर्यात न करें (जैसे PGN फ़ाइल के रूप में) या अपने ही दूसरे उपकरण के साथ सिंक न करें (खंड 6)।</p>
+        <p lang="ar">يحفظ Kiebitz بياناته في قاعدة بيانات SQLite محلية وفي ملفات إعداد محلية داخل دليل بيانات التطبيقات في نظام التشغيل (على Windows: دليل بيانات التطبيقات الخاص بحسابك؛ وعلى Android: الدليل الخاص بالتطبيق، وهو غير مقروء للتطبيقات الأخرى). ويُحفظ ما يلي:</p>
+        <ul class="bul" lang="ar">
+          <li>المباريات المستوردة مع بياناتها الوصفية (التاريخ، واسم الخصم، وقيم التصنيف، وضبط الوقت، والافتتاح، والنتيجة، وتسلسل النقلات، والمصدر)</li>
+          <li>نتائج تحليل المحرّك (التقييم لكل نقلة، وتصنيف النقلات، ونسبة الدقة)</li>
+          <li>شجرة المرجع وبيانات المراجعة بنظام FSRS، وتقدّم الألغاز وتصنيفها، ونتائج النهايات، وخطة الدراسة وقوائم المهام</li>
+          <li>ملاحظاتك ووسومك الخاصة على المباريات والنقلات</li>
+          <li>الإعدادات، ومنها اسما المستخدم اللذان أدخلتهما على chess.com وLichess، واللغة، وخيارات المحرّك، وكذلك — إن كنت قد اقترنت بهاتف — عنوان محور المزامنة ورمز الاقتران وبصمة الشهادة</li>
+          <li>الردود المخزَّنة مؤقتًا من كتاب الافتتاحات الاختياري عبر الإنترنت (حتى 30 يومًا)</li>
+        </ul>
+        <p lang="ar" style="margin-top:14px">لا تغادر هذه البيانات جهازك إلا إذا صدّرتها بنفسك (كملف PGN مثلًا) أو زامنتها مع جهاز ثانٍ يخصّك (القسم 6).</p>
       </section>
 
       <section id="c4">
-        <h2><span class="num">04</span><span lang="de">Netzverbindungen der App</span><span lang="en">Network connections made by the app</span></h2>
+        <h2><span class="num">04</span><span lang="de">Netzverbindungen der App</span><span lang="en">Network connections made by the app</span><span lang="fr">Connexions réseau de l’application</span><span lang="es">Conexiones de red de la app</span><span lang="zh">应用建立的网络连接</span><span lang="hi">ऐप द्वारा बनाए गए नेटवर्क कनेक्शन</span><span lang="ar">اتصالات التطبيق بالشبكة</span></h2>
         <p lang="de">Die App baut ausschließlich die folgenden Verbindungen auf. Alle anderen Funktionen arbeiten offline.</p>
         <p lang="en">The app establishes only the following connections. All other functions work offline.</p>
+        <p lang="fr">L’application n’établit que les connexions suivantes. Toutes les autres fonctions travaillent hors ligne.</p>
+        <p lang="es">La app establece únicamente las siguientes conexiones. El resto de funciones trabaja sin conexión.</p>
+        <p lang="zh">应用只会建立以下连接。其余功能均离线运行。</p>
+        <p lang="hi">ऐप केवल निम्नलिखित कनेक्शन बनाता है। बाक़ी सभी सुविधाएँ ऑफ़लाइन काम करती हैं।</p>
+        <p lang="ar">لا ينشئ التطبيق سوى الاتصالات التالية. أما سائر الوظائف فتعمل دون اتصال.</p>
+        <div class="table-scroll">
         <table>
           <thead>
             <tr lang="de"><th>Ziel</th><th>Wann</th><th>Übertragene Daten</th></tr>
             <tr lang="en"><th>Destination</th><th>When</th><th>Data transmitted</th></tr>
+            <tr lang="fr"><th>Destination</th><th>Quand</th><th>Données transmises</th></tr>
+            <tr lang="es"><th>Destino</th><th>Cuándo</th><th>Datos transmitidos</th></tr>
+            <tr lang="zh"><th>目标</th><th>时机</th><th>传输的数据</th></tr>
+            <tr lang="hi"><th>गंतव्य</th><th>कब</th><th>भेजा गया डेटा</th></tr>
+            <tr lang="ar"><th>الوجهة</th><th>متى</th><th>البيانات المنقولة</th></tr>
           </thead>
           <tbody>
             <tr lang="de">
@@ -187,22 +302,128 @@
               <td>on the desktop app's update check and when you install an update</td>
               <td>retrieval of release information and the update file, plus technically necessary connection data</td>
             </tr>
+            <tr lang="fr">
+              <td>api.chess.com</td>
+              <td>lors de l’import de parties que vous déclenchez (ou automatiquement si vous activez l’import auto)</td>
+              <td>le pseudo chess.com que vous avez saisi, en tant que partie de la requête, ainsi que les données de connexion techniquement nécessaires (l’adresse IP de votre accès)</td>
+            </tr>
+            <tr lang="fr">
+              <td>lichess.org</td>
+              <td>lors de l’import de parties que vous déclenchez</td>
+              <td>le pseudo Lichess que vous avez saisi, ainsi que les données de connexion techniquement nécessaires</td>
+            </tr>
+            <tr lang="fr">
+              <td>chessdb.cn</td>
+              <td>uniquement si vous avez activé le livre d’ouvertures en ligne dans les réglages, et uniquement sur la page d’analyse</td>
+              <td>la position affichée à ce moment (FEN) ainsi que les données de connexion techniquement nécessaires. Option désactivée, aucune requête n’est envoyée.</td>
+            </tr>
+            <tr lang="fr">
+              <td>github.com / objects.githubusercontent.com</td>
+              <td>lors de la vérification des mises à jour de l’application de bureau et lorsque vous installez une mise à jour</td>
+              <td>récupération des informations de release et du fichier de mise à jour, ainsi que les données de connexion techniquement nécessaires</td>
+            </tr>
+            <tr lang="es">
+              <td>api.chess.com</td>
+              <td>en la importación de partidas que tú lanzas (o automáticamente si activas la importación automática)</td>
+              <td>el nombre de usuario de chess.com que has introducido, como parte de la consulta, y los datos de conexión técnicamente necesarios (la dirección IP de tu conexión)</td>
+            </tr>
+            <tr lang="es">
+              <td>lichess.org</td>
+              <td>en la importación de partidas que tú lanzas</td>
+              <td>el nombre de usuario de Lichess que has introducido y los datos de conexión técnicamente necesarios</td>
+            </tr>
+            <tr lang="es">
+              <td>chessdb.cn</td>
+              <td>solo si has activado el libro de aperturas en línea en los ajustes, y solo en la página de análisis</td>
+              <td>la posición mostrada en ese momento (FEN) y los datos de conexión técnicamente necesarios. Con la opción desactivada no se envía ninguna consulta.</td>
+            </tr>
+            <tr lang="es">
+              <td>github.com / objects.githubusercontent.com</td>
+              <td>en la comprobación de actualizaciones de la app de escritorio y cuando instalas una actualización</td>
+              <td>descarga de la información de la release y del archivo de actualización, y los datos de conexión técnicamente necesarios</td>
+            </tr>
+            <tr lang="zh">
+              <td>api.chess.com</td>
+              <td>在你触发对局导入时（若你开启自动导入，则为自动触发）</td>
+              <td>你填写的 chess.com 用户名作为请求的一部分，以及技术上必要的连接数据（你的网络 IP 地址）</td>
+            </tr>
+            <tr lang="zh">
+              <td>lichess.org</td>
+              <td>在你触发对局导入时</td>
+              <td>你填写的 Lichess 用户名，以及技术上必要的连接数据</td>
+            </tr>
+            <tr lang="zh">
+              <td>chessdb.cn</td>
+              <td>仅当你在设置中启用了在线开局库时，且仅限分析页面</td>
+              <td>当前查看的局面（FEN）以及技术上必要的连接数据。未启用该选项时不会发出任何请求。</td>
+            </tr>
+            <tr lang="zh">
+              <td>github.com / objects.githubusercontent.com</td>
+              <td>桌面应用检查更新时，以及你安装更新时</td>
+              <td>获取发布信息和更新文件，以及技术上必要的连接数据</td>
+            </tr>
+            <tr lang="hi">
+              <td>api.chess.com</td>
+              <td>आपके शुरू किए गए बाज़ी-आयात पर (या स्वतः, यदि आपने ऑटो-इम्पोर्ट चालू किया हो)</td>
+              <td>अनुरोध के हिस्से के रूप में आपका डाला हुआ chess.com यूज़रनेम, और तकनीकी रूप से आवश्यक कनेक्शन डेटा (आपके कनेक्शन का IP पता)</td>
+            </tr>
+            <tr lang="hi">
+              <td>lichess.org</td>
+              <td>आपके शुरू किए गए बाज़ी-आयात पर</td>
+              <td>आपका डाला हुआ Lichess यूज़रनेम, और तकनीकी रूप से आवश्यक कनेक्शन डेटा</td>
+            </tr>
+            <tr lang="hi">
+              <td>chessdb.cn</td>
+              <td>केवल तभी जब आपने सेटिंग्स में ऑनलाइन ओपनिंग बुक चालू की हो, और केवल विश्लेषण पृष्ठ पर</td>
+              <td>इस समय देखी जा रही स्थिति (FEN) और तकनीकी रूप से आवश्यक कनेक्शन डेटा। विकल्प बंद होने पर कोई अनुरोध नहीं भेजा जाता।</td>
+            </tr>
+            <tr lang="hi">
+              <td>github.com / objects.githubusercontent.com</td>
+              <td>डेस्कटॉप ऐप की अपडेट-जाँच पर और जब आप कोई अपडेट इंस्टॉल करते हैं</td>
+              <td>रिलीज़ जानकारी और अपडेट फ़ाइल प्राप्त करना, तथा तकनीकी रूप से आवश्यक कनेक्शन डेटा</td>
+            </tr>
+            <tr lang="ar">
+              <td>api.chess.com</td>
+              <td>عند استيراد المباريات الذي تبدأه بنفسك (أو تلقائيًا إن فعّلت الاستيراد التلقائي)</td>
+              <td>اسم المستخدم على chess.com الذي أدخلته، ضمن الطلب، إضافة إلى بيانات الاتصال الضرورية تقنيًا (عنوان IP الخاص باتصالك)</td>
+            </tr>
+            <tr lang="ar">
+              <td>lichess.org</td>
+              <td>عند استيراد المباريات الذي تبدأه بنفسك</td>
+              <td>اسم المستخدم على Lichess الذي أدخلته، إضافة إلى بيانات الاتصال الضرورية تقنيًا</td>
+            </tr>
+            <tr lang="ar">
+              <td>chessdb.cn</td>
+              <td>فقط إن فعّلت كتاب الافتتاحات عبر الإنترنت في الإعدادات، وفي صفحة التحليل وحدها</td>
+              <td>الوضع المعروض حاليًا (بصيغة FEN) إضافة إلى بيانات الاتصال الضرورية تقنيًا. وإن كان الخيار معطّلًا فلا يُرسَل أي طلب.</td>
+            </tr>
+            <tr lang="ar">
+              <td>github.com / objects.githubusercontent.com</td>
+              <td>عند تحقّق تطبيق سطح المكتب من التحديثات وعند تثبيتك تحديثًا</td>
+              <td>جلب معلومات الإصدار وملف التحديث، إضافة إلى بيانات الاتصال الضرورية تقنيًا</td>
+            </tr>
           </tbody>
         </table>
+        </div>
         <p style="margin-top:16px">
           <span lang="de">Diese Dienste sind unabhängige Dritte und verarbeiten die Anfragen nach ihren eigenen Datenschutzbestimmungen. Die App überträgt an sie keine Inhalte, die über die genannten Angaben hinausgehen, insbesondere keine Kennungen, die dich geräteseitig identifizieren.</span>
           <span lang="en">These services are independent third parties and process the requests under their own privacy terms. The app transmits nothing to them beyond the data named above, in particular no identifiers that would identify you on the device level.</span>
+          <span lang="fr">Ces services sont des tiers indépendants et traitent les requêtes selon leurs propres règles de confidentialité. L’application ne leur transmet rien au-delà des données citées ci-dessus, en particulier aucun identifiant qui vous identifierait au niveau de l’appareil.</span>
+          <span lang="es">Estos servicios son terceros independientes y tratan las solicitudes conforme a sus propias condiciones de privacidad. La app no les transmite nada más allá de los datos indicados arriba, en particular ningún identificador que te identifique a nivel de dispositivo.</span>
+          <span lang="zh">这些服务属于独立第三方，按其各自的隐私条款处理请求。应用不会向它们传输上述之外的任何内容，尤其不会传输可在设备层面识别你的标识符。</span>
+          <span lang="hi">ये सेवाएँ स्वतंत्र तृतीय पक्ष हैं और अनुरोधों को अपनी-अपनी गोपनीयता शर्तों के अनुसार संसाधित करती हैं। ऐप ऊपर बताए गए विवरण से आगे उन्हें कुछ नहीं भेजता, विशेष रूप से ऐसा कोई पहचानकर्ता नहीं जो उपकरण-स्तर पर आपकी पहचान करे।</span>
+          <span lang="ar">هذه الخدمات أطراف ثالثة مستقلة تعالج الطلبات وفق شروط الخصوصية الخاصة بها. ولا ينقل إليها التطبيق شيئًا يتجاوز البيانات المذكورة أعلاه، ولا سيّما أي معرّفات تحدّد هويتك على مستوى الجهاز.</span>
         </p>
         <ul class="bul" style="margin-top:14px">
-          <li><a href="https://www.chess.com/legal/privacy" rel="noopener noreferrer">chess.com: <span lang="de">Datenschutzerklärung</span><span lang="en">privacy policy</span></a></li>
-          <li><a href="https://lichess.org/privacy" rel="noopener noreferrer">Lichess: <span lang="de">Datenschutzerklärung</span><span lang="en">privacy policy</span></a></li>
-          <li><a href="https://www.chessdb.cn/" rel="noopener noreferrer">chessdb.cn: <span lang="de">Anbieterseite</span><span lang="en">provider site</span></a></li>
-          <li><a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">GitHub: <span lang="de">Datenschutzerklärung</span><span lang="en">privacy statement</span></a></li>
+          <li><a href="https://www.chess.com/legal/privacy" rel="noopener noreferrer">chess.com: <span lang="de">Datenschutzerklärung</span><span lang="en">privacy policy</span><span lang="fr">politique de confidentialité</span><span lang="es">política de privacidad</span><span lang="zh">隐私政策</span><span lang="hi">गोपनीयता नीति</span><span lang="ar">سياسة الخصوصية</span></a></li>
+          <li><a href="https://lichess.org/privacy" rel="noopener noreferrer">Lichess: <span lang="de">Datenschutzerklärung</span><span lang="en">privacy policy</span><span lang="fr">politique de confidentialité</span><span lang="es">política de privacidad</span><span lang="zh">隐私政策</span><span lang="hi">गोपनीयता नीति</span><span lang="ar">سياسة الخصوصية</span></a></li>
+          <li><a href="https://www.chessdb.cn/" rel="noopener noreferrer">chessdb.cn: <span lang="de">Anbieterseite</span><span lang="en">provider site</span><span lang="fr">site de l’éditeur</span><span lang="es">sitio del proveedor</span><span lang="zh">服务方网站</span><span lang="hi">प्रदाता की साइट</span><span lang="ar">موقع المزوّد</span></a></li>
+          <li><a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">GitHub: <span lang="de">Datenschutzerklärung</span><span lang="en">privacy statement</span><span lang="fr">déclaration de confidentialité</span><span lang="es">declaración de privacidad</span><span lang="zh">隐私声明</span><span lang="hi">गोपनीयता वक्तव्य</span><span lang="ar">بيان الخصوصية</span></a></li>
         </ul>
       </section>
 
       <section id="c5">
-        <h2><span class="num">05</span><span lang="de">Berechtigungen auf dem Gerät</span><span lang="en">Device permissions</span></h2>
+        <h2><span class="num">05</span><span lang="de">Berechtigungen auf dem Gerät</span><span lang="en">Device permissions</span><span lang="fr">Autorisations sur l’appareil</span><span lang="es">Permisos en el dispositivo</span><span lang="zh">设备权限</span><span lang="hi">उपकरण पर अनुमतियाँ</span><span lang="ar">أذونات الجهاز</span></h2>
         <ul class="bul" lang="de">
           <li><strong>Kamera (Android):</strong> ausschließlich zum Scannen des QR-Codes für die Geräte-Kopplung. Die Berechtigung wird erst in diesem Moment angefragt. Es werden keine Fotos oder Videos gespeichert, verarbeitet oder übertragen; ausgelesen wird nur der im QR-Code enthaltene Text.</li>
           <li><strong>Internet / Netzwerkzugriff:</strong> für die in Abschnitt 4 genannten Abrufe und für den Sync im lokalen Netz.</li>
@@ -215,18 +436,58 @@
           <li><strong>Notifications:</strong> optional, for local training reminders. They are generated on the device, without any push service.</li>
           <li><strong>File access:</strong> only when you import or export a PGN file yourself, through the operating system's file picker.</li>
         </ul>
+        <ul class="bul" lang="fr">
+          <li><strong>Caméra (Android) :</strong> uniquement pour scanner le QR code d’appairage des appareils. L’autorisation n’est demandée qu’à ce moment-là. Aucune photo ni vidéo n’est enregistrée, traitée ou transmise ; seul le texte contenu dans le QR code est lu.</li>
+          <li><strong>Internet / accès réseau :</strong> pour les requêtes énumérées à la section 4 et pour la synchronisation sur le réseau local.</li>
+          <li><strong>Notifications :</strong> facultatives, pour les rappels d’entraînement locaux. Elles sont générées sur l’appareil, sans service de push.</li>
+          <li><strong>Accès aux fichiers :</strong> seulement lorsque vous importez ou exportez vous-même un fichier PGN, via le sélecteur de fichiers du système.</li>
+        </ul>
+        <ul class="bul" lang="es">
+          <li><strong>Cámara (Android):</strong> únicamente para escanear el código QR de emparejamiento. El permiso se solicita solo en ese momento. No se guardan, procesan ni transmiten fotos o vídeos; solo se lee el texto contenido en el código QR.</li>
+          <li><strong>Internet / acceso a la red:</strong> para las consultas enumeradas en la sección 4 y para la sincronización en la red local.</li>
+          <li><strong>Notificaciones:</strong> opcionales, para recordatorios de entrenamiento locales. Se generan en el dispositivo, sin servicio de push.</li>
+          <li><strong>Acceso a archivos:</strong> solo cuando importas o exportas tú un archivo PGN, mediante el selector de archivos del sistema operativo.</li>
+        </ul>
+        <ul class="bul" lang="zh">
+          <li><strong>摄像头（Android）：</strong>仅用于扫描设备配对的二维码。权限只在那一刻申请。不会保存、处理或传输任何照片或视频；只读取二维码中包含的文本。</li>
+          <li><strong>互联网／网络访问：</strong>用于第 4 节列出的请求，以及局域网内的同步。</li>
+          <li><strong>通知：</strong>可选，用于本地训练提醒。提醒在设备上生成，不使用任何推送服务。</li>
+          <li><strong>文件访问：</strong>仅在你自己通过操作系统的文件选择器导入或导出 PGN 文件时。</li>
+        </ul>
+        <ul class="bul" lang="hi">
+          <li><strong>कैमरा (Android):</strong> केवल उपकरण-युग्मन के QR कोड को स्कैन करने के लिए। अनुमति उसी क्षण माँगी जाती है। कोई फ़ोटो या वीडियो न सहेजा, न संसाधित, न भेजा जाता है; केवल QR कोड में मौजूद पाठ पढ़ा जाता है।</li>
+          <li><strong>इंटरनेट / नेटवर्क पहुँच:</strong> खंड 4 में बताए गए अनुरोधों के लिए और स्थानीय नेटवर्क में सिंक के लिए।</li>
+          <li><strong>सूचनाएँ:</strong> वैकल्पिक, स्थानीय प्रशिक्षण-अनुस्मारकों के लिए। ये उपकरण पर ही बनती हैं, बिना किसी पुश सेवा के।</li>
+          <li><strong>फ़ाइल पहुँच:</strong> केवल तब जब आप स्वयं ऑपरेटिंग सिस्टम के फ़ाइल-चयनकर्ता से कोई PGN फ़ाइल आयात या निर्यात करते हैं।</li>
+        </ul>
+        <ul class="bul" lang="ar">
+          <li><strong>الكاميرا (على Android):</strong> لمسح رمز QR الخاص باقتران الأجهزة لا غير. ولا يُطلب الإذن إلا في تلك اللحظة. ولا تُحفَظ أي صور أو مقاطع فيديو ولا تُعالَج ولا تُنقَل؛ ولا يُقرأ سوى النص الوارد داخل رمز QR.</li>
+          <li><strong>الإنترنت / الوصول إلى الشبكة:</strong> للطلبات المذكورة في القسم 4 وللمزامنة داخل الشبكة المحلية.</li>
+          <li><strong>الإشعارات:</strong> اختيارية، للتذكيرات التدريبية المحلية. وتُنشأ على الجهاز نفسه دون أي خدمة دفع.</li>
+          <li><strong>الوصول إلى الملفات:</strong> فقط عندما تستورد أو تصدّر ملف PGN بنفسك عبر منتقي الملفات في نظام التشغيل.</li>
+        </ul>
       </section>
 
       <section id="c6">
-        <h2><span class="num">06</span><span lang="de">Geräte-Sync im lokalen Netz</span><span lang="en">Device sync on the local network</span></h2>
+        <h2><span class="num">06</span><span lang="de">Geräte-Sync im lokalen Netz</span><span lang="en">Device sync on the local network</span><span lang="fr">Synchronisation sur le réseau local</span><span lang="es">Sincronización en la red local</span><span lang="zh">局域网内的设备同步</span><span lang="hi">स्थानीय नेटवर्क में डिवाइस सिंक</span><span lang="ar">مزامنة الأجهزة داخل الشبكة المحلية</span></h2>
         <p lang="de">Wenn du Desktop und Handy koppelst, verbinden sich ausschließlich deine eigenen Geräte miteinander. Der Desktop dient als Hub; das Handy erhält Adresse, Kopplungscode und den Fingerprint des TLS-Zertifikats über den angezeigten QR-Code. Die Übertragung läuft verschlüsselt (TLS mit Fingerprint-Prüfung) direkt über dein lokales Netz oder ein von dir eingerichtetes VPN.</p>
         <p lang="de">Es gibt keinen Vermittlungsserver, keinen Relay und keinen Anbieterzugriff. Ohne Kopplung findet kein Sync statt; die Kopplung kannst du in den Einstellungen jederzeit entfernen.</p>
         <p lang="en">When you pair desktop and phone, only your own devices connect to each other. The desktop acts as the hub; the phone receives the address, pairing code and TLS certificate fingerprint from the QR code shown on screen. The transfer runs encrypted (TLS with fingerprint verification) directly over your local network or a VPN you set up yourself.</p>
         <p lang="en">There is no intermediary server, no relay and no provider access. Without pairing there is no sync; you can remove the pairing in the settings at any time.</p>
+        <p lang="fr">Lorsque vous appairez l’ordinateur et le téléphone, seuls vos propres appareils se connectent entre eux. L’ordinateur sert de hub ; le téléphone reçoit l’adresse, le code d’appairage et l’empreinte du certificat TLS via le QR code affiché. Le transfert est chiffré (TLS avec vérification d’empreinte) et passe directement par votre réseau local ou par un VPN que vous avez configuré.</p>
+        <p lang="fr">Il n’y a ni serveur intermédiaire, ni relais, ni accès de l’éditeur. Sans appairage, aucune synchronisation n’a lieu ; vous pouvez supprimer l’appairage à tout moment dans les réglages.</p>
+        <p lang="es">Cuando emparejas el escritorio y el móvil, solo se conectan entre sí tus propios dispositivos. El escritorio actúa como hub; el móvil recibe la dirección, el código de emparejamiento y la huella del certificado TLS a través del código QR mostrado. La transferencia va cifrada (TLS con verificación de huella) directamente por tu red local o por una VPN que hayas configurado.</p>
+        <p lang="es">No hay servidor intermediario, ni relé, ni acceso del proveedor. Sin emparejamiento no hay sincronización; puedes eliminar el emparejamiento en los ajustes en cualquier momento.</p>
+        <p lang="zh">当你把桌面端和手机配对时，只有你自己的设备互相连接。桌面端充当枢纽；手机通过屏幕上显示的二维码获得地址、配对码和 TLS 证书指纹。传输经过加密（TLS 并校验指纹），直接走你的局域网或你自己搭建的 VPN。</p>
+        <p lang="zh">没有中转服务器，没有中继，开发者也无法访问。未配对时不会发生同步；你可以随时在设置中解除配对。</p>
+        <p lang="hi">जब आप डेस्कटॉप और फ़ोन को जोड़ते हैं, तो केवल आपके अपने उपकरण आपस में जुड़ते हैं। डेस्कटॉप हब का काम करता है; फ़ोन को पता, पेयरिंग कोड और TLS प्रमाणपत्र का फ़िंगरप्रिंट स्क्रीन पर दिखाए गए QR कोड से मिलता है। स्थानांतरण एन्क्रिप्टेड होता है (फ़िंगरप्रिंट जाँच के साथ TLS) और सीधे आपके स्थानीय नेटवर्क या आपके बनाए VPN से गुज़रता है।</p>
+        <p lang="hi">कोई मध्यस्थ सर्वर नहीं, कोई रिले नहीं और प्रदाता की कोई पहुँच नहीं। बिना जोड़े कोई सिंक नहीं होता; आप सेटिंग्स में कभी भी युग्मन हटा सकते हैं।</p>
+        <p lang="ar">عندما تقترن بين الحاسوب والهاتف، لا يتصل ببعضهما سوى جهازيك أنت. يعمل الحاسوب محورًا، ويتلقّى الهاتف العنوان ورمز الاقتران وبصمة شهادة TLS عبر رمز QR المعروض. ويجري النقل مشفَّرًا (بـ TLS مع التحقّق من البصمة) مباشرة عبر شبكتك المحلية أو عبر شبكة افتراضية خاصة أعددتها بنفسك.</p>
+        <p lang="ar">لا يوجد خادم وسيط ولا مُرحِّل ولا وصول من المزوّد. ومن دون اقتران لا تحدث أي مزامنة؛ ويمكنك إزالة الاقتران من الإعدادات في أي وقت.</p>
       </section>
 
       <section id="c7">
-        <h2><span class="num">07</span><span lang="de">Kein Tracking, keine Werbung</span><span lang="en">No tracking, no advertising</span></h2>
+        <h2><span class="num">07</span><span lang="de">Kein Tracking, keine Werbung</span><span lang="en">No tracking, no advertising</span><span lang="fr">Pas de pistage, pas de publicité</span><span lang="es">Sin rastreo, sin publicidad</span><span lang="zh">不追踪，不投放广告</span><span lang="hi">कोई ट्रैकिंग नहीं, कोई विज्ञापन नहीं</span><span lang="ar">بلا تتبُّع وبلا إعلانات</span></h2>
         <ul class="bul" lang="de">
           <li>keine Analyse- oder Statistik-SDKs, kein automatisches Crash-Reporting, keine Fernprotokollierung</li>
           <li>keine Werbung, keine Werbe-IDs, keine Werbenetzwerke, kein Ad-Tracking</li>
@@ -241,10 +502,45 @@
           <li>no automated decision-making and no profiling within the meaning of Art. 22 GDPR</li>
           <li>no cookies in the app</li>
         </ul>
+        <ul class="bul" lang="fr">
+          <li>aucun SDK d’analyse ou de statistiques, aucun rapport de plantage automatique, aucune journalisation à distance</li>
+          <li>aucune publicité, aucun identifiant publicitaire, aucune régie publicitaire, aucun pistage publicitaire</li>
+          <li>aucune transmission ni vente de données à des tiers</li>
+          <li>aucune décision automatisée ni profilage au sens de l’art. 22 du RGPD</li>
+          <li>aucun cookie dans l’application</li>
+        </ul>
+        <ul class="bul" lang="es">
+          <li>ningún SDK de analítica o estadística, ningún informe automático de fallos, ningún registro remoto</li>
+          <li>ninguna publicidad, ningún identificador publicitario, ninguna red de anuncios, ningún rastreo publicitario</li>
+          <li>ninguna cesión ni venta de datos a terceros</li>
+          <li>ninguna decisión automatizada ni elaboración de perfiles en el sentido del art. 22 del RGPD</li>
+          <li>ninguna cookie en la app</li>
+        </ul>
+        <ul class="bul" lang="zh">
+          <li>没有分析或统计 SDK，没有自动崩溃上报，没有远程日志</li>
+          <li>没有广告，没有广告标识符，没有广告网络，没有广告追踪</li>
+          <li>不向第三方转让或出售数据</li>
+          <li>没有 GDPR 第 22 条意义上的自动化决策和用户画像</li>
+          <li>应用内没有 Cookie</li>
+        </ul>
+        <ul class="bul" lang="hi">
+          <li>कोई एनालिटिक्स या सांख्यिकी SDK नहीं, कोई स्वचालित क्रैश रिपोर्टिंग नहीं, कोई रिमोट लॉगिंग नहीं</li>
+          <li>कोई विज्ञापन नहीं, कोई विज्ञापन-आईडी नहीं, कोई विज्ञापन नेटवर्क नहीं, कोई ऐड-ट्रैकिंग नहीं</li>
+          <li>तीसरे पक्षों को डेटा न दिया जाता है, न बेचा जाता है</li>
+          <li>GDPR के अनुच्छेद 22 के अर्थ में कोई स्वचालित निर्णय-प्रक्रिया और कोई प्रोफ़ाइलिंग नहीं</li>
+          <li>ऐप में कोई कुकी नहीं</li>
+        </ul>
+        <ul class="bul" lang="ar">
+          <li>لا حزم تحليلات أو إحصاءات، ولا إبلاغ تلقائي عن الأعطال، ولا تسجيل عن بُعد</li>
+          <li>لا إعلانات ولا معرّفات إعلانية ولا شبكات إعلانية ولا تتبُّع إعلاني</li>
+          <li>لا مشاركة للبيانات مع أطراف ثالثة ولا بيع لها</li>
+          <li>لا اتخاذ قرارات آليًا ولا تنميط بمفهوم المادة 22 من اللائحة</li>
+          <li>لا ملفات تعريف ارتباط داخل التطبيق</li>
+        </ul>
       </section>
 
       <section id="c8">
-        <h2><span class="num">08</span><span lang="de">Rechtsgrundlagen</span><span lang="en">Legal bases</span></h2>
+        <h2><span class="num">08</span><span lang="de">Rechtsgrundlagen</span><span lang="en">Legal bases</span><span lang="fr">Bases légales</span><span lang="es">Bases jurídicas</span><span lang="zh">法律依据</span><span lang="hi">क़ानूनी आधार</span><span lang="ar">الأسس القانونية</span></h2>
         <p lang="de">Da die App die Daten lokal auf deinem Gerät verarbeitet und der Anbieter dabei keinen Zugriff darauf hat, liegt insoweit keine Verarbeitung durch den Verantwortlichen vor. Soweit einzelne Vorgänge dennoch datenschutzrechtlich relevant sind, gelten:</p>
         <ul class="bul" lang="de">
           <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong>: Bereitstellung der von dir angeforderten Funktionen, insbesondere der Import deiner Partien von chess.com bzw. Lichess und der Sync zwischen deinen Geräten.</li>
@@ -257,10 +553,40 @@
           <li><strong>Art. 6(1)(a) GDPR</strong>: consent, wherever you switch a function on yourself: the optional online opening book (chessdb.cn), camera access for QR pairing, notifications. You can withdraw it at any time in the app or system settings.</li>
           <li><strong>Art. 6(1)(f) GDPR</strong>: legitimate interest in secure, up-to-date software: checking for program updates.</li>
         </ul>
+        <p lang="fr">Comme l’application traite les données localement sur votre appareil et que l’éditeur n’y a pas accès, il n’y a à cet égard aucun traitement par le responsable. Dans la mesure où certaines opérations restent néanmoins pertinentes au regard du droit de la protection des données, s’appliquent :</p>
+        <ul class="bul" lang="fr">
+          <li><strong>Art. 6, § 1, b) du RGPD</strong> : fourniture des fonctions que vous avez demandées, en particulier l’import de vos parties depuis chess.com ou Lichess et la synchronisation entre vos appareils.</li>
+          <li><strong>Art. 6, § 1, a) du RGPD</strong> : le consentement, partout où vous activez vous-même une fonction : livre d’ouvertures en ligne facultatif (chessdb.cn), accès à la caméra pour l’appairage par QR, notifications. Vous pouvez le retirer à tout moment dans les réglages de l’application ou du système.</li>
+          <li><strong>Art. 6, § 1, f) du RGPD</strong> : intérêt légitime à disposer d’un logiciel sûr et à jour : vérification des mises à jour du programme.</li>
+        </ul>
+        <p lang="es">Dado que la app procesa los datos localmente en tu dispositivo y el proveedor no tiene acceso a ellos, en ese aspecto no existe tratamiento por parte del responsable. En la medida en que determinadas operaciones sí sean relevantes en materia de protección de datos, se aplican:</p>
+        <ul class="bul" lang="es">
+          <li><strong>Art. 6.1.b del RGPD</strong>: prestación de las funciones que has solicitado, en particular la importación de tus partidas desde chess.com o Lichess y la sincronización entre tus dispositivos.</li>
+          <li><strong>Art. 6.1.a del RGPD</strong>: el consentimiento, allí donde activas tú una función: libro de aperturas en línea opcional (chessdb.cn), acceso a la cámara para el emparejamiento por QR, notificaciones. Puedes retirarlo en cualquier momento en los ajustes de la app o del sistema.</li>
+          <li><strong>Art. 6.1.f del RGPD</strong>: interés legítimo en un software seguro y actualizado: la comprobación de actualizaciones del programa.</li>
+        </ul>
+        <p lang="zh">由于应用在你的设备上本地处理数据，开发者对此没有访问权限，因此就此而言不存在由控制者进行的处理。若个别操作在数据保护法上仍具相关性，则适用：</p>
+        <ul class="bul" lang="zh">
+          <li><strong>GDPR 第 6 条第 1 款 b 项</strong>：提供你所请求的功能，特别是从 chess.com 或 Lichess 导入你的对局，以及在你的设备之间同步。</li>
+          <li><strong>GDPR 第 6 条第 1 款 a 项</strong>：同意，适用于所有由你自己开启的功能：可选的在线开局库（chessdb.cn）、用于 QR 配对的摄像头权限、通知。你可以随时在应用设置或系统设置中撤回。</li>
+          <li><strong>GDPR 第 6 条第 1 款 f 项</strong>：对安全、最新软件的正当利益：检查程序更新。</li>
+        </ul>
+        <p lang="hi">चूँकि ऐप डेटा को आपके उपकरण पर स्थानीय रूप से संसाधित करता है और प्रदाता की उस तक कोई पहुँच नहीं है, इस हद तक नियंत्रक द्वारा कोई प्रसंस्करण नहीं होता। जहाँ तक कुछ प्रक्रियाएँ फिर भी डेटा-संरक्षण की दृष्टि से प्रासंगिक हैं, वहाँ लागू होते हैं:</p>
+        <ul class="bul" lang="hi">
+          <li><strong>GDPR अनुच्छेद 6(1)(b)</strong>: आपकी माँगी हुई सुविधाएँ उपलब्ध कराना, विशेष रूप से chess.com या Lichess से आपकी बाज़ियों का आयात और आपके उपकरणों के बीच सिंक।</li>
+          <li><strong>GDPR अनुच्छेद 6(1)(a)</strong>: सहमति, जहाँ भी आप स्वयं कोई सुविधा चालू करते हैं: वैकल्पिक ऑनलाइन ओपनिंग बुक (chessdb.cn), QR युग्मन के लिए कैमरा पहुँच, सूचनाएँ। आप इसे कभी भी ऐप या सिस्टम सेटिंग्स में वापस ले सकते हैं।</li>
+          <li><strong>GDPR अनुच्छेद 6(1)(f)</strong>: सुरक्षित और अद्यतन सॉफ़्टवेयर में वैध हित: प्रोग्राम अपडेट की जाँच।</li>
+        </ul>
+        <p lang="ar">لمّا كان التطبيق يعالج البيانات محليًا على جهازك ولا يملك المزوّد أي وصول إليها، فلا توجد بهذا القدر معالجة من جانب المسؤول. وبقدر ما تظل بعض العمليات ذات صلة بقانون حماية البيانات، تنطبق الأسس التالية:</p>
+        <ul class="bul" lang="ar">
+          <li><strong>المادة 6(1)(ب) من اللائحة</strong>: توفير الوظائف التي طلبتها، ولا سيّما استيراد مبارياتك من chess.com أو Lichess والمزامنة بين أجهزتك.</li>
+          <li><strong>المادة 6(1)(أ) من اللائحة</strong>: الموافقة، حيثما فعّلت وظيفة بنفسك: كتاب الافتتاحات الاختياري عبر الإنترنت (chessdb.cn)، والوصول إلى الكاميرا للاقتران برمز QR، والإشعارات. ويمكنك سحبها في أي وقت من إعدادات التطبيق أو إعدادات النظام.</li>
+          <li><strong>المادة 6(1)(و) من اللائحة</strong>: المصلحة المشروعة في برمجية آمنة ومحدَّثة: التحقّق من تحديثات البرنامج.</li>
+        </ul>
       </section>
 
       <section id="c9">
-        <h2><span class="num">09</span><span lang="de">Speicherdauer und Löschung</span><span lang="en">Retention and deletion</span></h2>
+        <h2><span class="num">09</span><span lang="de">Speicherdauer und Löschung</span><span lang="en">Retention and deletion</span><span lang="fr">Conservation et suppression</span><span lang="es">Conservación y borrado</span><span lang="zh">保存期限与删除</span><span lang="hi">भंडारण अवधि और विलोपन</span><span lang="ar">مدة الحفظ والحذف</span></h2>
         <p lang="de">Die lokalen Daten bleiben so lange gespeichert, wie du sie behalten möchtest; es gibt keine serverseitige Aufbewahrung und daher keine Löschfristen beim Anbieter. Du kannst jederzeit:</p>
         <ul class="bul" lang="de">
           <li>einzelne Partien, Notizen, Tags oder Repertoire-Einträge in der App löschen,</li>
@@ -275,42 +601,122 @@
           <li>uninstall the app, which removes the local app data (on Android additionally via “clear app data”, on Windows by deleting the application data directory),</li>
           <li>export your data as PGN beforehand if you want to keep it.</li>
         </ul>
+        <p lang="fr">Les données locales restent stockées aussi longtemps que vous souhaitez les conserver ; il n’y a pas de conservation côté serveur et donc aucun délai de suppression chez l’éditeur. À tout moment, vous pouvez :</p>
+        <ul class="bul" lang="fr">
+          <li>supprimer dans l’application des parties, notes, étiquettes ou entrées de répertoire,</li>
+          <li>supprimer l’appairage avec un autre appareil,</li>
+          <li>désinstaller l’application, ce qui supprime les données locales (sous Android également via « effacer les données de l’application », sous Windows en supprimant le répertoire de données applicatives),</li>
+          <li>exporter au préalable vos données en PGN si vous souhaitez les conserver.</li>
+        </ul>
+        <p lang="es">Los datos locales permanecen almacenados tanto tiempo como quieras conservarlos; no hay conservación en servidor y, por tanto, ningún plazo de borrado por parte del proveedor. En cualquier momento puedes:</p>
+        <ul class="bul" lang="es">
+          <li>borrar en la app partidas, notas, etiquetas o entradas del repertorio concretas,</li>
+          <li>eliminar el emparejamiento con otro dispositivo,</li>
+          <li>desinstalar la app, con lo que se eliminan los datos locales (en Android además mediante «borrar datos de la aplicación»; en Windows borrando el directorio de datos de aplicación),</li>
+          <li>exportar antes tus datos como PGN si quieres conservarlos.</li>
+        </ul>
+        <p lang="zh">本地数据会保存到你不想再留着为止；不存在服务器端保存，因此开发者处也没有任何删除期限。你随时可以：</p>
+        <ul class="bul" lang="zh">
+          <li>在应用中删除单个对局、笔记、标签或开局库条目，</li>
+          <li>解除与另一台设备的配对，</li>
+          <li>卸载应用，这会移除本地应用数据（在 Android 上另可通过“清除应用数据”，在 Windows 上通过删除应用数据目录），</li>
+          <li>若想保留数据，可事先导出为 PGN。</li>
+        </ul>
+        <p lang="hi">स्थानीय डेटा तब तक संग्रहीत रहता है जब तक आप उसे रखना चाहें; सर्वर पर कोई भंडारण नहीं है, इसलिए प्रदाता के यहाँ कोई विलोपन-अवधि भी नहीं। आप कभी भी:</p>
+        <ul class="bul" lang="hi">
+          <li>ऐप में अलग-अलग बाज़ियाँ, नोट, टैग या रेपर्टवार प्रविष्टियाँ हटा सकते हैं,</li>
+          <li>किसी दूसरे उपकरण के साथ युग्मन हटा सकते हैं,</li>
+          <li>ऐप अनइंस्टॉल कर सकते हैं, जिससे स्थानीय ऐप-डेटा हट जाता है (Android पर अतिरिक्त रूप से “ऐप डेटा साफ़ करें” से, Windows पर एप्लिकेशन-डेटा डायरेक्टरी हटाकर),</li>
+          <li>यदि डेटा रखना चाहें तो पहले उसे PGN के रूप में निर्यात कर सकते हैं।</li>
+        </ul>
+        <p lang="ar">تبقى البيانات المحلية محفوظة ما دمت تريد الاحتفاظ بها؛ فلا حفظ على أي خادم ومن ثَمّ لا مُدد حذف لدى المزوّد. ويمكنك في أي وقت:</p>
+        <ul class="bul" lang="ar">
+          <li>حذف مباريات أو ملاحظات أو وسوم أو مُدخلات مرجع بعينها داخل التطبيق،</li>
+          <li>إزالة الاقتران مع جهاز آخر،</li>
+          <li>إلغاء تثبيت التطبيق، وبذلك تُزال بياناته المحلية (وعلى Android كذلك عبر «مسح بيانات التطبيق»، وعلى Windows بحذف دليل بيانات التطبيقات)،</li>
+          <li>تصدير بياناتك مسبقًا بصيغة PGN إن أردت الاحتفاظ بها.</li>
+        </ul>
       </section>
 
       <section id="c10">
-        <h2><span class="num">10</span><span lang="de">Kinder und Jugendliche</span><span lang="en">Children</span></h2>
+        <h2><span class="num">10</span><span lang="de">Kinder und Jugendliche</span><span lang="en">Children</span><span lang="fr">Enfants et adolescents</span><span lang="es">Menores</span><span lang="zh">儿童与青少年</span><span lang="hi">बच्चे और किशोर</span><span lang="ar">الأطفال والمراهقون</span></h2>
         <p lang="de">Kiebitz richtet sich nicht speziell an Kinder und erhebt keine Daten über den Anbieter; unabhängig vom Alter der nutzenden Person werden keine personenbezogenen Daten an den Anbieter übertragen. Beim Import von Partien gelten die Bedingungen des jeweiligen Schachportals.</p>
         <p lang="en">Kiebitz is not specifically directed at children and collects no data via the provider; regardless of the user's age, no personal data is transmitted to the provider. When importing games, the terms of the respective chess platform apply.</p>
+        <p lang="fr">Kiebitz ne s’adresse pas spécifiquement aux enfants et ne collecte aucune donnée via l’éditeur ; quel que soit l’âge de la personne qui l’utilise, aucune donnée personnelle n’est transmise à l’éditeur. Lors de l’import de parties, les conditions du portail d’échecs concerné s’appliquent.</p>
+        <p lang="es">Kiebitz no se dirige específicamente a menores y no recoge datos a través del proveedor; con independencia de la edad de quien lo use, no se transmite ningún dato personal al proveedor. Al importar partidas rigen las condiciones del portal de ajedrez correspondiente.</p>
+        <p lang="zh">Kiebitz 并非专门面向儿童，也不通过开发者收集数据；无论使用者年龄如何，都不会有个人数据传输给开发者。导入对局时，适用相应棋类平台的条款。</p>
+        <p lang="hi">Kiebitz विशेष रूप से बच्चों के लिए नहीं है और प्रदाता के माध्यम से कोई डेटा एकत्र नहीं करता; उपयोगकर्ता की आयु चाहे जो हो, प्रदाता को कोई व्यक्तिगत डेटा नहीं भेजा जाता। बाज़ियाँ आयात करते समय संबंधित शतरंज पोर्टल की शर्तें लागू होती हैं।</p>
+        <p lang="ar">لا يستهدف Kiebitz الأطفال على وجه الخصوص ولا يجمع أي بيانات عبر المزوّد؛ وبصرف النظر عن عمر المستخدم، لا تُنقل أي بيانات شخصية إلى المزوّد. وعند استيراد المباريات تسري شروط بوّابة الشطرنج المعنيّة.</p>
       </section>
 
       <section id="c11">
-        <h2><span class="num">11</span><span lang="de">Deine Rechte</span><span lang="en">Your rights</span></h2>
+        <h2><span class="num">11</span><span lang="de">Deine Rechte</span><span lang="en">Your rights</span><span lang="fr">Vos droits</span><span lang="es">Tus derechos</span><span lang="zh">你的权利</span><span lang="hi">आपके अधिकार</span><span lang="ar">حقوقك</span></h2>
         <p lang="de">Dir stehen nach der DSGVO die Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21) zu, ebenso das Recht, eine erteilte Einwilligung jederzeit zu widerrufen (Art. 7 Abs. 3).</p>
         <p lang="de">In der Praxis gilt: Da der Anbieter keine Daten über dich speichert, können Auskunft und Löschung in der Regel nur die Daten betreffen, die auf deinem eigenen Gerät liegen und die du dort selbst einsehen, exportieren und löschen kannst. Für Anfragen genügt eine E-Mail an <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>.</p>
         <p lang="de">Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz; du kannst dich auch an die Behörde deines Wohnorts wenden.</p>
         <p lang="en">Under the GDPR you have the rights of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and objection (Art. 21), as well as the right to withdraw consent at any time (Art. 7(3)).</p>
         <p lang="en">In practice: since the provider stores no data about you, access and erasure will normally only concern the data on your own device, which you can view, export and delete there yourself. An email to <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> is enough for any request.</p>
         <p lang="en">You also have the right to lodge a complaint with a data protection supervisory authority. The competent authority is the State Commissioner for Data Protection and Freedom of Information of Rhineland-Palatinate, Germany; you may also contact the authority where you live.</p>
+        <p lang="fr">Le RGPD vous confère les droits d’accès (art. 15), de rectification (art. 16), d’effacement (art. 17), de limitation du traitement (art. 18), de portabilité (art. 20) et d’opposition (art. 21), ainsi que le droit de retirer à tout moment un consentement donné (art. 7, § 3).</p>
+        <p lang="fr">En pratique : l’éditeur ne conservant aucune donnée vous concernant, l’accès et l’effacement ne peuvent en règle générale porter que sur les données présentes sur votre propre appareil, que vous pouvez y consulter, exporter et supprimer vous-même. Un e-mail à <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> suffit pour toute demande.</p>
+        <p lang="fr">Vous avez en outre le droit d’introduire une réclamation auprès d’une autorité de contrôle en matière de protection des données. L’autorité compétente est le Commissaire du Land de Rhénanie-Palatinat à la protection des données et à la liberté d’information (Allemagne) ; vous pouvez aussi vous adresser à l’autorité de votre lieu de résidence.</p>
+        <p lang="es">Conforme al RGPD te asisten los derechos de acceso (art. 15), rectificación (art. 16), supresión (art. 17), limitación del tratamiento (art. 18), portabilidad (art. 20) y oposición (art. 21), así como el derecho a retirar en cualquier momento un consentimiento prestado (art. 7.3).</p>
+        <p lang="es">En la práctica: dado que el proveedor no almacena datos sobre ti, el acceso y la supresión solo podrán referirse, por regla general, a los datos que están en tu propio dispositivo y que allí puedes consultar, exportar y borrar tú mismo. Para cualquier solicitud basta un correo a <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>.</p>
+        <p lang="es">Además, tienes derecho a presentar una reclamación ante una autoridad de control en materia de protección de datos. La autoridad competente es el Comisionado del Land de Renania-Palatinado para la Protección de Datos y la Libertad de Información (Alemania); también puedes dirigirte a la autoridad de tu lugar de residencia.</p>
+        <p lang="zh">依据 GDPR，你享有访问权（第 15 条）、更正权（第 16 条）、删除权（第 17 条）、限制处理权（第 18 条）、数据可携权（第 20 条）和反对权（第 21 条），并有权随时撤回已作出的同意（第 7 条第 3 款）。</p>
+        <p lang="zh">实践中：由于开发者不存储关于你的任何数据，访问和删除通常只能涉及位于你自己设备上的数据，而这些数据你本来就可以自行查看、导出和删除。任何请求，发邮件到 <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> 即可。</p>
+        <p lang="zh">你还有权向数据保护监管机构投诉。主管机关为德国莱茵兰-普法尔茨州数据保护与信息自由专员；你也可以联系你居住地的监管机关。</p>
+        <p lang="hi">GDPR के अंतर्गत आपको पहुँच (अनु. 15), सुधार (अनु. 16), विलोपन (अनु. 17), प्रसंस्करण के प्रतिबंध (अनु. 18), डेटा पोर्टेबिलिटी (अनु. 20) और आपत्ति (अनु. 21) के अधिकार प्राप्त हैं, साथ ही दी गई सहमति को कभी भी वापस लेने का अधिकार (अनु. 7(3))।</p>
+        <p lang="hi">व्यवहार में: चूँकि प्रदाता आपके बारे में कोई डेटा संग्रहीत नहीं करता, पहुँच और विलोपन सामान्यतः केवल उसी डेटा से संबंधित हो सकते हैं जो आपके अपने उपकरण पर है और जिसे आप वहाँ स्वयं देख, निर्यात और हटा सकते हैं। किसी भी अनुरोध के लिए <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> पर एक ई-मेल पर्याप्त है।</p>
+        <p lang="hi">इसके अलावा आपको किसी डेटा-संरक्षण पर्यवेक्षी प्राधिकरण के समक्ष शिकायत दर्ज कराने का अधिकार है। सक्षम प्राधिकरण जर्मनी के राइनलैंड-पाल्ज़ राज्य का डेटा संरक्षण एवं सूचना स्वतंत्रता आयुक्त है; आप अपने निवास-स्थान के प्राधिकरण से भी संपर्क कर सकते हैं।</p>
+        <p lang="ar">تكفل لك اللائحة حقوق الاطّلاع (المادة 15) والتصحيح (المادة 16) والمحو (المادة 17) وتقييد المعالجة (المادة 18) وقابلية نقل البيانات (المادة 20) والاعتراض (المادة 21)، فضلًا عن حقك في سحب أي موافقة منحتها في أي وقت (المادة 7(3)).</p>
+        <p lang="ar">وعمليًا: بما أن المزوّد لا يخزّن أي بيانات عنك، فإن الاطّلاع والمحو لا يتعلّقان عادةً إلا بالبيانات الموجودة على جهازك، وهي بيانات يمكنك الاطّلاع عليها وتصديرها وحذفها بنفسك هناك. وتكفي رسالة إلى <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> لأي طلب.</p>
+        <p lang="ar">ولك كذلك الحق في تقديم شكوى إلى إحدى سلطات الإشراف على حماية البيانات. والسلطة المختصّة هي مفوّض ولاية راينلاند بفالتس لحماية البيانات وحرية المعلومات في ألمانيا؛ ويمكنك أيضًا مخاطبة السلطة في مكان إقامتك.</p>
       </section>
 
       <section id="c12">
-        <h2><span class="num">12</span><span lang="de">Diese Website</span><span lang="en">This website</span></h2>
+        <h2><span class="num">12</span><span lang="de">Diese Website</span><span lang="en">This website</span><span lang="fr">Ce site web</span><span lang="es">Este sitio web</span><span lang="zh">本网站</span><span lang="hi">यह वेबसाइट</span><span lang="ar">هذا الموقع</span></h2>
         <p lang="de">Diese Website ist statisch und wird über GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) ausgeliefert. Beim Aufruf verarbeitet GitHub als Hoster technisch notwendige Verbindungsdaten, insbesondere deine IP-Adresse, Datum und Uhrzeit, angeforderte Datei, Referrer und Browserkennung, in Server-Logfiles. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sicherer, störungsfreier Betrieb). Der Anbieter dieser Website hat keinen Zugriff auf diese Logdaten.</p>
         <p lang="de">Die Website setzt keine Cookies, kein Analytics und keine Werbe- oder Social-Media-Skripte ein. Schriftarten, Stile und Bilder liegen auf demselben Server. Die von dir gewählte Sprache wird ausschließlich lokal in deinem Browser (localStorage) gespeichert, damit die Seite beim nächsten Besuch in derselben Sprache erscheint; diese Angabe wird nicht übertragen. Datenschutzerklärung von GitHub: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>.</p>
         <p lang="de"><strong>Feedback-Formular:</strong> Nur wenn du eine Meldung absendest, werden die von dir eingetragenen Angaben (Art der Meldung, Kurzfassung, Details, optional Plattform, App-Version und E-Mail-Adresse) sowie technisch notwendige Verbindungsdaten an FormSubmit (formsubmit.co) übertragen und von dort per E-Mail an den Anbieter weitergeleitet. Es werden keine Daten automatisch aus der App ausgelesen oder angehängt. FormSubmit hält Einsendungen nach eigenen Angaben bis zu 30 Tage für die Zustellung und den Abruf vor. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit du Support anfragst, im Übrigen Art. 6 Abs. 1 lit. f DSGVO (Bearbeitung freiwilliger Rückmeldungen und Verbesserung der Software). Die beim Anbieter eingegangene E-Mail wird gelöscht, sobald sie für Bearbeitung und Rückfragen nicht mehr benötigt wird. Hinweise von FormSubmit: <a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">Datenschutz</a> und <a href="https://formsubmit.co/documentation" rel="noopener noreferrer">Dokumentation</a>.</p>
         <p lang="en">This website is static and delivered via GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). When you visit it, GitHub as the host processes technically necessary connection data in server log files, in particular your IP address, date and time, the file requested, referrer and browser identification. The legal basis is Art. 6(1)(f) GDPR (secure, trouble-free operation). The provider of this website has no access to these log files.</p>
         <p lang="en">The website sets no cookies and uses no analytics, advertising or social media scripts. Fonts, styles and images are served from the same server. The language you choose is stored only locally in your browser (localStorage) so the page appears in the same language next time; that setting is not transmitted. GitHub's privacy statement: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>.</p>
         <p lang="en"><strong>Feedback form:</strong> Only when you submit a report are the entries you provided (report type, summary, details and, optionally, platform, app version and email address) and technically necessary connection data transmitted to FormSubmit (formsubmit.co) and forwarded from there to the provider by email. No data is automatically read from or attached by the app. According to its own documentation, FormSubmit retains submissions for up to 30 days for delivery and retrieval. The legal basis is Art. 6(1)(b) GDPR where you request support, and otherwise Art. 6(1)(f) GDPR (handling voluntary feedback and improving the software). The email received by the provider is deleted once it is no longer needed to handle the report or follow-up questions. FormSubmit information: <a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">privacy</a> and <a href="https://formsubmit.co/documentation" rel="noopener noreferrer">documentation</a>.</p>
+        <p lang="fr">Ce site est statique et distribué via GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis). Lors de la consultation, GitHub, en tant qu’hébergeur, traite dans des fichiers journaux des données de connexion techniquement nécessaires, en particulier votre adresse IP, la date et l’heure, le fichier demandé, le référent et l’identification du navigateur. La base légale est l’art. 6, § 1, f) du RGPD (exploitation sûre et sans perturbation). L’éditeur de ce site n’a pas accès à ces journaux.</p>
+        <p lang="fr">Le site n’utilise ni cookies, ni analytics, ni scripts publicitaires ou de réseaux sociaux. Polices, styles et images sont servis depuis le même serveur. La langue que vous choisissez est enregistrée uniquement en local dans votre navigateur (localStorage) afin que la page s’affiche dans la même langue à la prochaine visite ; cette information n’est pas transmise. Déclaration de confidentialité de GitHub : <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>.</p>
+        <p lang="fr"><strong>Formulaire de retour :</strong> ce n’est qu’au moment où vous envoyez un message que les informations saisies (type de message, résumé, détails et, facultativement, plateforme, version de l’application et adresse e-mail) ainsi que les données de connexion techniquement nécessaires sont transmises à FormSubmit (formsubmit.co), qui les transfère ensuite par e-mail à l’éditeur. Aucune donnée n’est lue automatiquement dans l’application ni jointe au message. Selon ses propres indications, FormSubmit conserve les envois jusqu’à 30 jours à des fins de remise et de consultation. La base légale est l’art. 6, § 1, b) du RGPD lorsque vous demandez une assistance, et sinon l’art. 6, § 1, f) du RGPD (traitement des retours volontaires et amélioration du logiciel). L’e-mail reçu par l’éditeur est supprimé dès qu’il n’est plus nécessaire au traitement ni aux questions de suivi. Informations de FormSubmit : <a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">confidentialité</a> et <a href="https://formsubmit.co/documentation" rel="noopener noreferrer">documentation</a>.</p>
+        <p lang="es">Este sitio es estático y se sirve a través de GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, EE. UU.). Al visitarlo, GitHub, como alojador, trata en ficheros de registro del servidor datos de conexión técnicamente necesarios, en particular tu dirección IP, la fecha y la hora, el archivo solicitado, el referente y la identificación del navegador. La base jurídica es el art. 6.1.f del RGPD (funcionamiento seguro y sin fallos). El proveedor de este sitio no tiene acceso a esos registros.</p>
+        <p lang="es">El sitio no usa cookies, ni analítica, ni scripts publicitarios o de redes sociales. Las tipografías, los estilos y las imágenes se sirven desde el mismo servidor. El idioma que eliges se guarda únicamente en local en tu navegador (localStorage) para que la página aparezca en el mismo idioma la próxima vez; ese dato no se transmite. Declaración de privacidad de GitHub: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>.</p>
+        <p lang="es"><strong>Formulario de comentarios:</strong> solo cuando envías un mensaje se transmiten a FormSubmit (formsubmit.co) los datos que has introducido (tipo de mensaje, resumen, detalles y, opcionalmente, plataforma, versión de la app y dirección de correo) junto con los datos de conexión técnicamente necesarios, y desde allí se reenvían por correo al proveedor. No se lee ni se adjunta automáticamente ningún dato de la app. Según su propia documentación, FormSubmit conserva los envíos hasta 30 días para su entrega y consulta. La base jurídica es el art. 6.1.b del RGPD cuando solicitas soporte y, por lo demás, el art. 6.1.f del RGPD (tramitación de comentarios voluntarios y mejora del software). El correo recibido por el proveedor se borra en cuanto deja de ser necesario para atender el mensaje o las consultas posteriores. Información de FormSubmit: <a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">privacidad</a> y <a href="https://formsubmit.co/documentation" rel="noopener noreferrer">documentación</a>.</p>
+        <p lang="zh">本网站为静态站点，通过 GitHub Pages 提供服务（GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA）。当你访问时，作为托管方的 GitHub 会在服务器日志文件中处理技术上必要的连接数据，特别是你的 IP 地址、日期与时间、所请求的文件、来源页和浏览器标识。法律依据为 GDPR 第 6 条第 1 款 f 项（安全、无故障的运行）。本网站的运营者无法访问这些日志数据。</p>
+        <p lang="zh">本网站不使用 Cookie，不使用统计分析，也不使用广告或社交媒体脚本。字体、样式和图片都托管在同一台服务器上。你选择的语言仅保存在你浏览器的本地存储（localStorage）中，以便下次访问时页面仍以同一语言显示；该设置不会被传输。GitHub 的隐私声明：<a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>。</p>
+        <p lang="zh"><strong>反馈表单：</strong>只有在你提交反馈时，你填写的内容（反馈类型、简述、详情，以及可选的平台、应用版本和电子邮箱）连同技术上必要的连接数据才会被传输到 FormSubmit（formsubmit.co），并由其通过电子邮件转发给开发者。不会从应用中自动读取或附加任何数据。据 FormSubmit 自述，提交内容最多保留 30 天以供送达与取回。若你请求支持，法律依据为 GDPR 第 6 条第 1 款 b 项，其余情况为第 6 条第 1 款 f 项（处理自愿反馈并改进软件）。开发者收到的邮件在不再需要用于处理和后续询问时即被删除。FormSubmit 的说明：<a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">隐私</a>与<a href="https://formsubmit.co/documentation" rel="noopener noreferrer">文档</a>。</p>
+        <p lang="hi">यह वेबसाइट स्थैतिक है और GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) के माध्यम से वितरित की जाती है। आपके देखने पर होस्ट के रूप में GitHub सर्वर लॉग फ़ाइलों में तकनीकी रूप से आवश्यक कनेक्शन डेटा संसाधित करता है, विशेष रूप से आपका IP पता, तारीख़ और समय, माँगी गई फ़ाइल, रेफ़रर और ब्राउज़र पहचान। क़ानूनी आधार GDPR अनुच्छेद 6(1)(f) है (सुरक्षित, निर्बाध संचालन)। इस वेबसाइट के प्रदाता की इन लॉग फ़ाइलों तक कोई पहुँच नहीं है।</p>
+        <p lang="hi">वेबसाइट कोई कुकी नहीं रखती और न कोई एनालिटिक्स, विज्ञापन या सोशल-मीडिया स्क्रिप्ट इस्तेमाल करती है। फ़ॉन्ट, स्टाइल और छवियाँ उसी सर्वर पर हैं। आपकी चुनी हुई भाषा केवल आपके ब्राउज़र में स्थानीय रूप से (localStorage) सहेजी जाती है, ताकि अगली बार पृष्ठ उसी भाषा में दिखे; यह जानकारी भेजी नहीं जाती। GitHub का गोपनीयता वक्तव्य: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>।</p>
+        <p lang="hi"><strong>फ़ीडबैक फ़ॉर्म:</strong> केवल तभी जब आप कोई संदेश भेजते हैं, आपकी दी गई जानकारी (संदेश का प्रकार, सारांश, विवरण, और वैकल्पिक रूप से प्लेटफ़ॉर्म, ऐप संस्करण तथा ई-मेल पता) और तकनीकी रूप से आवश्यक कनेक्शन डेटा FormSubmit (formsubmit.co) को भेजा जाता है और वहाँ से ई-मेल द्वारा प्रदाता तक पहुँचाया जाता है। ऐप से कोई डेटा स्वतः पढ़ा या संलग्न नहीं किया जाता। FormSubmit के अपने कथन के अनुसार वह प्रविष्टियाँ वितरण और पुनःप्राप्ति हेतु 30 दिन तक रखता है। यदि आप सहायता माँगते हैं तो क़ानूनी आधार GDPR अनुच्छेद 6(1)(b) है, अन्यथा अनुच्छेद 6(1)(f) (स्वैच्छिक प्रतिक्रिया का निपटान और सॉफ़्टवेयर में सुधार)। प्रदाता को प्राप्त ई-मेल तब हटा दिया जाता है जब वह निपटान और आगे के प्रश्नों के लिए आवश्यक नहीं रह जाता। FormSubmit की जानकारी: <a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">गोपनीयता</a> और <a href="https://formsubmit.co/documentation" rel="noopener noreferrer">दस्तावेज़ीकरण</a>।</p>
+        <p lang="ar">هذا الموقع ثابت ويُقدَّم عبر GitHub Pages (‏GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). وعند زيارتك له تعالج GitHub بصفتها المستضيف بيانات اتصال ضرورية تقنيًا في سجلّات الخادم، ولا سيّما عنوان IP الخاص بك، والتاريخ والوقت، والملف المطلوب، ومصدر الإحالة، ومعرّف المتصفّح. والأساس القانوني هو المادة 6(1)(و) من اللائحة (تشغيل آمن وخالٍ من الأعطال). ولا يملك مزوّد هذا الموقع أي وصول إلى هذه السجلّات.</p>
+        <p lang="ar">لا يستخدم الموقع ملفات تعريف ارتباط ولا أدوات تحليلات ولا نصوصًا برمجية إعلانية أو خاصة بالتواصل الاجتماعي. والخطوط والأنماط والصور مستضافة على الخادم نفسه. أما اللغة التي تختارها فتُحفَظ محليًا فقط في متصفّحك (localStorage) لتظهر الصفحة باللغة نفسها في زيارتك التالية؛ ولا يُنقل هذا الإعداد. بيان الخصوصية لدى GitHub: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>.</p>
+        <p lang="ar"><strong>نموذج الملاحظات:</strong> لا تُنقَل البيانات التي أدخلتها (نوع الرسالة، والملخّص، والتفاصيل، واختياريًا المنصّة وإصدار التطبيق والبريد الإلكتروني) مع بيانات الاتصال الضرورية تقنيًا إلى FormSubmit ‏(formsubmit.co) إلا عند إرسالك الرسالة، ومن هناك تُحوَّل بالبريد الإلكتروني إلى المزوّد. ولا تُقرأ أي بيانات من التطبيق تلقائيًا ولا تُرفَق. ووفق ما تذكره FormSubmit، تحتفظ بالرسائل حتى 30 يومًا لأغراض التسليم والاسترجاع. والأساس القانوني هو المادة 6(1)(ب) من اللائحة عند طلبك الدعم، وفيما عدا ذلك المادة 6(1)(و) (معالجة الملاحظات الطوعية وتحسين البرمجية). ويُحذف البريد الذي يتلقّاه المزوّد بمجرد انتفاء الحاجة إليه للمعالجة والاستفسارات اللاحقة. معلومات FormSubmit: <a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">الخصوصية</a> و<a href="https://formsubmit.co/documentation" rel="noopener noreferrer">التوثيق</a>.</p>
       </section>
 
       <section id="c13">
-        <h2><span class="num">13</span><span lang="de">Änderungen dieser Erklärung</span><span lang="en">Changes to this policy</span></h2>
+        <h2><span class="num">13</span><span lang="de">Änderungen dieser Erklärung</span><span lang="en">Changes to this policy</span><span lang="fr">Modifications de la présente politique</span><span lang="es">Cambios en esta política</span><span lang="zh">本政策的变更</span><span lang="hi">इस नीति में परिवर्तन</span><span lang="ar">تعديلات هذه السياسة</span></h2>
         <p lang="de">Wird die App um Funktionen erweitert, die neue Datenverarbeitungen mit sich bringen, wird diese Erklärung vorher angepasst. Der jeweils aktuelle Stand ist oben datiert und dauerhaft unter dieser Adresse erreichbar.</p>
         <p lang="en">If the app gains functions that involve new data processing, this policy will be updated beforehand. The current version is dated above and permanently available at this address.</p>
+        <p lang="fr">Si l’application se dote de fonctions impliquant de nouveaux traitements de données, la présente politique sera adaptée au préalable. La version en vigueur est datée ci-dessus et reste accessible en permanence à cette adresse.</p>
+        <p lang="es">Si la app incorpora funciones que impliquen nuevos tratamientos de datos, esta política se adaptará previamente. La versión vigente lleva la fecha indicada arriba y está disponible de forma permanente en esta dirección.</p>
+        <p lang="zh">若应用新增涉及新数据处理的功能，本政策将事先作出调整。当前版本的日期见上方，并长期可在此地址查阅。</p>
+        <p lang="hi">यदि ऐप में ऐसी सुविधाएँ जुड़ती हैं जिनसे नया डेटा-प्रसंस्करण होता है, तो यह नीति पहले ही संशोधित की जाएगी। वर्तमान संस्करण की तारीख़ ऊपर दी गई है और यह इस पते पर स्थायी रूप से उपलब्ध है।</p>
+        <p lang="ar">إذا أُضيفت إلى التطبيق وظائف تستتبع معالجات جديدة للبيانات، فستُعدَّل هذه السياسة قبل ذلك. والنسخة السارية مؤرَّخة أعلاه ومتاحة بصفة دائمة على هذا العنوان.</p>
         <div class="panel" style="margin-top:22px">
           <p>
             <span lang="de">Fragen zum Datenschutz? Schreib an <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>. Der Quellcode der App ist einsehbar unter <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
             <span lang="en">Questions about privacy? Write to <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>. The app's source code can be inspected at <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+            <span lang="fr">Des questions sur la protection des données ? Écrivez à <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>. Le code source de l’application est consultable sur <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+            <span lang="es">¿Dudas sobre privacidad? Escribe a <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>. El código fuente de la app se puede consultar en <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+            <span lang="zh">对隐私有疑问？请写信到 <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>。应用源码可在 <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a> 查阅。</span>
+            <span lang="hi">गोपनीयता से जुड़े सवाल? <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> पर लिखिए। ऐप का सोर्स कोड <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a> पर देखा जा सकता है।</span>
+            <span lang="ar">أسئلة عن الخصوصية؟ راسل <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>. ويمكن الاطّلاع على الشيفرة المصدرية للتطبيق على <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
           </p>
         </div>
       </section>
@@ -325,9 +731,9 @@
       <p class="small" style="margin-top:8px">© 2026 Tom Maurer</p>
     </div>
     <nav class="foot-links" aria-label="Footer">
-      <a href="../index.html"><span lang="de">Startseite</span><span lang="en">Home</span></a>
-      <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span></a>
-      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span></a>
+      <a href="../index.html"><span lang="de">Startseite</span><span lang="en">Home</span><span lang="fr">Accueil</span><span lang="es">Inicio</span><span lang="zh">首页</span><span lang="hi">मुखपृष्ठ</span><span lang="ar">الصفحة الرئيسية</span></a>
+      <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span><span lang="fr">Code source</span><span lang="es">Código fuente</span><span lang="zh">源代码</span><span lang="hi">सोर्स कोड</span><span lang="ar">الشيفرة المصدرية</span></a>
     </nav>
   </div>
 </footer>

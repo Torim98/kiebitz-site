@@ -73,9 +73,38 @@ h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -0.022em; line-height:
 p { margin: 0; }
 ul { margin: 0; padding: 0; list-style: none; }
 
-/* ── Sprachumschaltung: beide Sprachen liegen im DOM, CSS blendet eine aus ── */
-html[data-lang="de"] [lang="en"],
-html[data-lang="en"] [lang="de"] { display: none !important; }
+/* ── Sprachumschaltung: alle Sprachen liegen im DOM, CSS blendet sechs aus ── */
+html[data-lang="de"] [lang]:not([lang="de"]),
+html[data-lang="en"] [lang]:not([lang="en"]),
+html[data-lang="fr"] [lang]:not([lang="fr"]),
+html[data-lang="es"] [lang]:not([lang="es"]),
+html[data-lang="zh"] [lang]:not([lang="zh"]),
+html[data-lang="hi"] [lang]:not([lang="hi"]),
+html[data-lang="ar"] [lang]:not([lang="ar"]) { display: none !important; }
+
+/* Inter deckt nur Latein ab: pro Schrift eine passende Systemschrift dahinter.
+   Inter bleibt vorn, damit lateinische Wörter (Kiebitz, Stockfish) sitzen. */
+html[data-lang="zh"] {
+  --sans: 'Inter Variable', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'Noto Sans CJK SC', 'Source Han Sans SC', system-ui, sans-serif;
+  --mono: 'PingFang SC', 'Microsoft YaHei', ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+html[data-lang="hi"] {
+  --sans: 'Inter Variable', 'Nirmala UI', 'Noto Sans Devanagari', 'Mangal',
+    'Kohinoor Devanagari', system-ui, sans-serif;
+  --mono: 'Nirmala UI', 'Noto Sans Devanagari', ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+html[data-lang="ar"] {
+  --sans: 'Inter Variable', 'Segoe UI', Tahoma, 'Noto Naskh Arabic', 'Geeza Pro',
+    'Arabic Typesetting', system-ui, sans-serif;
+  --mono: 'Segoe UI', Tahoma, 'Noto Naskh Arabic', ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+/* Sperrsatz zerlegt Devanagari-Ligaturen und arabische Verbindungen. */
+html[data-lang="ar"] *,
+html[data-lang="hi"] * { letter-spacing: normal !important; }
+/* Versalien sind für beide Schriften bedeutungslos, für Kürzel aber nicht. */
+html[data-lang="ar"] .eyebrow,
+html[data-lang="hi"] .eyebrow { text-transform: none; }
 
 .skip {
   position: absolute;
@@ -128,25 +157,46 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
 .top-nav a { color: var(--ink2); font-size: 13.5px; }
 .top-nav a:hover { color: var(--ink); }
 
+/* Sieben Sprachen passen nicht als Knopfreihe in die Kopfzeile: eine Liste. */
 .lang {
   display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: none;
+  padding: 0 9px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  overflow: hidden;
   background: var(--panel2);
+  transition: border-color 0.15s;
 }
-.lang button {
+.lang:hover,
+.lang:focus-within { border-color: var(--line2); }
+.lang-globe { flex: none; color: var(--ink3); }
+.lang:hover .lang-globe,
+.lang:focus-within .lang-globe { color: var(--accent); }
+.lang-select {
   appearance: none;
   border: 0;
-  background: transparent;
-  color: var(--ink3);
-  font: 600 11.5px/1 var(--mono);
-  letter-spacing: 0.06em;
-  padding: 7px 9px;
+  background-color: transparent;
+  color: var(--ink2);
+  font: 600 12px/1 var(--sans);
+  padding: 9px 17px 9px 0;
   cursor: pointer;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--ink3) 50%),
+    linear-gradient(135deg, var(--ink3) 50%, transparent 50%);
+  background-position: calc(100% - 9px) 55%, calc(100% - 5px) 55%;
+  background-size: 4px 4px, 4px 4px;
+  background-repeat: no-repeat;
 }
-.lang button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); }
-.lang button:hover { color: var(--ink); }
+.lang-select:hover { color: var(--ink); }
+.lang-select:focus { outline: 0; }
+.lang:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+/* Das aufgeklappte Listenfeld zeichnet das System, hier hilft nur die Farbe. */
+.lang-select option { background: var(--panel2); color: var(--ink); }
 
 .btn {
   display: inline-flex;
@@ -1376,7 +1426,11 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
 }
 .doc .panel p, .doc .panel li { font-size: 14px; }
 .doc address { font-style: normal; font-size: 14.5px; color: var(--ink2); line-height: 1.7; }
-.doc table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13.5px; }
+/* Drei Spalten Prosa passen unter ~520px nicht mehr: die Tabelle scrollt selbst,
+   damit die Seite es nicht tun muss. */
+.table-scroll { overflow-x: auto; margin-top: 16px; }
+.doc table { width: 100%; min-width: 500px; border-collapse: collapse; margin-top: 16px; font-size: 13.5px; }
+.table-scroll > table { margin-top: 0; }
 .doc th, .doc td {
   text-align: left;
   padding: 11px 14px;
@@ -1392,6 +1446,83 @@ html[data-lang="en"] [lang="de"] { display: none !important; }
   border-bottom-color: var(--line2);
 }
 .doc thead th:first-child { width: 34%; }
+
+/* ── Arabisch: Layout spiegeln ────────────────────────────────────────────── */
+/* Gespiegelt wird über eine eigene Ebene statt über logische Eigenschaften,
+   damit das Layout der übrigen sechs Sprachen unangetastet bleibt. */
+html[dir="rtl"] .skip { left: auto; right: -9999px; }
+html[dir="rtl"] .skip:focus { right: 8px; left: auto; }
+html[dir="rtl"] .mark { margin-right: 0; margin-left: auto; }
+html[dir="rtl"] .badge { padding: 5px 10px 5px 12px; }
+html[dir="rtl"] .lang-select {
+  padding: 9px 0 9px 17px;
+  background-position: 9px 55%, 5px 55%;
+  background-image:
+    linear-gradient(135deg, transparent 50%, var(--ink3) 50%),
+    linear-gradient(45deg, var(--ink3) 50%, transparent 50%);
+}
+
+/* Das Brett bleibt links-nach-rechts: a1 liegt unten links, egal in welcher Sprache. */
+html[dir="rtl"] .board-head,
+html[dir="rtl"] .board-stage,
+html[dir="rtl"] .board-coords,
+html[dir="rtl"] .evalticks,
+html[dir="rtl"] .evalbar { direction: ltr; }
+
+html[dir="rtl"] .promise > div { border-right: 0; border-left: 1px solid var(--line); }
+html[dir="rtl"] .promise > div:last-child { border-left: 0; }
+html[dir="rtl"] .bar-v { text-align: left; }
+html[dir="rtl"] .shot-zoom::after { right: auto; left: 10px; }
+html[dir="rtl"] .lb-close { right: auto; left: 14px; }
+
+html[dir="rtl"] .band-grid {
+  background-position: left top;
+  -webkit-mask-image: linear-gradient(270deg, transparent 12%, #000 78%);
+  mask-image: linear-gradient(270deg, transparent 12%, #000 78%);
+}
+html[dir="rtl"] .route li:not(:last-child)::before { left: auto; right: 17px; }
+
+html[dir="rtl"] .modal-x { margin-left: 0; margin-right: auto; }
+html[dir="rtl"] .modal-note { border-left: 0; border-right: 2px solid var(--line2); padding-left: 0; padding-right: 12px; }
+html[dir="rtl"] .steps .step-go { margin-left: 0; margin-right: auto; transform: scaleX(-1); }
+html[dir="rtl"] .steps .step-url { direction: ltr; text-align: right; }
+
+html[dir="rtl"] .form-field label small { margin-left: 0; margin-right: 3px; }
+html[dir="rtl"] .form-field select {
+  background-position: 16px 50%, 11px 50%;
+  background-image:
+    linear-gradient(135deg, transparent 50%, var(--ink3) 50%),
+    linear-gradient(45deg, var(--ink3) 50%, transparent 50%);
+  padding-right: 12px;
+  padding-left: 32px;
+}
+html[dir="rtl"] .report-type-input:checked + .report-type-card::after { right: auto; left: 11px; }
+html[dir="rtl"] .form-status:not(:empty) {
+  border-left: 0;
+  border-right: 2px solid var(--line2);
+  padding-left: 0;
+  padding-right: 12px;
+}
+html[dir="rtl"] .form-status[data-state="success"] { border-right-color: var(--accent); }
+html[dir="rtl"] .form-status[data-state="error"] { border-right-color: var(--red); }
+
+html[dir="rtl"] .feedback-package::before { left: auto; right: 32px; }
+html[dir="rtl"] .feedback-package-summary::after {
+  right: auto;
+  left: 0;
+  mask-image: linear-gradient(270deg, transparent, #000 58%);
+  -webkit-mask-image: linear-gradient(270deg, transparent, #000 58%);
+}
+html[dir="rtl"] .package-meta > span + span::before { margin: 0 0 1px 18px; }
+html[dir="rtl"] .package-address { direction: ltr; }
+html[dir="rtl"] .feedback-package[open] .package-action i { transform: rotate(-180deg); }
+
+html[dir="rtl"] .doc h2 .num { margin-right: 0; margin-left: 10px; }
+html[dir="rtl"] .doc ul.bul li { padding-left: 0; padding-right: 25px; }
+html[dir="rtl"] .doc ul.bul li::before { left: auto; right: 0; }
+html[dir="rtl"] .doc th,
+html[dir="rtl"] .doc td { text-align: right; }
+html[dir="rtl"] .doc address { direction: rtl; }
 
 /* ── Reveal ───────────────────────────────────────────────────────────────── */
 .rv { opacity: 0; transform: translateY(14px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }

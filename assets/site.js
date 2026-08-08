@@ -3,6 +3,79 @@
 (function () {
   "use strict";
 
+  /* ── Sprachen ───────────────────────────────────────────────────────────── */
+  // Die Reihenfolge bestimmt nichts; das Auswahlfeld im Markup gibt sie vor.
+  var LANGS = ["de", "en", "fr", "es", "zh", "hi", "ar"];
+  // Kurzcode im DOM, vollständiges BCP-47-Tag im lang-Attribut des Dokuments.
+  var LANG_TAG = { de: "de", en: "en", fr: "fr", es: "es", zh: "zh-Hans", hi: "hi", ar: "ar" };
+  var RTL = { ar: true };
+
+  function known(code) {
+    return LANGS.indexOf(code) !== -1;
+  }
+
+  // Von JavaScript erzeugte Zeichenketten; alles andere steht im HTML.
+  var STR = {
+    close: {
+      de: "Schließen", en: "Close", fr: "Fermer", es: "Cerrar",
+      zh: "关闭", hi: "बंद करें", ar: "إغلاق"
+    },
+    screenshot: {
+      de: "Screenshot vergrößern", en: "Enlarge screenshot", fr: "Agrandir la capture",
+      es: "Ampliar la captura", zh: "放大截图", hi: "स्क्रीनशॉट बड़ा करें",
+      ar: "تكبير لقطة الشاشة"
+    },
+    animations: {
+      de: "Animationen", en: "Animations", fr: "Animations", es: "Animaciones",
+      zh: "动画", hi: "एनिमेशन", ar: "الحركات"
+    },
+    sending: {
+      de: "Meldung wird sicher übermittelt …",
+      en: "Sending your report securely …",
+      fr: "Envoi sécurisé de votre message …",
+      es: "Enviando tu mensaje de forma segura …",
+      zh: "正在安全发送你的反馈 …",
+      hi: "आपकी रिपोर्ट सुरक्षित रूप से भेजी जा रही है …",
+      ar: "يجري إرسال رسالتك بأمان …"
+    },
+    sent: {
+      de: "Danke. Deine Meldung ist unterwegs. Jeder Hinweis hilft Kiebitz weiter.",
+      en: "Thank you. Your report is on its way. Every note helps Kiebitz improve.",
+      fr: "Merci. Votre message est parti. Chaque retour fait avancer Kiebitz.",
+      es: "Gracias. Tu mensaje está en camino. Cada comentario ayuda a mejorar Kiebitz.",
+      zh: "谢谢。你的反馈已经发出。每一条意见都会让 Kiebitz 更好。",
+      hi: "धन्यवाद। आपकी रिपोर्ट भेज दी गई है। हर सुझाव Kiebitz को बेहतर बनाता है।",
+      ar: "شكرًا لك. رسالتك في طريقها. كل ملاحظة تساعد Kiebitz على التحسّن."
+    },
+    sentShort: {
+      de: "Danke. Deine Meldung wurde übermittelt.",
+      en: "Thank you. Your report has been sent.",
+      fr: "Merci. Votre message a été envoyé.",
+      es: "Gracias. Tu mensaje se ha enviado.",
+      zh: "谢谢。你的反馈已发送。",
+      hi: "धन्यवाद। आपकी रिपोर्ट भेज दी गई है।",
+      ar: "شكرًا لك. تم إرسال رسالتك."
+    },
+    failed: {
+      de: 'Die Zustellung konnte nicht bestätigt werden. Bitte versuche es noch einmal oder schreib direkt an <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>.',
+      en: 'Delivery could not be confirmed. Please try again or email <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> directly.',
+      fr: 'La remise n’a pas pu être confirmée. Réessayez ou écrivez directement à <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>.',
+      es: 'No se pudo confirmar la entrega. Inténtalo de nuevo o escribe directamente a <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>.',
+      zh: '无法确认送达。请重试，或直接发邮件到 <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>。',
+      hi: 'डिलीवरी की पुष्टि नहीं हो सकी। कृपया दोबारा कोशिश करें या सीधे <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> पर लिखें।',
+      ar: 'تعذّر تأكيد التسليم. حاول مرة أخرى أو راسل <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> مباشرة.'
+    }
+  };
+
+  // Baut alle sieben Fassungen ins DOM, damit ein Sprachwechsel sie mitnimmt.
+  function allLangs(key) {
+    var html = "";
+    for (var i = 0; i < LANGS.length; i++) {
+      html += '<span lang="' + LANGS[i] + '">' + STR[key][LANGS[i]] + "</span>";
+    }
+    return html;
+  }
+
   var systemReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var motionPref = null;
   try { motionPref = localStorage.getItem("kiebitz-motion"); } catch (e) { /* egal */ }
@@ -23,8 +96,7 @@
     btn.type = "button";
     btn.className = "motion-toggle";
     btn.setAttribute("aria-pressed", reduced ? "false" : "true");
-    btn.innerHTML =
-      '<span lang="de">Animationen</span><span lang="en">Animations</span>';
+    btn.innerHTML = allLangs("animations");
     btn.addEventListener("click", function () {
       var next = root.getAttribute("data-motion") === "on" ? "off" : "on";
       root.setAttribute("data-motion", next);
@@ -38,13 +110,18 @@
   /* ── Sprache ────────────────────────────────────────────────────────────── */
   var root = document.documentElement;
 
-  function setLang(lang, persist) {
+  var current = "en";
+
+  function setLang(next, persist) {
+    var lang = known(next) ? next : "en";
+    current = lang;
     root.setAttribute("data-lang", lang);
-    root.setAttribute("lang", lang);
-    var btns = document.querySelectorAll("[data-set-lang]");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].setAttribute("aria-pressed", btns[i].getAttribute("data-set-lang") === lang ? "true" : "false");
-    }
+    root.setAttribute("lang", LANG_TAG[lang]);
+    root.setAttribute("dir", RTL[lang] ? "rtl" : "ltr");
+
+    var selects = document.querySelectorAll("[data-lang-select]");
+    for (var s = 0; s < selects.length; s++) selects[s].value = lang;
+
     var t = document.querySelector("[data-title-" + lang + "]");
     if (t) document.title = t.getAttribute("data-title-" + lang);
     var placeholders = document.querySelectorAll("[data-placeholder-" + lang + "]");
@@ -55,6 +132,12 @@
     for (var l = 0; l < labels.length; l++) {
       labels[l].textContent = labels[l].getAttribute("data-label-" + lang);
     }
+    // aria-label lässt keine verborgenen Geschwister zu, also hier nachziehen.
+    var aria = document.querySelectorAll("[data-aria]");
+    for (var a = 0; a < aria.length; a++) {
+      var key = aria[a].getAttribute("data-aria");
+      if (STR[key]) aria[a].setAttribute("aria-label", STR[key][lang]);
+    }
     document.dispatchEvent(new Event("kiebitz:langchange"));
     if (persist) {
       try { localStorage.setItem("kiebitz-lang", lang); } catch (e) { /* egal */ }
@@ -63,10 +146,10 @@
 
   setLang(root.getAttribute("data-lang") || "en", false);
 
-  document.addEventListener("click", function (ev) {
-    var btn = ev.target.closest ? ev.target.closest("[data-set-lang]") : null;
-    if (!btn) return;
-    setLang(btn.getAttribute("data-set-lang"), true);
+  document.addEventListener("change", function (ev) {
+    var sel = ev.target.closest ? ev.target.closest("[data-lang-select]") : null;
+    if (!sel) return;
+    setLang(sel.value, true);
   });
 
   /* ── Reveal ─────────────────────────────────────────────────────────────── */
@@ -133,9 +216,10 @@
     box.className = "lb";
     box.hidden = true;
     box.innerHTML =
-      '<button class="lb-close" type="button" aria-label="Schließen / Close">\u2715</button>' +
+      '<button class="lb-close" type="button" data-aria="close">\u2715</button>' +
       '<img alt=""><p class="lb-cap"></p>';
     document.body.appendChild(box);
+    box.querySelector(".lb-close").setAttribute("aria-label", STR.close[current]);
     var boxImg = box.querySelector("img");
     var boxCap = box.querySelector(".lb-cap");
     var closeBtn = box.querySelector(".lb-close");
@@ -271,9 +355,9 @@
       return selected ? selected.value : "Feedback";
     }
 
-    function setStatus(state, de, en) {
+    function setStatus(state, key) {
       status.setAttribute("data-state", state);
-      status.innerHTML = '<span lang="de">' + de + '</span><span lang="en">' + en + "</span>";
+      status.innerHTML = allLangs(key);
     }
 
     function updateCount() {
@@ -297,7 +381,7 @@
       var honey = form.querySelector('input[name="_honey"]');
       if (honey && honey.value) {
         form.reset();
-        setStatus("success", "Danke. Deine Meldung wurde übermittelt.", "Thank you. Your report has been sent.");
+        setStatus("success", "sentShort");
         return;
       }
 
@@ -306,7 +390,7 @@
       if (urlField) urlField.value = window.location.href.split("#")[0] + "#feedback";
       button.disabled = true;
       button.setAttribute("aria-busy", "true");
-      setStatus("sending", "Meldung wird sicher übermittelt …", "Sending your report securely …");
+      setStatus("sending", "sending");
 
       var payload = {};
       new FormData(form).forEach(function (value, key) {
@@ -333,18 +417,10 @@
         .then(function () {
           form.reset();
           updateCount();
-          setStatus(
-            "success",
-            "Danke. Deine Meldung ist unterwegs. Jeder Hinweis hilft Kiebitz weiter.",
-            "Thank you. Your report is on its way. Every note helps Kiebitz improve."
-          );
+          setStatus("success", "sent");
         })
         .catch(function () {
-          setStatus(
-            "error",
-            'Die Zustellung konnte nicht bestätigt werden. Bitte versuche es noch einmal oder schreib direkt an <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>.',
-            'Delivery could not be confirmed. Please try again or email <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> directly.'
-          );
+          setStatus("error", "failed");
         })
         .then(function () {
           button.disabled = false;
@@ -375,7 +451,9 @@
   // Spiegelungen, Drehungen und Umkehrungen erzeugen über 200 gültige Bahnen.
   var pieces = [
     {
-      id: "knight", de: "Springer", en: "Knight",
+      id: "knight",
+      de: "Springer", en: "Knight", fr: "Cavalier", es: "Caballo",
+      zh: "马", hi: "घोड़ा", ar: "الحصان",
       bases: [
         [[1, 0], [3, 1], [5, 2], [6, 4], [4, 5], [2, 6], [4, 7]],
         [[0, 0], [2, 1], [4, 0], [6, 1], [7, 3], [5, 4], [7, 5]],
@@ -385,34 +463,47 @@
       ]
     },
     {
-      id: "rook", de: "Turm", en: "Rook",
+      id: "rook",
+      de: "Turm", en: "Rook", fr: "Tour", es: "Torre",
+      zh: "车", hi: "हाथी", ar: "الرخ",
       bases: [
         [[0, 0], [0, 3], [4, 3], [4, 6], [1, 6], [1, 1], [7, 1]],
         [[3, 0], [3, 5], [7, 5], [7, 2], [1, 2], [1, 7], [5, 7]]
       ]
     },
     {
-      id: "queen", de: "Dame", en: "Queen",
+      id: "queen",
+      de: "Dame", en: "Queen", fr: "Dame", es: "Dama",
+      zh: "后", hi: "वज़ीर", ar: "الوزير",
       bases: [
         [[3, 0], [7, 4], [7, 7], [0, 7], [0, 0], [4, 4], [4, 7]],
         [[2, 0], [6, 4], [6, 7], [1, 7], [1, 2], [4, 5], [7, 2]]
       ]
     },
     {
-      id: "bishop", de: "Läufer", en: "Bishop",
+      id: "bishop",
+      de: "Läufer", en: "Bishop", fr: "Fou", es: "Alfil",
+      zh: "象", hi: "ऊँट", ar: "الفيل",
       bases: [
         [[0, 0], [2, 2], [4, 4], [6, 6], [7, 7], [5, 5], [3, 3]],
         [[2, 0], [4, 2], [6, 4], [7, 5], [5, 7], [3, 5], [1, 3]]
       ]
     },
     {
-      id: "king", de: "König", en: "King",
+      id: "king",
+      de: "König", en: "King", fr: "Roi", es: "Rey",
+      zh: "王", hi: "राजा", ar: "الملك",
       bases: [
         [[1, 0], [2, 1], [3, 1], [4, 2], [5, 2], [6, 3], [7, 4]],
         [[4, 0], [3, 1], [2, 1], [1, 2], [1, 3], [2, 4], [3, 5]]
       ]
     },
-    { id: "pawn", de: "Bauer", en: "Pawn", bases: [] }
+    {
+      id: "pawn",
+      de: "Bauer", en: "Pawn", fr: "Pion", es: "Peón",
+      zh: "兵", hi: "प्यादा", ar: "البيدق",
+      bases: []
+    }
   ];
 
   function transformSquare(sq, variant) {
@@ -556,9 +647,8 @@
 
   function updateRouteLabel() {
     if (!routeLabel) return;
-    var lang = root.getAttribute("data-lang") === "de" ? "de" : "en";
     routeLabel.textContent =
-      sequence.piece[lang] + " · " + names[0] + " → " + names[names.length - 1];
+      sequence.piece[current] + " · " + names[0] + " → " + names[names.length - 1];
   }
 
   function useSequence(nextSequence) {
