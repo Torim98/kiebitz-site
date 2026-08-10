@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr" data-lang="hi" data-page="home">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiebitz · Windows और Android के लिए लोकल-फ़र्स्ट शतरंज विश्लेषण</title>
+<meta name="description" content="Kiebitz आपकी chess.com और Lichess बाज़ियाँ आयात करता है, Stockfish से स्थानीय रूप से विश्लेषण करता है और बिना खाते, क्लाउड या टेलीमेट्री के आपकी असली खूबियाँ व कमज़ोरियाँ दिखाता है।">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://torim98.github.io/kiebitz-site/hi/">
+<link rel="alternate" hreflang="de" href="https://torim98.github.io/kiebitz-site/de/">
+<link rel="alternate" hreflang="en" href="https://torim98.github.io/kiebitz-site/">
+<link rel="alternate" hreflang="fr" href="https://torim98.github.io/kiebitz-site/fr/">
+<link rel="alternate" hreflang="es" href="https://torim98.github.io/kiebitz-site/es/">
+<link rel="alternate" hreflang="zh-Hans" href="https://torim98.github.io/kiebitz-site/zh/">
+<link rel="alternate" hreflang="hi" href="https://torim98.github.io/kiebitz-site/hi/">
+<link rel="alternate" hreflang="ar" href="https://torim98.github.io/kiebitz-site/ar/">
+<link rel="alternate" hreflang="x-default" href="https://torim98.github.io/kiebitz-site/">
+<link rel="icon" href="../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kiebitz">
+<meta property="og:locale" content="hi_IN">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ar">
+<meta property="og:title" content="Kiebitz · Windows और Android के लिए लोकल-फ़र्स्ट शतरंज विश्लेषण">
+<meta property="og:description" content="Kiebitz आपकी chess.com और Lichess बाज़ियाँ आयात करता है, Stockfish से स्थानीय रूप से विश्लेषण करता है और बिना खाते, क्लाउड या टेलीमेट्री के आपकी असली खूबियाँ व कमज़ोरियाँ दिखाता है।">
+<meta property="og:url" content="https://torim98.github.io/kiebitz-site/hi/">
+<meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kiebitz · Local-first chess analysis">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kiebitz · Windows और Android के लिए लोकल-फ़र्स्ट शतरंज विश्लेषण">
+<meta name="twitter:description" content="Kiebitz आपकी chess.com और Lichess बाज़ियाँ आयात करता है, Stockfish से स्थानीय रूप से विश्लेषण करता है और बिना खाते, क्लाउड या टेलीमेट्री के आपकी असली खूबियाँ व कमज़ोरियाँ दिखाता है।">
+<meta name="twitter:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Kiebitz",
+  "url": "https://torim98.github.io/kiebitz-site/hi/",
+  "description": "Kiebitz आपकी chess.com और Lichess बाज़ियाँ आयात करता है, Stockfish से स्थानीय रूप से विश्लेषण करता है और बिना खाते, क्लाउड या टेलीमेट्री के आपकी असली खूबियाँ व कमज़ोरियाँ दिखाता है।",
+  "inLanguage": "hi",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Windows, macOS, Linux, Android",
+  "softwareVersion": "0.8.0",
+  "isAccessibleForFree": true,
+  "downloadUrl": "https://github.com/Torim98/Kiebitz/releases/latest",
+  "installUrl": "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
+  "screenshot": [
+    "https://torim98.github.io/kiebitz-site/assets/shots/insights.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/repertoire.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/puzzles.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/study.png"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "sameAs": "https://github.com/Torim98/Kiebitz",
+  "license": "https://github.com/Torim98/Kiebitz/blob/main/LICENSE"
+}
+</script>
+<link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span lang="hi">सामग्री पर जाएँ</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="index.html" aria-label="Kiebitz">
+      <img src="../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="hi">हर चाल, एक उड़ान</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="#features"><span lang="hi">विशेषताएँ</span></a>
+      <a href="#local"><span lang="hi">लोकल-फ़र्स्ट</span></a>
+      <a href="#download"><span lang="hi">डाउनलोड</span></a>
+      <a href="#feedback"><span lang="hi">फ़ीडबैक</span></a>
+      <a href="privacy/index.html"><span lang="hi">गोपनीयता</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="भाषा">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-primary btn-sm" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+      <span lang="hi">डाउनलोड</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="hi">बीटा · अर्ली एक्सेस</span></p>
+        <h1>
+
+
+
+
+
+          <span lang="hi">Kiebitz आपके कंधे के ऊपर से <span class="flight">देखता</span> है।</span>
+
+        </h1>
+
+
+
+
+
+        <p class="hero-sub" lang="hi"><i>Kiebitz</i> एक पक्षी है, और जर्मन में वह दर्शक भी जो कंधे के ऊपर से खेल देखता है। यह ऐप chess.com और Lichess से आपकी बाज़ियाँ आयात करता है, पूरे इतिहास पर नेटिव Stockfish चलाता है और बताता है कि आप असल में कहाँ बाज़ी गँवाते हैं — वहाँ नहीं जहाँ आप समझते हैं। <strong>सब कुछ आपके अपने उपकरणों पर रहता है।</strong></p>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="hi">Windows के लिए पाएँ</span>
+          </a>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="hi">Android (बीटा टेस्ट)</span>
+          </a>
+        </div>
+        <p class="cta-note"><span lang="hi">मुफ़्त · Windows GitHub से · Android क्लोज़्ड टेस्ट में</span></p>
+      </div>
+
+      <div class="board-card" aria-hidden="true">
+        <div class="board-head">
+          <span data-route-label>Knight · b1 → e8</span>
+          <span data-square-label>b1</span>
+        </div>
+        <div class="board-stage">
+          <div class="board-lattice"></div>
+          <svg class="board-path" viewBox="0 0 8 8" preserveAspectRatio="none" focusable="false"></svg>
+        </div>
+        <div class="board-coords"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        <div class="board-foot">
+          <span class="pill"><span lang="hi">Stockfish · नेटिव</span></span>
+          <span><span lang="hi">विश्लेषण आपके डिवाइस पर चलता है।</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Banner: Android Closed Test ───────────────────────────────────── -->
+  <section class="band" aria-labelledby="band-title">
+    <div class="band-grid" aria-hidden="true"></div>
+    <div class="wrap band-in rv">
+      <div class="band-text">
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="hi">क्लोज़्ड बीटा · Google Play</span></p>
+        <h2 id="band-title">
+
+
+
+
+
+          <span lang="hi">Kiebitz Android पर आ रहा है और टेस्टर ढूँढ़ रहा है।</span>
+
+        </h2>
+        <p class="band-sub">
+
+
+
+
+
+          <span lang="hi">Windows के लिए Kiebitz अभी डाउनलोड किया जा सकता है। Android के लिए Google Play पर एक क्लोज़्ड टेस्ट चल रहा है, और कुछ और टेस्टर मिलें तो बहुत अच्छा हो। इसमें तीन चालें लगती हैं।</span>
+
+        </p>
+        <div class="band-cta">
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="hi">टेस्टर बनें</span>
+          </a>
+          <a class="band-alt" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="hi">या सीधे APK लें</span>
+          </a>
+        </div>
+        <p class="band-note">
+
+
+
+
+
+          <span lang="hi">Google 14 दिन तक भागीदारी माँगता है। चुपचाप जुड़े रहने से बेहतर है ईमानदार फ़ीडबैक।</span>
+
+        </p>
+      </div>
+
+      <ol class="route">
+        <li>
+          <span class="route-n">1</span>
+          <span class="route-txt">
+            <b><span lang="hi">Google ग्रुप से जुड़ें</span></b>
+            <span><span lang="hi">आपके खाते के लिए टेस्ट खोलता है</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="route-n">2</span>
+          <span class="route-txt">
+            <b><span lang="hi">क्लोज़्ड टेस्ट में शामिल हों</span></b>
+            <span><span lang="hi">उसी Google खाते से ऑप्ट-इन करें</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="route-n">3</span>
+          <span class="route-txt">
+            <b><span lang="hi">Play Store से इंस्टॉल करें</span></b>
+            <span><span lang="hi">उसके बाद Kiebitz खुद अपडेट होता रहेगा</span></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ── 01 Local-first ────────────────────────────────────────────────── -->
+  <section class="section" id="local">
+    <div class="wrap">
+      <p class="eyebrow"><b>01</b> <span lang="hi">लोकल-फ़र्स्ट</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
+
+
+
+
+
+        <span lang="hi">आपकी बाज़ियाँ आपकी हैं।</span>
+
+      </h2>
+      <p class="lede" style="margin-top:18px">
+
+
+
+
+
+        <span lang="hi">Kiebitz का कोई सर्वर नहीं है। न कहीं लॉग-इन करना है, न कुछ अपलोड होता है, न विश्लेषण कहीं और होता है। डेटाबेस आपके अपने कंप्यूटर पर एक SQLite फ़ाइल है।</span>
+
+      </p>
+      <dl class="promise rv" style="margin-top:32px">
+        <div>
+          <dt><span lang="hi">कोई खाता नहीं</span></dt>
+          <dd><span lang="hi">न रजिस्ट्रेशन, न ई-मेल, न लॉग-इन।</span></dd>
+        </div>
+        <div>
+          <dt><span lang="hi">कोई क्लाउड नहीं</span></dt>
+          <dd><span lang="hi">बाज़ियाँ, विश्लेषण और प्रगति स्थानीय रहते हैं।</span></dd>
+        </div>
+        <div>
+          <dt><span lang="hi">कोई टेलीमेट्री नहीं</span></dt>
+          <dd><span lang="hi">न ट्रैकिंग, न विज्ञापन, न क्रैश रिपोर्ट।</span></dd>
+        </div>
+        <div>
+          <dt><span lang="hi">अपने ही नेटवर्क में सिंक</span></dt>
+          <dd><span lang="hi">फ़ोन और डेस्कटॉप सीधे, एन्क्रिप्टेड बात करते हैं।</span></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ── 02 Ablauf ─────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow"><b>02</b> <span lang="hi">यह कैसे काम करता है</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:24ch">
+
+
+
+
+
+        <span lang="hi">आयात करें, विश्लेषण करें, समझें।</span>
+
+      </h2>
+      <div class="flow rv" style="margin-top:34px">
+        <article class="step">
+          <p class="step-n">01</p>
+          <h3><span lang="hi">आयात</span></h3>
+          <p><span lang="hi">यूज़रनेम डालिए, बस। Kiebitz पूरा इतिहास ले आता है — बिना डुप्लिकेट, और बोर्ड पर खेली बाज़ियों के लिए PGN भी।</span></p>
+          <div class="step-viz srcrow">
+            <span class="srcpill cc">chess.com</span>
+            <span class="srcpill li">lichess</span>
+            <span class="srcpill pgn">PGN</span>
+          </div>
+        </article>
+        <article class="step">
+          <p class="step-n">02</p>
+          <h3><span lang="hi">विश्लेषण</span></h3>
+          <p><span lang="hi">नेटिव Stockfish पृष्ठभूमि में कतार निपटाता है: हर चाल का मूल्यांकन, अशुद्धि, ग़लती, ब्लंडर, सटीकता।</span></p>
+          <div class="step-viz">
+            <div class="evalbar" aria-hidden="true"><span class="w" style="width:52%"></span><span class="b"></span></div>
+            <div class="evalticks" aria-hidden="true"><span>1. e4</span><span class="bad">24. Nf3?? −3.1</span><span>41. Kg2</span></div>
+          </div>
+        </article>
+        <article class="step">
+          <p class="step-n">03</p>
+          <h3><span lang="hi">समझें</span></h3>
+          <p><span lang="hi">“अच्छा खेले” नहीं, बल्कि: किस चरण में, किस ओपनिंग में, किस टाइम कंट्रोल में बात बिगड़ती है।</span></p>
+          <div class="step-viz bars" aria-hidden="true">
+            <div class="bar"><span class="bar-l"><span lang="hi">ओपनिंग</span></span><span class="bar-t"><i data-w="22"></i></span><span class="bar-v">0.4</span></div>
+            <div class="bar hot"><span class="bar-l"><span lang="hi">मध्य खेल</span></span><span class="bar-t"><i data-w="78"></i></span><span class="bar-v">1.9</span></div>
+            <div class="bar"><span class="bar-l"><span lang="hi">अंतिम खेल</span></span><span class="bar-t"><i data-w="46"></i></span><span class="bar-v">0.9</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 Funktionen ─────────────────────────────────────────────────── -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <p class="eyebrow"><b>03</b> <span lang="hi">विशेषताएँ</span></p>
+
+      <div class="feature rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Insights</p>
+          <h3><span lang="hi">आपका खेल असल में कहाँ बिगड़ता है</span></h3>
+          <p><span lang="hi">हर बाज़ी पर एक आँकड़े के बजाय पूरे इतिहास पर चार विश्लेषण पृष्ठ: खेल-शक्ति, रंग के हिसाब से अलग ओपनिंग, व्यवहार के पैटर्न, और वे चरण जहाँ ग़लतियाँ होती हैं।</span></p>
+          <ul class="ticks">
+            <li><span lang="hi">महीनों की सटीकता और ग़लती-दर, न कि एक बाज़ी की</span></li>
+            <li><span lang="hi">ओपनिंग के परिणाम, विचलन और सफलता-दर</span></li>
+            <li><span lang="hi">पैटर्न: समय-संकट, लंबे सत्र, बदले की बाज़ियाँ</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/insights.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Insights"></button>
+          <figcaption>
+            <span lang="hi">Insights · खेल-चरण के अनुसार सटीकता और ग़लतियाँ</span>
+            <span><span lang="hi">1,483 बाज़ियाँ</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Repertoire · FSRS</p>
+          <h3><span lang="hi">ऐसी ओपनिंग जो वाकई याद रहें</span></h3>
+          <p><span lang="hi">आपका रेपर्टवार एक पोज़िशन-ट्री है जिसे FSRS स्पेस्ड रिपिटिशन से दोहराया जाता है — वही तरीक़ा जो अच्छे फ़्लैशकार्ड ऐप इस्तेमाल करते हैं। हर चाल का अपना अंतराल है, और बकाया दोहराव हर सुबह डैशबोर्ड पर दिखते हैं।</span></p>
+          <ul class="ticks">
+            <li><span lang="hi">अपनी बाज़ियों की चालें सीधे बुक में जोड़ें</span></li>
+            <li><span lang="hi">हर ओपनिंग की कवरेज, सफ़ेद और काले के लिए अलग</span></li>
+            <li><span lang="hi">लगातार सिलसिला और बकाया कार्ड, न कि अंतहीन रटाई</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/repertoire.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Repertoire"></button>
+          <figcaption>
+            <span lang="hi">Repertoire · सफ़ेद और काले की वैरिएशन</span>
+            <span><span lang="hi">बुक में 17 चालें · कवरेज 42 %</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature rv">
+        <div class="feature-text">
+          <p class="feature-kicker"><span lang="hi">पहेलियाँ और अंतिम खेल</span></p>
+          <h3><span lang="hi">आपकी अपनी ग़लतियों से बनी टैक्टिक्स</span></h3>
+          <p><span lang="hi">ऑफ़लाइन उपलब्ध Lichess पहेली-डेटाबेस के अलावा Kiebitz उन्हीं स्थितियों से सवाल बनाता है जहाँ आपसे जीतने वाली चाल छूट गई थी। साथ में इंजन के ख़िलाफ़ चुने हुए अंतिम-खेल अभ्यास, चाहें तो Syzygy टेबलबेस के साथ।</span></p>
+          <ul class="ticks">
+            <li><span lang="hi">पहेली-Elo और हर थीम की सफलता-दर</span></li>
+            <li><span lang="hi">अंतिम खेल: प्यादे का प्रोमोशन, रुख़ के अंत, ज़बरदस्ती मात</span></li>
+            <li><span lang="hi">सब कुछ ऑफ़लाइन खेला जा सकता है, बिना नेटवर्क</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/puzzles.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Puzzles"></button>
+          <figcaption>
+            <span lang="hi">Puzzles · हर थीम की सफलता-दर</span>
+            <span><span lang="hi">अपनी बाज़ियों से 285 पहेलियाँ</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Study</p>
+          <h3><span lang="hi">आपके अपने डेटा से निकली योजना</span></h3>
+          <p><span lang="hi">स्टडी प्लानर विश्लेषण से आपकी कमज़ोरियाँ पढ़ता है और बताता है कि आज क्या करना है: दोहराव, एक थीम, एक अंतिम खेल। दैनिक चेकलिस्ट के रूप में और ऐसे साप्ताहिक प्लान के रूप में जिसे आप ख़ुद क्रम में लगा सकते हैं।</span></p>
+          <ul class="ticks">
+            <li><span lang="hi">आपकी बाज़ियों से लिए गए कारणों के साथ सिफ़ारिशें</span></li>
+            <li><span lang="hi">सप्ताह के लिए ड्रैग-एंड-ड्रॉप प्लानर</span></li>
+            <li><span lang="hi">डिवाइस पर ही स्थानीय रिमाइंडर</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/study.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Study"></button>
+          <figcaption>
+            <span lang="hi">Study · कोच की सिफ़ारिशें और साप्ताहिक प्लान</span>
+            <span><span lang="hi">दैनिक लक्ष्य और सिलसिला</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="more rv" style="margin-top:clamp(48px,6vw,84px)">
+        <div>
+          <h4><span lang="hi">डैशबोर्ड</span></h4>
+          <p><span lang="hi">रेटिंग का सफ़र, हाल की बाज़ियाँ, बकाया दोहराव और विश्लेषण-कतार — सब एक नज़र में।</span></p>
+        </div>
+        <div>
+          <h4><span lang="hi">बाज़ी-डेटाबेस</span></h4>
+          <p><span lang="hi">फ़िल्टर, टैग, हर बाज़ी और हर चाल पर नोट, पोज़िशन खोज, PGN आयात-निर्यात।</span></p>
+        </div>
+        <div>
+          <h4><span lang="hi">लाइव विश्लेषण</span></h4>
+          <p><span lang="hi">इंजन लाइनों, चाल की गुणवत्ता और तीरों वाला बोर्ड, चाहें तो chessdb.cn की ओपनिंग बुक के साथ।</span></p>
+        </div>
+        <div>
+          <h4><span lang="hi">सात भाषाएँ</span></h4>
+          <p><span lang="hi">जर्मन, अंग्रेज़ी, फ़्रेंच, स्पेनिश, चीनी, हिन्दी और अरबी – ऐप में भी और इस वेबसाइट पर भी। साथ में एक सावधानी से बनाई डार्क थीम।</span></p>
+        </div>
+        <div>
+          <h4><span lang="hi">Windows और Android</span></h4>
+          <p><span lang="hi">ऑटो-अपडेट वाला डेस्कटॉप ऐप, और हर ABI के लिए नेटिव Stockfish वाला Android बिल्ड।</span></p>
+        </div>
+        <div>
+          <h4><span lang="hi">सोर्स कोड देखा जा सकता है</span></h4>
+          <p><span lang="hi">सोर्स-अवेलेबल, ओपन सोर्स नहीं: पढ़ना और ख़ुद बिल्ड करना हाँ, दोबारा बाँटना नहीं।</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 Sync ───────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow"><b>04</b> <span lang="hi">डिवाइस सिंक</span></p>
+      <div class="feature rv">
+        <div class="feature-text">
+          <h3><span lang="hi">दो उपकरण, एक नेटवर्क, बीच में कुछ नहीं</span></h3>
+          <p><span lang="hi">डेस्कटॉप हब है, फ़ोन QR कोड से जुड़ता है। उसके बाद दोनों एन्क्रिप्टेड ढंग से सीधे आपके घरेलू नेटवर्क या VPN पर सिंक होते हैं; पता, कोड और सर्टिफ़िकेट फ़िंगरप्रिंट QR में ही होते हैं। बीच में कोई सर्वर नहीं, क्योंकि है ही नहीं।</span></p>
+          <ul class="ticks">
+            <li><span lang="hi">रास्ते में फ़ोन पर अभ्यास, शाम को डेस्कटॉप पर विश्लेषण</span></li>
+            <li><span lang="hi">कैमरा सिर्फ़ QR स्कैन के लिए इस्तेमाल होता है</span></li>
+            <li><span lang="hi">बिना जोड़े हर उपकरण पूरी तरह अपने आप चलता है</span></li>
+          </ul>
+        </div>
+        <div class="sync-viz" aria-hidden="true">
+          <div class="device"><span>Desktop<br>Hub</span></div>
+          <div class="wire"><span class="wire-label">LAN · TLS</span></div>
+          <div class="device phone"><span>Android</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 05 Datenschutz ────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow"><b>05</b> <span lang="hi">गोपनीयता</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:28ch">
+
+
+
+
+
+        <span lang="hi">Kiebitz क्या भेजता है, और क्या नहीं।</span>
+
+      </h2>
+      <div class="privacy-grid rv">
+        <div>
+          <h4><span lang="hi">नेटवर्क सिर्फ़ आयात के समय</span></h4>
+          <p><span lang="hi">बाज़ियाँ आयात करते समय Kiebitz आपके ही डाले हुए यूज़रनेम के साथ chess.com और Lichess के सार्वजनिक API को कॉल करता है।</span></p>
+        </div>
+        <div>
+          <h4><span lang="hi">chessdb.cn सिर्फ़ तभी जब आप चाहें</span></h4>
+          <p><span lang="hi">ऑनलाइन ओपनिंग बुक सेटिंग्स में एक विकल्प है। बंद रहने पर chessdb.cn से कभी कुछ नहीं पूछा जाता।</span></p>
+        </div>
+        <div>
+          <h4><span lang="hi">कैमरा सिर्फ़ QR कोड के लिए</span></h4>
+          <p><span lang="hi">Android पर Kiebitz कैमरा तभी माँगता है जब आप पेयरिंग कोड स्कैन करते हैं। कोई तस्वीर न सहेजी जाती है, न भेजी जाती है।</span></p>
+        </div>
+        <div class="no">
+          <h4><span lang="hi">प्रदाता का कोई सर्वर नहीं</span></h4>
+          <p><span lang="hi">न कोई Kiebitz सर्वर है, न एनालिटिक्स SDK, न विज्ञापन आईडी, न स्वचालित क्रैश रिपोर्ट, न खाते।</span></p>
+        </div>
+      </div>
+      <p style="margin-top:26px">
+        <a class="btn btn-sm" href="privacy/index.html"><span lang="hi">पूरी गोपनीयता नीति</span></a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── 06 Download ───────────────────────────────────────────────────── -->
+  <section class="section section-alt" id="download">
+    <div class="wrap">
+      <p class="eyebrow"><b>06</b> <span lang="hi">डाउनलोड</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
+
+
+
+
+
+        <span lang="hi">बीटा लीजिए और शुरू कीजिए।</span>
+
+      </h2>
+      <p class="lede" style="margin-top:16px">
+
+
+
+
+
+        <span lang="hi">Kiebitz फ़िलहाल मुफ़्त है — न विज्ञापन, न इन-ऐप ख़रीद। Windows संस्करण सीधे डाउनलोड किया जा सकता है; Android के लिए Google Play पर क्लोज़्ड टेस्ट चल रहा है। दोनों बिल्ड ऐप रिपॉज़िटरी की ताज़ा रिलीज़ के साथ भी संलग्न हैं।</span>
+
+      </p>
+      <div class="dl rv" style="margin-top:32px">
+        <article class="dl-card">
+          <h3>Windows</h3>
+          <p><span lang="hi">डेस्कटॉप इंस्टॉलर। नेटिव Stockfish साथ आता है और ख़ुद अपडेट होता है।</span></p>
+          <p class="dl-meta"><span lang="hi">इंस्टॉलर · ऑटो-अपडेट</span></p>
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="hi">Windows इंस्टॉलर</span>
+          </a>
+        </article>
+        <article class="dl-card">
+          <h3>Android</h3>
+          <p><span lang="hi">अभी Google Play पर क्लोज़्ड टेस्ट के रूप में, हर ABI के लिए नेटिव Stockfish के साथ। टेस्ट में शामिल नहीं होना चाहते तो सीधे APK इंस्टॉल कीजिए।</span></p>
+          <p class="dl-meta"><span lang="hi">क्लोज़्ड टेस्ट · APK · LAN सिंक</span></p>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="hi">Android · बीटा टेस्ट और APK</span>
+          </a>
+        </article>
+      </div>
+      <p class="small" style="margin-top:22px">
+
+
+
+
+
+        <span lang="hi">बीटा: सुविधाएँ अभी बदल रही हैं और कुछ खुरदुरापन अपेक्षित है। बग और सुझाव रिपॉज़िटरी में भेजें: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>।</span>
+
+      </p>
+    </div>
+  </section>
+
+  <!-- ── 07 Feedback ─────────────────────────────────────────────────────── -->
+  <section class="section feedback-section" id="feedback">
+    <div class="wrap">
+      <p class="eyebrow"><b>07</b> <span lang="hi">फ़ीडबैक</span></p>
+      <div class="feedback-grid">
+        <div class="feedback-copy">
+          <h2>
+
+
+
+
+
+            <span lang="hi">जो आपको दिखे, Kiebitz को बताइए।</span>
+
+          </h2>
+          <p class="lede">
+
+
+
+
+
+            <span lang="hi">छोटी-सी राय हो, दोहराया जा सकने वाला क्रैश हो, या अगली चाल का कोई विचार — हर संदेश सीधे डेवलपर तक पहुँचता है।</span>
+
+          </p>
+          <div class="feedback-notes" aria-label="टिप्पणियाँ">
+            <p><b>01</b><span><strong><span lang="hi">संदर्भ मदद करता है।</span></strong><span lang="hi">बग की स्थिति में, कृपया संक्षेप में बताइए कि उससे ठीक पहले क्या हुआ था।</span></span></p>
+            <p><b>02</b><span><strong><span lang="hi">जवाब वैकल्पिक है।</span></strong><span lang="hi">ई-मेल न दें तो आपका संदेश गुमनाम रहेगा।</span></span></p>
+            <p><b>03</b><span><strong><span lang="hi">कोई टेलीमेट्री नहीं।</span></strong><span lang="hi">सिर्फ़ वही भेजा जाता है जो आप यहाँ ख़ुद लिखते हैं।</span></span></p>
+          </div>
+        </div>
+
+        <details class="feedback-package rv">
+          <summary class="feedback-package-summary">
+            <span class="package-topline">
+              <span class="package-kicker"><span lang="hi">सीलबंद चाल-रेखा</span></span>
+              <span class="package-address">kiebitz.chess@gmail.com</span>
+            </span>
+            <span class="package-main">
+              <span class="package-seal" aria-hidden="true"><img src="../assets/icon-128.png" width="44" height="44" alt=""></span>
+              <span class="package-copy">
+                <strong><span lang="hi">अब आपकी चाल।</span></strong>
+                <span><span lang="hi">फ़ीडबैक, क्रैश या फ़ीचर का विचार — एक ही चाल में सीधे डेवलपर तक।</span></span>
+              </span>
+              <span class="package-action">
+                <span data-package-open><span lang="hi">फ़ॉर्म खोलें</span></span>
+                <span data-package-close><span lang="hi">फ़ॉर्म बंद करें</span></span>
+                <i aria-hidden="true">↘</i>
+              </span>
+            </span>
+            <span class="package-meta">
+              <span>f7 → inbox</span>
+              <span><span lang="hi">फ़ीडबैक · क्रैश · सुझाव</span></span>
+              <span><span lang="hi">कोई खाता नहीं · कोई टेलीमेट्री नहीं</span></span>
+            </span>
+          </summary>
+
+          <form class="feedback-form" action="https://formsubmit.co/kiebitz.chess@gmail.com" method="POST" data-feedback-form data-feedback-endpoint="https://formsubmit.co/ajax/kiebitz.chess@gmail.com">
+            <input type="hidden" name="_subject" value="Kiebitz · New feedback" data-feedback-subject>
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_url" value="https://torim98.github.io/kiebitz-site/#feedback">
+            <label class="honey" aria-hidden="true">Website<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+
+          <fieldset class="report-types">
+            <legend><span lang="hi">आप क्या बताना चाहते हैं?</span></legend>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Feedback" checked>
+              <span class="report-type-card">
+                <span class="report-type-n">01</span>
+                <span><b><span lang="hi">फ़ीडबैक</span></b><small><span lang="hi">राय या टिप्पणी</span></small></span>
+              </span>
+            </label>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Crash report">
+              <span class="report-type-card">
+                <span class="report-type-n">02</span>
+                <span><b><span lang="hi">क्रैश</span></b><small><span lang="hi">किसी ख़राबी को दोहराना</span></small></span>
+              </span>
+            </label>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Feature request">
+              <span class="report-type-card">
+                <span class="report-type-n">03</span>
+                <span><b><span lang="hi">सुझाव</span></b><small><span lang="hi">Kiebitz के लिए एक विचार</span></small></span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="form-field">
+            <label for="feedback-title"><span lang="hi">सारांश</span></label>
+            <input id="feedback-title" name="summary" type="text" required maxlength="120" autocomplete="off" data-placeholder-hi="क्या हुआ, या आप क्या चाहेंगे?">
+          </div>
+
+          <div class="form-field">
+            <span class="field-label">
+              <label for="feedback-message"><span lang="hi">विवरण</span></label>
+              <span class="field-count" data-feedback-count>0 / 4000</span>
+            </span>
+            <textarea id="feedback-message" name="message" required minlength="20" maxlength="4000" rows="6" data-placeholder-hi="चरण, अपेक्षित व्यवहार या अपना विचार यथासंभव ठोस रूप में लिखिए।"></textarea>
+            <span class="field-hint"><span lang="hi">पासवर्ड, निजी बाज़ियाँ या अन्य संवेदनशील जानकारी न डालें।</span></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="feedback-platform"><span lang="hi">प्लेटफ़ॉर्म</span> <small><span lang="hi">वैकल्पिक</span></small></label>
+              <select id="feedback-platform" name="platform">
+                <option value="">—</option>
+                <option value="Windows">Windows</option>
+                <option value="Android">Android</option>
+                <option value="Website" data-label-hi="वेबसाइट">Website</option>
+                <option value="Other" data-label-hi="अन्य">Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="feedback-version"><span lang="hi">ऐप संस्करण</span> <small><span lang="hi">वैकल्पिक</span></small></label>
+              <input id="feedback-version" name="app_version" type="text" maxlength="40" autocomplete="off" data-placeholder-hi="जैसे 0.9.4">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="feedback-email"><span lang="hi">ई-मेल</span> <small><span lang="hi">वैकल्पिक · केवल जवाब देने के लिए</span></small></label>
+            <input id="feedback-email" name="email" type="email" maxlength="160" autocomplete="email" placeholder="name@example.com">
+          </div>
+
+          <div class="form-submit">
+            <p>
+
+
+
+
+
+              <span lang="hi">भेजने पर आपकी जानकारी FormSubmit के ज़रिए ई-मेल से भेजी जाती है। <a href="privacy/index.html#c12">गोपनीयता विवरण</a>।</span>
+
+            </p>
+            <button class="btn btn-primary feedback-send" type="submit" data-feedback-send>
+              <span lang="hi">भेजें</span>
+            </button>
+          </div>
+          <p class="form-status" data-feedback-status role="status" aria-live="polite"></p>
+          </form>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="flock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="foot-note" style="margin-top:8px">
+
+
+
+
+
+        <span lang="hi">हर चाल, एक उड़ान। Windows और Android के लिए लोकल-फ़र्स्ट शतरंज साथी। सोर्स-अवेलेबल, ओपन सोर्स नहीं। Stockfish GPL-3.0 के अंतर्गत है।</span>
+
+      </p>
+      <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#feedback"><span lang="hi">फ़ीडबैक भेजें</span></a>
+      <a href="privacy/index.html"><span lang="hi">गोपनीयता</span></a>
+      <a href="impressum/index.html"><span lang="hi">क़ानूनी सूचना</span></a>
+      <a href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">Releases</a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="hi">सोर्स कोड</span></a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ── Dialog: Android Closed Test ─────────────────────────────────────── -->
+<div class="modal" id="beta-android" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="beta-title" aria-describedby="beta-lede">
+    <div class="modal-head">
+      <span class="modal-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="9" width="14" height="10" rx="3"></rect>
+          <path d="M8.2 9 6.7 6.3M15.8 9l1.5-2.7"></path>
+          <circle cx="9.6" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
+          <circle cx="14.4" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
+        </svg>
+      </span>
+      <div class="modal-titles">
+        <p class="modal-eyebrow">Kiebitz</p>
+        <h2 id="beta-title">
+
+
+
+
+
+          <span lang="hi">Android क्लोज़्ड टेस्ट में है</span>
+
+        </h2>
+      </div>
+      <button class="modal-x" type="button" data-beta-close data-aria="close" aria-label="Close">&#10005;</button>
+    </div>
+
+    <div class="modal-body">
+      <p class="modal-lede" id="beta-lede">
+
+
+
+
+
+        <span lang="hi">Windows के लिए Kiebitz अभी डाउनलोड किया जा सकता है। Android ऐप के लिए Google Play पर एक क्लोज़्ड टेस्ट चल रहा है, और कुछ और टेस्टर मिलें तो बहुत अच्छा हो। शामिल होने के तीन चरण हैं:</span>
+
+      </p>
+
+      <ol class="steps">
+        <li>
+          <a class="step" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">1</span>
+            <span class="step-txt">
+              <b><span lang="hi">Google ग्रुप से जुड़ें</span></b>
+              <span class="step-sub"><span lang="hi">सदस्यता आपके Google खाते के लिए टेस्ट खोल देती है।</span></span>
+              <span class="step-url">groups.google.com/g/kiebitz-beta-test</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a class="step" href="https://play.google.com/apps/testing/de.torim.kiebitz" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">2</span>
+            <span class="step-txt">
+              <b><span lang="hi">क्लोज़्ड टेस्ट में शामिल हों</span></b>
+              <span class="step-sub"><span lang="hi">चरण 1 वाले उसी Google खाते से ऑप्ट-इन करें।</span></span>
+              <span class="step-url">play.google.com/apps/testing/de.torim.kiebitz</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a class="step" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">3</span>
+            <span class="step-txt">
+              <b><span lang="hi">Android पर इंस्टॉल करें</span></b>
+              <span class="step-sub"><span lang="hi">Play Store की लिस्टिंग खोलिए और Kiebitz इंस्टॉल कीजिए।</span></span>
+              <span class="step-url">play.google.com/store/apps/details?id=de.torim.kiebitz</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+      </ol>
+
+      <p class="modal-note">
+
+
+
+
+        <span lang="hi">Google चाहता है कि टेस्टर कम से कम 14 दिन जुड़े रहें। बेशक, ऐप को सचमुच आज़माना और ईमानदार फ़ीडबैक देना और भी मददगार होगा।</span>
+
+      </p>
+    </div>
+
+    <div class="modal-foot">
+      <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+        <span lang="hi">इसके बजाय GitHub से APK लें</span>
+      </a>
+      <a class="btn btn-primary" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
+        <span lang="hi">चरण 1 से शुरू करें</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

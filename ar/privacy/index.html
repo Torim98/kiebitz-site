@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar" data-page="privacy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سياسة الخصوصية · Kiebitz</title>
+<meta name="description" content="سياسة خصوصية Kiebitz: التخزين المحلي والوصول إلى الشبكة والأذونات والمزامنة عبر الشبكة المحلية وعدم التتبع.">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://torim98.github.io/kiebitz-site/ar/privacy/">
+<link rel="alternate" hreflang="de" href="https://torim98.github.io/kiebitz-site/de/privacy/">
+<link rel="alternate" hreflang="en" href="https://torim98.github.io/kiebitz-site/privacy/">
+<link rel="alternate" hreflang="fr" href="https://torim98.github.io/kiebitz-site/fr/privacy/">
+<link rel="alternate" hreflang="es" href="https://torim98.github.io/kiebitz-site/es/privacy/">
+<link rel="alternate" hreflang="zh-Hans" href="https://torim98.github.io/kiebitz-site/zh/privacy/">
+<link rel="alternate" hreflang="hi" href="https://torim98.github.io/kiebitz-site/hi/privacy/">
+<link rel="alternate" hreflang="ar" href="https://torim98.github.io/kiebitz-site/ar/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://torim98.github.io/kiebitz-site/privacy/">
+<link rel="icon" href="../../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kiebitz">
+<meta property="og:locale" content="ar">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:title" content="سياسة الخصوصية · Kiebitz">
+<meta property="og:description" content="سياسة خصوصية Kiebitz: التخزين المحلي والوصول إلى الشبكة والأذونات والمزامنة عبر الشبكة المحلية وعدم التتبع.">
+<meta property="og:url" content="https://torim98.github.io/kiebitz-site/ar/privacy/">
+<meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kiebitz · Local-first chess analysis">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="سياسة الخصوصية · Kiebitz">
+<meta name="twitter:description" content="سياسة خصوصية Kiebitz: التخزين المحلي والوصول إلى الشبكة والأذونات والمزامنة عبر الشبكة المحلية وعدم التتبع.">
+<meta name="twitter:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span lang="ar">تخطَّ إلى المحتوى</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../index.html" aria-label="Kiebitz">
+      <img src="../../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="ar">نقلة تُحلّق</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="../index.html#features"><span lang="ar">المزايا</span></a>
+      <a href="../index.html#download"><span lang="ar">التنزيل</span></a>
+      <a href="../impressum/index.html"><span lang="ar">بيان قانوني</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="اللغة">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-sm" href="../index.html"><span lang="ar">رجوع</span></a>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap doc-grid">
+    <aside class="toc" aria-label="المحتويات">
+      <p class="toc-h"><span lang="ar">المحتويات</span></p>
+      <ul>
+        <li><a href="#c1">1 <span lang="ar">المسؤول عن المعالجة</span></a></li>
+        <li><a href="#c2">2 <span lang="ar">المبدأ</span></a></li>
+        <li><a href="#c3">3 <span lang="ar">البيانات المخزَّنة محليًا</span></a></li>
+        <li><a href="#c4">4 <span lang="ar">اتصالات الشبكة</span></a></li>
+        <li><a href="#c5">5 <span lang="ar">الأذونات</span></a></li>
+        <li><a href="#c6">6 <span lang="ar">مزامنة الأجهزة</span></a></li>
+        <li><a href="#c7">7 <span lang="ar">بلا تتبُّع</span></a></li>
+        <li><a href="#c8">8 <span lang="ar">الأسس القانونية</span></a></li>
+        <li><a href="#c9">9 <span lang="ar">مدة الحفظ والحذف</span></a></li>
+        <li><a href="#c10">10 <span lang="ar">الأطفال</span></a></li>
+        <li><a href="#c11">11 <span lang="ar">حقوقك</span></a></li>
+        <li><a href="#c12">12 <span lang="ar">هذا الموقع</span></a></li>
+        <li><a href="#c13">13 <span lang="ar">التعديلات</span></a></li>
+      </ul>
+    </aside>
+
+    <article>
+      <p class="eyebrow"><b>§</b> <span lang="ar">نص قانوني</span></p>
+      <h1><span lang="ar">سياسة الخصوصية</span></h1>
+      <p class="doc-sub">
+
+
+
+
+
+
+        <span lang="ar">لتطبيق <strong>Kiebitz</strong> (على Windows وAndroid) ولهذا الموقع. ‏Kiebitz تطبيق محلي أولًا: تبقى البيانات على أجهزتك، ولا يشغّل المزوّد أي خادم يتلقّى محتواك.</span>
+      </p>
+      <p class="doc-meta">
+
+
+
+
+
+
+        <span lang="ar">آخر تحديث: 29 يوليو 2026 · تسري على جميع نسخ Kiebitz التجريبية. هذه الترجمة للاطّلاع فقط، وعند الاختلاف يُعتدّ بالنسخة الألمانية.</span>
+      </p>
+
+      <section id="c1">
+        <h2><span class="num">01</span><span lang="ar">المسؤول عن المعالجة</span></h2>
+
+
+
+
+
+
+        <p lang="ar">المسؤول عن المعالجة بمفهوم اللائحة العامة لحماية البيانات (GDPR) فيما يخصّ توفير التطبيق وهذا الموقع هو:</p>
+        <div class="panel">
+          <address>
+            Tom Maurer<br>
+            Heidegarten 3<br>
+            56244 Helferskirchen<br>
+            <span lang="ar">ألمانيا</span><br>
+            <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>
+          </address>
+        </div>
+        <p style="margin-top:14px">
+
+
+
+
+
+
+          <span lang="ar">لم يُعيَّن مسؤول لحماية البيانات لأن شروط المادة 37 من اللائحة غير متحقّقة. ولأي سؤال عن الخصوصية تكفي رسالة إلى العنوان أعلاه.</span>
+        </p>
+      </section>
+
+      <section id="c2">
+        <h2><span class="num">02</span><span lang="ar">المبدأ: محلي أولًا</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="ar">يعالج Kiebitz بيانات شطرنجك على أجهزتك وحدها. لا يوجد حساب مستخدم ولا تسجيل ولا تخزين سحابي ولا خادم للمزوّد تُنقل إليه المباريات أو التحليلات أو تقدّم التدريب أو بيانات الاستخدام. وفي التشغيل المعتاد للتطبيق لا يتلقّى المزوّد أي بيانات شخصية منك، ومن ثَمّ لا يمكنه إجراء أي تحليل أو بناء أي ملف تعريفي.</p>
+        <p lang="ar">الاتصالات الشبكية الوحيدة التي ينشئها التطبيق موجَّهة إلى أطراف ثالثة اخترتها بنفسك (chess.com وLichess واختياريًا chessdb.cn)، وإلى GitHub للتحقّق من التحديثات. وهذه الاتصالات مذكورة بالكامل في القسم 4.</p>
+      </section>
+
+      <section id="c3">
+        <h2><span class="num">03</span><span lang="ar">ما الذي يخزّنه التطبيق محليًا</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="ar">يحفظ Kiebitz بياناته في قاعدة بيانات SQLite محلية وفي ملفات إعداد محلية داخل دليل بيانات التطبيقات في نظام التشغيل (على Windows: دليل بيانات التطبيقات الخاص بحسابك؛ وعلى Android: الدليل الخاص بالتطبيق، وهو غير مقروء للتطبيقات الأخرى). ويُحفظ ما يلي:</p>
+        <ul class="bul" lang="ar">
+          <li>المباريات المستوردة مع بياناتها الوصفية (التاريخ، واسم الخصم، وقيم التصنيف، وضبط الوقت، والافتتاح، والنتيجة، وتسلسل النقلات، والمصدر)</li>
+          <li>نتائج تحليل المحرّك (التقييم لكل نقلة، وتصنيف النقلات، ونسبة الدقة)</li>
+          <li>شجرة المرجع وبيانات المراجعة بنظام FSRS، وتقدّم الألغاز وتصنيفها، ونتائج النهايات، وخطة الدراسة وقوائم المهام</li>
+          <li>ملاحظاتك ووسومك الخاصة على المباريات والنقلات</li>
+          <li>الإعدادات، ومنها اسما المستخدم اللذان أدخلتهما على chess.com وLichess، واللغة، وخيارات المحرّك، وكذلك — إن كنت قد اقترنت بهاتف — عنوان محور المزامنة ورمز الاقتران وبصمة الشهادة</li>
+          <li>الردود المخزَّنة مؤقتًا من كتاب الافتتاحات الاختياري عبر الإنترنت (حتى 30 يومًا)</li>
+        </ul>
+        <p lang="ar" style="margin-top:14px">لا تغادر هذه البيانات جهازك إلا إذا صدّرتها بنفسك (كملف PGN مثلًا) أو زامنتها مع جهاز ثانٍ يخصّك (القسم 6).</p>
+      </section>
+
+      <section id="c4">
+        <h2><span class="num">04</span><span lang="ar">اتصالات التطبيق بالشبكة</span></h2>
+
+
+
+
+
+
+        <p lang="ar">لا ينشئ التطبيق سوى الاتصالات التالية. أما سائر الوظائف فتعمل دون اتصال.</p>
+        <div class="table-scroll">
+        <table>
+          <thead>
+
+
+
+
+
+
+            <tr lang="ar"><th>الوجهة</th><th>متى</th><th>البيانات المنقولة</th></tr>
+          </thead>
+          <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr lang="ar">
+              <td>api.chess.com</td>
+              <td>عند استيراد المباريات الذي تبدأه بنفسك (أو تلقائيًا إن فعّلت الاستيراد التلقائي)</td>
+              <td>اسم المستخدم على chess.com الذي أدخلته، ضمن الطلب، إضافة إلى بيانات الاتصال الضرورية تقنيًا (عنوان IP الخاص باتصالك)</td>
+            </tr>
+            <tr lang="ar">
+              <td>lichess.org</td>
+              <td>عند استيراد المباريات الذي تبدأه بنفسك</td>
+              <td>اسم المستخدم على Lichess الذي أدخلته، إضافة إلى بيانات الاتصال الضرورية تقنيًا</td>
+            </tr>
+            <tr lang="ar">
+              <td>chessdb.cn</td>
+              <td>فقط إن فعّلت كتاب الافتتاحات عبر الإنترنت في الإعدادات، وفي صفحة التحليل وحدها</td>
+              <td>الوضع المعروض حاليًا (بصيغة FEN) إضافة إلى بيانات الاتصال الضرورية تقنيًا. وإن كان الخيار معطّلًا فلا يُرسَل أي طلب.</td>
+            </tr>
+            <tr lang="ar">
+              <td>github.com / objects.githubusercontent.com</td>
+              <td>عند تحقّق تطبيق سطح المكتب من التحديثات وعند تثبيتك تحديثًا</td>
+              <td>جلب معلومات الإصدار وملف التحديث، إضافة إلى بيانات الاتصال الضرورية تقنيًا</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <p style="margin-top:16px">
+
+
+
+
+
+
+          <span lang="ar">هذه الخدمات أطراف ثالثة مستقلة تعالج الطلبات وفق شروط الخصوصية الخاصة بها. ولا ينقل إليها التطبيق شيئًا يتجاوز البيانات المذكورة أعلاه، ولا سيّما أي معرّفات تحدّد هويتك على مستوى الجهاز.</span>
+        </p>
+        <ul class="bul" style="margin-top:14px">
+          <li><a href="https://www.chess.com/legal/privacy" rel="noopener noreferrer">chess.com: <span lang="ar">سياسة الخصوصية</span></a></li>
+          <li><a href="https://lichess.org/privacy" rel="noopener noreferrer">Lichess: <span lang="ar">سياسة الخصوصية</span></a></li>
+          <li><a href="https://www.chessdb.cn/" rel="noopener noreferrer">chessdb.cn: <span lang="ar">موقع المزوّد</span></a></li>
+          <li><a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">GitHub: <span lang="ar">بيان الخصوصية</span></a></li>
+        </ul>
+      </section>
+
+      <section id="c5">
+        <h2><span class="num">05</span><span lang="ar">أذونات الجهاز</span></h2>
+
+
+
+
+
+
+        <ul class="bul" lang="ar">
+          <li><strong>الكاميرا (على Android):</strong> لمسح رمز QR الخاص باقتران الأجهزة لا غير. ولا يُطلب الإذن إلا في تلك اللحظة. ولا تُحفَظ أي صور أو مقاطع فيديو ولا تُعالَج ولا تُنقَل؛ ولا يُقرأ سوى النص الوارد داخل رمز QR.</li>
+          <li><strong>الإنترنت / الوصول إلى الشبكة:</strong> للطلبات المذكورة في القسم 4 وللمزامنة داخل الشبكة المحلية.</li>
+          <li><strong>الإشعارات:</strong> اختيارية، للتذكيرات التدريبية المحلية. وتُنشأ على الجهاز نفسه دون أي خدمة دفع.</li>
+          <li><strong>الوصول إلى الملفات:</strong> فقط عندما تستورد أو تصدّر ملف PGN بنفسك عبر منتقي الملفات في نظام التشغيل.</li>
+        </ul>
+      </section>
+
+      <section id="c6">
+        <h2><span class="num">06</span><span lang="ar">مزامنة الأجهزة داخل الشبكة المحلية</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="ar">عندما تقترن بين الحاسوب والهاتف، لا يتصل ببعضهما سوى جهازيك أنت. يعمل الحاسوب محورًا، ويتلقّى الهاتف العنوان ورمز الاقتران وبصمة شهادة TLS عبر رمز QR المعروض. ويجري النقل مشفَّرًا (بـ TLS مع التحقّق من البصمة) مباشرة عبر شبكتك المحلية أو عبر شبكة افتراضية خاصة أعددتها بنفسك.</p>
+        <p lang="ar">لا يوجد خادم وسيط ولا مُرحِّل ولا وصول من المزوّد. ومن دون اقتران لا تحدث أي مزامنة؛ ويمكنك إزالة الاقتران من الإعدادات في أي وقت.</p>
+      </section>
+
+      <section id="c7">
+        <h2><span class="num">07</span><span lang="ar">بلا تتبُّع وبلا إعلانات</span></h2>
+
+
+
+
+
+
+        <ul class="bul" lang="ar">
+          <li>لا حزم تحليلات أو إحصاءات، ولا إبلاغ تلقائي عن الأعطال، ولا تسجيل عن بُعد</li>
+          <li>لا إعلانات ولا معرّفات إعلانية ولا شبكات إعلانية ولا تتبُّع إعلاني</li>
+          <li>لا مشاركة للبيانات مع أطراف ثالثة ولا بيع لها</li>
+          <li>لا اتخاذ قرارات آليًا ولا تنميط بمفهوم المادة 22 من اللائحة</li>
+          <li>لا ملفات تعريف ارتباط داخل التطبيق</li>
+        </ul>
+      </section>
+
+      <section id="c8">
+        <h2><span class="num">08</span><span lang="ar">الأسس القانونية</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="ar">لمّا كان التطبيق يعالج البيانات محليًا على جهازك ولا يملك المزوّد أي وصول إليها، فلا توجد بهذا القدر معالجة من جانب المسؤول. وبقدر ما تظل بعض العمليات ذات صلة بقانون حماية البيانات، تنطبق الأسس التالية:</p>
+        <ul class="bul" lang="ar">
+          <li><strong>المادة 6(1)(ب) من اللائحة</strong>: توفير الوظائف التي طلبتها، ولا سيّما استيراد مبارياتك من chess.com أو Lichess والمزامنة بين أجهزتك.</li>
+          <li><strong>المادة 6(1)(أ) من اللائحة</strong>: الموافقة، حيثما فعّلت وظيفة بنفسك: كتاب الافتتاحات الاختياري عبر الإنترنت (chessdb.cn)، والوصول إلى الكاميرا للاقتران برمز QR، والإشعارات. ويمكنك سحبها في أي وقت من إعدادات التطبيق أو إعدادات النظام.</li>
+          <li><strong>المادة 6(1)(و) من اللائحة</strong>: المصلحة المشروعة في برمجية آمنة ومحدَّثة: التحقّق من تحديثات البرنامج.</li>
+        </ul>
+      </section>
+
+      <section id="c9">
+        <h2><span class="num">09</span><span lang="ar">مدة الحفظ والحذف</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="ar">تبقى البيانات المحلية محفوظة ما دمت تريد الاحتفاظ بها؛ فلا حفظ على أي خادم ومن ثَمّ لا مُدد حذف لدى المزوّد. ويمكنك في أي وقت:</p>
+        <ul class="bul" lang="ar">
+          <li>حذف مباريات أو ملاحظات أو وسوم أو مُدخلات مرجع بعينها داخل التطبيق،</li>
+          <li>إزالة الاقتران مع جهاز آخر،</li>
+          <li>إلغاء تثبيت التطبيق، وبذلك تُزال بياناته المحلية (وعلى Android كذلك عبر «مسح بيانات التطبيق»، وعلى Windows بحذف دليل بيانات التطبيقات)،</li>
+          <li>تصدير بياناتك مسبقًا بصيغة PGN إن أردت الاحتفاظ بها.</li>
+        </ul>
+      </section>
+
+      <section id="c10">
+        <h2><span class="num">10</span><span lang="ar">الأطفال والمراهقون</span></h2>
+
+
+
+
+
+
+        <p lang="ar">لا يستهدف Kiebitz الأطفال على وجه الخصوص ولا يجمع أي بيانات عبر المزوّد؛ وبصرف النظر عن عمر المستخدم، لا تُنقل أي بيانات شخصية إلى المزوّد. وعند استيراد المباريات تسري شروط بوّابة الشطرنج المعنيّة.</p>
+      </section>
+
+      <section id="c11">
+        <h2><span class="num">11</span><span lang="ar">حقوقك</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="ar">تكفل لك اللائحة حقوق الاطّلاع (المادة 15) والتصحيح (المادة 16) والمحو (المادة 17) وتقييد المعالجة (المادة 18) وقابلية نقل البيانات (المادة 20) والاعتراض (المادة 21)، فضلًا عن حقك في سحب أي موافقة منحتها في أي وقت (المادة 7(3)).</p>
+        <p lang="ar">وعمليًا: بما أن المزوّد لا يخزّن أي بيانات عنك، فإن الاطّلاع والمحو لا يتعلّقان عادةً إلا بالبيانات الموجودة على جهازك، وهي بيانات يمكنك الاطّلاع عليها وتصديرها وحذفها بنفسك هناك. وتكفي رسالة إلى <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> لأي طلب.</p>
+        <p lang="ar">ولك كذلك الحق في تقديم شكوى إلى إحدى سلطات الإشراف على حماية البيانات. والسلطة المختصّة هي مفوّض ولاية راينلاند بفالتس لحماية البيانات وحرية المعلومات في ألمانيا؛ ويمكنك أيضًا مخاطبة السلطة في مكان إقامتك.</p>
+      </section>
+
+      <section id="c12">
+        <h2><span class="num">12</span><span lang="ar">هذا الموقع</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="ar">هذا الموقع ثابت ويُقدَّم عبر GitHub Pages (‏GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). وعند زيارتك له تعالج GitHub بصفتها المستضيف بيانات اتصال ضرورية تقنيًا في سجلّات الخادم، ولا سيّما عنوان IP الخاص بك، والتاريخ والوقت، والملف المطلوب، ومصدر الإحالة، ومعرّف المتصفّح. والأساس القانوني هو المادة 6(1)(و) من اللائحة (تشغيل آمن وخالٍ من الأعطال). ولا يملك مزوّد هذا الموقع أي وصول إلى هذه السجلّات.</p>
+        <p lang="ar">لا يستخدم الموقع ملفات تعريف ارتباط ولا أدوات تحليلات ولا نصوصًا برمجية إعلانية أو خاصة بالتواصل الاجتماعي. والخطوط والأنماط والصور مستضافة على الخادم نفسه. أما اللغة التي تختارها فتُحفَظ محليًا فقط في متصفّحك (localStorage) لتظهر الصفحة باللغة نفسها في زيارتك التالية؛ ولا يُنقل هذا الإعداد. بيان الخصوصية لدى GitHub: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>.</p>
+        <p lang="ar"><strong>نموذج الملاحظات:</strong> لا تُنقَل البيانات التي أدخلتها (نوع الرسالة، والملخّص، والتفاصيل، واختياريًا المنصّة وإصدار التطبيق والبريد الإلكتروني) مع بيانات الاتصال الضرورية تقنيًا إلى FormSubmit ‏(formsubmit.co) إلا عند إرسالك الرسالة، ومن هناك تُحوَّل بالبريد الإلكتروني إلى المزوّد. ولا تُقرأ أي بيانات من التطبيق تلقائيًا ولا تُرفَق. ووفق ما تذكره FormSubmit، تحتفظ بالرسائل حتى 30 يومًا لأغراض التسليم والاسترجاع. والأساس القانوني هو المادة 6(1)(ب) من اللائحة عند طلبك الدعم، وفيما عدا ذلك المادة 6(1)(و) (معالجة الملاحظات الطوعية وتحسين البرمجية). ويُحذف البريد الذي يتلقّاه المزوّد بمجرد انتفاء الحاجة إليه للمعالجة والاستفسارات اللاحقة. معلومات FormSubmit: <a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">الخصوصية</a> و<a href="https://formsubmit.co/documentation" rel="noopener noreferrer">التوثيق</a>.</p>
+      </section>
+
+      <section id="c13">
+        <h2><span class="num">13</span><span lang="ar">تعديلات هذه السياسة</span></h2>
+
+
+
+
+
+
+        <p lang="ar">إذا أُضيفت إلى التطبيق وظائف تستتبع معالجات جديدة للبيانات، فستُعدَّل هذه السياسة قبل ذلك. والنسخة السارية مؤرَّخة أعلاه ومتاحة بصفة دائمة على هذا العنوان.</p>
+        <div class="panel" style="margin-top:22px">
+          <p>
+
+
+
+
+
+
+            <span lang="ar">أسئلة عن الخصوصية؟ راسل <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>. ويمكن الاطّلاع على الشيفرة المصدرية للتطبيق على <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+          </p>
+        </div>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="small" style="margin-top:8px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="../index.html"><span lang="ar">الصفحة الرئيسية</span></a>
+      <a href="../impressum/index.html"><span lang="ar">بيان قانوني</span></a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="ar">الشيفرة المصدرية</span></a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

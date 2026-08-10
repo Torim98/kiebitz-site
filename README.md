@@ -5,94 +5,95 @@ chess companion for desktop and Android. No account, no cloud, no telemetry.
 
 Live: <https://torim98.github.io/kiebitz-site/>
 
-## Setup
+## Build
 
-Static site, no build step. GitHub Pages serves `main` from the repository root,
-so `index.html` must stay at the top level. Nothing is fetched from a CDN — font,
-styles, script and icon are all served from this repo.
+The published site is generated from three multilingual source templates. Each
+output page contains exactly one language so search engines and assistive
+technology see an unambiguous document.
 
-```
-index.html            landing page (DE/EN)
-privacy/index.html    privacy policy (DE + EN) — required for Google Play
-impressum/index.html  legal notice (§ 5 DDG)
-assets/style.css      all styling for the three pages
-assets/site.js        language switch, reveal, board choreography
-assets/fonts/         Inter Variable (latin, latin-ext), SIL OFL 1.1
-assets/icon*.png      app icon, taken from the app repo
+```powershell
+npm run build
+npm run check
 ```
 
-## Language switching
+Node.js is the only build dependency; no package installation is required.
+Generated HTML stays committed because GitHub Pages serves `main` from the
+repository root. The same build also prepares an ignored `dist/` package for
+the private Codex Sites deployment.
 
-Both languages live in the DOM. Every translated element carries `lang="de"` or
-`lang="en"`; CSS hides the branch that does not match `<html data-lang>`. The
-page therefore works without JavaScript. `assets/site.js` only flips the
-attribute, keeps the choice in `localStorage` (`kiebitz-lang`) and swaps the
-`<title>` via the `data-title-de` / `data-title-en` attributes on `<html>`.
-Initial language: browser language, falling back to English.
-
-Internal links are written as explicit `…/index.html` paths so the pages also
-work when opened straight from disk, not only through GitHub Pages.
-
-## Screenshots
-
-The four feature blocks on the landing page contain labelled placeholders. Drop
-real captures into `assets/shots/` and replace the `.shot-frame` div with the
-`<img>` tag that is already prepared as an HTML comment inside each `<figure>`:
-
-```
-assets/shots/insights.png     1600 × 1000
-assets/shots/repertoire.png   1600 × 1000
-assets/shots/puzzles.png      1600 × 1000
-assets/shots/study.png        1600 × 1000
+```text
+src/pages/                         multilingual source templates
+scripts/build-site.mjs             locale, metadata, sitemap and robots build
+scripts/check-site.mjs             generated-site validation
+site.config.mjs                    canonical origin, version and localized SEO copy
+index.html                         English landing page and x-default
+de/, fr/, es/, zh/, hi/, ar/       localized page trees
+privacy/, impressum/               English legal pages
+assets/                            shared styles, script, fonts, images and social card
+robots.txt, sitemap.xml            generated crawler files
 ```
 
-## Downloads
+Edit the templates, shared assets, or `site.config.mjs`, then run both commands.
+Do not edit generated HTML directly.
 
-Download links point at the release assets of the app repository, never at files
-committed here:
+## Languages and URLs
 
-- Windows installer and Android APK: <https://github.com/Torim98/Kiebitz/releases/latest>
+English is served at `/` and acts as `x-default`. Other languages use stable
+subdirectories such as `/de/` and `/fr/`. Privacy and legal pages follow the
+same pattern, for example `/de/privacy/`.
 
-A full-bleed banner (`.band`, between hero and section 01) advertises the closed
-test: invitation on the left, the three moves as a connected route on the right,
-over a faint chessboard texture (`.band-grid`). Below 900 px it stacks.
+Every generated page includes:
 
-All three Android buttons (banner, hero and download section) carry `data-beta-open` and open
-a dialog about the closed test on Google Play instead of following their `href`.
-Without JavaScript the `href` still leads to the GitHub release, so the page keeps
-working. The dialog lists the three steps and is defined at the end of
-`index.html` (`#beta-android`), styled under `/* Dialog */` in `assets/style.css`:
+- a self-referencing canonical URL;
+- reciprocal `hreflang` links for all seven languages and `x-default`;
+- one localized title and meta description;
+- localized Open Graph and X/Twitter metadata;
+- the 1200×630 social card in `assets/og-kiebitz.png`;
+- `SoftwareApplication` JSON-LD on landing pages.
 
-1. Google Group: <https://groups.google.com/g/kiebitz-beta-test/>
-2. Closed test: <https://play.google.com/apps/testing/de.torim.kiebitz>
-3. Play listing: <https://play.google.com/store/apps/details?id=de.torim.kiebitz>
+The language selector navigates between locale URLs and keeps the equivalent
+page and anchor. It does not swap hidden content in the DOM.
 
-Once the app is in open testing or production, remove the `.band` section and
-drop `data-beta-open` from the two remaining buttons; the dialog then never opens.
+## Custom domain
 
-## Feedback form
+After buying the domain:
 
-The landing page contains a feedback form for general feedback, crash reports
-and feature requests. JavaScript sends it in the background to FormSubmit's
-AJAX endpoint, which forwards submissions to `kiebitz.chess@gmail.com`; the regular
-form action remains as a no-JavaScript fallback. The form uses a honeypot and
-disables the provider captcha so it can stay inside the page. A native
-`details` wrapper presents the form as a compact sealed move line by default
-and expands it accessibly without depending on JavaScript.
+1. Change `site.origin` in `site.config.mjs` to the final HTTPS origin.
+2. Run `npm run build` and `npm run check` so canonical URLs, `hreflang`, the
+   sitemap, structured data and social metadata all use the new domain.
+3. Add the domain in the repository's GitHub Pages settings. For an apex domain,
+   configure GitHub's four `A` records (and optionally the four `AAAA` records)
+   at the registrar. Point `www` to `torim98.github.io` with a `CNAME`.
+4. Keep the `CNAME` file GitHub creates, enable **Enforce HTTPS**, and verify
+   both the apex and `www` variants.
+5. Update the website/privacy URL in Google Play Console, Search Console, Bing
+   Webmaster Tools, the GitHub repository description, and any app/store links.
 
-FormSubmit requires one initial confirmation for the recipient address. After
-the first submission, open the activation email sent to `kiebitz.chess@gmail.com` and
-confirm it. Until then, FormSubmit retains submissions and delivers them after
-activation.
+Do not add a production `CNAME` before the domain is registered and connected.
 
-## Notes
+## Search submission
 
-- The site is separate from the app repository on purpose: website deploys stay
-  decoupled from app releases, and GitHub Pages keeps working even if the app
-  repository's visibility ever changes.
-- A custom domain can be added later via a `CNAME` file plus DNS; do it before
-  submitting the privacy policy URL to Play if possible, since changing it
-  afterwards means editing the Play Console listing.
-- The privacy policy and the legal notice both carry a "last updated" date
-  (currently 26 July 2026) — update it whenever the app gains a function that
-  touches the network, storage or device permissions.
+After publishing, submit `/sitemap.xml` in Google Search Console and Bing
+Webmaster Tools. Inspect at least the English and German landing pages and
+request indexing. When the app version changes, update `site.version` before
+the next build.
+
+## Downloads and feedback
+
+Download links point to the app repository's latest release. Android beta
+buttons open the closed-test dialog while retaining the GitHub APK as a
+no-JavaScript fallback.
+
+The feedback form sends only after deliberate submission to FormSubmit's AJAX
+endpoint and forwards to `kiebitz.chess@gmail.com`. FormSubmit requires an
+initial confirmation for that recipient address.
+
+## Privacy and maintenance
+
+The site loads no CDN resources, analytics, advertising, or social scripts.
+Fonts, styles, JavaScript, screenshots and the social card are self-hosted. The
+language and motion preferences remain in browser `localStorage`.
+
+Update the privacy policy date whenever the app or site gains a function that
+changes data processing. Keep the version in `site.config.mjs` aligned with the
+latest release.

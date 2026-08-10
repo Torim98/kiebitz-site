@@ -1,4 +1,4 @@
-/* Kiebitz website — Sprachumschaltung, Feedback, Reveal, Brett-Choreografie.
+/* Kiebitz website — Sprachnavigation, Feedback, Reveal, Brett-Choreografie.
    Kein Framework; externe Anfrage nur beim bewussten Absenden des Feedback-Formulars. */
 (function () {
   "use strict";
@@ -9,6 +9,8 @@
   // Kurzcode im DOM, vollständiges BCP-47-Tag im lang-Attribut des Dokuments.
   var LANG_TAG = { de: "de", en: "en", fr: "fr", es: "es", zh: "zh-Hans", hi: "hi", ar: "ar" };
   var RTL = { ar: true };
+  var root = document.documentElement;
+  var scriptUrl = document.currentScript && document.currentScript.src;
 
   function known(code) {
     return LANGS.indexOf(code) !== -1;
@@ -67,13 +69,11 @@
     }
   };
 
-  // Baut alle sieben Fassungen ins DOM, damit ein Sprachwechsel sie mitnimmt.
+  var current = known(root.getAttribute("data-lang")) ? root.getAttribute("data-lang") : "en";
+
+  // Nur die aktuelle Fassung erzeugen; andere Sprachen haben eigene URLs.
   function allLangs(key) {
-    var html = "";
-    for (var i = 0; i < LANGS.length; i++) {
-      html += '<span lang="' + LANGS[i] + '">' + STR[key][LANGS[i]] + "</span>";
-    }
-    return html;
+    return STR[key][current];
   }
 
   var systemReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -108,11 +108,7 @@
   })();
 
   /* ── Sprache ────────────────────────────────────────────────────────────── */
-  var root = document.documentElement;
-
-  var current = "en";
-
-  function setLang(next, persist) {
+  function prepareLanguage(next) {
     var lang = known(next) ? next : "en";
     current = lang;
     root.setAttribute("data-lang", lang);
@@ -122,8 +118,6 @@
     var selects = document.querySelectorAll("[data-lang-select]");
     for (var s = 0; s < selects.length; s++) selects[s].value = lang;
 
-    var t = document.querySelector("[data-title-" + lang + "]");
-    if (t) document.title = t.getAttribute("data-title-" + lang);
     var placeholders = document.querySelectorAll("[data-placeholder-" + lang + "]");
     for (var p = 0; p < placeholders.length; p++) {
       placeholders[p].setAttribute("placeholder", placeholders[p].getAttribute("data-placeholder-" + lang));
@@ -139,17 +133,27 @@
       if (STR[key]) aria[a].setAttribute("aria-label", STR[key][lang]);
     }
     document.dispatchEvent(new Event("kiebitz:langchange"));
-    if (persist) {
-      try { localStorage.setItem("kiebitz-lang", lang); } catch (e) { /* egal */ }
-    }
   }
 
-  setLang(root.getAttribute("data-lang") || "en", false);
+  function navigateToLanguage(next) {
+    var lang = known(next) ? next : "en";
+    var page = root.getAttribute("data-page") || "home";
+    var pagePaths = { home: "index.html", privacy: "privacy/index.html", impressum: "impressum/index.html" };
+    if (!scriptUrl || !pagePaths[page]) return;
+    var siteRoot = new URL("../", scriptUrl);
+    var localizedPath = (lang === "en" ? "" : lang + "/") + pagePaths[page];
+    var target = new URL(localizedPath, siteRoot);
+    target.hash = window.location.hash;
+    try { localStorage.setItem("kiebitz-lang", lang); } catch (e) { /* egal */ }
+    window.location.assign(target.href);
+  }
+
+  prepareLanguage(current);
 
   document.addEventListener("change", function (ev) {
     var sel = ev.target.closest ? ev.target.closest("[data-lang-select]") : null;
     if (!sel) return;
-    setLang(sel.value, true);
+    navigateToLanguage(sel.value);
   });
 
   /* ── Reveal ─────────────────────────────────────────────────────────────── */

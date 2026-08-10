@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /src/
+Sitemap: https://torim98.github.io/kiebitz-site/sitemap.xml

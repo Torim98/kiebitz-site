@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" dir="ltr" data-lang="zh" data-page="home">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiebitz · 面向 Windows 与 Android 的本地优先国际象棋分析</title>
+<meta name="description" content="Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点；无需账号、云端或遥测。">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://torim98.github.io/kiebitz-site/zh/">
+<link rel="alternate" hreflang="de" href="https://torim98.github.io/kiebitz-site/de/">
+<link rel="alternate" hreflang="en" href="https://torim98.github.io/kiebitz-site/">
+<link rel="alternate" hreflang="fr" href="https://torim98.github.io/kiebitz-site/fr/">
+<link rel="alternate" hreflang="es" href="https://torim98.github.io/kiebitz-site/es/">
+<link rel="alternate" hreflang="zh-Hans" href="https://torim98.github.io/kiebitz-site/zh/">
+<link rel="alternate" hreflang="hi" href="https://torim98.github.io/kiebitz-site/hi/">
+<link rel="alternate" hreflang="ar" href="https://torim98.github.io/kiebitz-site/ar/">
+<link rel="alternate" hreflang="x-default" href="https://torim98.github.io/kiebitz-site/">
+<link rel="icon" href="../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kiebitz">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar">
+<meta property="og:title" content="Kiebitz · 面向 Windows 与 Android 的本地优先国际象棋分析">
+<meta property="og:description" content="Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点；无需账号、云端或遥测。">
+<meta property="og:url" content="https://torim98.github.io/kiebitz-site/zh/">
+<meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kiebitz · Local-first chess analysis">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kiebitz · 面向 Windows 与 Android 的本地优先国际象棋分析">
+<meta name="twitter:description" content="Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点；无需账号、云端或遥测。">
+<meta name="twitter:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Kiebitz",
+  "url": "https://torim98.github.io/kiebitz-site/zh/",
+  "description": "Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点；无需账号、云端或遥测。",
+  "inLanguage": "zh-Hans",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Windows, macOS, Linux, Android",
+  "softwareVersion": "0.8.0",
+  "isAccessibleForFree": true,
+  "downloadUrl": "https://github.com/Torim98/Kiebitz/releases/latest",
+  "installUrl": "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
+  "screenshot": [
+    "https://torim98.github.io/kiebitz-site/assets/shots/insights.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/repertoire.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/puzzles.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/study.png"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "sameAs": "https://github.com/Torim98/Kiebitz",
+  "license": "https://github.com/Torim98/Kiebitz/blob/main/LICENSE"
+}
+</script>
+<link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span lang="zh">跳到主要内容</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="index.html" aria-label="Kiebitz">
+      <img src="../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="zh">步步高飞</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="#features"><span lang="zh">功能</span></a>
+      <a href="#local"><span lang="zh">本地优先</span></a>
+      <a href="#download"><span lang="zh">下载</span></a>
+      <a href="#feedback"><span lang="zh">反馈</span></a>
+      <a href="privacy/index.html"><span lang="zh">隐私</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="语言">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-primary btn-sm" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+      <span lang="zh">下载</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="zh">测试版 · 早期体验</span></p>
+        <h1>
+
+
+
+
+          <span lang="zh">Kiebitz 在你身后<span class="flight">观棋</span>。</span>
+
+
+        </h1>
+
+
+
+
+        <p class="hero-sub" lang="zh"><i>Kiebitz</i> 是一种鸟，在德语里也指在旁边看棋的人。这款应用会导入你在 chess.com 和 Lichess 上的对局，用原生 Stockfish 跑完整个对局历史，告诉你棋究竟坏在哪里，而不是你以为的地方。<strong>所有数据都留在你自己的设备上。</strong></p>
+
+
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="zh">下载 Windows 版</span>
+          </a>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="zh">Android（测试计划）</span>
+          </a>
+        </div>
+        <p class="cta-note"><span lang="zh">免费 · Windows 通过 GitHub · Android 封闭测试中</span></p>
+      </div>
+
+      <div class="board-card" aria-hidden="true">
+        <div class="board-head">
+          <span data-route-label>Knight · b1 → e8</span>
+          <span data-square-label>b1</span>
+        </div>
+        <div class="board-stage">
+          <div class="board-lattice"></div>
+          <svg class="board-path" viewBox="0 0 8 8" preserveAspectRatio="none" focusable="false"></svg>
+        </div>
+        <div class="board-coords"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        <div class="board-foot">
+          <span class="pill"><span lang="zh">Stockfish · 原生</span></span>
+          <span><span lang="zh">分析在你的设备上运行。</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Banner: Android Closed Test ───────────────────────────────────── -->
+  <section class="band" aria-labelledby="band-title">
+    <div class="band-grid" aria-hidden="true"></div>
+    <div class="wrap band-in rv">
+      <div class="band-text">
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="zh">封闭测试 · Google Play</span></p>
+        <h2 id="band-title">
+
+
+
+
+          <span lang="zh">Kiebitz 正登陆 Android，招募测试者。</span>
+
+
+        </h2>
+        <p class="band-sub">
+
+
+
+
+          <span lang="zh">Windows 版现在就能下载。Android 版正在 Google Play 上进行封闭测试，如果能多几位测试者我会非常感谢。加入只需三步棋。</span>
+
+
+        </p>
+        <div class="band-cta">
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="zh">成为测试者</span>
+          </a>
+          <a class="band-alt" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="zh">或者直接下载 APK</span>
+          </a>
+        </div>
+        <p class="band-note">
+
+
+
+
+          <span lang="zh">Google 要求测试者参与满 14 天。比起默默挂着，我更希望收到坦率的反馈。</span>
+
+
+        </p>
+      </div>
+
+      <ol class="route">
+        <li>
+          <span class="route-n">1</span>
+          <span class="route-txt">
+            <b><span lang="zh">加入 Google 群组</span></b>
+            <span><span lang="zh">为你的账号解锁测试</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="route-n">2</span>
+          <span class="route-txt">
+            <b><span lang="zh">加入封闭测试</span></b>
+            <span><span lang="zh">用同一个 Google 账号确认加入</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="route-n">3</span>
+          <span class="route-txt">
+            <b><span lang="zh">从 Play 商店安装</span></b>
+            <span><span lang="zh">之后 Kiebitz 会自动更新</span></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ── 01 Local-first ────────────────────────────────────────────────── -->
+  <section class="section" id="local">
+    <div class="wrap">
+      <p class="eyebrow"><b>01</b> <span lang="zh">本地优先</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
+
+
+
+
+        <span lang="zh">你的对局，就是你的对局。</span>
+
+
+      </h2>
+      <p class="lede" style="margin-top:18px">
+
+
+
+
+        <span lang="zh">Kiebitz 没有服务器。没有需要登录的地方，没有上传，也没有在别处进行的分析。数据库就是你电脑上的一个 SQLite 文件。</span>
+
+
+      </p>
+      <dl class="promise rv" style="margin-top:32px">
+        <div>
+          <dt><span lang="zh">无需账号</span></dt>
+          <dd><span lang="zh">不注册、不留邮箱、不登录。</span></dd>
+        </div>
+        <div>
+          <dt><span lang="zh">无云端</span></dt>
+          <dd><span lang="zh">对局、分析和进度都留在本地。</span></dd>
+        </div>
+        <div>
+          <dt><span lang="zh">无遥测</span></dt>
+          <dd><span lang="zh">不追踪、无广告、不发崩溃报告。</span></dd>
+        </div>
+        <div>
+          <dt><span lang="zh">在自家网络内同步</span></dt>
+          <dd><span lang="zh">手机和桌面端加密后直接通信。</span></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ── 02 Ablauf ─────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow"><b>02</b> <span lang="zh">使用流程</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:24ch">
+
+
+
+
+        <span lang="zh">导入、分析、看懂。</span>
+
+
+      </h2>
+      <div class="flow rv" style="margin-top:34px">
+        <article class="step">
+          <p class="step-n">01</p>
+          <h3><span lang="zh">导入</span></h3>
+          <p><span lang="zh">填上用户名就行。Kiebitz 会取回完整历史，自动去重，也支持 PGN 导入实地对局。</span></p>
+          <div class="step-viz srcrow">
+            <span class="srcpill cc">chess.com</span>
+            <span class="srcpill li">lichess</span>
+            <span class="srcpill pgn">PGN</span>
+          </div>
+        </article>
+        <article class="step">
+          <p class="step-n">02</p>
+          <h3><span lang="zh">分析</span></h3>
+          <p><span lang="zh">原生 Stockfish 在后台处理队列：逐着评分，标出不精确、失误、严重失误与准确率。</span></p>
+          <div class="step-viz">
+            <div class="evalbar" aria-hidden="true"><span class="w" style="width:52%"></span><span class="b"></span></div>
+            <div class="evalticks" aria-hidden="true"><span>1. e4</span><span class="bad">24. Nf3?? −3.1</span><span>41. Kg2</span></div>
+          </div>
+        </article>
+        <article class="step">
+          <p class="step-n">03</p>
+          <h3><span lang="zh">看懂</span></h3>
+          <p><span lang="zh">不是“下得不错”，而是：在哪个阶段、哪个开局、哪种用时规则下崩盘。</span></p>
+          <div class="step-viz bars" aria-hidden="true">
+            <div class="bar"><span class="bar-l"><span lang="zh">开局</span></span><span class="bar-t"><i data-w="22"></i></span><span class="bar-v">0.4</span></div>
+            <div class="bar hot"><span class="bar-l"><span lang="zh">中局</span></span><span class="bar-t"><i data-w="78"></i></span><span class="bar-v">1.9</span></div>
+            <div class="bar"><span class="bar-l"><span lang="zh">残局</span></span><span class="bar-t"><i data-w="46"></i></span><span class="bar-v">0.9</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 Funktionen ─────────────────────────────────────────────────── -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <p class="eyebrow"><b>03</b> <span lang="zh">功能</span></p>
+
+      <div class="feature rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Insights</p>
+          <h3><span lang="zh">你的棋究竟坏在哪里</span></h3>
+          <p><span lang="zh">四个覆盖全部历史的分析页面，而不是每局给一个数字：棋力、按执棋方分开的开局、行为模式，以及失误集中的阶段。</span></p>
+          <ul class="ticks">
+            <li><span lang="zh">以月为跨度的准确率与失误率，而不是单局数据</span></li>
+            <li><span lang="zh">开局的胜负结果、偏离点与命中率</span></li>
+            <li><span lang="zh">行为模式：时间紧张、连场久战、复仇局</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/insights.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Insights"></button>
+          <figcaption>
+            <span lang="zh">Insights · 按对局阶段的准确率与失误</span>
+            <span><span lang="zh">1,483 局</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Repertoire · FSRS</p>
+          <h3><span lang="zh">真正记得住的开局库</span></h3>
+          <p><span lang="zh">你的开局库是一棵局面树，用 FSRS 间隔重复来复习，跟好用的记忆卡应用是同一套办法。每一着都有自己的间隔，到期复习每天早上出现在仪表盘上。</span></p>
+          <ul class="ticks">
+            <li><span lang="zh">把自己对局里的着法直接收进开局库</span></li>
+            <li><span lang="zh">按开局统计覆盖率，白方黑方分开</span></li>
+            <li><span lang="zh">连续天数和到期卡片，而不是没完没了地刷</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/repertoire.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Repertoire"></button>
+          <figcaption>
+            <span lang="zh">Repertoire · 执白与执黑的变例</span>
+            <span><span lang="zh">开局库 17 着 · 覆盖率 42 %</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature rv">
+        <div class="feature-text">
+          <p class="feature-kicker"><span lang="zh">战术题与残局</span></p>
+          <h3><span lang="zh">用你自己的失误做成的战术题</span></h3>
+          <p><span lang="zh">除了可离线使用的 Lichess 战术题库，Kiebitz 还会用你漏掉制胜着法的局面生成习题。另有精选残局，可与引擎对练，并可选用 Syzygy 残局库。</span></p>
+          <ul class="ticks">
+            <li><span lang="zh">战术题 Elo 与各主题命中率</span></li>
+            <li><span lang="zh">残局：升变、车残局、强制杀法</span></li>
+            <li><span lang="zh">全部可离线练习，无需联网</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/puzzles.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Puzzles"></button>
+          <figcaption>
+            <span lang="zh">Puzzles · 各主题命中率</span>
+            <span><span lang="zh">285 道来自自己对局的习题</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Study</p>
+          <h3><span lang="zh">从你的数据里长出来的训练计划</span></h3>
+          <p><span lang="zh">学习计划器从分析里读出你的弱点，给出今天该做什么：复习、一个战术主题、一个残局。既是每日清单，也是可自行调整顺序的周计划。</span></p>
+          <ul class="ticks">
+            <li><span lang="zh">建议都附带来自你对局的理由</span></li>
+            <li><span lang="zh">可拖放的周计划表</span></li>
+            <li><span lang="zh">提醒完全在设备本地产生</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/study.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Study"></button>
+          <figcaption>
+            <span lang="zh">Study · 教练建议与周计划</span>
+            <span><span lang="zh">每日目标与连续天数</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="more rv" style="margin-top:clamp(48px,6vw,84px)">
+        <div>
+          <h4><span lang="zh">仪表盘</span></h4>
+          <p><span lang="zh">等级分曲线、最近对局、到期复习和分析队列，一眼看全。</span></p>
+        </div>
+        <div>
+          <h4><span lang="zh">对局数据库</span></h4>
+          <p><span lang="zh">筛选、标签、按局和按着的笔记、局面检索、PGN 导入与导出。</span></p>
+        </div>
+        <div>
+          <h4><span lang="zh">实时分析</span></h4>
+          <p><span lang="zh">棋盘配引擎变着、着法质量、箭头，可选接入 chessdb.cn 开局库。</span></p>
+        </div>
+        <div>
+          <h4><span lang="zh">七种语言</span></h4>
+          <p><span lang="zh">德语、英语、法语、西班牙语、中文、印地语和阿拉伯语，应用和本网站都有，配一套用心打磨的深色主题。</span></p>
+        </div>
+        <div>
+          <h4><span lang="zh">Windows 与 Android</span></h4>
+          <p><span lang="zh">桌面端支持自动更新，Android 版按 ABI 提供原生 Stockfish。</span></p>
+        </div>
+        <div>
+          <h4><span lang="zh">源码可查阅</span></h4>
+          <p><span lang="zh">源码可见但不是开源：可以阅读和自行编译，不可再分发。</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 Sync ───────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow"><b>04</b> <span lang="zh">设备同步</span></p>
+      <div class="feature rv">
+        <div class="feature-text">
+          <h3><span lang="zh">两台设备，一个网络，中间什么都没有</span></h3>
+          <p><span lang="zh">桌面端是枢纽，手机通过二维码配对。之后两端加密后直接经由你的家庭网络或 VPN 同步；地址、配对码和证书指纹都在二维码里。中间没有服务器，因为根本就没有。</span></p>
+          <ul class="ticks">
+            <li><span lang="zh">路上用手机练，晚上回到桌面端分析</span></li>
+            <li><span lang="zh">摄像头只用于扫描二维码</span></li>
+            <li><span lang="zh">不配对时，每台设备都完全独立运行</span></li>
+          </ul>
+        </div>
+        <div class="sync-viz" aria-hidden="true">
+          <div class="device"><span>Desktop<br>Hub</span></div>
+          <div class="wire"><span class="wire-label">LAN · TLS</span></div>
+          <div class="device phone"><span>Android</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 05 Datenschutz ────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow"><b>05</b> <span lang="zh">隐私</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:28ch">
+
+
+
+
+        <span lang="zh">Kiebitz 会发送什么，不会发送什么。</span>
+
+
+      </h2>
+      <div class="privacy-grid rv">
+        <div>
+          <h4><span lang="zh">只有导入时才联网</span></h4>
+          <p><span lang="zh">导入对局时，Kiebitz 会带上你自己填写的用户名调用 chess.com 和 Lichess 的公开接口。</span></p>
+        </div>
+        <div>
+          <h4><span lang="zh">chessdb.cn 只在你愿意时启用</span></h4>
+          <p><span lang="zh">在线开局库是设置里的一个选项。关闭时，绝不会请求 chessdb.cn。</span></p>
+        </div>
+        <div>
+          <h4><span lang="zh">摄像头只为二维码</span></h4>
+          <p><span lang="zh">在 Android 上，只有当你扫描配对码时 Kiebitz 才会申请摄像头权限。不会保存或发送任何图像。</span></p>
+        </div>
+        <div class="no">
+          <h4><span lang="zh">开发者没有服务器</span></h4>
+          <p><span lang="zh">没有 Kiebitz 服务器，没有统计 SDK，没有广告标识符，没有自动崩溃报告，也没有账号。</span></p>
+        </div>
+      </div>
+      <p style="margin-top:26px">
+        <a class="btn btn-sm" href="privacy/index.html"><span lang="zh">完整隐私政策</span></a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── 06 Download ───────────────────────────────────────────────────── -->
+  <section class="section section-alt" id="download">
+    <div class="wrap">
+      <p class="eyebrow"><b>06</b> <span lang="zh">下载</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
+
+
+
+
+        <span lang="zh">下载测试版，直接开练。</span>
+
+
+      </h2>
+      <p class="lede" style="margin-top:16px">
+
+
+
+
+        <span lang="zh">Kiebitz 目前免费，无广告、无应用内购买。Windows 版可以直接下载，Android 版正在 Google Play 上进行封闭测试。两个版本也都作为附件挂在应用仓库的最新发布里。</span>
+
+
+      </p>
+      <div class="dl rv" style="margin-top:32px">
+        <article class="dl-card">
+          <h3>Windows</h3>
+          <p><span lang="zh">桌面安装包。内置原生 Stockfish，并会自动更新。</span></p>
+          <p class="dl-meta"><span lang="zh">安装包 · 自动更新</span></p>
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="zh">Windows 安装包</span>
+          </a>
+        </article>
+        <article class="dl-card">
+          <h3>Android</h3>
+          <p><span lang="zh">目前在 Google Play 上进行封闭测试，按 ABI 提供原生 Stockfish。不想参加测试的话，可以直接安装 APK。</span></p>
+          <p class="dl-meta"><span lang="zh">封闭测试 · APK · 局域网同步</span></p>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="zh">Android · 测试计划与 APK</span>
+          </a>
+        </article>
+      </div>
+      <p class="small" style="margin-top:22px">
+
+
+
+
+        <span lang="zh">测试版：功能仍在变动，个别粗糙之处在意料之中。欢迎在仓库里提交问题和需求：<a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>。</span>
+
+
+      </p>
+    </div>
+  </section>
+
+  <!-- ── 07 Feedback ─────────────────────────────────────────────────────── -->
+  <section class="section feedback-section" id="feedback">
+    <div class="wrap">
+      <p class="eyebrow"><b>07</b> <span lang="zh">反馈</span></p>
+      <div class="feedback-grid">
+        <div class="feedback-copy">
+          <h2>
+
+
+
+
+            <span lang="zh">把你注意到的告诉 Kiebitz。</span>
+
+
+          </h2>
+          <p class="lede">
+
+
+
+
+            <span lang="zh">无论是一句随手感受、一个可复现的崩溃，还是下一步的点子：每条反馈都直接送到开发者手上。</span>
+
+
+          </p>
+          <div class="feedback-notes" aria-label="说明">
+            <p><b>01</b><span><strong><span lang="zh">上下文很有用。</span></strong><span lang="zh">遇到问题时，请简单说明紧接着之前发生了什么。</span></span></p>
+            <p><b>02</b><span><strong><span lang="zh">回复是可选的。</span></strong><span lang="zh">不填邮箱，你的反馈就是匿名的。</span></span></p>
+            <p><b>03</b><span><strong><span lang="zh">没有遥测。</span></strong><span lang="zh">只发送你在这里亲手填写的内容。</span></span></p>
+          </div>
+        </div>
+
+        <details class="feedback-package rv">
+          <summary class="feedback-package-summary">
+            <span class="package-topline">
+              <span class="package-kicker"><span lang="zh">封缄的着法线</span></span>
+              <span class="package-address">kiebitz.chess@gmail.com</span>
+            </span>
+            <span class="package-main">
+              <span class="package-seal" aria-hidden="true"><img src="../assets/icon-128.png" width="44" height="44" alt=""></span>
+              <span class="package-copy">
+                <strong><span lang="zh">该你走了。</span></strong>
+                <span><span lang="zh">一步之内，把反馈、崩溃或功能想法直接寄给开发者。</span></span>
+              </span>
+              <span class="package-action">
+                <span data-package-open><span lang="zh">打开表单</span></span>
+                <span data-package-close><span lang="zh">收起表单</span></span>
+                <i aria-hidden="true">↘</i>
+              </span>
+            </span>
+            <span class="package-meta">
+              <span>f7 → inbox</span>
+              <span><span lang="zh">反馈 · 崩溃 · 需求</span></span>
+              <span><span lang="zh">无需账号 · 无遥测</span></span>
+            </span>
+          </summary>
+
+          <form class="feedback-form" action="https://formsubmit.co/kiebitz.chess@gmail.com" method="POST" data-feedback-form data-feedback-endpoint="https://formsubmit.co/ajax/kiebitz.chess@gmail.com">
+            <input type="hidden" name="_subject" value="Kiebitz · New feedback" data-feedback-subject>
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_url" value="https://torim98.github.io/kiebitz-site/#feedback">
+            <label class="honey" aria-hidden="true">Website<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+
+          <fieldset class="report-types">
+            <legend><span lang="zh">你想反馈什么？</span></legend>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Feedback" checked>
+              <span class="report-type-card">
+                <span class="report-type-n">01</span>
+                <span><b><span lang="zh">反馈</span></b><small><span lang="zh">感受或提示</span></small></span>
+              </span>
+            </label>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Crash report">
+              <span class="report-type-card">
+                <span class="report-type-n">02</span>
+                <span><b><span lang="zh">崩溃</span></b><small><span lang="zh">复现一个故障</span></small></span>
+              </span>
+            </label>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Feature request">
+              <span class="report-type-card">
+                <span class="report-type-n">03</span>
+                <span><b><span lang="zh">需求</span></b><small><span lang="zh">给 Kiebitz 的想法</span></small></span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="form-field">
+            <label for="feedback-title"><span lang="zh">简述</span></label>
+            <input id="feedback-title" name="summary" type="text" required maxlength="120" autocomplete="off" data-placeholder-zh="发生了什么，或者你希望有什么？">
+          </div>
+
+          <div class="form-field">
+            <span class="field-label">
+              <label for="feedback-message"><span lang="zh">详情</span></label>
+              <span class="field-count" data-feedback-count>0 / 4000</span>
+            </span>
+            <textarea id="feedback-message" name="message" required minlength="20" maxlength="4000" rows="6" data-placeholder-zh="尽量具体地描述操作步骤、你期望的行为，或者你的想法。"></textarea>
+            <span class="field-hint"><span lang="zh">请勿填入密码、私人对局或其他敏感数据。</span></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="feedback-platform"><span lang="zh">平台</span> <small><span lang="zh">选填</span></small></label>
+              <select id="feedback-platform" name="platform">
+                <option value="">—</option>
+                <option value="Windows">Windows</option>
+                <option value="Android">Android</option>
+                <option value="Website" data-label-zh="网站">Website</option>
+                <option value="Other" data-label-zh="其他">Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="feedback-version"><span lang="zh">应用版本</span> <small><span lang="zh">选填</span></small></label>
+              <input id="feedback-version" name="app_version" type="text" maxlength="40" autocomplete="off" data-placeholder-zh="例如 0.9.4">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="feedback-email"><span lang="zh">电子邮箱</span> <small><span lang="zh">选填 · 仅用于回复</span></small></label>
+            <input id="feedback-email" name="email" type="email" maxlength="160" autocomplete="email" placeholder="name@example.com">
+          </div>
+
+          <div class="form-submit">
+            <p>
+
+
+
+
+              <span lang="zh">提交后，你填写的内容会通过 FormSubmit 以电子邮件发送。<a href="privacy/index.html#c12">隐私说明</a>。</span>
+
+
+            </p>
+            <button class="btn btn-primary feedback-send" type="submit" data-feedback-send>
+              <span lang="zh">发送反馈</span>
+            </button>
+          </div>
+          <p class="form-status" data-feedback-status role="status" aria-live="polite"></p>
+          </form>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="flock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="foot-note" style="margin-top:8px">
+
+
+
+
+        <span lang="zh">步步高飞。面向 Windows 与 Android 的本地优先国际象棋助手。源码可见但非开源。Stockfish 采用 GPL-3.0 许可。</span>
+
+
+      </p>
+      <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#feedback"><span lang="zh">发送反馈</span></a>
+      <a href="privacy/index.html"><span lang="zh">隐私</span></a>
+      <a href="impressum/index.html"><span lang="zh">法律声明</span></a>
+      <a href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">Releases</a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="zh">源代码</span></a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ── Dialog: Android Closed Test ─────────────────────────────────────── -->
+<div class="modal" id="beta-android" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="beta-title" aria-describedby="beta-lede">
+    <div class="modal-head">
+      <span class="modal-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="9" width="14" height="10" rx="3"></rect>
+          <path d="M8.2 9 6.7 6.3M15.8 9l1.5-2.7"></path>
+          <circle cx="9.6" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
+          <circle cx="14.4" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
+        </svg>
+      </span>
+      <div class="modal-titles">
+        <p class="modal-eyebrow">Kiebitz</p>
+        <h2 id="beta-title">
+
+
+
+
+          <span lang="zh">Android 版正在封闭测试中</span>
+
+
+        </h2>
+      </div>
+      <button class="modal-x" type="button" data-beta-close data-aria="close" aria-label="Close">&#10005;</button>
+    </div>
+
+    <div class="modal-body">
+      <p class="modal-lede" id="beta-lede">
+
+
+
+
+        <span lang="zh">Windows 版现在就能下载。Android 应用正在 Google Play 上进行封闭测试，如果能多几位测试者我会非常感谢。参加只需三步：</span>
+
+
+      </p>
+
+      <ol class="steps">
+        <li>
+          <a class="step" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">1</span>
+            <span class="step-txt">
+              <b><span lang="zh">加入 Google 群组</span></b>
+              <span class="step-sub"><span lang="zh">加入群组即可为你的 Google 账号解锁测试。</span></span>
+              <span class="step-url">groups.google.com/g/kiebitz-beta-test</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a class="step" href="https://play.google.com/apps/testing/de.torim.kiebitz" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">2</span>
+            <span class="step-txt">
+              <b><span lang="zh">加入封闭测试</span></b>
+              <span class="step-sub"><span lang="zh">用第 1 步里的同一个 Google 账号确认加入。</span></span>
+              <span class="step-url">play.google.com/apps/testing/de.torim.kiebitz</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a class="step" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">3</span>
+            <span class="step-txt">
+              <b><span lang="zh">在 Android 上安装</span></b>
+              <span class="step-sub"><span lang="zh">打开 Play 商店页面并安装 Kiebitz。</span></span>
+              <span class="step-url">play.google.com/store/apps/details?id=de.torim.kiebitz</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+      </ol>
+
+      <p class="modal-note">
+
+
+
+        <span lang="zh">Google 要求测试者至少保持加入 14 天。当然，真正用一用这个应用并留下坦率的反馈会更有帮助。</span>
+
+
+      </p>
+    </div>
+
+    <div class="modal-foot">
+      <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+        <span lang="zh">改从 GitHub 获取 APK</span>
+      </a>
+      <a class="btn btn-primary" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
+        <span lang="zh">从第 1 步开始</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

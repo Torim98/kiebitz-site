@@ -1,52 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-lang="en" data-title-de="Kiebitz · Zug um Zugvogel. Local-first Schach-App für Windows und Android" data-title-en="Kiebitz · Moves take flight. A local-first chess app for Windows and Android" data-title-fr="Kiebitz · Coup d’aile. Une application d’échecs local-first pour Windows et Android" data-title-es="Kiebitz · Jugadas que vuelan. Una app de ajedrez local-first para Windows y Android" data-title-zh="Kiebitz · 步步高飞。面向 Windows 与 Android 的本地优先国际象棋应用" data-title-hi="Kiebitz · हर चाल, एक उड़ान। Windows और Android के लिए लोकल-फ़र्स्ट शतरंज ऐप" data-title-ar="Kiebitz · نقلة تُحلّق. تطبيق شطرنج محلي أولًا لنظامي Windows وAndroid">
+<html lang="en" dir="ltr" data-lang="en" data-page="home">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kiebitz · Moves take flight. A local-first chess app for Windows and Android</title>
-<meta name="description" content="Kiebitz importiert deine chess.com- und Lichess-Partien, analysiert sie mit einem nativen Stockfish und zeigt, wo du wirklich schlecht spielst. Kein Konto, keine Cloud, keine Telemetrie. · Kiebitz imports your chess.com and Lichess games, analyzes them with a native Stockfish and shows where your play breaks down. No account, no cloud, no telemetry. · Deutsch, English, Français, Español, 中文, हिन्दी, العربية.">
+<title>Kiebitz · Local-first chess analysis for Windows and Android</title>
+<meta name="description" content="Kiebitz imports your chess.com and Lichess games, analyzes them locally with Stockfish, and reveals your real strengths and weaknesses—without an account, cloud, or telemetry.">
 <meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://torim98.github.io/kiebitz-site/">
+<link rel="alternate" hreflang="de" href="https://torim98.github.io/kiebitz-site/de/">
+<link rel="alternate" hreflang="en" href="https://torim98.github.io/kiebitz-site/">
+<link rel="alternate" hreflang="fr" href="https://torim98.github.io/kiebitz-site/fr/">
+<link rel="alternate" hreflang="es" href="https://torim98.github.io/kiebitz-site/es/">
+<link rel="alternate" hreflang="zh-Hans" href="https://torim98.github.io/kiebitz-site/zh/">
+<link rel="alternate" hreflang="hi" href="https://torim98.github.io/kiebitz-site/hi/">
+<link rel="alternate" hreflang="ar" href="https://torim98.github.io/kiebitz-site/ar/">
+<link rel="alternate" hreflang="x-default" href="https://torim98.github.io/kiebitz-site/">
 <link rel="icon" href="assets/icon-128.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Kiebitz · Moves take flight">
-<meta property="og:description" content="Local-first chess companion for Windows and Android. Import, analyze, understand, all on your own devices.">
+<meta property="og:site_name" content="Kiebitz">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar">
+<meta property="og:title" content="Kiebitz · Local-first chess analysis for Windows and Android">
+<meta property="og:description" content="Kiebitz imports your chess.com and Lichess games, analyzes them locally with Stockfish, and reveals your real strengths and weaknesses—without an account, cloud, or telemetry.">
 <meta property="og:url" content="https://torim98.github.io/kiebitz-site/">
-<meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/icon.png">
+<meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kiebitz · Local-first chess analysis">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kiebitz · Local-first chess analysis for Windows and Android">
+<meta name="twitter:description" content="Kiebitz imports your chess.com and Lichess games, analyzes them locally with Stockfish, and reveals your real strengths and weaknesses—without an account, cloud, or telemetry.">
+<meta name="twitter:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Kiebitz",
+  "url": "https://torim98.github.io/kiebitz-site/",
+  "description": "Kiebitz imports your chess.com and Lichess games, analyzes them locally with Stockfish, and reveals your real strengths and weaknesses—without an account, cloud, or telemetry.",
+  "inLanguage": "en",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Windows, macOS, Linux, Android",
+  "softwareVersion": "0.8.0",
+  "isAccessibleForFree": true,
+  "downloadUrl": "https://github.com/Torim98/Kiebitz/releases/latest",
+  "installUrl": "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
+  "screenshot": [
+    "https://torim98.github.io/kiebitz-site/assets/shots/insights.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/repertoire.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/puzzles.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/study.png"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "sameAs": "https://github.com/Torim98/Kiebitz",
+  "license": "https://github.com/Torim98/Kiebitz/blob/main/LICENSE"
+}
+</script>
 <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
-<script>
-(function () {
-  var LANGS = { de: 1, en: 1, fr: 1, es: 1, zh: 1, hi: 1, ar: 1 };
-  var TAG = { de: "de", en: "en", fr: "fr", es: "es", zh: "zh-Hans", hi: "hi", ar: "ar" };
-  var l = "en";
-  try {
-    var s = localStorage.getItem("kiebitz-lang");
-    if (s && LANGS[s]) {
-      l = s;
-    } else {
-      var list = navigator.languages && navigator.languages.length
-        ? navigator.languages
-        : [navigator.language || ""];
-      for (var i = 0; i < list.length; i++) {
-        var c = String(list[i]).toLowerCase().split("-")[0];
-        if (LANGS[c]) { l = c; break; }
-      }
-    }
-  } catch (e) { /* egal */ }
-  var d = document.documentElement;
-  d.setAttribute("data-lang", l);
-  d.setAttribute("lang", TAG[l]);
-  d.setAttribute("dir", l === "ar" ? "rtl" : "ltr");
-  try {
-    var m = localStorage.getItem("kiebitz-motion");
-    if (m === "on" || m === "off") d.setAttribute("data-motion", m);
-  } catch (e) { /* egal */ }
-})();
-</script>
 </head>
 <body>
-<a class="skip" href="#main"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span><span lang="fr">Aller au contenu</span><span lang="es">Ir al contenido</span><span lang="zh">跳到主要内容</span><span lang="hi">सामग्री पर जाएँ</span><span lang="ar">تخطَّ إلى المحتوى</span></a>
+<a class="skip" href="#main"><span lang="en">Skip to content</span></a>
 
 <header class="top">
   <div class="wrap top-in">
@@ -54,22 +79,22 @@
       <img src="assets/icon-128.png" width="30" height="30" alt="">
       <span>
         <span class="mark-name">Kiebitz</span>
-        <span class="mark-tag"><span lang="de">Zug um Zugvogel</span><span lang="en">Moves take flight</span><span lang="fr">Coup d’aile</span><span lang="es">Jugadas que vuelan</span><span lang="zh">步步高飞</span><span lang="hi">हर चाल, एक उड़ान</span><span lang="ar">نقلة تُحلّق</span></span>
+        <span class="mark-tag"><span lang="en">Moves take flight</span></span>
       </span>
     </a>
     <nav class="top-nav" aria-label="Kiebitz">
-      <a href="#features"><span lang="de">Funktionen</span><span lang="en">Features</span><span lang="fr">Fonctions</span><span lang="es">Funciones</span><span lang="zh">功能</span><span lang="hi">विशेषताएँ</span><span lang="ar">المزايا</span></a>
-      <a href="#local"><span lang="de">Local-first</span><span lang="en">Local-first</span><span lang="fr">Local-first</span><span lang="es">Local-first</span><span lang="zh">本地优先</span><span lang="hi">लोकल-फ़र्स्ट</span><span lang="ar">محلي أولًا</span></a>
-      <a href="#download"><span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></a>
-      <a href="#feedback"><span lang="de">Feedback</span><span lang="en">Feedback</span><span lang="fr">Retours</span><span lang="es">Comentarios</span><span lang="zh">反馈</span><span lang="hi">फ़ीडबैक</span><span lang="ar">الملاحظات</span></a>
-      <a href="privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="#features"><span lang="en">Features</span></a>
+      <a href="#local"><span lang="en">Local-first</span></a>
+      <a href="#download"><span lang="en">Download</span></a>
+      <a href="#feedback"><span lang="en">Feedback</span></a>
+      <a href="privacy/index.html"><span lang="en">Privacy</span></a>
     </nav>
     <div class="lang">
       <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
         <circle cx="12" cy="12" r="9"></circle>
         <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
       </svg>
-      <select class="lang-select" data-lang-select aria-label="Sprache · Language · Langue · Idioma · 语言 · भाषा · اللغة">
+      <select class="lang-select" data-lang-select aria-label="Language">
         <option value="de">Deutsch</option>
         <option value="en">English</option>
         <option value="fr">Français</option>
@@ -80,7 +105,7 @@
       </select>
     </div>
     <a class="btn btn-primary btn-sm" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
-      <span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Télécharger</span><span lang="es">Descargar</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">تنزيل</span>
+      <span lang="en">Download</span>
     </a>
   </div>
 </header>
@@ -91,32 +116,32 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="de">Beta · offener Test</span><span lang="en">Beta · early access</span><span lang="fr">Bêta · accès anticipé</span><span lang="es">Beta · acceso anticipado</span><span lang="zh">测试版 · 早期体验</span><span lang="hi">बीटा · अर्ली एक्सेस</span><span lang="ar">نسخة تجريبية · وصول مبكر</span></p>
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="en">Beta · early access</span></p>
         <h1>
-          <span lang="de">Kiebitz <span class="flight">kiebitzt</span> bei deinen Partien.</span>
+
           <span lang="en">Kiebitz <span class="flight">looks over</span> your shoulder.</span>
-          <span lang="fr">Kiebitz <span class="flight">regarde</span> par-dessus votre épaule.</span>
-          <span lang="es">Kiebitz <span class="flight">mira</span> por encima de tu hombro.</span>
-          <span lang="zh">Kiebitz 在你身后<span class="flight">观棋</span>。</span>
-          <span lang="hi">Kiebitz आपके कंधे के ऊपर से <span class="flight">देखता</span> है।</span>
-          <span lang="ar">يراقب Kiebitz مبارياتك <span class="flight">من فوق كتفك</span>.</span>
+
+
+
+
+
         </h1>
-        <p class="hero-sub" lang="de">Ein Kiebitz ist ein Vogel, und im Deutschen der Zuschauer, der beim Spiel über die Schulter sieht. Diese App importiert deine Partien von chess.com und Lichess, lässt einen nativen Stockfish durch die ganze Historie laufen und sagt dir, wo du wirklich schlecht spielst. <strong>Alles bleibt auf deinen Geräten.</strong></p>
+
         <p class="hero-sub" lang="en">A <i>Kiebitz</i> is a bird, and in German the onlooker who watches your game over your shoulder. This app imports your chess.com and Lichess games, runs a native Stockfish across your whole history and tells you where you lose games, not where you think you do. <strong>Everything stays on your own devices.</strong></p>
-        <p class="hero-sub" lang="fr">Un <i>Kiebitz</i> est un vanneau, et en allemand le curieux qui suit la partie par-dessus votre épaule. Cette application importe vos parties de chess.com et de Lichess, fait passer un Stockfish natif sur tout votre historique et vous dit où vous perdez vraiment, pas où vous croyez perdre. <strong>Tout reste sur vos appareils.</strong></p>
-        <p class="hero-sub" lang="es">Un <i>Kiebitz</i> es una avefría y, en alemán, el mirón que sigue la partida por encima de tu hombro. Esta app importa tus partidas de chess.com y Lichess, pasa un Stockfish nativo por todo tu historial y te dice dónde pierdes de verdad, no dónde crees que pierdes. <strong>Todo se queda en tus dispositivos.</strong></p>
-        <p class="hero-sub" lang="zh"><i>Kiebitz</i> 是一种鸟，在德语里也指在旁边看棋的人。这款应用会导入你在 chess.com 和 Lichess 上的对局，用原生 Stockfish 跑完整个对局历史，告诉你棋究竟坏在哪里，而不是你以为的地方。<strong>所有数据都留在你自己的设备上。</strong></p>
-        <p class="hero-sub" lang="hi"><i>Kiebitz</i> एक पक्षी है, और जर्मन में वह दर्शक भी जो कंधे के ऊपर से खेल देखता है। यह ऐप chess.com और Lichess से आपकी बाज़ियाँ आयात करता है, पूरे इतिहास पर नेटिव Stockfish चलाता है और बताता है कि आप असल में कहाँ बाज़ी गँवाते हैं — वहाँ नहीं जहाँ आप समझते हैं। <strong>सब कुछ आपके अपने उपकरणों पर रहता है।</strong></p>
-        <p class="hero-sub" lang="ar">‏<i>Kiebitz</i> طائر القَطقاط، وهو بالألمانية أيضًا المتفرّج الذي يتابع المباراة من فوق كتفك. يستورد هذا التطبيق مبارياتك من chess.com وLichess، ويشغّل محرّك Stockfish أصليًا على تاريخك كاملًا، ويخبرك أين تخسر فعلًا لا أين تظن أنك تخسر. <strong>كل شيء يبقى على أجهزتك.</strong></p>
+
+
+
+
+
         <div class="cta">
           <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
-            <span lang="de">Für Windows laden</span><span lang="en">Get it for Windows</span><span lang="fr">Télécharger pour Windows</span><span lang="es">Descargar para Windows</span><span lang="zh">下载 Windows 版</span><span lang="hi">Windows के लिए पाएँ</span><span lang="ar">التنزيل لنظام Windows</span>
+            <span lang="en">Get it for Windows</span>
           </a>
           <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
-            <span lang="de">Android (Beta-Test)</span><span lang="en">Android (beta test)</span><span lang="fr">Android (test bêta)</span><span lang="es">Android (prueba beta)</span><span lang="zh">Android（测试计划）</span><span lang="hi">Android (बीटा टेस्ट)</span><span lang="ar">‏Android (اختبار تجريبي)</span>
+            <span lang="en">Android (beta test)</span>
           </a>
         </div>
-        <p class="cta-note"><span lang="de">Kostenlos · Windows über GitHub · Android im geschlossenen Test</span><span lang="en">Free · Windows via GitHub · Android in closed testing</span><span lang="fr">Gratuit · Windows via GitHub · Android en test fermé</span><span lang="es">Gratis · Windows en GitHub · Android en prueba cerrada</span><span lang="zh">免费 · Windows 通过 GitHub · Android 封闭测试中</span><span lang="hi">मुफ़्त · Windows GitHub से · Android क्लोज़्ड टेस्ट में</span><span lang="ar">مجاني · ‏Windows عبر GitHub · ‏Android في اختبار مغلق</span></p>
+        <p class="cta-note"><span lang="en">Free · Windows via GitHub · Android in closed testing</span></p>
       </div>
 
       <div class="board-card" aria-hidden="true">
@@ -130,8 +155,8 @@
         </div>
         <div class="board-coords"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
         <div class="board-foot">
-          <span class="pill"><span lang="de">Stockfish · nativ</span><span lang="en">Stockfish · native</span><span lang="fr">Stockfish · natif</span><span lang="es">Stockfish · nativo</span><span lang="zh">Stockfish · 原生</span><span lang="hi">Stockfish · नेटिव</span><span lang="ar">Stockfish · أصلي</span></span>
-          <span><span lang="de">Die Analyse läuft auf deinem Gerät.</span><span lang="en">Analysis runs on your device.</span><span lang="fr">L’analyse tourne sur votre appareil.</span><span lang="es">El análisis se ejecuta en tu dispositivo.</span><span lang="zh">分析在你的设备上运行。</span><span lang="hi">विश्लेषण आपके डिवाइस पर चलता है।</span><span lang="ar">يجري التحليل على جهازك.</span></span>
+          <span class="pill"><span lang="en">Stockfish · native</span></span>
+          <span><span lang="en">Analysis runs on your device.</span></span>
         </div>
       </div>
     </div>
@@ -142,41 +167,41 @@
     <div class="band-grid" aria-hidden="true"></div>
     <div class="wrap band-in rv">
       <div class="band-text">
-        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="de">Closed Beta · Google Play</span><span lang="en">Closed beta · Google Play</span><span lang="fr">Bêta fermée · Google Play</span><span lang="es">Beta cerrada · Google Play</span><span lang="zh">封闭测试 · Google Play</span><span lang="hi">क्लोज़्ड बीटा · Google Play</span><span lang="ar">اختبار مغلق · Google Play</span></p>
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="en">Closed beta · Google Play</span></p>
         <h2 id="band-title">
-          <span lang="de">Kiebitz zieht auf Android ein und sucht Tester.</span>
+
           <span lang="en">Kiebitz is moving to Android and needs testers.</span>
-          <span lang="fr">Kiebitz s’installe sur Android et cherche des testeurs.</span>
-          <span lang="es">Kiebitz llega a Android y busca personas que lo prueben.</span>
-          <span lang="zh">Kiebitz 正登陆 Android，招募测试者。</span>
-          <span lang="hi">Kiebitz Android पर आ रहा है और टेस्टर ढूँढ़ रहा है।</span>
-          <span lang="ar">ينتقل Kiebitz إلى Android ويبحث عن مختبِرين.</span>
+
+
+
+
+
         </h2>
         <p class="band-sub">
-          <span lang="de">Für Windows kannst du Kiebitz schon laden. Für Android läuft gerade ein geschlossener Test bei Google Play, und über ein paar zusätzliche Tester würde ich mich sehr freuen. Der Weg dorthin sind drei Züge.</span>
+
           <span lang="en">You can already download Kiebitz for Windows. For Android a closed test is currently running on Google Play, and I would be very grateful for a few more testers. Getting there takes three moves.</span>
-          <span lang="fr">Kiebitz est déjà téléchargeable pour Windows. Pour Android, un test fermé est en cours sur Google Play, et quelques testeurs de plus me feraient très plaisir. Il y faut trois coups.</span>
-          <span lang="es">Kiebitz ya se puede descargar para Windows. Para Android hay una prueba cerrada en marcha en Google Play, y agradecería mucho unas cuantas personas más. Son tres jugadas.</span>
-          <span lang="zh">Windows 版现在就能下载。Android 版正在 Google Play 上进行封闭测试，如果能多几位测试者我会非常感谢。加入只需三步棋。</span>
-          <span lang="hi">Windows के लिए Kiebitz अभी डाउनलोड किया जा सकता है। Android के लिए Google Play पर एक क्लोज़्ड टेस्ट चल रहा है, और कुछ और टेस्टर मिलें तो बहुत अच्छा हो। इसमें तीन चालें लगती हैं।</span>
-          <span lang="ar">يمكنك تنزيل Kiebitz لنظام Windows الآن. أما على Android فيجري اختبار مغلق على Google Play، وسأكون ممتنًا جدًا لبضعة مختبِرين إضافيين. الطريق إلى ذلك ثلاث نقلات.</span>
+
+
+
+
+
         </p>
         <div class="band-cta">
           <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
-            <span lang="de">Tester werden</span><span lang="en">Become a tester</span><span lang="fr">Devenir testeur</span><span lang="es">Quiero probarlo</span><span lang="zh">成为测试者</span><span lang="hi">टेस्टर बनें</span><span lang="ar">كن مختبِرًا</span>
+            <span lang="en">Become a tester</span>
           </a>
           <a class="band-alt" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
-            <span lang="de">oder direkt die APK</span><span lang="en">or just the APK</span><span lang="fr">ou simplement l’APK</span><span lang="es">o solo el APK</span><span lang="zh">或者直接下载 APK</span><span lang="hi">या सीधे APK लें</span><span lang="ar">أو ملف APK مباشرة</span>
+            <span lang="en">or just the APK</span>
           </a>
         </div>
         <p class="band-note">
-          <span lang="de">Google verlangt 14 Tage Teilnahme. Ehrliches Feedback ist mir lieber als stilles Dabeisein.</span>
+
           <span lang="en">Google asks testers to stay in for 14 days. Honest feedback beats quiet participation.</span>
-          <span lang="fr">Google demande 14 jours de participation. Un retour honnête vaut mieux qu’une présence silencieuse.</span>
-          <span lang="es">Google pide 14 días de participación. Prefiero comentarios sinceros a una presencia silenciosa.</span>
-          <span lang="zh">Google 要求测试者参与满 14 天。比起默默挂着，我更希望收到坦率的反馈。</span>
-          <span lang="hi">Google 14 दिन तक भागीदारी माँगता है। चुपचाप जुड़े रहने से बेहतर है ईमानदार फ़ीडबैक।</span>
-          <span lang="ar">تشترط Google بقاء المختبِرين 14 يومًا. الملاحظات الصريحة أفضل عندي من مشاركة صامتة.</span>
+
+
+
+
+
         </p>
       </div>
 
@@ -184,22 +209,22 @@
         <li>
           <span class="route-n">1</span>
           <span class="route-txt">
-            <b><span lang="de">Der Google-Gruppe beitreten</span><span lang="en">Join the Google Group</span><span lang="fr">Rejoindre le groupe Google</span><span lang="es">Únete al grupo de Google</span><span lang="zh">加入 Google 群组</span><span lang="hi">Google ग्रुप से जुड़ें</span><span lang="ar">انضم إلى مجموعة Google</span></b>
-            <span><span lang="de">Schaltet den Test für dein Konto frei</span><span lang="en">Unlocks the test for your account</span><span lang="fr">Débloque le test pour votre compte</span><span lang="es">Habilita la prueba en tu cuenta</span><span lang="zh">为你的账号解锁测试</span><span lang="hi">आपके खाते के लिए टेस्ट खोलता है</span><span lang="ar">يفتح الاختبار لحسابك</span></span>
+            <b><span lang="en">Join the Google Group</span></b>
+            <span><span lang="en">Unlocks the test for your account</span></span>
           </span>
         </li>
         <li>
           <span class="route-n">2</span>
           <span class="route-txt">
-            <b><span lang="de">Dem geschlossenen Test beitreten</span><span lang="en">Join the closed test</span><span lang="fr">Rejoindre le test fermé</span><span lang="es">Únete a la prueba cerrada</span><span lang="zh">加入封闭测试</span><span lang="hi">क्लोज़्ड टेस्ट में शामिल हों</span><span lang="ar">انضم إلى الاختبار المغلق</span></b>
-            <span><span lang="de">Opt-in mit demselben Google-Konto</span><span lang="en">Opt in with the same Google account</span><span lang="fr">Inscrivez-vous avec le même compte Google</span><span lang="es">Acepta con la misma cuenta de Google</span><span lang="zh">用同一个 Google 账号确认加入</span><span lang="hi">उसी Google खाते से ऑप्ट-इन करें</span><span lang="ar">اشترك بالحساب نفسه على Google</span></span>
+            <b><span lang="en">Join the closed test</span></b>
+            <span><span lang="en">Opt in with the same Google account</span></span>
           </span>
         </li>
         <li>
           <span class="route-n">3</span>
           <span class="route-txt">
-            <b><span lang="de">Aus dem Play Store installieren</span><span lang="en">Install from the Play Store</span><span lang="fr">Installer depuis le Play Store</span><span lang="es">Instala desde Play Store</span><span lang="zh">从 Play 商店安装</span><span lang="hi">Play Store से इंस्टॉल करें</span><span lang="ar">ثبّته من متجر Play</span></b>
-            <span><span lang="de">Danach aktualisiert sich Kiebitz von selbst</span><span lang="en">From then on Kiebitz updates itself</span><span lang="fr">Ensuite, Kiebitz se met à jour tout seul</span><span lang="es">A partir de ahí Kiebitz se actualiza solo</span><span lang="zh">之后 Kiebitz 会自动更新</span><span lang="hi">उसके बाद Kiebitz खुद अपडेट होता रहेगा</span><span lang="ar">بعدها يحدّث Kiebitz نفسه تلقائيًا</span></span>
+            <b><span lang="en">Install from the Play Store</span></b>
+            <span><span lang="en">From then on Kiebitz updates itself</span></span>
           </span>
         </li>
       </ol>
@@ -209,41 +234,41 @@
   <!-- ── 01 Local-first ────────────────────────────────────────────────── -->
   <section class="section" id="local">
     <div class="wrap">
-      <p class="eyebrow"><b>01</b> <span lang="de">Local-first</span><span lang="en">Local-first</span><span lang="fr">Local-first</span><span lang="es">Local-first</span><span lang="zh">本地优先</span><span lang="hi">लोकल-फ़र्स्ट</span><span lang="ar">محلي أولًا</span></p>
+      <p class="eyebrow"><b>01</b> <span lang="en">Local-first</span></p>
       <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
-        <span lang="de">Deine Partien sind deine Partien.</span>
+
         <span lang="en">Your games are your games.</span>
-        <span lang="fr">Vos parties sont vos parties.</span>
-        <span lang="es">Tus partidas son tuyas.</span>
-        <span lang="zh">你的对局，就是你的对局。</span>
-        <span lang="hi">आपकी बाज़ियाँ आपकी हैं।</span>
-        <span lang="ar">مبارياتك مبارياتك وحدك.</span>
+
+
+
+
+
       </h2>
       <p class="lede" style="margin-top:18px">
-        <span lang="de">Kiebitz hat keinen Server. Es gibt nichts, wo du dich einloggen musst, nichts, was hochgeladen wird, und keine Analyse, die woanders passiert. Die Datenbank ist eine SQLite-Datei auf deinem Rechner.</span>
+
         <span lang="en">Kiebitz has no server. There is nothing to log into, nothing that gets uploaded, and no analysis that happens somewhere else. The database is a SQLite file on your own machine.</span>
-        <span lang="fr">Kiebitz n’a pas de serveur. Rien où se connecter, rien qui soit téléversé, aucune analyse qui se ferait ailleurs. La base de données est un fichier SQLite sur votre machine.</span>
-        <span lang="es">Kiebitz no tiene servidor. No hay nada donde iniciar sesión, nada que se suba y ningún análisis que ocurra en otro sitio. La base de datos es un archivo SQLite en tu propio equipo.</span>
-        <span lang="zh">Kiebitz 没有服务器。没有需要登录的地方，没有上传，也没有在别处进行的分析。数据库就是你电脑上的一个 SQLite 文件。</span>
-        <span lang="hi">Kiebitz का कोई सर्वर नहीं है। न कहीं लॉग-इन करना है, न कुछ अपलोड होता है, न विश्लेषण कहीं और होता है। डेटाबेस आपके अपने कंप्यूटर पर एक SQLite फ़ाइल है।</span>
-        <span lang="ar">لا يملك Kiebitz خادمًا. لا شيء تسجّل الدخول إليه، ولا شيء يُرفَع، ولا تحليل يجري في مكان آخر. قاعدة البيانات ملف SQLite على جهازك.</span>
+
+
+
+
+
       </p>
       <dl class="promise rv" style="margin-top:32px">
         <div>
-          <dt><span lang="de">Kein Konto</span><span lang="en">No account</span><span lang="fr">Pas de compte</span><span lang="es">Sin cuenta</span><span lang="zh">无需账号</span><span lang="hi">कोई खाता नहीं</span><span lang="ar">بلا حساب</span></dt>
-          <dd><span lang="de">Keine Registrierung, keine E-Mail, kein Login.</span><span lang="en">No sign-up, no email, no login.</span><span lang="fr">Pas d’inscription, pas d’e-mail, pas de connexion.</span><span lang="es">Sin registro, sin correo, sin inicio de sesión.</span><span lang="zh">不注册、不留邮箱、不登录。</span><span lang="hi">न रजिस्ट्रेशन, न ई-मेल, न लॉग-इन।</span><span lang="ar">لا تسجيل ولا بريد إلكتروني ولا ولوج.</span></dd>
+          <dt><span lang="en">No account</span></dt>
+          <dd><span lang="en">No sign-up, no email, no login.</span></dd>
         </div>
         <div>
-          <dt><span lang="de">Keine Cloud</span><span lang="en">No cloud</span><span lang="fr">Pas de cloud</span><span lang="es">Sin nube</span><span lang="zh">无云端</span><span lang="hi">कोई क्लाउड नहीं</span><span lang="ar">بلا سحابة</span></dt>
-          <dd><span lang="de">Partien, Analysen und Fortschritt liegen lokal.</span><span lang="en">Games, analyses and progress stay local.</span><span lang="fr">Parties, analyses et progression restent en local.</span><span lang="es">Partidas, análisis y progreso se quedan en local.</span><span lang="zh">对局、分析和进度都留在本地。</span><span lang="hi">बाज़ियाँ, विश्लेषण और प्रगति स्थानीय रहते हैं।</span><span lang="ar">المباريات والتحليلات والتقدّم تبقى محليًا.</span></dd>
+          <dt><span lang="en">No cloud</span></dt>
+          <dd><span lang="en">Games, analyses and progress stay local.</span></dd>
         </div>
         <div>
-          <dt><span lang="de">Keine Telemetrie</span><span lang="en">No telemetry</span><span lang="fr">Pas de télémétrie</span><span lang="es">Sin telemetría</span><span lang="zh">无遥测</span><span lang="hi">कोई टेलीमेट्री नहीं</span><span lang="ar">بلا قياس عن بُعد</span></dt>
-          <dd><span lang="de">Kein Tracking, keine Werbung, keine Absturzberichte.</span><span lang="en">No tracking, no ads, no crash reports.</span><span lang="fr">Pas de pistage, pas de publicité, pas de rapports de plantage.</span><span lang="es">Sin rastreo, sin anuncios, sin informes de fallos.</span><span lang="zh">不追踪、无广告、不发崩溃报告。</span><span lang="hi">न ट्रैकिंग, न विज्ञापन, न क्रैश रिपोर्ट।</span><span lang="ar">لا تتبُّع ولا إعلانات ولا تقارير أعطال.</span></dd>
+          <dt><span lang="en">No telemetry</span></dt>
+          <dd><span lang="en">No tracking, no ads, no crash reports.</span></dd>
         </div>
         <div>
-          <dt><span lang="de">Sync im eigenen Netz</span><span lang="en">Sync on your own network</span><span lang="fr">Sync sur votre réseau</span><span lang="es">Sync en tu propia red</span><span lang="zh">在自家网络内同步</span><span lang="hi">अपने ही नेटवर्क में सिंक</span><span lang="ar">مزامنة داخل شبكتك</span></dt>
-          <dd><span lang="de">Handy und Desktop reden verschlüsselt direkt miteinander.</span><span lang="en">Phone and desktop talk to each other directly, encrypted.</span><span lang="fr">Le téléphone et l’ordinateur se parlent directement, chiffrés.</span><span lang="es">El móvil y el escritorio hablan entre sí directamente y cifrados.</span><span lang="zh">手机和桌面端加密后直接通信。</span><span lang="hi">फ़ोन और डेस्कटॉप सीधे, एन्क्रिप्टेड बात करते हैं।</span><span lang="ar">يتواصل الهاتف والحاسوب مباشرة وبتشفير.</span></dd>
+          <dt><span lang="en">Sync on your own network</span></dt>
+          <dd><span lang="en">Phone and desktop talk to each other directly, encrypted.</span></dd>
         </div>
       </dl>
     </div>
@@ -252,21 +277,21 @@
   <!-- ── 02 Ablauf ─────────────────────────────────────────────────────── -->
   <section class="section section-alt">
     <div class="wrap">
-      <p class="eyebrow"><b>02</b> <span lang="de">Ablauf</span><span lang="en">How it works</span><span lang="fr">Déroulé</span><span lang="es">Cómo funciona</span><span lang="zh">使用流程</span><span lang="hi">यह कैसे काम करता है</span><span lang="ar">آلية العمل</span></p>
+      <p class="eyebrow"><b>02</b> <span lang="en">How it works</span></p>
       <h2 style="font-size:clamp(24px,3vw,36px);max-width:24ch">
-        <span lang="de">Importieren, analysieren, verstehen.</span>
+
         <span lang="en">Import, analyze, understand.</span>
-        <span lang="fr">Importer, analyser, comprendre.</span>
-        <span lang="es">Importar, analizar, entender.</span>
-        <span lang="zh">导入、分析、看懂。</span>
-        <span lang="hi">आयात करें, विश्लेषण करें, समझें।</span>
-        <span lang="ar">استورد، حلّل، افهم.</span>
+
+
+
+
+
       </h2>
       <div class="flow rv" style="margin-top:34px">
         <article class="step">
           <p class="step-n">01</p>
-          <h3><span lang="de">Importieren</span><span lang="en">Import</span><span lang="fr">Importer</span><span lang="es">Importar</span><span lang="zh">导入</span><span lang="hi">आयात</span><span lang="ar">الاستيراد</span></h3>
-          <p><span lang="de">Benutzername eintragen, fertig. Kiebitz holt die komplette Historie: duplikatsicher, auch als PGN für Brettpartien.</span><span lang="en">Enter your username, that’s it. Kiebitz pulls your whole history: duplicate-safe, and PGN for over-the-board games.</span><span lang="fr">Saisissez votre pseudo, c’est tout. Kiebitz récupère tout l’historique, sans doublons, et accepte le PGN pour les parties sur échiquier.</span><span lang="es">Escribe tu nombre de usuario y listo. Kiebitz trae todo el historial, sin duplicados, y acepta PGN para las partidas sobre el tablero.</span><span lang="zh">填上用户名就行。Kiebitz 会取回完整历史，自动去重，也支持 PGN 导入实地对局。</span><span lang="hi">यूज़रनेम डालिए, बस। Kiebitz पूरा इतिहास ले आता है — बिना डुप्लिकेट, और बोर्ड पर खेली बाज़ियों के लिए PGN भी।</span><span lang="ar">أدخل اسم المستخدم، وهذا كل شيء. يجلب Kiebitz تاريخك كاملًا دون تكرار، ويقبل ملفات PGN لمباريات الرقعة.</span></p>
+          <h3><span lang="en">Import</span></h3>
+          <p><span lang="en">Enter your username, that’s it. Kiebitz pulls your whole history: duplicate-safe, and PGN for over-the-board games.</span></p>
           <div class="step-viz srcrow">
             <span class="srcpill cc">chess.com</span>
             <span class="srcpill li">lichess</span>
@@ -275,8 +300,8 @@
         </article>
         <article class="step">
           <p class="step-n">02</p>
-          <h3><span lang="de">Analysieren</span><span lang="en">Analyze</span><span lang="fr">Analyser</span><span lang="es">Analizar</span><span lang="zh">分析</span><span lang="hi">विश्लेषण</span><span lang="ar">التحليل</span></h3>
-          <p><span lang="de">Ein nativer Stockfish arbeitet die Warteschlange im Hintergrund ab: Bewertung pro Zug, Ungenauigkeit, Fehler, Blunder, Genauigkeit.</span><span lang="en">A native Stockfish works through the queue in the background: eval per move, inaccuracy, mistake, blunder, accuracy.</span><span lang="fr">Un Stockfish natif traite la file d’attente en arrière-plan : évaluation par coup, imprécision, erreur, gaffe, précision.</span><span lang="es">Un Stockfish nativo procesa la cola en segundo plano: evaluación por jugada, imprecisión, error, error grave, precisión.</span><span lang="zh">原生 Stockfish 在后台处理队列：逐着评分，标出不精确、失误、严重失误与准确率。</span><span lang="hi">नेटिव Stockfish पृष्ठभूमि में कतार निपटाता है: हर चाल का मूल्यांकन, अशुद्धि, ग़लती, ब्लंडर, सटीकता।</span><span lang="ar">يعالج محرّك Stockfish أصلي قائمة الانتظار في الخلفية: تقييم لكل نقلة، وعدم دقة، وخطأ، وخطأ فادح، ونسبة دقة.</span></p>
+          <h3><span lang="en">Analyze</span></h3>
+          <p><span lang="en">A native Stockfish works through the queue in the background: eval per move, inaccuracy, mistake, blunder, accuracy.</span></p>
           <div class="step-viz">
             <div class="evalbar" aria-hidden="true"><span class="w" style="width:52%"></span><span class="b"></span></div>
             <div class="evalticks" aria-hidden="true"><span>1. e4</span><span class="bad">24. Nf3?? −3.1</span><span>41. Kg2</span></div>
@@ -284,12 +309,12 @@
         </article>
         <article class="step">
           <p class="step-n">03</p>
-          <h3><span lang="de">Verstehen</span><span lang="en">Understand</span><span lang="fr">Comprendre</span><span lang="es">Entender</span><span lang="zh">看懂</span><span lang="hi">समझें</span><span lang="ar">الفهم</span></h3>
-          <p><span lang="de">Nicht „gut gespielt“, sondern: in welcher Phase, in welcher Eröffnung, unter welcher Bedenkzeit es kippt.</span><span lang="en">Not “well played”, but: which phase, which opening, which time control is where it falls apart.</span><span lang="fr">Pas « bien joué », mais : à quelle phase, dans quelle ouverture, sous quelle cadence ça bascule.</span><span lang="es">No «bien jugado», sino: en qué fase, en qué apertura y con qué ritmo se te viene abajo.</span><span lang="zh">不是“下得不错”，而是：在哪个阶段、哪个开局、哪种用时规则下崩盘。</span><span lang="hi">“अच्छा खेले” नहीं, बल्कि: किस चरण में, किस ओपनिंग में, किस टाइम कंट्रोल में बात बिगड़ती है।</span><span lang="ar">ليس «أحسنتَ اللعب»، بل: في أي طور، وفي أي افتتاح، وتحت أي توقيت ينهار أداؤك.</span></p>
+          <h3><span lang="en">Understand</span></h3>
+          <p><span lang="en">Not “well played”, but: which phase, which opening, which time control is where it falls apart.</span></p>
           <div class="step-viz bars" aria-hidden="true">
-            <div class="bar"><span class="bar-l"><span lang="de">Eröffnung</span><span lang="en">Opening</span><span lang="fr">Ouverture</span><span lang="es">Apertura</span><span lang="zh">开局</span><span lang="hi">ओपनिंग</span><span lang="ar">الافتتاح</span></span><span class="bar-t"><i data-w="22"></i></span><span class="bar-v">0.4</span></div>
-            <div class="bar hot"><span class="bar-l"><span lang="de">Mittelspiel</span><span lang="en">Middlegame</span><span lang="fr">Milieu de partie</span><span lang="es">Medio juego</span><span lang="zh">中局</span><span lang="hi">मध्य खेल</span><span lang="ar">وسط المباراة</span></span><span class="bar-t"><i data-w="78"></i></span><span class="bar-v">1.9</span></div>
-            <div class="bar"><span class="bar-l"><span lang="de">Endspiel</span><span lang="en">Endgame</span><span lang="fr">Finale</span><span lang="es">Final</span><span lang="zh">残局</span><span lang="hi">अंतिम खेल</span><span lang="ar">نهاية المباراة</span></span><span class="bar-t"><i data-w="46"></i></span><span class="bar-v">0.9</span></div>
+            <div class="bar"><span class="bar-l"><span lang="en">Opening</span></span><span class="bar-t"><i data-w="22"></i></span><span class="bar-v">0.4</span></div>
+            <div class="bar hot"><span class="bar-l"><span lang="en">Middlegame</span></span><span class="bar-t"><i data-w="78"></i></span><span class="bar-v">1.9</span></div>
+            <div class="bar"><span class="bar-l"><span lang="en">Endgame</span></span><span class="bar-t"><i data-w="46"></i></span><span class="bar-v">0.9</span></div>
           </div>
         </article>
       </div>
@@ -299,24 +324,24 @@
   <!-- ── 03 Funktionen ─────────────────────────────────────────────────── -->
   <section class="section" id="features">
     <div class="wrap">
-      <p class="eyebrow"><b>03</b> <span lang="de">Funktionen</span><span lang="en">Features</span><span lang="fr">Fonctions</span><span lang="es">Funciones</span><span lang="zh">功能</span><span lang="hi">विशेषताएँ</span><span lang="ar">المزايا</span></p>
+      <p class="eyebrow"><b>03</b> <span lang="en">Features</span></p>
 
       <div class="feature rv">
         <div class="feature-text">
           <p class="feature-kicker">Insights</p>
-          <h3><span lang="de">Wo du wirklich schlecht spielst</span><span lang="en">Where your play breaks down</span><span lang="fr">Là où votre jeu craque</span><span lang="es">Dónde se te rompe el juego</span><span lang="zh">你的棋究竟坏在哪里</span><span lang="hi">आपका खेल असल में कहाँ बिगड़ता है</span><span lang="ar">أين ينهار مستوى لعبك فعلًا</span></h3>
-          <p><span lang="de">Vier Auswertungsseiten über die ganze Historie statt einer Zahl pro Partie: Spielstärke, Eröffnungen getrennt nach Farbe, Verhaltensmuster und die Phasen, in denen deine Fehler passieren.</span><span lang="en">Four in-depth pages across your whole history instead of one number per game: playing strength, openings by colour, behavioural patterns, and the phases where your errors happen.</span><span lang="fr">Quatre pages d’analyse sur tout l’historique plutôt qu’un chiffre par partie : force de jeu, ouvertures séparées par couleur, schémas de comportement et phases où surviennent vos erreurs.</span><span lang="es">Cuatro páginas de análisis sobre todo el historial en vez de un número por partida: fuerza de juego, aperturas separadas por color, patrones de conducta y las fases en las que cometes los errores.</span><span lang="zh">四个覆盖全部历史的分析页面，而不是每局给一个数字：棋力、按执棋方分开的开局、行为模式，以及失误集中的阶段。</span><span lang="hi">हर बाज़ी पर एक आँकड़े के बजाय पूरे इतिहास पर चार विश्लेषण पृष्ठ: खेल-शक्ति, रंग के हिसाब से अलग ओपनिंग, व्यवहार के पैटर्न, और वे चरण जहाँ ग़लतियाँ होती हैं।</span><span lang="ar">أربع صفحات تحليل تغطي تاريخك كاملًا بدل رقم واحد لكل مباراة: قوة اللعب، والافتتاحات مفصولة حسب اللون، وأنماط السلوك، والأطوار التي تقع فيها أخطاؤك.</span></p>
+          <h3><span lang="en">Where your play breaks down</span></h3>
+          <p><span lang="en">Four in-depth pages across your whole history instead of one number per game: playing strength, openings by colour, behavioural patterns, and the phases where your errors happen.</span></p>
           <ul class="ticks">
-            <li><span lang="de">Genauigkeit und Fehlerrate über Monate, nicht über eine Partie</span><span lang="en">Accuracy and error rate over months, not over one game</span><span lang="fr">Précision et taux d’erreur sur des mois, pas sur une partie</span><span lang="es">Precisión y tasa de error a lo largo de meses, no de una partida</span><span lang="zh">以月为跨度的准确率与失误率，而不是单局数据</span><span lang="hi">महीनों की सटीकता और ग़लती-दर, न कि एक बाज़ी की</span><span lang="ar">الدقة ومعدّل الخطأ عبر شهور، لا عبر مباراة واحدة</span></li>
-            <li><span lang="de">Eröffnungen mit Ergebnis, Abweichung und Trefferquote</span><span lang="en">Openings with results, deviation and hit rate</span><span lang="fr">Ouvertures avec résultat, écart et taux de réussite</span><span lang="es">Aperturas con resultado, desviación y acierto</span><span lang="zh">开局的胜负结果、偏离点与命中率</span><span lang="hi">ओपनिंग के परिणाम, विचलन और सफलता-दर</span><span lang="ar">الافتتاحات مع النتيجة والانحراف ونسبة الإصابة</span></li>
-            <li><span lang="de">Muster: Zeitnot, lange Serien, Revanche-Partien</span><span lang="en">Patterns: time trouble, long sessions, revenge games</span><span lang="fr">Schémas : zeitnot, longues séries, parties revanche</span><span lang="es">Patrones: apuros de tiempo, sesiones largas, partidas de revancha</span><span lang="zh">行为模式：时间紧张、连场久战、复仇局</span><span lang="hi">पैटर्न: समय-संकट, लंबे सत्र, बदले की बाज़ियाँ</span><span lang="ar">الأنماط: ضيق الوقت، والجلسات الطويلة، ومباريات الثأر</span></li>
+            <li><span lang="en">Accuracy and error rate over months, not over one game</span></li>
+            <li><span lang="en">Openings with results, deviation and hit rate</span></li>
+            <li><span lang="en">Patterns: time trouble, long sessions, revenge games</span></li>
           </ul>
         </div>
         <figure class="shot">
           <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="assets/shots/insights.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Insights"></button>
           <figcaption>
-            <span lang="de">Insights · Genauigkeit und Fehler nach Spielphase</span><span lang="en">Insights · accuracy and errors by game phase</span><span lang="fr">Insights · précision et erreurs par phase de jeu</span><span lang="es">Insights · precisión y errores por fase</span><span lang="zh">Insights · 按对局阶段的准确率与失误</span><span lang="hi">Insights · खेल-चरण के अनुसार सटीकता और ग़लतियाँ</span><span lang="ar">Insights · الدقة والأخطاء حسب طور المباراة</span>
-            <span><span lang="de">1.483 Partien</span><span lang="en">1,483 games</span><span lang="fr">1 483 parties</span><span lang="es">1483 partidas</span><span lang="zh">1,483 局</span><span lang="hi">1,483 बाज़ियाँ</span><span lang="ar">1483 مباراة</span></span>
+            <span lang="en">Insights · accuracy and errors by game phase</span>
+            <span><span lang="en">1,483 games</span></span>
           </figcaption>
         </figure>
       </div>
@@ -324,39 +349,39 @@
       <div class="feature flip rv">
         <div class="feature-text">
           <p class="feature-kicker">Repertoire · FSRS</p>
-          <h3><span lang="de">Eröffnungen, die tatsächlich sitzen</span><span lang="en">An opening book that actually sticks</span><span lang="fr">Un répertoire qui rentre vraiment</span><span lang="es">Un repertorio que de verdad se queda</span><span lang="zh">真正记得住的开局库</span><span lang="hi">ऐसी ओपनिंग जो वाकई याद रहें</span><span lang="ar">مرجع افتتاحات يرسخ فعلًا</span></h3>
-          <p><span lang="de">Dein Repertoire ist ein Stellungsbaum, der mit FSRS wiederholt wird, derselbe Ansatz wie bei guten Vokabeltrainern. Jeder Zug hat sein eigenes Intervall, fällige Wiederholungen stehen morgens auf dem Dashboard.</span><span lang="en">Your repertoire is a position tree trained with FSRS spaced repetition, the same approach good flashcard apps use. Every move has its own interval; due reviews are on the dashboard each morning.</span><span lang="fr">Votre répertoire est un arbre de positions révisé avec FSRS, la même approche que les bonnes applications de cartes mémoire. Chaque coup a son propre intervalle et les révisions dues apparaissent chaque matin sur le tableau de bord.</span><span lang="es">Tu repertorio es un árbol de posiciones que se repasa con FSRS, el mismo método de las buenas apps de tarjetas. Cada jugada tiene su propio intervalo y los repasos pendientes aparecen cada mañana en el panel.</span><span lang="zh">你的开局库是一棵局面树，用 FSRS 间隔重复来复习，跟好用的记忆卡应用是同一套办法。每一着都有自己的间隔，到期复习每天早上出现在仪表盘上。</span><span lang="hi">आपका रेपर्टवार एक पोज़िशन-ट्री है जिसे FSRS स्पेस्ड रिपिटिशन से दोहराया जाता है — वही तरीक़ा जो अच्छे फ़्लैशकार्ड ऐप इस्तेमाल करते हैं। हर चाल का अपना अंतराल है, और बकाया दोहराव हर सुबह डैशबोर्ड पर दिखते हैं।</span><span lang="ar">مرجعك شجرة أوضاع تُراجَع بنظام FSRS للتكرار المتباعد، وهو الأسلوب نفسه في تطبيقات البطاقات الجيدة. لكل نقلة فاصلها الزمني، والمراجعات المستحقّة تظهر كل صباح على لوحة المعلومات.</span></p>
+          <h3><span lang="en">An opening book that actually sticks</span></h3>
+          <p><span lang="en">Your repertoire is a position tree trained with FSRS spaced repetition, the same approach good flashcard apps use. Every move has its own interval; due reviews are on the dashboard each morning.</span></p>
           <ul class="ticks">
-            <li><span lang="de">Züge aus eigenen Partien direkt ins Buch übernehmen</span><span lang="en">Add moves from your own games straight into the book</span><span lang="fr">Ajouter au répertoire des coups tirés de vos parties</span><span lang="es">Añade al repertorio jugadas de tus propias partidas</span><span lang="zh">把自己对局里的着法直接收进开局库</span><span lang="hi">अपनी बाज़ियों की चालें सीधे बुक में जोड़ें</span><span lang="ar">أضف نقلات من مبارياتك مباشرة إلى المرجع</span></li>
-            <li><span lang="de">Abdeckung pro Eröffnung, getrennt nach Weiß und Schwarz</span><span lang="en">Coverage per opening, split by white and black</span><span lang="fr">Couverture par ouverture, séparée blancs et noirs</span><span lang="es">Cobertura por apertura, separada por blancas y negras</span><span lang="zh">按开局统计覆盖率，白方黑方分开</span><span lang="hi">हर ओपनिंग की कवरेज, सफ़ेद और काले के लिए अलग</span><span lang="ar">نسبة التغطية لكل افتتاح، مفصولة بين الأبيض والأسود</span></li>
-            <li><span lang="de">Serie und fällige Karten statt Dauerbeschäftigung</span><span lang="en">Streak and due cards instead of endless drilling</span><span lang="fr">Série en cours et cartes dues plutôt qu’un bachotage sans fin</span><span lang="es">Racha y tarjetas pendientes en vez de machaque infinito</span><span lang="zh">连续天数和到期卡片，而不是没完没了地刷</span><span lang="hi">लगातार सिलसिला और बकाया कार्ड, न कि अंतहीन रटाई</span><span lang="ar">سلسلة الأيام والبطاقات المستحقّة بدل التدريب بلا نهاية</span></li>
+            <li><span lang="en">Add moves from your own games straight into the book</span></li>
+            <li><span lang="en">Coverage per opening, split by white and black</span></li>
+            <li><span lang="en">Streak and due cards instead of endless drilling</span></li>
           </ul>
         </div>
         <figure class="shot">
           <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="assets/shots/repertoire.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Repertoire"></button>
           <figcaption>
-            <span lang="de">Repertoire · Varianten als Weiß und Schwarz</span><span lang="en">Repertoire · variations as white and black</span><span lang="fr">Répertoire · variantes aux blancs et aux noirs</span><span lang="es">Repertorio · variantes con blancas y negras</span><span lang="zh">Repertoire · 执白与执黑的变例</span><span lang="hi">Repertoire · सफ़ेद और काले की वैरिएशन</span><span lang="ar">Repertoire · التنويعات بالأبيض والأسود</span>
-            <span><span lang="de">17 Züge im Buch · Abdeckung 42 %</span><span lang="en">17 moves in book · 42 % coverage</span><span lang="fr">17 coups au répertoire · couverture 42 %</span><span lang="es">17 jugadas en el repertorio · 42 % de cobertura</span><span lang="zh">开局库 17 着 · 覆盖率 42 %</span><span lang="hi">बुक में 17 चालें · कवरेज 42 %</span><span lang="ar">17 نقلة في المرجع · تغطية 42 %</span></span>
+            <span lang="en">Repertoire · variations as white and black</span>
+            <span><span lang="en">17 moves in book · 42 % coverage</span></span>
           </figcaption>
         </figure>
       </div>
 
       <div class="feature rv">
         <div class="feature-text">
-          <p class="feature-kicker"><span lang="de">Puzzles &amp; Endspiele</span><span lang="en">Puzzles &amp; endgames</span><span lang="fr">Problèmes &amp; finales</span><span lang="es">Ejercicios &amp; finales</span><span lang="zh">战术题与残局</span><span lang="hi">पहेलियाँ और अंतिम खेल</span><span lang="ar">الألغاز والنهايات</span></p>
-          <h3><span lang="de">Taktik aus deinen eigenen Fehlern</span><span lang="en">Tactics made from your own mistakes</span><span lang="fr">De la tactique tirée de vos propres erreurs</span><span lang="es">Táctica hecha con tus propios errores</span><span lang="zh">用你自己的失误做成的战术题</span><span lang="hi">आपकी अपनी ग़लतियों से बनी टैक्टिक्स</span><span lang="ar">تكتيكات مصنوعة من أخطائك أنت</span></h3>
-          <p><span lang="de">Neben der offline verfügbaren Lichess-Puzzledatenbank baut Kiebitz Aufgaben aus den Stellungen, in denen du selbst den Gewinnzug übersehen hast. Dazu kuratierte Endspiel-Drills gegen die Engine, optional mit Syzygy-Tabellen.</span><span lang="en">Alongside the offline Lichess puzzle database, Kiebitz builds problems from the positions where you missed the winning move yourself. Plus curated endgame drills against the engine, optionally with Syzygy tablebases.</span><span lang="fr">En plus de la base de problèmes Lichess disponible hors ligne, Kiebitz fabrique des exercices à partir des positions où vous avez laissé passer le coup gagnant. S’y ajoutent des finales sélectionnées contre le moteur, avec tables Syzygy en option.</span><span lang="es">Además de la base de ejercicios de Lichess disponible sin conexión, Kiebitz crea problemas con las posiciones en las que se te escapó la jugada ganadora. Y finales seleccionados contra el motor, con tablas Syzygy opcionales.</span><span lang="zh">除了可离线使用的 Lichess 战术题库，Kiebitz 还会用你漏掉制胜着法的局面生成习题。另有精选残局，可与引擎对练，并可选用 Syzygy 残局库。</span><span lang="hi">ऑफ़लाइन उपलब्ध Lichess पहेली-डेटाबेस के अलावा Kiebitz उन्हीं स्थितियों से सवाल बनाता है जहाँ आपसे जीतने वाली चाल छूट गई थी। साथ में इंजन के ख़िलाफ़ चुने हुए अंतिम-खेल अभ्यास, चाहें तो Syzygy टेबलबेस के साथ।</span><span lang="ar">إلى جانب قاعدة ألغاز Lichess المتاحة دون اتصال، يبني Kiebitz تمارين من الأوضاع التي فاتتك فيها النقلة الرابحة. تُضاف إليها تدريبات نهايات مختارة ضد المحرّك، مع جداول Syzygy اختياريًا.</span></p>
+          <p class="feature-kicker"><span lang="en">Puzzles &amp; endgames</span></p>
+          <h3><span lang="en">Tactics made from your own mistakes</span></h3>
+          <p><span lang="en">Alongside the offline Lichess puzzle database, Kiebitz builds problems from the positions where you missed the winning move yourself. Plus curated endgame drills against the engine, optionally with Syzygy tablebases.</span></p>
           <ul class="ticks">
-            <li><span lang="de">Puzzle-Elo und Trefferquote pro Motiv</span><span lang="en">Puzzle Elo and hit rate per theme</span><span lang="fr">Elo de problèmes et taux de réussite par thème</span><span lang="es">Elo de ejercicios y acierto por tema</span><span lang="zh">战术题 Elo 与各主题命中率</span><span lang="hi">पहेली-Elo और हर थीम की सफलता-दर</span><span lang="ar">تصنيف الألغاز ونسبة الإصابة لكل موضوع</span></li>
-            <li><span lang="de">Endspiele: Bauernumwandlung, Turmendspiele, Mattführungen</span><span lang="en">Endgames: promotion, rook endings, forced mates</span><span lang="fr">Finales : promotion, finales de tours, mats forcés</span><span lang="es">Finales: coronación, finales de torre, mates forzados</span><span lang="zh">残局：升变、车残局、强制杀法</span><span lang="hi">अंतिम खेल: प्यादे का प्रोमोशन, रुख़ के अंत, ज़बरदस्ती मात</span><span lang="ar">النهايات: الترقية، ونهايات الرخّ، والمات الإجباري</span></li>
-            <li><span lang="de">Alles offline spielbar, auch ohne Netz</span><span lang="en">All playable offline, no connection needed</span><span lang="fr">Tout jouable hors ligne, sans connexion</span><span lang="es">Todo jugable sin conexión</span><span lang="zh">全部可离线练习，无需联网</span><span lang="hi">सब कुछ ऑफ़लाइन खेला जा सकता है, बिना नेटवर्क</span><span lang="ar">كل ذلك متاح دون اتصال بالإنترنت</span></li>
+            <li><span lang="en">Puzzle Elo and hit rate per theme</span></li>
+            <li><span lang="en">Endgames: promotion, rook endings, forced mates</span></li>
+            <li><span lang="en">All playable offline, no connection needed</span></li>
           </ul>
         </div>
         <figure class="shot">
           <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="assets/shots/puzzles.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Puzzles"></button>
           <figcaption>
-            <span lang="de">Puzzles · Trefferquote pro Motiv</span><span lang="en">Puzzles · hit rate per theme</span><span lang="fr">Puzzles · taux de réussite par thème</span><span lang="es">Puzzles · acierto por tema</span><span lang="zh">Puzzles · 各主题命中率</span><span lang="hi">Puzzles · हर थीम की सफलता-दर</span><span lang="ar">Puzzles · نسبة الإصابة لكل موضوع</span>
-            <span><span lang="de">285 Aufgaben aus eigenen Partien</span><span lang="en">285 puzzles from your own games</span><span lang="fr">285 exercices tirés de vos parties</span><span lang="es">285 ejercicios de tus propias partidas</span><span lang="zh">285 道来自自己对局的习题</span><span lang="hi">अपनी बाज़ियों से 285 पहेलियाँ</span><span lang="ar">285 تمرينًا من مبارياتك</span></span>
+            <span lang="en">Puzzles · hit rate per theme</span>
+            <span><span lang="en">285 puzzles from your own games</span></span>
           </figcaption>
         </figure>
       </div>
@@ -364,47 +389,47 @@
       <div class="feature flip rv">
         <div class="feature-text">
           <p class="feature-kicker">Study</p>
-          <h3><span lang="de">Ein Plan, der aus deinen Daten kommt</span><span lang="en">A plan that comes out of your data</span><span lang="fr">Un plan qui sort de vos données</span><span lang="es">Un plan que sale de tus datos</span><span lang="zh">从你的数据里长出来的训练计划</span><span lang="hi">आपके अपने डेटा से निकली योजना</span><span lang="ar">خطة تخرج من بياناتك أنت</span></h3>
-          <p><span lang="de">Der Lernplaner liest deine Schwächen aus den Analysen und schlägt vor, was heute dran ist: Wiederholungen, ein Motiv, ein Endspiel. Als Tages-Checkliste und als Wochenplan, den du selbst umsortieren kannst.</span><span lang="en">The study planner reads your weaknesses from the analyses and suggests what to do today: reviews, one theme, one endgame. As a daily checklist and a weekly plan you can rearrange yourself.</span><span lang="fr">Le planificateur lit vos faiblesses dans les analyses et propose le programme du jour : révisions, un thème, une finale. Sous forme de liste quotidienne et de plan hebdomadaire que vous pouvez réorganiser.</span><span lang="es">El planificador lee tus debilidades en los análisis y propone qué toca hoy: repasos, un tema, un final. Como lista diaria y como plan semanal que puedes reordenar tú.</span><span lang="zh">学习计划器从分析里读出你的弱点，给出今天该做什么：复习、一个战术主题、一个残局。既是每日清单，也是可自行调整顺序的周计划。</span><span lang="hi">स्टडी प्लानर विश्लेषण से आपकी कमज़ोरियाँ पढ़ता है और बताता है कि आज क्या करना है: दोहराव, एक थीम, एक अंतिम खेल। दैनिक चेकलिस्ट के रूप में और ऐसे साप्ताहिक प्लान के रूप में जिसे आप ख़ुद क्रम में लगा सकते हैं।</span><span lang="ar">يقرأ مخطّط الدراسة نقاط ضعفك من التحليلات ويقترح ما يناسب اليوم: مراجعات، وموضوع تكتيكي واحد، ونهاية واحدة. على هيئة قائمة يومية وخطة أسبوعية تعيد ترتيبها بنفسك.</span></p>
+          <h3><span lang="en">A plan that comes out of your data</span></h3>
+          <p><span lang="en">The study planner reads your weaknesses from the analyses and suggests what to do today: reviews, one theme, one endgame. As a daily checklist and a weekly plan you can rearrange yourself.</span></p>
           <ul class="ticks">
-            <li><span lang="de">Empfehlungen mit Begründung aus deinen Partien</span><span lang="en">Recommendations with reasons taken from your games</span><span lang="fr">Des recommandations justifiées par vos parties</span><span lang="es">Recomendaciones justificadas con tus partidas</span><span lang="zh">建议都附带来自你对局的理由</span><span lang="hi">आपकी बाज़ियों से लिए गए कारणों के साथ सिफ़ारिशें</span><span lang="ar">توصيات مسبَّبة مأخوذة من مبارياتك</span></li>
-            <li><span lang="de">Drag-and-drop-Planer für die Woche</span><span lang="en">Drag-and-drop planner for the week</span><span lang="fr">Planificateur hebdomadaire en glisser-déposer</span><span lang="es">Planificador semanal con arrastrar y soltar</span><span lang="zh">可拖放的周计划表</span><span lang="hi">सप्ताह के लिए ड्रैग-एंड-ड्रॉप प्लानर</span><span lang="ar">مخطّط أسبوعي بالسحب والإفلات</span></li>
-            <li><span lang="de">Erinnerungen lokal auf dem Gerät</span><span lang="en">Reminders locally on the device</span><span lang="fr">Rappels locaux sur l’appareil</span><span lang="es">Recordatorios locales en el dispositivo</span><span lang="zh">提醒完全在设备本地产生</span><span lang="hi">डिवाइस पर ही स्थानीय रिमाइंडर</span><span lang="ar">تذكيرات محلية على الجهاز</span></li>
+            <li><span lang="en">Recommendations with reasons taken from your games</span></li>
+            <li><span lang="en">Drag-and-drop planner for the week</span></li>
+            <li><span lang="en">Reminders locally on the device</span></li>
           </ul>
         </div>
         <figure class="shot">
           <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="assets/shots/study.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Study"></button>
           <figcaption>
-            <span lang="de">Study · Coach-Empfehlungen und Wochenplan</span><span lang="en">Study · coach recommendations and weekly plan</span><span lang="fr">Study · recommandations du coach et plan hebdomadaire</span><span lang="es">Study · recomendaciones del entrenador y plan semanal</span><span lang="zh">Study · 教练建议与周计划</span><span lang="hi">Study · कोच की सिफ़ारिशें और साप्ताहिक प्लान</span><span lang="ar">Study · توصيات المدرّب والخطة الأسبوعية</span>
-            <span><span lang="de">Tagesziel und Serie</span><span lang="en">daily goal and streak</span><span lang="fr">objectif du jour et série</span><span lang="es">objetivo diario y racha</span><span lang="zh">每日目标与连续天数</span><span lang="hi">दैनिक लक्ष्य और सिलसिला</span><span lang="ar">هدف اليوم وسلسلة الأيام</span></span>
+            <span lang="en">Study · coach recommendations and weekly plan</span>
+            <span><span lang="en">daily goal and streak</span></span>
           </figcaption>
         </figure>
       </div>
 
       <div class="more rv" style="margin-top:clamp(48px,6vw,84px)">
         <div>
-          <h4><span lang="de">Dashboard</span><span lang="en">Dashboard</span><span lang="fr">Tableau de bord</span><span lang="es">Panel</span><span lang="zh">仪表盘</span><span lang="hi">डैशबोर्ड</span><span lang="ar">لوحة المعلومات</span></h4>
-          <p><span lang="de">Rating-Verlauf, letzte Partien, fällige Wiederholungen, Analyse-Warteschlange auf einem Blick.</span><span lang="en">Rating history, recent games, due reviews and the analysis queue at a glance.</span><span lang="fr">Courbe de classement, dernières parties, révisions dues et file d’analyse d’un coup d’œil.</span><span lang="es">Evolución del rating, últimas partidas, repasos pendientes y la cola de análisis de un vistazo.</span><span lang="zh">等级分曲线、最近对局、到期复习和分析队列，一眼看全。</span><span lang="hi">रेटिंग का सफ़र, हाल की बाज़ियाँ, बकाया दोहराव और विश्लेषण-कतार — सब एक नज़र में।</span><span lang="ar">مسار التصنيف وآخر المباريات والمراجعات المستحقّة وقائمة التحليل في لمحة واحدة.</span></p>
+          <h4><span lang="en">Dashboard</span></h4>
+          <p><span lang="en">Rating history, recent games, due reviews and the analysis queue at a glance.</span></p>
         </div>
         <div>
-          <h4><span lang="de">Partien-Datenbank</span><span lang="en">Game database</span><span lang="fr">Base de parties</span><span lang="es">Base de partidas</span><span lang="zh">对局数据库</span><span lang="hi">बाज़ी-डेटाबेस</span><span lang="ar">قاعدة المباريات</span></h4>
-          <p><span lang="de">Filter, Tags, Notizen pro Partie und pro Zug, Stellungssuche, PGN-Import und -Export.</span><span lang="en">Filters, tags, notes per game and per move, position search, PGN import and export.</span><span lang="fr">Filtres, étiquettes, notes par partie et par coup, recherche de position, import et export PGN.</span><span lang="es">Filtros, etiquetas, notas por partida y por jugada, búsqueda de posiciones, importación y exportación PGN.</span><span lang="zh">筛选、标签、按局和按着的笔记、局面检索、PGN 导入与导出。</span><span lang="hi">फ़िल्टर, टैग, हर बाज़ी और हर चाल पर नोट, पोज़िशन खोज, PGN आयात-निर्यात।</span><span lang="ar">مرشّحات ووسوم وملاحظات لكل مباراة ولكل نقلة، وبحث عن الأوضاع، واستيراد PGN وتصديره.</span></p>
+          <h4><span lang="en">Game database</span></h4>
+          <p><span lang="en">Filters, tags, notes per game and per move, position search, PGN import and export.</span></p>
         </div>
         <div>
-          <h4><span lang="de">Live-Analyse</span><span lang="en">Live analysis</span><span lang="fr">Analyse en direct</span><span lang="es">Análisis en vivo</span><span lang="zh">实时分析</span><span lang="hi">लाइव विश्लेषण</span><span lang="ar">تحليل مباشر</span></h4>
-          <p><span lang="de">Brett mit Engine-Linien, Zugqualität, Pfeilen, optional mit dem Eröffnungsbuch von chessdb.cn.</span><span lang="en">Board with engine lines, move quality, arrows, optionally with the chessdb.cn opening book.</span><span lang="fr">Échiquier avec variantes du moteur, qualité des coups, flèches, et en option le livre d’ouvertures de chessdb.cn.</span><span lang="es">Tablero con líneas del motor, calidad de jugada, flechas y, si quieres, el libro de aperturas de chessdb.cn.</span><span lang="zh">棋盘配引擎变着、着法质量、箭头，可选接入 chessdb.cn 开局库。</span><span lang="hi">इंजन लाइनों, चाल की गुणवत्ता और तीरों वाला बोर्ड, चाहें तो chessdb.cn की ओपनिंग बुक के साथ।</span><span lang="ar">رقعة مع خطوط المحرّك وجودة النقلات والأسهم، مع كتاب افتتاحات chessdb.cn اختياريًا.</span></p>
+          <h4><span lang="en">Live analysis</span></h4>
+          <p><span lang="en">Board with engine lines, move quality, arrows, optionally with the chessdb.cn opening book.</span></p>
         </div>
         <div>
-          <h4><span lang="de">Sieben Sprachen</span><span lang="en">Seven languages</span><span lang="fr">Sept langues</span><span lang="es">Siete idiomas</span><span lang="zh">七种语言</span><span lang="hi">सात भाषाएँ</span><span lang="ar">سبع لغات</span></h4>
-          <p><span lang="de">Deutsch, Englisch, Französisch, Spanisch, Chinesisch, Hindi und Arabisch – in der App wie auf dieser Website. Dazu ein sorgfältig gemachtes dunkles Theme.</span><span lang="en">German, English, French, Spanish, Chinese, Hindi and Arabic – in the app as well as on this website. Plus one carefully made dark theme.</span><span lang="fr">Allemand, anglais, français, espagnol, chinois, hindi et arabe – dans l’application comme sur ce site. Avec un thème sombre soigné.</span><span lang="es">Alemán, inglés, francés, español, chino, hindi y árabe: en la app y también en esta web. Y un tema oscuro cuidado.</span><span lang="zh">德语、英语、法语、西班牙语、中文、印地语和阿拉伯语，应用和本网站都有，配一套用心打磨的深色主题。</span><span lang="hi">जर्मन, अंग्रेज़ी, फ़्रेंच, स्पेनिश, चीनी, हिन्दी और अरबी – ऐप में भी और इस वेबसाइट पर भी। साथ में एक सावधानी से बनाई डार्क थीम।</span><span lang="ar">الألمانية والإنجليزية والفرنسية والإسبانية والصينية والهندية والعربية – في التطبيق وعلى هذا الموقع معًا. مع سمة داكنة مصنوعة بعناية.</span></p>
+          <h4><span lang="en">Seven languages</span></h4>
+          <p><span lang="en">German, English, French, Spanish, Chinese, Hindi and Arabic – in the app as well as on this website. Plus one carefully made dark theme.</span></p>
         </div>
         <div>
-          <h4><span lang="de">Windows &amp; Android</span><span lang="en">Windows &amp; Android</span><span lang="fr">Windows &amp; Android</span><span lang="es">Windows &amp; Android</span><span lang="zh">Windows 与 Android</span><span lang="hi">Windows और Android</span><span lang="ar">‏Windows وAndroid</span></h4>
-          <p><span lang="de">Desktop-App mit Auto-Update, Android-Build mit nativem Stockfish pro ABI.</span><span lang="en">Desktop app with auto-update, Android build with native Stockfish per ABI.</span><span lang="fr">Application de bureau avec mise à jour automatique, build Android avec Stockfish natif par ABI.</span><span lang="es">App de escritorio con actualización automática y build de Android con Stockfish nativo por ABI.</span><span lang="zh">桌面端支持自动更新，Android 版按 ABI 提供原生 Stockfish。</span><span lang="hi">ऑटो-अपडेट वाला डेस्कटॉप ऐप, और हर ABI के लिए नेटिव Stockfish वाला Android बिल्ड।</span><span lang="ar">تطبيق سطح مكتب بتحديث تلقائي، وإصدار Android بمحرّك Stockfish أصلي لكل معمارية.</span></p>
+          <h4><span lang="en">Windows &amp; Android</span></h4>
+          <p><span lang="en">Desktop app with auto-update, Android build with native Stockfish per ABI.</span></p>
         </div>
         <div>
-          <h4><span lang="de">Quellcode einsehbar</span><span lang="en">Source available</span><span lang="fr">Code source consultable</span><span lang="es">Código fuente consultable</span><span lang="zh">源码可查阅</span><span lang="hi">सोर्स कोड देखा जा सकता है</span><span lang="ar">الشيفرة متاحة للاطّلاع</span></h4>
-          <p><span lang="de">Source-available, nicht Open Source: lesen und selbst bauen ja, Weiterverbreitung nein.</span><span lang="en">Source-available, not open source: read it and build it yourself, no redistribution.</span><span lang="fr">Source-available, pas open source : lecture et compilation personnelle oui, redistribution non.</span><span lang="es">Source-available, no open source: leerlo y compilarlo tú sí, redistribuirlo no.</span><span lang="zh">源码可见但不是开源：可以阅读和自行编译，不可再分发。</span><span lang="hi">सोर्स-अवेलेबल, ओपन सोर्स नहीं: पढ़ना और ख़ुद बिल्ड करना हाँ, दोबारा बाँटना नहीं।</span><span lang="ar">الشيفرة متاحة لكنها ليست مفتوحة المصدر: القراءة والبناء الذاتي نعم، وإعادة التوزيع لا.</span></p>
+          <h4><span lang="en">Source available</span></h4>
+          <p><span lang="en">Source-available, not open source: read it and build it yourself, no redistribution.</span></p>
         </div>
       </div>
     </div>
@@ -413,15 +438,15 @@
   <!-- ── 04 Sync ───────────────────────────────────────────────────────── -->
   <section class="section section-alt">
     <div class="wrap">
-      <p class="eyebrow"><b>04</b> <span lang="de">Geräte-Sync</span><span lang="en">Device sync</span><span lang="fr">Sync entre appareils</span><span lang="es">Sync entre dispositivos</span><span lang="zh">设备同步</span><span lang="hi">डिवाइस सिंक</span><span lang="ar">مزامنة الأجهزة</span></p>
+      <p class="eyebrow"><b>04</b> <span lang="en">Device sync</span></p>
       <div class="feature rv">
         <div class="feature-text">
-          <h3><span lang="de">Zwei Geräte, ein Netz, kein Dazwischen</span><span lang="en">Two devices, one network, nothing in between</span><span lang="fr">Deux appareils, un réseau, rien entre les deux</span><span lang="es">Dos dispositivos, una red, nada en medio</span><span lang="zh">两台设备，一个网络，中间什么都没有</span><span lang="hi">दो उपकरण, एक नेटवर्क, बीच में कुछ नहीं</span><span lang="ar">جهازان وشبكة واحدة ولا شيء بينهما</span></h3>
-          <p><span lang="de">Der Desktop ist der Hub, das Handy koppelt sich per QR-Code. Danach synchronisieren beide verschlüsselt direkt über dein Heimnetz oder VPN; Adresse, Code und Zertifikats-Fingerprint stecken im QR. Kein Server dazwischen, weil es keinen gibt.</span><span lang="en">The desktop is the hub; the phone pairs with a QR code. From then on both sync encrypted, directly over your home network or VPN; address, code and certificate fingerprint are inside the QR. No server in between, because there isn’t one.</span><span lang="fr">L’ordinateur fait office de hub, le téléphone s’appaire par QR code. Ensuite, les deux se synchronisent de façon chiffrée, directement via votre réseau domestique ou votre VPN ; adresse, code et empreinte du certificat sont dans le QR. Aucun serveur entre les deux, puisqu’il n’en existe aucun.</span><span lang="es">El escritorio es el hub y el móvil se empareja con un código QR. A partir de ahí los dos se sincronizan cifrados, directamente por tu red doméstica o tu VPN; dirección, código y huella del certificado van dentro del QR. Ningún servidor en medio, porque no existe.</span><span lang="zh">桌面端是枢纽，手机通过二维码配对。之后两端加密后直接经由你的家庭网络或 VPN 同步；地址、配对码和证书指纹都在二维码里。中间没有服务器，因为根本就没有。</span><span lang="hi">डेस्कटॉप हब है, फ़ोन QR कोड से जुड़ता है। उसके बाद दोनों एन्क्रिप्टेड ढंग से सीधे आपके घरेलू नेटवर्क या VPN पर सिंक होते हैं; पता, कोड और सर्टिफ़िकेट फ़िंगरप्रिंट QR में ही होते हैं। बीच में कोई सर्वर नहीं, क्योंकि है ही नहीं।</span><span lang="ar">الحاسوب هو المحور، والهاتف يقترن برمز QR. بعدها يتزامن الجهازان بتشفير ومباشرة عبر شبكتك المنزلية أو شبكتك الافتراضية الخاصة؛ العنوان ورمز الاقتران وبصمة الشهادة كلها داخل رمز QR. لا خادم بينهما، لأنه ببساطة غير موجود.</span></p>
+          <h3><span lang="en">Two devices, one network, nothing in between</span></h3>
+          <p><span lang="en">The desktop is the hub; the phone pairs with a QR code. From then on both sync encrypted, directly over your home network or VPN; address, code and certificate fingerprint are inside the QR. No server in between, because there isn’t one.</span></p>
           <ul class="ticks">
-            <li><span lang="de">Unterwegs auf dem Handy trainieren, am Abend am Desktop analysieren</span><span lang="en">Train on the phone on the move, analyze on the desktop in the evening</span><span lang="fr">S’entraîner sur le téléphone en déplacement, analyser le soir sur l’ordinateur</span><span lang="es">Entrena en el móvil de camino y analiza por la noche en el escritorio</span><span lang="zh">路上用手机练，晚上回到桌面端分析</span><span lang="hi">रास्ते में फ़ोन पर अभ्यास, शाम को डेस्कटॉप पर विश्लेषण</span><span lang="ar">تدرّب على الهاتف في تنقّلك، وحلّل مساءً على الحاسوب</span></li>
-            <li><span lang="de">Die Kamera wird ausschließlich für das QR-Scannen benutzt</span><span lang="en">The camera is used for QR scanning and nothing else</span><span lang="fr">La caméra ne sert qu’à scanner le QR code</span><span lang="es">La cámara solo se usa para escanear el QR</span><span lang="zh">摄像头只用于扫描二维码</span><span lang="hi">कैमरा सिर्फ़ QR स्कैन के लिए इस्तेमाल होता है</span><span lang="ar">لا تُستخدم الكاميرا إلا لمسح رمز QR</span></li>
-            <li><span lang="de">Ohne Kopplung läuft jedes Gerät völlig eigenständig</span><span lang="en">Without pairing, each device works entirely on its own</span><span lang="fr">Sans appairage, chaque appareil fonctionne de façon totalement autonome</span><span lang="es">Sin emparejar, cada dispositivo funciona por completo por su cuenta</span><span lang="zh">不配对时，每台设备都完全独立运行</span><span lang="hi">बिना जोड़े हर उपकरण पूरी तरह अपने आप चलता है</span><span lang="ar">من دون اقتران، يعمل كل جهاز باستقلال تام</span></li>
+            <li><span lang="en">Train on the phone on the move, analyze on the desktop in the evening</span></li>
+            <li><span lang="en">The camera is used for QR scanning and nothing else</span></li>
+            <li><span lang="en">Without pairing, each device works entirely on its own</span></li>
           </ul>
         </div>
         <div class="sync-viz" aria-hidden="true">
@@ -436,36 +461,36 @@
   <!-- ── 05 Datenschutz ────────────────────────────────────────────────── -->
   <section class="section">
     <div class="wrap">
-      <p class="eyebrow"><b>05</b> <span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></p>
+      <p class="eyebrow"><b>05</b> <span lang="en">Privacy</span></p>
       <h2 style="font-size:clamp(24px,3vw,36px);max-width:28ch">
-        <span lang="de">Was Kiebitz sendet, und was nicht.</span>
+
         <span lang="en">What Kiebitz sends, and what it doesn’t.</span>
-        <span lang="fr">Ce que Kiebitz envoie, et ce qu’il n’envoie pas.</span>
-        <span lang="es">Lo que Kiebitz envía y lo que no.</span>
-        <span lang="zh">Kiebitz 会发送什么，不会发送什么。</span>
-        <span lang="hi">Kiebitz क्या भेजता है, और क्या नहीं।</span>
-        <span lang="ar">ما الذي يرسله Kiebitz وما الذي لا يرسله.</span>
+
+
+
+
+
       </h2>
       <div class="privacy-grid rv">
         <div>
-          <h4><span lang="de">Netzzugriff nur beim Import</span><span lang="en">Network access only on import</span><span lang="fr">Accès réseau uniquement à l’import</span><span lang="es">Acceso a la red solo al importar</span><span lang="zh">只有导入时才联网</span><span lang="hi">नेटवर्क सिर्फ़ आयात के समय</span><span lang="ar">اتصال بالشبكة عند الاستيراد فقط</span></h4>
-          <p><span lang="de">Beim Partien-Import ruft Kiebitz die öffentlichen Schnittstellen von chess.com und Lichess mit dem Benutzernamen auf, den du selbst eingetragen hast.</span><span lang="en">When importing games, Kiebitz calls the public APIs of chess.com and Lichess with the username you entered yourself.</span><span lang="fr">Lors de l’import, Kiebitz interroge les API publiques de chess.com et de Lichess avec le pseudo que vous avez saisi.</span><span lang="es">Al importar partidas, Kiebitz llama a las API públicas de chess.com y Lichess con el nombre de usuario que has escrito tú.</span><span lang="zh">导入对局时，Kiebitz 会带上你自己填写的用户名调用 chess.com 和 Lichess 的公开接口。</span><span lang="hi">बाज़ियाँ आयात करते समय Kiebitz आपके ही डाले हुए यूज़रनेम के साथ chess.com और Lichess के सार्वजनिक API को कॉल करता है।</span><span lang="ar">عند استيراد المباريات يستدعي Kiebitz واجهتَي chess.com وLichess العامّتين باسم المستخدم الذي أدخلته بنفسك.</span></p>
+          <h4><span lang="en">Network access only on import</span></h4>
+          <p><span lang="en">When importing games, Kiebitz calls the public APIs of chess.com and Lichess with the username you entered yourself.</span></p>
         </div>
         <div>
-          <h4><span lang="de">chessdb.cn nur wenn du willst</span><span lang="en">chessdb.cn only if you want it</span><span lang="fr">chessdb.cn seulement si vous le voulez</span><span lang="es">chessdb.cn solo si tú quieres</span><span lang="zh">chessdb.cn 只在你愿意时启用</span><span lang="hi">chessdb.cn सिर्फ़ तभी जब आप चाहें</span><span lang="ar">‏chessdb.cn فقط إن أردت</span></h4>
-          <p><span lang="de">Das Online-Eröffnungsbuch ist eine Option in den Einstellungen. Ist sie aus, wird chessdb.cn nie angefragt.</span><span lang="en">The online opening book is an option in the settings. Turned off, chessdb.cn is never queried.</span><span lang="fr">Le livre d’ouvertures en ligne est une option des réglages. Désactivée, chessdb.cn n’est jamais interrogé.</span><span lang="es">El libro de aperturas en línea es una opción de los ajustes. Si está apagada, nunca se consulta chessdb.cn.</span><span lang="zh">在线开局库是设置里的一个选项。关闭时，绝不会请求 chessdb.cn。</span><span lang="hi">ऑनलाइन ओपनिंग बुक सेटिंग्स में एक विकल्प है। बंद रहने पर chessdb.cn से कभी कुछ नहीं पूछा जाता।</span><span lang="ar">كتاب الافتتاحات عبر الإنترنت خيار في الإعدادات. وإن كان معطّلًا فلا يُستعلَم من chessdb.cn إطلاقًا.</span></p>
+          <h4><span lang="en">chessdb.cn only if you want it</span></h4>
+          <p><span lang="en">The online opening book is an option in the settings. Turned off, chessdb.cn is never queried.</span></p>
         </div>
         <div>
-          <h4><span lang="de">Kamera nur für den QR-Code</span><span lang="en">Camera only for the QR code</span><span lang="fr">La caméra seulement pour le QR code</span><span lang="es">La cámara solo para el código QR</span><span lang="zh">摄像头只为二维码</span><span lang="hi">कैमरा सिर्फ़ QR कोड के लिए</span><span lang="ar">الكاميرا لرمز QR فقط</span></h4>
-          <p><span lang="de">Auf Android fragt Kiebitz die Kamera erst, wenn du den Pairing-Code scannst. Es werden keine Bilder gespeichert oder gesendet.</span><span lang="en">On Android, Kiebitz asks for the camera only when you scan the pairing code. No images are stored or sent.</span><span lang="fr">Sur Android, Kiebitz ne demande la caméra qu’au moment où vous scannez le code d’appairage. Aucune image n’est enregistrée ni envoyée.</span><span lang="es">En Android, Kiebitz pide la cámara solo cuando escaneas el código de emparejamiento. No se guarda ni se envía ninguna imagen.</span><span lang="zh">在 Android 上，只有当你扫描配对码时 Kiebitz 才会申请摄像头权限。不会保存或发送任何图像。</span><span lang="hi">Android पर Kiebitz कैमरा तभी माँगता है जब आप पेयरिंग कोड स्कैन करते हैं। कोई तस्वीर न सहेजी जाती है, न भेजी जाती है।</span><span lang="ar">على Android لا يطلب Kiebitz الكاميرا إلا لحظة مسحك رمز الاقتران. ولا تُحفَظ أي صور ولا تُرسَل.</span></p>
+          <h4><span lang="en">Camera only for the QR code</span></h4>
+          <p><span lang="en">On Android, Kiebitz asks for the camera only when you scan the pairing code. No images are stored or sent.</span></p>
         </div>
         <div class="no">
-          <h4><span lang="de">Kein Server des Anbieters</span><span lang="en">No provider server</span><span lang="fr">Aucun serveur de l’éditeur</span><span lang="es">Ningún servidor del proveedor</span><span lang="zh">开发者没有服务器</span><span lang="hi">प्रदाता का कोई सर्वर नहीं</span><span lang="ar">لا خادم لدى المزوّد</span></h4>
-          <p><span lang="de">Es gibt keinen Kiebitz-Server, kein Analytics-SDK, keine Werbe-IDs, keine automatischen Absturzberichte, keine Konten.</span><span lang="en">There is no Kiebitz server, no analytics SDK, no advertising IDs, no automatic crash reports, no accounts.</span><span lang="fr">Il n’existe pas de serveur Kiebitz, pas de SDK d’analyse, pas d’identifiants publicitaires, pas de rapports de plantage automatiques, pas de comptes.</span><span lang="es">No hay servidor de Kiebitz, ni SDK de analítica, ni identificadores publicitarios, ni informes de fallos automáticos, ni cuentas.</span><span lang="zh">没有 Kiebitz 服务器，没有统计 SDK，没有广告标识符，没有自动崩溃报告，也没有账号。</span><span lang="hi">न कोई Kiebitz सर्वर है, न एनालिटिक्स SDK, न विज्ञापन आईडी, न स्वचालित क्रैश रिपोर्ट, न खाते।</span><span lang="ar">لا يوجد خادم لـ Kiebitz، ولا حزمة تحليلات، ولا معرّفات إعلانية، ولا تقارير أعطال تلقائية، ولا حسابات.</span></p>
+          <h4><span lang="en">No provider server</span></h4>
+          <p><span lang="en">There is no Kiebitz server, no analytics SDK, no advertising IDs, no automatic crash reports, no accounts.</span></p>
         </div>
       </div>
       <p style="margin-top:26px">
-        <a class="btn btn-sm" href="privacy/index.html"><span lang="de">Vollständige Datenschutzerklärung</span><span lang="en">Full privacy policy</span><span lang="fr">Politique de confidentialité complète</span><span lang="es">Política de privacidad completa</span><span lang="zh">完整隐私政策</span><span lang="hi">पूरी गोपनीयता नीति</span><span lang="ar">سياسة الخصوصية كاملة</span></a>
+        <a class="btn btn-sm" href="privacy/index.html"><span lang="en">Full privacy policy</span></a>
       </p>
     </div>
   </section>
@@ -473,51 +498,51 @@
   <!-- ── 06 Download ───────────────────────────────────────────────────── -->
   <section class="section section-alt" id="download">
     <div class="wrap">
-      <p class="eyebrow"><b>06</b> <span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></p>
+      <p class="eyebrow"><b>06</b> <span lang="en">Download</span></p>
       <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
-        <span lang="de">Beta laden und loslegen.</span>
+
         <span lang="en">Grab the beta and start.</span>
-        <span lang="fr">Téléchargez la bêta et lancez-vous.</span>
-        <span lang="es">Descarga la beta y empieza.</span>
-        <span lang="zh">下载测试版，直接开练。</span>
-        <span lang="hi">बीटा लीजिए और शुरू कीजिए।</span>
-        <span lang="ar">نزّل النسخة التجريبية وابدأ.</span>
+
+
+
+
+
       </h2>
       <p class="lede" style="margin-top:16px">
-        <span lang="de">Kiebitz ist zunächst kostenlos, ohne Werbung und ohne In-App-Käufe. Die Windows-Version kannst du direkt laden, für Android läuft gerade ein geschlossener Test bei Google Play. Beide Builds liegen zusätzlich als Anhang am aktuellen Release im App-Repository.</span>
+
         <span lang="en">Kiebitz is free for now, with no ads and no in-app purchases. The Windows build is ready to download, and for Android a closed test is currently running on Google Play. Both builds are also attached to the latest release in the app repository.</span>
-        <span lang="fr">Kiebitz est gratuit pour l’instant, sans publicité ni achats intégrés. La version Windows se télécharge directement ; pour Android, un test fermé est en cours sur Google Play. Les deux builds sont aussi joints à la dernière release du dépôt de l’application.</span>
-        <span lang="es">Kiebitz es gratuito por ahora, sin anuncios ni compras dentro de la app. La versión de Windows se puede descargar ya y para Android hay una prueba cerrada en Google Play. Ambas compilaciones están además adjuntas a la última release del repositorio.</span>
-        <span lang="zh">Kiebitz 目前免费，无广告、无应用内购买。Windows 版可以直接下载，Android 版正在 Google Play 上进行封闭测试。两个版本也都作为附件挂在应用仓库的最新发布里。</span>
-        <span lang="hi">Kiebitz फ़िलहाल मुफ़्त है — न विज्ञापन, न इन-ऐप ख़रीद। Windows संस्करण सीधे डाउनलोड किया जा सकता है; Android के लिए Google Play पर क्लोज़्ड टेस्ट चल रहा है। दोनों बिल्ड ऐप रिपॉज़िटरी की ताज़ा रिलीज़ के साथ भी संलग्न हैं।</span>
-        <span lang="ar">‏Kiebitz مجاني في الوقت الحالي، بلا إعلانات وبلا مشتريات داخل التطبيق. نسخة Windows جاهزة للتنزيل، وعلى Android يجري اختبار مغلق على Google Play. كما أن النسختين مرفقتان بأحدث إصدار في مستودع التطبيق.</span>
+
+
+
+
+
       </p>
       <div class="dl rv" style="margin-top:32px">
         <article class="dl-card">
           <h3>Windows</h3>
-          <p><span lang="de">Installer für den Desktop. Enthält den nativen Stockfish und aktualisiert sich selbst.</span><span lang="en">Desktop installer. Ships the native Stockfish and updates itself.</span><span lang="fr">Installeur pour le bureau. Livré avec le Stockfish natif et se met à jour tout seul.</span><span lang="es">Instalador de escritorio. Incluye el Stockfish nativo y se actualiza solo.</span><span lang="zh">桌面安装包。内置原生 Stockfish，并会自动更新。</span><span lang="hi">डेस्कटॉप इंस्टॉलर। नेटिव Stockfish साथ आता है और ख़ुद अपडेट होता है।</span><span lang="ar">مثبِّت لسطح المكتب. يتضمّن محرّك Stockfish الأصلي ويحدّث نفسه.</span></p>
-          <p class="dl-meta"><span lang="de">Installer · Auto-Update</span><span lang="en">Installer · auto-update</span><span lang="fr">Installeur · mise à jour auto</span><span lang="es">Instalador · actualización automática</span><span lang="zh">安装包 · 自动更新</span><span lang="hi">इंस्टॉलर · ऑटो-अपडेट</span><span lang="ar">مثبِّت · تحديث تلقائي</span></p>
+          <p><span lang="en">Desktop installer. Ships the native Stockfish and updates itself.</span></p>
+          <p class="dl-meta"><span lang="en">Installer · auto-update</span></p>
           <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
-            <span lang="de">Windows-Installer</span><span lang="en">Windows installer</span><span lang="fr">Installeur Windows</span><span lang="es">Instalador de Windows</span><span lang="zh">Windows 安装包</span><span lang="hi">Windows इंस्टॉलर</span><span lang="ar">مثبِّت Windows</span>
+            <span lang="en">Windows installer</span>
           </a>
         </article>
         <article class="dl-card">
           <h3>Android</h3>
-          <p><span lang="de">Läuft gerade als geschlossener Test bei Google Play, mit nativem Stockfish pro ABI. Wer nicht am Test teilnehmen will, installiert die APK direkt.</span><span lang="en">Currently running as a closed test on Google Play, with native Stockfish per ABI. If you would rather not join the test, install the APK directly.</span><span lang="fr">Actuellement en test fermé sur Google Play, avec Stockfish natif par ABI. Si vous préférez ne pas rejoindre le test, installez directement l’APK.</span><span lang="es">Ahora mismo en prueba cerrada en Google Play, con Stockfish nativo por ABI. Si prefieres no entrar en la prueba, instala el APK directamente.</span><span lang="zh">目前在 Google Play 上进行封闭测试，按 ABI 提供原生 Stockfish。不想参加测试的话，可以直接安装 APK。</span><span lang="hi">अभी Google Play पर क्लोज़्ड टेस्ट के रूप में, हर ABI के लिए नेटिव Stockfish के साथ। टेस्ट में शामिल नहीं होना चाहते तो सीधे APK इंस्टॉल कीजिए।</span><span lang="ar">يعمل حاليًا كاختبار مغلق على Google Play، بمحرّك Stockfish أصلي لكل معمارية. وإن لم ترغب في الانضمام إلى الاختبار، فثبّت ملف APK مباشرة.</span></p>
-          <p class="dl-meta"><span lang="de">Closed Test · APK · LAN-Sync</span><span lang="en">Closed test · APK · LAN sync</span><span lang="fr">Test fermé · APK · sync LAN</span><span lang="es">Prueba cerrada · APK · sync LAN</span><span lang="zh">封闭测试 · APK · 局域网同步</span><span lang="hi">क्लोज़्ड टेस्ट · APK · LAN सिंक</span><span lang="ar">اختبار مغلق · APK · مزامنة عبر الشبكة المحلية</span></p>
+          <p><span lang="en">Currently running as a closed test on Google Play, with native Stockfish per ABI. If you would rather not join the test, install the APK directly.</span></p>
+          <p class="dl-meta"><span lang="en">Closed test · APK · LAN sync</span></p>
           <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
-            <span lang="de">Android · Beta-Test &amp; APK</span><span lang="en">Android · beta test &amp; APK</span><span lang="fr">Android · test bêta &amp; APK</span><span lang="es">Android · prueba beta &amp; APK</span><span lang="zh">Android · 测试计划与 APK</span><span lang="hi">Android · बीटा टेस्ट और APK</span><span lang="ar">‏Android · الاختبار التجريبي وملف APK</span>
+            <span lang="en">Android · beta test &amp; APK</span>
           </a>
         </article>
       </div>
       <p class="small" style="margin-top:22px">
-        <span lang="de">Beta: Funktionen ändern sich, und einzelne Rauheiten sind eingeplant. Fehler und Wünsche gern im Repository melden: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+
         <span lang="en">Beta: features still change and some rough edges are expected. Bugs and wishes are welcome in the repository: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
-        <span lang="fr">Bêta : les fonctions évoluent encore et quelques aspérités sont prévues. Bogues et souhaits sont les bienvenus dans le dépôt : <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
-        <span lang="es">Beta: las funciones aún cambian y hay asperezas previstas. Los fallos y las peticiones son bienvenidos en el repositorio: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
-        <span lang="zh">测试版：功能仍在变动，个别粗糙之处在意料之中。欢迎在仓库里提交问题和需求：<a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>。</span>
-        <span lang="hi">बीटा: सुविधाएँ अभी बदल रही हैं और कुछ खुरदुरापन अपेक्षित है। बग और सुझाव रिपॉज़िटरी में भेजें: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>।</span>
-        <span lang="ar">نسخة تجريبية: المزايا لا تزال تتغيّر وبعض الخشونة متوقّعة. الأخطاء والاقتراحات مرحّب بها في المستودع: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+
+
+
+
+
       </p>
     </div>
   </section>
@@ -525,56 +550,56 @@
   <!-- ── 07 Feedback ─────────────────────────────────────────────────────── -->
   <section class="section feedback-section" id="feedback">
     <div class="wrap">
-      <p class="eyebrow"><b>07</b> <span lang="de">Feedback</span><span lang="en">Feedback</span><span lang="fr">Retours</span><span lang="es">Comentarios</span><span lang="zh">反馈</span><span lang="hi">फ़ीडबैक</span><span lang="ar">الملاحظات</span></p>
+      <p class="eyebrow"><b>07</b> <span lang="en">Feedback</span></p>
       <div class="feedback-grid">
         <div class="feedback-copy">
           <h2>
-            <span lang="de">Sag dem Kiebitz, was dir auffällt.</span>
+
             <span lang="en">Tell Kiebitz what you notice.</span>
-            <span lang="fr">Dites à Kiebitz ce que vous remarquez.</span>
-            <span lang="es">Cuéntale a Kiebitz lo que veas.</span>
-            <span lang="zh">把你注意到的告诉 Kiebitz。</span>
-            <span lang="hi">जो आपको दिखे, Kiebitz को बताइए।</span>
-            <span lang="ar">أخبر Kiebitz بما تلاحظه.</span>
+
+
+
+
+
           </h2>
           <p class="lede">
-            <span lang="de">Ob kurzer Eindruck, reproduzierbarer Absturz oder Idee für den nächsten Zug: Jede Meldung landet direkt beim Entwickler.</span>
+
             <span lang="en">Whether it is a quick impression, a reproducible crash or an idea for the next move: every report goes straight to the developer.</span>
-            <span lang="fr">Simple impression, plantage reproductible ou idée pour le prochain coup : chaque message arrive directement chez le développeur.</span>
-            <span lang="es">Ya sea una impresión rápida, un fallo reproducible o una idea para la próxima jugada: cada mensaje llega directamente al desarrollador.</span>
-            <span lang="zh">无论是一句随手感受、一个可复现的崩溃，还是下一步的点子：每条反馈都直接送到开发者手上。</span>
-            <span lang="hi">छोटी-सी राय हो, दोहराया जा सकने वाला क्रैश हो, या अगली चाल का कोई विचार — हर संदेश सीधे डेवलपर तक पहुँचता है।</span>
-            <span lang="ar">سواء كان انطباعًا سريعًا أو عطلًا قابلًا للتكرار أو فكرة للنقلة القادمة: كل رسالة تصل مباشرة إلى المطوّر.</span>
+
+
+
+
+
           </p>
           <div class="feedback-notes" aria-label="Notes">
-            <p><b>01</b><span><strong><span lang="de">Kontext hilft.</span><span lang="en">Context helps.</span><span lang="fr">Le contexte aide.</span><span lang="es">El contexto ayuda.</span><span lang="zh">上下文很有用。</span><span lang="hi">संदर्भ मदद करता है।</span><span lang="ar">السياق يساعد.</span></strong><span lang="de">Bei Fehlern bitte kurz beschreiben, was direkt davor passiert ist.</span><span lang="en">For bugs, briefly describe what happened immediately before.</span><span lang="fr">Pour un bogue, décrivez brièvement ce qui s’est passé juste avant.</span><span lang="es">Para los fallos, describe brevemente qué pasó justo antes.</span><span lang="zh">遇到问题时，请简单说明紧接着之前发生了什么。</span><span lang="hi">बग की स्थिति में, कृपया संक्षेप में बताइए कि उससे ठीक पहले क्या हुआ था।</span><span lang="ar">في حالة الأعطال، صِف باختصار ما حدث قبلها مباشرة.</span></span></p>
-            <p><b>02</b><span><strong><span lang="de">Antwort ist optional.</span><span lang="en">A reply is optional.</span><span lang="fr">La réponse est facultative.</span><span lang="es">La respuesta es opcional.</span><span lang="zh">回复是可选的。</span><span lang="hi">जवाब वैकल्पिक है।</span><span lang="ar">الردّ اختياري.</span></strong><span lang="de">Ohne E-Mail bleibt deine Meldung anonym.</span><span lang="en">Without an email address, your report stays anonymous.</span><span lang="fr">Sans adresse e-mail, votre message reste anonyme.</span><span lang="es">Sin dirección de correo, tu mensaje queda anónimo.</span><span lang="zh">不填邮箱，你的反馈就是匿名的。</span><span lang="hi">ई-मेल न दें तो आपका संदेश गुमनाम रहेगा।</span><span lang="ar">من دون بريد إلكتروني تبقى رسالتك مجهولة المصدر.</span></span></p>
-            <p><b>03</b><span><strong><span lang="de">Keine Telemetrie.</span><span lang="en">No telemetry.</span><span lang="fr">Pas de télémétrie.</span><span lang="es">Sin telemetría.</span><span lang="zh">没有遥测。</span><span lang="hi">कोई टेलीमेट्री नहीं।</span><span lang="ar">لا قياس عن بُعد.</span></strong><span lang="de">Es wird nur gesendet, was du hier selbst einträgst.</span><span lang="en">Only what you enter here is sent.</span><span lang="fr">Seul ce que vous saisissez ici est envoyé.</span><span lang="es">Solo se envía lo que escribas aquí.</span><span lang="zh">只发送你在这里亲手填写的内容。</span><span lang="hi">सिर्फ़ वही भेजा जाता है जो आप यहाँ ख़ुद लिखते हैं।</span><span lang="ar">لا يُرسَل سوى ما تكتبه هنا بنفسك.</span></span></p>
+            <p><b>01</b><span><strong><span lang="en">Context helps.</span></strong><span lang="en">For bugs, briefly describe what happened immediately before.</span></span></p>
+            <p><b>02</b><span><strong><span lang="en">A reply is optional.</span></strong><span lang="en">Without an email address, your report stays anonymous.</span></span></p>
+            <p><b>03</b><span><strong><span lang="en">No telemetry.</span></strong><span lang="en">Only what you enter here is sent.</span></span></p>
           </div>
         </div>
 
         <details class="feedback-package rv">
           <summary class="feedback-package-summary">
             <span class="package-topline">
-              <span class="package-kicker"><span lang="de">Versiegelte Zuglinie</span><span lang="en">Sealed move line</span><span lang="fr">Ligne de jeu scellée</span><span lang="es">Línea de juego sellada</span><span lang="zh">封缄的着法线</span><span lang="hi">सीलबंद चाल-रेखा</span><span lang="ar">خط نقلات مختوم</span></span>
+              <span class="package-kicker"><span lang="en">Sealed move line</span></span>
               <span class="package-address">kiebitz.chess@gmail.com</span>
             </span>
             <span class="package-main">
               <span class="package-seal" aria-hidden="true"><img src="assets/icon-128.png" width="44" height="44" alt=""></span>
               <span class="package-copy">
-                <strong><span lang="de">Du bist am Zug.</span><span lang="en">Your move.</span><span lang="fr">À vous de jouer.</span><span lang="es">Te toca mover.</span><span lang="zh">该你走了。</span><span lang="hi">अब आपकी चाल।</span><span lang="ar">الدور عليك.</span></strong>
-                <span><span lang="de">Feedback, Absturz oder Feature-Idee in einem Zug direkt zum Entwickler.</span><span lang="en">Send feedback, a crash or a feature idea straight to the developer in one move.</span><span lang="fr">Un retour, un plantage ou une idée de fonction, envoyé au développeur en un coup.</span><span lang="es">Un comentario, un fallo o una idea, directos al desarrollador en una sola jugada.</span><span lang="zh">一步之内，把反馈、崩溃或功能想法直接寄给开发者。</span><span lang="hi">फ़ीडबैक, क्रैश या फ़ीचर का विचार — एक ही चाल में सीधे डेवलपर तक।</span><span lang="ar">ملاحظة أو عطل أو فكرة ميزة، إلى المطوّر مباشرة بنقلة واحدة.</span></span>
+                <strong><span lang="en">Your move.</span></strong>
+                <span><span lang="en">Send feedback, a crash or a feature idea straight to the developer in one move.</span></span>
               </span>
               <span class="package-action">
-                <span data-package-open><span lang="de">Formular öffnen</span><span lang="en">Open form</span><span lang="fr">Ouvrir le formulaire</span><span lang="es">Abrir formulario</span><span lang="zh">打开表单</span><span lang="hi">फ़ॉर्म खोलें</span><span lang="ar">افتح النموذج</span></span>
-                <span data-package-close><span lang="de">Formular schließen</span><span lang="en">Close form</span><span lang="fr">Fermer le formulaire</span><span lang="es">Cerrar formulario</span><span lang="zh">收起表单</span><span lang="hi">फ़ॉर्म बंद करें</span><span lang="ar">أغلق النموذج</span></span>
+                <span data-package-open><span lang="en">Open form</span></span>
+                <span data-package-close><span lang="en">Close form</span></span>
                 <i aria-hidden="true">↘</i>
               </span>
             </span>
             <span class="package-meta">
               <span>f7 → inbox</span>
-              <span><span lang="de">Feedback · Absturz · Wunsch</span><span lang="en">Feedback · crash · feature</span><span lang="fr">Retour · plantage · souhait</span><span lang="es">Comentario · fallo · idea</span><span lang="zh">反馈 · 崩溃 · 需求</span><span lang="hi">फ़ीडबैक · क्रैश · सुझाव</span><span lang="ar">ملاحظة · عطل · اقتراح</span></span>
-              <span><span lang="de">Kein Konto · keine Telemetrie</span><span lang="en">No account · no telemetry</span><span lang="fr">Pas de compte · pas de télémétrie</span><span lang="es">Sin cuenta · sin telemetría</span><span lang="zh">无需账号 · 无遥测</span><span lang="hi">कोई खाता नहीं · कोई टेलीमेट्री नहीं</span><span lang="ar">بلا حساب · بلا قياس عن بُعد</span></span>
+              <span><span lang="en">Feedback · crash · feature</span></span>
+              <span><span lang="en">No account · no telemetry</span></span>
             </span>
           </summary>
 
@@ -586,78 +611,78 @@
             <label class="honey" aria-hidden="true">Website<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
 
           <fieldset class="report-types">
-            <legend><span lang="de">Was möchtest du melden?</span><span lang="en">What would you like to report?</span><span lang="fr">Que souhaitez-vous signaler ?</span><span lang="es">¿Qué quieres contarnos?</span><span lang="zh">你想反馈什么？</span><span lang="hi">आप क्या बताना चाहते हैं?</span><span lang="ar">ما الذي تودّ الإبلاغ عنه؟</span></legend>
+            <legend><span lang="en">What would you like to report?</span></legend>
             <label>
               <input class="report-type-input" type="radio" name="report_type" value="Feedback" checked>
               <span class="report-type-card">
                 <span class="report-type-n">01</span>
-                <span><b><span lang="de">Feedback</span><span lang="en">Feedback</span><span lang="fr">Retour</span><span lang="es">Comentario</span><span lang="zh">反馈</span><span lang="hi">फ़ीडबैक</span><span lang="ar">ملاحظة</span></b><small><span lang="de">Eindruck oder Hinweis</span><span lang="en">Impression or note</span><span lang="fr">Impression ou remarque</span><span lang="es">Impresión o apunte</span><span lang="zh">感受或提示</span><span lang="hi">राय या टिप्पणी</span><span lang="ar">انطباع أو ملحوظة</span></small></span>
+                <span><b><span lang="en">Feedback</span></b><small><span lang="en">Impression or note</span></small></span>
               </span>
             </label>
             <label>
               <input class="report-type-input" type="radio" name="report_type" value="Crash report">
               <span class="report-type-card">
                 <span class="report-type-n">02</span>
-                <span><b><span lang="de">Absturz</span><span lang="en">Crash</span><span lang="fr">Plantage</span><span lang="es">Fallo</span><span lang="zh">崩溃</span><span lang="hi">क्रैश</span><span lang="ar">عطل</span></b><small><span lang="de">Fehler nachvollziehen</span><span lang="en">Reproduce a failure</span><span lang="fr">Reproduire une erreur</span><span lang="es">Reproducir un error</span><span lang="zh">复现一个故障</span><span lang="hi">किसी ख़राबी को दोहराना</span><span lang="ar">إعادة إنتاج خلل</span></small></span>
+                <span><b><span lang="en">Crash</span></b><small><span lang="en">Reproduce a failure</span></small></span>
               </span>
             </label>
             <label>
               <input class="report-type-input" type="radio" name="report_type" value="Feature request">
               <span class="report-type-card">
                 <span class="report-type-n">03</span>
-                <span><b><span lang="de">Wunsch</span><span lang="en">Feature</span><span lang="fr">Souhait</span><span lang="es">Idea</span><span lang="zh">需求</span><span lang="hi">सुझाव</span><span lang="ar">اقتراح</span></b><small><span lang="de">Idee für Kiebitz</span><span lang="en">An idea for Kiebitz</span><span lang="fr">Une idée pour Kiebitz</span><span lang="es">Una idea para Kiebitz</span><span lang="zh">给 Kiebitz 的想法</span><span lang="hi">Kiebitz के लिए एक विचार</span><span lang="ar">فكرة من أجل Kiebitz</span></small></span>
+                <span><b><span lang="en">Feature</span></b><small><span lang="en">An idea for Kiebitz</span></small></span>
               </span>
             </label>
           </fieldset>
 
           <div class="form-field">
-            <label for="feedback-title"><span lang="de">Kurzfassung</span><span lang="en">Summary</span><span lang="fr">Résumé</span><span lang="es">Resumen</span><span lang="zh">简述</span><span lang="hi">सारांश</span><span lang="ar">ملخّص</span></label>
-            <input id="feedback-title" name="summary" type="text" required maxlength="120" autocomplete="off" data-placeholder-de="Was ist passiert oder was wünschst du dir?" data-placeholder-en="What happened or what would you like to see?" data-placeholder-fr="Que s’est-il passé ou que souhaitez-vous ?" data-placeholder-es="¿Qué ha pasado o qué te gustaría ver?" data-placeholder-zh="发生了什么，或者你希望有什么？" data-placeholder-hi="क्या हुआ, या आप क्या चाहेंगे?" data-placeholder-ar="ماذا حدث أو ماذا تتمنّى أن ترى؟">
+            <label for="feedback-title"><span lang="en">Summary</span></label>
+            <input id="feedback-title" name="summary" type="text" required maxlength="120" autocomplete="off" data-placeholder-en="What happened or what would you like to see?">
           </div>
 
           <div class="form-field">
             <span class="field-label">
-              <label for="feedback-message"><span lang="de">Details</span><span lang="en">Details</span><span lang="fr">Détails</span><span lang="es">Detalles</span><span lang="zh">详情</span><span lang="hi">विवरण</span><span lang="ar">التفاصيل</span></label>
+              <label for="feedback-message"><span lang="en">Details</span></label>
               <span class="field-count" data-feedback-count>0 / 4000</span>
             </span>
-            <textarea id="feedback-message" name="message" required minlength="20" maxlength="4000" rows="6" data-placeholder-de="Beschreibe den Ablauf, das erwartete Verhalten oder deine Idee möglichst konkret." data-placeholder-en="Describe the steps, expected behaviour or your idea as concretely as possible." data-placeholder-fr="Décrivez les étapes, le comportement attendu ou votre idée aussi concrètement que possible." data-placeholder-es="Describe los pasos, el comportamiento esperado o tu idea de la forma más concreta posible." data-placeholder-zh="尽量具体地描述操作步骤、你期望的行为，或者你的想法。" data-placeholder-hi="चरण, अपेक्षित व्यवहार या अपना विचार यथासंभव ठोस रूप में लिखिए।" data-placeholder-ar="صِف الخطوات أو السلوك المتوقّع أو فكرتك بأكبر قدر ممكن من التحديد."></textarea>
-            <span class="field-hint"><span lang="de">Keine Passwörter, privaten Partien oder anderen sensiblen Daten einfügen.</span><span lang="en">Do not include passwords, private games or other sensitive data.</span><span lang="fr">N’incluez ni mots de passe, ni parties privées, ni autres données sensibles.</span><span lang="es">No incluyas contraseñas, partidas privadas ni otros datos sensibles.</span><span lang="zh">请勿填入密码、私人对局或其他敏感数据。</span><span lang="hi">पासवर्ड, निजी बाज़ियाँ या अन्य संवेदनशील जानकारी न डालें।</span><span lang="ar">لا تُدرج كلمات مرور أو مباريات خاصة أو أي بيانات حسّاسة أخرى.</span></span>
+            <textarea id="feedback-message" name="message" required minlength="20" maxlength="4000" rows="6" data-placeholder-en="Describe the steps, expected behaviour or your idea as concretely as possible."></textarea>
+            <span class="field-hint"><span lang="en">Do not include passwords, private games or other sensitive data.</span></span>
           </div>
 
           <div class="form-row">
             <div class="form-field">
-              <label for="feedback-platform"><span lang="de">Plattform</span><span lang="en">Platform</span><span lang="fr">Plateforme</span><span lang="es">Plataforma</span><span lang="zh">平台</span><span lang="hi">प्लेटफ़ॉर्म</span><span lang="ar">المنصّة</span> <small><span lang="de">optional</span><span lang="en">optional</span><span lang="fr">facultatif</span><span lang="es">opcional</span><span lang="zh">选填</span><span lang="hi">वैकल्पिक</span><span lang="ar">اختياري</span></small></label>
+              <label for="feedback-platform"><span lang="en">Platform</span> <small><span lang="en">optional</span></small></label>
               <select id="feedback-platform" name="platform">
                 <option value="">—</option>
                 <option value="Windows">Windows</option>
                 <option value="Android">Android</option>
-                <option value="Website" data-label-de="Website" data-label-en="Website" data-label-fr="Site web" data-label-es="Sitio web" data-label-zh="网站" data-label-hi="वेबसाइट" data-label-ar="الموقع">Website</option>
-                <option value="Other" data-label-de="Andere" data-label-en="Other" data-label-fr="Autre" data-label-es="Otra" data-label-zh="其他" data-label-hi="अन्य" data-label-ar="أخرى">Other</option>
+                <option value="Website" data-label-en="Website">Website</option>
+                <option value="Other" data-label-en="Other">Other</option>
               </select>
             </div>
             <div class="form-field">
-              <label for="feedback-version"><span lang="de">App-Version</span><span lang="en">App version</span><span lang="fr">Version de l’app</span><span lang="es">Versión de la app</span><span lang="zh">应用版本</span><span lang="hi">ऐप संस्करण</span><span lang="ar">إصدار التطبيق</span> <small><span lang="de">optional</span><span lang="en">optional</span><span lang="fr">facultatif</span><span lang="es">opcional</span><span lang="zh">选填</span><span lang="hi">वैकल्पिक</span><span lang="ar">اختياري</span></small></label>
-              <input id="feedback-version" name="app_version" type="text" maxlength="40" autocomplete="off" data-placeholder-de="z. B. 0.9.4" data-placeholder-en="e.g. 0.9.4" data-placeholder-fr="p. ex. 0.9.4" data-placeholder-es="p. ej. 0.9.4" data-placeholder-zh="例如 0.9.4" data-placeholder-hi="जैसे 0.9.4" data-placeholder-ar="مثال: 0.9.4">
+              <label for="feedback-version"><span lang="en">App version</span> <small><span lang="en">optional</span></small></label>
+              <input id="feedback-version" name="app_version" type="text" maxlength="40" autocomplete="off" data-placeholder-en="e.g. 0.9.4">
             </div>
           </div>
 
           <div class="form-field">
-            <label for="feedback-email"><span lang="de">E-Mail</span><span lang="en">Email</span><span lang="fr">E-mail</span><span lang="es">Correo</span><span lang="zh">电子邮箱</span><span lang="hi">ई-मेल</span><span lang="ar">البريد الإلكتروني</span> <small><span lang="de">optional · nur für eine Antwort</span><span lang="en">optional · only for a reply</span><span lang="fr">facultatif · uniquement pour une réponse</span><span lang="es">opcional · solo para responderte</span><span lang="zh">选填 · 仅用于回复</span><span lang="hi">वैकल्पिक · केवल जवाब देने के लिए</span><span lang="ar">اختياري · للردّ فقط</span></small></label>
+            <label for="feedback-email"><span lang="en">Email</span> <small><span lang="en">optional · only for a reply</span></small></label>
             <input id="feedback-email" name="email" type="email" maxlength="160" autocomplete="email" placeholder="name@example.com">
           </div>
 
           <div class="form-submit">
             <p>
-              <span lang="de">Mit dem Absenden werden deine Angaben über FormSubmit per E-Mail übermittelt. <a href="privacy/index.html#c12">Details zum Datenschutz</a>.</span>
+
               <span lang="en">When you send this form, your entries are transmitted by email via FormSubmit. <a href="privacy/index.html#c12">Privacy details</a>.</span>
-              <span lang="fr">En envoyant ce formulaire, vos données sont transmises par e-mail via FormSubmit. <a href="privacy/index.html#c12">Détails sur la confidentialité</a>.</span>
-              <span lang="es">Al enviar el formulario, tus datos se transmiten por correo a través de FormSubmit. <a href="privacy/index.html#c12">Detalles de privacidad</a>.</span>
-              <span lang="zh">提交后，你填写的内容会通过 FormSubmit 以电子邮件发送。<a href="privacy/index.html#c12">隐私说明</a>。</span>
-              <span lang="hi">भेजने पर आपकी जानकारी FormSubmit के ज़रिए ई-मेल से भेजी जाती है। <a href="privacy/index.html#c12">गोपनीयता विवरण</a>।</span>
-              <span lang="ar">عند الإرسال تُنقَل بياناتك بالبريد الإلكتروني عبر FormSubmit. <a href="privacy/index.html#c12">تفاصيل الخصوصية</a>.</span>
+
+
+
+
+
             </p>
             <button class="btn btn-primary feedback-send" type="submit" data-feedback-send>
-              <span lang="de">Meldung absenden</span><span lang="en">Send report</span><span lang="fr">Envoyer</span><span lang="es">Enviar mensaje</span><span lang="zh">发送反馈</span><span lang="hi">भेजें</span><span lang="ar">أرسل الرسالة</span>
+              <span lang="en">Send report</span>
             </button>
           </div>
           <p class="form-status" data-feedback-status role="status" aria-live="polite"></p>
@@ -674,22 +699,22 @@
       <div class="flock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       <p class="mark-name">Kiebitz</p>
       <p class="foot-note" style="margin-top:8px">
-        <span lang="de">Zug um Zugvogel. Local-first Schach-Begleiter für Windows und Android. Source-available, nicht Open Source. Stockfish steht unter GPL-3.0.</span>
+
         <span lang="en">Moves take flight. A local-first chess companion for Windows and Android. Source-available, not open source. Stockfish is licensed under GPL-3.0.</span>
-        <span lang="fr">Coup d’aile. Un compagnon d’échecs local-first pour Windows et Android. Source-available, pas open source. Stockfish est sous licence GPL-3.0.</span>
-        <span lang="es">Jugadas que vuelan. Un compañero de ajedrez local-first para Windows y Android. Source-available, no open source. Stockfish se distribuye bajo GPL-3.0.</span>
-        <span lang="zh">步步高飞。面向 Windows 与 Android 的本地优先国际象棋助手。源码可见但非开源。Stockfish 采用 GPL-3.0 许可。</span>
-        <span lang="hi">हर चाल, एक उड़ान। Windows और Android के लिए लोकल-फ़र्स्ट शतरंज साथी। सोर्स-अवेलेबल, ओपन सोर्स नहीं। Stockfish GPL-3.0 के अंतर्गत है।</span>
-        <span lang="ar">نقلة تُحلّق. رفيق شطرنج محلي أولًا لنظامي Windows وAndroid. الشيفرة متاحة لكنها ليست مفتوحة المصدر. ومحرّك Stockfish مرخّص بموجب GPL-3.0.</span>
+
+
+
+
+
       </p>
       <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
     </div>
     <nav class="foot-links" aria-label="Footer">
-      <a href="#feedback"><span lang="de">Feedback melden</span><span lang="en">Send feedback</span><span lang="fr">Envoyer un retour</span><span lang="es">Enviar comentarios</span><span lang="zh">发送反馈</span><span lang="hi">फ़ीडबैक भेजें</span><span lang="ar">أرسل ملاحظة</span></a>
-      <a href="privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
-      <a href="impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
+      <a href="#feedback"><span lang="en">Send feedback</span></a>
+      <a href="privacy/index.html"><span lang="en">Privacy</span></a>
+      <a href="impressum/index.html"><span lang="en">Legal notice</span></a>
       <a href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">Releases</a>
-      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span><span lang="fr">Code source</span><span lang="es">Código fuente</span><span lang="zh">源代码</span><span lang="hi">सोर्स कोड</span><span lang="ar">الشيفرة المصدرية</span></a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="en">Source code</span></a>
     </nav>
   </div>
 </footer>
@@ -709,13 +734,13 @@
       <div class="modal-titles">
         <p class="modal-eyebrow">Kiebitz</p>
         <h2 id="beta-title">
-          <span lang="de">Android läuft im geschlossenen Test</span>
+
           <span lang="en">Android is in closed testing</span>
-          <span lang="fr">Android est en test fermé</span>
-          <span lang="es">Android está en prueba cerrada</span>
-          <span lang="zh">Android 版正在封闭测试中</span>
-          <span lang="hi">Android क्लोज़्ड टेस्ट में है</span>
-          <span lang="ar">‏Android في مرحلة اختبار مغلق</span>
+
+
+
+
+
         </h2>
       </div>
       <button class="modal-x" type="button" data-beta-close data-aria="close" aria-label="Close">&#10005;</button>
@@ -723,13 +748,13 @@
 
     <div class="modal-body">
       <p class="modal-lede" id="beta-lede">
-        <span lang="de">Für Windows kannst du Kiebitz schon laden. Für die Android-App läuft gerade ein geschlossener Test bei Google Play, und über ein paar zusätzliche Tester würde ich mich sehr freuen. Zum Mitmachen sind es drei Schritte:</span>
+
         <span lang="en">You can already download Kiebitz for Windows. For the Android app I’m currently running a closed test on Google Play, and I would be very grateful for a few more testers. To participate, there are three steps:</span>
-        <span lang="fr">Kiebitz est déjà téléchargeable pour Windows. Pour l’application Android, un test fermé est en cours sur Google Play, et quelques testeurs de plus me feraient très plaisir. Participer prend trois étapes :</span>
-        <span lang="es">Kiebitz ya se puede descargar para Windows. Para la app de Android hay ahora mismo una prueba cerrada en Google Play, y agradecería mucho unas cuantas personas más. Participar son tres pasos:</span>
-        <span lang="zh">Windows 版现在就能下载。Android 应用正在 Google Play 上进行封闭测试，如果能多几位测试者我会非常感谢。参加只需三步：</span>
-        <span lang="hi">Windows के लिए Kiebitz अभी डाउनलोड किया जा सकता है। Android ऐप के लिए Google Play पर एक क्लोज़्ड टेस्ट चल रहा है, और कुछ और टेस्टर मिलें तो बहुत अच्छा हो। शामिल होने के तीन चरण हैं:</span>
-        <span lang="ar">يمكنك تنزيل Kiebitz لنظام Windows الآن. أما تطبيق Android فيخضع حاليًا لاختبار مغلق على Google Play، وسأكون ممتنًا جدًا لبضعة مختبِرين إضافيين. المشاركة تتم في ثلاث خطوات:</span>
+
+
+
+
+
       </p>
 
       <ol class="steps">
@@ -737,8 +762,8 @@
           <a class="step" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
             <span class="step-n" aria-hidden="true">1</span>
             <span class="step-txt">
-              <b><span lang="de">Der Google-Gruppe beitreten</span><span lang="en">Join the Google Group</span><span lang="fr">Rejoindre le groupe Google</span><span lang="es">Únete al grupo de Google</span><span lang="zh">加入 Google 群组</span><span lang="hi">Google ग्रुप से जुड़ें</span><span lang="ar">انضم إلى مجموعة Google</span></b>
-              <span class="step-sub"><span lang="de">Die Mitgliedschaft schaltet den Test für dein Google-Konto frei.</span><span lang="en">Membership unlocks the test for your Google account.</span><span lang="fr">L’adhésion débloque le test pour votre compte Google.</span><span lang="es">Ser miembro habilita la prueba en tu cuenta de Google.</span><span lang="zh">加入群组即可为你的 Google 账号解锁测试。</span><span lang="hi">सदस्यता आपके Google खाते के लिए टेस्ट खोल देती है।</span><span lang="ar">تفتح العضوية الاختبار لحسابك على Google.</span></span>
+              <b><span lang="en">Join the Google Group</span></b>
+              <span class="step-sub"><span lang="en">Membership unlocks the test for your Google account.</span></span>
               <span class="step-url">groups.google.com/g/kiebitz-beta-test</span>
             </span>
             <span class="step-go" aria-hidden="true">&#8599;</span>
@@ -748,8 +773,8 @@
           <a class="step" href="https://play.google.com/apps/testing/de.torim.kiebitz" target="_blank" rel="noopener">
             <span class="step-n" aria-hidden="true">2</span>
             <span class="step-txt">
-              <b><span lang="de">Dem geschlossenen Test beitreten</span><span lang="en">Join the closed test</span><span lang="fr">Rejoindre le test fermé</span><span lang="es">Únete a la prueba cerrada</span><span lang="zh">加入封闭测试</span><span lang="hi">क्लोज़्ड टेस्ट में शामिल हों</span><span lang="ar">انضم إلى الاختبار المغلق</span></b>
-              <span class="step-sub"><span lang="de">Mit demselben Google-Konto anmelden wie in Schritt 1.</span><span lang="en">Opt in with the same Google account as in step 1.</span><span lang="fr">Inscrivez-vous avec le même compte Google qu’à l’étape 1.</span><span lang="es">Acepta con la misma cuenta de Google del paso 1.</span><span lang="zh">用第 1 步里的同一个 Google 账号确认加入。</span><span lang="hi">चरण 1 वाले उसी Google खाते से ऑप्ट-इन करें।</span><span lang="ar">اشترك بالحساب نفسه المستخدم في الخطوة 1.</span></span>
+              <b><span lang="en">Join the closed test</span></b>
+              <span class="step-sub"><span lang="en">Opt in with the same Google account as in step 1.</span></span>
               <span class="step-url">play.google.com/apps/testing/de.torim.kiebitz</span>
             </span>
             <span class="step-go" aria-hidden="true">&#8599;</span>
@@ -759,8 +784,8 @@
           <a class="step" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener">
             <span class="step-n" aria-hidden="true">3</span>
             <span class="step-txt">
-              <b><span lang="de">Auf Android installieren</span><span lang="en">Install it on Android</span><span lang="fr">Installer sur Android</span><span lang="es">Instálalo en Android</span><span lang="zh">在 Android 上安装</span><span lang="hi">Android पर इंस्टॉल करें</span><span lang="ar">ثبّته على Android</span></b>
-              <span class="step-sub"><span lang="de">Play-Store-Eintrag öffnen und Kiebitz installieren.</span><span lang="en">Open the Play Store listing and install Kiebitz.</span><span lang="fr">Ouvrez la fiche Play Store et installez Kiebitz.</span><span lang="es">Abre la ficha de Play Store e instala Kiebitz.</span><span lang="zh">打开 Play 商店页面并安装 Kiebitz。</span><span lang="hi">Play Store की लिस्टिंग खोलिए और Kiebitz इंस्टॉल कीजिए।</span><span lang="ar">افتح صفحة التطبيق في متجر Play وثبّت Kiebitz.</span></span>
+              <b><span lang="en">Install it on Android</span></b>
+              <span class="step-sub"><span lang="en">Open the Play Store listing and install Kiebitz.</span></span>
               <span class="step-url">play.google.com/store/apps/details?id=de.torim.kiebitz</span>
             </span>
             <span class="step-go" aria-hidden="true">&#8599;</span>
@@ -769,21 +794,21 @@
       </ol>
 
       <p class="modal-note">
-        <span lang="de">Google verlangt, dass Tester mindestens 14 Tage angemeldet bleiben. Noch hilfreicher ist es natürlich, die App wirklich auszuprobieren und ehrliches Feedback dazulassen.</span>
+
         <span lang="en">Google requires testers to remain opted in for at least 14 days. Actually trying the app and sharing some honest feedback would, of course, be even more helpful.</span>
-        <span lang="fr">Google exige que les testeurs restent inscrits au moins 14 jours. Essayer réellement l’application et laisser un retour honnête serait bien sûr encore plus utile.</span>
-        <span lang="es">Google exige que quienes prueban sigan apuntados al menos 14 días. Usar de verdad la app y dejar un comentario sincero sería, claro, aún más útil.</span><span lang="zh">Google 要求测试者至少保持加入 14 天。当然，真正用一用这个应用并留下坦率的反馈会更有帮助。</span>
-        <span lang="hi">Google चाहता है कि टेस्टर कम से कम 14 दिन जुड़े रहें। बेशक, ऐप को सचमुच आज़माना और ईमानदार फ़ीडबैक देना और भी मददगार होगा।</span>
-        <span lang="ar">تشترط Google بقاء المختبِرين مشتركين 14 يومًا على الأقل. وبالطبع، تجربة التطبيق فعليًا وترك ملاحظات صريحة أكثر فائدة.</span>
+
+
+
+
       </p>
     </div>
 
     <div class="modal-foot">
       <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
-        <span lang="de">Stattdessen APK von GitHub</span><span lang="en">Get the APK from GitHub instead</span><span lang="fr">Prendre plutôt l’APK sur GitHub</span><span lang="es">Mejor el APK desde GitHub</span><span lang="zh">改从 GitHub 获取 APK</span><span lang="hi">इसके बजाय GitHub से APK लें</span><span lang="ar">احصل على APK من GitHub بدلًا من ذلك</span>
+        <span lang="en">Get the APK from GitHub instead</span>
       </a>
       <a class="btn btn-primary" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
-        <span lang="de">Mit Schritt 1 starten</span><span lang="en">Start with step 1</span><span lang="fr">Commencer par l’étape 1</span><span lang="es">Empezar por el paso 1</span><span lang="zh">从第 1 步开始</span><span lang="hi">चरण 1 से शुरू करें</span><span lang="ar">ابدأ بالخطوة 1</span>
+        <span lang="en">Start with step 1</span>
       </a>
     </div>
   </div>

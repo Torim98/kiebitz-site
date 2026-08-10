@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar" data-page="home">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiebitz · تحليل شطرنج محلي أولًا لنظامي Windows وAndroid</title>
+<meta name="description" content="يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية، بلا حساب أو سحابة أو قياس عن بُعد.">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://torim98.github.io/kiebitz-site/ar/">
+<link rel="alternate" hreflang="de" href="https://torim98.github.io/kiebitz-site/de/">
+<link rel="alternate" hreflang="en" href="https://torim98.github.io/kiebitz-site/">
+<link rel="alternate" hreflang="fr" href="https://torim98.github.io/kiebitz-site/fr/">
+<link rel="alternate" hreflang="es" href="https://torim98.github.io/kiebitz-site/es/">
+<link rel="alternate" hreflang="zh-Hans" href="https://torim98.github.io/kiebitz-site/zh/">
+<link rel="alternate" hreflang="hi" href="https://torim98.github.io/kiebitz-site/hi/">
+<link rel="alternate" hreflang="ar" href="https://torim98.github.io/kiebitz-site/ar/">
+<link rel="alternate" hreflang="x-default" href="https://torim98.github.io/kiebitz-site/">
+<link rel="icon" href="../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kiebitz">
+<meta property="og:locale" content="ar">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:title" content="Kiebitz · تحليل شطرنج محلي أولًا لنظامي Windows وAndroid">
+<meta property="og:description" content="يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية، بلا حساب أو سحابة أو قياس عن بُعد.">
+<meta property="og:url" content="https://torim98.github.io/kiebitz-site/ar/">
+<meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kiebitz · Local-first chess analysis">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kiebitz · تحليل شطرنج محلي أولًا لنظامي Windows وAndroid">
+<meta name="twitter:description" content="يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية، بلا حساب أو سحابة أو قياس عن بُعد.">
+<meta name="twitter:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Kiebitz",
+  "url": "https://torim98.github.io/kiebitz-site/ar/",
+  "description": "يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية، بلا حساب أو سحابة أو قياس عن بُعد.",
+  "inLanguage": "ar",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Windows, macOS, Linux, Android",
+  "softwareVersion": "0.8.0",
+  "isAccessibleForFree": true,
+  "downloadUrl": "https://github.com/Torim98/Kiebitz/releases/latest",
+  "installUrl": "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
+  "screenshot": [
+    "https://torim98.github.io/kiebitz-site/assets/shots/insights.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/repertoire.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/puzzles.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/study.png"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "sameAs": "https://github.com/Torim98/Kiebitz",
+  "license": "https://github.com/Torim98/Kiebitz/blob/main/LICENSE"
+}
+</script>
+<link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span lang="ar">تخطَّ إلى المحتوى</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="index.html" aria-label="Kiebitz">
+      <img src="../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="ar">نقلة تُحلّق</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="#features"><span lang="ar">المزايا</span></a>
+      <a href="#local"><span lang="ar">محلي أولًا</span></a>
+      <a href="#download"><span lang="ar">التنزيل</span></a>
+      <a href="#feedback"><span lang="ar">الملاحظات</span></a>
+      <a href="privacy/index.html"><span lang="ar">الخصوصية</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="اللغة">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-primary btn-sm" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+      <span lang="ar">تنزيل</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="ar">نسخة تجريبية · وصول مبكر</span></p>
+        <h1>
+
+
+
+
+
+
+          <span lang="ar">يراقب Kiebitz مبارياتك <span class="flight">من فوق كتفك</span>.</span>
+        </h1>
+
+
+
+
+
+
+        <p class="hero-sub" lang="ar">‏<i>Kiebitz</i> طائر القَطقاط، وهو بالألمانية أيضًا المتفرّج الذي يتابع المباراة من فوق كتفك. يستورد هذا التطبيق مبارياتك من chess.com وLichess، ويشغّل محرّك Stockfish أصليًا على تاريخك كاملًا، ويخبرك أين تخسر فعلًا لا أين تظن أنك تخسر. <strong>كل شيء يبقى على أجهزتك.</strong></p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="ar">التنزيل لنظام Windows</span>
+          </a>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="ar">‏Android (اختبار تجريبي)</span>
+          </a>
+        </div>
+        <p class="cta-note"><span lang="ar">مجاني · ‏Windows عبر GitHub · ‏Android في اختبار مغلق</span></p>
+      </div>
+
+      <div class="board-card" aria-hidden="true">
+        <div class="board-head">
+          <span data-route-label>Knight · b1 → e8</span>
+          <span data-square-label>b1</span>
+        </div>
+        <div class="board-stage">
+          <div class="board-lattice"></div>
+          <svg class="board-path" viewBox="0 0 8 8" preserveAspectRatio="none" focusable="false"></svg>
+        </div>
+        <div class="board-coords"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        <div class="board-foot">
+          <span class="pill"><span lang="ar">Stockfish · أصلي</span></span>
+          <span><span lang="ar">يجري التحليل على جهازك.</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Banner: Android Closed Test ───────────────────────────────────── -->
+  <section class="band" aria-labelledby="band-title">
+    <div class="band-grid" aria-hidden="true"></div>
+    <div class="wrap band-in rv">
+      <div class="band-text">
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="ar">اختبار مغلق · Google Play</span></p>
+        <h2 id="band-title">
+
+
+
+
+
+
+          <span lang="ar">ينتقل Kiebitz إلى Android ويبحث عن مختبِرين.</span>
+        </h2>
+        <p class="band-sub">
+
+
+
+
+
+
+          <span lang="ar">يمكنك تنزيل Kiebitz لنظام Windows الآن. أما على Android فيجري اختبار مغلق على Google Play، وسأكون ممتنًا جدًا لبضعة مختبِرين إضافيين. الطريق إلى ذلك ثلاث نقلات.</span>
+        </p>
+        <div class="band-cta">
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="ar">كن مختبِرًا</span>
+          </a>
+          <a class="band-alt" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="ar">أو ملف APK مباشرة</span>
+          </a>
+        </div>
+        <p class="band-note">
+
+
+
+
+
+
+          <span lang="ar">تشترط Google بقاء المختبِرين 14 يومًا. الملاحظات الصريحة أفضل عندي من مشاركة صامتة.</span>
+        </p>
+      </div>
+
+      <ol class="route">
+        <li>
+          <span class="route-n">1</span>
+          <span class="route-txt">
+            <b><span lang="ar">انضم إلى مجموعة Google</span></b>
+            <span><span lang="ar">يفتح الاختبار لحسابك</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="route-n">2</span>
+          <span class="route-txt">
+            <b><span lang="ar">انضم إلى الاختبار المغلق</span></b>
+            <span><span lang="ar">اشترك بالحساب نفسه على Google</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="route-n">3</span>
+          <span class="route-txt">
+            <b><span lang="ar">ثبّته من متجر Play</span></b>
+            <span><span lang="ar">بعدها يحدّث Kiebitz نفسه تلقائيًا</span></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ── 01 Local-first ────────────────────────────────────────────────── -->
+  <section class="section" id="local">
+    <div class="wrap">
+      <p class="eyebrow"><b>01</b> <span lang="ar">محلي أولًا</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
+
+
+
+
+
+
+        <span lang="ar">مبارياتك مبارياتك وحدك.</span>
+      </h2>
+      <p class="lede" style="margin-top:18px">
+
+
+
+
+
+
+        <span lang="ar">لا يملك Kiebitz خادمًا. لا شيء تسجّل الدخول إليه، ولا شيء يُرفَع، ولا تحليل يجري في مكان آخر. قاعدة البيانات ملف SQLite على جهازك.</span>
+      </p>
+      <dl class="promise rv" style="margin-top:32px">
+        <div>
+          <dt><span lang="ar">بلا حساب</span></dt>
+          <dd><span lang="ar">لا تسجيل ولا بريد إلكتروني ولا ولوج.</span></dd>
+        </div>
+        <div>
+          <dt><span lang="ar">بلا سحابة</span></dt>
+          <dd><span lang="ar">المباريات والتحليلات والتقدّم تبقى محليًا.</span></dd>
+        </div>
+        <div>
+          <dt><span lang="ar">بلا قياس عن بُعد</span></dt>
+          <dd><span lang="ar">لا تتبُّع ولا إعلانات ولا تقارير أعطال.</span></dd>
+        </div>
+        <div>
+          <dt><span lang="ar">مزامنة داخل شبكتك</span></dt>
+          <dd><span lang="ar">يتواصل الهاتف والحاسوب مباشرة وبتشفير.</span></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ── 02 Ablauf ─────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow"><b>02</b> <span lang="ar">آلية العمل</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:24ch">
+
+
+
+
+
+
+        <span lang="ar">استورد، حلّل، افهم.</span>
+      </h2>
+      <div class="flow rv" style="margin-top:34px">
+        <article class="step">
+          <p class="step-n">01</p>
+          <h3><span lang="ar">الاستيراد</span></h3>
+          <p><span lang="ar">أدخل اسم المستخدم، وهذا كل شيء. يجلب Kiebitz تاريخك كاملًا دون تكرار، ويقبل ملفات PGN لمباريات الرقعة.</span></p>
+          <div class="step-viz srcrow">
+            <span class="srcpill cc">chess.com</span>
+            <span class="srcpill li">lichess</span>
+            <span class="srcpill pgn">PGN</span>
+          </div>
+        </article>
+        <article class="step">
+          <p class="step-n">02</p>
+          <h3><span lang="ar">التحليل</span></h3>
+          <p><span lang="ar">يعالج محرّك Stockfish أصلي قائمة الانتظار في الخلفية: تقييم لكل نقلة، وعدم دقة، وخطأ، وخطأ فادح، ونسبة دقة.</span></p>
+          <div class="step-viz">
+            <div class="evalbar" aria-hidden="true"><span class="w" style="width:52%"></span><span class="b"></span></div>
+            <div class="evalticks" aria-hidden="true"><span>1. e4</span><span class="bad">24. Nf3?? −3.1</span><span>41. Kg2</span></div>
+          </div>
+        </article>
+        <article class="step">
+          <p class="step-n">03</p>
+          <h3><span lang="ar">الفهم</span></h3>
+          <p><span lang="ar">ليس «أحسنتَ اللعب»، بل: في أي طور، وفي أي افتتاح، وتحت أي توقيت ينهار أداؤك.</span></p>
+          <div class="step-viz bars" aria-hidden="true">
+            <div class="bar"><span class="bar-l"><span lang="ar">الافتتاح</span></span><span class="bar-t"><i data-w="22"></i></span><span class="bar-v">0.4</span></div>
+            <div class="bar hot"><span class="bar-l"><span lang="ar">وسط المباراة</span></span><span class="bar-t"><i data-w="78"></i></span><span class="bar-v">1.9</span></div>
+            <div class="bar"><span class="bar-l"><span lang="ar">نهاية المباراة</span></span><span class="bar-t"><i data-w="46"></i></span><span class="bar-v">0.9</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 Funktionen ─────────────────────────────────────────────────── -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <p class="eyebrow"><b>03</b> <span lang="ar">المزايا</span></p>
+
+      <div class="feature rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Insights</p>
+          <h3><span lang="ar">أين ينهار مستوى لعبك فعلًا</span></h3>
+          <p><span lang="ar">أربع صفحات تحليل تغطي تاريخك كاملًا بدل رقم واحد لكل مباراة: قوة اللعب، والافتتاحات مفصولة حسب اللون، وأنماط السلوك، والأطوار التي تقع فيها أخطاؤك.</span></p>
+          <ul class="ticks">
+            <li><span lang="ar">الدقة ومعدّل الخطأ عبر شهور، لا عبر مباراة واحدة</span></li>
+            <li><span lang="ar">الافتتاحات مع النتيجة والانحراف ونسبة الإصابة</span></li>
+            <li><span lang="ar">الأنماط: ضيق الوقت، والجلسات الطويلة، ومباريات الثأر</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/insights.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Insights"></button>
+          <figcaption>
+            <span lang="ar">Insights · الدقة والأخطاء حسب طور المباراة</span>
+            <span><span lang="ar">1483 مباراة</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Repertoire · FSRS</p>
+          <h3><span lang="ar">مرجع افتتاحات يرسخ فعلًا</span></h3>
+          <p><span lang="ar">مرجعك شجرة أوضاع تُراجَع بنظام FSRS للتكرار المتباعد، وهو الأسلوب نفسه في تطبيقات البطاقات الجيدة. لكل نقلة فاصلها الزمني، والمراجعات المستحقّة تظهر كل صباح على لوحة المعلومات.</span></p>
+          <ul class="ticks">
+            <li><span lang="ar">أضف نقلات من مبارياتك مباشرة إلى المرجع</span></li>
+            <li><span lang="ar">نسبة التغطية لكل افتتاح، مفصولة بين الأبيض والأسود</span></li>
+            <li><span lang="ar">سلسلة الأيام والبطاقات المستحقّة بدل التدريب بلا نهاية</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/repertoire.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Repertoire"></button>
+          <figcaption>
+            <span lang="ar">Repertoire · التنويعات بالأبيض والأسود</span>
+            <span><span lang="ar">17 نقلة في المرجع · تغطية 42 %</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature rv">
+        <div class="feature-text">
+          <p class="feature-kicker"><span lang="ar">الألغاز والنهايات</span></p>
+          <h3><span lang="ar">تكتيكات مصنوعة من أخطائك أنت</span></h3>
+          <p><span lang="ar">إلى جانب قاعدة ألغاز Lichess المتاحة دون اتصال، يبني Kiebitz تمارين من الأوضاع التي فاتتك فيها النقلة الرابحة. تُضاف إليها تدريبات نهايات مختارة ضد المحرّك، مع جداول Syzygy اختياريًا.</span></p>
+          <ul class="ticks">
+            <li><span lang="ar">تصنيف الألغاز ونسبة الإصابة لكل موضوع</span></li>
+            <li><span lang="ar">النهايات: الترقية، ونهايات الرخّ، والمات الإجباري</span></li>
+            <li><span lang="ar">كل ذلك متاح دون اتصال بالإنترنت</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/puzzles.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Puzzles"></button>
+          <figcaption>
+            <span lang="ar">Puzzles · نسبة الإصابة لكل موضوع</span>
+            <span><span lang="ar">285 تمرينًا من مبارياتك</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Study</p>
+          <h3><span lang="ar">خطة تخرج من بياناتك أنت</span></h3>
+          <p><span lang="ar">يقرأ مخطّط الدراسة نقاط ضعفك من التحليلات ويقترح ما يناسب اليوم: مراجعات، وموضوع تكتيكي واحد، ونهاية واحدة. على هيئة قائمة يومية وخطة أسبوعية تعيد ترتيبها بنفسك.</span></p>
+          <ul class="ticks">
+            <li><span lang="ar">توصيات مسبَّبة مأخوذة من مبارياتك</span></li>
+            <li><span lang="ar">مخطّط أسبوعي بالسحب والإفلات</span></li>
+            <li><span lang="ar">تذكيرات محلية على الجهاز</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/study.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Study"></button>
+          <figcaption>
+            <span lang="ar">Study · توصيات المدرّب والخطة الأسبوعية</span>
+            <span><span lang="ar">هدف اليوم وسلسلة الأيام</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="more rv" style="margin-top:clamp(48px,6vw,84px)">
+        <div>
+          <h4><span lang="ar">لوحة المعلومات</span></h4>
+          <p><span lang="ar">مسار التصنيف وآخر المباريات والمراجعات المستحقّة وقائمة التحليل في لمحة واحدة.</span></p>
+        </div>
+        <div>
+          <h4><span lang="ar">قاعدة المباريات</span></h4>
+          <p><span lang="ar">مرشّحات ووسوم وملاحظات لكل مباراة ولكل نقلة، وبحث عن الأوضاع، واستيراد PGN وتصديره.</span></p>
+        </div>
+        <div>
+          <h4><span lang="ar">تحليل مباشر</span></h4>
+          <p><span lang="ar">رقعة مع خطوط المحرّك وجودة النقلات والأسهم، مع كتاب افتتاحات chessdb.cn اختياريًا.</span></p>
+        </div>
+        <div>
+          <h4><span lang="ar">سبع لغات</span></h4>
+          <p><span lang="ar">الألمانية والإنجليزية والفرنسية والإسبانية والصينية والهندية والعربية – في التطبيق وعلى هذا الموقع معًا. مع سمة داكنة مصنوعة بعناية.</span></p>
+        </div>
+        <div>
+          <h4><span lang="ar">‏Windows وAndroid</span></h4>
+          <p><span lang="ar">تطبيق سطح مكتب بتحديث تلقائي، وإصدار Android بمحرّك Stockfish أصلي لكل معمارية.</span></p>
+        </div>
+        <div>
+          <h4><span lang="ar">الشيفرة متاحة للاطّلاع</span></h4>
+          <p><span lang="ar">الشيفرة متاحة لكنها ليست مفتوحة المصدر: القراءة والبناء الذاتي نعم، وإعادة التوزيع لا.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 Sync ───────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow"><b>04</b> <span lang="ar">مزامنة الأجهزة</span></p>
+      <div class="feature rv">
+        <div class="feature-text">
+          <h3><span lang="ar">جهازان وشبكة واحدة ولا شيء بينهما</span></h3>
+          <p><span lang="ar">الحاسوب هو المحور، والهاتف يقترن برمز QR. بعدها يتزامن الجهازان بتشفير ومباشرة عبر شبكتك المنزلية أو شبكتك الافتراضية الخاصة؛ العنوان ورمز الاقتران وبصمة الشهادة كلها داخل رمز QR. لا خادم بينهما، لأنه ببساطة غير موجود.</span></p>
+          <ul class="ticks">
+            <li><span lang="ar">تدرّب على الهاتف في تنقّلك، وحلّل مساءً على الحاسوب</span></li>
+            <li><span lang="ar">لا تُستخدم الكاميرا إلا لمسح رمز QR</span></li>
+            <li><span lang="ar">من دون اقتران، يعمل كل جهاز باستقلال تام</span></li>
+          </ul>
+        </div>
+        <div class="sync-viz" aria-hidden="true">
+          <div class="device"><span>Desktop<br>Hub</span></div>
+          <div class="wire"><span class="wire-label">LAN · TLS</span></div>
+          <div class="device phone"><span>Android</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 05 Datenschutz ────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow"><b>05</b> <span lang="ar">الخصوصية</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:28ch">
+
+
+
+
+
+
+        <span lang="ar">ما الذي يرسله Kiebitz وما الذي لا يرسله.</span>
+      </h2>
+      <div class="privacy-grid rv">
+        <div>
+          <h4><span lang="ar">اتصال بالشبكة عند الاستيراد فقط</span></h4>
+          <p><span lang="ar">عند استيراد المباريات يستدعي Kiebitz واجهتَي chess.com وLichess العامّتين باسم المستخدم الذي أدخلته بنفسك.</span></p>
+        </div>
+        <div>
+          <h4><span lang="ar">‏chessdb.cn فقط إن أردت</span></h4>
+          <p><span lang="ar">كتاب الافتتاحات عبر الإنترنت خيار في الإعدادات. وإن كان معطّلًا فلا يُستعلَم من chessdb.cn إطلاقًا.</span></p>
+        </div>
+        <div>
+          <h4><span lang="ar">الكاميرا لرمز QR فقط</span></h4>
+          <p><span lang="ar">على Android لا يطلب Kiebitz الكاميرا إلا لحظة مسحك رمز الاقتران. ولا تُحفَظ أي صور ولا تُرسَل.</span></p>
+        </div>
+        <div class="no">
+          <h4><span lang="ar">لا خادم لدى المزوّد</span></h4>
+          <p><span lang="ar">لا يوجد خادم لـ Kiebitz، ولا حزمة تحليلات، ولا معرّفات إعلانية، ولا تقارير أعطال تلقائية، ولا حسابات.</span></p>
+        </div>
+      </div>
+      <p style="margin-top:26px">
+        <a class="btn btn-sm" href="privacy/index.html"><span lang="ar">سياسة الخصوصية كاملة</span></a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── 06 Download ───────────────────────────────────────────────────── -->
+  <section class="section section-alt" id="download">
+    <div class="wrap">
+      <p class="eyebrow"><b>06</b> <span lang="ar">التنزيل</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
+
+
+
+
+
+
+        <span lang="ar">نزّل النسخة التجريبية وابدأ.</span>
+      </h2>
+      <p class="lede" style="margin-top:16px">
+
+
+
+
+
+
+        <span lang="ar">‏Kiebitz مجاني في الوقت الحالي، بلا إعلانات وبلا مشتريات داخل التطبيق. نسخة Windows جاهزة للتنزيل، وعلى Android يجري اختبار مغلق على Google Play. كما أن النسختين مرفقتان بأحدث إصدار في مستودع التطبيق.</span>
+      </p>
+      <div class="dl rv" style="margin-top:32px">
+        <article class="dl-card">
+          <h3>Windows</h3>
+          <p><span lang="ar">مثبِّت لسطح المكتب. يتضمّن محرّك Stockfish الأصلي ويحدّث نفسه.</span></p>
+          <p class="dl-meta"><span lang="ar">مثبِّت · تحديث تلقائي</span></p>
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="ar">مثبِّت Windows</span>
+          </a>
+        </article>
+        <article class="dl-card">
+          <h3>Android</h3>
+          <p><span lang="ar">يعمل حاليًا كاختبار مغلق على Google Play، بمحرّك Stockfish أصلي لكل معمارية. وإن لم ترغب في الانضمام إلى الاختبار، فثبّت ملف APK مباشرة.</span></p>
+          <p class="dl-meta"><span lang="ar">اختبار مغلق · APK · مزامنة عبر الشبكة المحلية</span></p>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="ar">‏Android · الاختبار التجريبي وملف APK</span>
+          </a>
+        </article>
+      </div>
+      <p class="small" style="margin-top:22px">
+
+
+
+
+
+
+        <span lang="ar">نسخة تجريبية: المزايا لا تزال تتغيّر وبعض الخشونة متوقّعة. الأخطاء والاقتراحات مرحّب بها في المستودع: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── 07 Feedback ─────────────────────────────────────────────────────── -->
+  <section class="section feedback-section" id="feedback">
+    <div class="wrap">
+      <p class="eyebrow"><b>07</b> <span lang="ar">الملاحظات</span></p>
+      <div class="feedback-grid">
+        <div class="feedback-copy">
+          <h2>
+
+
+
+
+
+
+            <span lang="ar">أخبر Kiebitz بما تلاحظه.</span>
+          </h2>
+          <p class="lede">
+
+
+
+
+
+
+            <span lang="ar">سواء كان انطباعًا سريعًا أو عطلًا قابلًا للتكرار أو فكرة للنقلة القادمة: كل رسالة تصل مباشرة إلى المطوّر.</span>
+          </p>
+          <div class="feedback-notes" aria-label="ملاحظات">
+            <p><b>01</b><span><strong><span lang="ar">السياق يساعد.</span></strong><span lang="ar">في حالة الأعطال، صِف باختصار ما حدث قبلها مباشرة.</span></span></p>
+            <p><b>02</b><span><strong><span lang="ar">الردّ اختياري.</span></strong><span lang="ar">من دون بريد إلكتروني تبقى رسالتك مجهولة المصدر.</span></span></p>
+            <p><b>03</b><span><strong><span lang="ar">لا قياس عن بُعد.</span></strong><span lang="ar">لا يُرسَل سوى ما تكتبه هنا بنفسك.</span></span></p>
+          </div>
+        </div>
+
+        <details class="feedback-package rv">
+          <summary class="feedback-package-summary">
+            <span class="package-topline">
+              <span class="package-kicker"><span lang="ar">خط نقلات مختوم</span></span>
+              <span class="package-address">kiebitz.chess@gmail.com</span>
+            </span>
+            <span class="package-main">
+              <span class="package-seal" aria-hidden="true"><img src="../assets/icon-128.png" width="44" height="44" alt=""></span>
+              <span class="package-copy">
+                <strong><span lang="ar">الدور عليك.</span></strong>
+                <span><span lang="ar">ملاحظة أو عطل أو فكرة ميزة، إلى المطوّر مباشرة بنقلة واحدة.</span></span>
+              </span>
+              <span class="package-action">
+                <span data-package-open><span lang="ar">افتح النموذج</span></span>
+                <span data-package-close><span lang="ar">أغلق النموذج</span></span>
+                <i aria-hidden="true">↘</i>
+              </span>
+            </span>
+            <span class="package-meta">
+              <span>f7 → inbox</span>
+              <span><span lang="ar">ملاحظة · عطل · اقتراح</span></span>
+              <span><span lang="ar">بلا حساب · بلا قياس عن بُعد</span></span>
+            </span>
+          </summary>
+
+          <form class="feedback-form" action="https://formsubmit.co/kiebitz.chess@gmail.com" method="POST" data-feedback-form data-feedback-endpoint="https://formsubmit.co/ajax/kiebitz.chess@gmail.com">
+            <input type="hidden" name="_subject" value="Kiebitz · New feedback" data-feedback-subject>
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_url" value="https://torim98.github.io/kiebitz-site/#feedback">
+            <label class="honey" aria-hidden="true">Website<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+
+          <fieldset class="report-types">
+            <legend><span lang="ar">ما الذي تودّ الإبلاغ عنه؟</span></legend>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Feedback" checked>
+              <span class="report-type-card">
+                <span class="report-type-n">01</span>
+                <span><b><span lang="ar">ملاحظة</span></b><small><span lang="ar">انطباع أو ملحوظة</span></small></span>
+              </span>
+            </label>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Crash report">
+              <span class="report-type-card">
+                <span class="report-type-n">02</span>
+                <span><b><span lang="ar">عطل</span></b><small><span lang="ar">إعادة إنتاج خلل</span></small></span>
+              </span>
+            </label>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Feature request">
+              <span class="report-type-card">
+                <span class="report-type-n">03</span>
+                <span><b><span lang="ar">اقتراح</span></b><small><span lang="ar">فكرة من أجل Kiebitz</span></small></span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="form-field">
+            <label for="feedback-title"><span lang="ar">ملخّص</span></label>
+            <input id="feedback-title" name="summary" type="text" required maxlength="120" autocomplete="off" data-placeholder-ar="ماذا حدث أو ماذا تتمنّى أن ترى؟">
+          </div>
+
+          <div class="form-field">
+            <span class="field-label">
+              <label for="feedback-message"><span lang="ar">التفاصيل</span></label>
+              <span class="field-count" data-feedback-count>0 / 4000</span>
+            </span>
+            <textarea id="feedback-message" name="message" required minlength="20" maxlength="4000" rows="6" data-placeholder-ar="صِف الخطوات أو السلوك المتوقّع أو فكرتك بأكبر قدر ممكن من التحديد."></textarea>
+            <span class="field-hint"><span lang="ar">لا تُدرج كلمات مرور أو مباريات خاصة أو أي بيانات حسّاسة أخرى.</span></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="feedback-platform"><span lang="ar">المنصّة</span> <small><span lang="ar">اختياري</span></small></label>
+              <select id="feedback-platform" name="platform">
+                <option value="">—</option>
+                <option value="Windows">Windows</option>
+                <option value="Android">Android</option>
+                <option value="Website" data-label-ar="الموقع">Website</option>
+                <option value="Other" data-label-ar="أخرى">Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="feedback-version"><span lang="ar">إصدار التطبيق</span> <small><span lang="ar">اختياري</span></small></label>
+              <input id="feedback-version" name="app_version" type="text" maxlength="40" autocomplete="off" data-placeholder-ar="مثال: 0.9.4">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="feedback-email"><span lang="ar">البريد الإلكتروني</span> <small><span lang="ar">اختياري · للردّ فقط</span></small></label>
+            <input id="feedback-email" name="email" type="email" maxlength="160" autocomplete="email" placeholder="name@example.com">
+          </div>
+
+          <div class="form-submit">
+            <p>
+
+
+
+
+
+
+              <span lang="ar">عند الإرسال تُنقَل بياناتك بالبريد الإلكتروني عبر FormSubmit. <a href="privacy/index.html#c12">تفاصيل الخصوصية</a>.</span>
+            </p>
+            <button class="btn btn-primary feedback-send" type="submit" data-feedback-send>
+              <span lang="ar">أرسل الرسالة</span>
+            </button>
+          </div>
+          <p class="form-status" data-feedback-status role="status" aria-live="polite"></p>
+          </form>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="flock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="foot-note" style="margin-top:8px">
+
+
+
+
+
+
+        <span lang="ar">نقلة تُحلّق. رفيق شطرنج محلي أولًا لنظامي Windows وAndroid. الشيفرة متاحة لكنها ليست مفتوحة المصدر. ومحرّك Stockfish مرخّص بموجب GPL-3.0.</span>
+      </p>
+      <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#feedback"><span lang="ar">أرسل ملاحظة</span></a>
+      <a href="privacy/index.html"><span lang="ar">الخصوصية</span></a>
+      <a href="impressum/index.html"><span lang="ar">بيان قانوني</span></a>
+      <a href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">Releases</a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="ar">الشيفرة المصدرية</span></a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ── Dialog: Android Closed Test ─────────────────────────────────────── -->
+<div class="modal" id="beta-android" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="beta-title" aria-describedby="beta-lede">
+    <div class="modal-head">
+      <span class="modal-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="9" width="14" height="10" rx="3"></rect>
+          <path d="M8.2 9 6.7 6.3M15.8 9l1.5-2.7"></path>
+          <circle cx="9.6" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
+          <circle cx="14.4" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
+        </svg>
+      </span>
+      <div class="modal-titles">
+        <p class="modal-eyebrow">Kiebitz</p>
+        <h2 id="beta-title">
+
+
+
+
+
+
+          <span lang="ar">‏Android في مرحلة اختبار مغلق</span>
+        </h2>
+      </div>
+      <button class="modal-x" type="button" data-beta-close data-aria="close" aria-label="Close">&#10005;</button>
+    </div>
+
+    <div class="modal-body">
+      <p class="modal-lede" id="beta-lede">
+
+
+
+
+
+
+        <span lang="ar">يمكنك تنزيل Kiebitz لنظام Windows الآن. أما تطبيق Android فيخضع حاليًا لاختبار مغلق على Google Play، وسأكون ممتنًا جدًا لبضعة مختبِرين إضافيين. المشاركة تتم في ثلاث خطوات:</span>
+      </p>
+
+      <ol class="steps">
+        <li>
+          <a class="step" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">1</span>
+            <span class="step-txt">
+              <b><span lang="ar">انضم إلى مجموعة Google</span></b>
+              <span class="step-sub"><span lang="ar">تفتح العضوية الاختبار لحسابك على Google.</span></span>
+              <span class="step-url">groups.google.com/g/kiebitz-beta-test</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a class="step" href="https://play.google.com/apps/testing/de.torim.kiebitz" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">2</span>
+            <span class="step-txt">
+              <b><span lang="ar">انضم إلى الاختبار المغلق</span></b>
+              <span class="step-sub"><span lang="ar">اشترك بالحساب نفسه المستخدم في الخطوة 1.</span></span>
+              <span class="step-url">play.google.com/apps/testing/de.torim.kiebitz</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a class="step" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">3</span>
+            <span class="step-txt">
+              <b><span lang="ar">ثبّته على Android</span></b>
+              <span class="step-sub"><span lang="ar">افتح صفحة التطبيق في متجر Play وثبّت Kiebitz.</span></span>
+              <span class="step-url">play.google.com/store/apps/details?id=de.torim.kiebitz</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+      </ol>
+
+      <p class="modal-note">
+
+
+
+
+
+        <span lang="ar">تشترط Google بقاء المختبِرين مشتركين 14 يومًا على الأقل. وبالطبع، تجربة التطبيق فعليًا وترك ملاحظات صريحة أكثر فائدة.</span>
+      </p>
+    </div>
+
+    <div class="modal-foot">
+      <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+        <span lang="ar">احصل على APK من GitHub بدلًا من ذلك</span>
+      </a>
+      <a class="btn btn-primary" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
+        <span lang="ar">ابدأ بالخطوة 1</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

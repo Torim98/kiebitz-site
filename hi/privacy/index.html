@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr" data-lang="hi" data-page="privacy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>गोपनीयता नीति · Kiebitz</title>
+<meta name="description" content="Kiebitz गोपनीयता नीति: स्थानीय संग्रहण, नेटवर्क पहुँच, अनुमतियाँ, LAN सिंक और कोई ट्रैकिंग नहीं।">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://torim98.github.io/kiebitz-site/hi/privacy/">
+<link rel="alternate" hreflang="de" href="https://torim98.github.io/kiebitz-site/de/privacy/">
+<link rel="alternate" hreflang="en" href="https://torim98.github.io/kiebitz-site/privacy/">
+<link rel="alternate" hreflang="fr" href="https://torim98.github.io/kiebitz-site/fr/privacy/">
+<link rel="alternate" hreflang="es" href="https://torim98.github.io/kiebitz-site/es/privacy/">
+<link rel="alternate" hreflang="zh-Hans" href="https://torim98.github.io/kiebitz-site/zh/privacy/">
+<link rel="alternate" hreflang="hi" href="https://torim98.github.io/kiebitz-site/hi/privacy/">
+<link rel="alternate" hreflang="ar" href="https://torim98.github.io/kiebitz-site/ar/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://torim98.github.io/kiebitz-site/privacy/">
+<link rel="icon" href="../../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kiebitz">
+<meta property="og:locale" content="hi_IN">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ar">
+<meta property="og:title" content="गोपनीयता नीति · Kiebitz">
+<meta property="og:description" content="Kiebitz गोपनीयता नीति: स्थानीय संग्रहण, नेटवर्क पहुँच, अनुमतियाँ, LAN सिंक और कोई ट्रैकिंग नहीं।">
+<meta property="og:url" content="https://torim98.github.io/kiebitz-site/hi/privacy/">
+<meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kiebitz · Local-first chess analysis">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="गोपनीयता नीति · Kiebitz">
+<meta name="twitter:description" content="Kiebitz गोपनीयता नीति: स्थानीय संग्रहण, नेटवर्क पहुँच, अनुमतियाँ, LAN सिंक और कोई ट्रैकिंग नहीं।">
+<meta name="twitter:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span lang="hi">सामग्री पर जाएँ</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../index.html" aria-label="Kiebitz">
+      <img src="../../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="hi">हर चाल, एक उड़ान</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="../index.html#features"><span lang="hi">विशेषताएँ</span></a>
+      <a href="../index.html#download"><span lang="hi">डाउनलोड</span></a>
+      <a href="../impressum/index.html"><span lang="hi">क़ानूनी सूचना</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="भाषा">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-sm" href="../index.html"><span lang="hi">वापस</span></a>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap doc-grid">
+    <aside class="toc" aria-label="विषय-सूची">
+      <p class="toc-h"><span lang="hi">विषय-सूची</span></p>
+      <ul>
+        <li><a href="#c1">1 <span lang="hi">नियंत्रक</span></a></li>
+        <li><a href="#c2">2 <span lang="hi">सिद्धांत</span></a></li>
+        <li><a href="#c3">3 <span lang="hi">स्थानीय रूप से संग्रहीत डेटा</span></a></li>
+        <li><a href="#c4">4 <span lang="hi">नेटवर्क कनेक्शन</span></a></li>
+        <li><a href="#c5">5 <span lang="hi">अनुमतियाँ</span></a></li>
+        <li><a href="#c6">6 <span lang="hi">डिवाइस सिंक</span></a></li>
+        <li><a href="#c7">7 <span lang="hi">कोई ट्रैकिंग नहीं</span></a></li>
+        <li><a href="#c8">8 <span lang="hi">क़ानूनी आधार</span></a></li>
+        <li><a href="#c9">9 <span lang="hi">भंडारण अवधि और विलोपन</span></a></li>
+        <li><a href="#c10">10 <span lang="hi">बच्चे</span></a></li>
+        <li><a href="#c11">11 <span lang="hi">आपके अधिकार</span></a></li>
+        <li><a href="#c12">12 <span lang="hi">यह वेबसाइट</span></a></li>
+        <li><a href="#c13">13 <span lang="hi">परिवर्तन</span></a></li>
+      </ul>
+    </aside>
+
+    <article>
+      <p class="eyebrow"><b>§</b> <span lang="hi">क़ानूनी पाठ</span></p>
+      <h1><span lang="hi">गोपनीयता नीति</span></h1>
+      <p class="doc-sub">
+
+
+
+
+
+        <span lang="hi"><strong>Kiebitz</strong> ऐप (Windows और Android) और इस वेबसाइट के लिए। Kiebitz एक लोकल-फ़र्स्ट अनुप्रयोग है: डेटा आपके उपकरणों पर रहता है, और प्रदाता कोई ऐसा सर्वर नहीं चलाता जो आपकी सामग्री प्राप्त करे।</span>
+
+      </p>
+      <p class="doc-meta">
+
+
+
+
+
+        <span lang="hi">अद्यतन: 29 जुलाई 2026 · सभी Kiebitz बीटा संस्करणों पर लागू। अनुवाद केवल जानकारी के लिए है; भिन्नता होने पर जर्मन संस्करण मान्य होगा।</span>
+
+      </p>
+
+      <section id="c1">
+        <h2><span class="num">01</span><span lang="hi">नियंत्रक</span></h2>
+
+
+
+
+
+        <p lang="hi">ऐप और इस वेबसाइट को उपलब्ध कराने के संबंध में सामान्य डेटा संरक्षण विनियम (GDPR) के अर्थ में नियंत्रक हैं:</p>
+
+        <div class="panel">
+          <address>
+            Tom Maurer<br>
+            Heidegarten 3<br>
+            56244 Helferskirchen<br>
+            <span lang="hi">जर्मनी</span><br>
+            <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>
+          </address>
+        </div>
+        <p style="margin-top:14px">
+
+
+
+
+
+          <span lang="hi">कोई डेटा संरक्षण अधिकारी नियुक्त नहीं किया गया है, क्योंकि GDPR के अनुच्छेद 37 की शर्तें पूरी नहीं होतीं। गोपनीयता से जुड़े किसी भी प्रश्न के लिए ऊपर दिए पते पर एक ई-मेल पर्याप्त है।</span>
+
+        </p>
+      </section>
+
+      <section id="c2">
+        <h2><span class="num">02</span><span lang="hi">सिद्धांत: लोकल-फ़र्स्ट</span></h2>
+
+
+
+
+
+
+
+
+
+
+        <p lang="hi">Kiebitz आपके शतरंज डेटा को केवल आपके अपने उपकरणों पर संसाधित करता है। कोई उपयोगकर्ता खाता, कोई पंजीकरण, कोई क्लाउड भंडारण और कोई ऐसा प्रदाता-सर्वर नहीं है जिसे बाज़ियाँ, विश्लेषण, प्रशिक्षण-प्रगति या उपयोग-डेटा भेजा जाता हो। ऐप के सामान्य संचालन में प्रदाता को आपसे कोई व्यक्तिगत डेटा नहीं मिलता, इसलिए वह न कोई मूल्यांकन कर सकता है और न प्रोफ़ाइल बना सकता है।</p>
+        <p lang="hi">ऐप केवल उन्हीं नेटवर्क कनेक्शनों को स्थापित करता है जो आपके ही चुने हुए तीसरे पक्षों (chess.com, Lichess, वैकल्पिक रूप से chessdb.cn) और अपडेट जाँच के लिए GitHub की ओर जाते हैं। ये कनेक्शन खंड 4 में पूरी तरह सूचीबद्ध हैं।</p>
+
+
+      </section>
+
+      <section id="c3">
+        <h2><span class="num">03</span><span lang="hi">ऐप स्थानीय रूप से क्या संग्रहीत करता है</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="hi">Kiebitz अपना डेटा एक स्थानीय SQLite डेटाबेस और स्थानीय कॉन्फ़िगरेशन फ़ाइलों में, ऑपरेटिंग सिस्टम की एप्लिकेशन-डेटा डायरेक्टरी के भीतर रखता है (Windows: आपके उपयोगकर्ता खाते की एप्लिकेशन-डेटा डायरेक्टरी; Android: ऐप की निजी डायरेक्टरी, जिसे दूसरे ऐप नहीं पढ़ सकते)। संग्रहीत किया जाता है:</p>
+        <ul class="bul" lang="hi">
+          <li>आयातित बाज़ियाँ और उनका मेटाडेटा (तारीख़, प्रतिद्वंद्वी का नाम, Elo मान, टाइम कंट्रोल, ओपनिंग, परिणाम, चालों का क्रम, स्रोत)</li>
+          <li>इंजन के विश्लेषण-परिणाम (हर चाल का मूल्यांकन, चाल का वर्गीकरण, सटीकता)</li>
+          <li>रेपर्टवार-ट्री और FSRS दोहराव-डेटा, पहेली-प्रगति और पहेली-Elo, अंतिम-खेल के परिणाम, अध्ययन योजना और चेकलिस्ट</li>
+          <li>बाज़ियों और चालों पर आपके अपने नोट और टैग</li>
+          <li>सेटिंग्स, जिनमें आपके डाले हुए chess.com और Lichess यूज़रनेम, भाषा, इंजन विकल्प, और यदि आपने फ़ोन जोड़ा है तो सिंक हब का पता, पेयरिंग कोड और सर्टिफ़िकेट फ़िंगरप्रिंट शामिल हैं</li>
+          <li>वैकल्पिक ऑनलाइन ओपनिंग बुक की कैश्ड प्रतिक्रियाएँ (30 दिन तक)</li>
+        </ul>
+        <p lang="hi" style="margin-top:14px">यह डेटा आपके उपकरण से बाहर नहीं जाता, बशर्ते आप इसे स्वयं निर्यात न करें (जैसे PGN फ़ाइल के रूप में) या अपने ही दूसरे उपकरण के साथ सिंक न करें (खंड 6)।</p>
+
+
+
+      </section>
+
+      <section id="c4">
+        <h2><span class="num">04</span><span lang="hi">ऐप द्वारा बनाए गए नेटवर्क कनेक्शन</span></h2>
+
+
+
+
+
+        <p lang="hi">ऐप केवल निम्नलिखित कनेक्शन बनाता है। बाक़ी सभी सुविधाएँ ऑफ़लाइन काम करती हैं।</p>
+
+        <div class="table-scroll">
+        <table>
+          <thead>
+
+
+
+
+
+            <tr lang="hi"><th>गंतव्य</th><th>कब</th><th>भेजा गया डेटा</th></tr>
+
+          </thead>
+          <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr lang="hi">
+              <td>api.chess.com</td>
+              <td>आपके शुरू किए गए बाज़ी-आयात पर (या स्वतः, यदि आपने ऑटो-इम्पोर्ट चालू किया हो)</td>
+              <td>अनुरोध के हिस्से के रूप में आपका डाला हुआ chess.com यूज़रनेम, और तकनीकी रूप से आवश्यक कनेक्शन डेटा (आपके कनेक्शन का IP पता)</td>
+            </tr>
+            <tr lang="hi">
+              <td>lichess.org</td>
+              <td>आपके शुरू किए गए बाज़ी-आयात पर</td>
+              <td>आपका डाला हुआ Lichess यूज़रनेम, और तकनीकी रूप से आवश्यक कनेक्शन डेटा</td>
+            </tr>
+            <tr lang="hi">
+              <td>chessdb.cn</td>
+              <td>केवल तभी जब आपने सेटिंग्स में ऑनलाइन ओपनिंग बुक चालू की हो, और केवल विश्लेषण पृष्ठ पर</td>
+              <td>इस समय देखी जा रही स्थिति (FEN) और तकनीकी रूप से आवश्यक कनेक्शन डेटा। विकल्प बंद होने पर कोई अनुरोध नहीं भेजा जाता।</td>
+            </tr>
+            <tr lang="hi">
+              <td>github.com / objects.githubusercontent.com</td>
+              <td>डेस्कटॉप ऐप की अपडेट-जाँच पर और जब आप कोई अपडेट इंस्टॉल करते हैं</td>
+              <td>रिलीज़ जानकारी और अपडेट फ़ाइल प्राप्त करना, तथा तकनीकी रूप से आवश्यक कनेक्शन डेटा</td>
+            </tr>
+
+
+
+
+          </tbody>
+        </table>
+        </div>
+        <p style="margin-top:16px">
+
+
+
+
+
+          <span lang="hi">ये सेवाएँ स्वतंत्र तृतीय पक्ष हैं और अनुरोधों को अपनी-अपनी गोपनीयता शर्तों के अनुसार संसाधित करती हैं। ऐप ऊपर बताए गए विवरण से आगे उन्हें कुछ नहीं भेजता, विशेष रूप से ऐसा कोई पहचानकर्ता नहीं जो उपकरण-स्तर पर आपकी पहचान करे।</span>
+
+        </p>
+        <ul class="bul" style="margin-top:14px">
+          <li><a href="https://www.chess.com/legal/privacy" rel="noopener noreferrer">chess.com: <span lang="hi">गोपनीयता नीति</span></a></li>
+          <li><a href="https://lichess.org/privacy" rel="noopener noreferrer">Lichess: <span lang="hi">गोपनीयता नीति</span></a></li>
+          <li><a href="https://www.chessdb.cn/" rel="noopener noreferrer">chessdb.cn: <span lang="hi">प्रदाता की साइट</span></a></li>
+          <li><a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">GitHub: <span lang="hi">गोपनीयता वक्तव्य</span></a></li>
+        </ul>
+      </section>
+
+      <section id="c5">
+        <h2><span class="num">05</span><span lang="hi">उपकरण पर अनुमतियाँ</span></h2>
+
+
+
+
+
+        <ul class="bul" lang="hi">
+          <li><strong>कैमरा (Android):</strong> केवल उपकरण-युग्मन के QR कोड को स्कैन करने के लिए। अनुमति उसी क्षण माँगी जाती है। कोई फ़ोटो या वीडियो न सहेजा, न संसाधित, न भेजा जाता है; केवल QR कोड में मौजूद पाठ पढ़ा जाता है।</li>
+          <li><strong>इंटरनेट / नेटवर्क पहुँच:</strong> खंड 4 में बताए गए अनुरोधों के लिए और स्थानीय नेटवर्क में सिंक के लिए।</li>
+          <li><strong>सूचनाएँ:</strong> वैकल्पिक, स्थानीय प्रशिक्षण-अनुस्मारकों के लिए। ये उपकरण पर ही बनती हैं, बिना किसी पुश सेवा के।</li>
+          <li><strong>फ़ाइल पहुँच:</strong> केवल तब जब आप स्वयं ऑपरेटिंग सिस्टम के फ़ाइल-चयनकर्ता से कोई PGN फ़ाइल आयात या निर्यात करते हैं।</li>
+        </ul>
+
+      </section>
+
+      <section id="c6">
+        <h2><span class="num">06</span><span lang="hi">स्थानीय नेटवर्क में डिवाइस सिंक</span></h2>
+
+
+
+
+
+
+
+
+
+
+        <p lang="hi">जब आप डेस्कटॉप और फ़ोन को जोड़ते हैं, तो केवल आपके अपने उपकरण आपस में जुड़ते हैं। डेस्कटॉप हब का काम करता है; फ़ोन को पता, पेयरिंग कोड और TLS प्रमाणपत्र का फ़िंगरप्रिंट स्क्रीन पर दिखाए गए QR कोड से मिलता है। स्थानांतरण एन्क्रिप्टेड होता है (फ़िंगरप्रिंट जाँच के साथ TLS) और सीधे आपके स्थानीय नेटवर्क या आपके बनाए VPN से गुज़रता है।</p>
+        <p lang="hi">कोई मध्यस्थ सर्वर नहीं, कोई रिले नहीं और प्रदाता की कोई पहुँच नहीं। बिना जोड़े कोई सिंक नहीं होता; आप सेटिंग्स में कभी भी युग्मन हटा सकते हैं।</p>
+
+
+      </section>
+
+      <section id="c7">
+        <h2><span class="num">07</span><span lang="hi">कोई ट्रैकिंग नहीं, कोई विज्ञापन नहीं</span></h2>
+
+
+
+
+
+        <ul class="bul" lang="hi">
+          <li>कोई एनालिटिक्स या सांख्यिकी SDK नहीं, कोई स्वचालित क्रैश रिपोर्टिंग नहीं, कोई रिमोट लॉगिंग नहीं</li>
+          <li>कोई विज्ञापन नहीं, कोई विज्ञापन-आईडी नहीं, कोई विज्ञापन नेटवर्क नहीं, कोई ऐड-ट्रैकिंग नहीं</li>
+          <li>तीसरे पक्षों को डेटा न दिया जाता है, न बेचा जाता है</li>
+          <li>GDPR के अनुच्छेद 22 के अर्थ में कोई स्वचालित निर्णय-प्रक्रिया और कोई प्रोफ़ाइलिंग नहीं</li>
+          <li>ऐप में कोई कुकी नहीं</li>
+        </ul>
+
+      </section>
+
+      <section id="c8">
+        <h2><span class="num">08</span><span lang="hi">क़ानूनी आधार</span></h2>
+
+
+
+
+
+
+
+
+
+
+        <p lang="hi">चूँकि ऐप डेटा को आपके उपकरण पर स्थानीय रूप से संसाधित करता है और प्रदाता की उस तक कोई पहुँच नहीं है, इस हद तक नियंत्रक द्वारा कोई प्रसंस्करण नहीं होता। जहाँ तक कुछ प्रक्रियाएँ फिर भी डेटा-संरक्षण की दृष्टि से प्रासंगिक हैं, वहाँ लागू होते हैं:</p>
+        <ul class="bul" lang="hi">
+          <li><strong>GDPR अनुच्छेद 6(1)(b)</strong>: आपकी माँगी हुई सुविधाएँ उपलब्ध कराना, विशेष रूप से chess.com या Lichess से आपकी बाज़ियों का आयात और आपके उपकरणों के बीच सिंक।</li>
+          <li><strong>GDPR अनुच्छेद 6(1)(a)</strong>: सहमति, जहाँ भी आप स्वयं कोई सुविधा चालू करते हैं: वैकल्पिक ऑनलाइन ओपनिंग बुक (chessdb.cn), QR युग्मन के लिए कैमरा पहुँच, सूचनाएँ। आप इसे कभी भी ऐप या सिस्टम सेटिंग्स में वापस ले सकते हैं।</li>
+          <li><strong>GDPR अनुच्छेद 6(1)(f)</strong>: सुरक्षित और अद्यतन सॉफ़्टवेयर में वैध हित: प्रोग्राम अपडेट की जाँच।</li>
+        </ul>
+
+
+      </section>
+
+      <section id="c9">
+        <h2><span class="num">09</span><span lang="hi">भंडारण अवधि और विलोपन</span></h2>
+
+
+
+
+
+
+
+
+
+
+        <p lang="hi">स्थानीय डेटा तब तक संग्रहीत रहता है जब तक आप उसे रखना चाहें; सर्वर पर कोई भंडारण नहीं है, इसलिए प्रदाता के यहाँ कोई विलोपन-अवधि भी नहीं। आप कभी भी:</p>
+        <ul class="bul" lang="hi">
+          <li>ऐप में अलग-अलग बाज़ियाँ, नोट, टैग या रेपर्टवार प्रविष्टियाँ हटा सकते हैं,</li>
+          <li>किसी दूसरे उपकरण के साथ युग्मन हटा सकते हैं,</li>
+          <li>ऐप अनइंस्टॉल कर सकते हैं, जिससे स्थानीय ऐप-डेटा हट जाता है (Android पर अतिरिक्त रूप से “ऐप डेटा साफ़ करें” से, Windows पर एप्लिकेशन-डेटा डायरेक्टरी हटाकर),</li>
+          <li>यदि डेटा रखना चाहें तो पहले उसे PGN के रूप में निर्यात कर सकते हैं।</li>
+        </ul>
+
+
+      </section>
+
+      <section id="c10">
+        <h2><span class="num">10</span><span lang="hi">बच्चे और किशोर</span></h2>
+
+
+
+
+
+        <p lang="hi">Kiebitz विशेष रूप से बच्चों के लिए नहीं है और प्रदाता के माध्यम से कोई डेटा एकत्र नहीं करता; उपयोगकर्ता की आयु चाहे जो हो, प्रदाता को कोई व्यक्तिगत डेटा नहीं भेजा जाता। बाज़ियाँ आयात करते समय संबंधित शतरंज पोर्टल की शर्तें लागू होती हैं।</p>
+
+      </section>
+
+      <section id="c11">
+        <h2><span class="num">11</span><span lang="hi">आपके अधिकार</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="hi">GDPR के अंतर्गत आपको पहुँच (अनु. 15), सुधार (अनु. 16), विलोपन (अनु. 17), प्रसंस्करण के प्रतिबंध (अनु. 18), डेटा पोर्टेबिलिटी (अनु. 20) और आपत्ति (अनु. 21) के अधिकार प्राप्त हैं, साथ ही दी गई सहमति को कभी भी वापस लेने का अधिकार (अनु. 7(3))।</p>
+        <p lang="hi">व्यवहार में: चूँकि प्रदाता आपके बारे में कोई डेटा संग्रहीत नहीं करता, पहुँच और विलोपन सामान्यतः केवल उसी डेटा से संबंधित हो सकते हैं जो आपके अपने उपकरण पर है और जिसे आप वहाँ स्वयं देख, निर्यात और हटा सकते हैं। किसी भी अनुरोध के लिए <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> पर एक ई-मेल पर्याप्त है।</p>
+        <p lang="hi">इसके अलावा आपको किसी डेटा-संरक्षण पर्यवेक्षी प्राधिकरण के समक्ष शिकायत दर्ज कराने का अधिकार है। सक्षम प्राधिकरण जर्मनी के राइनलैंड-पाल्ज़ राज्य का डेटा संरक्षण एवं सूचना स्वतंत्रता आयुक्त है; आप अपने निवास-स्थान के प्राधिकरण से भी संपर्क कर सकते हैं।</p>
+
+
+
+      </section>
+
+      <section id="c12">
+        <h2><span class="num">12</span><span lang="hi">यह वेबसाइट</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="hi">यह वेबसाइट स्थैतिक है और GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) के माध्यम से वितरित की जाती है। आपके देखने पर होस्ट के रूप में GitHub सर्वर लॉग फ़ाइलों में तकनीकी रूप से आवश्यक कनेक्शन डेटा संसाधित करता है, विशेष रूप से आपका IP पता, तारीख़ और समय, माँगी गई फ़ाइल, रेफ़रर और ब्राउज़र पहचान। क़ानूनी आधार GDPR अनुच्छेद 6(1)(f) है (सुरक्षित, निर्बाध संचालन)। इस वेबसाइट के प्रदाता की इन लॉग फ़ाइलों तक कोई पहुँच नहीं है।</p>
+        <p lang="hi">वेबसाइट कोई कुकी नहीं रखती और न कोई एनालिटिक्स, विज्ञापन या सोशल-मीडिया स्क्रिप्ट इस्तेमाल करती है। फ़ॉन्ट, स्टाइल और छवियाँ उसी सर्वर पर हैं। आपकी चुनी हुई भाषा केवल आपके ब्राउज़र में स्थानीय रूप से (localStorage) सहेजी जाती है, ताकि अगली बार पृष्ठ उसी भाषा में दिखे; यह जानकारी भेजी नहीं जाती। GitHub का गोपनीयता वक्तव्य: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>।</p>
+        <p lang="hi"><strong>फ़ीडबैक फ़ॉर्म:</strong> केवल तभी जब आप कोई संदेश भेजते हैं, आपकी दी गई जानकारी (संदेश का प्रकार, सारांश, विवरण, और वैकल्पिक रूप से प्लेटफ़ॉर्म, ऐप संस्करण तथा ई-मेल पता) और तकनीकी रूप से आवश्यक कनेक्शन डेटा FormSubmit (formsubmit.co) को भेजा जाता है और वहाँ से ई-मेल द्वारा प्रदाता तक पहुँचाया जाता है। ऐप से कोई डेटा स्वतः पढ़ा या संलग्न नहीं किया जाता। FormSubmit के अपने कथन के अनुसार वह प्रविष्टियाँ वितरण और पुनःप्राप्ति हेतु 30 दिन तक रखता है। यदि आप सहायता माँगते हैं तो क़ानूनी आधार GDPR अनुच्छेद 6(1)(b) है, अन्यथा अनुच्छेद 6(1)(f) (स्वैच्छिक प्रतिक्रिया का निपटान और सॉफ़्टवेयर में सुधार)। प्रदाता को प्राप्त ई-मेल तब हटा दिया जाता है जब वह निपटान और आगे के प्रश्नों के लिए आवश्यक नहीं रह जाता। FormSubmit की जानकारी: <a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">गोपनीयता</a> और <a href="https://formsubmit.co/documentation" rel="noopener noreferrer">दस्तावेज़ीकरण</a>।</p>
+
+
+
+      </section>
+
+      <section id="c13">
+        <h2><span class="num">13</span><span lang="hi">इस नीति में परिवर्तन</span></h2>
+
+
+
+
+
+        <p lang="hi">यदि ऐप में ऐसी सुविधाएँ जुड़ती हैं जिनसे नया डेटा-प्रसंस्करण होता है, तो यह नीति पहले ही संशोधित की जाएगी। वर्तमान संस्करण की तारीख़ ऊपर दी गई है और यह इस पते पर स्थायी रूप से उपलब्ध है।</p>
+
+        <div class="panel" style="margin-top:22px">
+          <p>
+
+
+
+
+
+            <span lang="hi">गोपनीयता से जुड़े सवाल? <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> पर लिखिए। ऐप का सोर्स कोड <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a> पर देखा जा सकता है।</span>
+
+          </p>
+        </div>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="small" style="margin-top:8px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="../index.html"><span lang="hi">मुखपृष्ठ</span></a>
+      <a href="../impressum/index.html"><span lang="hi">क़ानूनी सूचना</span></a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="hi">सोर्स कोड</span></a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

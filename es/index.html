@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-lang="es" data-page="home">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiebitz · Análisis de ajedrez local-first para Windows y Android</title>
+<meta name="description" content="Kiebitz importa tus partidas de chess.com y Lichess, las analiza localmente con Stockfish y revela tus puntos fuertes y débiles, sin cuenta, nube ni telemetría.">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://torim98.github.io/kiebitz-site/es/">
+<link rel="alternate" hreflang="de" href="https://torim98.github.io/kiebitz-site/de/">
+<link rel="alternate" hreflang="en" href="https://torim98.github.io/kiebitz-site/">
+<link rel="alternate" hreflang="fr" href="https://torim98.github.io/kiebitz-site/fr/">
+<link rel="alternate" hreflang="es" href="https://torim98.github.io/kiebitz-site/es/">
+<link rel="alternate" hreflang="zh-Hans" href="https://torim98.github.io/kiebitz-site/zh/">
+<link rel="alternate" hreflang="hi" href="https://torim98.github.io/kiebitz-site/hi/">
+<link rel="alternate" hreflang="ar" href="https://torim98.github.io/kiebitz-site/ar/">
+<link rel="alternate" hreflang="x-default" href="https://torim98.github.io/kiebitz-site/">
+<link rel="icon" href="../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kiebitz">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar">
+<meta property="og:title" content="Kiebitz · Análisis de ajedrez local-first para Windows y Android">
+<meta property="og:description" content="Kiebitz importa tus partidas de chess.com y Lichess, las analiza localmente con Stockfish y revela tus puntos fuertes y débiles, sin cuenta, nube ni telemetría.">
+<meta property="og:url" content="https://torim98.github.io/kiebitz-site/es/">
+<meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kiebitz · Local-first chess analysis">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kiebitz · Análisis de ajedrez local-first para Windows y Android">
+<meta name="twitter:description" content="Kiebitz importa tus partidas de chess.com y Lichess, las analiza localmente con Stockfish y revela tus puntos fuertes y débiles, sin cuenta, nube ni telemetría.">
+<meta name="twitter:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Kiebitz",
+  "url": "https://torim98.github.io/kiebitz-site/es/",
+  "description": "Kiebitz importa tus partidas de chess.com y Lichess, las analiza localmente con Stockfish y revela tus puntos fuertes y débiles, sin cuenta, nube ni telemetría.",
+  "inLanguage": "es",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Windows, macOS, Linux, Android",
+  "softwareVersion": "0.8.0",
+  "isAccessibleForFree": true,
+  "downloadUrl": "https://github.com/Torim98/Kiebitz/releases/latest",
+  "installUrl": "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
+  "screenshot": [
+    "https://torim98.github.io/kiebitz-site/assets/shots/insights.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/repertoire.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/puzzles.png",
+    "https://torim98.github.io/kiebitz-site/assets/shots/study.png"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "sameAs": "https://github.com/Torim98/Kiebitz",
+  "license": "https://github.com/Torim98/Kiebitz/blob/main/LICENSE"
+}
+</script>
+<link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span lang="es">Ir al contenido</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="index.html" aria-label="Kiebitz">
+      <img src="../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="es">Jugadas que vuelan</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="#features"><span lang="es">Funciones</span></a>
+      <a href="#local"><span lang="es">Local-first</span></a>
+      <a href="#download"><span lang="es">Descarga</span></a>
+      <a href="#feedback"><span lang="es">Comentarios</span></a>
+      <a href="privacy/index.html"><span lang="es">Privacidad</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="Idioma">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-primary btn-sm" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+      <span lang="es">Descargar</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="es">Beta · acceso anticipado</span></p>
+        <h1>
+
+
+
+          <span lang="es">Kiebitz <span class="flight">mira</span> por encima de tu hombro.</span>
+
+
+
+        </h1>
+
+
+
+        <p class="hero-sub" lang="es">Un <i>Kiebitz</i> es una avefría y, en alemán, el mirón que sigue la partida por encima de tu hombro. Esta app importa tus partidas de chess.com y Lichess, pasa un Stockfish nativo por todo tu historial y te dice dónde pierdes de verdad, no dónde crees que pierdes. <strong>Todo se queda en tus dispositivos.</strong></p>
+
+
+
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="es">Descargar para Windows</span>
+          </a>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="es">Android (prueba beta)</span>
+          </a>
+        </div>
+        <p class="cta-note"><span lang="es">Gratis · Windows en GitHub · Android en prueba cerrada</span></p>
+      </div>
+
+      <div class="board-card" aria-hidden="true">
+        <div class="board-head">
+          <span data-route-label>Knight · b1 → e8</span>
+          <span data-square-label>b1</span>
+        </div>
+        <div class="board-stage">
+          <div class="board-lattice"></div>
+          <svg class="board-path" viewBox="0 0 8 8" preserveAspectRatio="none" focusable="false"></svg>
+        </div>
+        <div class="board-coords"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        <div class="board-foot">
+          <span class="pill"><span lang="es">Stockfish · nativo</span></span>
+          <span><span lang="es">El análisis se ejecuta en tu dispositivo.</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Banner: Android Closed Test ───────────────────────────────────── -->
+  <section class="band" aria-labelledby="band-title">
+    <div class="band-grid" aria-hidden="true"></div>
+    <div class="wrap band-in rv">
+      <div class="band-text">
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="es">Beta cerrada · Google Play</span></p>
+        <h2 id="band-title">
+
+
+
+          <span lang="es">Kiebitz llega a Android y busca personas que lo prueben.</span>
+
+
+
+        </h2>
+        <p class="band-sub">
+
+
+
+          <span lang="es">Kiebitz ya se puede descargar para Windows. Para Android hay una prueba cerrada en marcha en Google Play, y agradecería mucho unas cuantas personas más. Son tres jugadas.</span>
+
+
+
+        </p>
+        <div class="band-cta">
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="es">Quiero probarlo</span>
+          </a>
+          <a class="band-alt" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="es">o solo el APK</span>
+          </a>
+        </div>
+        <p class="band-note">
+
+
+
+          <span lang="es">Google pide 14 días de participación. Prefiero comentarios sinceros a una presencia silenciosa.</span>
+
+
+
+        </p>
+      </div>
+
+      <ol class="route">
+        <li>
+          <span class="route-n">1</span>
+          <span class="route-txt">
+            <b><span lang="es">Únete al grupo de Google</span></b>
+            <span><span lang="es">Habilita la prueba en tu cuenta</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="route-n">2</span>
+          <span class="route-txt">
+            <b><span lang="es">Únete a la prueba cerrada</span></b>
+            <span><span lang="es">Acepta con la misma cuenta de Google</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="route-n">3</span>
+          <span class="route-txt">
+            <b><span lang="es">Instala desde Play Store</span></b>
+            <span><span lang="es">A partir de ahí Kiebitz se actualiza solo</span></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ── 01 Local-first ────────────────────────────────────────────────── -->
+  <section class="section" id="local">
+    <div class="wrap">
+      <p class="eyebrow"><b>01</b> <span lang="es">Local-first</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
+
+
+
+        <span lang="es">Tus partidas son tuyas.</span>
+
+
+
+      </h2>
+      <p class="lede" style="margin-top:18px">
+
+
+
+        <span lang="es">Kiebitz no tiene servidor. No hay nada donde iniciar sesión, nada que se suba y ningún análisis que ocurra en otro sitio. La base de datos es un archivo SQLite en tu propio equipo.</span>
+
+
+
+      </p>
+      <dl class="promise rv" style="margin-top:32px">
+        <div>
+          <dt><span lang="es">Sin cuenta</span></dt>
+          <dd><span lang="es">Sin registro, sin correo, sin inicio de sesión.</span></dd>
+        </div>
+        <div>
+          <dt><span lang="es">Sin nube</span></dt>
+          <dd><span lang="es">Partidas, análisis y progreso se quedan en local.</span></dd>
+        </div>
+        <div>
+          <dt><span lang="es">Sin telemetría</span></dt>
+          <dd><span lang="es">Sin rastreo, sin anuncios, sin informes de fallos.</span></dd>
+        </div>
+        <div>
+          <dt><span lang="es">Sync en tu propia red</span></dt>
+          <dd><span lang="es">El móvil y el escritorio hablan entre sí directamente y cifrados.</span></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ── 02 Ablauf ─────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow"><b>02</b> <span lang="es">Cómo funciona</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:24ch">
+
+
+
+        <span lang="es">Importar, analizar, entender.</span>
+
+
+
+      </h2>
+      <div class="flow rv" style="margin-top:34px">
+        <article class="step">
+          <p class="step-n">01</p>
+          <h3><span lang="es">Importar</span></h3>
+          <p><span lang="es">Escribe tu nombre de usuario y listo. Kiebitz trae todo el historial, sin duplicados, y acepta PGN para las partidas sobre el tablero.</span></p>
+          <div class="step-viz srcrow">
+            <span class="srcpill cc">chess.com</span>
+            <span class="srcpill li">lichess</span>
+            <span class="srcpill pgn">PGN</span>
+          </div>
+        </article>
+        <article class="step">
+          <p class="step-n">02</p>
+          <h3><span lang="es">Analizar</span></h3>
+          <p><span lang="es">Un Stockfish nativo procesa la cola en segundo plano: evaluación por jugada, imprecisión, error, error grave, precisión.</span></p>
+          <div class="step-viz">
+            <div class="evalbar" aria-hidden="true"><span class="w" style="width:52%"></span><span class="b"></span></div>
+            <div class="evalticks" aria-hidden="true"><span>1. e4</span><span class="bad">24. Nf3?? −3.1</span><span>41. Kg2</span></div>
+          </div>
+        </article>
+        <article class="step">
+          <p class="step-n">03</p>
+          <h3><span lang="es">Entender</span></h3>
+          <p><span lang="es">No «bien jugado», sino: en qué fase, en qué apertura y con qué ritmo se te viene abajo.</span></p>
+          <div class="step-viz bars" aria-hidden="true">
+            <div class="bar"><span class="bar-l"><span lang="es">Apertura</span></span><span class="bar-t"><i data-w="22"></i></span><span class="bar-v">0.4</span></div>
+            <div class="bar hot"><span class="bar-l"><span lang="es">Medio juego</span></span><span class="bar-t"><i data-w="78"></i></span><span class="bar-v">1.9</span></div>
+            <div class="bar"><span class="bar-l"><span lang="es">Final</span></span><span class="bar-t"><i data-w="46"></i></span><span class="bar-v">0.9</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 Funktionen ─────────────────────────────────────────────────── -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <p class="eyebrow"><b>03</b> <span lang="es">Funciones</span></p>
+
+      <div class="feature rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Insights</p>
+          <h3><span lang="es">Dónde se te rompe el juego</span></h3>
+          <p><span lang="es">Cuatro páginas de análisis sobre todo el historial en vez de un número por partida: fuerza de juego, aperturas separadas por color, patrones de conducta y las fases en las que cometes los errores.</span></p>
+          <ul class="ticks">
+            <li><span lang="es">Precisión y tasa de error a lo largo de meses, no de una partida</span></li>
+            <li><span lang="es">Aperturas con resultado, desviación y acierto</span></li>
+            <li><span lang="es">Patrones: apuros de tiempo, sesiones largas, partidas de revancha</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/insights.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Insights"></button>
+          <figcaption>
+            <span lang="es">Insights · precisión y errores por fase</span>
+            <span><span lang="es">1483 partidas</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Repertoire · FSRS</p>
+          <h3><span lang="es">Un repertorio que de verdad se queda</span></h3>
+          <p><span lang="es">Tu repertorio es un árbol de posiciones que se repasa con FSRS, el mismo método de las buenas apps de tarjetas. Cada jugada tiene su propio intervalo y los repasos pendientes aparecen cada mañana en el panel.</span></p>
+          <ul class="ticks">
+            <li><span lang="es">Añade al repertorio jugadas de tus propias partidas</span></li>
+            <li><span lang="es">Cobertura por apertura, separada por blancas y negras</span></li>
+            <li><span lang="es">Racha y tarjetas pendientes en vez de machaque infinito</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/repertoire.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Repertoire"></button>
+          <figcaption>
+            <span lang="es">Repertorio · variantes con blancas y negras</span>
+            <span><span lang="es">17 jugadas en el repertorio · 42 % de cobertura</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature rv">
+        <div class="feature-text">
+          <p class="feature-kicker"><span lang="es">Ejercicios &amp; finales</span></p>
+          <h3><span lang="es">Táctica hecha con tus propios errores</span></h3>
+          <p><span lang="es">Además de la base de ejercicios de Lichess disponible sin conexión, Kiebitz crea problemas con las posiciones en las que se te escapó la jugada ganadora. Y finales seleccionados contra el motor, con tablas Syzygy opcionales.</span></p>
+          <ul class="ticks">
+            <li><span lang="es">Elo de ejercicios y acierto por tema</span></li>
+            <li><span lang="es">Finales: coronación, finales de torre, mates forzados</span></li>
+            <li><span lang="es">Todo jugable sin conexión</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/puzzles.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Puzzles"></button>
+          <figcaption>
+            <span lang="es">Puzzles · acierto por tema</span>
+            <span><span lang="es">285 ejercicios de tus propias partidas</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="feature-text">
+          <p class="feature-kicker">Study</p>
+          <h3><span lang="es">Un plan que sale de tus datos</span></h3>
+          <p><span lang="es">El planificador lee tus debilidades en los análisis y propone qué toca hoy: repasos, un tema, un final. Como lista diaria y como plan semanal que puedes reordenar tú.</span></p>
+          <ul class="ticks">
+            <li><span lang="es">Recomendaciones justificadas con tus partidas</span></li>
+            <li><span lang="es">Planificador semanal con arrastrar y soltar</span></li>
+            <li><span lang="es">Recordatorios locales en el dispositivo</span></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <button class="shot-zoom" type="button" data-aria="screenshot" aria-label="Screenshot"><img src="../assets/shots/study.png" width="1920" height="1009" loading="lazy" decoding="async" alt="Kiebitz Study"></button>
+          <figcaption>
+            <span lang="es">Study · recomendaciones del entrenador y plan semanal</span>
+            <span><span lang="es">objetivo diario y racha</span></span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="more rv" style="margin-top:clamp(48px,6vw,84px)">
+        <div>
+          <h4><span lang="es">Panel</span></h4>
+          <p><span lang="es">Evolución del rating, últimas partidas, repasos pendientes y la cola de análisis de un vistazo.</span></p>
+        </div>
+        <div>
+          <h4><span lang="es">Base de partidas</span></h4>
+          <p><span lang="es">Filtros, etiquetas, notas por partida y por jugada, búsqueda de posiciones, importación y exportación PGN.</span></p>
+        </div>
+        <div>
+          <h4><span lang="es">Análisis en vivo</span></h4>
+          <p><span lang="es">Tablero con líneas del motor, calidad de jugada, flechas y, si quieres, el libro de aperturas de chessdb.cn.</span></p>
+        </div>
+        <div>
+          <h4><span lang="es">Siete idiomas</span></h4>
+          <p><span lang="es">Alemán, inglés, francés, español, chino, hindi y árabe: en la app y también en esta web. Y un tema oscuro cuidado.</span></p>
+        </div>
+        <div>
+          <h4><span lang="es">Windows &amp; Android</span></h4>
+          <p><span lang="es">App de escritorio con actualización automática y build de Android con Stockfish nativo por ABI.</span></p>
+        </div>
+        <div>
+          <h4><span lang="es">Código fuente consultable</span></h4>
+          <p><span lang="es">Source-available, no open source: leerlo y compilarlo tú sí, redistribuirlo no.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 Sync ───────────────────────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow"><b>04</b> <span lang="es">Sync entre dispositivos</span></p>
+      <div class="feature rv">
+        <div class="feature-text">
+          <h3><span lang="es">Dos dispositivos, una red, nada en medio</span></h3>
+          <p><span lang="es">El escritorio es el hub y el móvil se empareja con un código QR. A partir de ahí los dos se sincronizan cifrados, directamente por tu red doméstica o tu VPN; dirección, código y huella del certificado van dentro del QR. Ningún servidor en medio, porque no existe.</span></p>
+          <ul class="ticks">
+            <li><span lang="es">Entrena en el móvil de camino y analiza por la noche en el escritorio</span></li>
+            <li><span lang="es">La cámara solo se usa para escanear el QR</span></li>
+            <li><span lang="es">Sin emparejar, cada dispositivo funciona por completo por su cuenta</span></li>
+          </ul>
+        </div>
+        <div class="sync-viz" aria-hidden="true">
+          <div class="device"><span>Desktop<br>Hub</span></div>
+          <div class="wire"><span class="wire-label">LAN · TLS</span></div>
+          <div class="device phone"><span>Android</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 05 Datenschutz ────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow"><b>05</b> <span lang="es">Privacidad</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:28ch">
+
+
+
+        <span lang="es">Lo que Kiebitz envía y lo que no.</span>
+
+
+
+      </h2>
+      <div class="privacy-grid rv">
+        <div>
+          <h4><span lang="es">Acceso a la red solo al importar</span></h4>
+          <p><span lang="es">Al importar partidas, Kiebitz llama a las API públicas de chess.com y Lichess con el nombre de usuario que has escrito tú.</span></p>
+        </div>
+        <div>
+          <h4><span lang="es">chessdb.cn solo si tú quieres</span></h4>
+          <p><span lang="es">El libro de aperturas en línea es una opción de los ajustes. Si está apagada, nunca se consulta chessdb.cn.</span></p>
+        </div>
+        <div>
+          <h4><span lang="es">La cámara solo para el código QR</span></h4>
+          <p><span lang="es">En Android, Kiebitz pide la cámara solo cuando escaneas el código de emparejamiento. No se guarda ni se envía ninguna imagen.</span></p>
+        </div>
+        <div class="no">
+          <h4><span lang="es">Ningún servidor del proveedor</span></h4>
+          <p><span lang="es">No hay servidor de Kiebitz, ni SDK de analítica, ni identificadores publicitarios, ni informes de fallos automáticos, ni cuentas.</span></p>
+        </div>
+      </div>
+      <p style="margin-top:26px">
+        <a class="btn btn-sm" href="privacy/index.html"><span lang="es">Política de privacidad completa</span></a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── 06 Download ───────────────────────────────────────────────────── -->
+  <section class="section section-alt" id="download">
+    <div class="wrap">
+      <p class="eyebrow"><b>06</b> <span lang="es">Descarga</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
+
+
+
+        <span lang="es">Descarga la beta y empieza.</span>
+
+
+
+      </h2>
+      <p class="lede" style="margin-top:16px">
+
+
+
+        <span lang="es">Kiebitz es gratuito por ahora, sin anuncios ni compras dentro de la app. La versión de Windows se puede descargar ya y para Android hay una prueba cerrada en Google Play. Ambas compilaciones están además adjuntas a la última release del repositorio.</span>
+
+
+
+      </p>
+      <div class="dl rv" style="margin-top:32px">
+        <article class="dl-card">
+          <h3>Windows</h3>
+          <p><span lang="es">Instalador de escritorio. Incluye el Stockfish nativo y se actualiza solo.</span></p>
+          <p class="dl-meta"><span lang="es">Instalador · actualización automática</span></p>
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+            <span lang="es">Instalador de Windows</span>
+          </a>
+        </article>
+        <article class="dl-card">
+          <h3>Android</h3>
+          <p><span lang="es">Ahora mismo en prueba cerrada en Google Play, con Stockfish nativo por ABI. Si prefieres no entrar en la prueba, instala el APK directamente.</span></p>
+          <p class="dl-meta"><span lang="es">Prueba cerrada · APK · sync LAN</span></p>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+            <span lang="es">Android · prueba beta &amp; APK</span>
+          </a>
+        </article>
+      </div>
+      <p class="small" style="margin-top:22px">
+
+
+
+        <span lang="es">Beta: las funciones aún cambian y hay asperezas previstas. Los fallos y las peticiones son bienvenidos en el repositorio: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+
+
+
+      </p>
+    </div>
+  </section>
+
+  <!-- ── 07 Feedback ─────────────────────────────────────────────────────── -->
+  <section class="section feedback-section" id="feedback">
+    <div class="wrap">
+      <p class="eyebrow"><b>07</b> <span lang="es">Comentarios</span></p>
+      <div class="feedback-grid">
+        <div class="feedback-copy">
+          <h2>
+
+
+
+            <span lang="es">Cuéntale a Kiebitz lo que veas.</span>
+
+
+
+          </h2>
+          <p class="lede">
+
+
+
+            <span lang="es">Ya sea una impresión rápida, un fallo reproducible o una idea para la próxima jugada: cada mensaje llega directamente al desarrollador.</span>
+
+
+
+          </p>
+          <div class="feedback-notes" aria-label="Notas">
+            <p><b>01</b><span><strong><span lang="es">El contexto ayuda.</span></strong><span lang="es">Para los fallos, describe brevemente qué pasó justo antes.</span></span></p>
+            <p><b>02</b><span><strong><span lang="es">La respuesta es opcional.</span></strong><span lang="es">Sin dirección de correo, tu mensaje queda anónimo.</span></span></p>
+            <p><b>03</b><span><strong><span lang="es">Sin telemetría.</span></strong><span lang="es">Solo se envía lo que escribas aquí.</span></span></p>
+          </div>
+        </div>
+
+        <details class="feedback-package rv">
+          <summary class="feedback-package-summary">
+            <span class="package-topline">
+              <span class="package-kicker"><span lang="es">Línea de juego sellada</span></span>
+              <span class="package-address">kiebitz.chess@gmail.com</span>
+            </span>
+            <span class="package-main">
+              <span class="package-seal" aria-hidden="true"><img src="../assets/icon-128.png" width="44" height="44" alt=""></span>
+              <span class="package-copy">
+                <strong><span lang="es">Te toca mover.</span></strong>
+                <span><span lang="es">Un comentario, un fallo o una idea, directos al desarrollador en una sola jugada.</span></span>
+              </span>
+              <span class="package-action">
+                <span data-package-open><span lang="es">Abrir formulario</span></span>
+                <span data-package-close><span lang="es">Cerrar formulario</span></span>
+                <i aria-hidden="true">↘</i>
+              </span>
+            </span>
+            <span class="package-meta">
+              <span>f7 → inbox</span>
+              <span><span lang="es">Comentario · fallo · idea</span></span>
+              <span><span lang="es">Sin cuenta · sin telemetría</span></span>
+            </span>
+          </summary>
+
+          <form class="feedback-form" action="https://formsubmit.co/kiebitz.chess@gmail.com" method="POST" data-feedback-form data-feedback-endpoint="https://formsubmit.co/ajax/kiebitz.chess@gmail.com">
+            <input type="hidden" name="_subject" value="Kiebitz · New feedback" data-feedback-subject>
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_url" value="https://torim98.github.io/kiebitz-site/#feedback">
+            <label class="honey" aria-hidden="true">Website<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+
+          <fieldset class="report-types">
+            <legend><span lang="es">¿Qué quieres contarnos?</span></legend>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Feedback" checked>
+              <span class="report-type-card">
+                <span class="report-type-n">01</span>
+                <span><b><span lang="es">Comentario</span></b><small><span lang="es">Impresión o apunte</span></small></span>
+              </span>
+            </label>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Crash report">
+              <span class="report-type-card">
+                <span class="report-type-n">02</span>
+                <span><b><span lang="es">Fallo</span></b><small><span lang="es">Reproducir un error</span></small></span>
+              </span>
+            </label>
+            <label>
+              <input class="report-type-input" type="radio" name="report_type" value="Feature request">
+              <span class="report-type-card">
+                <span class="report-type-n">03</span>
+                <span><b><span lang="es">Idea</span></b><small><span lang="es">Una idea para Kiebitz</span></small></span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="form-field">
+            <label for="feedback-title"><span lang="es">Resumen</span></label>
+            <input id="feedback-title" name="summary" type="text" required maxlength="120" autocomplete="off" data-placeholder-es="¿Qué ha pasado o qué te gustaría ver?">
+          </div>
+
+          <div class="form-field">
+            <span class="field-label">
+              <label for="feedback-message"><span lang="es">Detalles</span></label>
+              <span class="field-count" data-feedback-count>0 / 4000</span>
+            </span>
+            <textarea id="feedback-message" name="message" required minlength="20" maxlength="4000" rows="6" data-placeholder-es="Describe los pasos, el comportamiento esperado o tu idea de la forma más concreta posible."></textarea>
+            <span class="field-hint"><span lang="es">No incluyas contraseñas, partidas privadas ni otros datos sensibles.</span></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="feedback-platform"><span lang="es">Plataforma</span> <small><span lang="es">opcional</span></small></label>
+              <select id="feedback-platform" name="platform">
+                <option value="">—</option>
+                <option value="Windows">Windows</option>
+                <option value="Android">Android</option>
+                <option value="Website" data-label-es="Sitio web">Website</option>
+                <option value="Other" data-label-es="Otra">Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="feedback-version"><span lang="es">Versión de la app</span> <small><span lang="es">opcional</span></small></label>
+              <input id="feedback-version" name="app_version" type="text" maxlength="40" autocomplete="off" data-placeholder-es="p. ej. 0.9.4">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="feedback-email"><span lang="es">Correo</span> <small><span lang="es">opcional · solo para responderte</span></small></label>
+            <input id="feedback-email" name="email" type="email" maxlength="160" autocomplete="email" placeholder="name@example.com">
+          </div>
+
+          <div class="form-submit">
+            <p>
+
+
+
+              <span lang="es">Al enviar el formulario, tus datos se transmiten por correo a través de FormSubmit. <a href="privacy/index.html#c12">Detalles de privacidad</a>.</span>
+
+
+
+            </p>
+            <button class="btn btn-primary feedback-send" type="submit" data-feedback-send>
+              <span lang="es">Enviar mensaje</span>
+            </button>
+          </div>
+          <p class="form-status" data-feedback-status role="status" aria-live="polite"></p>
+          </form>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="flock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="foot-note" style="margin-top:8px">
+
+
+
+        <span lang="es">Jugadas que vuelan. Un compañero de ajedrez local-first para Windows y Android. Source-available, no open source. Stockfish se distribuye bajo GPL-3.0.</span>
+
+
+
+      </p>
+      <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#feedback"><span lang="es">Enviar comentarios</span></a>
+      <a href="privacy/index.html"><span lang="es">Privacidad</span></a>
+      <a href="impressum/index.html"><span lang="es">Aviso legal</span></a>
+      <a href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">Releases</a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="es">Código fuente</span></a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ── Dialog: Android Closed Test ─────────────────────────────────────── -->
+<div class="modal" id="beta-android" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="beta-title" aria-describedby="beta-lede">
+    <div class="modal-head">
+      <span class="modal-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="9" width="14" height="10" rx="3"></rect>
+          <path d="M8.2 9 6.7 6.3M15.8 9l1.5-2.7"></path>
+          <circle cx="9.6" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
+          <circle cx="14.4" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
+        </svg>
+      </span>
+      <div class="modal-titles">
+        <p class="modal-eyebrow">Kiebitz</p>
+        <h2 id="beta-title">
+
+
+
+          <span lang="es">Android está en prueba cerrada</span>
+
+
+
+        </h2>
+      </div>
+      <button class="modal-x" type="button" data-beta-close data-aria="close" aria-label="Close">&#10005;</button>
+    </div>
+
+    <div class="modal-body">
+      <p class="modal-lede" id="beta-lede">
+
+
+
+        <span lang="es">Kiebitz ya se puede descargar para Windows. Para la app de Android hay ahora mismo una prueba cerrada en Google Play, y agradecería mucho unas cuantas personas más. Participar son tres pasos:</span>
+
+
+
+      </p>
+
+      <ol class="steps">
+        <li>
+          <a class="step" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">1</span>
+            <span class="step-txt">
+              <b><span lang="es">Únete al grupo de Google</span></b>
+              <span class="step-sub"><span lang="es">Ser miembro habilita la prueba en tu cuenta de Google.</span></span>
+              <span class="step-url">groups.google.com/g/kiebitz-beta-test</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a class="step" href="https://play.google.com/apps/testing/de.torim.kiebitz" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">2</span>
+            <span class="step-txt">
+              <b><span lang="es">Únete a la prueba cerrada</span></b>
+              <span class="step-sub"><span lang="es">Acepta con la misma cuenta de Google del paso 1.</span></span>
+              <span class="step-url">play.google.com/apps/testing/de.torim.kiebitz</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a class="step" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener">
+            <span class="step-n" aria-hidden="true">3</span>
+            <span class="step-txt">
+              <b><span lang="es">Instálalo en Android</span></b>
+              <span class="step-sub"><span lang="es">Abre la ficha de Play Store e instala Kiebitz.</span></span>
+              <span class="step-url">play.google.com/store/apps/details?id=de.torim.kiebitz</span>
+            </span>
+            <span class="step-go" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+      </ol>
+
+      <p class="modal-note">
+
+
+
+        <span lang="es">Google exige que quienes prueban sigan apuntados al menos 14 días. Usar de verdad la app y dejar un comentario sincero sería, claro, aún más útil.</span>
+
+
+      </p>
+    </div>
+
+    <div class="modal-foot">
+      <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+        <span lang="es">Mejor el APK desde GitHub</span>
+      </a>
+      <a class="btn btn-primary" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
+        <span lang="es">Empezar por el paso 1</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
