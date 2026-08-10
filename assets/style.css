@@ -1357,8 +1357,8 @@ html[data-lang="hi"] .eyebrow { text-transform: none; }
 
 /* ── Footer ───────────────────────────────────────────────────────────────── */
 .foot { border-top: 1px solid var(--line); padding: 44px 0 56px; }
-.foot-in { display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; align-items: flex-start; }
-.foot-links { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13.5px; }
+.foot-in { display: grid; grid-template-columns: minmax(280px, 44ch) minmax(0, 1fr); gap: 28px; align-items: flex-start; }
+.foot-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 20px; min-width: 0; font-size: 13.5px; }
 .foot-links a { color: var(--ink2); }
 .foot-links a:hover { color: var(--accent); }
 .foot-note { font-size: 12.5px; color: var(--ink3); max-width: 44ch; }
@@ -1531,6 +1531,8 @@ html[dir="rtl"] .doc address { direction: rtl; }
 /* ── Responsive ───────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .hero-grid, .feature, .doc-grid, .feedback-grid { grid-template-columns: minmax(0, 1fr); }
+  .foot-in { grid-template-columns: minmax(0, 1fr); }
+  .foot-links { justify-content: flex-start; }
   .feature.flip .feature-text { order: 0; }
   .promise, .flow, .more, .dl, .privacy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .promise > div:nth-child(2) { border-right: 0; }
