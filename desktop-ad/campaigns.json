@@ -7,35 +7,44 @@
       "startsAt": null,
       "endsAt": null,
       "weight": 1,
-      "href": "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
-      "image": null,
+      "href": "https://torim98.github.io/kiebitz-site/",
+      "image": "../assets/icon-128.png",
+      "imageAlt": {
+        "de": "Kiebitz App-Icon",
+        "en": "Kiebitz app icon",
+        "fr": "Icône de l’application Kiebitz",
+        "es": "Icono de la aplicación Kiebitz",
+        "zh": "Kiebitz 应用图标",
+        "hi": "Kiebitz ऐप आइकन",
+        "ar": "أيقونة تطبيق Kiebitz"
+      },
       "advertiser": "Kiebitz",
       "headline": {
-        "de": "Kiebitz gibt es auch für Android",
-        "en": "Kiebitz is also available for Android",
-        "fr": "Kiebitz est aussi disponible sur Android",
-        "es": "Kiebitz también está disponible para Android",
-        "zh": "Kiebitz 也可在 Android 上使用",
-        "hi": "Kiebitz Android पर भी उपलब्ध है",
-        "ar": "Kiebitz متاح أيضًا على Android"
+        "de": "Kiebitz für Android ist unterwegs",
+        "en": "Kiebitz for Android is on its way",
+        "fr": "Kiebitz pour Android arrive bientôt",
+        "es": "Kiebitz para Android está en camino",
+        "zh": "Android 版 Kiebitz 即将推出",
+        "hi": "Android के लिए Kiebitz जल्द आ रहा है",
+        "ar": "Kiebitz لنظام Android في الطريق"
       },
       "body": {
-        "de": "Deine Partien, Analysen und dein Training auch unterwegs.",
-        "en": "Take your games, analyses, and training with you.",
-        "fr": "Emportez vos parties, analyses et entraînements partout.",
-        "es": "Lleva contigo tus partidas, análisis y entrenamiento.",
-        "zh": "随时随地查看你的对局、分析和训练。",
-        "hi": "अपनी बाज़ियाँ, विश्लेषण और अभ्यास हमेशा साथ रखें।",
-        "ar": "اصطحب مبارياتك وتحليلاتك وتدريبك معك أينما ذهبت."
+        "de": "Alle Funktionen, Downloads und Neuigkeiten auf unserer Website.",
+        "en": "Explore features, downloads, and updates on our website.",
+        "fr": "Découvrez les fonctions, téléchargements et actualités sur notre site.",
+        "es": "Descubre funciones, descargas y novedades en nuestro sitio web.",
+        "zh": "在我们的网站上了解功能、下载和最新动态。",
+        "hi": "हमारी वेबसाइट पर सुविधाएँ, डाउनलोड और अपडेट देखें।",
+        "ar": "اكتشف الميزات والتنزيلات وآخر الأخبار على موقعنا."
       },
       "cta": {
-        "de": "Zu Google Play",
-        "en": "Get it on Google Play",
-        "fr": "Voir sur Google Play",
-        "es": "Ver en Google Play",
-        "zh": "前往 Google Play",
-        "hi": "Google Play पर पाएँ",
-        "ar": "عرض على Google Play"
+        "de": "Website öffnen",
+        "en": "Visit website",
+        "fr": "Voir le site",
+        "es": "Visitar sitio web",
+        "zh": "访问网站",
+        "hi": "वेबसाइट खोलें",
+        "ar": "زيارة الموقع"
       }
     },
     {

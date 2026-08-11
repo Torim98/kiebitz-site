@@ -11,7 +11,7 @@
     :root {
       color-scheme: dark;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #151513;
+      background: #111210;
       color: #f2f0e9;
     }
 
@@ -23,26 +23,42 @@
       height: 100%;
       margin: 0;
       overflow: hidden;
-      background: #151513;
+      background: #111210;
     }
 
     body:not([data-ready="true"]) { visibility: hidden; }
 
     .ad {
+      position: relative;
       display: grid;
       grid-template-columns: auto minmax(0, 1fr) auto;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       width: 100%;
       height: 100%;
-      min-height: 64px;
-      padding: 7px 14px 7px 18px;
+      min-height: 72px;
+      padding: 9px 18px;
       border: 0;
       color: inherit;
       text-decoration: none;
       background:
-        radial-gradient(circle at 8% 20%, rgba(172, 205, 99, .13), transparent 31%),
-        linear-gradient(105deg, #181916, #121311);
+        radial-gradient(circle at 8% 15%, rgba(34, 192, 138, .16), transparent 34%),
+        linear-gradient(108deg, #181b18 0%, #121311 58%, #151614 100%);
+      transition: filter .18s ease;
+    }
+
+    .ad::before {
+      position: absolute;
+      inset: 10px auto 10px 0;
+      width: 2px;
+      border-radius: 999px;
+      background: #22c08a;
+      content: "";
+      opacity: .8;
+    }
+
+    .ad:hover {
+      filter: brightness(1.06);
     }
 
     .ad:focus-visible {
@@ -52,24 +68,28 @@
 
     .creative {
       display: none;
-      width: 44px;
-      height: 44px;
-      border-radius: 7px;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(34, 192, 138, .22);
+      border-radius: 12px;
+      background: #103528;
       object-fit: cover;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, .22);
     }
 
     .creative[data-visible="true"] { display: block; }
 
     .copy {
       min-width: 0;
-      line-height: 1.2;
+      line-height: 1.18;
     }
 
     .advertiser {
       overflow: hidden;
-      color: #9d9c95;
+      color: #8f9c94;
       font-size: 9px;
-      letter-spacing: .08em;
+      font-weight: 600;
+      letter-spacing: .1em;
       text-overflow: ellipsis;
       text-transform: uppercase;
       white-space: nowrap;
@@ -77,9 +97,10 @@
 
     .headline {
       overflow: hidden;
-      margin-top: 2px;
+      margin-top: 3px;
       font-size: 14px;
-      font-weight: 650;
+      font-weight: 680;
+      letter-spacing: -.01em;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
@@ -87,24 +108,37 @@
     .body {
       overflow: hidden;
       margin-top: 2px;
-      color: #c5c3bb;
-      font-size: 11px;
+      color: #b9b8ae;
+      font-size: 11.5px;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
 
     .cta {
-      padding: 7px 11px;
-      border: 1px solid rgba(172, 205, 99, .36);
-      border-radius: 7px;
-      color: #cce78d;
+      padding: 8px 12px;
+      border: 1px solid rgba(34, 192, 138, .4);
+      border-radius: 9px;
+      color: #75dfb9;
       font-size: 11px;
       font-weight: 650;
       white-space: nowrap;
+      transition: border-color .18s ease, background-color .18s ease, color .18s ease;
+    }
+
+    .cta::after {
+      margin-left: 7px;
+      content: "\2197";
+    }
+
+    .ad:hover .cta {
+      border-color: rgba(34, 192, 138, .72);
+      color: #a4efd3;
+      background: rgba(34, 192, 138, .08);
     }
 
     @media (max-width: 520px) {
-      .ad { gap: 8px; padding-inline: 12px; }
+      .ad { gap: 9px; padding-inline: 12px; }
+      .creative { width: 40px; height: 40px; border-radius: 10px; }
       .body, .advertiser { display: none; }
       .headline { margin: 0; font-size: 12px; }
       .cta { padding: 6px 8px; font-size: 10px; }
