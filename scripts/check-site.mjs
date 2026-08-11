@@ -58,6 +58,13 @@ report(socialImage.readUInt32BE(16) === 1200 && socialImage.readUInt32BE(20) ===
 await access(path.join(root, "dist", "server", "index.js"));
 await access(path.join(root, "dist", "client", "index.html"));
 await access(path.join(root, "dist", "client", "assets", "og-kiebitz.png"));
+await access(path.join(root, "dist", "client", "desktop-ad", "index.html"));
+const campaignConfig = JSON.parse(await readFile(
+  path.join(root, "dist", "client", "desktop-ad", "campaigns.json"),
+  "utf8"
+));
+report(campaignConfig.version === 1, "desktop ad campaign schema version is wrong");
+report(Array.isArray(campaignConfig.campaigns), "desktop ad campaigns must be an array");
 
 if (errors.length) {
   console.error(errors.map((error) => `- ${error}`).join("\n"));

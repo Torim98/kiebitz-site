@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>Kiebitz desktop advertisement</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #151513;
+      color: #f2f0e9;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #151513;
+    }
+
+    body:not([data-ready="true"]) { visibility: hidden; }
+
+    .ad {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      height: 100%;
+      min-height: 64px;
+      padding: 7px 14px 7px 18px;
+      border: 0;
+      color: inherit;
+      text-decoration: none;
+      background:
+        radial-gradient(circle at 8% 20%, rgba(172, 205, 99, .13), transparent 31%),
+        linear-gradient(105deg, #181916, #121311);
+    }
+
+    .ad:focus-visible {
+      outline: 2px solid #accd63;
+      outline-offset: -3px;
+    }
+
+    .creative {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 7px;
+      object-fit: cover;
+    }
+
+    .creative[data-visible="true"] { display: block; }
+
+    .copy {
+      min-width: 0;
+      line-height: 1.2;
+    }
+
+    .advertiser {
+      overflow: hidden;
+      color: #9d9c95;
+      font-size: 9px;
+      letter-spacing: .08em;
+      text-overflow: ellipsis;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .headline {
+      overflow: hidden;
+      margin-top: 2px;
+      font-size: 14px;
+      font-weight: 650;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .body {
+      overflow: hidden;
+      margin-top: 2px;
+      color: #c5c3bb;
+      font-size: 11px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .cta {
+      padding: 7px 11px;
+      border: 1px solid rgba(172, 205, 99, .36);
+      border-radius: 7px;
+      color: #cce78d;
+      font-size: 11px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 520px) {
+      .ad { gap: 8px; padding-inline: 12px; }
+      .body, .advertiser { display: none; }
+      .headline { margin: 0; font-size: 12px; }
+      .cta { padding: 6px 8px; font-size: 10px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="ad" id="ad" target="_blank" rel="sponsored noopener noreferrer">
+    <img class="creative" id="creative" alt="">
+    <span class="copy">
+      <span class="advertiser" id="advertiser"></span>
+      <span class="headline" id="headline"></span>
+      <span class="body" id="body"></span>
+    </span>
+    <span class="cta" id="cta"></span>
+  </a>
+  <script>
+    (() => {
+      "use strict";
+
+      const STATUS_SOURCE = "kiebitz-desktop-ad";
+      const advertisementLabels = {
+        de: "Werbung",
+        en: "Advertisement",
+        fr: "Publicit\u00e9",
+        es: "Publicidad",
+        zh: "\u5e7f\u544a",
+        hi: "\u0935\u093f\u091c\u094d\u091e\u093e\u092a\u0928",
+        ar: "\u0625\u0639\u0644\u0627\u0646"
+      };
+      const status = (visible) => window.parent.postMessage({
+        source: STATUS_SOURCE,
+        type: "status",
+        visible
+      }, "*");
+
+      const localized = (value, languages) => {
+        if (typeof value === "string") return value;
+        if (!value || typeof value !== "object") return "";
+        for (const language of languages) {
+          const exact = value[language];
+          const base = value[language.split("-")[0]];
+          if (typeof exact === "string") return exact;
+          if (typeof base === "string") return base;
+        }
+        if (typeof value.en === "string") return value.en;
+        return Object.values(value).find((item) => typeof item === "string") || "";
+      };
+
+      const validDate = (value, now, after) => {
+        if (!value) return true;
+        const time = Date.parse(value);
+        return Number.isFinite(time) && (after ? now >= time : now <= time);
+      };
+
+      const chooseWeighted = (campaigns) => {
+        const weighted = campaigns.map((campaign) => ({
+          campaign,
+          weight: Math.max(0, Number(campaign.weight) || 1)
+        }));
+        const total = weighted.reduce((sum, item) => sum + item.weight, 0);
+        if (total <= 0) return null;
+        const random = new Uint32Array(1);
+        crypto.getRandomValues(random);
+        let cursor = (random[0] / 0x100000000) * total;
+        for (const item of weighted) {
+          cursor -= item.weight;
+          if (cursor < 0) return item.campaign;
+        }
+        return weighted.at(-1)?.campaign || null;
+      };
+
+      const sameOriginImage = (value) => {
+        if (!value) return null;
+        try {
+          const url = new URL(value, window.location.href);
+          return url.origin === window.location.origin ? url.href : null;
+        } catch {
+          return null;
+        }
+      };
+
+      const httpsTarget = (value) => {
+        try {
+          const url = new URL(value);
+          return url.protocol === "https:" ? url.href : null;
+        } catch {
+          return null;
+        }
+      };
+
+      fetch("campaigns.json", { cache: "no-store", credentials: "omit" })
+        .then((response) => response.ok ? response.json() : Promise.reject())
+        .then((config) => {
+          const now = Date.now();
+          const campaign = chooseWeighted((config.campaigns || []).filter((item) =>
+            item && item.enabled === true && httpsTarget(item.href) &&
+            validDate(item.startsAt, now, true) && validDate(item.endsAt, now, false)
+          ));
+          if (!campaign) return status(false);
+
+          const languages = navigator.languages?.length
+            ? navigator.languages.map((item) => item.toLowerCase())
+            : [(navigator.language || "en").toLowerCase()];
+          const language = languages[0].split("-")[0];
+          const headline = localized(campaign.headline, languages);
+          if (!headline) return status(false);
+
+          const ad = document.getElementById("ad");
+          ad.href = httpsTarget(campaign.href);
+          const label = advertisementLabels[language] || advertisementLabels.en;
+          document.getElementById("advertiser").textContent = campaign.advertiser
+            ? `${label} \u00b7 ${campaign.advertiser}`
+            : label;
+          document.getElementById("headline").textContent = headline;
+          document.getElementById("body").textContent = localized(campaign.body, languages);
+          document.getElementById("cta").textContent = localized(campaign.cta, languages) || "Learn more";
+
+          const image = sameOriginImage(campaign.image);
+          if (image) {
+            const creative = document.getElementById("creative");
+            creative.src = image;
+            creative.alt = localized(campaign.imageAlt, languages);
+            creative.dataset.visible = "true";
+          }
+
+          document.body.dataset.ready = "true";
+          ad.addEventListener("click", (event) => {
+            event.preventDefault();
+            window.parent.postMessage({
+              source: STATUS_SOURCE,
+              type: "open",
+              href: ad.href
+            }, "*");
+          });
+          status(true);
+        })
+        .catch(() => status(false));
+    })();
+  </script>
+</body>
+</html>

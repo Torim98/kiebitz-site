@@ -255,6 +255,14 @@ async function main() {
     await rm(path.join(root, language), { recursive: true, force: true });
   }
 
+  // The desktop app embeds this deliberately small, self-contained surface.
+  // Keep it outside the localized marketing pages so it never inherits the
+  // website navigation, analytics, forms, or other unrelated functionality.
+  await rm(path.join(root, "desktop-ad"), { recursive: true, force: true });
+  await cp(path.join(root, "src", "desktop-ad"), path.join(root, "desktop-ad"), {
+    recursive: true
+  });
+
   const templates = new Map();
   for (const [page, pageConfig] of pageEntries) {
     templates.set(page, await readFile(path.join(root, ...pageConfig.source.split("/")), "utf8"));
@@ -277,7 +285,7 @@ async function main() {
   await mkdir(client, { recursive: true });
 
   for (const entry of [
-    "index.html", "privacy", "impressum", "assets", "robots.txt", "sitemap.xml", ".nojekyll",
+    "index.html", "privacy", "impressum", "desktop-ad", "assets", "robots.txt", "sitemap.xml", ".nojekyll",
     ...languageCodes.filter((code) => languages[code].path)
   ]) {
     await cp(path.join(root, entry), path.join(client, entry), { recursive: true });

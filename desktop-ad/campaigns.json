@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "campaigns": [
+    {
+      "id": "example-campaign",
+      "enabled": false,
+      "startsAt": null,
+      "endsAt": null,
+      "weight": 1,
+      "href": "https://example.com/",
+      "image": null,
+      "advertiser": "Example advertiser",
+      "headline": {
+        "de": "Beispielkampagne",
+        "en": "Example campaign"
+      },
+      "body": {
+        "de": "Diese Kampagne ist deaktiviert und wird nicht ausgeliefert.",
+        "en": "This campaign is disabled and is not delivered."
+      },
+      "cta": {
+        "de": "Mehr erfahren",
+        "en": "Learn more"
+      }
+    }
+  ]
+}

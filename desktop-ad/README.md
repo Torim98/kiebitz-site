@@ -1,0 +1,17 @@
+# Desktop advertising
+
+The desktop app loads `/desktop-ad/` in a sandboxed frame. Campaigns are read
+from `campaigns.json`; no application release is needed when that file changes.
+
+To publish a campaign:
+
+1. Add the creative image next to `campaigns.json`. Images must be served from
+   this directory; third-party image URLs are rejected.
+2. Add or edit a campaign entry. Set `enabled` to `true`, use an HTTPS target,
+   and optionally set ISO-8601 `startsAt` and `endsAt` values.
+3. Run the normal website build and publish the website.
+
+When several campaigns are active, `weight` controls their relative chance on
+each load. An empty or invalid configuration tells the app to collapse the ad
+slot. The page uses no cookies, storage, identifiers, analytics, or remote
+scripts. The advertiser receives a request only after the user clicks the ad.
