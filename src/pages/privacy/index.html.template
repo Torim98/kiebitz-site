@@ -102,13 +102,13 @@
       <p class="eyebrow"><b>§</b> <span lang="de">Rechtstext</span><span lang="en">Legal text</span><span lang="fr">Texte juridique</span><span lang="es">Texto legal</span><span lang="zh">法律文本</span><span lang="hi">क़ानूनी पाठ</span><span lang="ar">نص قانوني</span></p>
       <h1><span lang="de">Datenschutzerklärung</span><span lang="en">Privacy Policy</span><span lang="fr">Politique de confidentialité</span><span lang="es">Política de privacidad</span><span lang="zh">隐私政策</span><span lang="hi">गोपनीयता नीति</span><span lang="ar">سياسة الخصوصية</span></h1>
       <p class="doc-sub">
-        <span lang="de">Für die App <strong>Kiebitz</strong> (Windows und Android) und diese Website. Kiebitz ist eine local-first Anwendung: Die Daten bleiben auf deinen Geräten, der Anbieter betreibt keinen Server, der deine Inhalte empfängt.</span>
-        <span lang="en">For the <strong>Kiebitz</strong> app (Windows and Android) and this website. Kiebitz is a local-first application: your data stays on your devices, and the provider operates no server that receives your content.</span>
-        <span lang="fr">Pour l’application <strong>Kiebitz</strong> (Windows et Android) et pour ce site. Kiebitz est une application local-first : les données restent sur vos appareils et l’éditeur n’exploite aucun serveur qui recevrait vos contenus.</span>
-        <span lang="es">Para la app <strong>Kiebitz</strong> (Windows y Android) y para este sitio web. Kiebitz es una aplicación local-first: los datos se quedan en tus dispositivos y el proveedor no opera ningún servidor que reciba tus contenidos.</span>
-        <span lang="zh">适用于 <strong>Kiebitz</strong> 应用（Windows 与 Android）以及本网站。Kiebitz 是一款本地优先的应用：数据留在你的设备上，开发者不运营任何接收你内容的服务器。</span>
-        <span lang="hi"><strong>Kiebitz</strong> ऐप (Windows और Android) और इस वेबसाइट के लिए। Kiebitz एक लोकल-फ़र्स्ट अनुप्रयोग है: डेटा आपके उपकरणों पर रहता है, और प्रदाता कोई ऐसा सर्वर नहीं चलाता जो आपकी सामग्री प्राप्त करे।</span>
-        <span lang="ar">لتطبيق <strong>Kiebitz</strong> (على Windows وAndroid) ولهذا الموقع. ‏Kiebitz تطبيق محلي أولًا: تبقى البيانات على أجهزتك، ولا يشغّل المزوّد أي خادم يتلقّى محتواك.</span>
+        <span lang="de">Für die App <strong>Kiebitz</strong> (Desktop und Android) und diese Website. Kiebitz ist eine local-first Anwendung: Die Daten bleiben auf deinen Geräten, der Anbieter betreibt keinen Server, der deine Inhalte empfängt.</span>
+        <span lang="en">For the <strong>Kiebitz</strong> app (Desktop and Android) and this website. Kiebitz is a local-first application: your data stays on your devices, and the provider operates no server that receives your content.</span>
+        <span lang="fr">Pour l’application <strong>Kiebitz</strong> (Desktop et Android) et pour ce site. Kiebitz est une application local-first : les données restent sur vos appareils et l’éditeur n’exploite aucun serveur qui recevrait vos contenus.</span>
+        <span lang="es">Para la app <strong>Kiebitz</strong> (Desktop y Android) y para este sitio web. Kiebitz es una aplicación local-first: los datos se quedan en tus dispositivos y el proveedor no opera ningún servidor que reciba tus contenidos.</span>
+        <span lang="zh">适用于 <strong>Kiebitz</strong> 应用（Desktop 与 Android）以及本网站。Kiebitz 是一款本地优先的应用：数据留在你的设备上，开发者不运营任何接收你内容的服务器。</span>
+        <span lang="hi"><strong>Kiebitz</strong> ऐप (Desktop और Android) और इस वेबसाइट के लिए। Kiebitz एक लोकल-फ़र्स्ट अनुप्रयोग है: डेटा आपके उपकरणों पर रहता है, और प्रदाता कोई ऐसा सर्वर नहीं चलाता जो आपकी सामग्री प्राप्त करे।</span>
+        <span lang="ar">لتطبيق <strong>Kiebitz</strong> (على Desktop وAndroid) ولهذا الموقع. ‏Kiebitz تطبيق محلي أولًا: تبقى البيانات على أجهزتك، ولا يشغّل المزوّد أي خادم يتلقّى محتواك.</span>
       </p>
       <p class="doc-meta">
         <span lang="de">Stand: 11. August 2026 · gültig für alle Kiebitz-Versionen der Beta</span>
