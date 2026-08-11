@@ -75,12 +75,12 @@ Do not add a production `CNAME` before the domain is registered and connected.
 
 After publishing, submit `/sitemap.xml` in Google Search Console and Bing
 Webmaster Tools. Inspect at least the English and German landing pages and
-request indexing. When the app version changes, update `site.version` before
-the next build.
+request indexing.
 
 ## Downloads and feedback
 
-Download links point to the app repository's latest release. Android beta
+Download links point to the app repository's releases overview, so publishing
+a new app version does not require a website update. Android beta
 buttons open the closed-test dialog while retaining the GitHub APK as a
 no-JavaScript fallback.
 

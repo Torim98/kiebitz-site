@@ -115,7 +115,6 @@ function localizedMetadata(language, page) {
         inLanguage: languageConfig.tag,
         applicationCategory: "GameApplication",
         operatingSystem: "Windows, macOS, Linux, Android",
-        softwareVersion: site.version,
         isAccessibleForFree: true,
         downloadUrl: site.downloadUrl,
         installUrl: site.playStoreUrl,

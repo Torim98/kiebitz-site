@@ -2,9 +2,8 @@ export const site = {
   // Change only this value after the custom domain is connected.
   origin: "https://torim98.github.io/kiebitz-site",
   name: "Kiebitz",
-  version: "0.8.1",
   repository: "https://github.com/Torim98/Kiebitz",
-  downloadUrl: "https://github.com/Torim98/Kiebitz/releases/latest",
+  downloadUrl: "https://github.com/Torim98/Kiebitz/releases",
   playStoreUrl: "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
   socialImage: "assets/og-kiebitz.png"
 };
@@ -80,13 +79,13 @@ export const pages = {
     source: "src/pages/index.html.template",
     route: "",
     titles: {
-      de: "Kiebitz · Local-first Schachanalyse für Windows und Android",
-      en: "Kiebitz · Local-first chess analysis for Windows and Android",
-      fr: "Kiebitz · Analyse d’échecs local-first pour Windows et Android",
-      es: "Kiebitz · Análisis de ajedrez local-first para Windows y Android",
-      zh: "Kiebitz · 面向 Windows 与 Android 的本地优先国际象棋分析",
-      hi: "Kiebitz · Windows और Android के लिए लोकल-फ़र्स्ट शतरंज विश्लेषण",
-      ar: "Kiebitz · تحليل شطرنج محلي أولًا لنظامي Windows وAndroid"
+      de: "Kiebitz · Local-first Schachanalyse für Desktop und Android",
+      en: "Kiebitz · Local-first chess analysis for desktop and Android",
+      fr: "Kiebitz · Analyse d’échecs local-first pour ordinateur et Android",
+      es: "Kiebitz · Análisis de ajedrez local-first para escritorio y Android",
+      zh: "Kiebitz · 面向桌面端与 Android 的本地优先国际象棋分析",
+      hi: "Kiebitz · डेस्कटॉप और Android के लिए लोकल-फ़र्स्ट शतरंज विश्लेषण",
+      ar: "Kiebitz · تحليل شطرنج محلي أولًا لسطح المكتب وAndroid"
     },
     descriptions: {
       de: "Kiebitz importiert deine chess.com- und Lichess-Partien, analysiert sie lokal mit Stockfish und zeigt deine echten Stärken und Schwächen. Deine Schachdaten und Analysen bleiben auf deinen Geräten.",

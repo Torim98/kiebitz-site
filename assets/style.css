@@ -1550,6 +1550,27 @@ html[dir="rtl"] .doc address { direction: rtl; }
 
 @media (max-width: 640px) {
   .top-nav { display: none; }
+  .top-in {
+    gap: 8px;
+    padding-inline: 14px;
+  }
+  .mark {
+    min-width: 0;
+    gap: 8px;
+  }
+  .mark > span { min-width: 0; }
+  .mark-name { white-space: nowrap; }
+  .lang {
+    min-width: 0;
+    gap: 4px;
+    padding-inline: 7px;
+  }
+  .lang-select {
+    width: 58px;
+    padding-right: 14px;
+    background-position: calc(100% - 7px) 55%, calc(100% - 3px) 55%;
+  }
+  .top-in > .btn-sm { padding-inline: 10px; }
   .promise, .flow, .more, .dl, .privacy-grid { grid-template-columns: minmax(0, 1fr); }
   .promise > div { border-right: 0; border-bottom: 1px solid var(--line); }
   .promise > div:last-child { border-bottom: 0; }

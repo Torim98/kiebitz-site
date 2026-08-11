@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-lang="en" data-title-de="Kiebitz · Zug um Zugvogel. Local-first Schach-App für Windows und Android" data-title-en="Kiebitz · Moves take flight. A local-first chess app for Windows and Android" data-title-fr="Kiebitz · Coup d’aile. Une application d’échecs local-first pour Windows et Android" data-title-es="Kiebitz · Jugadas que vuelan. Una app de ajedrez local-first para Windows y Android" data-title-zh="Kiebitz · 步步高飞。面向 Windows 与 Android 的本地优先国际象棋应用" data-title-hi="Kiebitz · हर चाल, एक उड़ान। Windows और Android के लिए लोकल-फ़र्स्ट शतरंज ऐप" data-title-ar="Kiebitz · نقلة تُحلّق. تطبيق شطرنج محلي أولًا لنظامي Windows وAndroid">
+<html lang="en" dir="ltr" data-lang="en" data-title-de="Kiebitz · Zug um Zugvogel. Local-first Schach-App für Desktop und Android" data-title-en="Kiebitz · Moves take flight. A local-first chess app for desktop and Android" data-title-fr="Kiebitz · Coup d’aile. Une application d’échecs local-first pour ordinateur et Android" data-title-es="Kiebitz · Jugadas que vuelan. Una app de ajedrez local-first para escritorio y Android" data-title-zh="Kiebitz · 步步高飞。面向桌面端与 Android 的本地优先国际象棋应用" data-title-hi="Kiebitz · हर चाल, एक उड़ान। डेस्कटॉप और Android के लिए लोकल-फ़र्स्ट शतरंज ऐप" data-title-ar="Kiebitz · نقلة تُحلّق. تطبيق شطرنج محلي أولًا لسطح المكتب وAndroid">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kiebitz · Moves take flight. A local-first chess app for Windows and Android</title>
+<title>Kiebitz · Moves take flight. A local-first chess app for desktop and Android</title>
 <meta name="description" content="Kiebitz importiert deine chess.com- und Lichess-Partien, analysiert sie lokal mit Stockfish und zeigt, wo dein Spiel einbricht. Deine Schachdaten und Analysen bleiben auf deinen Geräten. · Kiebitz imports your chess.com and Lichess games, analyzes them locally with Stockfish and shows where your play breaks down. Your chess data and analyses stay on your devices. · Deutsch, English, Français, Español, 中文, हिन्दी, العربية.">
 <meta name="theme-color" content="#0e0e0d">
 <link rel="icon" href="assets/icon-128.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kiebitz · Moves take flight">
-<meta property="og:description" content="Local-first chess companion for Windows and Android. Import, analyze, understand, all on your own devices.">
+<meta property="og:description" content="Local-first chess companion for desktop and Android. Import, analyze, understand, all on your own devices.">
 <meta property="og:url" content="https://torim98.github.io/kiebitz-site/">
 <meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/icon.png">
 <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -79,7 +79,7 @@
         <option value="ar">العربية</option>
       </select>
     </div>
-    <a class="btn btn-primary btn-sm" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+    <a class="btn btn-primary btn-sm" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">
       <span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Télécharger</span><span lang="es">Descargar</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">تنزيل</span>
     </a>
   </div>
@@ -109,14 +109,14 @@
         <p class="hero-sub" lang="hi"><i>Kiebitz</i> एक पक्षी है, और जर्मन में वह दर्शक भी जो कंधे के ऊपर से खेल देखता है। यह ऐप chess.com और Lichess से आपकी बाज़ियाँ आयात करता है, पूरे इतिहास पर नेटिव Stockfish चलाता है और बताता है कि आप असल में कहाँ बाज़ी गँवाते हैं — वहाँ नहीं जहाँ आप समझते हैं। <strong>सब कुछ आपके अपने उपकरणों पर रहता है।</strong></p>
         <p class="hero-sub" lang="ar">‏<i>Kiebitz</i> طائر القَطقاط، وهو بالألمانية أيضًا المتفرّج الذي يتابع المباراة من فوق كتفك. يستورد هذا التطبيق مبارياتك من chess.com وLichess، ويشغّل محرّك Stockfish أصليًا على تاريخك كاملًا، ويخبرك أين تخسر فعلًا لا أين تظن أنك تخسر. <strong>كل شيء يبقى على أجهزتك.</strong></p>
         <div class="cta">
-          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
-            <span lang="de">Für Windows laden</span><span lang="en">Get it for Windows</span><span lang="fr">Télécharger pour Windows</span><span lang="es">Descargar para Windows</span><span lang="zh">下载 Windows 版</span><span lang="hi">Windows के लिए पाएँ</span><span lang="ar">التنزيل لنظام Windows</span>
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">
+            <span lang="de">Für Desktop laden</span><span lang="en">Get it for desktop</span><span lang="fr">Télécharger pour ordinateur</span><span lang="es">Descargar para escritorio</span><span lang="zh">下载桌面版</span><span lang="hi">डेस्कटॉप के लिए पाएँ</span><span lang="ar">التنزيل لسطح المكتب</span>
           </a>
-          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener" data-beta-open>
             <span lang="de">Android (Beta-Test)</span><span lang="en">Android (beta test)</span><span lang="fr">Android (test bêta)</span><span lang="es">Android (prueba beta)</span><span lang="zh">Android（测试计划）</span><span lang="hi">Android (बीटा टेस्ट)</span><span lang="ar">‏Android (اختبار تجريبي)</span>
           </a>
         </div>
-        <p class="cta-note"><span lang="de">Kostenlos · Windows über GitHub · Android im geschlossenen Test</span><span lang="en">Free · Windows via GitHub · Android in closed testing</span><span lang="fr">Gratuit · Windows via GitHub · Android en test fermé</span><span lang="es">Gratis · Windows en GitHub · Android en prueba cerrada</span><span lang="zh">免费 · Windows 通过 GitHub · Android 封闭测试中</span><span lang="hi">मुफ़्त · Windows GitHub से · Android क्लोज़्ड टेस्ट में</span><span lang="ar">مجاني · ‏Windows عبر GitHub · ‏Android في اختبار مغلق</span></p>
+        <p class="cta-note"><span lang="de">Kostenlos · Desktop über GitHub · Android im geschlossenen Test</span><span lang="en">Free · desktop via GitHub · Android in closed testing</span><span lang="fr">Gratuit · ordinateur via GitHub · Android en test fermé</span><span lang="es">Gratis · escritorio en GitHub · Android en prueba cerrada</span><span lang="zh">免费 · 桌面版通过 GitHub · Android 封闭测试中</span><span lang="hi">मुफ़्त · डेस्कटॉप GitHub से · Android क्लोज़्ड टेस्ट में</span><span lang="ar">مجاني · سطح المكتب عبر GitHub · ‏Android في اختبار مغلق</span></p>
       </div>
 
       <div class="board-card" aria-hidden="true">
@@ -153,19 +153,19 @@
           <span lang="ar">ينتقل Kiebitz إلى Android ويبحث عن مختبِرين.</span>
         </h2>
         <p class="band-sub">
-          <span lang="de">Für Windows kannst du Kiebitz schon laden. Für Android läuft gerade ein geschlossener Test bei Google Play, und über ein paar zusätzliche Tester würde ich mich sehr freuen. Der Weg dorthin sind drei Züge.</span>
-          <span lang="en">You can already download Kiebitz for Windows. For Android a closed test is currently running on Google Play, and I would be very grateful for a few more testers. Getting there takes three moves.</span>
-          <span lang="fr">Kiebitz est déjà téléchargeable pour Windows. Pour Android, un test fermé est en cours sur Google Play, et quelques testeurs de plus me feraient très plaisir. Il y faut trois coups.</span>
-          <span lang="es">Kiebitz ya se puede descargar para Windows. Para Android hay una prueba cerrada en marcha en Google Play, y agradecería mucho unas cuantas personas más. Son tres jugadas.</span>
-          <span lang="zh">Windows 版现在就能下载。Android 版正在 Google Play 上进行封闭测试，如果能多几位测试者我会非常感谢。加入只需三步棋。</span>
-          <span lang="hi">Windows के लिए Kiebitz अभी डाउनलोड किया जा सकता है। Android के लिए Google Play पर एक क्लोज़्ड टेस्ट चल रहा है, और कुछ और टेस्टर मिलें तो बहुत अच्छा हो। इसमें तीन चालें लगती हैं।</span>
-          <span lang="ar">يمكنك تنزيل Kiebitz لنظام Windows الآن. أما على Android فيجري اختبار مغلق على Google Play، وسأكون ممتنًا جدًا لبضعة مختبِرين إضافيين. الطريق إلى ذلك ثلاث نقلات.</span>
+          <span lang="de">Für Desktop kannst du Kiebitz schon laden. Für Android läuft gerade ein geschlossener Test bei Google Play, und über ein paar zusätzliche Tester würde ich mich sehr freuen. Der Weg dorthin sind drei Züge.</span>
+          <span lang="en">You can already download Kiebitz for desktop. For Android a closed test is currently running on Google Play, and I would be very grateful for a few more testers. Getting there takes three moves.</span>
+          <span lang="fr">Kiebitz est déjà téléchargeable pour ordinateur. Pour Android, un test fermé est en cours sur Google Play, et quelques testeurs de plus me feraient très plaisir. Il y faut trois coups.</span>
+          <span lang="es">Kiebitz ya se puede descargar para escritorio. Para Android hay una prueba cerrada en marcha en Google Play, y agradecería mucho unas cuantas personas más. Son tres jugadas.</span>
+          <span lang="zh">桌面版现在就能下载。Android 版正在 Google Play 上进行封闭测试，如果能多几位测试者我会非常感谢。加入只需三步棋。</span>
+          <span lang="hi">डेस्कटॉप के लिए Kiebitz अभी डाउनलोड किया जा सकता है। Android के लिए Google Play पर एक क्लोज़्ड टेस्ट चल रहा है, और कुछ और टेस्टर मिलें तो बहुत अच्छा हो। इसमें तीन चालें लगती हैं।</span>
+          <span lang="ar">يمكنك تنزيل Kiebitz لسطح المكتب الآن. أما على Android فيجري اختبار مغلق على Google Play، وسأكون ممتنًا جدًا لبضعة مختبِرين إضافيين. الطريق إلى ذلك ثلاث نقلات.</span>
         </p>
         <div class="band-cta">
-          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener" data-beta-open>
             <span lang="de">Tester werden</span><span lang="en">Become a tester</span><span lang="fr">Devenir testeur</span><span lang="es">Quiero probarlo</span><span lang="zh">成为测试者</span><span lang="hi">टेस्टर बनें</span><span lang="ar">كن مختبِرًا</span>
           </a>
-          <a class="band-alt" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+          <a class="band-alt" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">
             <span lang="de">oder direkt die APK</span><span lang="en">or just the APK</span><span lang="fr">ou simplement l’APK</span><span lang="es">o solo el APK</span><span lang="zh">或者直接下载 APK</span><span lang="hi">या सीधे APK लें</span><span lang="ar">أو ملف APK مباشرة</span>
           </a>
         </div>
@@ -399,7 +399,7 @@
           <p><span lang="de">Deutsch, Englisch, Französisch, Spanisch, Chinesisch, Hindi und Arabisch – in der App wie auf dieser Website. Dazu ein sorgfältig gemachtes dunkles Theme.</span><span lang="en">German, English, French, Spanish, Chinese, Hindi and Arabic – in the app as well as on this website. Plus one carefully made dark theme.</span><span lang="fr">Allemand, anglais, français, espagnol, chinois, hindi et arabe – dans l’application comme sur ce site. Avec un thème sombre soigné.</span><span lang="es">Alemán, inglés, francés, español, chino, hindi y árabe: en la app y también en esta web. Y un tema oscuro cuidado.</span><span lang="zh">德语、英语、法语、西班牙语、中文、印地语和阿拉伯语，应用和本网站都有，配一套用心打磨的深色主题。</span><span lang="hi">जर्मन, अंग्रेज़ी, फ़्रेंच, स्पेनिश, चीनी, हिन्दी और अरबी – ऐप में भी और इस वेबसाइट पर भी। साथ में एक सावधानी से बनाई डार्क थीम।</span><span lang="ar">الألمانية والإنجليزية والفرنسية والإسبانية والصينية والهندية والعربية – في التطبيق وعلى هذا الموقع معًا. مع سمة داكنة مصنوعة بعناية.</span></p>
         </div>
         <div>
-          <h4><span lang="de">Windows &amp; Android</span><span lang="en">Windows &amp; Android</span><span lang="fr">Windows &amp; Android</span><span lang="es">Windows &amp; Android</span><span lang="zh">Windows 与 Android</span><span lang="hi">Windows और Android</span><span lang="ar">‏Windows وAndroid</span></h4>
+          <h4><span lang="de">Desktop &amp; Android</span><span lang="en">Desktop &amp; Android</span><span lang="fr">Ordinateur &amp; Android</span><span lang="es">Escritorio &amp; Android</span><span lang="zh">桌面端与 Android</span><span lang="hi">डेस्कटॉप और Android</span><span lang="ar">سطح المكتب وAndroid</span></h4>
           <p><span lang="de">Desktop-App mit Auto-Update, Android-Build mit nativem Stockfish pro ABI.</span><span lang="en">Desktop app with auto-update, Android build with native Stockfish per ABI.</span><span lang="fr">Application de bureau avec mise à jour automatique, build Android avec Stockfish natif par ABI.</span><span lang="es">App de escritorio con actualización automática y build de Android con Stockfish nativo por ABI.</span><span lang="zh">桌面端支持自动更新，Android 版按 ABI 提供原生 Stockfish。</span><span lang="hi">ऑटो-अपडेट वाला डेस्कटॉप ऐप, और हर ABI के लिए नेटिव Stockfish वाला Android बिल्ड।</span><span lang="ar">تطبيق سطح مكتب بتحديث تلقائي، وإصدار Android بمحرّك Stockfish أصلي لكل معمارية.</span></p>
         </div>
         <div>
@@ -484,28 +484,28 @@
         <span lang="ar">نزّل النسخة التجريبية وابدأ.</span>
       </h2>
       <p class="lede" style="margin-top:16px">
-        <span lang="de">Kiebitz ist zunächst kostenlos. Die Windows-Version kannst du direkt laden, für Android läuft gerade ein geschlossener Test bei Google Play. Beide Builds liegen zusätzlich als Anhang am aktuellen Release im App-Repository.</span>
-        <span lang="en">Kiebitz is free for now. The Windows build is ready to download, and for Android a closed test is currently running on Google Play. Both builds are also attached to the latest release in the app repository.</span>
-        <span lang="fr">Kiebitz est gratuit pour l’instant. La version Windows se télécharge directement ; pour Android, un test fermé est en cours sur Google Play. Les deux builds sont aussi joints à la dernière release du dépôt de l’application.</span>
-        <span lang="es">Kiebitz es gratuito por ahora. La versión de Windows se puede descargar ya y para Android hay una prueba cerrada en Google Play. Ambas compilaciones están además adjuntas a la última release del repositorio.</span>
-        <span lang="zh">Kiebitz 目前免费。Windows 版可以直接下载，Android 版正在 Google Play 上进行封闭测试。两个版本也都作为附件挂在应用仓库的最新发布里。</span>
-        <span lang="hi">Kiebitz फ़िलहाल मुफ़्त है। Windows संस्करण सीधे डाउनलोड किया जा सकता है; Android के लिए Google Play पर क्लोज़्ड टेस्ट चल रहा है। दोनों बिल्ड ऐप रिपॉज़िटरी की ताज़ा रिलीज़ के साथ भी संलग्न हैं।</span>
-        <span lang="ar">‏Kiebitz مجاني في الوقت الحالي. نسخة Windows جاهزة للتنزيل، وعلى Android يجري اختبار مغلق على Google Play. كما أن النسختين مرفقتان بأحدث إصدار في مستودع التطبيق.</span>
+        <span lang="de">Kiebitz ist zunächst kostenlos. Die Desktop-Versionen für Windows, macOS und Linux kannst du direkt laden; für Android läuft gerade ein geschlossener Test bei Google Play. Alle Builds findest du in den Releases des App-Repositorys.</span>
+        <span lang="en">Kiebitz is free for now. The desktop builds for Windows, macOS and Linux are ready to download, and for Android a closed test is currently running on Google Play. You can find all builds in the app repository’s releases.</span>
+        <span lang="fr">Kiebitz est gratuit pour l’instant. Les versions pour Windows, macOS et Linux se téléchargent directement ; pour Android, un test fermé est en cours sur Google Play. Tous les builds se trouvent dans les releases du dépôt de l’application.</span>
+        <span lang="es">Kiebitz es gratuito por ahora. Las versiones para Windows, macOS y Linux se pueden descargar ya; para Android hay una prueba cerrada en Google Play. Encontrarás todas las compilaciones en las releases del repositorio.</span>
+        <span lang="zh">Kiebitz 目前免费。Windows、macOS 和 Linux 桌面版可以直接下载，Android 版正在 Google Play 上进行封闭测试。所有构建版本都可在应用仓库的 Releases 页面找到。</span>
+        <span lang="hi">Kiebitz फ़िलहाल मुफ़्त है। Windows, macOS और Linux के डेस्कटॉप बिल्ड सीधे डाउनलोड किए जा सकते हैं; Android के लिए Google Play पर क्लोज़्ड टेस्ट चल रहा है। सभी बिल्ड ऐप रिपॉज़िटरी के Releases पेज पर मिलेंगे।</span>
+        <span lang="ar">‏Kiebitz مجاني في الوقت الحالي. إصدارات سطح المكتب لأنظمة Windows وmacOS وLinux جاهزة للتنزيل، وعلى Android يجري اختبار مغلق على Google Play. ستجد جميع الإصدارات في صفحة Releases بمستودع التطبيق.</span>
       </p>
       <div class="dl rv" style="margin-top:32px">
         <article class="dl-card">
-          <h3>Windows</h3>
-          <p><span lang="de">Installer für den Desktop. Enthält den nativen Stockfish und aktualisiert sich selbst.</span><span lang="en">Desktop installer. Ships the native Stockfish and updates itself.</span><span lang="fr">Installeur pour le bureau. Livré avec le Stockfish natif et se met à jour tout seul.</span><span lang="es">Instalador de escritorio. Incluye el Stockfish nativo y se actualiza solo.</span><span lang="zh">桌面安装包。内置原生 Stockfish，并会自动更新。</span><span lang="hi">डेस्कटॉप इंस्टॉलर। नेटिव Stockfish साथ आता है और ख़ुद अपडेट होता है।</span><span lang="ar">مثبِّت لسطح المكتب. يتضمّن محرّك Stockfish الأصلي ويحدّث نفسه.</span></p>
-          <p class="dl-meta"><span lang="de">Installer · Auto-Update</span><span lang="en">Installer · auto-update</span><span lang="fr">Installeur · mise à jour auto</span><span lang="es">Instalador · actualización automática</span><span lang="zh">安装包 · 自动更新</span><span lang="hi">इंस्टॉलर · ऑटो-अपडेट</span><span lang="ar">مثبِّت · تحديث تلقائي</span></p>
-          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
-            <span lang="de">Windows-Installer</span><span lang="en">Windows installer</span><span lang="fr">Installeur Windows</span><span lang="es">Instalador de Windows</span><span lang="zh">Windows 安装包</span><span lang="hi">Windows इंस्टॉलर</span><span lang="ar">مثبِّت Windows</span>
+          <h3>Desktop</h3>
+          <p><span lang="de">Versionen für Windows, macOS und Linux. Enthalten den nativen Stockfish und unterstützen automatische Updates.</span><span lang="en">Builds for Windows, macOS and Linux. They ship native Stockfish and support automatic updates.</span><span lang="fr">Versions pour Windows, macOS et Linux. Elles intègrent Stockfish en natif et prennent en charge les mises à jour automatiques.</span><span lang="es">Versiones para Windows, macOS y Linux. Incluyen Stockfish nativo y admiten actualizaciones automáticas.</span><span lang="zh">提供 Windows、macOS 和 Linux 版本，内置原生 Stockfish，并支持自动更新。</span><span lang="hi">Windows, macOS और Linux के लिए बिल्ड। इनमें नेटिव Stockfish शामिल है और ऑटो-अपडेट समर्थित हैं।</span><span lang="ar">إصدارات لأنظمة Windows وmacOS وLinux، تتضمن Stockfish أصليًا وتدعم التحديثات التلقائية.</span></p>
+          <p class="dl-meta">Windows · macOS · Linux</p>
+          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">
+            <span lang="de">Desktop-Versionen</span><span lang="en">Desktop builds</span><span lang="fr">Versions pour ordinateur</span><span lang="es">Versiones de escritorio</span><span lang="zh">桌面版本</span><span lang="hi">डेस्कटॉप बिल्ड</span><span lang="ar">إصدارات سطح المكتب</span>
           </a>
         </article>
         <article class="dl-card">
           <h3>Android</h3>
           <p><span lang="de">Läuft gerade als geschlossener Test bei Google Play, mit nativem Stockfish pro ABI. Wer nicht am Test teilnehmen will, installiert die APK direkt.</span><span lang="en">Currently running as a closed test on Google Play, with native Stockfish per ABI. If you would rather not join the test, install the APK directly.</span><span lang="fr">Actuellement en test fermé sur Google Play, avec Stockfish natif par ABI. Si vous préférez ne pas rejoindre le test, installez directement l’APK.</span><span lang="es">Ahora mismo en prueba cerrada en Google Play, con Stockfish nativo por ABI. Si prefieres no entrar en la prueba, instala el APK directamente.</span><span lang="zh">目前在 Google Play 上进行封闭测试，按 ABI 提供原生 Stockfish。不想参加测试的话，可以直接安装 APK。</span><span lang="hi">अभी Google Play पर क्लोज़्ड टेस्ट के रूप में, हर ABI के लिए नेटिव Stockfish के साथ। टेस्ट में शामिल नहीं होना चाहते तो सीधे APK इंस्टॉल कीजिए।</span><span lang="ar">يعمل حاليًا كاختبار مغلق على Google Play، بمحرّك Stockfish أصلي لكل معمارية. وإن لم ترغب في الانضمام إلى الاختبار، فثبّت ملف APK مباشرة.</span></p>
           <p class="dl-meta"><span lang="de">Closed Test · APK · LAN-Sync</span><span lang="en">Closed test · APK · LAN sync</span><span lang="fr">Test fermé · APK · sync LAN</span><span lang="es">Prueba cerrada · APK · sync LAN</span><span lang="zh">封闭测试 · APK · 局域网同步</span><span lang="hi">क्लोज़्ड टेस्ट · APK · LAN सिंक</span><span lang="ar">اختبار مغلق · APK · مزامنة عبر الشبكة المحلية</span></p>
-          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener" data-beta-open>
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener" data-beta-open>
             <span lang="de">Android · Beta-Test &amp; APK</span><span lang="en">Android · beta test &amp; APK</span><span lang="fr">Android · test bêta &amp; APK</span><span lang="es">Android · prueba beta &amp; APK</span><span lang="zh">Android · 测试计划与 APK</span><span lang="hi">Android · बीटा टेस्ट और APK</span><span lang="ar">‏Android · الاختبار التجريبي وملف APK</span>
           </a>
         </article>
@@ -630,6 +630,8 @@
               <select id="feedback-platform" name="platform">
                 <option value="">—</option>
                 <option value="Windows">Windows</option>
+                <option value="macOS">macOS</option>
+                <option value="Linux">Linux</option>
                 <option value="Android">Android</option>
                 <option value="Website" data-label-de="Website" data-label-en="Website" data-label-fr="Site web" data-label-es="Sitio web" data-label-zh="网站" data-label-hi="वेबसाइट" data-label-ar="الموقع">Website</option>
                 <option value="Other" data-label-de="Andere" data-label-en="Other" data-label-fr="Autre" data-label-es="Otra" data-label-zh="其他" data-label-hi="अन्य" data-label-ar="أخرى">Other</option>
@@ -674,13 +676,13 @@
       <div class="flock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       <p class="mark-name">Kiebitz</p>
       <p class="foot-note" style="margin-top:8px">
-        <span lang="de">Zug um Zugvogel. Local-first Schach-Begleiter für Windows und Android. Source-available, nicht Open Source. Stockfish steht unter GPL-3.0.</span>
-        <span lang="en">Moves take flight. A local-first chess companion for Windows and Android. Source-available, not open source. Stockfish is licensed under GPL-3.0.</span>
-        <span lang="fr">Coup d’aile. Un compagnon d’échecs local-first pour Windows et Android. Source-available, pas open source. Stockfish est sous licence GPL-3.0.</span>
-        <span lang="es">Jugadas que vuelan. Un compañero de ajedrez local-first para Windows y Android. Source-available, no open source. Stockfish se distribuye bajo GPL-3.0.</span>
-        <span lang="zh">步步高飞。面向 Windows 与 Android 的本地优先国际象棋助手。源码可见但非开源。Stockfish 采用 GPL-3.0 许可。</span>
-        <span lang="hi">हर चाल, एक उड़ान। Windows और Android के लिए लोकल-फ़र्स्ट शतरंज साथी। सोर्स-अवेलेबल, ओपन सोर्स नहीं। Stockfish GPL-3.0 के अंतर्गत है।</span>
-        <span lang="ar">نقلة تُحلّق. رفيق شطرنج محلي أولًا لنظامي Windows وAndroid. الشيفرة متاحة لكنها ليست مفتوحة المصدر. ومحرّك Stockfish مرخّص بموجب GPL-3.0.</span>
+        <span lang="de">Zug um Zugvogel. Local-first Schach-Begleiter für Desktop und Android. Source-available, nicht Open Source. Stockfish steht unter GPL-3.0.</span>
+        <span lang="en">Moves take flight. A local-first chess companion for desktop and Android. Source-available, not open source. Stockfish is licensed under GPL-3.0.</span>
+        <span lang="fr">Coup d’aile. Un compagnon d’échecs local-first pour ordinateur et Android. Source-available, pas open source. Stockfish est sous licence GPL-3.0.</span>
+        <span lang="es">Jugadas que vuelan. Un compañero de ajedrez local-first para escritorio y Android. Source-available, no open source. Stockfish se distribuye bajo GPL-3.0.</span>
+        <span lang="zh">步步高飞。面向桌面端与 Android 的本地优先国际象棋助手。源码可见但非开源。Stockfish 采用 GPL-3.0 许可。</span>
+        <span lang="hi">हर चाल, एक उड़ान। डेस्कटॉप और Android के लिए लोकल-फ़र्स्ट शतरंज साथी। सोर्स-अवेलेबल, ओपन सोर्स नहीं। Stockfish GPL-3.0 के अंतर्गत है।</span>
+        <span lang="ar">نقلة تُحلّق. رفيق شطرنج محلي أولًا لسطح المكتب وAndroid. الشيفرة متاحة لكنها ليست مفتوحة المصدر. ومحرّك Stockfish مرخّص بموجب GPL-3.0.</span>
       </p>
       <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
     </div>
@@ -689,7 +691,7 @@
       <a href="#feedback"><span lang="de">Feedback melden</span><span lang="en">Send feedback</span><span lang="fr">Envoyer un retour</span><span lang="es">Enviar comentarios</span><span lang="zh">发送反馈</span><span lang="hi">फ़ीडबैक भेजें</span><span lang="ar">أرسل ملاحظة</span></a>
       <a href="privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
       <a href="impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
-      <a href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">Releases</a>
+      <a href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">Releases</a>
       <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span><span lang="fr">Code source</span><span lang="es">Código fuente</span><span lang="zh">源代码</span><span lang="hi">सोर्स कोड</span><span lang="ar">الشيفرة المصدرية</span></a>
       </div>
       <div class="foot-links-support">
@@ -729,13 +731,13 @@
 
     <div class="modal-body">
       <p class="modal-lede" id="beta-lede">
-        <span lang="de">Für Windows kannst du Kiebitz schon laden. Für die Android-App läuft gerade ein geschlossener Test bei Google Play, und über ein paar zusätzliche Tester würde ich mich sehr freuen. Zum Mitmachen sind es drei Schritte:</span>
-        <span lang="en">You can already download Kiebitz for Windows. For the Android app I’m currently running a closed test on Google Play, and I would be very grateful for a few more testers. To participate, there are three steps:</span>
-        <span lang="fr">Kiebitz est déjà téléchargeable pour Windows. Pour l’application Android, un test fermé est en cours sur Google Play, et quelques testeurs de plus me feraient très plaisir. Participer prend trois étapes :</span>
-        <span lang="es">Kiebitz ya se puede descargar para Windows. Para la app de Android hay ahora mismo una prueba cerrada en Google Play, y agradecería mucho unas cuantas personas más. Participar son tres pasos:</span>
-        <span lang="zh">Windows 版现在就能下载。Android 应用正在 Google Play 上进行封闭测试，如果能多几位测试者我会非常感谢。参加只需三步：</span>
-        <span lang="hi">Windows के लिए Kiebitz अभी डाउनलोड किया जा सकता है। Android ऐप के लिए Google Play पर एक क्लोज़्ड टेस्ट चल रहा है, और कुछ और टेस्टर मिलें तो बहुत अच्छा हो। शामिल होने के तीन चरण हैं:</span>
-        <span lang="ar">يمكنك تنزيل Kiebitz لنظام Windows الآن. أما تطبيق Android فيخضع حاليًا لاختبار مغلق على Google Play، وسأكون ممتنًا جدًا لبضعة مختبِرين إضافيين. المشاركة تتم في ثلاث خطوات:</span>
+        <span lang="de">Für Desktop kannst du Kiebitz schon laden. Für die Android-App läuft gerade ein geschlossener Test bei Google Play, und über ein paar zusätzliche Tester würde ich mich sehr freuen. Zum Mitmachen sind es drei Schritte:</span>
+        <span lang="en">You can already download Kiebitz for desktop. For the Android app I’m currently running a closed test on Google Play, and I would be very grateful for a few more testers. To participate, there are three steps:</span>
+        <span lang="fr">Kiebitz est déjà téléchargeable pour ordinateur. Pour l’application Android, un test fermé est en cours sur Google Play, et quelques testeurs de plus me feraient très plaisir. Participer prend trois étapes :</span>
+        <span lang="es">Kiebitz ya se puede descargar para escritorio. Para la app de Android hay ahora mismo una prueba cerrada en Google Play, y agradecería mucho unas cuantas personas más. Participar son tres pasos:</span>
+        <span lang="zh">桌面版现在就能下载。Android 应用正在 Google Play 上进行封闭测试，如果能多几位测试者我会非常感谢。参加只需三步：</span>
+        <span lang="hi">डेस्कटॉप के लिए Kiebitz अभी डाउनलोड किया जा सकता है। Android ऐप के लिए Google Play पर एक क्लोज़्ड टेस्ट चल रहा है, और कुछ और टेस्टर मिलें तो बहुत अच्छा हो। शामिल होने के तीन चरण हैं:</span>
+        <span lang="ar">يمكنك تنزيل Kiebitz لسطح المكتب الآن. أما تطبيق Android فيخضع حاليًا لاختبار مغلق على Google Play، وسأكون ممتنًا جدًا لبضعة مختبِرين إضافيين. المشاركة تتم في ثلاث خطوات:</span>
       </p>
 
       <ol class="steps">
@@ -785,7 +787,7 @@
     </div>
 
     <div class="modal-foot">
-      <a class="btn" href="https://github.com/Torim98/Kiebitz/releases/latest" rel="noopener">
+      <a class="btn" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">
         <span lang="de">Stattdessen APK von GitHub</span><span lang="en">Get the APK from GitHub instead</span><span lang="fr">Prendre plutôt l’APK sur GitHub</span><span lang="es">Mejor el APK desde GitHub</span><span lang="zh">改从 GitHub 获取 APK</span><span lang="hi">इसके बजाय GitHub से APK लें</span><span lang="ar">احصل على APK من GitHub بدلًا من ذلك</span>
       </a>
       <a class="btn btn-primary" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
