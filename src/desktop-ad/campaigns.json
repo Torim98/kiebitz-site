@@ -2,6 +2,43 @@
   "version": 1,
   "campaigns": [
     {
+      "id": "kiebitz-android",
+      "enabled": true,
+      "startsAt": null,
+      "endsAt": null,
+      "weight": 1,
+      "href": "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
+      "image": null,
+      "advertiser": "Kiebitz",
+      "headline": {
+        "de": "Kiebitz gibt es auch für Android",
+        "en": "Kiebitz is also available for Android",
+        "fr": "Kiebitz est aussi disponible sur Android",
+        "es": "Kiebitz también está disponible para Android",
+        "zh": "Kiebitz 也可在 Android 上使用",
+        "hi": "Kiebitz Android पर भी उपलब्ध है",
+        "ar": "Kiebitz متاح أيضًا على Android"
+      },
+      "body": {
+        "de": "Deine Partien, Analysen und dein Training auch unterwegs.",
+        "en": "Take your games, analyses, and training with you.",
+        "fr": "Emportez vos parties, analyses et entraînements partout.",
+        "es": "Lleva contigo tus partidas, análisis y entrenamiento.",
+        "zh": "随时随地查看你的对局、分析和训练。",
+        "hi": "अपनी बाज़ियाँ, विश्लेषण और अभ्यास हमेशा साथ रखें।",
+        "ar": "اصطحب مبارياتك وتحليلاتك وتدريبك معك أينما ذهبت."
+      },
+      "cta": {
+        "de": "Zu Google Play",
+        "en": "Get it on Google Play",
+        "fr": "Voir sur Google Play",
+        "es": "Ver en Google Play",
+        "zh": "前往 Google Play",
+        "hi": "Google Play पर पाएँ",
+        "ar": "عرض على Google Play"
+      }
+    },
+    {
       "id": "example-campaign",
       "enabled": false,
       "startsAt": null,
