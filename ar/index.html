@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kiebitz · تحليل شطرنج محلي أولًا لنظامي Windows وAndroid</title>
-<meta name="description" content="يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية، بلا حساب أو سحابة أو قياس عن بُعد.">
+<meta name="description" content="يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية. تبقى بيانات الشطرنج والتحليلات على أجهزتك.">
 <meta name="theme-color" content="#0e0e0d">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://torim98.github.io/kiebitz-site/ar/">
@@ -28,7 +28,7 @@
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:locale:alternate" content="hi_IN">
 <meta property="og:title" content="Kiebitz · تحليل شطرنج محلي أولًا لنظامي Windows وAndroid">
-<meta property="og:description" content="يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية، بلا حساب أو سحابة أو قياس عن بُعد.">
+<meta property="og:description" content="يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية. تبقى بيانات الشطرنج والتحليلات على أجهزتك.">
 <meta property="og:url" content="https://torim98.github.io/kiebitz-site/ar/">
 <meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
 <meta property="og:image:width" content="1200">
@@ -36,7 +36,7 @@
 <meta property="og:image:alt" content="Kiebitz · Local-first chess analysis">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kiebitz · تحليل شطرنج محلي أولًا لنظامي Windows وAndroid">
-<meta name="twitter:description" content="يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية، بلا حساب أو سحابة أو قياس عن بُعد.">
+<meta name="twitter:description" content="يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية. تبقى بيانات الشطرنج والتحليلات على أجهزتك.">
 <meta name="twitter:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
 <script type="application/ld+json">
 {
@@ -44,11 +44,11 @@
   "@type": "SoftwareApplication",
   "name": "Kiebitz",
   "url": "https://torim98.github.io/kiebitz-site/ar/",
-  "description": "يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية، بلا حساب أو سحابة أو قياس عن بُعد.",
+  "description": "يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية. تبقى بيانات الشطرنج والتحليلات على أجهزتك.",
   "inLanguage": "ar",
   "applicationCategory": "GameApplication",
   "operatingSystem": "Windows, macOS, Linux, Android",
-  "softwareVersion": "0.8.0",
+  "softwareVersion": "0.8.1",
   "isAccessibleForFree": true,
   "downloadUrl": "https://github.com/Torim98/Kiebitz/releases/latest",
   "installUrl": "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
@@ -251,7 +251,7 @@
 
 
 
-        <span lang="ar">لا يملك Kiebitz خادمًا. لا شيء تسجّل الدخول إليه، ولا شيء يُرفَع، ولا تحليل يجري في مكان آخر. قاعدة البيانات ملف SQLite على جهازك.</span>
+        <span lang="ar">لا يملك Kiebitz خادمًا للحسابات أو بيانات الشطرنج. لا يلزم رفع أي شيء، وكل تحليل يجري على جهازك. وتبقى المباريات والتحليلات والتقدّم على أجهزتك.</span>
       </p>
       <dl class="promise rv" style="margin-top:32px">
         <div>
@@ -263,8 +263,8 @@
           <dd><span lang="ar">المباريات والتحليلات والتقدّم تبقى محليًا.</span></dd>
         </div>
         <div>
-          <dt><span lang="ar">بلا قياس عن بُعد</span></dt>
-          <dd><span lang="ar">لا تتبُّع ولا إعلانات ولا تقارير أعطال.</span></dd>
+          <dt><span lang="ar">بلا خادم خلفي لـ Kiebitz</span></dt>
+          <dd><span lang="ar">لا حسابات ولا خادم لبيانات الشطرنج ولا تقارير أعطال تلقائية.</span></dd>
         </div>
         <div>
           <dt><span lang="ar">مزامنة داخل شبكتك</span></dt>
@@ -473,8 +473,8 @@
       </h2>
       <div class="privacy-grid rv">
         <div>
-          <h4><span lang="ar">اتصال بالشبكة عند الاستيراد فقط</span></h4>
-          <p><span lang="ar">عند استيراد المباريات يستدعي Kiebitz واجهتَي chess.com وLichess العامّتين باسم المستخدم الذي أدخلته بنفسك.</span></p>
+          <h4><span lang="ar">بيانات الشطرنج تبقى محلية</span></h4>
+          <p><span lang="ar">تبقى المباريات والتحليلات والمرجع وتقدّم التدريب على أجهزتك، ولا تُرسل إلى Kiebitz ولا إلى مزوّد الإعلانات.</span></p>
         </div>
         <div>
           <h4><span lang="ar">‏chessdb.cn فقط إن أردت</span></h4>
@@ -484,9 +484,9 @@
           <h4><span lang="ar">الكاميرا لرمز QR فقط</span></h4>
           <p><span lang="ar">على Android لا يطلب Kiebitz الكاميرا إلا لحظة مسحك رمز الاقتران. ولا تُحفَظ أي صور ولا تُرسَل.</span></p>
         </div>
-        <div class="no">
-          <h4><span lang="ar">لا خادم لدى المزوّد</span></h4>
-          <p><span lang="ar">لا يوجد خادم لـ Kiebitz، ولا حزمة تحليلات، ولا معرّفات إعلانية، ولا تقارير أعطال تلقائية، ولا حسابات.</span></p>
+        <div>
+          <h4><span lang="ar">إعلانات بخيارات شفافة</span></h4>
+          <p><span lang="ar">يستخدم Android Free إعلانات Google للجوال. وقبل أول إعلان مسموح، يطلب Google UMP خيارات الخصوصية المطلوبة؛ ويمكن تغييرها من الإعدادات ← الإعلانات والخصوصية.</span></p>
         </div>
       </div>
       <p style="margin-top:26px">
@@ -515,7 +515,7 @@
 
 
 
-        <span lang="ar">‏Kiebitz مجاني في الوقت الحالي، بلا إعلانات وبلا مشتريات داخل التطبيق. نسخة Windows جاهزة للتنزيل، وعلى Android يجري اختبار مغلق على Google Play. كما أن النسختين مرفقتان بأحدث إصدار في مستودع التطبيق.</span>
+        <span lang="ar">‏Kiebitz مجاني في الوقت الحالي. نسخة Windows جاهزة للتنزيل، وعلى Android يجري اختبار مغلق على Google Play. كما أن النسختين مرفقتان بأحدث إصدار في مستودع التطبيق.</span>
       </p>
       <div class="dl rv" style="margin-top:32px">
         <article class="dl-card">
@@ -599,7 +599,7 @@
             <span class="package-meta">
               <span>f7 → inbox</span>
               <span><span lang="ar">ملاحظة · عطل · اقتراح</span></span>
-              <span><span lang="ar">بلا حساب · بلا قياس عن بُعد</span></span>
+              <span><span lang="ar">بلا حساب · تحليل محلي</span></span>
             </span>
           </summary>
 

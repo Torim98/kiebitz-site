@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kiebitz · Analyse d’échecs local-first pour Windows et Android</title>
-<meta name="description" content="Kiebitz importe vos parties chess.com et Lichess, les analyse localement avec Stockfish et révèle vos vrais points forts et faibles, sans compte, cloud ni télémétrie.">
+<meta name="description" content="Kiebitz importe vos parties chess.com et Lichess, les analyse localement avec Stockfish et révèle vos vrais points forts et faibles. Vos données d’échecs et analyses restent sur vos appareils.">
 <meta name="theme-color" content="#0e0e0d">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://torim98.github.io/kiebitz-site/fr/">
@@ -28,7 +28,7 @@
 <meta property="og:locale:alternate" content="hi_IN">
 <meta property="og:locale:alternate" content="ar">
 <meta property="og:title" content="Kiebitz · Analyse d’échecs local-first pour Windows et Android">
-<meta property="og:description" content="Kiebitz importe vos parties chess.com et Lichess, les analyse localement avec Stockfish et révèle vos vrais points forts et faibles, sans compte, cloud ni télémétrie.">
+<meta property="og:description" content="Kiebitz importe vos parties chess.com et Lichess, les analyse localement avec Stockfish et révèle vos vrais points forts et faibles. Vos données d’échecs et analyses restent sur vos appareils.">
 <meta property="og:url" content="https://torim98.github.io/kiebitz-site/fr/">
 <meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
 <meta property="og:image:width" content="1200">
@@ -36,7 +36,7 @@
 <meta property="og:image:alt" content="Kiebitz · Local-first chess analysis">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kiebitz · Analyse d’échecs local-first pour Windows et Android">
-<meta name="twitter:description" content="Kiebitz importe vos parties chess.com et Lichess, les analyse localement avec Stockfish et révèle vos vrais points forts et faibles, sans compte, cloud ni télémétrie.">
+<meta name="twitter:description" content="Kiebitz importe vos parties chess.com et Lichess, les analyse localement avec Stockfish et révèle vos vrais points forts et faibles. Vos données d’échecs et analyses restent sur vos appareils.">
 <meta name="twitter:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
 <script type="application/ld+json">
 {
@@ -44,11 +44,11 @@
   "@type": "SoftwareApplication",
   "name": "Kiebitz",
   "url": "https://torim98.github.io/kiebitz-site/fr/",
-  "description": "Kiebitz importe vos parties chess.com et Lichess, les analyse localement avec Stockfish et révèle vos vrais points forts et faibles, sans compte, cloud ni télémétrie.",
+  "description": "Kiebitz importe vos parties chess.com et Lichess, les analyse localement avec Stockfish et révèle vos vrais points forts et faibles. Vos données d’échecs et analyses restent sur vos appareils.",
   "inLanguage": "fr",
   "applicationCategory": "GameApplication",
   "operatingSystem": "Windows, macOS, Linux, Android",
-  "softwareVersion": "0.8.0",
+  "softwareVersion": "0.8.1",
   "isAccessibleForFree": true,
   "downloadUrl": "https://github.com/Torim98/Kiebitz/releases/latest",
   "installUrl": "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
@@ -247,7 +247,7 @@
       <p class="lede" style="margin-top:18px">
 
 
-        <span lang="fr">Kiebitz n’a pas de serveur. Rien où se connecter, rien qui soit téléversé, aucune analyse qui se ferait ailleurs. La base de données est un fichier SQLite sur votre machine.</span>
+        <span lang="fr">Kiebitz n’a aucun serveur pour les comptes ou les données d’échecs. Rien ne doit être téléversé et chaque analyse s’exécute sur votre appareil. Les parties, analyses et progrès restent sur vos appareils.</span>
 
 
 
@@ -263,8 +263,8 @@
           <dd><span lang="fr">Parties, analyses et progression restent en local.</span></dd>
         </div>
         <div>
-          <dt><span lang="fr">Pas de télémétrie</span></dt>
-          <dd><span lang="fr">Pas de pistage, pas de publicité, pas de rapports de plantage.</span></dd>
+          <dt><span lang="fr">Aucun backend Kiebitz</span></dt>
+          <dd><span lang="fr">Aucun compte, aucun serveur de données d’échecs, aucun rapport de plantage automatique.</span></dd>
         </div>
         <div>
           <dt><span lang="fr">Sync sur votre réseau</span></dt>
@@ -473,8 +473,8 @@
       </h2>
       <div class="privacy-grid rv">
         <div>
-          <h4><span lang="fr">Accès réseau uniquement à l’import</span></h4>
-          <p><span lang="fr">Lors de l’import, Kiebitz interroge les API publiques de chess.com et de Lichess avec le pseudo que vous avez saisi.</span></p>
+          <h4><span lang="fr">Les données d’échecs restent locales</span></h4>
+          <p><span lang="fr">Parties, analyses, répertoire et progression restent sur vos appareils. Ils ne sont transmis ni à Kiebitz ni au fournisseur publicitaire.</span></p>
         </div>
         <div>
           <h4><span lang="fr">chessdb.cn seulement si vous le voulez</span></h4>
@@ -484,9 +484,9 @@
           <h4><span lang="fr">La caméra seulement pour le QR code</span></h4>
           <p><span lang="fr">Sur Android, Kiebitz ne demande la caméra qu’au moment où vous scannez le code d’appairage. Aucune image n’est enregistrée ni envoyée.</span></p>
         </div>
-        <div class="no">
-          <h4><span lang="fr">Aucun serveur de l’éditeur</span></h4>
-          <p><span lang="fr">Il n’existe pas de serveur Kiebitz, pas de SDK d’analyse, pas d’identifiants publicitaires, pas de rapports de plantage automatiques, pas de comptes.</span></p>
+        <div>
+          <h4><span lang="fr">Publicités avec choix transparents</span></h4>
+          <p><span lang="fr">Android Free utilise Google Mobile Ads. Avant la première publicité autorisée, Google UMP recueille les choix requis ; modifiez-les sous Réglages → Publicités et confidentialité.</span></p>
         </div>
       </div>
       <p style="margin-top:26px">
@@ -511,7 +511,7 @@
       <p class="lede" style="margin-top:16px">
 
 
-        <span lang="fr">Kiebitz est gratuit pour l’instant, sans publicité ni achats intégrés. La version Windows se télécharge directement ; pour Android, un test fermé est en cours sur Google Play. Les deux builds sont aussi joints à la dernière release du dépôt de l’application.</span>
+        <span lang="fr">Kiebitz est gratuit pour l’instant. La version Windows se télécharge directement ; pour Android, un test fermé est en cours sur Google Play. Les deux builds sont aussi joints à la dernière release du dépôt de l’application.</span>
 
 
 
@@ -599,7 +599,7 @@
             <span class="package-meta">
               <span>f7 → inbox</span>
               <span><span lang="fr">Retour · plantage · souhait</span></span>
-              <span><span lang="fr">Pas de compte · pas de télémétrie</span></span>
+              <span><span lang="fr">Pas de compte · analyse locale</span></span>
             </span>
           </summary>
 

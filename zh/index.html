@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kiebitz · 面向 Windows 与 Android 的本地优先国际象棋分析</title>
-<meta name="description" content="Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点；无需账号、云端或遥测。">
+<meta name="description" content="Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点。棋局数据和分析保留在你的设备上。">
 <meta name="theme-color" content="#0e0e0d">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://torim98.github.io/kiebitz-site/zh/">
@@ -28,7 +28,7 @@
 <meta property="og:locale:alternate" content="hi_IN">
 <meta property="og:locale:alternate" content="ar">
 <meta property="og:title" content="Kiebitz · 面向 Windows 与 Android 的本地优先国际象棋分析">
-<meta property="og:description" content="Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点；无需账号、云端或遥测。">
+<meta property="og:description" content="Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点。棋局数据和分析保留在你的设备上。">
 <meta property="og:url" content="https://torim98.github.io/kiebitz-site/zh/">
 <meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
 <meta property="og:image:width" content="1200">
@@ -36,7 +36,7 @@
 <meta property="og:image:alt" content="Kiebitz · Local-first chess analysis">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kiebitz · 面向 Windows 与 Android 的本地优先国际象棋分析">
-<meta name="twitter:description" content="Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点；无需账号、云端或遥测。">
+<meta name="twitter:description" content="Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点。棋局数据和分析保留在你的设备上。">
 <meta name="twitter:image" content="https://torim98.github.io/kiebitz-site/assets/og-kiebitz.png">
 <script type="application/ld+json">
 {
@@ -44,11 +44,11 @@
   "@type": "SoftwareApplication",
   "name": "Kiebitz",
   "url": "https://torim98.github.io/kiebitz-site/zh/",
-  "description": "Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点；无需账号、云端或遥测。",
+  "description": "Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点。棋局数据和分析保留在你的设备上。",
   "inLanguage": "zh-Hans",
   "applicationCategory": "GameApplication",
   "operatingSystem": "Windows, macOS, Linux, Android",
-  "softwareVersion": "0.8.0",
+  "softwareVersion": "0.8.1",
   "isAccessibleForFree": true,
   "downloadUrl": "https://github.com/Torim98/Kiebitz/releases/latest",
   "installUrl": "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
@@ -249,7 +249,7 @@
 
 
 
-        <span lang="zh">Kiebitz 没有服务器。没有需要登录的地方，没有上传，也没有在别处进行的分析。数据库就是你电脑上的一个 SQLite 文件。</span>
+        <span lang="zh">Kiebitz 没有账号或棋局数据服务器。无需上传任何内容，所有分析都在你的设备上运行。对局、分析和进度保留在你的设备上。</span>
 
 
       </p>
@@ -263,8 +263,8 @@
           <dd><span lang="zh">对局、分析和进度都留在本地。</span></dd>
         </div>
         <div>
-          <dt><span lang="zh">无遥测</span></dt>
-          <dd><span lang="zh">不追踪、无广告、不发崩溃报告。</span></dd>
+          <dt><span lang="zh">无 Kiebitz 后端</span></dt>
+          <dd><span lang="zh">无账号、无棋局数据服务器、无自动崩溃报告。</span></dd>
         </div>
         <div>
           <dt><span lang="zh">在自家网络内同步</span></dt>
@@ -473,8 +473,8 @@
       </h2>
       <div class="privacy-grid rv">
         <div>
-          <h4><span lang="zh">只有导入时才联网</span></h4>
-          <p><span lang="zh">导入对局时，Kiebitz 会带上你自己填写的用户名调用 chess.com 和 Lichess 的公开接口。</span></p>
+          <h4><span lang="zh">棋局数据保留在本地</span></h4>
+          <p><span lang="zh">对局、分析、开局库和训练进度都保留在你的设备上，既不会发送给 Kiebitz，也不会发送给广告提供商。</span></p>
         </div>
         <div>
           <h4><span lang="zh">chessdb.cn 只在你愿意时启用</span></h4>
@@ -484,9 +484,9 @@
           <h4><span lang="zh">摄像头只为二维码</span></h4>
           <p><span lang="zh">在 Android 上，只有当你扫描配对码时 Kiebitz 才会申请摄像头权限。不会保存或发送任何图像。</span></p>
         </div>
-        <div class="no">
-          <h4><span lang="zh">开发者没有服务器</span></h4>
-          <p><span lang="zh">没有 Kiebitz 服务器，没有统计 SDK，没有广告标识符，没有自动崩溃报告，也没有账号。</span></p>
+        <div>
+          <h4><span lang="zh">透明管理广告</span></h4>
+          <p><span lang="zh">Android Free 使用 Google Mobile Ads。首次投放合规广告前，Google UMP 会请求所需的隐私选择；你可在“设置 → 广告与隐私”中更改。</span></p>
         </div>
       </div>
       <p style="margin-top:26px">
@@ -513,7 +513,7 @@
 
 
 
-        <span lang="zh">Kiebitz 目前免费，无广告、无应用内购买。Windows 版可以直接下载，Android 版正在 Google Play 上进行封闭测试。两个版本也都作为附件挂在应用仓库的最新发布里。</span>
+        <span lang="zh">Kiebitz 目前免费。Windows 版可以直接下载，Android 版正在 Google Play 上进行封闭测试。两个版本也都作为附件挂在应用仓库的最新发布里。</span>
 
 
       </p>
@@ -599,7 +599,7 @@
             <span class="package-meta">
               <span>f7 → inbox</span>
               <span><span lang="zh">反馈 · 崩溃 · 需求</span></span>
-              <span><span lang="zh">无需账号 · 无遥测</span></span>
+              <span><span lang="zh">无需账号 · 本地分析</span></span>
             </span>
           </summary>
 

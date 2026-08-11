@@ -2,7 +2,7 @@ export const site = {
   // Change only this value after the custom domain is connected.
   origin: "https://torim98.github.io/kiebitz-site",
   name: "Kiebitz",
-  version: "0.8.0",
+  version: "0.8.1",
   repository: "https://github.com/Torim98/Kiebitz",
   downloadUrl: "https://github.com/Torim98/Kiebitz/releases/latest",
   playStoreUrl: "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
@@ -89,13 +89,13 @@ export const pages = {
       ar: "Kiebitz · تحليل شطرنج محلي أولًا لنظامي Windows وAndroid"
     },
     descriptions: {
-      de: "Kiebitz importiert deine chess.com- und Lichess-Partien, analysiert sie lokal mit Stockfish und zeigt dir deine echten Stärken und Schwächen – ohne Konto, Cloud oder Telemetrie.",
-      en: "Kiebitz imports your chess.com and Lichess games, analyzes them locally with Stockfish, and reveals your real strengths and weaknesses—without an account, cloud, or telemetry.",
-      fr: "Kiebitz importe vos parties chess.com et Lichess, les analyse localement avec Stockfish et révèle vos vrais points forts et faibles, sans compte, cloud ni télémétrie.",
-      es: "Kiebitz importa tus partidas de chess.com y Lichess, las analiza localmente con Stockfish y revela tus puntos fuertes y débiles, sin cuenta, nube ni telemetría.",
-      zh: "Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点；无需账号、云端或遥测。",
-      hi: "Kiebitz आपकी chess.com और Lichess बाज़ियाँ आयात करता है, Stockfish से स्थानीय रूप से विश्लेषण करता है और बिना खाते, क्लाउड या टेलीमेट्री के आपकी असली खूबियाँ व कमज़ोरियाँ दिखाता है।",
-      ar: "يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية، بلا حساب أو سحابة أو قياس عن بُعد."
+      de: "Kiebitz importiert deine chess.com- und Lichess-Partien, analysiert sie lokal mit Stockfish und zeigt deine echten Stärken und Schwächen. Deine Schachdaten und Analysen bleiben auf deinen Geräten.",
+      en: "Kiebitz imports your chess.com and Lichess games, analyzes them locally with Stockfish, and reveals your real strengths and weaknesses. Your chess data and analyses stay on your devices.",
+      fr: "Kiebitz importe vos parties chess.com et Lichess, les analyse localement avec Stockfish et révèle vos vrais points forts et faibles. Vos données d’échecs et analyses restent sur vos appareils.",
+      es: "Kiebitz importa tus partidas de chess.com y Lichess, las analiza localmente con Stockfish y revela tus puntos fuertes y débiles. Tus datos de ajedrez y análisis permanecen en tus dispositivos.",
+      zh: "Kiebitz 导入你在 chess.com 和 Lichess 上的对局，使用 Stockfish 在本地分析并找出真正的强项与弱点。棋局数据和分析保留在你的设备上。",
+      hi: "Kiebitz आपकी chess.com और Lichess बाज़ियाँ आयात करता है, Stockfish से स्थानीय रूप से विश्लेषण करता है और आपकी असली खूबियाँ व कमज़ोरियाँ दिखाता है। शतरंज डेटा और विश्लेषण आपके उपकरणों पर रहते हैं।",
+      ar: "يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية. تبقى بيانات الشطرنج والتحليلات على أجهزتك."
     }
   },
   privacy: {
@@ -111,13 +111,13 @@ export const pages = {
       ar: "سياسة الخصوصية · Kiebitz"
     },
     descriptions: {
-      de: "Datenschutzerklärung für Kiebitz: lokale Speicherung, Netzzugriffe, Berechtigungen, LAN-Sync und kein Tracking.",
-      en: "Kiebitz privacy policy: local storage, network access, permissions, LAN sync, and no tracking.",
-      fr: "Politique de confidentialité de Kiebitz : stockage local, accès réseau, autorisations, synchronisation LAN et aucun suivi.",
-      es: "Política de privacidad de Kiebitz: almacenamiento local, acceso a la red, permisos, sincronización LAN y ningún seguimiento.",
-      zh: "Kiebitz 隐私政策：本地存储、网络访问、权限、局域网同步以及不进行跟踪。",
-      hi: "Kiebitz गोपनीयता नीति: स्थानीय संग्रहण, नेटवर्क पहुँच, अनुमतियाँ, LAN सिंक और कोई ट्रैकिंग नहीं।",
-      ar: "سياسة خصوصية Kiebitz: التخزين المحلي والوصول إلى الشبكة والأذونات والمزامنة عبر الشبكة المحلية وعدم التتبع."
+      de: "Datenschutzerklärung für Kiebitz: lokale Schachdaten, Netzzugriffe, Berechtigungen, LAN-Sync und Drittanbieter.",
+      en: "Kiebitz privacy policy: local chess data, network access, permissions, LAN sync, and third-party services.",
+      fr: "Politique de confidentialité de Kiebitz : données d’échecs locales, accès réseau, autorisations, synchronisation LAN et services tiers.",
+      es: "Política de privacidad de Kiebitz: datos de ajedrez locales, acceso a la red, permisos, sincronización LAN y servicios de terceros.",
+      zh: "Kiebitz 隐私政策：本地棋局数据、网络访问、权限、局域网同步及第三方服务。",
+      hi: "Kiebitz गोपनीयता नीति: स्थानीय शतरंज डेटा, नेटवर्क पहुँच, अनुमतियाँ, LAN सिंक और तृतीय-पक्ष सेवाएँ।",
+      ar: "سياسة خصوصية Kiebitz: بيانات الشطرنج المحلية والوصول إلى الشبكة والأذونات والمزامنة عبر الشبكة المحلية وخدمات الأطراف الثالثة."
     }
   },
   impressum: {
