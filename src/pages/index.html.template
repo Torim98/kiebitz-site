@@ -485,13 +485,13 @@
         <span lang="ar">‏Kiebitz Free وKiebitz Plus.</span>
       </h2>
       <p class="lede" style="margin-top:16px">
-        <span lang="de">Alles, was Kiebitz heute kann, bleibt in Kiebitz Free enthalten und wird auf Desktop und Android über Werbung finanziert. Kiebitz Plus ist die werbefreie Stufe mit den fortlaufenden Trainerfunktionen.</span>
-        <span lang="en">Everything Kiebitz can do today stays part of Kiebitz Free and is funded by ads on desktop and Android. Kiebitz Plus is the ad-free tier with the continuous coaching features.</span>
-        <span lang="fr">Tout ce que Kiebitz sait faire aujourd’hui reste dans Kiebitz Free, financé par la publicité sur ordinateur et Android. Kiebitz Plus est le niveau sans publicité, avec les fonctions d’entraînement continues.</span>
-        <span lang="es">Todo lo que Kiebitz hace hoy sigue formando parte de Kiebitz Free y se financia con anuncios en escritorio y Android. Kiebitz Plus es el nivel sin anuncios, con las funciones de entrenamiento continuo.</span>
-        <span lang="zh">Kiebitz 今天能做的一切都留在 Kiebitz Free 里，并靠桌面端与 Android 上的广告来支撑。Kiebitz Plus 是无广告的档位，包含持续的训练功能。</span>
-        <span lang="hi">Kiebitz आज जो कुछ कर सकता है, वह सब Kiebitz Free में ही रहता है और डेस्कटॉप व Android पर विज्ञापनों से चलता है। Kiebitz Plus विज्ञापन-मुक्त स्तर है, जिसमें लगातार चलने वाली ट्रेनर सुविधाएँ हैं।</span>
-        <span lang="ar">كل ما يفعله Kiebitz اليوم يبقى ضمن Kiebitz Free، ويُموَّل بالإعلانات على سطح المكتب وAndroid. أما Kiebitz Plus فهو المستوى الخالي من الإعلانات، مع مزايا التدريب المستمرة.</span>
+        <span lang="de">Kiebitz Free bleibt kostenlos und wird auf Desktop und Android über Werbung finanziert. Kiebitz Plus ist die werbefreie Stufe mit den fortlaufenden Trainerfunktionen; einzelne Statistiken und Insights können dorthin wechseln.</span>
+        <span lang="en">Kiebitz Free stays free of charge and is funded by ads on desktop and Android. Kiebitz Plus is the ad-free tier with the continuous coaching features; some statistics and insights may move over to it.</span>
+        <span lang="fr">Kiebitz Free reste gratuit et est financé par la publicité sur ordinateur et Android. Kiebitz Plus est le niveau sans publicité, avec les fonctions d’entraînement continues ; certaines statistiques et certains insights pourront y basculer.</span>
+        <span lang="es">Kiebitz Free sigue siendo gratuito y se financia con anuncios en escritorio y Android. Kiebitz Plus es el nivel sin anuncios, con las funciones de entrenamiento continuo; algunas estadísticas e insights podrían pasar a él.</span>
+        <span lang="zh">Kiebitz Free 保持免费，靠桌面端与 Android 上的广告来支撑。Kiebitz Plus 是无广告的档位，包含持续的训练功能；部分统计和 Insights 可能会移到这里。</span>
+        <span lang="hi">Kiebitz Free मुफ़्त ही रहता है और डेस्कटॉप व Android पर विज्ञापनों से चलता है। Kiebitz Plus विज्ञापन-मुक्त स्तर है, जिसमें लगातार चलने वाली ट्रेनर सुविधाएँ हैं; कुछ आँकड़े और Insights आगे चलकर इसमें जा सकते हैं।</span>
+        <span lang="ar">يبقى Kiebitz Free مجانيًا ويُموَّل بالإعلانات على سطح المكتب وAndroid. أما Kiebitz Plus فهو المستوى الخالي من الإعلانات، مع مزايا التدريب المستمرة؛ وقد تنتقل إليه بعض الإحصاءات والتحليلات.</span>
       </p>
 
       <div class="plans rv" style="margin-top:34px">
@@ -508,13 +508,13 @@
             <li class="tick-ad"><span lang="de">Werbung auf Desktop und Android</span><span lang="en">Ads on desktop and Android</span><span lang="fr">Publicités sur ordinateur et Android</span><span lang="es">Anuncios en escritorio y Android</span><span lang="zh">桌面端与 Android 上显示广告</span><span lang="hi">डेस्कटॉप और Android पर विज्ञापन</span><span lang="ar">إعلانات على سطح المكتب وAndroid</span></li>
           </ul>
           <p class="plan-note">
-            <span lang="de">Die Werbung ist auf dem Desktop eine eigene, statische Fläche und auf Android Google Mobile Ads. Deine Partien werden dafür nicht ausgewertet.</span>
-            <span lang="en">On desktop the ad is a self-hosted static slot, on Android it is Google Mobile Ads. Your games are never used for it.</span>
-            <span lang="fr">Sur ordinateur, la publicité est un emplacement statique auto-hébergé ; sur Android, c’est Google Mobile Ads. Vos parties ne servent jamais à cela.</span>
-            <span lang="es">En escritorio el anuncio es un espacio estático propio; en Android es Google Mobile Ads. Tus partidas nunca se usan para ello.</span>
-            <span lang="zh">桌面端的广告是自托管的静态位，Android 上用的是 Google Mobile Ads。你的对局绝不会被拿来做投放依据。</span>
-            <span lang="hi">डेस्कटॉप पर विज्ञापन एक अपनी ही स्थिर जगह है और Android पर Google Mobile Ads। आपकी बाज़ियों का इसके लिए कभी इस्तेमाल नहीं होता।</span>
-            <span lang="ar">الإعلان على سطح المكتب مساحة ثابتة ذاتية الاستضافة، وعلى Android إعلانات Google للجوال. ولا تُستخدَم مبارياتك لذلك إطلاقًا.</span>
+            <span lang="de">Deine Partien werden für die Werbung nicht ausgewertet.</span>
+            <span lang="en">Your games are never used for the ads.</span>
+            <span lang="fr">Vos parties ne servent jamais à la publicité.</span>
+            <span lang="es">Tus partidas nunca se usan para los anuncios.</span>
+            <span lang="zh">你的对局绝不会被用于广告投放。</span>
+            <span lang="hi">आपकी बाज़ियों का विज्ञापनों के लिए कभी इस्तेमाल नहीं होता।</span>
+            <span lang="ar">لا تُستخدَم مبارياتك في الإعلانات إطلاقًا.</span>
           </p>
         </article>
 
@@ -536,13 +536,13 @@
             </ul>
           </div>
           <p class="plan-note">
-            <span lang="de">Freischaltbar, sobald die Funktionen fertig sind – in der App und hier.</span>
-            <span lang="en">Available to unlock once the features are finished – in the app and here.</span>
-            <span lang="fr">Activable dès que les fonctions seront prêtes, dans l’application et ici.</span>
-            <span lang="es">Se podrá activar en cuanto las funciones estén listas, en la app y aquí.</span>
-            <span lang="zh">等这些功能做好，就能在应用里和这里开通。</span>
-            <span lang="hi">जैसे ही ये सुविधाएँ तैयार होंगी, इन्हें ऐप में और यहाँ चालू किया जा सकेगा।</span>
-            <span lang="ar">يمكن تفعيله فور اكتمال المزايا، في التطبيق وهنا.</span>
+            <span lang="de">Freischaltbar, sobald die Funktionen fertig sind.</span>
+            <span lang="en">Available to unlock once the features are finished.</span>
+            <span lang="fr">Activable dès que les fonctions seront prêtes.</span>
+            <span lang="es">Se podrá activar en cuanto las funciones estén listas.</span>
+            <span lang="zh">等这些功能做好，就能开通。</span>
+            <span lang="hi">जैसे ही ये सुविधाएँ तैयार होंगी, इन्हें चालू किया जा सकेगा।</span>
+            <span lang="ar">يمكن تفعيله فور اكتمال المزايا.</span>
           </p>
         </article>
       </div>
