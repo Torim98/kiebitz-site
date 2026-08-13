@@ -7,7 +7,7 @@
       "startsAt": null,
       "endsAt": null,
       "weight": 1,
-      "href": "https://torim98.github.io/kiebitz-site/",
+      "href": "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
       "image": "../assets/icon-128.png",
       "imageAlt": {
         "de": "Kiebitz App-Icon",
@@ -20,31 +20,31 @@
       },
       "advertiser": "Kiebitz",
       "headline": {
-        "de": "Kiebitz für Android ist unterwegs",
-        "en": "Kiebitz for Android is on its way",
-        "fr": "Kiebitz pour Android arrive bientôt",
-        "es": "Kiebitz para Android está en camino",
-        "zh": "Android 版 Kiebitz 即将推出",
-        "hi": "Android के लिए Kiebitz जल्द आ रहा है",
-        "ar": "Kiebitz لنظام Android في الطريق"
+        "de": "Kiebitz für Android ist da",
+        "en": "Kiebitz for Android is here",
+        "fr": "Kiebitz pour Android est disponible",
+        "es": "Kiebitz para Android ya está aquí",
+        "zh": "Android 版 Kiebitz 已上线",
+        "hi": "Android के लिए Kiebitz आ गया है",
+        "ar": "‏Kiebitz لنظام Android متاح الآن"
       },
       "body": {
-        "de": "Alle Funktionen, Downloads und Neuigkeiten auf unserer Website.",
-        "en": "Explore features, downloads, and updates on our website.",
-        "fr": "Découvrez les fonctions, téléchargements et actualités sur notre site.",
-        "es": "Descubre funciones, descargas y novedades en nuestro sitio web.",
-        "zh": "在我们的网站上了解功能、下载和最新动态。",
-        "hi": "हमारी वेबसाइट पर सुविधाएँ, डाउनलोड और अपडेट देखें।",
-        "ar": "اكتشف الميزات والتنزيلات وآخر الأخبار على موقعنا."
+        "de": "Jetzt bei Google Play: dieselbe Analyse, unterwegs auf dem Handy.",
+        "en": "Now on Google Play: the same analysis, on your phone.",
+        "fr": "Désormais sur Google Play : la même analyse, sur votre téléphone.",
+        "es": "Ya en Google Play: el mismo análisis, en tu móvil.",
+        "zh": "现已上架 Google Play：同样的分析，装进手机里。",
+        "hi": "अब Google Play पर: वही विश्लेषण, आपके फ़ोन में।",
+        "ar": "متوفّر الآن على Google Play: التحليل نفسه، على هاتفك."
       },
       "cta": {
-        "de": "Website öffnen",
-        "en": "Visit website",
-        "fr": "Voir le site",
-        "es": "Visitar sitio web",
-        "zh": "访问网站",
-        "hi": "वेबसाइट खोलें",
-        "ar": "زيارة الموقع"
+        "de": "Bei Google Play",
+        "en": "On Google Play",
+        "fr": "Sur Google Play",
+        "es": "En Google Play",
+        "zh": "前往 Google Play",
+        "hi": "Google Play पर",
+        "ar": "على Google Play"
       }
     },
     {

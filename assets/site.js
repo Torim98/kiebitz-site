@@ -270,14 +270,16 @@
     });
   }
 
-  /* ── Dialog: Android Closed Test ────────────────────────────────────────── */
-  (function () {
-    var modal = document.getElementById("beta-android");
-    var openers = document.querySelectorAll("[data-beta-open]");
+  /* ── Dialoge ────────────────────────────────────────────────────────────── */
+  function setupModal(id, openerSelector) {
+    var modal = document.getElementById(id);
+    var openers = document.querySelectorAll(openerSelector);
     if (!modal || !openers.length) return;
 
     var card = modal.querySelector(".modal-card");
-    var closeBtn = modal.querySelector("[data-beta-close]");
+    var closers = modal.querySelectorAll("[data-modal-close]");
+    var closeBtn = closers[0];
+    if (!card || !closeBtn) return;
     var last = null;
 
     function focusables() {
@@ -306,13 +308,15 @@
 
     for (var i = 0; i < openers.length; i++) {
       openers[i].addEventListener("click", function (ev) {
-        // Ohne JavaScript bleibt der Link die APK auf GitHub.
+        // Ohne JavaScript bleibt der Auslöser ein gewöhnlicher Link.
         ev.preventDefault();
         open(this);
       });
     }
 
-    closeBtn.addEventListener("click", close);
+    for (var c = 0; c < closers.length; c++) {
+      closers[c].addEventListener("click", close);
+    }
     modal.addEventListener("click", function (ev) {
       if (ev.target === modal) close();
     });
@@ -338,7 +342,9 @@
         first.focus();
       }
     });
-  })();
+  }
+
+  setupModal("sponsor-kiebitz", "[data-sponsor-open]");
 
   /* ── Feedback-Formular ──────────────────────────────────────────────────── */
   (function () {

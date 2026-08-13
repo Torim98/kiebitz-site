@@ -79,10 +79,11 @@ request indexing.
 
 ## Downloads and feedback
 
-Download links point to the app repository's releases overview, so publishing
-a new app version does not require a website update. Android beta
-buttons open the closed-test dialog while retaining the GitHub APK as a
-no-JavaScript fallback.
+Desktop download links point to the app repository's releases overview, so
+publishing a new app version does not require a website update. Android buttons
+link straight to the Google Play listing; the GitHub APK stays available as an
+alternative. The footer's support entry opens a dialog with both donation
+options and falls back to the GitHub Sponsors link without JavaScript.
 
 The feedback form sends only after deliberate submission to FormSubmit's AJAX
 endpoint and forwards to `kiebitz.chess@gmail.com`. FormSubmit requires an

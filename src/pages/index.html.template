@@ -60,6 +60,7 @@
     <nav class="top-nav" aria-label="Kiebitz">
       <a href="#features"><span lang="de">Funktionen</span><span lang="en">Features</span><span lang="fr">Fonctions</span><span lang="es">Funciones</span><span lang="zh">功能</span><span lang="hi">विशेषताएँ</span><span lang="ar">المزايا</span></a>
       <a href="#local"><span lang="de">Local-first</span><span lang="en">Local-first</span><span lang="fr">Local-first</span><span lang="es">Local-first</span><span lang="zh">本地优先</span><span lang="hi">लोकल-फ़र्स्ट</span><span lang="ar">محلي أولًا</span></a>
+      <a href="#pricing"><span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></a>
       <a href="#download"><span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></a>
       <a href="#feedback"><span lang="de">Feedback</span><span lang="en">Feedback</span><span lang="fr">Retours</span><span lang="es">Comentarios</span><span lang="zh">反馈</span><span lang="hi">फ़ीडबैक</span><span lang="ar">الملاحظات</span></a>
       <a href="privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
@@ -91,7 +92,7 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="de">Beta · offener Test</span><span lang="en">Beta · early access</span><span lang="fr">Bêta · accès anticipé</span><span lang="es">Beta · acceso anticipado</span><span lang="zh">测试版 · 早期体验</span><span lang="hi">बीटा · अर्ली एक्सेस</span><span lang="ar">نسخة تجريبية · وصول مبكر</span></p>
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="de">Neu · jetzt bei Google Play</span><span lang="en">New · now on Google Play</span><span lang="fr">Nouveau · désormais sur Google Play</span><span lang="es">Nuevo · ya en Google Play</span><span lang="zh">新 · 现已上架 Google Play</span><span lang="hi">नया · अब Google Play पर</span><span lang="ar">جديد · متوفّر الآن على Google Play</span></p>
         <h1>
           <span lang="de">Kiebitz <span class="flight">kiebitzt</span> bei deinen Partien.</span>
           <span lang="en">Kiebitz <span class="flight">looks over</span> your shoulder.</span>
@@ -112,11 +113,11 @@
           <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">
             <span lang="de">Für Desktop laden</span><span lang="en">Get it for desktop</span><span lang="fr">Télécharger pour ordinateur</span><span lang="es">Descargar para escritorio</span><span lang="zh">下载桌面版</span><span lang="hi">डेस्कटॉप के लिए पाएँ</span><span lang="ar">التنزيل لسطح المكتب</span>
           </a>
-          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener" data-beta-open>
-            <span lang="de">Android (Beta-Test)</span><span lang="en">Android (beta test)</span><span lang="fr">Android (test bêta)</span><span lang="es">Android (prueba beta)</span><span lang="zh">Android（测试计划）</span><span lang="hi">Android (बीटा टेस्ट)</span><span lang="ar">‏Android (اختبار تجريبي)</span>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener">
+            <span lang="de">Bei Google Play laden</span><span lang="en">Get it on Google Play</span><span lang="fr">Disponible sur Google Play</span><span lang="es">Consíguelo en Google Play</span><span lang="zh">在 Google Play 下载</span><span lang="hi">Google Play से पाएँ</span><span lang="ar">نزّله من Google Play</span>
           </a>
         </div>
-        <p class="cta-note"><span lang="de">Kostenlos · Desktop über GitHub · Android im geschlossenen Test</span><span lang="en">Free · desktop via GitHub · Android in closed testing</span><span lang="fr">Gratuit · ordinateur via GitHub · Android en test fermé</span><span lang="es">Gratis · escritorio en GitHub · Android en prueba cerrada</span><span lang="zh">免费 · 桌面版通过 GitHub · Android 封闭测试中</span><span lang="hi">मुफ़्त · डेस्कटॉप GitHub से · Android क्लोज़्ड टेस्ट में</span><span lang="ar">مجاني · سطح المكتب عبر GitHub · ‏Android في اختبار مغلق</span></p>
+        <p class="cta-note"><span lang="de">Kostenlos · Desktop über GitHub · Android bei Google Play</span><span lang="en">Free · desktop via GitHub · Android on Google Play</span><span lang="fr">Gratuit · ordinateur via GitHub · Android sur Google Play</span><span lang="es">Gratis · escritorio en GitHub · Android en Google Play</span><span lang="zh">免费 · 桌面版通过 GitHub · Android 在 Google Play</span><span lang="hi">मुफ़्त · डेस्कटॉप GitHub से · Android Google Play पर</span><span lang="ar">مجاني · سطح المكتب عبر GitHub · ‏Android على Google Play</span></p>
       </div>
 
       <div class="board-card" aria-hidden="true">
@@ -137,46 +138,46 @@
     </div>
   </section>
 
-  <!-- ── Banner: Android Closed Test ───────────────────────────────────── -->
+  <!-- ── Banner: Neuigkeiten ───────────────────────────────────────────── -->
   <section class="band" aria-labelledby="band-title">
     <div class="band-grid" aria-hidden="true"></div>
     <div class="wrap band-in rv">
       <div class="band-text">
-        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="de">Closed Beta · Google Play</span><span lang="en">Closed beta · Google Play</span><span lang="fr">Bêta fermée · Google Play</span><span lang="es">Beta cerrada · Google Play</span><span lang="zh">封闭测试 · Google Play</span><span lang="hi">क्लोज़्ड बीटा · Google Play</span><span lang="ar">اختبار مغلق · Google Play</span></p>
+        <p class="badge"><span class="dot" aria-hidden="true"></span><span lang="de">Neuigkeiten · Google Play</span><span lang="en">News · Google Play</span><span lang="fr">Actualités · Google Play</span><span lang="es">Novedades · Google Play</span><span lang="zh">最新动态 · Google Play</span><span lang="hi">ताज़ा ख़बरें · Google Play</span><span lang="ar">أخبار · Google Play</span></p>
         <h2 id="band-title">
-          <span lang="de">Kiebitz zieht auf Android ein und sucht Tester.</span>
-          <span lang="en">Kiebitz is moving to Android and needs testers.</span>
-          <span lang="fr">Kiebitz s’installe sur Android et cherche des testeurs.</span>
-          <span lang="es">Kiebitz llega a Android y busca personas que lo prueben.</span>
-          <span lang="zh">Kiebitz 正登陆 Android，招募测试者。</span>
-          <span lang="hi">Kiebitz Android पर आ रहा है और टेस्टर ढूँढ़ रहा है।</span>
-          <span lang="ar">ينتقل Kiebitz إلى Android ويبحث عن مختبِرين.</span>
+          <span lang="de">Kiebitz ist im Play Store.</span>
+          <span lang="en">Kiebitz is live on the Play Store.</span>
+          <span lang="fr">Kiebitz est en ligne sur le Play Store.</span>
+          <span lang="es">Kiebitz ya está en Play Store.</span>
+          <span lang="zh">Kiebitz 已上架 Play 商店。</span>
+          <span lang="hi">Kiebitz अब Play Store पर है।</span>
+          <span lang="ar">أصبح Kiebitz في متجر Play.</span>
         </h2>
         <p class="band-sub">
-          <span lang="de">Für Desktop kannst du Kiebitz schon laden. Für Android läuft gerade ein geschlossener Test bei Google Play, und über ein paar zusätzliche Tester würde ich mich sehr freuen. Der Weg dorthin sind drei Züge.</span>
-          <span lang="en">You can already download Kiebitz for desktop. For Android a closed test is currently running on Google Play, and I would be very grateful for a few more testers. Getting there takes three moves.</span>
-          <span lang="fr">Kiebitz est déjà téléchargeable pour ordinateur. Pour Android, un test fermé est en cours sur Google Play, et quelques testeurs de plus me feraient très plaisir. Il y faut trois coups.</span>
-          <span lang="es">Kiebitz ya se puede descargar para escritorio. Para Android hay una prueba cerrada en marcha en Google Play, y agradecería mucho unas cuantas personas más. Son tres jugadas.</span>
-          <span lang="zh">桌面版现在就能下载。Android 版正在 Google Play 上进行封闭测试，如果能多几位测试者我会非常感谢。加入只需三步棋。</span>
-          <span lang="hi">डेस्कटॉप के लिए Kiebitz अभी डाउनलोड किया जा सकता है। Android के लिए Google Play पर एक क्लोज़्ड टेस्ट चल रहा है, और कुछ और टेस्टर मिलें तो बहुत अच्छा हो। इसमें तीन चालें लगती हैं।</span>
-          <span lang="ar">يمكنك تنزيل Kiebitz لسطح المكتب الآن. أما على Android فيجري اختبار مغلق على Google Play، وسأكون ممتنًا جدًا لبضعة مختبِرين إضافيين. الطريق إلى ذلك ثلاث نقلات.</span>
+          <span lang="de">Der geschlossene Test ist vorbei: Die Android-App steht öffentlich bei Google Play, ohne Gruppe und ohne Freischaltung. Damit Kiebitz weiterkommt, helfen jetzt vor allem zwei Dinge – weitersagen und Feedback geben.</span>
+          <span lang="en">The closed test is over: the Android app is publicly available on Google Play, no group and no invitation needed. Two things now help Kiebitz most – spreading the word and sending feedback.</span>
+          <span lang="fr">Le test fermé est terminé : l’application Android est publiquement disponible sur Google Play, sans groupe ni invitation. Deux choses aident désormais le plus Kiebitz : en parler autour de vous et envoyer vos retours.</span>
+          <span lang="es">La prueba cerrada ha terminado: la app de Android está disponible para todo el mundo en Google Play, sin grupo ni invitación. Ahora hay dos cosas que ayudan más que nada: recomendarlo y mandar comentarios.</span>
+          <span lang="zh">封闭测试已经结束：Android 应用已在 Google Play 公开上架，不必加入群组，也不必申请资格。现在最能帮到 Kiebitz 的是两件事——推荐给别人，以及给出反馈。</span>
+          <span lang="hi">क्लोज़्ड टेस्ट ख़त्म: Android ऐप अब Google Play पर सबके लिए उपलब्ध है — न कोई ग्रुप, न कोई मंज़ूरी। अब Kiebitz की सबसे ज़्यादा मदद दो चीज़ें करती हैं: दूसरों को बताना और फ़ीडबैक भेजना।</span>
+          <span lang="ar">انتهى الاختبار المغلق: صار تطبيق Android متاحًا للجميع على Google Play، بلا مجموعة ولا دعوة. وأكثر ما يساعد Kiebitz الآن أمران: أن تُخبر غيرك عنه، وأن ترسل ملاحظاتك.</span>
         </p>
         <div class="band-cta">
-          <a class="btn btn-primary" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener" data-beta-open>
-            <span lang="de">Tester werden</span><span lang="en">Become a tester</span><span lang="fr">Devenir testeur</span><span lang="es">Quiero probarlo</span><span lang="zh">成为测试者</span><span lang="hi">टेस्टर बनें</span><span lang="ar">كن مختبِرًا</span>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener">
+            <span lang="de">Bei Google Play öffnen</span><span lang="en">Open on Google Play</span><span lang="fr">Ouvrir sur Google Play</span><span lang="es">Abrir en Google Play</span><span lang="zh">在 Google Play 打开</span><span lang="hi">Google Play पर खोलें</span><span lang="ar">افتحه في Google Play</span>
           </a>
           <a class="band-alt" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">
             <span lang="de">oder direkt die APK</span><span lang="en">or just the APK</span><span lang="fr">ou simplement l’APK</span><span lang="es">o solo el APK</span><span lang="zh">或者直接下载 APK</span><span lang="hi">या सीधे APK लें</span><span lang="ar">أو ملف APK مباشرة</span>
           </a>
         </div>
         <p class="band-note">
-          <span lang="de">Google verlangt 14 Tage Teilnahme. Ehrliches Feedback ist mir lieber als stilles Dabeisein.</span>
-          <span lang="en">Google asks testers to stay in for 14 days. Honest feedback beats quiet participation.</span>
-          <span lang="fr">Google demande 14 jours de participation. Un retour honnête vaut mieux qu’une présence silencieuse.</span>
-          <span lang="es">Google pide 14 días de participación. Prefiero comentarios sinceros a una presencia silenciosa.</span>
-          <span lang="zh">Google 要求测试者参与满 14 天。比起默默挂着，我更希望收到坦率的反馈。</span>
-          <span lang="hi">Google 14 दिन तक भागीदारी माँगता है। चुपचाप जुड़े रहने से बेहतर है ईमानदार फ़ीडबैक।</span>
-          <span lang="ar">تشترط Google بقاء المختبِرين 14 يومًا. الملاحظات الصريحة أفضل عندي من مشاركة صامتة.</span>
+          <span lang="de">Kiebitz bleibt local-first: keine Konten, keine Cloud, keine Telemetrie – auch im Play Store nicht.</span>
+          <span lang="en">Kiebitz stays local-first: no accounts, no cloud, no telemetry – on the Play Store as well.</span>
+          <span lang="fr">Kiebitz reste local-first : pas de comptes, pas de cloud, pas de télémétrie, y compris sur le Play Store.</span>
+          <span lang="es">Kiebitz sigue siendo local-first: sin cuentas, sin nube y sin telemetría, también en Play Store.</span>
+          <span lang="zh">Kiebitz 依然本地优先：没有账号、没有云端、没有遥测，上架 Play 商店后也一样。</span>
+          <span lang="hi">Kiebitz लोकल-फ़र्स्ट ही रहता है: न खाते, न क्लाउड, न टेलीमेट्री — Play Store पर भी नहीं।</span>
+          <span lang="ar">يبقى Kiebitz محليًا أولًا: بلا حسابات ولا سحابة ولا قياس عن بُعد، حتى في متجر Play.</span>
         </p>
       </div>
 
@@ -184,22 +185,22 @@
         <li>
           <span class="route-n">1</span>
           <span class="route-txt">
-            <b><span lang="de">Der Google-Gruppe beitreten</span><span lang="en">Join the Google Group</span><span lang="fr">Rejoindre le groupe Google</span><span lang="es">Únete al grupo de Google</span><span lang="zh">加入 Google 群组</span><span lang="hi">Google ग्रुप से जुड़ें</span><span lang="ar">انضم إلى مجموعة Google</span></b>
-            <span><span lang="de">Schaltet den Test für dein Konto frei</span><span lang="en">Unlocks the test for your account</span><span lang="fr">Débloque le test pour votre compte</span><span lang="es">Habilita la prueba en tu cuenta</span><span lang="zh">为你的账号解锁测试</span><span lang="hi">आपके खाते के लिए टेस्ट खोलता है</span><span lang="ar">يفتح الاختبار لحسابك</span></span>
+            <b><span lang="de">Veröffentlicht bei Google Play</span><span lang="en">Released on Google Play</span><span lang="fr">Publié sur Google Play</span><span lang="es">Publicado en Google Play</span><span lang="zh">已在 Google Play 发布</span><span lang="hi">Google Play पर जारी</span><span lang="ar">صدر على Google Play</span></b>
+            <span><span lang="de">Die Android-App lässt sich ab sofort ganz normal installieren</span><span lang="en">The Android app can now be installed like any other</span><span lang="fr">L’application Android s’installe désormais tout à fait normalement</span><span lang="es">La app de Android ya se instala como cualquier otra</span><span lang="zh">Android 应用现在可以像其他应用一样直接安装</span><span lang="hi">Android ऐप अब किसी भी आम ऐप की तरह इंस्टॉल हो जाता है</span><span lang="ar">صار بالإمكان تثبيت تطبيق Android مثل أي تطبيق آخر</span></span>
           </span>
         </li>
         <li>
           <span class="route-n">2</span>
           <span class="route-txt">
-            <b><span lang="de">Dem geschlossenen Test beitreten</span><span lang="en">Join the closed test</span><span lang="fr">Rejoindre le test fermé</span><span lang="es">Únete a la prueba cerrada</span><span lang="zh">加入封闭测试</span><span lang="hi">क्लोज़्ड टेस्ट में शामिल हों</span><span lang="ar">انضم إلى الاختبار المغلق</span></b>
-            <span><span lang="de">Opt-in mit demselben Google-Konto</span><span lang="en">Opt in with the same Google account</span><span lang="fr">Inscrivez-vous avec le même compte Google</span><span lang="es">Acepta con la misma cuenta de Google</span><span lang="zh">用同一个 Google 账号确认加入</span><span lang="hi">उसी Google खाते से ऑप्ट-इन करें</span><span lang="ar">اشترك بالحساب نفسه على Google</span></span>
+            <b><span lang="de">Weiterempfehlen hilft enorm</span><span lang="en">Recommending it helps enormously</span><span lang="fr">Recommander Kiebitz aide énormément</span><span lang="es">Recomendarlo ayuda muchísimo</span><span lang="zh">推荐给别人帮助极大</span><span lang="hi">दूसरों को बताना बहुत मदद करता है</span><span lang="ar">التوصية به تساعد كثيرًا</span></b>
+            <span><span lang="de">Freunde, Verein, Schachgruppe: jede Empfehlung zählt für eine kleine App</span><span lang="en">Friends, club, chess group: every recommendation counts for a small app</span><span lang="fr">Amis, club, groupe d’échecs : chaque recommandation compte pour une petite application</span><span lang="es">Amistades, club, grupo de ajedrez: cada recomendación cuenta para una app pequeña</span><span lang="zh">朋友、俱乐部、棋友群：对一个小应用来说，每一次推荐都算数</span><span lang="hi">दोस्त, क्लब, शतरंज समूह: एक छोटे ऐप के लिए हर सिफ़ारिश मायने रखती है</span><span lang="ar">الأصدقاء والنادي ومجموعة الشطرنج: كل توصية مهمّة لتطبيق صغير</span></span>
           </span>
         </li>
         <li>
           <span class="route-n">3</span>
           <span class="route-txt">
-            <b><span lang="de">Aus dem Play Store installieren</span><span lang="en">Install from the Play Store</span><span lang="fr">Installer depuis le Play Store</span><span lang="es">Instala desde Play Store</span><span lang="zh">从 Play 商店安装</span><span lang="hi">Play Store से इंस्टॉल करें</span><span lang="ar">ثبّته من متجر Play</span></b>
-            <span><span lang="de">Danach aktualisiert sich Kiebitz von selbst</span><span lang="en">From then on Kiebitz updates itself</span><span lang="fr">Ensuite, Kiebitz se met à jour tout seul</span><span lang="es">A partir de ahí Kiebitz se actualiza solo</span><span lang="zh">之后 Kiebitz 会自动更新</span><span lang="hi">उसके बाद Kiebitz खुद अपडेट होता रहेगा</span><span lang="ar">بعدها يحدّث Kiebitz نفسه تلقائيًا</span></span>
+            <b><span lang="de">Feedback macht Kiebitz besser</span><span lang="en">Feedback makes Kiebitz better</span><span lang="fr">Vos retours améliorent Kiebitz</span><span lang="es">Tus comentarios mejoran Kiebitz</span><span lang="zh">反馈让 Kiebitz 变得更好</span><span lang="hi">फ़ीडबैक Kiebitz को बेहतर बनाता है</span><span lang="ar">الملاحظات تجعل Kiebitz أفضل</span></b>
+            <span><span lang="de">Über diese Website, durch Schütteln der Android-App oder in den Einstellungen von Android und Desktop</span><span lang="en">Via this website, by shaking the Android app, or from the settings on Android and desktop</span><span lang="fr">Via ce site, en secouant l’application Android ou depuis les réglages sur Android et ordinateur</span><span lang="es">Desde esta web, agitando la app de Android o en los ajustes de Android y escritorio</span><span lang="zh">通过本网站、摇一摇 Android 应用，或在 Android 与桌面端的设置里</span><span lang="hi">इस वेबसाइट से, Android ऐप को हिलाकर, या Android और डेस्कटॉप की सेटिंग्स से</span><span lang="ar">عبر هذا الموقع، أو بهزّ تطبيق Android، أو من الإعدادات على Android وسطح المكتب</span></span>
           </span>
         </li>
       </ol>
@@ -470,27 +471,105 @@
     </div>
   </section>
 
-  <!-- ── 06 Download ───────────────────────────────────────────────────── -->
-  <section class="section section-alt" id="download">
+  <!-- ── 06 Preise ─────────────────────────────────────────────────────── -->
+  <section class="section section-alt" id="pricing">
     <div class="wrap">
-      <p class="eyebrow"><b>06</b> <span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></p>
-      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
-        <span lang="de">Beta laden und loslegen.</span>
-        <span lang="en">Grab the beta and start.</span>
-        <span lang="fr">Téléchargez la bêta et lancez-vous.</span>
-        <span lang="es">Descarga la beta y empieza.</span>
-        <span lang="zh">下载测试版，直接开练。</span>
-        <span lang="hi">बीटा लीजिए और शुरू कीजिए।</span>
-        <span lang="ar">نزّل النسخة التجريبية وابدأ.</span>
+      <p class="eyebrow"><b>06</b> <span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:28ch">
+        <span lang="de">Kiebitz Free und Kiebitz Plus.</span>
+        <span lang="en">Kiebitz Free and Kiebitz Plus.</span>
+        <span lang="fr">Kiebitz Free et Kiebitz Plus.</span>
+        <span lang="es">Kiebitz Free y Kiebitz Plus.</span>
+        <span lang="zh">Kiebitz Free 与 Kiebitz Plus。</span>
+        <span lang="hi">Kiebitz Free और Kiebitz Plus।</span>
+        <span lang="ar">‏Kiebitz Free وKiebitz Plus.</span>
       </h2>
       <p class="lede" style="margin-top:16px">
-        <span lang="de">Kiebitz ist zunächst kostenlos. Die Desktop-Versionen für Windows, macOS und Linux kannst du direkt laden; für Android läuft gerade ein geschlossener Test bei Google Play. Alle Builds findest du in den Releases des App-Repositorys.</span>
-        <span lang="en">Kiebitz is free for now. The desktop builds for Windows, macOS and Linux are ready to download, and for Android a closed test is currently running on Google Play. You can find all builds in the app repository’s releases.</span>
-        <span lang="fr">Kiebitz est gratuit pour l’instant. Les versions pour Windows, macOS et Linux se téléchargent directement ; pour Android, un test fermé est en cours sur Google Play. Tous les builds se trouvent dans les releases du dépôt de l’application.</span>
-        <span lang="es">Kiebitz es gratuito por ahora. Las versiones para Windows, macOS y Linux se pueden descargar ya; para Android hay una prueba cerrada en Google Play. Encontrarás todas las compilaciones en las releases del repositorio.</span>
-        <span lang="zh">Kiebitz 目前免费。Windows、macOS 和 Linux 桌面版可以直接下载，Android 版正在 Google Play 上进行封闭测试。所有构建版本都可在应用仓库的 Releases 页面找到。</span>
-        <span lang="hi">Kiebitz फ़िलहाल मुफ़्त है। Windows, macOS और Linux के डेस्कटॉप बिल्ड सीधे डाउनलोड किए जा सकते हैं; Android के लिए Google Play पर क्लोज़्ड टेस्ट चल रहा है। सभी बिल्ड ऐप रिपॉज़िटरी के Releases पेज पर मिलेंगे।</span>
-        <span lang="ar">‏Kiebitz مجاني في الوقت الحالي. إصدارات سطح المكتب لأنظمة Windows وmacOS وLinux جاهزة للتنزيل، وعلى Android يجري اختبار مغلق على Google Play. ستجد جميع الإصدارات في صفحة Releases بمستودع التطبيق.</span>
+        <span lang="de">Alles, was Kiebitz heute kann, bleibt in Kiebitz Free enthalten und wird auf Desktop und Android über Werbung finanziert. Kiebitz Plus ist die werbefreie Stufe mit den fortlaufenden Trainerfunktionen.</span>
+        <span lang="en">Everything Kiebitz can do today stays part of Kiebitz Free and is funded by ads on desktop and Android. Kiebitz Plus is the ad-free tier with the continuous coaching features.</span>
+        <span lang="fr">Tout ce que Kiebitz sait faire aujourd’hui reste dans Kiebitz Free, financé par la publicité sur ordinateur et Android. Kiebitz Plus est le niveau sans publicité, avec les fonctions d’entraînement continues.</span>
+        <span lang="es">Todo lo que Kiebitz hace hoy sigue formando parte de Kiebitz Free y se financia con anuncios en escritorio y Android. Kiebitz Plus es el nivel sin anuncios, con las funciones de entrenamiento continuo.</span>
+        <span lang="zh">Kiebitz 今天能做的一切都留在 Kiebitz Free 里，并靠桌面端与 Android 上的广告来支撑。Kiebitz Plus 是无广告的档位，包含持续的训练功能。</span>
+        <span lang="hi">Kiebitz आज जो कुछ कर सकता है, वह सब Kiebitz Free में ही रहता है और डेस्कटॉप व Android पर विज्ञापनों से चलता है। Kiebitz Plus विज्ञापन-मुक्त स्तर है, जिसमें लगातार चलने वाली ट्रेनर सुविधाएँ हैं।</span>
+        <span lang="ar">كل ما يفعله Kiebitz اليوم يبقى ضمن Kiebitz Free، ويُموَّل بالإعلانات على سطح المكتب وAndroid. أما Kiebitz Plus فهو المستوى الخالي من الإعلانات، مع مزايا التدريب المستمرة.</span>
+      </p>
+
+      <div class="plans rv" style="margin-top:34px">
+        <article class="plan">
+          <p class="plan-flag plan-flag-live"><span class="dot" aria-hidden="true"></span><span lang="de">Verfügbar</span><span lang="en">Available</span><span lang="fr">Disponible</span><span lang="es">Disponible</span><span lang="zh">现已可用</span><span lang="hi">उपलब्ध</span><span lang="ar">متاح</span></p>
+          <h3>Kiebitz Free</h3>
+          <p class="plan-price"><span lang="de">Kostenlos</span><span lang="en">Free</span><span lang="fr">Gratuit</span><span lang="es">Gratis</span><span lang="zh">免费</span><span lang="hi">मुफ़्त</span><span lang="ar">مجاني</span></p>
+          <p class="plan-meta"><span lang="de">Desktop &amp; Android · ohne Konto</span><span lang="en">Desktop &amp; Android · no account</span><span lang="fr">Ordinateur &amp; Android · sans compte</span><span lang="es">Escritorio &amp; Android · sin cuenta</span><span lang="zh">桌面端与 Android · 无需账号</span><span lang="hi">डेस्कटॉप और Android · बिना खाते के</span><span lang="ar">سطح المكتب وAndroid · بلا حساب</span></p>
+          <ul class="ticks plan-list">
+            <li><span lang="de">Partieimport und Datenbank</span><span lang="en">Game import and database</span><span lang="fr">Import de parties et base de données</span><span lang="es">Importación de partidas y base de datos</span><span lang="zh">对局导入与数据库</span><span lang="hi">बाज़ी आयात और डेटाबेस</span><span lang="ar">استيراد المباريات وقاعدة البيانات</span></li>
+            <li><span lang="de">Grundlegende Stockfish-Analyse</span><span lang="en">Basic Stockfish analysis</span><span lang="fr">Analyse Stockfish de base</span><span lang="es">Análisis básico con Stockfish</span><span lang="zh">基础 Stockfish 分析</span><span lang="hi">बुनियादी Stockfish विश्लेषण</span><span lang="ar">تحليل أساسي بمحرّك Stockfish</span></li>
+            <li><span lang="de">Manuelles Repertoire-, Puzzle- und Endspieltraining</span><span lang="en">Manual repertoire, puzzle and endgame training</span><span lang="fr">Entraînement manuel du répertoire, des problèmes et des finales</span><span lang="es">Entrenamiento manual de repertorio, ejercicios y finales</span><span lang="zh">手动的开局库、战术题与残局训练</span><span lang="hi">मैनुअल रेपर्टवार, पहेली और अंतिम-खेल प्रशिक्षण</span><span lang="ar">تدريب يدوي على المرجع والألغاز والنهايات</span></li>
+            <li><span lang="de">Grundlegende Statistiken</span><span lang="en">Basic statistics</span><span lang="fr">Statistiques de base</span><span lang="es">Estadísticas básicas</span><span lang="zh">基础统计</span><span lang="hi">बुनियादी आँकड़े</span><span lang="ar">إحصاءات أساسية</span></li>
+            <li class="tick-ad"><span lang="de">Werbung auf Desktop und Android</span><span lang="en">Ads on desktop and Android</span><span lang="fr">Publicités sur ordinateur et Android</span><span lang="es">Anuncios en escritorio y Android</span><span lang="zh">桌面端与 Android 上显示广告</span><span lang="hi">डेस्कटॉप और Android पर विज्ञापन</span><span lang="ar">إعلانات على سطح المكتب وAndroid</span></li>
+          </ul>
+          <p class="plan-note">
+            <span lang="de">Die Werbung ist auf dem Desktop eine eigene, statische Fläche und auf Android Google Mobile Ads. Deine Partien werden dafür nicht ausgewertet.</span>
+            <span lang="en">On desktop the ad is a self-hosted static slot, on Android it is Google Mobile Ads. Your games are never used for it.</span>
+            <span lang="fr">Sur ordinateur, la publicité est un emplacement statique auto-hébergé ; sur Android, c’est Google Mobile Ads. Vos parties ne servent jamais à cela.</span>
+            <span lang="es">En escritorio el anuncio es un espacio estático propio; en Android es Google Mobile Ads. Tus partidas nunca se usan para ello.</span>
+            <span lang="zh">桌面端的广告是自托管的静态位，Android 上用的是 Google Mobile Ads。你的对局绝不会被拿来做投放依据。</span>
+            <span lang="hi">डेस्कटॉप पर विज्ञापन एक अपनी ही स्थिर जगह है और Android पर Google Mobile Ads। आपकी बाज़ियों का इसके लिए कभी इस्तेमाल नहीं होता।</span>
+            <span lang="ar">الإعلان على سطح المكتب مساحة ثابتة ذاتية الاستضافة، وعلى Android إعلانات Google للجوال. ولا تُستخدَم مبارياتك لذلك إطلاقًا.</span>
+          </p>
+        </article>
+
+        <article class="plan plan-soon">
+          <p class="plan-flag"><span class="dot" aria-hidden="true"></span><span lang="de">Bald</span><span lang="en">Soon</span><span lang="fr">Bientôt</span><span lang="es">Pronto</span><span lang="zh">即将推出</span><span lang="hi">जल्द ही</span><span lang="ar">قريبًا</span></p>
+          <h3>Kiebitz Plus</h3>
+          <p class="plan-price"><span lang="de">2,99 €</span><span lang="en">€2.99</span><span lang="fr">2,99 €</span><span lang="es">2,99 €</span><span lang="zh">€2.99</span><span lang="hi">€2.99</span><span lang="ar">‏2.99 €</span> <span class="plan-per"><span lang="de">/ Monat</span><span lang="en">/ month</span><span lang="fr">/ mois</span><span lang="es">/ mes</span><span lang="zh">/ 月</span><span lang="hi">/ माह</span><span lang="ar">/ شهريًا</span></span></p>
+          <p class="plan-meta"><span lang="de">Desktop &amp; Android · ohne Konto</span><span lang="en">Desktop &amp; Android · no account</span><span lang="fr">Ordinateur &amp; Android · sans compte</span><span lang="es">Escritorio &amp; Android · sin cuenta</span><span lang="zh">桌面端与 Android · 无需账号</span><span lang="hi">डेस्कटॉप और Android · बिना खाते के</span><span lang="ar">سطح المكتب وAndroid · بلا حساب</span></p>
+          <div class="plan-veil">
+            <ul class="ticks plan-list">
+              <li><span lang="de">Komplett werbefrei</span><span lang="en">Completely ad-free</span><span lang="fr">Entièrement sans publicité</span><span lang="es">Completamente sin anuncios</span><span lang="zh">完全没有广告</span><span lang="hi">पूरी तरह विज्ञापन-मुक्त</span><span lang="ar">خالٍ تمامًا من الإعلانات</span></li>
+              <li><span lang="de">Automatische Hintergrundanalyse</span><span lang="en">Automatic background analysis</span><span lang="fr">Analyse automatique en arrière-plan</span><span lang="es">Análisis automático en segundo plano</span><span lang="zh">自动后台分析</span><span lang="hi">स्वचालित पृष्ठभूमि विश्लेषण</span><span lang="ar">تحليل تلقائي في الخلفية</span></li>
+              <li><span lang="de">Vollständige Insights und Langzeitvergleiche</span><span lang="en">Full insights and long-term comparisons</span><span lang="fr">Insights complets et comparaisons sur la durée</span><span lang="es">Insights completos y comparaciones a largo plazo</span><span lang="zh">完整的 Insights 与长期对比</span><span lang="hi">पूरे Insights और दीर्घकालिक तुलनाएँ</span><span lang="ar">تحليلات كاملة ومقارنات طويلة المدى</span></li>
+              <li><span lang="de">Persönliche Puzzles aus eigenen Fehlern</span><span lang="en">Personal puzzles made from your own mistakes</span><span lang="fr">Problèmes personnels tirés de vos propres erreurs</span><span lang="es">Ejercicios personales hechos con tus propios errores</span><span lang="zh">用你自己的失误生成的专属战术题</span><span lang="hi">अपनी ग़लतियों से बनी निजी पहेलियाँ</span><span lang="ar">ألغاز شخصية من أخطائك أنت</span></li>
+              <li><span lang="de">Adaptiver Wochenplan</span><span lang="en">Adaptive weekly plan</span><span lang="fr">Plan hebdomadaire adaptatif</span><span lang="es">Plan semanal adaptativo</span><span lang="zh">自适应周计划</span><span lang="hi">अनुकूली साप्ताहिक योजना</span><span lang="ar">خطة أسبوعية تتكيّف معك</span></li>
+              <li><span lang="de">Fokuszyklen und Wirkungsmessung</span><span lang="en">Focus cycles and impact tracking</span><span lang="fr">Cycles de focus et mesure des effets</span><span lang="es">Ciclos de enfoque y medición del efecto</span><span lang="zh">专注周期与效果评估</span><span lang="hi">फ़ोकस चक्र और असर की माप</span><span lang="ar">دورات تركيز وقياس للأثر</span></li>
+              <li><span lang="de">Automatische Synchronisierung</span><span lang="en">Automatic synchronization</span><span lang="fr">Synchronisation automatique</span><span lang="es">Sincronización automática</span><span lang="zh">自动同步</span><span lang="hi">स्वचालित सिंक्रनाइज़ेशन</span><span lang="ar">مزامنة تلقائية</span></li>
+              <li><span lang="de">Später erweiterte Exporte</span><span lang="en">Extended exports later on</span><span lang="fr">Exports étendus plus tard</span><span lang="es">Exportaciones ampliadas más adelante</span><span lang="zh">之后还会有扩展导出</span><span lang="hi">आगे चलकर विस्तृत एक्सपोर्ट</span><span lang="ar">عمليات تصدير موسّعة لاحقًا</span></li>
+            </ul>
+          </div>
+          <p class="plan-note">
+            <span lang="de">Freischaltbar, sobald die Funktionen fertig sind – in der App und hier.</span>
+            <span lang="en">Available to unlock once the features are finished – in the app and here.</span>
+            <span lang="fr">Activable dès que les fonctions seront prêtes, dans l’application et ici.</span>
+            <span lang="es">Se podrá activar en cuanto las funciones estén listas, en la app y aquí.</span>
+            <span lang="zh">等这些功能做好，就能在应用里和这里开通。</span>
+            <span lang="hi">जैसे ही ये सुविधाएँ तैयार होंगी, इन्हें ऐप में और यहाँ चालू किया जा सकेगा।</span>
+            <span lang="ar">يمكن تفعيله فور اكتمال المزايا، في التطبيق وهنا.</span>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 07 Download ───────────────────────────────────────────────────── -->
+  <section class="section" id="download">
+    <div class="wrap">
+      <p class="eyebrow"><b>07</b> <span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></p>
+      <h2 style="font-size:clamp(24px,3vw,36px);max-width:26ch">
+        <span lang="de">Laden und loslegen.</span>
+        <span lang="en">Download and start.</span>
+        <span lang="fr">Téléchargez et lancez-vous.</span>
+        <span lang="es">Descarga y empieza.</span>
+        <span lang="zh">下载，直接开练。</span>
+        <span lang="hi">डाउनलोड कीजिए और शुरू कीजिए।</span>
+        <span lang="ar">نزّله وابدأ.</span>
+      </h2>
+      <p class="lede" style="margin-top:16px">
+        <span lang="de">Kiebitz Free ist kostenlos. Die Desktop-Versionen für Windows, macOS und Linux kannst du direkt laden; die Android-App steht bei Google Play. Alle Desktop-Builds und die APK findest du in den Releases des App-Repositorys.</span>
+        <span lang="en">Kiebitz Free costs nothing. The desktop builds for Windows, macOS and Linux are ready to download, and the Android app is on Google Play. All desktop builds and the APK are in the app repository’s releases.</span>
+        <span lang="fr">Kiebitz Free est gratuit. Les versions pour Windows, macOS et Linux se téléchargent directement ; l’application Android est sur Google Play. Tous les builds de bureau et l’APK se trouvent dans les releases du dépôt de l’application.</span>
+        <span lang="es">Kiebitz Free no cuesta nada. Las versiones para Windows, macOS y Linux se pueden descargar ya; la app de Android está en Google Play. Todas las compilaciones de escritorio y el APK están en las releases del repositorio.</span>
+        <span lang="zh">Kiebitz Free 完全免费。Windows、macOS 和 Linux 桌面版可以直接下载，Android 应用已在 Google Play 上架。所有桌面构建和 APK 都可在应用仓库的 Releases 页面找到。</span>
+        <span lang="hi">Kiebitz Free मुफ़्त है। Windows, macOS और Linux के डेस्कटॉप बिल्ड सीधे डाउनलोड किए जा सकते हैं; Android ऐप Google Play पर है। सभी डेस्कटॉप बिल्ड और APK ऐप रिपॉज़िटरी के Releases पेज पर मिलेंगे।</span>
+        <span lang="ar">‏Kiebitz Free مجاني. إصدارات سطح المكتب لأنظمة Windows وmacOS وLinux جاهزة للتنزيل، وتطبيق Android متاح على Google Play. وستجد جميع إصدارات سطح المكتب وملف APK في صفحة Releases بمستودع التطبيق.</span>
       </p>
       <div class="dl rv" style="margin-top:32px">
         <article class="dl-card">
@@ -503,29 +582,29 @@
         </article>
         <article class="dl-card">
           <h3>Android</h3>
-          <p><span lang="de">Läuft gerade als geschlossener Test bei Google Play, mit nativem Stockfish pro ABI. Wer nicht am Test teilnehmen will, installiert die APK direkt.</span><span lang="en">Currently running as a closed test on Google Play, with native Stockfish per ABI. If you would rather not join the test, install the APK directly.</span><span lang="fr">Actuellement en test fermé sur Google Play, avec Stockfish natif par ABI. Si vous préférez ne pas rejoindre le test, installez directement l’APK.</span><span lang="es">Ahora mismo en prueba cerrada en Google Play, con Stockfish nativo por ABI. Si prefieres no entrar en la prueba, instala el APK directamente.</span><span lang="zh">目前在 Google Play 上进行封闭测试，按 ABI 提供原生 Stockfish。不想参加测试的话，可以直接安装 APK。</span><span lang="hi">अभी Google Play पर क्लोज़्ड टेस्ट के रूप में, हर ABI के लिए नेटिव Stockfish के साथ। टेस्ट में शामिल नहीं होना चाहते तो सीधे APK इंस्टॉल कीजिए।</span><span lang="ar">يعمل حاليًا كاختبار مغلق على Google Play، بمحرّك Stockfish أصلي لكل معمارية. وإن لم ترغب في الانضمام إلى الاختبار، فثبّت ملف APK مباشرة.</span></p>
-          <p class="dl-meta"><span lang="de">Closed Test · APK · LAN-Sync</span><span lang="en">Closed test · APK · LAN sync</span><span lang="fr">Test fermé · APK · sync LAN</span><span lang="es">Prueba cerrada · APK · sync LAN</span><span lang="zh">封闭测试 · APK · 局域网同步</span><span lang="hi">क्लोज़्ड टेस्ट · APK · LAN सिंक</span><span lang="ar">اختبار مغلق · APK · مزامنة عبر الشبكة المحلية</span></p>
-          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener" data-beta-open>
-            <span lang="de">Android · Beta-Test &amp; APK</span><span lang="en">Android · beta test &amp; APK</span><span lang="fr">Android · test bêta &amp; APK</span><span lang="es">Android · prueba beta &amp; APK</span><span lang="zh">Android · 测试计划与 APK</span><span lang="hi">Android · बीटा टेस्ट और APK</span><span lang="ar">‏Android · الاختبار التجريبي وملف APK</span>
+          <p><span lang="de">Öffentlich bei Google Play, mit nativem Stockfish pro ABI und automatischen Updates. Wer den Play Store nicht nutzen will, installiert die APK aus den Releases direkt.</span><span lang="en">Publicly available on Google Play, with native Stockfish per ABI and automatic updates. If you would rather not use the Play Store, install the APK from the releases directly.</span><span lang="fr">Publiquement disponible sur Google Play, avec Stockfish natif par ABI et mises à jour automatiques. Si vous préférez éviter le Play Store, installez directement l’APK depuis les releases.</span><span lang="es">Disponible para todo el mundo en Google Play, con Stockfish nativo por ABI y actualizaciones automáticas. Si prefieres no usar Play Store, instala el APK de las releases directamente.</span><span lang="zh">已在 Google Play 公开上架，按 ABI 提供原生 Stockfish，并支持自动更新。不想用 Play 商店的话，可以直接安装 Releases 里的 APK。</span><span lang="hi">Google Play पर सबके लिए उपलब्ध, हर ABI के लिए नेटिव Stockfish और ऑटो-अपडेट के साथ। Play Store इस्तेमाल नहीं करना चाहते तो Releases से सीधे APK इंस्टॉल कीजिए।</span><span lang="ar">متاح للجميع على Google Play، بمحرّك Stockfish أصلي لكل معمارية وبتحديثات تلقائية. وإن لم ترغب في استخدام متجر Play، فثبّت ملف APK من صفحة Releases مباشرة.</span></p>
+          <p class="dl-meta"><span lang="de">Google Play · APK · LAN-Sync</span><span lang="en">Google Play · APK · LAN sync</span><span lang="fr">Google Play · APK · sync LAN</span><span lang="es">Google Play · APK · sync LAN</span><span lang="zh">Google Play · APK · 局域网同步</span><span lang="hi">Google Play · APK · LAN सिंक</span><span lang="ar">‏Google Play · APK · مزامنة عبر الشبكة المحلية</span></p>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener">
+            <span lang="de">Bei Google Play</span><span lang="en">On Google Play</span><span lang="fr">Sur Google Play</span><span lang="es">En Google Play</span><span lang="zh">前往 Google Play</span><span lang="hi">Google Play पर</span><span lang="ar">على Google Play</span>
           </a>
         </article>
       </div>
       <p class="small" style="margin-top:22px">
-        <span lang="de">Beta: Funktionen ändern sich, und einzelne Rauheiten sind eingeplant. Fehler und Wünsche gern im Repository melden: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
-        <span lang="en">Beta: features still change and some rough edges are expected. Bugs and wishes are welcome in the repository: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
-        <span lang="fr">Bêta : les fonctions évoluent encore et quelques aspérités sont prévues. Bogues et souhaits sont les bienvenus dans le dépôt : <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
-        <span lang="es">Beta: las funciones aún cambian y hay asperezas previstas. Los fallos y las peticiones son bienvenidos en el repositorio: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
-        <span lang="zh">测试版：功能仍在变动，个别粗糙之处在意料之中。欢迎在仓库里提交问题和需求：<a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>。</span>
-        <span lang="hi">बीटा: सुविधाएँ अभी बदल रही हैं और कुछ खुरदुरापन अपेक्षित है। बग और सुझाव रिपॉज़िटरी में भेजें: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>।</span>
-        <span lang="ar">نسخة تجريبية: المزايا لا تزال تتغيّر وبعض الخشونة متوقّعة. الأخطاء والاقتراحات مرحّب بها في المستودع: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+        <span lang="de">Kiebitz ist jung: Funktionen ändern sich, und einzelne Rauheiten sind eingeplant. Fehler und Wünsche gern im Repository melden: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+        <span lang="en">Kiebitz is young: features still change and some rough edges are expected. Bugs and wishes are welcome in the repository: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+        <span lang="fr">Kiebitz est jeune : les fonctions évoluent encore et quelques aspérités sont prévues. Bogues et souhaits sont les bienvenus dans le dépôt : <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+        <span lang="es">Kiebitz es joven: las funciones aún cambian y hay asperezas previstas. Los fallos y las peticiones son bienvenidos en el repositorio: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
+        <span lang="zh">Kiebitz 还年轻：功能仍在变动，个别粗糙之处在意料之中。欢迎在仓库里提交问题和需求：<a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>。</span>
+        <span lang="hi">Kiebitz अभी नया है: सुविधाएँ बदल रही हैं और कुछ खुरदुरापन अपेक्षित है। बग और सुझाव रिपॉज़िटरी में भेजें: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>।</span>
+        <span lang="ar">لا يزال Kiebitz حديثًا: المزايا تتغيّر وبعض الخشونة متوقّعة. الأخطاء والاقتراحات مرحّب بها في المستودع: <a href="https://github.com/Torim98/Kiebitz" rel="noopener">github.com/Torim98/Kiebitz</a>.</span>
       </p>
     </div>
   </section>
 
-  <!-- ── 07 Feedback ─────────────────────────────────────────────────────── -->
+  <!-- ── 08 Feedback ─────────────────────────────────────────────────────── -->
   <section class="section feedback-section" id="feedback">
     <div class="wrap">
-      <p class="eyebrow"><b>07</b> <span lang="de">Feedback</span><span lang="en">Feedback</span><span lang="fr">Retours</span><span lang="es">Comentarios</span><span lang="zh">反馈</span><span lang="hi">फ़ीडबैक</span><span lang="ar">الملاحظات</span></p>
+      <p class="eyebrow"><b>08</b> <span lang="de">Feedback</span><span lang="en">Feedback</span><span lang="fr">Retours</span><span lang="es">Comentarios</span><span lang="zh">反馈</span><span lang="hi">फ़ीडबैक</span><span lang="ar">الملاحظات</span></p>
       <div class="feedback-grid">
         <div class="feedback-copy">
           <h2>
@@ -695,81 +774,74 @@
       <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span><span lang="fr">Code source</span><span lang="es">Código fuente</span><span lang="zh">源代码</span><span lang="hi">सोर्स कोड</span><span lang="ar">الشيفرة المصدرية</span></a>
       </div>
       <div class="foot-links-support">
-      <a href="https://github.com/sponsors/Torim98" target="_blank" rel="noopener noreferrer"><span lang="de">Über GitHub unterstützen</span><span lang="en">Support via GitHub</span><span lang="fr">Soutenir via GitHub</span><span lang="es">Apoyar a través de GitHub</span><span lang="zh">通过 GitHub 支持</span><span lang="hi">GitHub के माध्यम से समर्थन करें</span><span lang="ar">ادعم عبر GitHub</span></a>
-      <a href="https://ko-fi.com/kiebitzchess" target="_blank" rel="noopener noreferrer"><span lang="de">Über Ko-fi unterstützen</span><span lang="en">Support via Ko-fi</span><span lang="fr">Soutenir via Ko-fi</span><span lang="es">Apoyar a través de Ko-fi</span><span lang="zh">通过 Ko-fi 支持</span><span lang="hi">Ko-fi के माध्यम से समर्थन करें</span><span lang="ar">ادعم عبر Ko-fi</span></a>
+      <a class="foot-support" href="https://github.com/sponsors/Torim98" target="_blank" rel="noopener noreferrer" data-sponsor-open>
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.2 4.6 13a4.6 4.6 0 0 1 6.5-6.5l.9.9.9-.9A4.6 4.6 0 0 1 19.4 13Z"></path></svg>
+        <span lang="de">Kiebitz unterstützen</span><span lang="en">Support Kiebitz</span><span lang="fr">Soutenir Kiebitz</span><span lang="es">Apoyar a Kiebitz</span><span lang="zh">支持 Kiebitz</span><span lang="hi">Kiebitz का समर्थन करें</span><span lang="ar">ادعم Kiebitz</span>
+      </a>
       </div>
     </nav>
   </div>
 </footer>
 
-<!-- ── Dialog: Android Closed Test ─────────────────────────────────────── -->
-<div class="modal" id="beta-android" hidden>
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="beta-title" aria-describedby="beta-lede">
+
+<!-- ── Dialog: Kiebitz unterstützen ────────────────────────────────────── -->
+<div class="modal" id="sponsor-kiebitz" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="sponsor-title" aria-describedby="sponsor-lede">
     <div class="modal-head">
       <span class="modal-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="5" y="9" width="14" height="10" rx="3"></rect>
-          <path d="M8.2 9 6.7 6.3M15.8 9l1.5-2.7"></path>
-          <circle cx="9.6" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
-          <circle cx="14.4" cy="13" r="0.9" fill="currentColor" stroke="none"></circle>
+          <path d="M12 20.2 4.6 13a4.6 4.6 0 0 1 6.5-6.5l.9.9.9-.9A4.6 4.6 0 0 1 19.4 13Z"></path>
         </svg>
       </span>
       <div class="modal-titles">
         <p class="modal-eyebrow">Kiebitz</p>
-        <h2 id="beta-title">
-          <span lang="de">Android läuft im geschlossenen Test</span>
-          <span lang="en">Android is in closed testing</span>
-          <span lang="fr">Android est en test fermé</span>
-          <span lang="es">Android está en prueba cerrada</span>
-          <span lang="zh">Android 版正在封闭测试中</span>
-          <span lang="hi">Android क्लोज़्ड टेस्ट में है</span>
-          <span lang="ar">‏Android في مرحلة اختبار مغلق</span>
+        <h2 id="sponsor-title">
+          <span lang="de">Kiebitz unterstützen</span>
+          <span lang="en">Support Kiebitz</span>
+          <span lang="fr">Soutenir Kiebitz</span>
+          <span lang="es">Apoyar a Kiebitz</span>
+          <span lang="zh">支持 Kiebitz</span>
+          <span lang="hi">Kiebitz का समर्थन करें</span>
+          <span lang="ar">ادعم Kiebitz</span>
         </h2>
       </div>
-      <button class="modal-x" type="button" data-beta-close data-aria="close" aria-label="Close">&#10005;</button>
+      <button class="modal-x" type="button" data-modal-close data-aria="close" aria-label="Close">&#10005;</button>
     </div>
 
     <div class="modal-body">
-      <p class="modal-lede" id="beta-lede">
-        <span lang="de">Für Desktop kannst du Kiebitz schon laden. Für die Android-App läuft gerade ein geschlossener Test bei Google Play, und über ein paar zusätzliche Tester würde ich mich sehr freuen. Zum Mitmachen sind es drei Schritte:</span>
-        <span lang="en">You can already download Kiebitz for desktop. For the Android app I’m currently running a closed test on Google Play, and I would be very grateful for a few more testers. To participate, there are three steps:</span>
-        <span lang="fr">Kiebitz est déjà téléchargeable pour ordinateur. Pour l’application Android, un test fermé est en cours sur Google Play, et quelques testeurs de plus me feraient très plaisir. Participer prend trois étapes :</span>
-        <span lang="es">Kiebitz ya se puede descargar para escritorio. Para la app de Android hay ahora mismo una prueba cerrada en Google Play, y agradecería mucho unas cuantas personas más. Participar son tres pasos:</span>
-        <span lang="zh">桌面版现在就能下载。Android 应用正在 Google Play 上进行封闭测试，如果能多几位测试者我会非常感谢。参加只需三步：</span>
-        <span lang="hi">डेस्कटॉप के लिए Kiebitz अभी डाउनलोड किया जा सकता है। Android ऐप के लिए Google Play पर एक क्लोज़्ड टेस्ट चल रहा है, और कुछ और टेस्टर मिलें तो बहुत अच्छा हो। शामिल होने के तीन चरण हैं:</span>
-        <span lang="ar">يمكنك تنزيل Kiebitz لسطح المكتب الآن. أما تطبيق Android فيخضع حاليًا لاختبار مغلق على Google Play، وسأكون ممتنًا جدًا لبضعة مختبِرين إضافيين. المشاركة تتم في ثلاث خطوات:</span>
+      <p class="modal-lede" id="sponsor-lede">
+        <span lang="de">Kiebitz entsteht in der Freizeit und finanziert sich in der kostenlosen Version über Werbung. Wer lieber direkt etwas beisteuern möchte, hat zwei Wege; beide führen zum selben Entwickler.</span>
+        <span lang="en">Kiebitz is built in spare time and funded by ads in the free version. If you would rather contribute directly, there are two ways; both lead to the same developer.</span>
+        <span lang="fr">Kiebitz est développé sur le temps libre et financé par la publicité dans la version gratuite. Si vous préférez contribuer directement, il y a deux voies ; elles mènent au même développeur.</span>
+        <span lang="es">Kiebitz se desarrolla en el tiempo libre y se financia con anuncios en la versión gratuita. Si prefieres aportar directamente, hay dos caminos y los dos llevan al mismo desarrollador.</span>
+        <span lang="zh">Kiebitz 是在业余时间做出来的，免费版靠广告来支撑。如果你更愿意直接出一份力，有两条路，它们都通向同一个开发者。</span>
+        <span lang="hi">Kiebitz खाली समय में बनता है और मुफ़्त संस्करण विज्ञापनों से चलता है। अगर आप सीधे कुछ देना चाहें, तो दो रास्ते हैं; दोनों उसी डेवलपर तक पहुँचते हैं।</span>
+        <span lang="ar">يُبنى Kiebitz في أوقات الفراغ ويُموَّل بالإعلانات في النسخة المجانية. وإن كنت تفضّل المساهمة مباشرة، فأمامك طريقان يؤدّيان إلى المطوّر نفسه.</span>
       </p>
 
       <ol class="steps">
         <li>
-          <a class="step" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
-            <span class="step-n" aria-hidden="true">1</span>
+          <a class="step" href="https://github.com/sponsors/Torim98" target="_blank" rel="noopener noreferrer">
+            <span class="step-n" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"></path></svg>
+            </span>
             <span class="step-txt">
-              <b><span lang="de">Der Google-Gruppe beitreten</span><span lang="en">Join the Google Group</span><span lang="fr">Rejoindre le groupe Google</span><span lang="es">Únete al grupo de Google</span><span lang="zh">加入 Google 群组</span><span lang="hi">Google ग्रुप से जुड़ें</span><span lang="ar">انضم إلى مجموعة Google</span></b>
-              <span class="step-sub"><span lang="de">Die Mitgliedschaft schaltet den Test für dein Google-Konto frei.</span><span lang="en">Membership unlocks the test for your Google account.</span><span lang="fr">L’adhésion débloque le test pour votre compte Google.</span><span lang="es">Ser miembro habilita la prueba en tu cuenta de Google.</span><span lang="zh">加入群组即可为你的 Google 账号解锁测试。</span><span lang="hi">सदस्यता आपके Google खाते के लिए टेस्ट खोल देती है।</span><span lang="ar">تفتح العضوية الاختبار لحسابك على Google.</span></span>
-              <span class="step-url">groups.google.com/g/kiebitz-beta-test</span>
+              <b>GitHub Sponsors</b>
+              <span class="step-sub"><span lang="de">Einmalig oder monatlich, direkt über dein GitHub-Konto.</span><span lang="en">One-off or monthly, straight through your GitHub account.</span><span lang="fr">Ponctuel ou mensuel, directement via votre compte GitHub.</span><span lang="es">Puntual o mensual, directamente con tu cuenta de GitHub.</span><span lang="zh">一次性或按月，直接通过你的 GitHub 账号。</span><span lang="hi">एक बार या हर महीने, सीधे अपने GitHub खाते से।</span><span lang="ar">مرة واحدة أو شهريًا، مباشرة عبر حسابك على GitHub.</span></span>
+              <span class="step-url">github.com/sponsors/Torim98</span>
             </span>
             <span class="step-go" aria-hidden="true">&#8599;</span>
           </a>
         </li>
         <li>
-          <a class="step" href="https://play.google.com/apps/testing/de.torim.kiebitz" target="_blank" rel="noopener">
-            <span class="step-n" aria-hidden="true">2</span>
-            <span class="step-txt">
-              <b><span lang="de">Dem geschlossenen Test beitreten</span><span lang="en">Join the closed test</span><span lang="fr">Rejoindre le test fermé</span><span lang="es">Únete a la prueba cerrada</span><span lang="zh">加入封闭测试</span><span lang="hi">क्लोज़्ड टेस्ट में शामिल हों</span><span lang="ar">انضم إلى الاختبار المغلق</span></b>
-              <span class="step-sub"><span lang="de">Mit demselben Google-Konto anmelden wie in Schritt 1.</span><span lang="en">Opt in with the same Google account as in step 1.</span><span lang="fr">Inscrivez-vous avec le même compte Google qu’à l’étape 1.</span><span lang="es">Acepta con la misma cuenta de Google del paso 1.</span><span lang="zh">用第 1 步里的同一个 Google 账号确认加入。</span><span lang="hi">चरण 1 वाले उसी Google खाते से ऑप्ट-इन करें।</span><span lang="ar">اشترك بالحساب نفسه المستخدم في الخطوة 1.</span></span>
-              <span class="step-url">play.google.com/apps/testing/de.torim.kiebitz</span>
+          <a class="step" href="https://ko-fi.com/kiebitzchess" target="_blank" rel="noopener noreferrer">
+            <span class="step-n" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h11v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4Z"></path><path d="M15 9.5h1.8a2.75 2.75 0 0 1 0 5.5H15"></path><path d="M7.6 5.2v-1.4M11 5.2v-1.4"></path></svg>
             </span>
-            <span class="step-go" aria-hidden="true">&#8599;</span>
-          </a>
-        </li>
-        <li>
-          <a class="step" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener">
-            <span class="step-n" aria-hidden="true">3</span>
             <span class="step-txt">
-              <b><span lang="de">Auf Android installieren</span><span lang="en">Install it on Android</span><span lang="fr">Installer sur Android</span><span lang="es">Instálalo en Android</span><span lang="zh">在 Android 上安装</span><span lang="hi">Android पर इंस्टॉल करें</span><span lang="ar">ثبّته على Android</span></b>
-              <span class="step-sub"><span lang="de">Play-Store-Eintrag öffnen und Kiebitz installieren.</span><span lang="en">Open the Play Store listing and install Kiebitz.</span><span lang="fr">Ouvrez la fiche Play Store et installez Kiebitz.</span><span lang="es">Abre la ficha de Play Store e instala Kiebitz.</span><span lang="zh">打开 Play 商店页面并安装 Kiebitz。</span><span lang="hi">Play Store की लिस्टिंग खोलिए और Kiebitz इंस्टॉल कीजिए।</span><span lang="ar">افتح صفحة التطبيق في متجر Play وثبّت Kiebitz.</span></span>
-              <span class="step-url">play.google.com/store/apps/details?id=de.torim.kiebitz</span>
+              <b>Ko-fi</b>
+              <span class="step-sub"><span lang="de">Ein Kaffee ohne Konto, per Karte oder PayPal.</span><span lang="en">A coffee without an account, by card or PayPal.</span><span lang="fr">Un café sans compte, par carte ou PayPal.</span><span lang="es">Un café sin cuenta, con tarjeta o PayPal.</span><span lang="zh">不用注册账号请一杯咖啡，可用银行卡或 PayPal。</span><span lang="hi">बिना खाते के एक कॉफ़ी, कार्ड या PayPal से।</span><span lang="ar">قهوة بلا حساب، بالبطاقة أو عبر PayPal.</span></span>
+              <span class="step-url">ko-fi.com/kiebitzchess</span>
             </span>
             <span class="step-go" aria-hidden="true">&#8599;</span>
           </a>
@@ -777,21 +849,22 @@
       </ol>
 
       <p class="modal-note">
-        <span lang="de">Google verlangt, dass Tester mindestens 14 Tage angemeldet bleiben. Noch hilfreicher ist es natürlich, die App wirklich auszuprobieren und ehrliches Feedback dazulassen.</span>
-        <span lang="en">Google requires testers to remain opted in for at least 14 days. Actually trying the app and sharing some honest feedback would, of course, be even more helpful.</span>
-        <span lang="fr">Google exige que les testeurs restent inscrits au moins 14 jours. Essayer réellement l’application et laisser un retour honnête serait bien sûr encore plus utile.</span>
-        <span lang="es">Google exige que quienes prueban sigan apuntados al menos 14 días. Usar de verdad la app y dejar un comentario sincero sería, claro, aún más útil.</span><span lang="zh">Google 要求测试者至少保持加入 14 天。当然，真正用一用这个应用并留下坦率的反馈会更有帮助。</span>
-        <span lang="hi">Google चाहता है कि टेस्टर कम से कम 14 दिन जुड़े रहें। बेशक, ऐप को सचमुच आज़माना और ईमानदार फ़ीडबैक देना और भी मददगार होगा।</span>
-        <span lang="ar">تشترط Google بقاء المختبِرين مشتركين 14 يومًا على الأقل. وبالطبع، تجربة التطبيق فعليًا وترك ملاحظات صريحة أكثر فائدة.</span>
+        <span lang="de">Unterstützen ist freiwillig und schaltet nichts frei. Kiebitz bleibt auch ohne vollständig nutzbar.</span>
+        <span lang="en">Supporting is voluntary and unlocks nothing. Kiebitz stays fully usable without it.</span>
+        <span lang="fr">Le soutien est facultatif et ne débloque rien. Kiebitz reste pleinement utilisable sans cela.</span>
+        <span lang="es">Apoyar es voluntario y no desbloquea nada. Kiebitz sigue siendo plenamente utilizable sin ello.</span>
+        <span lang="zh">支持完全出于自愿，也不会解锁任何东西。不支持，Kiebitz 一样能完整使用。</span>
+        <span lang="hi">समर्थन स्वैच्छिक है और इससे कुछ अनलॉक नहीं होता। इसके बिना भी Kiebitz पूरी तरह इस्तेमाल किया जा सकता है।</span>
+        <span lang="ar">الدعم تطوّعي ولا يفتح أي مزايا. ويبقى Kiebitz صالحًا للاستخدام بالكامل من دونه.</span>
       </p>
     </div>
 
     <div class="modal-foot">
-      <a class="btn" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">
-        <span lang="de">Stattdessen APK von GitHub</span><span lang="en">Get the APK from GitHub instead</span><span lang="fr">Prendre plutôt l’APK sur GitHub</span><span lang="es">Mejor el APK desde GitHub</span><span lang="zh">改从 GitHub 获取 APK</span><span lang="hi">इसके बजाय GitHub से APK लें</span><span lang="ar">احصل على APK من GitHub بدلًا من ذلك</span>
-      </a>
-      <a class="btn btn-primary" href="https://groups.google.com/g/kiebitz-beta-test/" target="_blank" rel="noopener">
-        <span lang="de">Mit Schritt 1 starten</span><span lang="en">Start with step 1</span><span lang="fr">Commencer par l’étape 1</span><span lang="es">Empezar por el paso 1</span><span lang="zh">从第 1 步开始</span><span lang="hi">चरण 1 से शुरू करें</span><span lang="ar">ابدأ بالخطوة 1</span>
+      <button class="btn" type="button" data-modal-close>
+        <span lang="de">Schließen</span><span lang="en">Close</span><span lang="fr">Fermer</span><span lang="es">Cerrar</span><span lang="zh">关闭</span><span lang="hi">बंद करें</span><span lang="ar">إغلاق</span>
+      </button>
+      <a class="btn btn-primary" href="https://github.com/sponsors/Torim98" target="_blank" rel="noopener noreferrer">
+        <span lang="de">Über GitHub unterstützen</span><span lang="en">Support via GitHub</span><span lang="fr">Soutenir via GitHub</span><span lang="es">Apoyar a través de GitHub</span><span lang="zh">通过 GitHub 支持</span><span lang="hi">GitHub के माध्यम से समर्थन करें</span><span lang="ar">ادعم عبر GitHub</span>
       </a>
     </div>
   </div>
