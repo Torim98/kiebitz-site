@@ -11,8 +11,8 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kiebitz · Moves take flight">
 <meta property="og:description" content="Local-first chess companion for desktop and Android. Import, analyze, understand, all on your own devices.">
-<meta property="og:url" content="https://torim98.github.io/kiebitz-site/">
-<meta property="og:image" content="https://torim98.github.io/kiebitz-site/assets/icon.png">
+<meta property="og:url" content="https://kiebitz.dev/">
+<meta property="og:image" content="https://kiebitz.dev/assets/icon.png">
 <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
 <script>
@@ -661,7 +661,7 @@
             <input type="hidden" name="_subject" value="Kiebitz · New feedback" data-feedback-subject>
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_url" value="https://torim98.github.io/kiebitz-site/#feedback">
+            <input type="hidden" name="_url" value="https://kiebitz.dev/#feedback">
             <label class="honey" aria-hidden="true">Website<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
 
           <fieldset class="report-types">

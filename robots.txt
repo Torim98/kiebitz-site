@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /src/
-Sitemap: https://torim98.github.io/kiebitz-site/sitemap.xml
+Sitemap: https://kiebitz.dev/sitemap.xml

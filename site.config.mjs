@@ -1,6 +1,6 @@
 export const site = {
   // Change only this value after the custom domain is connected.
-  origin: "https://torim98.github.io/kiebitz-site",
+  origin: "https://kiebitz.dev",
   name: "Kiebitz",
   repository: "https://github.com/Torim98/Kiebitz",
   downloadUrl: "https://github.com/Torim98/Kiebitz/releases",

@@ -3,7 +3,7 @@
 Website for **[Kiebitz](https://github.com/Torim98/Kiebitz)** — a local-first
 chess companion for desktop and Android. No account or chess-data cloud; analysis stays on your devices.
 
-Live: <https://torim98.github.io/kiebitz-site/>
+Live: <https://kiebitz.dev/>
 
 ## Build
 
