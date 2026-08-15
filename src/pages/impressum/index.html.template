@@ -137,7 +137,7 @@
         <h2><span class="num">02</span><span lang="de">Kontakt</span><span lang="en">Contact</span><span lang="fr">Contact</span><span lang="es">Contacto</span><span lang="zh">联系方式</span><span lang="hi">संपर्क</span><span lang="ar">التواصل</span></h2>
         <p>
           <span lang="de">E-Mail: </span><span lang="en">Email: </span><span lang="fr">E-mail : </span><span lang="es">Correo: </span><span lang="zh">电子邮箱：</span><span lang="hi">ई-मेल: </span><span lang="ar">البريد الإلكتروني: </span>
-          <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>
+          <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>
         </p>
         <p>
           <span lang="de">Fehlermeldungen und Funktionswünsche am besten im Repository: </span>

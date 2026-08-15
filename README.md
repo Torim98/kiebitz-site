@@ -86,7 +86,7 @@ alternative. The footer's support entry opens a dialog with both donation
 options and falls back to the GitHub Sponsors link without JavaScript.
 
 The feedback form sends only after deliberate submission to FormSubmit's AJAX
-endpoint and forwards to `kiebitz.chess@gmail.com`. FormSubmit requires an
+endpoint and forwards to `support@kiebitz.dev`. FormSubmit requires an
 initial confirmation for that recipient address.
 
 ## Privacy and maintenance

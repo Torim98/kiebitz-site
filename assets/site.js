@@ -59,13 +59,13 @@
       ar: "شكرًا لك. تم إرسال رسالتك."
     },
     failed: {
-      de: 'Die Zustellung konnte nicht bestätigt werden. Bitte versuche es noch einmal oder schreib direkt an <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>.',
-      en: 'Delivery could not be confirmed. Please try again or email <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> directly.',
-      fr: 'La remise n’a pas pu être confirmée. Réessayez ou écrivez directement à <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>.',
-      es: 'No se pudo confirmar la entrega. Inténtalo de nuevo o escribe directamente a <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>.',
-      zh: '无法确认送达。请重试，或直接发邮件到 <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a>。',
-      hi: 'डिलीवरी की पुष्टि नहीं हो सकी। कृपया दोबारा कोशिश करें या सीधे <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> पर लिखें।',
-      ar: 'تعذّر تأكيد التسليم. حاول مرة أخرى أو راسل <a href="mailto:kiebitz.chess@gmail.com">kiebitz.chess@gmail.com</a> مباشرة.'
+      de: 'Die Zustellung konnte nicht bestätigt werden. Bitte versuche es noch einmal oder schreib direkt an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.',
+      en: 'Delivery could not be confirmed. Please try again or email <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> directly.',
+      fr: 'La remise n’a pas pu être confirmée. Réessayez ou écrivez directement à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.',
+      es: 'No se pudo confirmar la entrega. Inténtalo de nuevo o escribe directamente a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.',
+      zh: '无法确认送达。请重试，或直接发邮件到 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>。',
+      hi: 'डिलीवरी की पुष्टि नहीं हो सकी। कृपया दोबारा कोशिश करें या सीधे <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर लिखें।',
+      ar: 'تعذّر تأكيد التسليم. حاول مرة أخرى أو راسل <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> مباشرة.'
     }
   };
 
