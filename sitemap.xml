@@ -79,6 +79,83 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/"/>
   </url>
   <url>
+    <loc>https://kiebitz.dev/de/plus/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/plus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/plus/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/plus/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/plus/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/plus/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/plus/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/plus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/plus/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/plus/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/plus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/plus/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/plus/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/plus/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/plus/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/plus/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/plus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/plus/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/fr/plus/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/plus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/plus/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/plus/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/plus/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/plus/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/plus/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/plus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/plus/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/es/plus/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/plus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/plus/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/plus/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/plus/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/plus/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/plus/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/plus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/plus/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/zh/plus/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/plus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/plus/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/plus/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/plus/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/plus/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/plus/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/plus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/plus/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/hi/plus/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/plus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/plus/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/plus/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/plus/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/plus/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/plus/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/plus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/plus/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/ar/plus/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/plus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/plus/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/plus/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/plus/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/plus/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/plus/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/plus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/plus/"/>
+  </url>
+  <url>
     <loc>https://kiebitz.dev/de/privacy/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/privacy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/privacy/"/>

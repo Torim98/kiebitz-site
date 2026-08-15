@@ -28,6 +28,7 @@ scripts/check-site.mjs             generated-site validation
 site.config.mjs                    canonical origin, version and localized SEO copy
 index.html                         English landing page and x-default
 de/, fr/, es/, zh/, hi/, ar/       localized page trees
+plus/, plus/account/, plus/success/  Kiebitz Plus sign-in, account and checkout return
 privacy/, impressum/               English legal pages
 assets/                            shared styles, script, fonts, images and social card
 robots.txt, sitemap.xml            generated crawler files
@@ -88,6 +89,24 @@ options and falls back to the GitHub Sponsors link without JavaScript.
 The feedback form sends only after deliberate submission to FormSubmit's AJAX
 endpoint and forwards to `support@kiebitz.dev`. FormSubmit requires an
 initial confirmation for that recipient address.
+
+## Kiebitz Plus
+
+`/plus/` explains the tiers and starts a passwordless sign-in, `/plus/account/`
+shows the status and runs checkout, billing portal, sign-out and account
+deletion, and `/plus/success/` is where Stripe returns after a purchase. All
+three talk to `https://api.kiebitz.dev` with `credentials: "include"`; writing
+calls add `X-Kiebitz-CSRF: 1`. The session is an HttpOnly cookie the page never
+sees, and `assets/plus.js` must never touch `localStorage` — `npm run check`
+enforces both.
+
+Every state is present in the HTML in all seven languages; the script only
+toggles which one is visible and fills in values such as the address or a date.
+No chess data is involved. The account and success pages are `noindex` and stay
+out of the sitemap, because they only ever show the state of one session.
+
+Prices live in Stripe and Google Play. The website may name the current
+marketing price; the app and the API deliberately do not.
 
 ## Privacy and maintenance
 

@@ -47,8 +47,84 @@ for (const language of codes) {
   }
 }
 
+// ── Kiebitz Plus ────────────────────────────────────────────────────────────
+// Die Kauf- und Kontoseiten leben von ihren Zuständen: Fehlt einer im HTML,
+// bleibt die Seite im Ernstfall leer, weil das Skript nur ein- und ausblendet.
+const plusRequirements = {
+  plus: [
+    'data-plus-signin',
+    'data-plus-view="form"',
+    'data-plus-view="sent"',
+    'data-plus-view="signed-in"',
+    'data-plus-message="signin"',
+    'class="plus-matrix"'
+  ],
+  plusAccount: [
+    'data-plus-account',
+    'data-plus-view="loading"',
+    'data-plus-view="signed-out"',
+    'data-plus-view="error"',
+    'data-plus-view="free"',
+    'data-plus-view="plus"',
+    'data-plus-view="deleted"',
+    'data-plus-action="checkout"',
+    'data-plus-action="portal"',
+    'data-plus-action="logout"',
+    'data-plus-action="delete"',
+    'data-plus-message="account"'
+  ],
+  plusSuccess: [
+    'data-plus-success',
+    'data-plus-view="waiting"',
+    'data-plus-view="ready"',
+    'data-plus-view="pending"',
+    'data-plus-view="signed-out"',
+    'kiebitz://open?page=settings'
+  ]
+};
+
+for (const language of codes) {
+  for (const [page, markers] of Object.entries(plusRequirements)) {
+    const relative = fileFor(language, page);
+    const html = await readFile(path.join(root, ...relative.split("/")), "utf8");
+    for (const marker of markers) {
+      report(html.includes(marker), `${relative}: missing ${marker}`);
+    }
+    report(/<script src="[^"]*assets\/plus\.js" defer><\/script>/.test(html), `${relative}: plus.js not loaded`);
+  }
+
+  // Die Matrix nennt genau die elf Funktionen aus docs/KIEBITZ_PLUS.md.
+  const plusPage = await readFile(path.join(root, ...fileFor(language, "plus").split("/")), "utf8");
+  const rows = (plusPage.match(/<tr><th scope="row">/g) || []).length;
+  report(rows === 11, `${fileFor(language, "plus")}: feature matrix has ${rows} rows, expected 11`);
+
+  // Auf der Startseite ist Kiebitz Plus kaufbar, nicht „bald".
+  const home = await readFile(path.join(root, ...fileFor(language, "home").split("/")), "utf8");
+  report(!home.includes("plan-soon"), `${fileFor(language, "home")}: pricing still marks Plus as upcoming`);
+  report(!home.includes("plan-veil"), `${fileFor(language, "home")}: pricing still veils the Plus features`);
+  report(/href="[^"]*plus\/index\.html"/.test(home), `${fileFor(language, "home")}: pricing has no link to /plus/`);
+}
+
+// Die Browsersitzung ist ein HttpOnly-Cookie · sie darf niemals durch
+// JavaScript laufen, und schreibende Aufrufe brauchen den CSRF-Kopf.
+const plusScript = await readFile(path.join(root, "assets", "plus.js"), "utf8");
+report(plusScript.includes('credentials: "include"'), "assets/plus.js: browser calls must send the session cookie");
+report(plusScript.includes('"X-Kiebitz-CSRF"'), "assets/plus.js: writing calls must send the CSRF header");
+report(!plusScript.includes("localStorage"), "assets/plus.js: session state must never touch localStorage");
+
 const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
-report((sitemap.match(/<url>/g) || []).length === codes.length * Object.keys(pages).length, "sitemap.xml: URL count is wrong");
+// Konto- und Rückkehrseite stehen bewusst nicht im Index und nicht im Sitemap.
+const indexablePages = Object.entries(pages).filter(([, config]) => !config.noindex);
+report((sitemap.match(/<url>/g) || []).length === codes.length * indexablePages.length, "sitemap.xml: URL count is wrong");
+for (const [page] of Object.entries(pages)) {
+  for (const language of codes) {
+    const relative = fileFor(language, page);
+    const html = await readFile(path.join(root, ...relative.split("/")), "utf8");
+    const noindex = html.includes('name="robots" content="noindex');
+    report(noindex === Boolean(pages[page].noindex), `${relative}: robots directive does not match the page config`);
+    report(sitemap.includes(`<loc>${new URL(relative.replace(/index\.html$/, ""), baseUrl).href}</loc>`) !== Boolean(pages[page].noindex), `${relative}: sitemap membership does not match the page config`);
+  }
+}
 report(sitemap.includes(new URL("sitemap.xml", baseUrl).origin), "sitemap.xml: site origin missing");
 
 const socialImage = await readFile(path.join(root, ...site.socialImage.split("/")));

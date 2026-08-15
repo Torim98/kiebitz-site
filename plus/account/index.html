@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-lang="en" data-page="plusAccount">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account · Kiebitz Plus</title>
+<meta name="description" content="Kiebitz account: check your status, subscribe to Kiebitz Plus, manage billing, sign out and delete the account.">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://kiebitz.dev/plus/account/">
+<link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/plus/account/">
+<link rel="alternate" hreflang="en" href="https://kiebitz.dev/plus/account/">
+<link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/plus/account/">
+<link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/plus/account/">
+<link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/plus/account/">
+<link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/plus/account/">
+<link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/plus/account/">
+<link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/plus/account/">
+<link rel="icon" href="../../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kiebitz">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="ar">
+<meta property="og:title" content="Account · Kiebitz Plus">
+<meta property="og:description" content="Kiebitz account: check your status, subscribe to Kiebitz Plus, manage billing, sign out and delete the account.">
+<meta property="og:url" content="https://kiebitz.dev/plus/account/">
+<meta property="og:image" content="https://kiebitz.dev/assets/og-kiebitz.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kiebitz · Local-first chess analysis">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Account · Kiebitz Plus">
+<meta name="twitter:description" content="Kiebitz account: check your status, subscribe to Kiebitz Plus, manage billing, sign out and delete the account.">
+<meta name="twitter:image" content="https://kiebitz.dev/assets/og-kiebitz.png">
+<link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span lang="en">Skip to content</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../../index.html" aria-label="Kiebitz">
+      <img src="../../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="en">Moves take flight</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="../../index.html#features"><span lang="en">Features</span></a>
+      <a href="../../index.html#pricing"><span lang="en">Pricing</span></a>
+      <a href="../../index.html#download"><span lang="en">Download</span></a>
+      <a href="../../privacy/index.html"><span lang="en">Privacy</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="Language">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-sm" href="../index.html"><span lang="en">Back</span></a>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap">
+    <article class="plus-page" data-plus-account>
+      <p class="eyebrow"><b>+</b> Kiebitz Plus</p>
+      <h1><span lang="en">Your Kiebitz account</span></h1>
+      <p class="doc-sub"><span lang="en">Status, subscription and sign-out in one place. Kiebitz Free stays fully usable either way.</span></p>
+
+      <div data-plus-view="loading">
+        <p class="plus-card"><span lang="en">Loading account status …</span></p>
+        <noscript><p class="small"><span lang="en">Signing in and buying need JavaScript. Kiebitz itself runs independently of it.</span></p></noscript>
+      </div>
+
+      <div data-plus-view="signed-out" hidden>
+        <section class="plus-card">
+          <h2><span lang="en">Not signed in</span></h2>
+          <p><span lang="en">Sign in to see your status or to get Kiebitz Plus.</span></p>
+          <p class="plus-actions"><a class="btn btn-primary" href="../index.html"><span lang="en">Go to sign-in</span></a></p>
+        </section>
+      </div>
+
+      <div data-plus-view="error" hidden>
+        <section class="plus-card">
+          <h2><span lang="en">Status unavailable</span></h2>
+          <p><span lang="en">The account data could not be loaded just now. An existing Plus subscription is unaffected, and Kiebitz Free keeps running anyway.</span></p>
+        </section>
+      </div>
+
+      <div data-plus-view="free" hidden>
+        <section class="plus-card">
+          <h2>Kiebitz Free</h2>
+          <p><span lang="en">Account:</span> <strong data-plus-field="email"></strong></p>
+          <p><span lang="en">This account is currently on Kiebitz Free.</span></p>
+          <p class="plus-price"><span lang="en">Try free for 7 days, then €1.99 per month, cancel any time.</span></p>
+          <p class="plus-actions">
+            <span data-plus-eligible hidden><button class="btn btn-primary" type="button" data-plus-action="checkout"><span lang="en">Try free for 7 days</span></button></span>
+            <span data-plus-not-eligible hidden><button class="btn btn-primary" type="button" data-plus-action="checkout"><span lang="en">Subscribe to Kiebitz Plus</span></button></span>
+          </p>
+          <p class="small"><span lang="en">Checkout runs through Stripe. Payment details stay there, not with Kiebitz.</span></p>
+        </section>
+      </div>
+
+      <div data-plus-view="plus" hidden>
+        <section class="plus-card">
+          <h2>Kiebitz Plus</h2>
+          <p><span lang="en">Account:</span> <strong data-plus-field="email"></strong></p>
+          <p data-plus-trial hidden><span lang="en">Trial runs until</span> <strong data-plus-field="trial-until"></strong></p>
+          <p data-plus-valid-until hidden><span lang="en">Valid until</span> <strong data-plus-field="valid-until"></strong></p>
+          <p data-plus-grace hidden><span lang="en">A payment is outstanding. Plus keeps running for now; please check your payment details.</span></p>
+          <p data-plus-provider="stripe" hidden><span lang="en">Purchased through Stripe.</span></p>
+          <p data-plus-provider="google_play" hidden><span lang="en">Purchased through Google Play.</span></p>
+          <p class="plus-actions">
+            <span data-plus-provider="stripe" hidden><button class="btn" type="button" data-plus-action="portal"><span lang="en">Manage subscription</span></button></span>
+            <span data-plus-provider="google_play" hidden><a class="btn" href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener"><span lang="en">Manage on Google Play</span></a></span>
+          </p>
+        </section>
+      </div>
+
+      <div data-plus-view="deleted" hidden>
+        <section class="plus-card">
+          <h2><span lang="en">Account deleted</span></h2>
+          <p><span lang="en">Sessions and sign-in links were removed and the address anonymized. Your chess data only ever lived on your devices.</span></p>
+        </section>
+      </div>
+
+      <p class="plus-message" data-plus-message="account" role="status" aria-live="polite" hidden>
+        <span data-plus-error="generic"><span lang="en">That did not work just now. Please try again later.</span></span>
+        <span data-plus-error="network_unavailable" hidden><span lang="en">No connection to the Kiebitz account. Kiebitz Free stays fully usable.</span></span>
+        <span data-plus-error="active_subscription" hidden><span lang="en">A subscription is still running. Cancel it with the provider first, then the account can be deleted.</span></span>
+        <span data-plus-error="stripe_subscription_exists" hidden><span lang="en">This account already has a Stripe subscription. Manage it through “Manage subscription”.</span></span>
+        <span data-plus-error="stripe_customer_missing" hidden><span lang="en">This account has no Stripe billing. A subscription bought through Google Play is managed in the Play Store.</span></span>
+        <span data-plus-error="stripe_unavailable" hidden><span lang="en">Checkout is not set up right now. Please try again later.</span></span>
+        <code data-plus-code></code>
+      </p>
+
+      <section class="plus-card" data-plus-session hidden>
+        <h2><span lang="en">Session and account</span></h2>
+        <p class="small"><span lang="en">The sign-in lives in a strictly necessary session cookie. It holds no chess data and is not used for advertising.</span></p>
+        <p class="plus-actions">
+          <button class="btn" type="button" data-plus-action="logout"><span lang="en">Sign out</span></button>
+          <button class="btn btn-danger" type="button" data-plus-action="delete-open"><span lang="en">Delete account</span></button>
+        </p>
+        <div class="plus-confirm" data-plus-delete-confirm hidden>
+          <p><strong><span lang="en">Really delete the account?</span></strong></p>
+          <p class="small"><span lang="en">The account is deleted and all sessions end. A trial you already used stays used. Your local data in Kiebitz is unchanged.</span></p>
+          <p class="plus-actions">
+            <button class="btn" type="button" data-plus-action="delete-cancel"><span lang="en">Cancel</span></button>
+            <button class="btn btn-danger" type="button" data-plus-action="delete"><span lang="en">Delete permanently</span></button>
+          </p>
+          <p class="small" data-plus-cancel-stripe hidden><button class="btn" type="button" data-plus-action="portal"><span lang="en">Manage subscription</span></button></p>
+          <p class="small" data-plus-cancel-play hidden><a class="btn" href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener"><span lang="en">Manage on Google Play</span></a></p>
+        </div>
+      </section>
+
+      <p class="small"><span lang="en">Kiebitz stays local-first. The account only carries sign-in, billing and the signed unlock. Games, analyses, training data and settings are never uploaded.</span></p>
+    </article>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="flock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="foot-note" style="margin-top:8px"><span lang="en">Moves take flight. A local-first chess companion for desktop and Android. Your games and analyses stay on your devices.</span></p>
+      <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <div class="foot-links-main">
+      <a href="../../index.html#pricing"><span lang="en">Pricing</span></a>
+      <a href="../index.html">Kiebitz Plus</a>
+      <a href="../../privacy/index.html"><span lang="en">Privacy</span></a>
+      <a href="../../impressum/index.html"><span lang="en">Legal notice</span></a>
+      <a href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">Releases</a>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<script src="../../assets/site.js" defer></script>
+<script src="../../assets/plus.js" defer></script>
+</body>
+</html>

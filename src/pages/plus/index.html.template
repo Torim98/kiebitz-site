@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-lang="en" data-title-de="Kiebitz Plus · Anmelden und freischalten" data-title-en="Kiebitz Plus · Sign in and unlock" data-title-fr="Kiebitz Plus · Se connecter et débloquer" data-title-es="Kiebitz Plus · Iniciar sesión y desbloquear" data-title-zh="Kiebitz Plus · 登录并解锁" data-title-hi="Kiebitz Plus · साइन इन और अनलॉक" data-title-ar="Kiebitz Plus · تسجيل الدخول والتفعيل">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiebitz Plus · Sign in and unlock</title>
+<meta name="description" content="Kiebitz Plus: 7 Tage kostenlos testen, danach 1,99 EUR pro Monat, jederzeit kuendbar. Anmeldung ohne Passwort. · Kiebitz Plus: seven days free, then EUR 1.99 per month, cancel any time. Passwordless sign-in.">
+<meta name="theme-color" content="#0e0e0d">
+<link rel="icon" href="../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+(function () {
+  var LANGS = { de: 1, en: 1, fr: 1, es: 1, zh: 1, hi: 1, ar: 1 };
+  var TAG = { de: "de", en: "en", fr: "fr", es: "es", zh: "zh-Hans", hi: "hi", ar: "ar" };
+  var l = "en";
+  try {
+    var s = localStorage.getItem("kiebitz-lang");
+    if (s && LANGS[s]) {
+      l = s;
+    } else {
+      var list = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || ""];
+      for (var i = 0; i < list.length; i++) {
+        var c = String(list[i]).toLowerCase().split("-")[0];
+        if (LANGS[c]) { l = c; break; }
+      }
+    }
+  } catch (e) { /* egal */ }
+  var d = document.documentElement;
+  d.setAttribute("data-lang", l);
+  d.setAttribute("lang", TAG[l]);
+  d.setAttribute("dir", l === "ar" ? "rtl" : "ltr");
+  try {
+    var m = localStorage.getItem("kiebitz-motion");
+    if (m === "on" || m === "off") d.setAttribute("data-motion", m);
+  } catch (e) { /* egal */ }
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span><span lang="fr">Aller au contenu</span><span lang="es">Ir al contenido</span><span lang="zh">跳到主要内容</span><span lang="hi">सामग्री पर जाएँ</span><span lang="ar">تخطَّ إلى المحتوى</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../index.html" aria-label="Kiebitz">
+      <img src="../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="de">Zug um Zugvogel</span><span lang="en">Moves take flight</span><span lang="fr">Coup d’aile</span><span lang="es">Jugadas que vuelan</span><span lang="zh">步步高飞</span><span lang="hi">हर चाल, एक उड़ान</span><span lang="ar">نقلة تُحلّق</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="../index.html#features"><span lang="de">Funktionen</span><span lang="en">Features</span><span lang="fr">Fonctions</span><span lang="es">Funciones</span><span lang="zh">功能</span><span lang="hi">विशेषताएँ</span><span lang="ar">المزايا</span></a>
+      <a href="../index.html#pricing"><span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></a>
+      <a href="../index.html#download"><span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></a>
+      <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="Sprache · Language · Langue · Idioma · 语言 · भाषा · اللغة">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-sm" href="../index.html"><span lang="de">Zurück</span><span lang="en">Back</span><span lang="fr">Retour</span><span lang="es">Volver</span><span lang="zh">返回</span><span lang="hi">वापस</span><span lang="ar">رجوع</span></a>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap">
+    <article class="plus-page">
+      <p class="eyebrow"><b>+</b> Kiebitz Plus</p>
+      <h1>Kiebitz Plus</h1>
+      <p class="doc-sub"><span lang="de">Kiebitz Free bleibt vollständig nutzbar. Plus schaltet die Funktionen frei, die dauerhaft für dich mitlaufen — und trägt die Weiterentwicklung.</span><span lang="en">Kiebitz Free stays fully usable. Plus unlocks the features that keep running for you — and funds further development.</span><span lang="fr">Kiebitz Free reste pleinement utilisable. Plus débloque les fonctions qui tournent en continu pour vous — et finance la suite du développement.</span><span lang="es">Kiebitz Free sigue siendo plenamente utilizable. Plus desbloquea las funciones que trabajan de forma continua para ti y financia el desarrollo.</span><span lang="zh">Kiebitz Free 仍可完整使用。Plus 解锁那些持续替你运转的功能，也为后续开发提供支持。</span><span lang="hi">Kiebitz Free पूरी तरह इस्तेमाल में रहता है। Plus वे सुविधाएँ खोलता है जो लगातार आपके लिए चलती रहती हैं — और आगे के विकास को सहारा देता है।</span><span lang="ar">يبقى Kiebitz Free صالحًا للاستخدام بالكامل. ويفتح Plus المزايا التي تعمل باستمرار من أجلك، ويموّل استمرار التطوير.</span></p>
+      <p class="plus-price"><span lang="de">7 Tage kostenlos testen, danach 1,99 € pro Monat, jederzeit kündbar.</span><span lang="en">Try free for 7 days, then €1.99 per month, cancel any time.</span><span lang="fr">Essayez 7 jours gratuitement, puis 1,99 € par mois, résiliable à tout moment.</span><span lang="es">Prueba 7 días gratis, después 1,99 € al mes, cancelable en cualquier momento.</span><span lang="zh">免费试用 7 天，之后每月 1,99 €，随时可取消。</span><span lang="hi">7 दिन मुफ़्त आज़माइए, उसके बाद 1,99 € प्रति माह, कभी भी रद्द कर सकते हैं।</span><span lang="ar">جرّب 7 أيام مجانًا، ثم 1,99 € شهريًا، ويمكن الإلغاء في أي وقت.</span></p>
+      <p class="small"><span lang="de">Kiebitz bleibt local-first. Das Konto trägt allein die Anmeldung, die Abrechnung und die signierte Freischaltung. Partien, Analysen, Trainingsdaten und Einstellungen werden nicht hochgeladen.</span><span lang="en">Kiebitz stays local-first. The account only carries sign-in, billing and the signed unlock. Games, analyses, training data and settings are never uploaded.</span><span lang="fr">Kiebitz reste local-first. Le compte ne porte que la connexion, la facturation et le déblocage signé. Parties, analyses, données d’entraînement et réglages ne sont jamais téléversés.</span><span lang="es">Kiebitz sigue siendo local-first. La cuenta solo sirve para el acceso, la facturación y el desbloqueo firmado. Las partidas, los análisis, los datos de entrenamiento y los ajustes nunca se suben.</span><span lang="zh">Kiebitz 依旧本地优先。账号只承担登录、计费和签名解锁。对局、分析、训练数据和设置都不会上传。</span><span lang="hi">Kiebitz लोकल-फ़र्स्ट ही रहता है। खाता केवल साइन-इन, बिलिंग और हस्ताक्षरित अनलॉक संभालता है। बाज़ियाँ, विश्लेषण, अभ्यास डेटा और सेटिंग्स कभी अपलोड नहीं होतीं।</span><span lang="ar">يبقى Kiebitz محليًا أولًا. الحساب لا يحمل سوى تسجيل الدخول والفوترة والتفعيل الموقّع. أما المباريات والتحليلات وبيانات التدريب والإعدادات فلا تُرفع أبدًا.</span></p>
+
+      <table class="plus-matrix">
+        <caption class="vh"><span lang="de">Was Kiebitz Free und Kiebitz Plus enthalten</span><span lang="en">What Kiebitz Free and Kiebitz Plus include</span><span lang="fr">Ce que contiennent Kiebitz Free et Kiebitz Plus</span><span lang="es">Qué incluyen Kiebitz Free y Kiebitz Plus</span><span lang="zh">Kiebitz Free 与 Kiebitz Plus 分别包含什么</span><span lang="hi">Kiebitz Free और Kiebitz Plus में क्या-क्या है</span><span lang="ar">ما الذي يتضمّنه Kiebitz Free وKiebitz Plus</span></caption>
+        <thead>
+          <tr><th scope="col"><span lang="de">Funktion</span><span lang="en">Feature</span><span lang="fr">Fonction</span><span lang="es">Función</span><span lang="zh">功能</span><span lang="hi">सुविधा</span><span lang="ar">الميزة</span></th><th scope="col">Kiebitz Free</th><th scope="col">Kiebitz Plus</th></tr>
+        </thead>
+        <tbody>
+        <tr><th scope="row"><span lang="de">Grundlegende Analyse</span><span lang="en">Basic analysis</span><span lang="fr">Analyse de base</span><span lang="es">Análisis básico</span><span lang="zh">基础分析</span><span lang="hi">बुनियादी विश्लेषण</span><span lang="ar">تحليل أساسي</span></th><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td></tr>
+        <tr><th scope="row"><span lang="de">Manuelles Training</span><span lang="en">Manual training</span><span lang="fr">Entraînement manuel</span><span lang="es">Entrenamiento manual</span><span lang="zh">手动训练</span><span lang="hi">मैनुअल अभ्यास</span><span lang="ar">تدريب يدوي</span></th><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td></tr>
+        <tr><th scope="row"><span lang="de">Grundlegende Statistiken</span><span lang="en">Basic statistics</span><span lang="fr">Statistiques de base</span><span lang="es">Estadísticas básicas</span><span lang="zh">基础统计</span><span lang="hi">बुनियादी आँकड़े</span><span lang="ar">إحصاءات أساسية</span></th><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td></tr>
+        <tr><th scope="row"><span lang="de">Automatische Hintergrundanalyse</span><span lang="en">Automatic background analysis</span><span lang="fr">Analyse automatique en arrière-plan</span><span lang="es">Análisis automático en segundo plano</span><span lang="zh">自动后台分析</span><span lang="hi">स्वचालित पृष्ठभूमि विश्लेषण</span><span lang="ar">تحليل تلقائي في الخلفية</span></th><td class="plus-no"><span class="vh"><span lang="de">nicht enthalten</span><span lang="en">not included</span><span lang="fr">non inclus</span><span lang="es">no incluido</span><span lang="zh">不包含</span><span lang="hi">शामिल नहीं</span><span lang="ar">غير مشمول</span></span><span aria-hidden="true">–</span></td><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td></tr>
+        <tr><th scope="row"><span lang="de">Vollständige Insights</span><span lang="en">Full insights</span><span lang="fr">Insights complets</span><span lang="es">Insights completos</span><span lang="zh">完整 Insights</span><span lang="hi">पूरे Insights</span><span lang="ar">تحليلات كاملة</span></th><td class="plus-no"><span class="vh"><span lang="de">nicht enthalten</span><span lang="en">not included</span><span lang="fr">non inclus</span><span lang="es">no incluido</span><span lang="zh">不包含</span><span lang="hi">शामिल नहीं</span><span lang="ar">غير مشمول</span></span><span aria-hidden="true">–</span></td><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td></tr>
+        <tr><th scope="row"><span lang="de">Persönliche Puzzles</span><span lang="en">Personal puzzles</span><span lang="fr">Problèmes personnels</span><span lang="es">Ejercicios personales</span><span lang="zh">专属战术题</span><span lang="hi">निजी पहेलियाँ</span><span lang="ar">ألغاز شخصية</span></th><td class="plus-no"><span class="vh"><span lang="de">nicht enthalten</span><span lang="en">not included</span><span lang="fr">non inclus</span><span lang="es">no incluido</span><span lang="zh">不包含</span><span lang="hi">शामिल नहीं</span><span lang="ar">غير مشمول</span></span><span aria-hidden="true">–</span></td><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td></tr>
+        <tr><th scope="row"><span lang="de">Adaptiver Trainingsplan</span><span lang="en">Adaptive training plan</span><span lang="fr">Plan d’entraînement adaptatif</span><span lang="es">Plan de entrenamiento adaptativo</span><span lang="zh">自适应训练计划</span><span lang="hi">अनुकूली अभ्यास योजना</span><span lang="ar">خطة تدريب تتكيّف</span></th><td class="plus-no"><span class="vh"><span lang="de">nicht enthalten</span><span lang="en">not included</span><span lang="fr">non inclus</span><span lang="es">no incluido</span><span lang="zh">不包含</span><span lang="hi">शामिल नहीं</span><span lang="ar">غير مشمول</span></span><span aria-hidden="true">–</span></td><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td></tr>
+        <tr><th scope="row"><span lang="de">Fokuszyklen</span><span lang="en">Focus cycles</span><span lang="fr">Cycles de focus</span><span lang="es">Ciclos de enfoque</span><span lang="zh">专注周期</span><span lang="hi">फ़ोकस चक्र</span><span lang="ar">دورات تركيز</span></th><td class="plus-no"><span class="vh"><span lang="de">nicht enthalten</span><span lang="en">not included</span><span lang="fr">non inclus</span><span lang="es">no incluido</span><span lang="zh">不包含</span><span lang="hi">शामिल नहीं</span><span lang="ar">غير مشمول</span></span><span aria-hidden="true">–</span></td><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td></tr>
+        <tr><th scope="row"><span lang="de">Automatische lokale LAN-Synchronisierung</span><span lang="en">Automatic local LAN synchronization</span><span lang="fr">Synchronisation locale automatique par LAN</span><span lang="es">Sincronización local automática por LAN</span><span lang="zh">自动局域网本地同步</span><span lang="hi">स्वचालित स्थानीय LAN सिंक्रनाइज़ेशन</span><span lang="ar">مزامنة محلية تلقائية عبر الشبكة</span></th><td class="plus-no"><span class="vh"><span lang="de">nicht enthalten</span><span lang="en">not included</span><span lang="fr">non inclus</span><span lang="es">no incluido</span><span lang="zh">不包含</span><span lang="hi">शामिल नहीं</span><span lang="ar">غير مشمول</span></span><span aria-hidden="true">–</span></td><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td></tr>
+        <tr><th scope="row"><span lang="de">Android-Widgets</span><span lang="en">Android widgets</span><span lang="fr">Widgets Android</span><span lang="es">Widgets de Android</span><span lang="zh">Android 小组件</span><span lang="hi">Android विजेट</span><span lang="ar">مكوّنات Android</span></th><td class="plus-no"><span class="vh"><span lang="de">nicht enthalten</span><span lang="en">not included</span><span lang="fr">non inclus</span><span lang="es">no incluido</span><span lang="zh">不包含</span><span lang="hi">शामिल नहीं</span><span lang="ar">غير مشمول</span></span><span aria-hidden="true">–</span></td><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td></tr>
+        <tr><th scope="row"><span lang="de">Werbefreiheit</span><span lang="en">No advertising</span><span lang="fr">Sans publicité</span><span lang="es">Sin publicidad</span><span lang="zh">无广告</span><span lang="hi">विज्ञापन-मुक्त</span><span lang="ar">بلا إعلانات</span></th><td class="plus-no"><span class="vh"><span lang="de">nicht enthalten</span><span lang="en">not included</span><span lang="fr">non inclus</span><span lang="es">no incluido</span><span lang="zh">不包含</span><span lang="hi">शामिल नहीं</span><span lang="ar">غير مشمول</span></span><span aria-hidden="true">–</span></td><td class="plus-yes"><span class="vh"><span lang="de">enthalten</span><span lang="en">included</span><span lang="fr">inclus</span><span lang="es">incluido</span><span lang="zh">包含</span><span lang="hi">शामिल</span><span lang="ar">مشمول</span></span><span aria-hidden="true">✓</span></td></tr>
+        </tbody>
+      </table>
+
+      <p class="small" style="margin-top:14px"><span lang="de">Widgets gibt es auf dem Android-Startbildschirm. Für den Desktop sind keine geplant.</span><span lang="en">Widgets live on the Android home screen. None are planned for the desktop.</span><span lang="fr">Les widgets vivent sur l’écran d’accueil Android. Aucun n’est prévu pour l’ordinateur.</span><span lang="es">Los widgets están en la pantalla de inicio de Android. No hay ninguno previsto para escritorio.</span><span lang="zh">小组件用于 Android 主屏幕。桌面端没有相关计划。</span><span lang="hi">विजेट Android होम स्क्रीन के लिए हैं। डेस्कटॉप के लिए कोई योजना नहीं है।</span><span lang="ar">المكوّنات موجودة على شاشة Android الرئيسية، ولا شيء منها مخطّط لسطح المكتب.</span></p>
+
+      <section class="plus-card" aria-labelledby="plus-signin-title">
+        <h2 id="plus-signin-title"><span lang="de">Anmelden und freischalten</span><span lang="en">Sign in and unlock</span><span lang="fr">Se connecter et débloquer</span><span lang="es">Iniciar sesión y desbloquear</span><span lang="zh">登录并解锁</span><span lang="hi">साइन इन कीजिए और अनलॉक कीजिए</span><span lang="ar">سجّل الدخول وفعّل</span></h2>
+
+        <div data-plus-view="form">
+          <p><span lang="de">Die Anmeldung läuft ohne Passwort: Du bekommst einen einmaligen Link per E-Mail.</span><span lang="en">Signing in works without a password: you get a one-time link by email.</span><span lang="fr">La connexion se fait sans mot de passe : vous recevez un lien à usage unique par e-mail.</span><span lang="es">El acceso funciona sin contraseña: recibes un enlace de un solo uso por correo.</span><span lang="zh">登录不需要密码：你会收到一封含一次性链接的邮件。</span><span lang="hi">साइन-इन बिना पासवर्ड होता है: आपको ईमेल पर एक बार चलने वाला लिंक मिलता है।</span><span lang="ar">تسجيل الدخول يتم بلا كلمة مرور: يصلك رابط لمرة واحدة عبر البريد.</span></p>
+          <form class="plus-form" data-plus-signin novalidate>
+            <label class="vh" for="plus-email"><span lang="de">E-Mail-Adresse</span><span lang="en">Email address</span><span lang="fr">Adresse e-mail</span><span lang="es">Dirección de correo</span><span lang="zh">电子邮箱</span><span lang="hi">ईमेल पता</span><span lang="ar">عنوان البريد الإلكتروني</span></label>
+            <input id="plus-email" type="email" name="email" required autocomplete="email" inputmode="email" placeholder="name@example.com">
+            <button class="btn btn-primary" type="submit"><span lang="de">Link senden</span><span lang="en">Send link</span><span lang="fr">Envoyer le lien</span><span lang="es">Enviar enlace</span><span lang="zh">发送链接</span><span lang="hi">लिंक भेजें</span><span lang="ar">إرسال الرابط</span></button>
+          </form>
+          <noscript><p class="small"><span lang="de">Für Anmeldung und Kauf wird JavaScript gebraucht. Kiebitz selbst läuft davon unabhängig.</span><span lang="en">Signing in and buying need JavaScript. Kiebitz itself runs independently of it.</span><span lang="fr">La connexion et l’achat nécessitent JavaScript. Kiebitz lui-même fonctionne indépendamment.</span><span lang="es">El acceso y la compra necesitan JavaScript. Kiebitz en sí funciona sin él.</span><span lang="zh">登录和购买需要 JavaScript。Kiebitz 本身与此无关。</span><span lang="hi">साइन-इन और ख़रीद के लिए JavaScript चाहिए। Kiebitz ख़ुद इससे स्वतंत्र चलता है।</span><span lang="ar">يحتاج تسجيل الدخول والشراء إلى JavaScript. أما Kiebitz نفسه فيعمل بمعزل عن ذلك.</span></p></noscript>
+        </div>
+
+        <div data-plus-view="sent" hidden>
+          <p><strong><span lang="de">Der Link ist unterwegs.</span><span lang="en">The link is on its way.</span><span lang="fr">Le lien est en route.</span><span lang="es">El enlace va en camino.</span><span lang="zh">链接已经发出。</span><span lang="hi">लिंक भेज दिया गया है।</span><span lang="ar">الرابط في طريقه إليك.</span></strong></p>
+          <p class="small"><span lang="de">Öffne ihn innerhalb von 15 Minuten. Er lässt sich nur einmal verwenden und bringt dich direkt auf deine Kontoseite.</span><span lang="en">Open it within 15 minutes. It can be used only once and takes you straight to your account page.</span><span lang="fr">Ouvrez-le dans les 15 minutes. Il ne sert qu’une fois et vous amène directement à votre page de compte.</span><span lang="es">Ábrelo en 15 minutos. Solo puede usarse una vez y te lleva directo a tu página de cuenta.</span><span lang="zh">请在 15 分钟内打开。它只能使用一次，会直接带你到账号页面。</span><span lang="hi">इसे 15 मिनट के भीतर खोलिए। यह केवल एक बार चलता है और सीधे आपके खाता पृष्ठ पर ले जाता है।</span><span lang="ar">افتحه خلال 15 دقيقة. يُستخدم مرة واحدة فقط ويأخذك مباشرة إلى صفحة حسابك.</span></p>
+        </div>
+
+        <div data-plus-view="signed-in" hidden>
+          <p><span lang="de">Du bist angemeldet als</span><span lang="en">You are signed in as</span><span lang="fr">Vous êtes connecté en tant que</span><span lang="es">Has iniciado sesión como</span><span lang="zh">你已登录，账号为</span><span lang="hi">आप साइन इन हैं</span><span lang="ar">أنت مسجّل الدخول باسم</span> <strong data-plus-field="email"></strong></p>
+          <p><a class="btn btn-primary" href="account/index.html"><span lang="de">Zur Kontoseite</span><span lang="en">Go to your account</span><span lang="fr">Vers votre compte</span><span lang="es">Ir a tu cuenta</span><span lang="zh">前往账号页面</span><span lang="hi">खाता पृष्ठ पर जाएँ</span><span lang="ar">إلى صفحة الحساب</span></a></p>
+        </div>
+
+      <p class="plus-message" data-plus-message="signin" role="status" aria-live="polite" hidden>
+        <span data-plus-error="generic"><span lang="de">Das hat gerade nicht geklappt. Bitte versuche es später noch einmal.</span><span lang="en">That did not work just now. Please try again later.</span><span lang="fr">Cela n’a pas fonctionné à l’instant. Réessayez plus tard.</span><span lang="es">Ahora mismo no ha funcionado. Inténtalo más tarde.</span><span lang="zh">刚才没有成功，请稍后再试。</span><span lang="hi">अभी यह नहीं हो सका। कृपया बाद में फिर कोशिश कीजिए।</span><span lang="ar">لم ينجح ذلك الآن. حاول مرة أخرى لاحقًا.</span></span>
+        <span data-plus-error="network_unavailable" hidden><span lang="de">Keine Verbindung zum Kiebitz-Konto. Kiebitz Free bleibt vollständig nutzbar.</span><span lang="en">No connection to the Kiebitz account. Kiebitz Free stays fully usable.</span><span lang="fr">Pas de connexion au compte Kiebitz. Kiebitz Free reste pleinement utilisable.</span><span lang="es">Sin conexión con la cuenta de Kiebitz. Kiebitz Free sigue siendo plenamente utilizable.</span><span lang="zh">连不上 Kiebitz 账号服务。Kiebitz Free 仍可完整使用。</span><span lang="hi">Kiebitz खाते से संपर्क नहीं हो सका। Kiebitz Free पूरी तरह इस्तेमाल में रहता है।</span><span lang="ar">لا اتصال بحساب Kiebitz. ويبقى Kiebitz Free صالحًا للاستخدام بالكامل.</span></span>
+        <span data-plus-error="rate_limited" hidden><span lang="de">Zu viele Anfragen kurz hintereinander. Bitte warte einen Moment.</span><span lang="en">Too many requests in a row. Please wait a moment.</span><span lang="fr">Trop de demandes coup sur coup. Patientez un instant.</span><span lang="es">Demasiadas peticiones seguidas. Espera un momento.</span><span lang="zh">短时间内请求过多，请稍等片刻。</span><span lang="hi">एक के बाद एक बहुत सारे अनुरोध। कृपया थोड़ा रुकिए।</span><span lang="ar">طلبات كثيرة متتابعة. انتظر لحظة من فضلك.</span></span>
+        <span data-plus-error="invalid_email" hidden><span lang="de">Diese Adresse sieht nicht wie eine E-Mail-Adresse aus.</span><span lang="en">That does not look like an email address.</span><span lang="fr">Cela ne ressemble pas à une adresse e-mail.</span><span lang="es">Esto no parece una dirección de correo.</span><span lang="zh">这看起来不像一个邮箱地址。</span><span lang="hi">यह ईमेल पते जैसा नहीं लगता।</span><span lang="ar">هذا لا يبدو عنوان بريد إلكتروني.</span></span>
+        <span data-plus-error="email_unavailable" hidden><span lang="de">Der Versand von Anmeldelinks ist gerade nicht eingerichtet. Bitte versuche es später noch einmal.</span><span lang="en">Sending sign-in links is not set up right now. Please try again later.</span><span lang="fr">L’envoi des liens de connexion n’est pas configuré pour l’instant. Réessayez plus tard.</span><span lang="es">El envío de enlaces de acceso no está configurado ahora mismo. Inténtalo más tarde.</span><span lang="zh">目前还没有配置登录链接的发送，请稍后再试。</span><span lang="hi">अभी साइन-इन लिंक भेजना सेट नहीं है। कृपया बाद में कोशिश कीजिए।</span><span lang="ar">إرسال روابط الدخول غير مُهيّأ حاليًا. حاول مرة أخرى لاحقًا.</span></span>
+        <code data-plus-code></code>
+      </p>
+      </section>
+
+      <section class="plus-card" aria-labelledby="plus-app-title">
+        <h2 id="plus-app-title"><span lang="de">Und in der App?</span><span lang="en">And in the app?</span><span lang="fr">Et dans l’application ?</span><span lang="es">¿Y en la app?</span><span lang="zh">那在应用里呢？</span><span lang="hi">और ऐप में?</span><span lang="ar">وماذا عن التطبيق؟</span></h2>
+        <p><span lang="de">In Kiebitz selbst findest du dieselbe Anmeldung unter Einstellungen → Kiebitz Plus. Ein Konto gilt für Desktop und Android zusammen.</span><span lang="en">Inside Kiebitz you find the same sign-in under Settings → Kiebitz Plus. One account covers desktop and Android together.</span><span lang="fr">Dans Kiebitz, la même connexion se trouve dans Réglages → Kiebitz Plus. Un seul compte couvre l’ordinateur et Android.</span><span lang="es">Dentro de Kiebitz encontrarás el mismo acceso en Ajustes → Kiebitz Plus. Una cuenta vale para escritorio y Android a la vez.</span><span lang="zh">在 Kiebitz 里，同样的登录入口在「设置 → Kiebitz Plus」。一个账号同时覆盖桌面端和 Android。</span><span lang="hi">Kiebitz में यही साइन-इन सेटिंग्स → Kiebitz Plus में मिलता है। एक ही खाता डेस्कटॉप और Android दोनों के लिए है।</span><span lang="ar">داخل Kiebitz تجد التسجيل نفسه في الإعدادات ← Kiebitz Plus. وحساب واحد يغطّي سطح المكتب وAndroid معًا.</span></p>
+        <p class="plus-actions">
+          <a class="btn" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener"><span lang="de">Desktop laden</span><span lang="en">Get the desktop build</span><span lang="fr">Télécharger pour ordinateur</span><span lang="es">Descargar para escritorio</span><span lang="zh">下载桌面版</span><span lang="hi">डेस्कटॉप पाएँ</span><span lang="ar">نزّل نسخة سطح المكتب</span></a>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener"><span lang="de">Bei Google Play</span><span lang="en">On Google Play</span><span lang="fr">Sur Google Play</span><span lang="es">En Google Play</span><span lang="zh">前往 Google Play</span><span lang="hi">Google Play पर</span><span lang="ar">على Google Play</span></a>
+        </p>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="flock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="foot-note" style="margin-top:8px"><span lang="de">Zug um Zugvogel. Local-first Schach-Begleiter für Desktop und Android. Deine Partien und Analysen bleiben auf deinen Geräten.</span><span lang="en">Moves take flight. A local-first chess companion for desktop and Android. Your games and analyses stay on your devices.</span><span lang="fr">Coup d’aile. Un compagnon d’échecs local-first pour ordinateur et Android. Vos parties et analyses restent sur vos appareils.</span><span lang="es">Jugadas que vuelan. Un compañero de ajedrez local-first para escritorio y Android. Tus partidas y análisis se quedan en tus dispositivos.</span><span lang="zh">步步高飞。面向桌面端与 Android 的本地优先国际象棋助手。你的对局与分析留在自己的设备上。</span><span lang="hi">हर चाल, एक उड़ान। डेस्कटॉप और Android के लिए लोकल-फ़र्स्ट शतरंज साथी। आपकी बाज़ियाँ और विश्लेषण आपके उपकरणों पर रहते हैं।</span><span lang="ar">نقلة تُحلّق. رفيق شطرنج محلي أولًا لسطح المكتب وAndroid. تبقى مبارياتك وتحليلاتك على أجهزتك.</span></p>
+      <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <div class="foot-links-main">
+      <a href="../index.html#pricing"><span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></a>
+      <a href="../plus/index.html">Kiebitz Plus</a>
+      <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
+      <a href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">Releases</a>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+<script src="../assets/plus.js" defer></script>
+</body>
+</html>

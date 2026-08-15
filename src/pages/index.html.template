@@ -61,6 +61,7 @@
       <a href="#features"><span lang="de">Funktionen</span><span lang="en">Features</span><span lang="fr">Fonctions</span><span lang="es">Funciones</span><span lang="zh">功能</span><span lang="hi">विशेषताएँ</span><span lang="ar">المزايا</span></a>
       <a href="#local"><span lang="de">Local-first</span><span lang="en">Local-first</span><span lang="fr">Local-first</span><span lang="es">Local-first</span><span lang="zh">本地优先</span><span lang="hi">लोकल-फ़र्स्ट</span><span lang="ar">محلي أولًا</span></a>
       <a href="#pricing"><span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></a>
+      <a href="plus/index.html">Kiebitz Plus</a>
       <a href="#download"><span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></a>
       <a href="#feedback"><span lang="de">Feedback</span><span lang="en">Feedback</span><span lang="fr">Retours</span><span lang="es">Comentarios</span><span lang="zh">反馈</span><span lang="hi">फ़ीडबैक</span><span lang="ar">الملاحظات</span></a>
       <a href="privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
@@ -485,13 +486,13 @@
         <span lang="ar">‏Kiebitz Free وKiebitz Plus.</span>
       </h2>
       <p class="lede" style="margin-top:16px">
-        <span lang="de">Kiebitz Free bleibt kostenlos und wird auf Desktop und Android über Werbung finanziert. Kiebitz Plus ist die werbefreie Stufe mit den fortlaufenden Trainerfunktionen; einzelne Statistiken und Insights können dorthin wechseln.</span>
-        <span lang="en">Kiebitz Free stays free of charge and is funded by ads on desktop and Android. Kiebitz Plus is the ad-free tier with the continuous coaching features; some statistics and insights may move over to it.</span>
-        <span lang="fr">Kiebitz Free reste gratuit et est financé par la publicité sur ordinateur et Android. Kiebitz Plus est le niveau sans publicité, avec les fonctions d’entraînement continues ; certaines statistiques et certains insights pourront y basculer.</span>
-        <span lang="es">Kiebitz Free sigue siendo gratuito y se financia con anuncios en escritorio y Android. Kiebitz Plus es el nivel sin anuncios, con las funciones de entrenamiento continuo; algunas estadísticas e insights podrían pasar a él.</span>
-        <span lang="zh">Kiebitz Free 保持免费，靠桌面端与 Android 上的广告来支撑。Kiebitz Plus 是无广告的档位，包含持续的训练功能；部分统计和 Insights 可能会移到这里。</span>
-        <span lang="hi">Kiebitz Free मुफ़्त ही रहता है और डेस्कटॉप व Android पर विज्ञापनों से चलता है। Kiebitz Plus विज्ञापन-मुक्त स्तर है, जिसमें लगातार चलने वाली ट्रेनर सुविधाएँ हैं; कुछ आँकड़े और Insights आगे चलकर इसमें जा सकते हैं।</span>
-        <span lang="ar">يبقى Kiebitz Free مجانيًا ويُموَّل بالإعلانات على سطح المكتب وAndroid. أما Kiebitz Plus فهو المستوى الخالي من الإعلانات، مع مزايا التدريب المستمرة؛ وقد تنتقل إليه بعض الإحصاءات والتحليلات.</span>
+        <span lang="de">Kiebitz Free bleibt kostenlos und wird auf Desktop und Android über Werbung finanziert. Kiebitz Plus ist die werbefreie Stufe mit den Funktionen, die dauerhaft für dich mitlaufen. Beide Stufen bleiben local-first: Das Konto trägt nur Anmeldung, Abrechnung und Freischaltung.</span>
+        <span lang="en">Kiebitz Free stays free of charge and is funded by ads on desktop and Android. Kiebitz Plus is the ad-free tier with the features that keep running for you. Both tiers stay local-first: the account only carries sign-in, billing and the unlock.</span>
+        <span lang="fr">Kiebitz Free reste gratuit et est financé par la publicité sur ordinateur et Android. Kiebitz Plus est le niveau sans publicité, avec les fonctions qui tournent en continu pour vous. Les deux niveaux restent local-first : le compte ne porte que la connexion, la facturation et le déblocage.</span>
+        <span lang="es">Kiebitz Free sigue siendo gratuito y se financia con anuncios en escritorio y Android. Kiebitz Plus es el nivel sin anuncios, con las funciones que trabajan de forma continua para ti. Ambos niveles siguen siendo local-first: la cuenta solo sirve para el acceso, la facturación y el desbloqueo.</span>
+        <span lang="zh">Kiebitz Free 保持免费，靠桌面端与 Android 上的广告来支撑。Kiebitz Plus 是无广告的档位，包含那些持续替你运转的功能。两个档位都依旧本地优先：账号只承担登录、计费和解锁。</span>
+        <span lang="hi">Kiebitz Free मुफ़्त ही रहता है और डेस्कटॉप व Android पर विज्ञापनों से चलता है। Kiebitz Plus विज्ञापन-मुक्त स्तर है, जिसमें वे सुविधाएँ हैं जो लगातार आपके लिए चलती रहती हैं। दोनों स्तर लोकल-फ़र्स्ट ही रहते हैं: खाता केवल साइन-इन, बिलिंग और अनलॉक संभालता है।</span>
+        <span lang="ar">يبقى Kiebitz Free مجانيًا ويُموَّل بالإعلانات على سطح المكتب وAndroid. أما Kiebitz Plus فهو المستوى الخالي من الإعلانات، بالمزايا التي تعمل باستمرار من أجلك. ويبقى المستويان محليَّين أولًا: الحساب لا يحمل سوى تسجيل الدخول والفوترة والتفعيل.</span>
       </p>
 
       <div class="plans rv" style="margin-top:34px">
@@ -518,31 +519,37 @@
           </p>
         </article>
 
-        <article class="plan plan-soon">
-          <p class="plan-flag"><span class="dot" aria-hidden="true"></span><span lang="de">Bald</span><span lang="en">Soon</span><span lang="fr">Bientôt</span><span lang="es">Pronto</span><span lang="zh">即将推出</span><span lang="hi">जल्द ही</span><span lang="ar">قريبًا</span></p>
+        <article class="plan plan-featured">
+          <p class="plan-flag plan-flag-live"><span class="dot" aria-hidden="true"></span><span lang="de">Verfügbar</span><span lang="en">Available</span><span lang="fr">Disponible</span><span lang="es">Disponible</span><span lang="zh">现已可用</span><span lang="hi">उपलब्ध</span><span lang="ar">متاح</span></p>
           <h3>Kiebitz Plus</h3>
           <p class="plan-price"><span lang="de">1,99 €</span><span lang="en">€1.99</span><span lang="fr">1,99 €</span><span lang="es">1,99 €</span><span lang="zh">€1.99</span><span lang="hi">€1.99</span><span lang="ar">‏1.99 €</span> <span class="plan-per"><span lang="de">/ Monat</span><span lang="en">/ month</span><span lang="fr">/ mois</span><span lang="es">/ mes</span><span lang="zh">/ 月</span><span lang="hi">/ माह</span><span lang="ar">/ شهريًا</span></span></p>
-          <p class="plan-meta"><span lang="de">Desktop &amp; Android · ohne Konto</span><span lang="en">Desktop &amp; Android · no account</span><span lang="fr">Ordinateur &amp; Android · sans compte</span><span lang="es">Escritorio &amp; Android · sin cuenta</span><span lang="zh">桌面端与 Android · 无需账号</span><span lang="hi">डेस्कटॉप और Android · बिना खाते के</span><span lang="ar">سطح المكتب وAndroid · بلا حساب</span></p>
-          <div class="plan-veil">
-            <ul class="ticks plan-list">
-              <li><span lang="de">Komplett werbefrei</span><span lang="en">Completely ad-free</span><span lang="fr">Entièrement sans publicité</span><span lang="es">Completamente sin anuncios</span><span lang="zh">完全没有广告</span><span lang="hi">पूरी तरह विज्ञापन-मुक्त</span><span lang="ar">خالٍ تمامًا من الإعلانات</span></li>
-              <li><span lang="de">Automatische Hintergrundanalyse</span><span lang="en">Automatic background analysis</span><span lang="fr">Analyse automatique en arrière-plan</span><span lang="es">Análisis automático en segundo plano</span><span lang="zh">自动后台分析</span><span lang="hi">स्वचालित पृष्ठभूमि विश्लेषण</span><span lang="ar">تحليل تلقائي في الخلفية</span></li>
-              <li><span lang="de">Vollständige Insights und Langzeitvergleiche</span><span lang="en">Full insights and long-term comparisons</span><span lang="fr">Insights complets et comparaisons sur la durée</span><span lang="es">Insights completos y comparaciones a largo plazo</span><span lang="zh">完整的 Insights 与长期对比</span><span lang="hi">पूरे Insights और दीर्घकालिक तुलनाएँ</span><span lang="ar">تحليلات كاملة ومقارنات طويلة المدى</span></li>
-              <li><span lang="de">Persönliche Puzzles aus eigenen Fehlern</span><span lang="en">Personal puzzles made from your own mistakes</span><span lang="fr">Problèmes personnels tirés de vos propres erreurs</span><span lang="es">Ejercicios personales hechos con tus propios errores</span><span lang="zh">用你自己的失误生成的专属战术题</span><span lang="hi">अपनी ग़लतियों से बनी निजी पहेलियाँ</span><span lang="ar">ألغاز شخصية من أخطائك أنت</span></li>
-              <li><span lang="de">Adaptiver Wochenplan</span><span lang="en">Adaptive weekly plan</span><span lang="fr">Plan hebdomadaire adaptatif</span><span lang="es">Plan semanal adaptativo</span><span lang="zh">自适应周计划</span><span lang="hi">अनुकूली साप्ताहिक योजना</span><span lang="ar">خطة أسبوعية تتكيّف معك</span></li>
-              <li><span lang="de">Fokuszyklen und Wirkungsmessung</span><span lang="en">Focus cycles and impact tracking</span><span lang="fr">Cycles de focus et mesure des effets</span><span lang="es">Ciclos de enfoque y medición del efecto</span><span lang="zh">专注周期与效果评估</span><span lang="hi">फ़ोकस चक्र और असर की माप</span><span lang="ar">دورات تركيز وقياس للأثر</span></li>
-              <li><span lang="de">Automatische Synchronisierung</span><span lang="en">Automatic synchronization</span><span lang="fr">Synchronisation automatique</span><span lang="es">Sincronización automática</span><span lang="zh">自动同步</span><span lang="hi">स्वचालित सिंक्रनाइज़ेशन</span><span lang="ar">مزامنة تلقائية</span></li>
-              <li><span lang="de">Später erweiterte Exporte</span><span lang="en">Extended exports later on</span><span lang="fr">Exports étendus plus tard</span><span lang="es">Exportaciones ampliadas más adelante</span><span lang="zh">之后还会有扩展导出</span><span lang="hi">आगे चलकर विस्तृत एक्सपोर्ट</span><span lang="ar">عمليات تصدير موسّعة لاحقًا</span></li>
-            </ul>
-          </div>
+          <p class="plan-meta"><span lang="de">7 Tage kostenlos testen · jederzeit kündbar</span><span lang="en">7 days free · cancel any time</span><span lang="fr">7 jours gratuits · résiliable à tout moment</span><span lang="es">7 días gratis · cancelable cuando quieras</span><span lang="zh">免费试用 7 天 · 随时可取消</span><span lang="hi">7 दिन मुफ़्त · कभी भी रद्द करें</span><span lang="ar">7 أيام مجانًا · يمكن الإلغاء في أي وقت</span></p>
+          <ul class="ticks plan-list">
+            <li><span lang="de">Komplett werbefrei</span><span lang="en">Completely ad-free</span><span lang="fr">Entièrement sans publicité</span><span lang="es">Completamente sin anuncios</span><span lang="zh">完全没有广告</span><span lang="hi">पूरी तरह विज्ञापन-मुक्त</span><span lang="ar">خالٍ تمامًا من الإعلانات</span></li>
+            <li><span lang="de">Automatische Hintergrundanalyse</span><span lang="en">Automatic background analysis</span><span lang="fr">Analyse automatique en arrière-plan</span><span lang="es">Análisis automático en segundo plano</span><span lang="zh">自动后台分析</span><span lang="hi">स्वचालित पृष्ठभूमि विश्लेषण</span><span lang="ar">تحليل تلقائي في الخلفية</span></li>
+            <li><span lang="de">Vollständige Insights</span><span lang="en">Full insights</span><span lang="fr">Insights complets</span><span lang="es">Insights completos</span><span lang="zh">完整的 Insights</span><span lang="hi">पूरे Insights</span><span lang="ar">تحليلات كاملة</span></li>
+            <li><span lang="de">Persönliche Puzzles aus eigenen Fehlern</span><span lang="en">Personal puzzles made from your own mistakes</span><span lang="fr">Problèmes personnels tirés de vos propres erreurs</span><span lang="es">Ejercicios personales hechos con tus propios errores</span><span lang="zh">用你自己的失误生成的专属战术题</span><span lang="hi">अपनी ग़लतियों से बनी निजी पहेलियाँ</span><span lang="ar">ألغاز شخصية من أخطائك أنت</span></li>
+            <li><span lang="de">Adaptiver Trainingsplan</span><span lang="en">Adaptive training plan</span><span lang="fr">Plan d’entraînement adaptatif</span><span lang="es">Plan de entrenamiento adaptativo</span><span lang="zh">自适应训练计划</span><span lang="hi">अनुकूली अभ्यास योजना</span><span lang="ar">خطة تدريب تتكيّف معك</span></li>
+            <li><span lang="de">Fokuszyklen und Wirkungsmessung</span><span lang="en">Focus cycles and impact tracking</span><span lang="fr">Cycles de focus et mesure des effets</span><span lang="es">Ciclos de enfoque y medición del efecto</span><span lang="zh">专注周期与效果评估</span><span lang="hi">फ़ोकस चक्र और असर की माप</span><span lang="ar">دورات تركيز وقياس للأثر</span></li>
+            <li><span lang="de">Automatische lokale LAN-Synchronisierung</span><span lang="en">Automatic local LAN synchronization</span><span lang="fr">Synchronisation locale automatique par LAN</span><span lang="es">Sincronización local automática por LAN</span><span lang="zh">自动局域网本地同步</span><span lang="hi">स्वचालित स्थानीय LAN सिंक्रनाइज़ेशन</span><span lang="ar">مزامنة محلية تلقائية عبر الشبكة</span></li>
+            <li><span lang="de">Android-Widgets</span><span lang="en">Android widgets</span><span lang="fr">Widgets Android</span><span lang="es">Widgets de Android</span><span lang="zh">Android 小组件</span><span lang="hi">Android विजेट</span><span lang="ar">مكوّنات Android</span></li>
+          </ul>
+          <p class="plan-cta">
+            <a class="btn btn-primary" href="plus/index.html">
+              <span lang="de">7 Tage kostenlos testen</span><span lang="en">Try free for 7 days</span><span lang="fr">Essayer 7 jours gratuitement</span><span lang="es">Prueba 7 días gratis</span><span lang="zh">免费试用 7 天</span><span lang="hi">7 दिन मुफ़्त आज़माएँ</span><span lang="ar">جرّب 7 أيام مجانًا</span>
+            </a>
+            <a class="btn" href="plus/account/index.html">
+              <span lang="de">Konto</span><span lang="en">Account</span><span lang="fr">Compte</span><span lang="es">Cuenta</span><span lang="zh">账号</span><span lang="hi">खाता</span><span lang="ar">الحساب</span>
+            </a>
+          </p>
           <p class="plan-note">
-            <span lang="de">Freischaltbar, sobald die Funktionen fertig sind.</span>
-            <span lang="en">Available to unlock once the features are finished.</span>
-            <span lang="fr">Activable dès que les fonctions seront prêtes.</span>
-            <span lang="es">Se podrá activar en cuanto las funciones estén listas.</span>
-            <span lang="zh">等这些功能做好，就能开通。</span>
-            <span lang="hi">जैसे ही ये सुविधाएँ तैयार होंगी, इन्हें चालू किया जा सकेगा।</span>
-            <span lang="ar">يمكن تفعيله فور اكتمال المزايا.</span>
+            <span lang="de">Die LAN-Synchronisierung läuft direkt zwischen deinen Geräten im eigenen Netz · es gibt keine Cloud-Synchronisierung. Widgets gibt es auf Android; für den Desktop sind keine geplant.</span>
+            <span lang="en">LAN synchronization runs directly between your devices on your own network · there is no cloud sync. Widgets are for Android; none are planned for the desktop.</span>
+            <span lang="fr">La synchronisation LAN se fait directement entre vos appareils sur votre réseau · il n’y a pas de synchronisation dans le nuage. Les widgets sont pour Android ; aucun n’est prévu pour l’ordinateur.</span>
+            <span lang="es">La sincronización LAN va directamente entre tus dispositivos en tu propia red · no hay sincronización en la nube. Los widgets son para Android; no hay ninguno previsto para escritorio.</span>
+            <span lang="zh">局域网同步在你自己的网络里、设备之间直接进行 · 没有云同步。小组件用于 Android；桌面端没有相关计划。</span>
+            <span lang="hi">LAN सिंक आपके अपने नेटवर्क में उपकरणों के बीच सीधे चलता है · कोई क्लाउड सिंक नहीं है। विजेट Android के लिए हैं; डेस्कटॉप के लिए कोई योजना नहीं।</span>
+            <span lang="ar">تجري المزامنة عبر الشبكة المحلية مباشرة بين أجهزتك داخل شبكتك · ولا توجد مزامنة سحابية. والمكوّنات مخصّصة لـAndroid، ولا شيء منها مخطّط لسطح المكتب.</span>
           </p>
         </article>
       </div>
@@ -729,13 +736,13 @@
 
           <div class="form-submit">
             <p>
-              <span lang="de">Mit dem Absenden werden deine Angaben über FormSubmit per E-Mail übermittelt. <a href="privacy/index.html#c12">Details zum Datenschutz</a>.</span>
-              <span lang="en">When you send this form, your entries are transmitted by email via FormSubmit. <a href="privacy/index.html#c12">Privacy details</a>.</span>
-              <span lang="fr">En envoyant ce formulaire, vos données sont transmises par e-mail via FormSubmit. <a href="privacy/index.html#c12">Détails sur la confidentialité</a>.</span>
-              <span lang="es">Al enviar el formulario, tus datos se transmiten por correo a través de FormSubmit. <a href="privacy/index.html#c12">Detalles de privacidad</a>.</span>
-              <span lang="zh">提交后，你填写的内容会通过 FormSubmit 以电子邮件发送。<a href="privacy/index.html#c12">隐私说明</a>。</span>
-              <span lang="hi">भेजने पर आपकी जानकारी FormSubmit के ज़रिए ई-मेल से भेजी जाती है। <a href="privacy/index.html#c12">गोपनीयता विवरण</a>।</span>
-              <span lang="ar">عند الإرسال تُنقَل بياناتك بالبريد الإلكتروني عبر FormSubmit. <a href="privacy/index.html#c12">تفاصيل الخصوصية</a>.</span>
+              <span lang="de">Mit dem Absenden werden deine Angaben über FormSubmit per E-Mail übermittelt. <a href="privacy/index.html#c13">Details zum Datenschutz</a>.</span>
+              <span lang="en">When you send this form, your entries are transmitted by email via FormSubmit. <a href="privacy/index.html#c13">Privacy details</a>.</span>
+              <span lang="fr">En envoyant ce formulaire, vos données sont transmises par e-mail via FormSubmit. <a href="privacy/index.html#c13">Détails sur la confidentialité</a>.</span>
+              <span lang="es">Al enviar el formulario, tus datos se transmiten por correo a través de FormSubmit. <a href="privacy/index.html#c13">Detalles de privacidad</a>.</span>
+              <span lang="zh">提交后，你填写的内容会通过 FormSubmit 以电子邮件发送。<a href="privacy/index.html#c13">隐私说明</a>。</span>
+              <span lang="hi">भेजने पर आपकी जानकारी FormSubmit के ज़रिए ई-मेल से भेजी जाती है। <a href="privacy/index.html#c13">गोपनीयता विवरण</a>।</span>
+              <span lang="ar">عند الإرسال تُنقَل بياناتك بالبريد الإلكتروني عبر FormSubmit. <a href="privacy/index.html#c13">تفاصيل الخصوصية</a>.</span>
             </p>
             <button class="btn btn-primary feedback-send" type="submit" data-feedback-send>
               <span lang="de">Meldung absenden</span><span lang="en">Send report</span><span lang="fr">Envoyer</span><span lang="es">Enviar mensaje</span><span lang="zh">发送反馈</span><span lang="hi">भेजें</span><span lang="ar">أرسل الرسالة</span>
@@ -768,6 +775,8 @@
     <nav class="foot-links" aria-label="Footer">
       <div class="foot-links-main">
       <a href="#feedback"><span lang="de">Feedback melden</span><span lang="en">Send feedback</span><span lang="fr">Envoyer un retour</span><span lang="es">Enviar comentarios</span><span lang="zh">发送反馈</span><span lang="hi">फ़ीडबैक भेजें</span><span lang="ar">أرسل ملاحظة</span></a>
+      <a href="plus/index.html">Kiebitz Plus</a>
+      <a href="plus/account/index.html"><span lang="de">Konto</span><span lang="en">Account</span><span lang="fr">Compte</span><span lang="es">Cuenta</span><span lang="zh">账号</span><span lang="hi">खाता</span><span lang="ar">الحساب</span></a>
       <a href="privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
       <a href="impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
       <a href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">Releases</a>

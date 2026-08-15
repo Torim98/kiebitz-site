@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-lang="en" data-title-de="Konto · Kiebitz Plus" data-title-en="Account · Kiebitz Plus" data-title-fr="Compte · Kiebitz Plus" data-title-es="Cuenta · Kiebitz Plus" data-title-zh="账号 · Kiebitz Plus" data-title-hi="खाता · Kiebitz Plus" data-title-ar="الحساب · Kiebitz Plus">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account · Kiebitz Plus</title>
+<meta name="description" content="Kiebitz-Konto: Status, Kiebitz Plus buchen, Abonnement verwalten, abmelden und loeschen. · Kiebitz account: status, subscribe to Kiebitz Plus, manage billing, sign out and delete.">
+<meta name="theme-color" content="#0e0e0d">
+<link rel="icon" href="../../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon.png">
+<link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+(function () {
+  var LANGS = { de: 1, en: 1, fr: 1, es: 1, zh: 1, hi: 1, ar: 1 };
+  var TAG = { de: "de", en: "en", fr: "fr", es: "es", zh: "zh-Hans", hi: "hi", ar: "ar" };
+  var l = "en";
+  try {
+    var s = localStorage.getItem("kiebitz-lang");
+    if (s && LANGS[s]) {
+      l = s;
+    } else {
+      var list = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || ""];
+      for (var i = 0; i < list.length; i++) {
+        var c = String(list[i]).toLowerCase().split("-")[0];
+        if (LANGS[c]) { l = c; break; }
+      }
+    }
+  } catch (e) { /* egal */ }
+  var d = document.documentElement;
+  d.setAttribute("data-lang", l);
+  d.setAttribute("lang", TAG[l]);
+  d.setAttribute("dir", l === "ar" ? "rtl" : "ltr");
+  try {
+    var m = localStorage.getItem("kiebitz-motion");
+    if (m === "on" || m === "off") d.setAttribute("data-motion", m);
+  } catch (e) { /* egal */ }
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span><span lang="fr">Aller au contenu</span><span lang="es">Ir al contenido</span><span lang="zh">跳到主要内容</span><span lang="hi">सामग्री पर जाएँ</span><span lang="ar">تخطَّ إلى المحتوى</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../../index.html" aria-label="Kiebitz">
+      <img src="../../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="de">Zug um Zugvogel</span><span lang="en">Moves take flight</span><span lang="fr">Coup d’aile</span><span lang="es">Jugadas que vuelan</span><span lang="zh">步步高飞</span><span lang="hi">हर चाल, एक उड़ान</span><span lang="ar">نقلة تُحلّق</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="../../index.html#features"><span lang="de">Funktionen</span><span lang="en">Features</span><span lang="fr">Fonctions</span><span lang="es">Funciones</span><span lang="zh">功能</span><span lang="hi">विशेषताएँ</span><span lang="ar">المزايا</span></a>
+      <a href="../../index.html#pricing"><span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></a>
+      <a href="../../index.html#download"><span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></a>
+      <a href="../../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="Sprache · Language · Langue · Idioma · 语言 · भाषा · اللغة">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-sm" href="../../plus/index.html"><span lang="de">Zurück</span><span lang="en">Back</span><span lang="fr">Retour</span><span lang="es">Volver</span><span lang="zh">返回</span><span lang="hi">वापस</span><span lang="ar">رجوع</span></a>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap">
+    <article class="plus-page" data-plus-account>
+      <p class="eyebrow"><b>+</b> Kiebitz Plus</p>
+      <h1><span lang="de">Dein Kiebitz-Konto</span><span lang="en">Your Kiebitz account</span><span lang="fr">Votre compte Kiebitz</span><span lang="es">Tu cuenta de Kiebitz</span><span lang="zh">你的 Kiebitz 账号</span><span lang="hi">आपका Kiebitz खाता</span><span lang="ar">حسابك في Kiebitz</span></h1>
+      <p class="doc-sub"><span lang="de">Status, Abonnement und Abmelden an einem Ort. Kiebitz Free bleibt in jedem Fall vollständig nutzbar.</span><span lang="en">Status, subscription and sign-out in one place. Kiebitz Free stays fully usable either way.</span><span lang="fr">Statut, abonnement et déconnexion au même endroit. Kiebitz Free reste de toute façon pleinement utilisable.</span><span lang="es">Estado, suscripción y cierre de sesión en un mismo sitio. Kiebitz Free sigue siendo plenamente utilizable en cualquier caso.</span><span lang="zh">状态、订阅和退出登录都在这里。无论如何，Kiebitz Free 都可完整使用。</span><span lang="hi">स्थिति, सदस्यता और साइन-आउट एक ही जगह। हर हाल में Kiebitz Free पूरी तरह इस्तेमाल में रहता है।</span><span lang="ar">الحالة والاشتراك وتسجيل الخروج في مكان واحد. ويبقى Kiebitz Free صالحًا للاستخدام بالكامل على أي حال.</span></p>
+
+      <div data-plus-view="loading">
+        <p class="plus-card"><span lang="de">Kontostatus wird geladen …</span><span lang="en">Loading account status …</span><span lang="fr">Chargement du statut du compte …</span><span lang="es">Cargando el estado de la cuenta …</span><span lang="zh">正在载入账号状态 …</span><span lang="hi">खाता स्थिति लोड हो रही है …</span><span lang="ar">يجري تحميل حالة الحساب …</span></p>
+        <noscript><p class="small"><span lang="de">Für Anmeldung und Kauf wird JavaScript gebraucht. Kiebitz selbst läuft davon unabhängig.</span><span lang="en">Signing in and buying need JavaScript. Kiebitz itself runs independently of it.</span><span lang="fr">La connexion et l’achat nécessitent JavaScript. Kiebitz lui-même fonctionne indépendamment.</span><span lang="es">El acceso y la compra necesitan JavaScript. Kiebitz en sí funciona sin él.</span><span lang="zh">登录和购买需要 JavaScript。Kiebitz 本身与此无关。</span><span lang="hi">साइन-इन और ख़रीद के लिए JavaScript चाहिए। Kiebitz ख़ुद इससे स्वतंत्र चलता है।</span><span lang="ar">يحتاج تسجيل الدخول والشراء إلى JavaScript. أما Kiebitz نفسه فيعمل بمعزل عن ذلك.</span></p></noscript>
+      </div>
+
+      <div data-plus-view="signed-out" hidden>
+        <section class="plus-card">
+          <h2><span lang="de">Nicht angemeldet</span><span lang="en">Not signed in</span><span lang="fr">Non connecté</span><span lang="es">Sin sesión iniciada</span><span lang="zh">尚未登录</span><span lang="hi">साइन इन नहीं</span><span lang="ar">غير مسجّل الدخول</span></h2>
+          <p><span lang="de">Melde dich an, um deinen Status zu sehen oder Kiebitz Plus zu buchen.</span><span lang="en">Sign in to see your status or to get Kiebitz Plus.</span><span lang="fr">Connectez-vous pour voir votre statut ou souscrire à Kiebitz Plus.</span><span lang="es">Inicia sesión para ver tu estado o contratar Kiebitz Plus.</span><span lang="zh">登录后即可查看状态，或订阅 Kiebitz Plus。</span><span lang="hi">अपनी स्थिति देखने या Kiebitz Plus लेने के लिए साइन इन कीजिए।</span><span lang="ar">سجّل الدخول لترى حالتك أو للحصول على Kiebitz Plus.</span></p>
+          <p class="plus-actions"><a class="btn btn-primary" href="../../plus/index.html"><span lang="de">Zur Anmeldung</span><span lang="en">Go to sign-in</span><span lang="fr">Vers la connexion</span><span lang="es">Ir al acceso</span><span lang="zh">前往登录</span><span lang="hi">साइन-इन पर जाएँ</span><span lang="ar">إلى تسجيل الدخول</span></a></p>
+        </section>
+      </div>
+
+      <div data-plus-view="error" hidden>
+        <section class="plus-card">
+          <h2><span lang="de">Status nicht abrufbar</span><span lang="en">Status unavailable</span><span lang="fr">Statut indisponible</span><span lang="es">Estado no disponible</span><span lang="zh">无法获取状态</span><span lang="hi">स्थिति उपलब्ध नहीं</span><span lang="ar">تعذّر جلب الحالة</span></h2>
+          <p><span lang="de">Die Kontodaten ließen sich gerade nicht laden. Ein bereits gebuchtes Plus bleibt davon unberührt, und Kiebitz Free läuft ohnehin weiter.</span><span lang="en">The account data could not be loaded just now. An existing Plus subscription is unaffected, and Kiebitz Free keeps running anyway.</span><span lang="fr">Les données du compte n’ont pas pu être chargées à l’instant. Un abonnement Plus existant n’est pas affecté, et Kiebitz Free continue de toute façon.</span><span lang="es">Ahora mismo no se han podido cargar los datos de la cuenta. Una suscripción Plus existente no se ve afectada y Kiebitz Free sigue funcionando igualmente.</span><span lang="zh">刚才没能载入账号数据。已有的 Plus 订阅不受影响，Kiebitz Free 照常运行。</span><span lang="hi">अभी खाता डेटा लोड नहीं हो सका। पहले से ली गई Plus सदस्यता पर इसका असर नहीं पड़ता, और Kiebitz Free वैसे भी चलता रहता है।</span><span lang="ar">تعذّر تحميل بيانات الحساب الآن. ولا يتأثّر اشتراك Plus القائم، ويستمر Kiebitz Free على أي حال.</span></p>
+        </section>
+      </div>
+
+      <div data-plus-view="free" hidden>
+        <section class="plus-card">
+          <h2>Kiebitz Free</h2>
+          <p><span lang="de">Konto:</span><span lang="en">Account:</span><span lang="fr">Compte :</span><span lang="es">Cuenta:</span><span lang="zh">账号：</span><span lang="hi">खाता:</span><span lang="ar">الحساب:</span> <strong data-plus-field="email"></strong></p>
+          <p><span lang="de">Dieses Konto nutzt zurzeit Kiebitz Free.</span><span lang="en">This account is currently on Kiebitz Free.</span><span lang="fr">Ce compte utilise actuellement Kiebitz Free.</span><span lang="es">Esta cuenta usa actualmente Kiebitz Free.</span><span lang="zh">这个账号目前使用 Kiebitz Free。</span><span lang="hi">यह खाता फ़िलहाल Kiebitz Free पर है।</span><span lang="ar">يستخدم هذا الحساب حاليًا Kiebitz Free.</span></p>
+          <p class="plus-price"><span lang="de">7 Tage kostenlos testen, danach 1,99 € pro Monat, jederzeit kündbar.</span><span lang="en">Try free for 7 days, then €1.99 per month, cancel any time.</span><span lang="fr">Essayez 7 jours gratuitement, puis 1,99 € par mois, résiliable à tout moment.</span><span lang="es">Prueba 7 días gratis, después 1,99 € al mes, cancelable en cualquier momento.</span><span lang="zh">免费试用 7 天，之后每月 1,99 €，随时可取消。</span><span lang="hi">7 दिन मुफ़्त आज़माइए, उसके बाद 1,99 € प्रति माह, कभी भी रद्द कर सकते हैं।</span><span lang="ar">جرّب 7 أيام مجانًا، ثم 1,99 € شهريًا، ويمكن الإلغاء في أي وقت.</span></p>
+          <p class="plus-actions">
+            <span data-plus-eligible hidden><button class="btn btn-primary" type="button" data-plus-action="checkout"><span lang="de">7 Tage kostenlos testen</span><span lang="en">Try free for 7 days</span><span lang="fr">Essayer 7 jours gratuitement</span><span lang="es">Prueba 7 días gratis</span><span lang="zh">免费试用 7 天</span><span lang="hi">7 दिन मुफ़्त आज़माएँ</span><span lang="ar">جرّب 7 أيام مجانًا</span></button></span>
+            <span data-plus-not-eligible hidden><button class="btn btn-primary" type="button" data-plus-action="checkout"><span lang="de">Kiebitz Plus abonnieren</span><span lang="en">Subscribe to Kiebitz Plus</span><span lang="fr">S’abonner à Kiebitz Plus</span><span lang="es">Suscribirse a Kiebitz Plus</span><span lang="zh">订阅 Kiebitz Plus</span><span lang="hi">Kiebitz Plus लीजिए</span><span lang="ar">اشترك في Kiebitz Plus</span></button></span>
+          </p>
+          <p class="small"><span lang="de">Der Kauf läuft über Stripe. Zahlungsdaten liegen dort, nicht bei Kiebitz.</span><span lang="en">Checkout runs through Stripe. Payment details stay there, not with Kiebitz.</span><span lang="fr">Le paiement passe par Stripe. Les données de paiement restent chez Stripe, pas chez Kiebitz.</span><span lang="es">La compra se realiza a través de Stripe. Los datos de pago quedan allí, no en Kiebitz.</span><span lang="zh">购买通过 Stripe 完成。支付信息保存在 Stripe，而不是 Kiebitz。</span><span lang="hi">ख़रीद Stripe के ज़रिए होती है। भुगतान की जानकारी वहीं रहती है, Kiebitz के पास नहीं।</span><span lang="ar">يتم الشراء عبر Stripe. وتبقى بيانات الدفع لديه لا لدى Kiebitz.</span></p>
+        </section>
+      </div>
+
+      <div data-plus-view="plus" hidden>
+        <section class="plus-card">
+          <h2>Kiebitz Plus</h2>
+          <p><span lang="de">Konto:</span><span lang="en">Account:</span><span lang="fr">Compte :</span><span lang="es">Cuenta:</span><span lang="zh">账号：</span><span lang="hi">खाता:</span><span lang="ar">الحساب:</span> <strong data-plus-field="email"></strong></p>
+          <p data-plus-trial hidden><span lang="de">Testzeitraum läuft bis</span><span lang="en">Trial runs until</span><span lang="fr">Essai jusqu’au</span><span lang="es">Prueba hasta</span><span lang="zh">试用截止</span><span lang="hi">परीक्षण इस तारीख़ तक</span><span lang="ar">التجربة حتى</span> <strong data-plus-field="trial-until"></strong></p>
+          <p data-plus-valid-until hidden><span lang="de">Gültig bis</span><span lang="en">Valid until</span><span lang="fr">Valable jusqu’au</span><span lang="es">Válido hasta</span><span lang="zh">有效期至</span><span lang="hi">इस तारीख़ तक वैध</span><span lang="ar">صالح حتى</span> <strong data-plus-field="valid-until"></strong></p>
+          <p data-plus-grace hidden><span lang="de">Eine Zahlung ist offen. Plus läuft vorerst weiter; bitte prüfe deine Zahlungsdaten.</span><span lang="en">A payment is outstanding. Plus keeps running for now; please check your payment details.</span><span lang="fr">Un paiement est en attente. Plus continue pour l’instant ; vérifiez vos données de paiement.</span><span lang="es">Hay un pago pendiente. Plus sigue activo por ahora; revisa tus datos de pago.</span><span lang="zh">有一笔付款未完成。Plus 暂时继续有效，请检查你的支付信息。</span><span lang="hi">एक भुगतान लंबित है। Plus फ़िलहाल चलता रहेगा; कृपया अपनी भुगतान जानकारी जाँचिए।</span><span lang="ar">هناك دفعة معلّقة. يستمر Plus مؤقتًا؛ يرجى مراجعة بيانات الدفع.</span></p>
+          <p data-plus-provider="stripe" hidden><span lang="de">Gebucht über Stripe.</span><span lang="en">Purchased through Stripe.</span><span lang="fr">Souscrit via Stripe.</span><span lang="es">Contratado a través de Stripe.</span><span lang="zh">通过 Stripe 购买。</span><span lang="hi">Stripe के ज़रिए लिया गया।</span><span lang="ar">تم الشراء عبر Stripe.</span></p>
+          <p data-plus-provider="google_play" hidden><span lang="de">Gebucht über Google Play.</span><span lang="en">Purchased through Google Play.</span><span lang="fr">Souscrit via Google Play.</span><span lang="es">Contratado a través de Google Play.</span><span lang="zh">通过 Google Play 购买。</span><span lang="hi">Google Play के ज़रिए लिया गया।</span><span lang="ar">تم الشراء عبر Google Play.</span></p>
+          <p class="plus-actions">
+            <span data-plus-provider="stripe" hidden><button class="btn" type="button" data-plus-action="portal"><span lang="de">Abonnement verwalten</span><span lang="en">Manage subscription</span><span lang="fr">Gérer l’abonnement</span><span lang="es">Gestionar la suscripción</span><span lang="zh">管理订阅</span><span lang="hi">सदस्यता प्रबंधित करें</span><span lang="ar">إدارة الاشتراك</span></button></span>
+            <span data-plus-provider="google_play" hidden><a class="btn" href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener"><span lang="de">Bei Google Play verwalten</span><span lang="en">Manage on Google Play</span><span lang="fr">Gérer sur Google Play</span><span lang="es">Gestionar en Google Play</span><span lang="zh">在 Google Play 管理</span><span lang="hi">Google Play पर प्रबंधित करें</span><span lang="ar">الإدارة على Google Play</span></a></span>
+          </p>
+        </section>
+      </div>
+
+      <div data-plus-view="deleted" hidden>
+        <section class="plus-card">
+          <h2><span lang="de">Konto gelöscht</span><span lang="en">Account deleted</span><span lang="fr">Compte supprimé</span><span lang="es">Cuenta borrada</span><span lang="zh">账号已删除</span><span lang="hi">खाता मिटा दिया गया</span><span lang="ar">حُذف الحساب</span></h2>
+          <p><span lang="de">Sitzungen und Anmeldelinks wurden entfernt und die Adresse anonymisiert. Deine Schachdaten lagen ohnehin nur auf deinen Geräten.</span><span lang="en">Sessions and sign-in links were removed and the address anonymized. Your chess data only ever lived on your devices.</span><span lang="fr">Les sessions et les liens de connexion ont été supprimés et l’adresse anonymisée. Vos données d’échecs n’ont jamais quitté vos appareils.</span><span lang="es">Se han eliminado las sesiones y los enlaces de acceso y se ha anonimizado la dirección. Tus datos de ajedrez solo han estado en tus dispositivos.</span><span lang="zh">会话和登录链接已清除，地址已匿名化。你的棋局数据本来就只在自己的设备上。</span><span lang="hi">सत्र और साइन-इन लिंक हटा दिए गए और पता अनाम कर दिया गया। आपका शतरंज डेटा वैसे भी केवल आपके उपकरणों पर था।</span><span lang="ar">أُزيلت الجلسات وروابط الدخول وجُعل العنوان مجهولًا. أما بيانات الشطرنج فلم تكن إلا على أجهزتك.</span></p>
+        </section>
+      </div>
+
+      <p class="plus-message" data-plus-message="account" role="status" aria-live="polite" hidden>
+        <span data-plus-error="generic"><span lang="de">Das hat gerade nicht geklappt. Bitte versuche es später noch einmal.</span><span lang="en">That did not work just now. Please try again later.</span><span lang="fr">Cela n’a pas fonctionné à l’instant. Réessayez plus tard.</span><span lang="es">Ahora mismo no ha funcionado. Inténtalo más tarde.</span><span lang="zh">刚才没有成功，请稍后再试。</span><span lang="hi">अभी यह नहीं हो सका। कृपया बाद में फिर कोशिश कीजिए।</span><span lang="ar">لم ينجح ذلك الآن. حاول مرة أخرى لاحقًا.</span></span>
+        <span data-plus-error="network_unavailable" hidden><span lang="de">Keine Verbindung zum Kiebitz-Konto. Kiebitz Free bleibt vollständig nutzbar.</span><span lang="en">No connection to the Kiebitz account. Kiebitz Free stays fully usable.</span><span lang="fr">Pas de connexion au compte Kiebitz. Kiebitz Free reste pleinement utilisable.</span><span lang="es">Sin conexión con la cuenta de Kiebitz. Kiebitz Free sigue siendo plenamente utilizable.</span><span lang="zh">连不上 Kiebitz 账号服务。Kiebitz Free 仍可完整使用。</span><span lang="hi">Kiebitz खाते से संपर्क नहीं हो सका। Kiebitz Free पूरी तरह इस्तेमाल में रहता है।</span><span lang="ar">لا اتصال بحساب Kiebitz. ويبقى Kiebitz Free صالحًا للاستخدام بالكامل.</span></span>
+        <span data-plus-error="active_subscription" hidden><span lang="de">Es läuft noch ein Abonnement. Kündige es zuerst beim Anbieter, danach lässt sich das Konto löschen.</span><span lang="en">A subscription is still running. Cancel it with the provider first, then the account can be deleted.</span><span lang="fr">Un abonnement est encore actif. Résiliez-le d’abord chez le fournisseur, ensuite le compte pourra être supprimé.</span><span lang="es">Todavía hay una suscripción activa. Cancélala primero con el proveedor y después podrás borrar la cuenta.</span><span lang="zh">还有一份订阅在生效。请先在对应渠道取消，之后才能删除账号。</span><span lang="hi">एक सदस्यता अब भी चल रही है। पहले उसे प्रदाता के पास रद्द कीजिए, उसके बाद खाता मिटाया जा सकता है।</span><span lang="ar">ما زال هناك اشتراك ساري. ألغه أولًا لدى المزوّد، وبعدها يمكن حذف الحساب.</span></span>
+        <span data-plus-error="stripe_subscription_exists" hidden><span lang="de">Für dieses Konto gibt es bereits ein Stripe-Abonnement. Verwalte es über „Abonnement verwalten“.</span><span lang="en">This account already has a Stripe subscription. Manage it through “Manage subscription”.</span><span lang="fr">Ce compte a déjà un abonnement Stripe. Gérez-le via « Gérer l’abonnement ».</span><span lang="es">Esta cuenta ya tiene una suscripción de Stripe. Gestiónala en «Gestionar la suscripción».</span><span lang="zh">这个账号已经有一份 Stripe 订阅，请在「管理订阅」里处理。</span><span lang="hi">इस खाते की एक Stripe सदस्यता पहले से है। इसे «सदस्यता प्रबंधित करें» से संभालिए।</span><span lang="ar">لهذا الحساب اشتراك Stripe بالفعل. أدره من «إدارة الاشتراك».</span></span>
+        <span data-plus-error="stripe_customer_missing" hidden><span lang="de">Für dieses Konto gibt es keine Stripe-Abrechnung. Ein über Google Play gekauftes Abo verwaltest du im Play Store.</span><span lang="en">This account has no Stripe billing. A subscription bought through Google Play is managed in the Play Store.</span><span lang="fr">Ce compte n’a pas de facturation Stripe. Un abonnement acheté via Google Play se gère dans le Play Store.</span><span lang="es">Esta cuenta no tiene facturación en Stripe. Una suscripción comprada en Google Play se gestiona en Play Store.</span><span lang="zh">这个账号没有 Stripe 计费。通过 Google Play 购买的订阅请在 Play 商店管理。</span><span lang="hi">इस खाते की कोई Stripe बिलिंग नहीं है। Google Play से ली गई सदस्यता Play Store में प्रबंधित होती है।</span><span lang="ar">لا توجد فوترة Stripe لهذا الحساب. أما الاشتراك المشترى عبر Google Play فيُدار في متجر Play.</span></span>
+        <span data-plus-error="stripe_unavailable" hidden><span lang="de">Der Kauf ist gerade nicht eingerichtet. Bitte versuche es später noch einmal.</span><span lang="en">Checkout is not set up right now. Please try again later.</span><span lang="fr">Le paiement n’est pas configuré pour l’instant. Réessayez plus tard.</span><span lang="es">La compra no está configurada ahora mismo. Inténtalo más tarde.</span><span lang="zh">目前还没有配置购买流程，请稍后再试。</span><span lang="hi">अभी ख़रीद सेट नहीं है। कृपया बाद में कोशिश कीजिए।</span><span lang="ar">الشراء غير مُهيّأ حاليًا. حاول مرة أخرى لاحقًا.</span></span>
+        <code data-plus-code></code>
+      </p>
+
+      <section class="plus-card" data-plus-session hidden>
+        <h2><span lang="de">Sitzung und Konto</span><span lang="en">Session and account</span><span lang="fr">Session et compte</span><span lang="es">Sesión y cuenta</span><span lang="zh">会话与账号</span><span lang="hi">सत्र और खाता</span><span lang="ar">الجلسة والحساب</span></h2>
+        <p class="small"><span lang="de">Die Anmeldung liegt in einem technisch notwendigen Sitzungs-Cookie. Es enthält keine Schachdaten und wird nicht für Werbung verwendet.</span><span lang="en">The sign-in lives in a strictly necessary session cookie. It holds no chess data and is not used for advertising.</span><span lang="fr">La connexion tient dans un cookie de session strictement nécessaire. Il ne contient aucune donnée d’échecs et ne sert pas à la publicité.</span><span lang="es">El acceso se guarda en una cookie de sesión estrictamente necesaria. No contiene datos de ajedrez ni se usa para publicidad.</span><span lang="zh">登录状态保存在一个技术上必需的会话 Cookie 里。它不含棋局数据，也不用于广告。</span><span lang="hi">साइन-इन एक तकनीकी रूप से आवश्यक सत्र कुकी में रहता है। इसमें कोई शतरंज डेटा नहीं होता और यह विज्ञापन के लिए इस्तेमाल नहीं होती।</span><span lang="ar">يُحفَظ تسجيل الدخول في ملف تعريف ارتباط جلسة ضروري تقنيًا. لا يحتوي بيانات شطرنج ولا يُستخدم للإعلانات.</span></p>
+        <p class="plus-actions">
+          <button class="btn" type="button" data-plus-action="logout"><span lang="de">Abmelden</span><span lang="en">Sign out</span><span lang="fr">Se déconnecter</span><span lang="es">Cerrar sesión</span><span lang="zh">退出登录</span><span lang="hi">साइन आउट</span><span lang="ar">تسجيل الخروج</span></button>
+          <button class="btn btn-danger" type="button" data-plus-action="delete-open"><span lang="de">Konto löschen</span><span lang="en">Delete account</span><span lang="fr">Supprimer le compte</span><span lang="es">Borrar la cuenta</span><span lang="zh">删除账号</span><span lang="hi">खाता मिटाएँ</span><span lang="ar">حذف الحساب</span></button>
+        </p>
+        <div class="plus-confirm" data-plus-delete-confirm hidden>
+          <p><strong><span lang="de">Konto wirklich löschen?</span><span lang="en">Really delete the account?</span><span lang="fr">Vraiment supprimer le compte ?</span><span lang="es">¿Borrar de verdad la cuenta?</span><span lang="zh">确定要删除账号吗？</span><span lang="hi">क्या सचमुच खाता मिटाना है?</span><span lang="ar">هل تريد حذف الحساب فعلًا؟</span></strong></p>
+          <p class="small"><span lang="de">Das Konto wird gelöscht und alle Sitzungen beendet. Ein bereits verbrauchter Testzeitraum bleibt verbraucht. Deine lokalen Daten in Kiebitz bleiben unverändert.</span><span lang="en">The account is deleted and all sessions end. A trial you already used stays used. Your local data in Kiebitz is unchanged.</span><span lang="fr">Le compte est supprimé et toutes les sessions prennent fin. Un essai déjà consommé le reste. Vos données locales dans Kiebitz ne changent pas.</span><span lang="es">La cuenta se borra y se cierran todas las sesiones. Una prueba ya consumida sigue consumida. Tus datos locales en Kiebitz no cambian.</span><span lang="zh">账号会被删除，所有会话结束。已经用掉的试用仍算用掉。你在 Kiebitz 里的本地数据保持不变。</span><span lang="hi">खाता मिट जाएगा और सभी सत्र समाप्त हो जाएँगे। पहले से इस्तेमाल किया गया परीक्षण इस्तेमाल किया हुआ ही रहेगा। Kiebitz में आपका स्थानीय डेटा अपरिवर्तित रहता है।</span><span lang="ar">سيُحذف الحساب وتنتهي كل الجلسات. والتجربة المستهلكة تبقى مستهلكة. أما بياناتك المحلية في Kiebitz فتبقى كما هي.</span></p>
+          <p class="plus-actions">
+            <button class="btn" type="button" data-plus-action="delete-cancel"><span lang="de">Abbrechen</span><span lang="en">Cancel</span><span lang="fr">Annuler</span><span lang="es">Cancelar</span><span lang="zh">取消</span><span lang="hi">रद्द करें</span><span lang="ar">إلغاء</span></button>
+            <button class="btn btn-danger" type="button" data-plus-action="delete"><span lang="de">Endgültig löschen</span><span lang="en">Delete permanently</span><span lang="fr">Supprimer définitivement</span><span lang="es">Borrar definitivamente</span><span lang="zh">永久删除</span><span lang="hi">हमेशा के लिए मिटाएँ</span><span lang="ar">حذف نهائي</span></button>
+          </p>
+          <p class="small" data-plus-cancel-stripe hidden><button class="btn" type="button" data-plus-action="portal"><span lang="de">Abonnement verwalten</span><span lang="en">Manage subscription</span><span lang="fr">Gérer l’abonnement</span><span lang="es">Gestionar la suscripción</span><span lang="zh">管理订阅</span><span lang="hi">सदस्यता प्रबंधित करें</span><span lang="ar">إدارة الاشتراك</span></button></p>
+          <p class="small" data-plus-cancel-play hidden><a class="btn" href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener"><span lang="de">Bei Google Play verwalten</span><span lang="en">Manage on Google Play</span><span lang="fr">Gérer sur Google Play</span><span lang="es">Gestionar en Google Play</span><span lang="zh">在 Google Play 管理</span><span lang="hi">Google Play पर प्रबंधित करें</span><span lang="ar">الإدارة على Google Play</span></a></p>
+        </div>
+      </section>
+
+      <p class="small"><span lang="de">Kiebitz bleibt local-first. Das Konto trägt allein die Anmeldung, die Abrechnung und die signierte Freischaltung. Partien, Analysen, Trainingsdaten und Einstellungen werden nicht hochgeladen.</span><span lang="en">Kiebitz stays local-first. The account only carries sign-in, billing and the signed unlock. Games, analyses, training data and settings are never uploaded.</span><span lang="fr">Kiebitz reste local-first. Le compte ne porte que la connexion, la facturation et le déblocage signé. Parties, analyses, données d’entraînement et réglages ne sont jamais téléversés.</span><span lang="es">Kiebitz sigue siendo local-first. La cuenta solo sirve para el acceso, la facturación y el desbloqueo firmado. Las partidas, los análisis, los datos de entrenamiento y los ajustes nunca se suben.</span><span lang="zh">Kiebitz 依旧本地优先。账号只承担登录、计费和签名解锁。对局、分析、训练数据和设置都不会上传。</span><span lang="hi">Kiebitz लोकल-फ़र्स्ट ही रहता है। खाता केवल साइन-इन, बिलिंग और हस्ताक्षरित अनलॉक संभालता है। बाज़ियाँ, विश्लेषण, अभ्यास डेटा और सेटिंग्स कभी अपलोड नहीं होतीं।</span><span lang="ar">يبقى Kiebitz محليًا أولًا. الحساب لا يحمل سوى تسجيل الدخول والفوترة والتفعيل الموقّع. أما المباريات والتحليلات وبيانات التدريب والإعدادات فلا تُرفع أبدًا.</span></p>
+    </article>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="flock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="foot-note" style="margin-top:8px"><span lang="de">Zug um Zugvogel. Local-first Schach-Begleiter für Desktop und Android. Deine Partien und Analysen bleiben auf deinen Geräten.</span><span lang="en">Moves take flight. A local-first chess companion for desktop and Android. Your games and analyses stay on your devices.</span><span lang="fr">Coup d’aile. Un compagnon d’échecs local-first pour ordinateur et Android. Vos parties et analyses restent sur vos appareils.</span><span lang="es">Jugadas que vuelan. Un compañero de ajedrez local-first para escritorio y Android. Tus partidas y análisis se quedan en tus dispositivos.</span><span lang="zh">步步高飞。面向桌面端与 Android 的本地优先国际象棋助手。你的对局与分析留在自己的设备上。</span><span lang="hi">हर चाल, एक उड़ान। डेस्कटॉप और Android के लिए लोकल-फ़र्स्ट शतरंज साथी। आपकी बाज़ियाँ और विश्लेषण आपके उपकरणों पर रहते हैं।</span><span lang="ar">نقلة تُحلّق. رفيق شطرنج محلي أولًا لسطح المكتب وAndroid. تبقى مبارياتك وتحليلاتك على أجهزتك.</span></p>
+      <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <div class="foot-links-main">
+      <a href="../../index.html#pricing"><span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></a>
+      <a href="../../plus/index.html">Kiebitz Plus</a>
+      <a href="../../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="../../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
+      <a href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">Releases</a>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<script src="../../assets/site.js" defer></script>
+<script src="../../assets/plus.js" defer></script>
+</body>
+</html>

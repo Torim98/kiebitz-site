@@ -89,12 +89,13 @@
         <li><a href="#c5">5 <span lang="de">Berechtigungen</span></a></li>
         <li><a href="#c6">6 <span lang="de">Geräte-Sync</span></a></li>
         <li><a href="#c7">7 <span lang="de">Werbung &amp; Datenschutz</span></a></li>
-        <li><a href="#c8">8 <span lang="de">Rechtsgrundlagen</span></a></li>
-        <li><a href="#c9">9 <span lang="de">Speicherdauer &amp; Löschung</span></a></li>
-        <li><a href="#c10">10 <span lang="de">Kinder</span></a></li>
-        <li><a href="#c11">11 <span lang="de">Deine Rechte</span></a></li>
-        <li><a href="#c12">12 <span lang="de">Diese Website</span></a></li>
-        <li><a href="#c13">13 <span lang="de">Änderungen</span></a></li>
+        <li><a href="#c8">8 <span lang="de">Konto &amp; Kiebitz Plus</span></a></li>
+        <li><a href="#c9">9 <span lang="de">Rechtsgrundlagen</span></a></li>
+        <li><a href="#c10">10 <span lang="de">Speicherdauer &amp; Löschung</span></a></li>
+        <li><a href="#c11">11 <span lang="de">Kinder</span></a></li>
+        <li><a href="#c12">12 <span lang="de">Deine Rechte</span></a></li>
+        <li><a href="#c13">13 <span lang="de">Diese Website</span></a></li>
+        <li><a href="#c14">14 <span lang="de">Änderungen</span></a></li>
       </ul>
     </aside>
 
@@ -111,7 +112,7 @@
 
       </p>
       <p class="doc-meta">
-        <span lang="de">Stand: 11. August 2026 · gültig für alle Kiebitz-Versionen der Beta</span>
+        <span lang="de">Stand: 15. August 2026 · gültig für alle Kiebitz-Versionen der Beta</span>
 
 
 
@@ -357,7 +358,39 @@
       </section>
 
       <section id="c8">
-        <h2><span class="num">08</span><span lang="de">Rechtsgrundlagen</span></h2>
+        <h2><span class="num">08</span><span lang="de">Kiebitz-Konto und Kiebitz Plus</span></h2>
+        <p lang="de">Ein Kiebitz-Konto ist freiwillig; Kiebitz Free funktioniert ohne. Legst du eines an, verarbeitet der Anbieter deine E-Mail-Adresse, einen pseudonymen Hashwert dieser Adresse, ausschließlich Hashes der Anmelde- und Sitzungstoken, Zeitstempel von Anlage und Anmeldung, den Berechtigungsstatus (Free, Plus, Test, Laufzeit) sowie verschlüsselte Kaufreferenzen. <strong>Schachdaten werden dabei nicht übertragen</strong>: Partien, Analysen, Notizen, Trainings- und Fortschrittsdaten bleiben auf deinen Geräten. Die Konto-API läuft unter <code>api.kiebitz.dev</code> auf der Infrastruktur von Cloudflare (Cloudflare Germany GmbH bzw. Cloudflare, Inc.).</p>
+        <p lang="de">Für den Versand der Anmeldelinks nutzt der Anbieter <strong>Resend</strong> (Resend, Inc., USA); übermittelt werden die Empfängeradresse, der einmalige Link und Zustellmetadaten. Die Zahlungsabwicklung für Kiebitz Plus übernimmt <strong>Stripe</strong> (Stripe Payments Europe, Ltd., Irland, mit Stripe, Inc., USA). Zahlungsmittel- und Rechnungsdaten liegen bei Stripe; Kiebitz erhält von dort eine Kundenreferenz, den Abonnementstatus und die Laufzeit, nicht jedoch vollständige Zahlungsdaten. Wird Kiebitz Plus stattdessen über <strong>Google Play</strong> gekauft, prüft der Anbieter den Abostatus über die Google-Play-Developer-API (Google Ireland Ltd. bzw. Google LLC). Bei diesen Anbietern ist eine Verarbeitung in Drittländern, insbesondere den USA, möglich.</p>
+        <p lang="de">Meldest du dich auf dieser Website an (Seiten <code>/plus/</code>, <code>/plus/account/</code> und <code>/plus/success/</code>), setzt die API ein technisch notwendiges Sitzungs-Cookie (<code>__Host-kiebitz_session</code>, HttpOnly, Secure, SameSite=Lax, Laufzeit 30 Tage). Es enthält keine Schachdaten, dient nicht der Reichweitenmessung oder Werbung und ist nach § 25 Abs. 2 Nr. 2 TDDDG einwilligungsfrei. In der App wird stattdessen ein Sitzungstoken verwendet und zusammen mit der signierten Berechtigung im Schlüsselspeicher des Systems abgelegt. Die signierte Berechtigung enthält Konto-Kennung, Plan, Funktionsliste und Laufzeit; sie wird lokal geprüft und läuft nach Ablauf von selbst auf Free zurück.</p>
+        <p lang="de">Rechtsgrundlage für Konto, Abonnement und Freischaltung ist Art. 6 Abs. 1 lit. b DSGVO (Erfüllung des Nutzungs- bzw. Abonnementvertrags), für Missbrauchs- und Ratenbegrenzung Art. 6 Abs. 1 lit. f DSGVO und für die Aufbewahrung von Abrechnungsunterlagen Art. 6 Abs. 1 lit. c DSGVO. Du kannst dein Konto jederzeit in der App oder unter <code>/plus/account/</code> löschen; läuft ein Abonnement noch, ist es zuvor beim jeweiligen Anbieter zu kündigen. Beim Löschen werden Sitzungen und Anmeldelinks entfernt, die E-Mail-Adresse im Kontodatensatz anonymisiert und Kaufquellen entkoppelt. Erhalten bleiben der pseudonyme Hashwert der Adresse und die Information, dass ein kostenloser Testzeitraum bereits genutzt wurde, damit Löschen und Neuanlegen keinen zweiten Test erzeugt (Art. 6 Abs. 1 lit. f DSGVO).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </section>
+
+      <section id="c9">
+        <h2><span class="num">09</span><span lang="de">Rechtsgrundlagen</span></h2>
         <p lang="de">Soweit die App deine Schachdaten ausschließlich lokal verarbeitet, hat der Anbieter darauf keinen Zugriff. Für einzelne Netzwerk- und Werbevorgänge gelten insbesondere:</p>
         <ul class="bul" lang="de">
           <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong>: Bereitstellung der von dir angeforderten Funktionen, insbesondere der Import deiner Partien von chess.com bzw. Lichess und der Sync zwischen deinen Geräten.</li>
@@ -378,8 +411,8 @@
 
       </section>
 
-      <section id="c9">
-        <h2><span class="num">09</span><span lang="de">Speicherdauer und Löschung</span></h2>
+      <section id="c10">
+        <h2><span class="num">10</span><span lang="de">Speicherdauer und Löschung</span></h2>
         <p lang="de">Deine lokalen Schachdaten bleiben so lange gespeichert, wie du sie behalten möchtest; Kiebitz betreibt dafür keine serverseitige Aufbewahrung. Du kannst jederzeit:</p>
         <ul class="bul" lang="de">
           <li>einzelne Partien, Notizen, Tags oder Repertoire-Einträge in der App löschen,</li>
@@ -408,8 +441,8 @@
 
       </section>
 
-      <section id="c10">
-        <h2><span class="num">10</span><span lang="de">Kinder und Jugendliche</span></h2>
+      <section id="c11">
+        <h2><span class="num">11</span><span lang="de">Kinder und Jugendliche</span></h2>
         <p lang="de">Kiebitz richtet sich nicht speziell an Kinder. Für Werbung gelten die von Google und Google Play vorgesehenen Alters-, Einwilligungs- und Jugendschutzregeln; bei einer Einstufung für Kinder müssen außerdem die entsprechenden Familien- und Anzeigenanforderungen erfüllt werden. Beim Import von Partien gelten die Bedingungen des jeweiligen Schachportals.</p>
 
 
@@ -419,8 +452,8 @@
 
       </section>
 
-      <section id="c11">
-        <h2><span class="num">11</span><span lang="de">Deine Rechte</span></h2>
+      <section id="c12">
+        <h2><span class="num">12</span><span lang="de">Deine Rechte</span></h2>
         <p lang="de">Dir stehen nach der DSGVO die Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21) zu, ebenso das Recht, eine erteilte Einwilligung jederzeit zu widerrufen (Art. 7 Abs. 3).</p>
         <p lang="de">Kiebitz speichert keine Schachdaten über dich in einem eigenen Backend; lokale Daten kannst du selbst einsehen, exportieren und löschen. Für Kiebitz-Anfragen genügt eine E-Mail an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>. Rechte bezüglich der von Google verarbeiteten Werbedaten kannst du außerdem über Googles Datenschutzoptionen ausüben.</p>
         <p lang="de">Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz; du kannst dich auch an die Behörde deines Wohnorts wenden.</p>
@@ -444,8 +477,8 @@
 
       </section>
 
-      <section id="c12">
-        <h2><span class="num">12</span><span lang="de">Diese Website</span></h2>
+      <section id="c13">
+        <h2><span class="num">13</span><span lang="de">Diese Website</span></h2>
         <p lang="de">Diese Website ist statisch und wird über GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) ausgeliefert. Beim Aufruf verarbeitet GitHub als Hoster technisch notwendige Verbindungsdaten, insbesondere deine IP-Adresse, Datum und Uhrzeit, angeforderte Datei, Referrer und Browserkennung, in Server-Logfiles. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sicherer, störungsfreier Betrieb). Der Anbieter dieser Website hat keinen Zugriff auf diese Logdaten.</p>
         <p lang="de">Die öffentlich aufrufbaren Website-Seiten setzen keine Cookies, kein Analytics und keine Werbe- oder Social-Media-Skripte ein. Die ausschließlich in Kiebitz Desktop eingebettete Werbefläche verwendet ein lokales Skript zur Auswahl aktiver Kampagnen, aber ebenfalls keine Cookies, Speicherung, Nutzerkennungen, Analytics oder Drittanbieter-Skripte. Schriftarten, Stile und Werbemittel liegen auf demselben Server. Die von dir auf der Website gewählte Sprache wird ausschließlich lokal in deinem Browser (localStorage) gespeichert, damit die Seite beim nächsten Besuch in derselben Sprache erscheint; diese Angabe wird nicht übertragen. Datenschutzerklärung von GitHub: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>.</p>
         <p lang="de"><strong>Feedback-Formular:</strong> Nur wenn du eine Meldung absendest, werden die von dir eingetragenen Angaben (Art der Meldung, Kurzfassung, Details, optional Plattform, App-Version und E-Mail-Adresse) sowie technisch notwendige Verbindungsdaten an FormSubmit (formsubmit.co) übertragen und von dort per E-Mail an den Anbieter weitergeleitet. Es werden keine Daten automatisch aus der App ausgelesen oder angehängt. FormSubmit hält Einsendungen nach eigenen Angaben bis zu 30 Tage für die Zustellung und den Abruf vor. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit du Support anfragst, im Übrigen Art. 6 Abs. 1 lit. f DSGVO (Bearbeitung freiwilliger Rückmeldungen und Verbesserung der Software). Die beim Anbieter eingegangene E-Mail wird gelöscht, sobald sie für Bearbeitung und Rückfragen nicht mehr benötigt wird. Hinweise von FormSubmit: <a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">Datenschutz</a> und <a href="https://formsubmit.co/documentation" rel="noopener noreferrer">Dokumentation</a>.</p>
@@ -469,8 +502,8 @@
 
       </section>
 
-      <section id="c13">
-        <h2><span class="num">13</span><span lang="de">Änderungen dieser Erklärung</span></h2>
+      <section id="c14">
+        <h2><span class="num">14</span><span lang="de">Änderungen dieser Erklärung</span></h2>
         <p lang="de">Wird die App um Funktionen erweitert, die neue Datenverarbeitungen mit sich bringen, wird diese Erklärung vorher angepasst. Der jeweils aktuelle Stand ist oben datiert und dauerhaft unter dieser Adresse erreichbar.</p>
 
 

@@ -89,12 +89,13 @@
         <li><a href="#c5">5 <span lang="es">Permisos</span></a></li>
         <li><a href="#c6">6 <span lang="es">Sync entre dispositivos</span></a></li>
         <li><a href="#c7">7 <span lang="es">Anuncios y privacidad</span></a></li>
-        <li><a href="#c8">8 <span lang="es">Bases jurídicas</span></a></li>
-        <li><a href="#c9">9 <span lang="es">Conservación &amp; borrado</span></a></li>
-        <li><a href="#c10">10 <span lang="es">Menores</span></a></li>
-        <li><a href="#c11">11 <span lang="es">Tus derechos</span></a></li>
-        <li><a href="#c12">12 <span lang="es">Este sitio web</span></a></li>
-        <li><a href="#c13">13 <span lang="es">Cambios</span></a></li>
+        <li><a href="#c8">8 <span lang="es">Cuenta &amp; Kiebitz Plus</span></a></li>
+        <li><a href="#c9">9 <span lang="es">Bases jurídicas</span></a></li>
+        <li><a href="#c10">10 <span lang="es">Conservación &amp; borrado</span></a></li>
+        <li><a href="#c11">11 <span lang="es">Menores</span></a></li>
+        <li><a href="#c12">12 <span lang="es">Tus derechos</span></a></li>
+        <li><a href="#c13">13 <span lang="es">Este sitio web</span></a></li>
+        <li><a href="#c14">14 <span lang="es">Cambios</span></a></li>
       </ul>
     </aside>
 
@@ -114,7 +115,7 @@
 
 
 
-        <span lang="es">Actualizado: 11 de agosto de 2026 · válido para todas las versiones beta de Kiebitz. Traducción a título informativo; en caso de discrepancia prevalece la versión alemana.</span>
+        <span lang="es">Actualizado: 15 de agosto de 2026 · válido para todas las versiones beta de Kiebitz. Traducción a título informativo; en caso de discrepancia prevalece la versión alemana.</span>
 
 
 
@@ -357,7 +358,39 @@
       </section>
 
       <section id="c8">
-        <h2><span class="num">08</span><span lang="es">Bases jurídicas</span></h2>
+        <h2><span class="num">08</span><span lang="es">Cuenta de Kiebitz y Kiebitz Plus</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="es">Una cuenta de Kiebitz es voluntaria; Kiebitz Free funciona sin ella. Si creas una, el proveedor trata tu dirección de correo, un hash seudónimo de esa dirección, únicamente hashes de los tokens de acceso y de sesión, marcas de tiempo de creación e inicio de sesión, el estado de los derechos (Free, Plus, prueba, vigencia) y referencias de compra cifradas. <strong>No se transmiten datos de ajedrez</strong>: partidas, análisis, notas, datos de entrenamiento y de progreso permanecen en tus dispositivos. La API de la cuenta funciona en <code>api.kiebitz.dev</code>, sobre infraestructura de Cloudflare (Cloudflare Germany GmbH / Cloudflare, Inc.).</p>
+        <p lang="es">Los enlaces de acceso se envían mediante <strong>Resend</strong> (Resend, Inc., EE. UU.); se transmiten la dirección del destinatario, el enlace de un solo uso y metadatos de entrega. El pago de Kiebitz Plus lo gestiona <strong>Stripe</strong> (Stripe Payments Europe, Ltd., Irlanda, con Stripe, Inc., EE. UU.). Los datos de pago y facturación quedan en Stripe; Kiebitz recibe una referencia de cliente, el estado de la suscripción y su vigencia, pero no los datos de pago completos. Si Kiebitz Plus se compra en <strong>Google Play</strong>, el proveedor verifica el estado de la suscripción a través de la API de Google Play Developer (Google Ireland Ltd. / Google LLC). En estos proveedores es posible un tratamiento en terceros países, en particular en EE. UU.</p>
+        <p lang="es">Si inicias sesión en este sitio (páginas <code>/plus/</code>, <code>/plus/account/</code> y <code>/plus/success/</code>), la API establece una cookie de sesión estrictamente necesaria (<code>__Host-kiebitz_session</code>, HttpOnly, Secure, SameSite=Lax, 30 días). No contiene datos de ajedrez, no se usa para medición ni publicidad y está exenta de consentimiento conforme al § 25.2.2 TDDDG. La app usa en su lugar un token de sesión y lo guarda, junto con el derecho firmado, en el almacén de credenciales del sistema. El derecho firmado contiene un identificador de cuenta, el plan, la lista de funciones y la vigencia; se verifica localmente y vuelve por sí solo a Free al caducar.</p>
+        <p lang="es">La base jurídica para la cuenta, la suscripción y el desbloqueo es el art. 6.1.b del RGPD (ejecución del contrato de uso y suscripción), el art. 6.1.f para la prevención de abusos y la limitación de solicitudes y el art. 6.1.c para la conservación de documentos de facturación. Puedes borrar tu cuenta en cualquier momento en la app o en <code>/plus/account/</code>; si aún hay una suscripción activa, debe cancelarse antes con el proveedor correspondiente. El borrado elimina sesiones y enlaces de acceso, anonimiza la dirección de correo en el registro de la cuenta y desvincula las fuentes de compra. Se conservan el hash seudónimo de la dirección y el hecho de que ya se usó una prueba gratuita, para que borrar y volver a registrarse no genere una segunda prueba (art. 6.1.f del RGPD).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+      </section>
+
+      <section id="c9">
+        <h2><span class="num">09</span><span lang="es">Bases jurídicas</span></h2>
 
 
 
@@ -378,8 +411,8 @@
 
       </section>
 
-      <section id="c9">
-        <h2><span class="num">09</span><span lang="es">Conservación y borrado</span></h2>
+      <section id="c10">
+        <h2><span class="num">10</span><span lang="es">Conservación y borrado</span></h2>
 
 
 
@@ -408,8 +441,8 @@
 
       </section>
 
-      <section id="c10">
-        <h2><span class="num">10</span><span lang="es">Menores</span></h2>
+      <section id="c11">
+        <h2><span class="num">11</span><span lang="es">Menores</span></h2>
 
 
 
@@ -419,8 +452,8 @@
 
       </section>
 
-      <section id="c11">
-        <h2><span class="num">11</span><span lang="es">Tus derechos</span></h2>
+      <section id="c12">
+        <h2><span class="num">12</span><span lang="es">Tus derechos</span></h2>
 
 
 
@@ -444,8 +477,8 @@
 
       </section>
 
-      <section id="c12">
-        <h2><span class="num">12</span><span lang="es">Este sitio web</span></h2>
+      <section id="c13">
+        <h2><span class="num">13</span><span lang="es">Este sitio web</span></h2>
 
 
 
@@ -469,8 +502,8 @@
 
       </section>
 
-      <section id="c13">
-        <h2><span class="num">13</span><span lang="es">Cambios en esta política</span></h2>
+      <section id="c14">
+        <h2><span class="num">14</span><span lang="es">Cambios en esta política</span></h2>
 
 
 

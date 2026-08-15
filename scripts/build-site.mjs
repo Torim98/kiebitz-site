@@ -131,10 +131,16 @@ function localizedMetadata(language, page) {
       }, null, 2)}\n</script>`
     : "";
 
+  // Konto- und Rückkehrseiten gehören keinem Suchindex: Sie zeigen nur den
+  // Zustand einer Sitzung und wären für jeden anderen Besucher leer.
+  const robots = pageConfig.noindex
+    ? "noindex, follow"
+    : "index, follow, max-image-preview:large";
+
   return `<title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(description)}">
 <meta name="theme-color" content="#0e0e0d">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="${robots}">
 <link rel="canonical" href="${canonical}">
 ${alternates}
 <link rel="icon" href="__ICON_128__" type="image/png">
@@ -184,6 +190,9 @@ function rewriteLocalReferences(html, language, page, outputRelativePath) {
   const outputDirectory = `/${posix.dirname(outputRelativePath)}`.replace(/\/$/, "") || "/";
   const pageByOriginalPath = new Map([
     ["/index.html", "home"],
+    ["/plus/index.html", "plus"],
+    ["/plus/account/index.html", "plusAccount"],
+    ["/plus/success/index.html", "plusSuccess"],
     ["/privacy/index.html", "privacy"],
     ["/impressum/index.html", "impressum"]
   ]);
@@ -233,7 +242,7 @@ async function buildPage(language, page, template) {
 }
 
 function buildSitemap() {
-  const groups = pageEntries.map(([page]) => languageCodes.map((language) => {
+  const groups = pageEntries.filter(([, config]) => !config.noindex).map(([page]) => languageCodes.map((language) => {
     const alternates = languageCodes
       .map((alternate) => `    <xhtml:link rel="alternate" hreflang="${languages[alternate].tag}" href="${absoluteUrl(alternate, page)}"/>`)
       .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${absoluteUrl("en", page)}"/>`)
@@ -284,7 +293,7 @@ async function main() {
   await mkdir(client, { recursive: true });
 
   for (const entry of [
-    "index.html", "privacy", "impressum", "desktop-ad", "assets", "robots.txt", "sitemap.xml", ".nojekyll",
+    "index.html", "plus", "privacy", "impressum", "desktop-ad", "assets", "robots.txt", "sitemap.xml", ".nojekyll",
     ...languageCodes.filter((code) => languages[code].path)
   ]) {
     await cp(path.join(root, entry), path.join(client, entry), { recursive: true });

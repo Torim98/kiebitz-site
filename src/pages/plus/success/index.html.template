@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-lang="en" data-title-de="Kauf bestätigt · Kiebitz Plus" data-title-en="Purchase confirmed · Kiebitz Plus" data-title-fr="Achat confirmé · Kiebitz Plus" data-title-es="Compra confirmada · Kiebitz Plus" data-title-zh="购买已确认 · Kiebitz Plus" data-title-hi="ख़रीद की पुष्टि · Kiebitz Plus" data-title-ar="تأكيد الشراء · Kiebitz Plus">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Purchase confirmed · Kiebitz Plus</title>
+<meta name="description" content="Rueckkehr aus dem Stripe-Checkout: Kiebitz Plus wird bestaetigt und in der App freigeschaltet. · Returning from Stripe checkout: Kiebitz Plus is confirmed and unlocked in the app.">
+<meta name="theme-color" content="#0e0e0d">
+<link rel="icon" href="../../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icon.png">
+<link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+(function () {
+  var LANGS = { de: 1, en: 1, fr: 1, es: 1, zh: 1, hi: 1, ar: 1 };
+  var TAG = { de: "de", en: "en", fr: "fr", es: "es", zh: "zh-Hans", hi: "hi", ar: "ar" };
+  var l = "en";
+  try {
+    var s = localStorage.getItem("kiebitz-lang");
+    if (s && LANGS[s]) {
+      l = s;
+    } else {
+      var list = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || ""];
+      for (var i = 0; i < list.length; i++) {
+        var c = String(list[i]).toLowerCase().split("-")[0];
+        if (LANGS[c]) { l = c; break; }
+      }
+    }
+  } catch (e) { /* egal */ }
+  var d = document.documentElement;
+  d.setAttribute("data-lang", l);
+  d.setAttribute("lang", TAG[l]);
+  d.setAttribute("dir", l === "ar" ? "rtl" : "ltr");
+  try {
+    var m = localStorage.getItem("kiebitz-motion");
+    if (m === "on" || m === "off") d.setAttribute("data-motion", m);
+  } catch (e) { /* egal */ }
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span><span lang="fr">Aller au contenu</span><span lang="es">Ir al contenido</span><span lang="zh">跳到主要内容</span><span lang="hi">सामग्री पर जाएँ</span><span lang="ar">تخطَّ إلى المحتوى</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../../index.html" aria-label="Kiebitz">
+      <img src="../../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="de">Zug um Zugvogel</span><span lang="en">Moves take flight</span><span lang="fr">Coup d’aile</span><span lang="es">Jugadas que vuelan</span><span lang="zh">步步高飞</span><span lang="hi">हर चाल, एक उड़ान</span><span lang="ar">نقلة تُحلّق</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="../../index.html#features"><span lang="de">Funktionen</span><span lang="en">Features</span><span lang="fr">Fonctions</span><span lang="es">Funciones</span><span lang="zh">功能</span><span lang="hi">विशेषताएँ</span><span lang="ar">المزايا</span></a>
+      <a href="../../index.html#pricing"><span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></a>
+      <a href="../../index.html#download"><span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></a>
+      <a href="../../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="Sprache · Language · Langue · Idioma · 语言 · भाषा · اللغة">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-sm" href="../../plus/index.html"><span lang="de">Zurück</span><span lang="en">Back</span><span lang="fr">Retour</span><span lang="es">Volver</span><span lang="zh">返回</span><span lang="hi">वापस</span><span lang="ar">رجوع</span></a>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap">
+    <article class="plus-page" data-plus-success>
+      <p class="eyebrow"><b>+</b> Kiebitz Plus</p>
+      <h1><span lang="de">Danke.</span><span lang="en">Thank you.</span><span lang="fr">Merci.</span><span lang="es">Gracias.</span><span lang="zh">谢谢。</span><span lang="hi">धन्यवाद।</span><span lang="ar">شكرًا لك.</span></h1>
+
+      <div data-plus-view="waiting">
+        <section class="plus-card">
+          <h2><span lang="de">Der Kauf wird bestätigt</span><span lang="en">Confirming your purchase</span><span lang="fr">Confirmation de l’achat</span><span lang="es">Confirmando la compra</span><span lang="zh">正在确认这次购买</span><span lang="hi">ख़रीद की पुष्टि हो रही है</span><span lang="ar">يجري تأكيد الشراء</span></h2>
+          <p><span lang="de">Stripe meldet den Kauf gleich an Kiebitz. Diese Seite prüft das ein paar Mal von selbst.</span><span lang="en">Stripe reports the purchase to Kiebitz in a moment. This page checks a few times by itself.</span><span lang="fr">Stripe transmet l’achat à Kiebitz dans un instant. Cette page vérifie d’elle-même à quelques reprises.</span><span lang="es">Stripe informa de la compra a Kiebitz en un momento. Esta página lo comprueba sola unas cuantas veces.</span><span lang="zh">Stripe 稍后就会把这次购买告知 Kiebitz。本页会自行检查几次。</span><span lang="hi">Stripe यह ख़रीद अभी Kiebitz को बता देगा। यह पृष्ठ कुछ बार ख़ुद जाँचता है।</span><span lang="ar">سيبلّغ Stripe عملية الشراء إلى Kiebitz بعد لحظات. وتتحقّق هذه الصفحة بنفسها بضع مرات.</span></p>
+          <p class="small"><span lang="de">Du musst nicht warten: Der Status kommt auch dann an, wenn du diese Seite schließt.</span><span lang="en">You do not have to wait: the status arrives even if you close this page.</span><span lang="fr">Vous n’avez pas à attendre : le statut arrive même si vous fermez cette page.</span><span lang="es">No hace falta esperar: el estado llega aunque cierres esta página.</span><span lang="zh">不必守在这里：即使关掉本页，状态也会到位。</span><span lang="hi">इंतज़ार ज़रूरी नहीं: यह पृष्ठ बंद कर देने पर भी स्थिति पहुँच जाती है।</span><span lang="ar">لا حاجة للانتظار: تصل الحالة حتى لو أغلقت هذه الصفحة.</span></p>
+          <noscript><p class="small"><span lang="de">Für Anmeldung und Kauf wird JavaScript gebraucht. Kiebitz selbst läuft davon unabhängig.</span><span lang="en">Signing in and buying need JavaScript. Kiebitz itself runs independently of it.</span><span lang="fr">La connexion et l’achat nécessitent JavaScript. Kiebitz lui-même fonctionne indépendamment.</span><span lang="es">El acceso y la compra necesitan JavaScript. Kiebitz en sí funciona sin él.</span><span lang="zh">登录和购买需要 JavaScript。Kiebitz 本身与此无关。</span><span lang="hi">साइन-इन और ख़रीद के लिए JavaScript चाहिए। Kiebitz ख़ुद इससे स्वतंत्र चलता है।</span><span lang="ar">يحتاج تسجيل الدخول والشراء إلى JavaScript. أما Kiebitz نفسه فيعمل بمعزل عن ذلك.</span></p></noscript>
+        </section>
+      </div>
+
+      <div data-plus-view="ready" hidden>
+        <section class="plus-card">
+          <h2><span lang="de">Kiebitz Plus ist aktiv.</span><span lang="en">Kiebitz Plus is active.</span><span lang="fr">Kiebitz Plus est actif.</span><span lang="es">Kiebitz Plus está activo.</span><span lang="zh">Kiebitz Plus 已启用。</span><span lang="hi">Kiebitz Plus सक्रिय है।</span><span lang="ar">‏Kiebitz Plus مُفعّل.</span></h2>
+          <p data-plus-trial hidden><span lang="de">Der kostenlose Testzeitraum läuft. Du kannst jederzeit kündigen.</span><span lang="en">The free trial is running. You can cancel any time.</span><span lang="fr">L’essai gratuit est en cours. Vous pouvez résilier à tout moment.</span><span lang="es">La prueba gratuita está en marcha. Puedes cancelar cuando quieras.</span><span lang="zh">免费试用已经开始，你随时可以取消。</span><span lang="hi">मुफ़्त परीक्षण चल रहा है। आप कभी भी रद्द कर सकते हैं।</span><span lang="ar">التجربة المجانية جارية. ويمكنك الإلغاء في أي وقت.</span></p>
+          <p><span lang="de">Öffne Kiebitz; die App holt die Freischaltung beim nächsten Blick auf die Einstellungen selbst ab.</span><span lang="en">Open Kiebitz; the app picks the unlock up by itself the next time you look at its settings.</span><span lang="fr">Ouvrez Kiebitz ; l’application récupère le déblocage d’elle-même dès votre prochain passage dans les réglages.</span><span lang="es">Abre Kiebitz; la app recoge el desbloqueo por sí sola la próxima vez que entres en los ajustes.</span><span lang="zh">打开 Kiebitz 即可；下次进入设置时，应用会自行取到这次解锁。</span><span lang="hi">Kiebitz खोलिए; अगली बार सेटिंग्स देखते ही ऐप यह अनलॉक ख़ुद ले लेता है।</span><span lang="ar">افتح Kiebitz؛ سيلتقط التطبيق التفعيل بنفسه عند زيارتك التالية للإعدادات.</span></p>
+          <p class="plus-actions">
+            <a class="btn btn-primary" href="kiebitz://open?page=settings&amp;section=plus"><span lang="de">Kiebitz öffnen</span><span lang="en">Open Kiebitz</span><span lang="fr">Ouvrir Kiebitz</span><span lang="es">Abrir Kiebitz</span><span lang="zh">打开 Kiebitz</span><span lang="hi">Kiebitz खोलें</span><span lang="ar">افتح Kiebitz</span></a>
+            <a class="btn" href="../account/index.html"><span lang="de">Zur Kontoseite</span><span lang="en">Go to your account</span><span lang="fr">Vers votre compte</span><span lang="es">Ir a tu cuenta</span><span lang="zh">前往账号页面</span><span lang="hi">खाता पृष्ठ पर जाएँ</span><span lang="ar">إلى صفحة الحساب</span></a>
+          </p>
+          <p class="small"><span lang="de">Kiebitz noch nicht installiert? Desktop und Android findest du hier:</span><span lang="en">Kiebitz not installed yet? Desktop and Android are here:</span><span lang="fr">Kiebitz pas encore installé ? Ordinateur et Android, c’est ici :</span><span lang="es">¿Aún no tienes Kiebitz? Escritorio y Android están aquí:</span><span lang="zh">还没装 Kiebitz？桌面版和 Android 版在这里：</span><span lang="hi">Kiebitz अभी इंस्टॉल नहीं है? डेस्कटॉप और Android यहाँ मिलेंगे:</span><span lang="ar">لم تثبّت Kiebitz بعد؟ نسخ سطح المكتب وAndroid من هنا:</span></p>
+          <p class="plus-actions">
+            <a class="btn" href="https://github.com/Torim98/Kiebitz/releases" rel="noopener"><span lang="de">Desktop laden</span><span lang="en">Get the desktop build</span><span lang="fr">Télécharger pour ordinateur</span><span lang="es">Descargar para escritorio</span><span lang="zh">下载桌面版</span><span lang="hi">डेस्कटॉप पाएँ</span><span lang="ar">نزّل نسخة سطح المكتب</span></a>
+            <a class="btn" href="https://play.google.com/store/apps/details?id=de.torim.kiebitz" target="_blank" rel="noopener"><span lang="de">Bei Google Play</span><span lang="en">On Google Play</span><span lang="fr">Sur Google Play</span><span lang="es">En Google Play</span><span lang="zh">前往 Google Play</span><span lang="hi">Google Play पर</span><span lang="ar">على Google Play</span></a>
+          </p>
+        </section>
+      </div>
+
+      <div data-plus-view="pending" hidden>
+        <section class="plus-card">
+          <h2><span lang="de">Es dauert noch einen Moment</span><span lang="en">It is taking a moment longer</span><span lang="fr">Cela prend encore un instant</span><span lang="es">Está tardando un momento más</span><span lang="zh">还需要一点时间</span><span lang="hi">अभी थोड़ा समय और लगेगा</span><span lang="ar">يستغرق الأمر لحظة أخرى</span></h2>
+          <p><span lang="de">Die Bestätigung von Stripe ist noch nicht angekommen. Das holt sich Kiebitz von selbst nach; auf der Kontoseite siehst du den aktuellen Stand.</span><span lang="en">Stripe’s confirmation has not arrived yet. Kiebitz picks it up by itself; your account page shows the current state.</span><span lang="fr">La confirmation de Stripe n’est pas encore arrivée. Kiebitz la récupère tout seul ; votre page de compte montre l’état actuel.</span><span lang="es">La confirmación de Stripe aún no ha llegado. Kiebitz la recoge por sí solo; tu página de cuenta muestra el estado actual.</span><span lang="zh">Stripe 的确认还没到。Kiebitz 会自行取回；账号页面会显示当前状态。</span><span lang="hi">Stripe की पुष्टि अभी नहीं आई है। Kiebitz उसे ख़ुद ले लेता है; मौजूदा स्थिति खाता पृष्ठ पर दिखती है।</span><span lang="ar">لم يصل تأكيد Stripe بعد. يلتقطه Kiebitz بنفسه؛ وتُظهر صفحة الحساب الحالة الراهنة.</span></p>
+          <p class="plus-actions"><a class="btn" href="../account/index.html"><span lang="de">Zur Kontoseite</span><span lang="en">Go to your account</span><span lang="fr">Vers votre compte</span><span lang="es">Ir a tu cuenta</span><span lang="zh">前往账号页面</span><span lang="hi">खाता पृष्ठ पर जाएँ</span><span lang="ar">إلى صفحة الحساب</span></a></p>
+        </section>
+      </div>
+
+      <div data-plus-view="signed-out" hidden>
+        <section class="plus-card">
+          <h2><span lang="de">Nicht angemeldet</span><span lang="en">Not signed in</span><span lang="fr">Non connecté</span><span lang="es">Sin sesión iniciada</span><span lang="zh">尚未登录</span><span lang="hi">साइन इन नहीं</span><span lang="ar">غير مسجّل الدخول</span></h2>
+          <p><span lang="de">Diese Sitzung ist abgelaufen. Melde dich erneut an, um den Status zu sehen.</span><span lang="en">This session has expired. Sign in again to see your status.</span><span lang="fr">Cette session a expiré. Reconnectez-vous pour voir votre statut.</span><span lang="es">Esta sesión ha caducado. Vuelve a iniciar sesión para ver tu estado.</span><span lang="zh">这个会话已过期。请重新登录以查看状态。</span><span lang="hi">यह सत्र समाप्त हो गया है। स्थिति देखने के लिए दोबारा साइन इन कीजिए।</span><span lang="ar">انتهت صلاحية هذه الجلسة. سجّل الدخول مجددًا لترى حالتك.</span></p>
+          <p class="plus-actions"><a class="btn btn-primary" href="../index.html"><span lang="de">Zur Anmeldung</span><span lang="en">Go to sign-in</span><span lang="fr">Vers la connexion</span><span lang="es">Ir al acceso</span><span lang="zh">前往登录</span><span lang="hi">साइन-इन पर जाएँ</span><span lang="ar">إلى تسجيل الدخول</span></a></p>
+        </section>
+      </div>
+
+      <p class="small"><span lang="de">Kiebitz bleibt local-first. Das Konto trägt allein die Anmeldung, die Abrechnung und die signierte Freischaltung. Partien, Analysen, Trainingsdaten und Einstellungen werden nicht hochgeladen.</span><span lang="en">Kiebitz stays local-first. The account only carries sign-in, billing and the signed unlock. Games, analyses, training data and settings are never uploaded.</span><span lang="fr">Kiebitz reste local-first. Le compte ne porte que la connexion, la facturation et le déblocage signé. Parties, analyses, données d’entraînement et réglages ne sont jamais téléversés.</span><span lang="es">Kiebitz sigue siendo local-first. La cuenta solo sirve para el acceso, la facturación y el desbloqueo firmado. Las partidas, los análisis, los datos de entrenamiento y los ajustes nunca se suben.</span><span lang="zh">Kiebitz 依旧本地优先。账号只承担登录、计费和签名解锁。对局、分析、训练数据和设置都不会上传。</span><span lang="hi">Kiebitz लोकल-फ़र्स्ट ही रहता है। खाता केवल साइन-इन, बिलिंग और हस्ताक्षरित अनलॉक संभालता है। बाज़ियाँ, विश्लेषण, अभ्यास डेटा और सेटिंग्स कभी अपलोड नहीं होतीं।</span><span lang="ar">يبقى Kiebitz محليًا أولًا. الحساب لا يحمل سوى تسجيل الدخول والفوترة والتفعيل الموقّع. أما المباريات والتحليلات وبيانات التدريب والإعدادات فلا تُرفع أبدًا.</span></p>
+    </article>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="flock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="foot-note" style="margin-top:8px"><span lang="de">Zug um Zugvogel. Local-first Schach-Begleiter für Desktop und Android. Deine Partien und Analysen bleiben auf deinen Geräten.</span><span lang="en">Moves take flight. A local-first chess companion for desktop and Android. Your games and analyses stay on your devices.</span><span lang="fr">Coup d’aile. Un compagnon d’échecs local-first pour ordinateur et Android. Vos parties et analyses restent sur vos appareils.</span><span lang="es">Jugadas que vuelan. Un compañero de ajedrez local-first para escritorio y Android. Tus partidas y análisis se quedan en tus dispositivos.</span><span lang="zh">步步高飞。面向桌面端与 Android 的本地优先国际象棋助手。你的对局与分析留在自己的设备上。</span><span lang="hi">हर चाल, एक उड़ान। डेस्कटॉप और Android के लिए लोकल-फ़र्स्ट शतरंज साथी। आपकी बाज़ियाँ और विश्लेषण आपके उपकरणों पर रहते हैं।</span><span lang="ar">نقلة تُحلّق. رفيق شطرنج محلي أولًا لسطح المكتب وAndroid. تبقى مبارياتك وتحليلاتك على أجهزتك.</span></p>
+      <p class="small" style="margin-top:12px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <div class="foot-links-main">
+      <a href="../../index.html#pricing"><span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></a>
+      <a href="../../plus/index.html">Kiebitz Plus</a>
+      <a href="../../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="../../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
+      <a href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">Releases</a>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<script src="../../assets/site.js" defer></script>
+<script src="../../assets/plus.js" defer></script>
+</body>
+</html>

@@ -89,12 +89,13 @@
         <li><a href="#c5">5 <span lang="zh">权限</span></a></li>
         <li><a href="#c6">6 <span lang="zh">设备同步</span></a></li>
         <li><a href="#c7">7 <span lang="zh">广告与隐私</span></a></li>
-        <li><a href="#c8">8 <span lang="zh">法律依据</span></a></li>
-        <li><a href="#c9">9 <span lang="zh">保存期限与删除</span></a></li>
-        <li><a href="#c10">10 <span lang="zh">未成年人</span></a></li>
-        <li><a href="#c11">11 <span lang="zh">你的权利</span></a></li>
-        <li><a href="#c12">12 <span lang="zh">本网站</span></a></li>
-        <li><a href="#c13">13 <span lang="zh">变更</span></a></li>
+        <li><a href="#c8">8 <span lang="zh">账号与 Kiebitz Plus</span></a></li>
+        <li><a href="#c9">9 <span lang="zh">法律依据</span></a></li>
+        <li><a href="#c10">10 <span lang="zh">保存期限与删除</span></a></li>
+        <li><a href="#c11">11 <span lang="zh">未成年人</span></a></li>
+        <li><a href="#c12">12 <span lang="zh">你的权利</span></a></li>
+        <li><a href="#c13">13 <span lang="zh">本网站</span></a></li>
+        <li><a href="#c14">14 <span lang="zh">变更</span></a></li>
       </ul>
     </aside>
 
@@ -115,7 +116,7 @@
 
 
 
-        <span lang="zh">更新日期：2026 年 8 月 11 日 · 适用于所有 Kiebitz 测试版。译文仅供参考；如有出入，以德文版本为准。</span>
+        <span lang="zh">更新日期：2026 年 8 月 15 日 · 适用于所有 Kiebitz 测试版。译文仅供参考；如有出入，以德文版本为准。</span>
 
 
       </p>
@@ -357,7 +358,39 @@
       </section>
 
       <section id="c8">
-        <h2><span class="num">08</span><span lang="zh">法律依据</span></h2>
+        <h2><span class="num">08</span><span lang="zh">Kiebitz 账号与 Kiebitz Plus</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="zh">Kiebitz 账号是自愿的；没有账号，Kiebitz Free 一样可用。若你创建账号，提供者会处理你的电子邮箱地址、该地址的假名化哈希值、仅登录与会话令牌的哈希值、创建与登录的时间戳、权益状态（Free、Plus、试用、有效期）以及加密的购买引用。<strong>不会传输任何棋局数据</strong>：对局、分析、笔记、训练与进度数据都留在你的设备上。账号 API 运行在 <code>api.kiebitz.dev</code>，使用 Cloudflare 的基础设施（Cloudflare Germany GmbH / Cloudflare, Inc.）。</p>
+        <p lang="zh">登录链接通过 <strong>Resend</strong>（Resend, Inc.，美国）发送，传输内容为收件地址、一次性链接和投递元数据。Kiebitz Plus 的支付由 <strong>Stripe</strong>（Stripe Payments Europe, Ltd.，爱尔兰，及 Stripe, Inc.，美国）处理。支付方式和账单数据保存在 Stripe；Kiebitz 只收到客户引用、订阅状态和有效期，不会收到完整的支付数据。若改为通过 <strong>Google Play</strong> 购买 Kiebitz Plus，提供者会通过 Google Play Developer API（Google Ireland Ltd. / Google LLC）核验订阅状态。在这些服务商处，数据可能在第三国（尤其是美国）被处理。</p>
+        <p lang="zh">若你在本网站登录（页面 <code>/plus/</code>、<code>/plus/account/</code> 和 <code>/plus/success/</code>），API 会设置一个技术上必需的会话 Cookie（<code>__Host-kiebitz_session</code>，HttpOnly、Secure、SameSite=Lax，有效期 30 天）。它不含棋局数据，不用于访问统计或广告，依据德国《TDDDG》第 25 条第 2 款第 2 项无需征得同意。应用则使用会话令牌，并与签名权益一起存放在系统的凭据存储中。签名权益包含账号标识、档位、功能清单和有效期；它在本地校验，过期后会自行回落到 Free。</p>
+        <p lang="zh">账号、订阅与解锁的法律依据是 GDPR 第 6 条第 1 款 b 项（履行使用与订阅合同），防止滥用和限流的依据是第 6 条第 1 款 f 项，保存账务凭证的依据是第 6 条第 1 款 c 项。你可以随时在应用中或通过 <code>/plus/account/</code> 删除账号；若订阅仍在生效，须先在对应渠道取消。删除会清除会话和登录链接，将账号记录中的邮箱地址匿名化，并解除购买来源的关联。地址的假名化哈希值以及“已使用过免费试用”这一信息会被保留，以免删除后重新注册再获得一次试用（GDPR 第 6 条第 1 款 f 项）。</p>
+
+
+
+
+
+
+
+
+      </section>
+
+      <section id="c9">
+        <h2><span class="num">09</span><span lang="zh">法律依据</span></h2>
 
 
 
@@ -378,8 +411,8 @@
 
       </section>
 
-      <section id="c9">
-        <h2><span class="num">09</span><span lang="zh">保存期限与删除</span></h2>
+      <section id="c10">
+        <h2><span class="num">10</span><span lang="zh">保存期限与删除</span></h2>
 
 
 
@@ -408,8 +441,8 @@
 
       </section>
 
-      <section id="c10">
-        <h2><span class="num">10</span><span lang="zh">儿童与青少年</span></h2>
+      <section id="c11">
+        <h2><span class="num">11</span><span lang="zh">儿童与青少年</span></h2>
 
 
 
@@ -419,8 +452,8 @@
 
       </section>
 
-      <section id="c11">
-        <h2><span class="num">11</span><span lang="zh">你的权利</span></h2>
+      <section id="c12">
+        <h2><span class="num">12</span><span lang="zh">你的权利</span></h2>
 
 
 
@@ -444,8 +477,8 @@
 
       </section>
 
-      <section id="c12">
-        <h2><span class="num">12</span><span lang="zh">本网站</span></h2>
+      <section id="c13">
+        <h2><span class="num">13</span><span lang="zh">本网站</span></h2>
 
 
 
@@ -469,8 +502,8 @@
 
       </section>
 
-      <section id="c13">
-        <h2><span class="num">13</span><span lang="zh">本政策的变更</span></h2>
+      <section id="c14">
+        <h2><span class="num">14</span><span lang="zh">本政策的变更</span></h2>
 
 
 

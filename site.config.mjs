@@ -97,6 +97,74 @@ export const pages = {
       ar: "يستورد Kiebitz مبارياتك من chess.com وLichess ويحللها محليًا باستخدام Stockfish ليكشف نقاط قوتك وضعفك الحقيقية. تبقى بيانات الشطرنج والتحليلات على أجهزتك."
     }
   },
+  plus: {
+    source: "src/pages/plus/index.html.template",
+    route: "plus/",
+    titles: {
+      de: "Kiebitz Plus · Anmelden und freischalten",
+      en: "Kiebitz Plus · Sign in and unlock",
+      fr: "Kiebitz Plus · Se connecter et débloquer",
+      es: "Kiebitz Plus · Iniciar sesión y desbloquear",
+      zh: "Kiebitz Plus · 登录并解锁",
+      hi: "Kiebitz Plus · साइन इन और अनलॉक",
+      ar: "Kiebitz Plus · تسجيل الدخول والتفعيل"
+    },
+    descriptions: {
+      de: "Kiebitz Plus: 7 Tage kostenlos testen, danach 1,99 € pro Monat, jederzeit kündbar. Anmeldung ohne Passwort, Freischaltung für Desktop und Android.",
+      en: "Kiebitz Plus: try free for 7 days, then €1.99 per month, cancel any time. Passwordless sign-in, unlocked on desktop and Android.",
+      fr: "Kiebitz Plus : 7 jours gratuits, puis 1,99 € par mois, résiliable à tout moment. Connexion sans mot de passe, débloqué sur ordinateur et Android.",
+      es: "Kiebitz Plus: 7 días gratis, después 1,99 € al mes, cancelable en cualquier momento. Acceso sin contraseña, desbloqueado en escritorio y Android.",
+      zh: "Kiebitz Plus：免费试用 7 天，之后每月 1,99 €，随时可取消。无需密码登录，桌面端与 Android 一并解锁。",
+      hi: "Kiebitz Plus: 7 दिन मुफ़्त, उसके बाद 1,99 € प्रति माह, कभी भी रद्द करें। बिना पासवर्ड साइन-इन, डेस्कटॉप और Android दोनों पर।",
+      ar: "‏Kiebitz Plus: سبعة أيام مجانًا ثم 1,99 € شهريًا مع إمكانية الإلغاء في أي وقت. تسجيل دخول بلا كلمة مرور، وتفعيل على سطح المكتب وAndroid."
+    }
+  },
+  plusAccount: {
+    noindex: true,
+    source: "src/pages/plus/account/index.html.template",
+    route: "plus/account/",
+    titles: {
+      de: "Konto · Kiebitz Plus",
+      en: "Account · Kiebitz Plus",
+      fr: "Compte · Kiebitz Plus",
+      es: "Cuenta · Kiebitz Plus",
+      zh: "账号 · Kiebitz Plus",
+      hi: "खाता · Kiebitz Plus",
+      ar: "الحساب · Kiebitz Plus"
+    },
+    descriptions: {
+      de: "Kiebitz-Konto: Status ansehen, Kiebitz Plus buchen, Abonnement verwalten, abmelden und Konto löschen.",
+      en: "Kiebitz account: check your status, subscribe to Kiebitz Plus, manage billing, sign out and delete the account.",
+      fr: "Compte Kiebitz : consulter le statut, souscrire à Kiebitz Plus, gérer l’abonnement, se déconnecter et supprimer le compte.",
+      es: "Cuenta de Kiebitz: consultar el estado, contratar Kiebitz Plus, gestionar la suscripción, cerrar sesión y borrar la cuenta.",
+      zh: "Kiebitz 账号：查看状态、订阅 Kiebitz Plus、管理订阅、退出登录以及删除账号。",
+      hi: "Kiebitz खाता: स्थिति देखें, Kiebitz Plus लें, सदस्यता प्रबंधित करें, साइन आउट करें और खाता मिटाएँ।",
+      ar: "حساب Kiebitz: عرض الحالة والاشتراك في Kiebitz Plus وإدارة الاشتراك وتسجيل الخروج وحذف الحساب."
+    }
+  },
+  plusSuccess: {
+    noindex: true,
+    source: "src/pages/plus/success/index.html.template",
+    route: "plus/success/",
+    titles: {
+      de: "Kauf bestätigt · Kiebitz Plus",
+      en: "Purchase confirmed · Kiebitz Plus",
+      fr: "Achat confirmé · Kiebitz Plus",
+      es: "Compra confirmada · Kiebitz Plus",
+      zh: "购买已确认 · Kiebitz Plus",
+      hi: "ख़रीद की पुष्टि · Kiebitz Plus",
+      ar: "تأكيد الشراء · Kiebitz Plus"
+    },
+    descriptions: {
+      de: "Rückkehr aus dem Stripe-Checkout: Kiebitz Plus wird bestätigt und in der App freigeschaltet.",
+      en: "Returning from Stripe checkout: Kiebitz Plus is confirmed and unlocked in the app.",
+      fr: "Retour du paiement Stripe : Kiebitz Plus est confirmé et débloqué dans l’application.",
+      es: "Vuelta desde el pago en Stripe: Kiebitz Plus queda confirmado y desbloqueado en la app.",
+      zh: "从 Stripe 结账返回：Kiebitz Plus 已确认并在应用中解锁。",
+      hi: "Stripe चेकआउट से वापसी: Kiebitz Plus की पुष्टि होकर ऐप में अनलॉक हो जाता है।",
+      ar: "العودة من الدفع عبر Stripe: يتأكّد Kiebitz Plus ويُفعَّل في التطبيق."
+    }
+  },
   privacy: {
     source: "src/pages/privacy/index.html.template",
     route: "privacy/",

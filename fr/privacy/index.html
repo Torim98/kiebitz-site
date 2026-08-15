@@ -89,12 +89,13 @@
         <li><a href="#c5">5 <span lang="fr">Autorisations</span></a></li>
         <li><a href="#c6">6 <span lang="fr">Sync entre appareils</span></a></li>
         <li><a href="#c7">7 <span lang="fr">Publicités &amp; confidentialité</span></a></li>
-        <li><a href="#c8">8 <span lang="fr">Bases légales</span></a></li>
-        <li><a href="#c9">9 <span lang="fr">Conservation &amp; suppression</span></a></li>
-        <li><a href="#c10">10 <span lang="fr">Enfants</span></a></li>
-        <li><a href="#c11">11 <span lang="fr">Vos droits</span></a></li>
-        <li><a href="#c12">12 <span lang="fr">Ce site web</span></a></li>
-        <li><a href="#c13">13 <span lang="fr">Modifications</span></a></li>
+        <li><a href="#c8">8 <span lang="fr">Compte &amp; Kiebitz Plus</span></a></li>
+        <li><a href="#c9">9 <span lang="fr">Bases légales</span></a></li>
+        <li><a href="#c10">10 <span lang="fr">Conservation &amp; suppression</span></a></li>
+        <li><a href="#c11">11 <span lang="fr">Enfants</span></a></li>
+        <li><a href="#c12">12 <span lang="fr">Vos droits</span></a></li>
+        <li><a href="#c13">13 <span lang="fr">Ce site web</span></a></li>
+        <li><a href="#c14">14 <span lang="fr">Modifications</span></a></li>
       </ul>
     </aside>
 
@@ -113,7 +114,7 @@
       <p class="doc-meta">
 
 
-        <span lang="fr">Mise à jour : 11 août 2026 · s’applique à toutes les versions bêta de Kiebitz. Traduction fournie à titre d’information ; en cas de divergence, la version allemande fait foi.</span>
+        <span lang="fr">Mise à jour : 15 août 2026 · s’applique à toutes les versions bêta de Kiebitz. Traduction fournie à titre d’information ; en cas de divergence, la version allemande fait foi.</span>
 
 
 
@@ -357,7 +358,39 @@
       </section>
 
       <section id="c8">
-        <h2><span class="num">08</span><span lang="fr">Bases légales</span></h2>
+        <h2><span class="num">08</span><span lang="fr">Compte Kiebitz et Kiebitz Plus</span></h2>
+
+
+
+
+
+
+
+
+        <p lang="fr">Un compte Kiebitz est facultatif ; Kiebitz Free fonctionne sans. Si vous en créez un, l’éditeur traite votre adresse e-mail, un condensé pseudonyme de cette adresse, uniquement des condensés des jetons de connexion et de session, les horodatages de création et de connexion, le statut des droits (Free, Plus, essai, durée) ainsi que des références d’achat chiffrées. <strong>Aucune donnée d’échecs n’est transmise</strong> : parties, analyses, notes, données d’entraînement et de progression restent sur vos appareils. L’API du compte tourne sur <code>api.kiebitz.dev</code>, sur l’infrastructure de Cloudflare (Cloudflare Germany GmbH / Cloudflare, Inc.).</p>
+        <p lang="fr">Les liens de connexion sont envoyés via <strong>Resend</strong> (Resend, Inc., États-Unis) ; l’adresse du destinataire, le lien à usage unique et des métadonnées de distribution sont transmis. Le paiement de Kiebitz Plus est assuré par <strong>Stripe</strong> (Stripe Payments Europe, Ltd., Irlande, avec Stripe, Inc., États-Unis). Les données de paiement et de facturation restent chez Stripe ; Kiebitz en reçoit une référence client, le statut de l’abonnement et sa durée, mais pas les données de paiement complètes. Si Kiebitz Plus est acheté via <strong>Google Play</strong>, l’éditeur vérifie le statut de l’abonnement au moyen de l’API Google Play Developer (Google Ireland Ltd. / Google LLC). Chez ces prestataires, un traitement dans des pays tiers, en particulier aux États-Unis, est possible.</p>
+        <p lang="fr">Si vous vous connectez sur ce site (pages <code>/plus/</code>, <code>/plus/account/</code> et <code>/plus/success/</code>), l’API dépose un cookie de session strictement nécessaire (<code>__Host-kiebitz_session</code>, HttpOnly, Secure, SameSite=Lax, 30 jours). Il ne contient aucune donnée d’échecs, ne sert ni à la mesure d’audience ni à la publicité et ne requiert pas de consentement au sens du § 25, al. 2, n° 2 TDDDG. L’application utilise à la place un jeton de session, conservé avec le droit signé dans le gestionnaire de secrets du système. Le droit signé contient un identifiant de compte, le plan, la liste des fonctions et la durée ; il est vérifié localement et retombe de lui-même sur Free à l’expiration.</p>
+        <p lang="fr">La base légale du compte, de l’abonnement et du déblocage est l’art. 6, § 1, b) du RGPD (exécution du contrat d’utilisation et d’abonnement), l’art. 6, § 1, f) pour la prévention des abus et la limitation de débit, et l’art. 6, § 1, c) pour la conservation des pièces comptables. Vous pouvez supprimer votre compte à tout moment dans l’application ou sur <code>/plus/account/</code> ; si un abonnement est encore actif, il doit d’abord être résilié auprès du prestataire concerné. La suppression retire les sessions et les liens de connexion, anonymise l’adresse e-mail dans l’enregistrement du compte et détache les sources d’achat. Le condensé pseudonyme de l’adresse et le fait qu’un essai gratuit a déjà été utilisé sont conservés, afin qu’une suppression suivie d’une réinscription ne crée pas un second essai (art. 6, § 1, f) du RGPD).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </section>
+
+      <section id="c9">
+        <h2><span class="num">09</span><span lang="fr">Bases légales</span></h2>
 
 
 
@@ -378,8 +411,8 @@
 
       </section>
 
-      <section id="c9">
-        <h2><span class="num">09</span><span lang="fr">Conservation et suppression</span></h2>
+      <section id="c10">
+        <h2><span class="num">10</span><span lang="fr">Conservation et suppression</span></h2>
 
 
 
@@ -408,8 +441,8 @@
 
       </section>
 
-      <section id="c10">
-        <h2><span class="num">10</span><span lang="fr">Enfants et adolescents</span></h2>
+      <section id="c11">
+        <h2><span class="num">11</span><span lang="fr">Enfants et adolescents</span></h2>
 
 
         <p lang="fr">Kiebitz ne s’adresse pas spécifiquement aux enfants. La publicité est soumise aux règles d’âge, de consentement et de protection des mineurs de Google et Google Play ; si l’application est classée pour les enfants, les exigences Familles et publicitaires correspondantes doivent aussi être respectées. Les conditions du portail d’échecs concerné s’appliquent à l’import.</p>
@@ -419,8 +452,8 @@
 
       </section>
 
-      <section id="c11">
-        <h2><span class="num">11</span><span lang="fr">Vos droits</span></h2>
+      <section id="c12">
+        <h2><span class="num">12</span><span lang="fr">Vos droits</span></h2>
 
 
 
@@ -444,8 +477,8 @@
 
       </section>
 
-      <section id="c12">
-        <h2><span class="num">12</span><span lang="fr">Ce site web</span></h2>
+      <section id="c13">
+        <h2><span class="num">13</span><span lang="fr">Ce site web</span></h2>
 
 
 
@@ -469,8 +502,8 @@
 
       </section>
 
-      <section id="c13">
-        <h2><span class="num">13</span><span lang="fr">Modifications de la présente politique</span></h2>
+      <section id="c14">
+        <h2><span class="num">14</span><span lang="fr">Modifications de la présente politique</span></h2>
 
 
         <p lang="fr">Si l’application se dote de fonctions impliquant de nouveaux traitements de données, la présente politique sera adaptée au préalable. La version en vigueur est datée ci-dessus et reste accessible en permanence à cette adresse.</p>

@@ -89,12 +89,13 @@
         <li><a href="#c5">5 <span lang="hi">अनुमतियाँ</span></a></li>
         <li><a href="#c6">6 <span lang="hi">डिवाइस सिंक</span></a></li>
         <li><a href="#c7">7 <span lang="hi">विज्ञापन और गोपनीयता</span></a></li>
-        <li><a href="#c8">8 <span lang="hi">क़ानूनी आधार</span></a></li>
-        <li><a href="#c9">9 <span lang="hi">भंडारण अवधि और विलोपन</span></a></li>
-        <li><a href="#c10">10 <span lang="hi">बच्चे</span></a></li>
-        <li><a href="#c11">11 <span lang="hi">आपके अधिकार</span></a></li>
-        <li><a href="#c12">12 <span lang="hi">यह वेबसाइट</span></a></li>
-        <li><a href="#c13">13 <span lang="hi">परिवर्तन</span></a></li>
+        <li><a href="#c8">8 <span lang="hi">खाता और Kiebitz Plus</span></a></li>
+        <li><a href="#c9">9 <span lang="hi">क़ानूनी आधार</span></a></li>
+        <li><a href="#c10">10 <span lang="hi">भंडारण अवधि और विलोपन</span></a></li>
+        <li><a href="#c11">11 <span lang="hi">बच्चे</span></a></li>
+        <li><a href="#c12">12 <span lang="hi">आपके अधिकार</span></a></li>
+        <li><a href="#c13">13 <span lang="hi">यह वेबसाइट</span></a></li>
+        <li><a href="#c14">14 <span lang="hi">परिवर्तन</span></a></li>
       </ul>
     </aside>
 
@@ -116,7 +117,7 @@
 
 
 
-        <span lang="hi">अद्यतन: 11 अगस्त 2026 · सभी Kiebitz बीटा संस्करणों पर लागू। अनुवाद केवल जानकारी के लिए है; भिन्नता होने पर जर्मन संस्करण मान्य होगा।</span>
+        <span lang="hi">अद्यतन: 15 अगस्त 2026 · सभी Kiebitz बीटा संस्करणों पर लागू। अनुवाद केवल जानकारी के लिए है; भिन्नता होने पर जर्मन संस्करण मान्य होगा।</span>
 
       </p>
 
@@ -357,7 +358,39 @@
       </section>
 
       <section id="c8">
-        <h2><span class="num">08</span><span lang="hi">क़ानूनी आधार</span></h2>
+        <h2><span class="num">08</span><span lang="hi">Kiebitz खाता और Kiebitz Plus</span></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p lang="hi">Kiebitz खाता स्वैच्छिक है; Kiebitz Free उसके बिना भी चलता है। खाता बनाने पर प्रदाता आपका ईमेल पता, उस पते का छद्मनाम हैश, केवल साइन-इन और सत्र टोकन के हैश, बनाने व साइन-इन के समयचिह्न, अधिकार-स्थिति (Free, Plus, परीक्षण, अवधि) और एन्क्रिप्टेड ख़रीद-संदर्भ संसाधित करता है। <strong>कोई शतरंज डेटा प्रेषित नहीं होता</strong>: बाज़ियाँ, विश्लेषण, नोट, अभ्यास और प्रगति डेटा आपके उपकरणों पर ही रहते हैं। खाता API <code>api.kiebitz.dev</code> पर Cloudflare के बुनियादी ढाँचे (Cloudflare Germany GmbH / Cloudflare, Inc.) पर चलती है।</p>
+        <p lang="hi">साइन-इन लिंक <strong>Resend</strong> (Resend, Inc., अमेरिका) के ज़रिए भेजे जाते हैं; प्राप्तकर्ता का पता, एक बार चलने वाला लिंक और डिलीवरी मेटाडेटा भेजे जाते हैं। Kiebitz Plus का भुगतान <strong>Stripe</strong> (Stripe Payments Europe, Ltd., आयरलैंड, तथा Stripe, Inc., अमेरिका) संभालता है। भुगतान और चालान डेटा Stripe के पास रहता है; Kiebitz को केवल ग्राहक-संदर्भ, सदस्यता स्थिति और अवधि मिलती है, पूरा भुगतान डेटा नहीं। यदि Kiebitz Plus <strong>Google Play</strong> से लिया जाता है, तो प्रदाता Google Play Developer API (Google Ireland Ltd. / Google LLC) के ज़रिए सदस्यता स्थिति जाँचता है। इन सेवाओं में तीसरे देशों, विशेषकर अमेरिका, में प्रसंस्करण संभव है।</p>
+        <p lang="hi">यदि आप इस वेबसाइट पर साइन इन करते हैं (पृष्ठ <code>/plus/</code>, <code>/plus/account/</code> और <code>/plus/success/</code>), तो API एक तकनीकी रूप से आवश्यक सत्र कुकी सेट करती है (<code>__Host-kiebitz_session</code>, HttpOnly, Secure, SameSite=Lax, 30 दिन)। इसमें कोई शतरंज डेटा नहीं होता, यह मापन या विज्ञापन के लिए इस्तेमाल नहीं होती और § 25(2)(2) TDDDG के अनुसार सहमति-मुक्त है। ऐप इसके बजाय एक सत्र टोकन उपयोग करता है और उसे हस्ताक्षरित अधिकार के साथ सिस्टम के क्रेडेंशियल स्टोर में रखता है। हस्ताक्षरित अधिकार में खाता पहचान, प्लान, सुविधा-सूची और अवधि होती है; इसकी जाँच स्थानीय रूप से होती है और समाप्ति पर यह स्वयं Free पर लौट जाता है।</p>
+        <p lang="hi">खाते, सदस्यता और अनलॉक का क़ानूनी आधार GDPR अनुच्छेद 6(1)(b) है (उपयोग व सदस्यता अनुबंध का निष्पादन), दुरुपयोग-रोकथाम और दर-सीमा के लिए अनुच्छेद 6(1)(f), और लेखा दस्तावेज़ों के संरक्षण के लिए अनुच्छेद 6(1)(c)। आप अपना खाता कभी भी ऐप में या <code>/plus/account/</code> पर मिटा सकते हैं; यदि कोई सदस्यता अब भी चल रही है तो उसे पहले संबंधित प्रदाता के पास रद्द करना होगा। मिटाने पर सत्र और साइन-इन लिंक हट जाते हैं, खाता रिकॉर्ड में ईमेल पता अनाम कर दिया जाता है और ख़रीद-स्रोत अलग कर दिए जाते हैं। पते का छद्मनाम हैश और यह जानकारी कि मुफ़्त परीक्षण पहले ही उपयोग हो चुका है, बनी रहती है, ताकि मिटाकर दोबारा पंजीकरण करने से दूसरा परीक्षण न मिले (GDPR अनुच्छेद 6(1)(f))।</p>
+
+
+
+
+      </section>
+
+      <section id="c9">
+        <h2><span class="num">09</span><span lang="hi">क़ानूनी आधार</span></h2>
 
 
 
@@ -378,8 +411,8 @@
 
       </section>
 
-      <section id="c9">
-        <h2><span class="num">09</span><span lang="hi">भंडारण अवधि और विलोपन</span></h2>
+      <section id="c10">
+        <h2><span class="num">10</span><span lang="hi">भंडारण अवधि और विलोपन</span></h2>
 
 
 
@@ -408,8 +441,8 @@
 
       </section>
 
-      <section id="c10">
-        <h2><span class="num">10</span><span lang="hi">बच्चे और किशोर</span></h2>
+      <section id="c11">
+        <h2><span class="num">11</span><span lang="hi">बच्चे और किशोर</span></h2>
 
 
 
@@ -419,8 +452,8 @@
 
       </section>
 
-      <section id="c11">
-        <h2><span class="num">11</span><span lang="hi">आपके अधिकार</span></h2>
+      <section id="c12">
+        <h2><span class="num">12</span><span lang="hi">आपके अधिकार</span></h2>
 
 
 
@@ -444,8 +477,8 @@
 
       </section>
 
-      <section id="c12">
-        <h2><span class="num">12</span><span lang="hi">यह वेबसाइट</span></h2>
+      <section id="c13">
+        <h2><span class="num">13</span><span lang="hi">यह वेबसाइट</span></h2>
 
 
 
@@ -469,8 +502,8 @@
 
       </section>
 
-      <section id="c13">
-        <h2><span class="num">13</span><span lang="hi">इस नीति में परिवर्तन</span></h2>
+      <section id="c14">
+        <h2><span class="num">14</span><span lang="hi">इस नीति में परिवर्तन</span></h2>
 
 
 

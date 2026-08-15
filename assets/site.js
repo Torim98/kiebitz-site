@@ -138,7 +138,14 @@
   function navigateToLanguage(next) {
     var lang = known(next) ? next : "en";
     var page = root.getAttribute("data-page") || "home";
-    var pagePaths = { home: "index.html", privacy: "privacy/index.html", impressum: "impressum/index.html" };
+    var pagePaths = {
+      home: "index.html",
+      plus: "plus/index.html",
+      plusAccount: "plus/account/index.html",
+      plusSuccess: "plus/success/index.html",
+      privacy: "privacy/index.html",
+      impressum: "impressum/index.html"
+    };
     if (!scriptUrl || !pagePaths[page]) return;
     var siteRoot = new URL("../", scriptUrl);
     var localizedPath = (lang === "en" ? "" : lang + "/") + pagePaths[page];
