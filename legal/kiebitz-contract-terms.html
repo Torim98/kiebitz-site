@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contract terms for Kiebitz Plus · Kiebitz</title>
+<meta name="robots" content="noindex, follow">
+<style>
+  :root {
+    color-scheme: light;
+    --ink: #16171a;
+    --ink-soft: #4d5158;
+    --line: #d8dade;
+    --panel: #f5f6f7;
+    --link: #1b4f8f;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 40px 24px 64px;
+    background: #fff;
+    color: var(--ink);
+    font: 16px/1.65 "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  }
+
+  .sheet { max-width: 42rem; margin: 0 auto; }
+
+  a { color: var(--link); }
+
+  /* ── Kopf ────────────────────────────────────────────────────────────── */
+
+  .eyebrow {
+    margin: 0 0 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .eyebrow b { font-weight: 700; }
+
+  h1 {
+    margin: 0 0 14px;
+    font-size: 1.85rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .doc-sub { margin: 0 0 10px; font-size: 1.02rem; color: var(--ink-soft); }
+
+  .doc-meta {
+    margin: 0 0 8px;
+    padding-bottom: 22px;
+    border-bottom: 2px solid var(--ink);
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  /* ── Abschnitte ──────────────────────────────────────────────────────── */
+
+  section {
+    margin-top: 34px;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
+  }
+
+  section:first-of-type { border-top: 0; }
+
+  h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 0 14px;
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  h2 .num {
+    flex: none;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+  }
+
+  p { margin: 0 0 12px; }
+
+  ul.bul { margin: 0 0 12px; padding-left: 1.25rem; }
+
+  ul.bul li { margin-bottom: 8px; }
+
+  /* ── Hervorgehobene Kästen ───────────────────────────────────────────── */
+
+  .panel {
+    margin: 16px 0;
+    padding: 16px 18px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+  }
+
+  .panel p:last-child { margin-bottom: 0; }
+
+  address { font-style: normal; line-height: 1.75; }
+
+  /* ── Fuß der Anlage ──────────────────────────────────────────────────── */
+
+  .annex-foot {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+
+  .annex-foot p { margin: 0 0 6px; }
+
+  /* ── Druck ───────────────────────────────────────────────────────────── */
+
+  @media print {
+    body {
+      padding: 0;
+      font-size: 10.5pt;
+      line-height: 1.5;
+      color: #000;
+    }
+
+    .sheet { max-width: none; }
+
+    a { color: #000; text-decoration: underline; }
+
+    /* Auf Papier ist ein Link ohne seine Adresse eine Sackgasse. Adressen und
+       Telefonnummern stehen bereits im Text · nur Webadressen fehlen. */
+    a[href^="https://"]::after {
+      content: " (" attr(href) ")";
+      font-size: 0.85em;
+      word-break: break-all;
+    }
+
+    section {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      margin-top: 20pt;
+      padding-top: 14pt;
+    }
+
+    h1, h2 { break-after: avoid; page-break-after: avoid; }
+
+    .panel { background: none; border: 1pt solid #000; }
+
+    @page { margin: 18mm 16mm; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+<p class="eyebrow"><b>§</b> <span lang="en">Legal text</span></p>
+      <h1><span lang="en">Terms of Service</span></h1>
+      <p class="doc-sub">
+
+        <span lang="en">General terms for the Kiebitz account and the <strong>Kiebitz Plus</strong> subscription. Kiebitz Free stays free of charge and fully usable without an account.</span>
+
+      </p>
+      <p class="doc-meta">
+
+        <span lang="en">Last updated: 16 August 2026 · applies to all contracts concluded through this website and the app. Translation for information only; in case of discrepancies the German version prevails.</span>
+
+      </p>
+
+      <section id="t1">
+        <h2><span class="num">01</span><span lang="en">Scope and provider</span></h2>
+
+        <p lang="en">These terms apply to the free Kiebitz account and to the paid Kiebitz Plus subscription, whether you buy it on this website or in the Android app. Your contractual partner is:</p>
+
+        <div class="panel">
+          <address>
+            Tom Maurer<br>
+            Heidegarten 3<br>
+            56244 Helferskirchen<br>
+            <span lang="en">Germany</span><br>
+            <span lang="en">Telephone (statutory contact detail): </span><a href="tel:+4915901971699">+49 1590 1971699</a><br>
+            <span lang="en">Support and contract communication: </span><a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>
+          </address>
+        </div>
+        <p style="margin-top:14px">
+
+          <span lang="en">Kiebitz Free needs neither an account nor a contract; these terms only concern you once you create an account or subscribe to Kiebitz Plus. Deviating terms apply only if the provider expressly agrees to them in text form. Further details about the provider are in the <a href="https://kiebitz.dev/impressum/">legal notice</a>, and the handling of personal data in the <a href="https://kiebitz.dev/privacy/">privacy policy</a>.</span>
+
+        </p>
+      </section>
+
+      <section id="t2">
+        <h2><span class="num">02</span><span lang="en">Services</span></h2>
+
+        <p lang="en">Kiebitz is a local-first chess companion for desktop and Android. Analysis, training and data storage run on your devices; the provider operates no server that receives your games.</p>
+        <p lang="en">Kiebitz Plus unlocks the features listed in the overview on the <a href="https://kiebitz.dev/plus/">Kiebitz Plus</a> page and removes the ads. Unlocking works through a signed entitlement that your device verifies locally; one account covers desktop and Android together and is meant for your own devices.</p>
+        <p lang="en">Specific analysis results, a specific gain in playing strength, or the availability of third-party services such as chess.com, Lichess, chessdb.cn, Stripe or Google Play are not owed. Kiebitz Free stays fully usable in any case.</p>
+
+      </section>
+
+      <section id="t3">
+        <h2><span class="num">03</span><span lang="en">Account and sign-in</span></h2>
+
+        <p lang="en">Sign-in works without a password: you receive a one-time link by email that is valid for 15 minutes and can be used only once. Keep your mailbox secure and do not pass sign-in links on.</p>
+        <p lang="en">You can only enter into a Kiebitz Plus contract if you have full legal capacity. The account is personal; passing it to third parties is not permitted. You can delete your account at any time on the <a href="https://kiebitz.dev/plus/account/">account page</a> or in the app; a running subscription must be cancelled first.</p>
+
+      </section>
+
+      <section id="t4">
+        <h2><span class="num">04</span><span lang="en">Conclusion of contract</span></h2>
+
+        <p lang="en">The presentation of Kiebitz Plus on this website and in the app is an invitation to order. You place a binding order by using the appropriately labelled order button in checkout. The contract is concluded once the order is confirmed and Kiebitz Plus is unlocked.</p>
+        <p lang="en">Payment is processed by the payment provider named in checkout, currently <strong>Stripe</strong> on the website. That provider’s terms additionally apply to payment processing. Immediately before ordering, you are shown in particular the scope of service, total price, billing period, any trial period and cancellation conditions; you can correct input errors until submission.</p>
+        <p lang="en">You receive an order or payment confirmation from the relevant payment provider. Save these terms and the confirmation for your records. The <a href="https://kiebitz.dev/privacy/">privacy policy</a> describes which contract and payment data Kiebitz processes.</p>
+
+      </section>
+
+      <section id="t5">
+        <h2><span class="num">05</span><span lang="en">Prices and payment</span></h2>
+
+        <p lang="en">The total price shown immediately before you place the order in checkout is decisive. It includes all applicable taxes and price components.</p>
+        <ul class="bul" lang="en">
+          <li>Billing is monthly in advance via the payment method you selected.</li>
+          <li>Payment details stay with Stripe or Google, not with Kiebitz; those providers issue the receipts.</li>
+          <li>If a payment fails, access to Plus can be suspended after prior notice or the contract terminated. Kiebitz Free stays usable.</li>
+          <li>A changed price applies to an existing subscription only where there is a valid contractual or legal basis and all required information or consent has been provided. Otherwise, the provider may only end the subscription ordinarily at the end of the current billing period and make a new offer.</li>
+        </ul>
+
+      </section>
+
+      <section id="t6">
+        <h2><span class="num">06</span><span lang="en">Free trial</span></h2>
+
+        <p lang="en">If checkout offers you a seven-day free trial, it begins when Plus is unlocked. A valid payment method is required; the subscription price is not charged during the displayed trial period. Previous trials or Plus purchases may make you ineligible for another trial.</p>
+        <p lang="en">If you do not cancel before the trial ends, it automatically turns into the paid subscription and the first payment falls due. You can see the end date at any time on your account page.</p>
+
+      </section>
+
+      <section id="t7">
+        <h2><span class="num">07</span><span lang="en">Term and cancellation</span></h2>
+
+        <p lang="en">The subscription runs for one month and renews automatically by one further month unless you cancel. You can cancel at any time with effect from the end of the current billing period — no notice period, no reason required.</p>
+        <p lang="en">Subscriptions bought through Stripe can be cancelled on the <a href="https://kiebitz.dev/plus/account/">account page</a> under “Manage subscription” or by an unambiguous statement to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>; subscriptions bought through Google Play are managed in the Play Store. After cancellation Kiebitz Plus stays active until the end of the already paid period and then falls back to Kiebitz Free. Your local games, analyses and training data remain unchanged on your devices. Either party’s right to terminate for good cause remains unaffected.</p>
+        <p lang="en">The cancellation function <a href="https://kiebitz.dev/cancel/">“Cancel contracts here”</a> is also available: reachable without signing in, it shows the request number and the time of receipt on the page and sends a confirmation of receipt by email.</p>
+
+      </section>
+
+      <section id="t8">
+        <h2><span class="num">08</span><span lang="en">Right of withdrawal for consumers</span></h2>
+
+        <p lang="en"><strong>Right of withdrawal.</strong> You have the right to withdraw from this contract within fourteen days without giving any reason. The withdrawal period is fourteen days from the date the contract is concluded.</p>
+        <p lang="en">To exercise this right, inform Tom Maurer, Heidegarten 3, 56244 Helferskirchen, Germany, telephone <a href="tel:+4915901971699">+49 1590 1971699</a>, <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>, of your decision by an unambiguous statement, for example a letter sent by post or an email. You may use the model form below, but this is not mandatory. Sending your statement before the period expires is sufficient.</p>
+        <p lang="en"><strong>Effects of withdrawal.</strong> If you withdraw, we refund all payments received from you without undue delay and no later than fourteen days after receiving your statement. We use the same payment method as for the original transaction unless expressly agreed otherwise, and you incur no fees for the refund.</p>
+        <p lang="en">Immediate unlocking of Kiebitz Plus does not automatically end the right of withdrawal. We rely on early expiry only if every statutory requirement has been met and the required express declarations were demonstrably obtained.</p>
+        <p lang="en">You can also declare the withdrawal online through the withdrawal function <a href="https://kiebitz.dev/withdraw/">“Withdraw from a contract”</a>. It is reachable without signing in; the request number and time of receipt are then shown on the page, and you immediately receive a confirmation of receipt by email.</p>
+
+        <div class="panel" style="margin-top:22px">
+          <p>
+
+            <span lang="en"><strong>Model withdrawal form</strong> — To Tom Maurer, Heidegarten 3, 56244 Helferskirchen, Germany, support@kiebitz.dev: I/we hereby withdraw from the contract concluded by me/us for the supply of Kiebitz Plus. Ordered on … · Name … · Address … · Email address of the account … · Date … (signature only if sent on paper).</span>
+
+          </p>
+        </div>
+      </section>
+
+      <section id="t9">
+        <h2><span class="num">09</span><span lang="en">Availability, updates and changes</span></h2>
+
+        <p lang="en">Kiebitz, the account interface and third-party services may be temporarily restricted by maintenance, security measures or outages. Statutory rights for non-supply or defects remain unaffected; no particular availability percentage beyond those rights is agreed.</p>
+        <p lang="en">During the contract term, the provider supplies the updates required to keep the product in conformity, including security updates. Additional changes are made only for a valid reason stated in the contract, such as changed technology, security requirements or third-party interfaces, and without extra cost. If a change impairs access or usability more than marginally, we inform you in good time on a durable medium about the change, timing and your statutory rights; in particular, you may end the contract free of charge within 30 days where the statutory conditions are met.</p>
+
+      </section>
+
+      <section id="t10">
+        <h2><span class="num">10</span><span lang="en">Your obligations</span></h2>
+
+        <ul class="bul" lang="en">
+          <li>Sign-in links, sessions and the unlock are personal and must not be passed on or made publicly accessible.</li>
+          <li>The unlock must not be circumvented, manipulated or reproduced; reverse engineering is permitted only in the cases mandatorily allowed by law.</li>
+          <li>The interface must not be queried automatically to an extent that impairs its operation.</li>
+          <li>When importing games you use only your own chess.com and Lichess accounts and observe their terms.</li>
+          <li>Kiebitz is source-available, not open source. The repository's license terms remain unaffected; Stockfish is licensed under GPL-3.0.</li>
+        </ul>
+
+      </section>
+
+      <section id="t11">
+        <h2><span class="num">11</span><span lang="en">Warranty and liability</span></h2>
+
+        <p lang="en">Statutory rights apply to defects; for digital products in particular §§ 327 et seq. of the German Civil Code apply. Please report defects to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</p>
+        <p lang="en">Liability is governed by statutory law. In particular, these terms do not limit mandatory claims for intent, gross negligence, injury to life, body or health, fraudulently concealed defects, an assumed guarantee or under the German Product Liability Act.</p>
+        <p lang="en">Your data lives on your devices; the provider keeps no copy of it. Please back up your games and analyses yourself on a regular basis, for example through the PGN export.</p>
+
+      </section>
+
+      <section id="t12">
+        <h2><span class="num">12</span><span lang="en">Final provisions</span></h2>
+
+        <p lang="en"><strong>Changes to these terms</strong> automatically apply only to contracts concluded after the change. For an existing contract, a change applies only if you validly agree or a statutory or valid contractual basis permits it. Silence is not treated as consent merely because of this clause. Changes to the digital product are additionally governed by section 9 and statutory law.</p>
+        <p lang="en">German law applies, excluding the UN Convention on Contracts for the International Sale of Goods. If you are a consumer, the mandatory consumer protection rules of your country of habitual residence remain unaffected. The provider is neither obliged nor willing to take part in dispute resolution proceedings before a consumer arbitration board.</p>
+        <p lang="en">Should a provision be or become invalid, the remainder of the contract stays effective. The contract language is German; translations of this page are for information only, and the German version prevails.</p>
+
+        <div class="panel" style="margin-top:22px">
+          <p>
+
+            <span lang="en">Questions about the contract? Write to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>. How personal data is handled is described in the <a href="https://kiebitz.dev/privacy/">privacy policy</a>; provider details are in the <a href="https://kiebitz.dev/impressum/">legal notice</a>.</span>
+
+          </p>
+        </div>
+      </section>
+
+<div class="annex-foot">
+  <p>This file accompanies the Kiebitz Plus contract confirmation and reproduces the contract terms in force when the contract was concluded. It is an English translation provided for information only. The binding version is the German one at <a href="https://kiebitz.dev/legal/kiebitz-vertragsbedingungen.html">https://kiebitz.dev/legal/kiebitz-vertragsbedingungen.html</a>; in case of discrepancies the German version prevails.</p>
+  <p>Permanently available at <a href="https://kiebitz.dev/legal/kiebitz-contract-terms.html">https://kiebitz.dev/legal/kiebitz-contract-terms.html</a>, the current version at <a href="https://kiebitz.dev/terms/">https://kiebitz.dev/terms/</a>.</p>
+  <p>Questions about the contract: <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a></p>
+</div>
+</main>
+</body>
+</html>

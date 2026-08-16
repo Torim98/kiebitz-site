@@ -280,21 +280,52 @@ for (const call of ["/v1/auth/magic-link/request", "/v1/billing/stripe/checkout"
   report(/locale: documentLocale\(\)/.test(body), `assets/plus.js: ${call} must send the page locale`);
 }
 
-// ── Vertragsanlage ──────────────────────────────────────────────────────────
-// Die Vertragsbestätigung hängt diese Datei an. Sie landet auf fremden
-// Festplatten und wird dort ohne Server geöffnet: Was sie nicht selbst
-// mitbringt, fehlt dann für immer.
-const annexPath = path.join(root, "legal", "kiebitz-vertragsbedingungen.html");
-let annex = "";
-try {
-  annex = await readFile(annexPath, "utf8");
-} catch {
-  errors.push("legal/kiebitz-vertragsbedingungen.html: the contract annex is missing");
-}
+// ── Vertragsanlagen ─────────────────────────────────────────────────────────
+// Die Vertragsbestätigung hängt diese Dateien an. Sie landen auf fremden
+// Festplatten und werden dort ohne Server geöffnet: Was sie nicht selbst
+// mitbringen, fehlt dann für immer. Maßgeblich ist die deutsche Fassung; die
+// englische ist die Lesehilfe und muss das auch sagen.
+const annexExpectations = [
+  {
+    name: "legal/kiebitz-vertragsbedingungen.html",
+    language: "de",
+    counterpart: "legal/kiebitz-contract-terms.html",
+    date: /Stand: /,
+    markers: [
+      [/Widerrufsrecht/, "the withdrawal instruction"],
+      [/Widerrufsfrist beträgt vierzehn Tage/, "the withdrawal period"],
+      [/Folgen des Widerrufs/, "the consequences of withdrawal"],
+      [/Muster-Widerrufsformular/, "the model withdrawal form"],
+    ],
+  },
+  {
+    name: "legal/kiebitz-contract-terms.html",
+    language: "en",
+    counterpart: "legal/kiebitz-vertragsbedingungen.html",
+    date: /Last updated: /,
+    markers: [
+      [/Right of withdrawal/, "the withdrawal instruction"],
+      [/withdrawal period is fourteen days/, "the withdrawal period"],
+      [/Effects of withdrawal/, "the consequences of withdrawal"],
+      [/Model withdrawal form/, "the model withdrawal form"],
+      // Eine Übersetzung, die sich nicht als solche zu erkennen gibt, ist eine
+      // zweite Rechtsfassung.
+      [/the German version prevails/, "the notice that the German version prevails"],
+    ],
+  },
+];
 
-if (annex) {
-  const name = "legal/kiebitz-vertragsbedingungen.html";
-  report(/<html lang="de">/.test(annex), `${name}: the binding version must declare lang="de"`);
+for (const expectation of annexExpectations) {
+  const { name, language, counterpart } = expectation;
+  let annex = "";
+  try {
+    annex = await readFile(path.join(root, ...name.split("/")), "utf8");
+  } catch {
+    errors.push(`${name}: the contract annex is missing`);
+    continue;
+  }
+
+  report(new RegExp(`<html lang="${language}">`).test(annex), `${name}: must declare lang="${language}"`);
   report(/<meta charset="utf-8">/i.test(annex), `${name}: character encoding missing`);
   report(!/<script/i.test(annex), `${name}: must not contain a script`);
   report(!/<link\b[^>]*stylesheet/i.test(annex), `${name}: must not link an external stylesheet`);
@@ -302,6 +333,13 @@ if (annex) {
   report(/<style>[\s\S]*<\/style>/.test(annex), `${name}: the stylesheet must be inline`);
   report(/@media print/.test(annex), `${name}: a print stylesheet is missing`);
   report(!/<nav\b|lang-select|class="top"|class="foot"/.test(annex), `${name}: website navigation must not leak into the annex`);
+
+  // Kein fremdsprachiges Restmarkup: Der Sprachfilter des Builds muss die
+  // sechs anderen Sprachen vollständig entfernt haben.
+  const foreign = [...annex.matchAll(/\slang="([^"]+)"/g)]
+    .map((match) => match[1])
+    .filter((tag) => tag !== language);
+  report(foreign.length === 0, `${name}: foreign language remains in the annex (${foreign.join(", ")})`);
 
   for (const [attribute, value] of [...annex.matchAll(/\b(href|src)="([^"]+)"/g)].map((m) => [m[1], m[2]])) {
     const absolute = value.startsWith("#")
@@ -316,18 +354,21 @@ if (annex) {
   }
   report((annex.match(/<section id="t\d+">/g) || []).length === 12, `${name}: expected exactly twelve sections`);
 
-  report(/Widerrufsrecht/.test(annex), `${name}: the withdrawal instruction is missing`);
-  report(/Widerrufsfrist beträgt vierzehn Tage/.test(annex), `${name}: the withdrawal period is missing`);
-  report(/Folgen des Widerrufs/.test(annex), `${name}: the consequences of withdrawal are missing`);
-  report(/Muster-Widerrufsformular/.test(annex), `${name}: the model withdrawal form is missing`);
-  report(/Stand: /.test(annex), `${name}: the date of the terms must stay visible`);
+  for (const [pattern, what] of expectation.markers) {
+    report(pattern.test(annex), `${name}: ${what} is missing`);
+  }
+  report(expectation.date.test(annex), `${name}: the date of the terms must stay visible`);
   report(/Heidegarten 3/.test(annex) && /support@kiebitz\.dev/.test(annex), `${name}: the provider details must stay visible`);
 
-  // Die Anlage wiederholt /de/terms/ · sie darf den Suchindex nicht spalten.
+  // Jede Anlage nennt die andere · sonst steht der Empfänger vor einer
+  // Übersetzung ohne Original oder umgekehrt.
+  report(annex.includes(new URL(counterpart, baseUrl).href), `${name}: must link the other language version`);
+
+  // Die Anlagen wiederholen die Terms-Seiten · sie dürfen den Suchindex nicht spalten.
   report(/content="noindex/.test(annex), `${name}: the annex must not be indexed`);
 
   // Was gebaut wird, muss auch ausgeliefert werden.
-  await access(path.join(root, "dist", "client", "legal", "kiebitz-vertragsbedingungen.html"));
+  await access(path.join(root, "dist", "client", ...name.split("/")));
 }
 
 const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");

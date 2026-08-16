@@ -1,26 +1,55 @@
 /**
- * Die Vertragsanlage.
+ * Die Vertragsanlagen.
  *
- * Die Vertragsbestätigung hängt eine Datei an, die der Kunde Jahre später
- * offline öffnen können muss. Eine gespeicherte Website-Seite taugt dafür
- * nicht: Ohne den Server fehlen Stylesheet, Schrift und Bilder, und übrig
- * bleibt eine randlose Textwüste mit Navigation und Sprachwähler darin.
+ * Die Vertragsbestätigung hängt Dateien an, die der Kunde Jahre später offline
+ * öffnen können muss. Eine gespeicherte Website-Seite taugt dafür nicht: Ohne
+ * den Server fehlen Stylesheet, Schrift und Bilder, und übrig bleibt eine
+ * randlose Textwüste mit Navigation und Sprachwähler darin.
  *
- * Diese Datei ist deshalb ein einziges, in sich geschlossenes Dokument: ein
+ * Diese Dateien sind deshalb in sich geschlossene Dokumente: ein
  * `<style>`-Block, keine externe Ressource, kein Skript, nur absolute Links.
  *
- * Sie wird nicht von Hand gepflegt. Der Inhalt kommt aus der gerade gebauten
- * deutschen Terms-Seite — eine zweite handgepflegte Rechtsfassung wäre die
- * sicherste Art, zwei verschiedene Verträge im Umlauf zu haben.
+ * Sie werden nicht von Hand gepflegt. Der Inhalt kommt aus den gerade gebauten
+ * Terms-Seiten — eine zweite handgepflegte Rechtsfassung wäre die sicherste
+ * Art, zwei verschiedene Verträge im Umlauf zu haben.
+ *
+ * Maßgeblich ist allein die deutsche Anlage. Die englische ist eine
+ * Lesehilfe: Ein Anhang, den der Empfänger nicht lesen kann, erfüllt seinen
+ * Zweck nicht. Den Vorrang der deutschen Fassung sagt die englische
+ * Terms-Seite bereits in ihrem eigenen Kopf, und dieser Satz wandert beim
+ * Ableiten mit.
  */
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-/** Öffentlicher Pfad der Anlage · die API hängt genau diese URL an. */
-export const CONTRACT_ANNEX_PATH = "legal/kiebitz-vertragsbedingungen.html";
-
-/** Quelle: die maßgebliche deutsche Fassung, so wie sie veröffentlicht wird. */
-const SOURCE_PAGE = "de/terms/index.html";
+/**
+ * Die Anlagen in der Reihenfolge, in der die Vertragsbestätigung sie anhängt:
+ * zuerst die maßgebliche Fassung, dann die Übersetzung.
+ */
+export const CONTRACT_ANNEXES = [
+  {
+    language: "de",
+    binding: true,
+    source: "de/terms/index.html",
+    output: "legal/kiebitz-vertragsbedingungen.html",
+    title: "Vertragsbedingungen für Kiebitz Plus · Kiebitz",
+    foot: (canonical, termsUrl, other) => `
+  <p>Diese Datei ist die Anlage zur Vertragsbestätigung für Kiebitz Plus und gibt die zum Zeitpunkt des Vertragsschlusses geltenden Vertragsbedingungen wieder. Maßgeblich ist diese deutsche Fassung.</p>
+  <p>Dauerhaft abrufbar unter <a href="${canonical}">${canonical}</a>, die jeweils aktuelle Fassung unter <a href="${termsUrl}">${termsUrl}</a>. Eine englische Übersetzung steht zur Information unter <a href="${other}">${other}</a>; bei Abweichungen gilt die deutsche Fassung.</p>
+  <p>Fragen zum Vertrag: <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a></p>`,
+  },
+  {
+    language: "en",
+    binding: false,
+    source: "terms/index.html",
+    output: "legal/kiebitz-contract-terms.html",
+    title: "Contract terms for Kiebitz Plus · Kiebitz",
+    foot: (canonical, termsUrl, other) => `
+  <p>This file accompanies the Kiebitz Plus contract confirmation and reproduces the contract terms in force when the contract was concluded. It is an English translation provided for information only. The binding version is the German one at <a href="${other}">${other}</a>; in case of discrepancies the German version prevails.</p>
+  <p>Permanently available at <a href="${canonical}">${canonical}</a>, the current version at <a href="${termsUrl}">${termsUrl}</a>.</p>
+  <p>Questions about the contract: <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a></p>`,
+  },
+];
 
 const STYLE = `
   :root {
@@ -176,11 +205,11 @@ const STYLE = `
 `;
 
 /** Der Artikel der Terms-Seite · alles davor und danach ist Website. */
-function extractArticle(html) {
+function extractArticle(html, source) {
   const start = html.indexOf("<article>");
   const end = html.indexOf("</article>");
   if (start === -1 || end === -1) {
-    throw new Error(`Could not find the contract article in ${SOURCE_PAGE}`);
+    throw new Error(`Could not find the contract article in ${source}`);
   }
   return html.slice(start + "<article>".length, end);
 }
@@ -192,8 +221,7 @@ function extractArticle(html) {
  * Sprungmarken innerhalb des Dokuments bleiben, wie sie sind: Sie zeigen auf
  * Abschnitte, die hier mit im Dokument stehen.
  */
-function absolutizeLinks(html, origin) {
-  const base = new URL("de/terms/", origin);
+function absolutizeLinks(html, base) {
   return html.replace(/\b(href|src)="([^"]+)"/g, (match, attribute, value) => {
     if (value.startsWith("#") || /^[a-z][a-z0-9+.-]*:/i.test(value)) return match;
     const resolved = new URL(value, base);
@@ -214,23 +242,29 @@ function collapseBlankLines(html) {
 }
 
 /**
- * Baut die Anlage und gibt ihren Pfad zurück.
+ * Baut alle Anlagen und gibt ihre Pfade zurück.
  *
- * `origin` ist der veröffentlichte Ursprung aus `site.config.mjs`; die Anlage
- * verlinkt ausschließlich absolut dorthin.
+ * `origin` ist der veröffentlichte Ursprung aus `site.config.mjs`; die Anlagen
+ * verlinken ausschließlich absolut dorthin.
  */
-export async function buildContractAnnex(root, origin) {
-  const source = await readFile(path.join(root, ...SOURCE_PAGE.split("/")), "utf8");
-  const article = collapseBlankLines(absolutizeLinks(extractArticle(source), origin));
-  const canonical = new URL(CONTRACT_ANNEX_PATH, origin).href;
-  const termsUrl = new URL("de/terms/", origin).href;
+export async function buildContractAnnexes(root, origin) {
+  const written = [];
 
-  const document = `<!DOCTYPE html>
-<html lang="de">
+  for (const annex of CONTRACT_ANNEXES) {
+    const source = await readFile(path.join(root, ...annex.source.split("/")), "utf8");
+    const termsBase = new URL(annex.source.replace(/index\.html$/, ""), origin);
+    const article = collapseBlankLines(
+      absolutizeLinks(extractArticle(source, annex.source), termsBase)
+    );
+    const canonical = new URL(annex.output, origin).href;
+    const counterpart = CONTRACT_ANNEXES.find((other) => other !== annex);
+
+    const document = `<!DOCTYPE html>
+<html lang="${annex.language}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vertragsbedingungen für Kiebitz Plus · Kiebitz</title>
+<title>${annex.title}</title>
 <meta name="robots" content="noindex, follow">
 <style>${STYLE}</style>
 </head>
@@ -238,18 +272,22 @@ export async function buildContractAnnex(root, origin) {
 <main class="sheet">
 ${article}
 
-<div class="annex-foot">
-  <p>Diese Datei ist die Anlage zur Vertragsbestätigung für Kiebitz Plus und gibt die zum Zeitpunkt des Vertragsschlusses geltenden Vertragsbedingungen wieder. Maßgeblich ist diese deutsche Fassung; Übersetzungen auf der Website dienen nur der Information.</p>
-  <p>Dauerhaft abrufbar unter <a href="${canonical}">${canonical}</a>, die jeweils aktuelle Fassung unter <a href="${termsUrl}">${termsUrl}</a>.</p>
-  <p>Fragen zum Vertrag: <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a></p>
+<div class="annex-foot">${annex.foot(
+      canonical,
+      termsBase.href,
+      new URL(counterpart.output, origin).href
+    )}
 </div>
 </main>
 </body>
 </html>
 `;
 
-  const outputPath = path.join(root, ...CONTRACT_ANNEX_PATH.split("/"));
-  await mkdir(path.dirname(outputPath), { recursive: true });
-  await writeFile(outputPath, document, "utf8");
-  return CONTRACT_ANNEX_PATH;
+    const outputPath = path.join(root, ...annex.output.split("/"));
+    await mkdir(path.dirname(outputPath), { recursive: true });
+    await writeFile(outputPath, document, "utf8");
+    written.push(annex.output);
+  }
+
+  return written;
 }
