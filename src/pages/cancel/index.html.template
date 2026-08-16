@@ -95,13 +95,13 @@
 
       <ol class="legal-steps">
         <li>
-          <span lang="de">Kündigungsschaltfläche: der Link „Verträge hier kündigen“ steht im Footer jeder Seite. Du bist ihm bereits gefolgt.</span>
-          <span lang="en">Cancellation button: the link “Cancel contracts here” sits in the footer of every page. You have already followed it.</span>
-          <span lang="fr">Bouton de résiliation : le lien « Résilier vos contrats ici » figure dans le pied de page de chaque page. Vous l’avez déjà suivi.</span>
-          <span lang="es">Botón de cancelación: el enlace «Cancelar contratos aquí» está en el pie de cada página. Ya lo has seguido.</span>
-          <span lang="zh">终止按钮：每个页面的页脚都有「在此终止合同」链接，你已经通过它来到这里。</span>
-          <span lang="hi">रद्दीकरण बटन: «अनुबंध यहाँ रद्द करें» लिंक हर पृष्ठ के फ़ुटर में है। आप उसी से यहाँ आए हैं।</span>
-          <span lang="ar">زر الإنهاء: يوجد رابط «أنهِ عقودك هنا» في تذييل كل صفحة، وقد وصلت من خلاله بالفعل.</span>
+          <span lang="de">Kündigungsschaltfläche: der Link „Verträge hier kündigen“ steht auf der Seite Kiebitz Plus, die der Footer jeder Seite verlinkt. Du bist ihm bereits gefolgt.</span>
+          <span lang="en">Cancellation button: the link “Cancel contracts here” sits on the Kiebitz Plus page, which the footer of every page links to. You have already followed it.</span>
+          <span lang="fr">Bouton de résiliation : le lien « Résilier vos contrats ici » figure sur la page Kiebitz Plus, vers laquelle renvoie le pied de chaque page. Vous l’avez déjà suivi.</span>
+          <span lang="es">Botón de cancelación: el enlace «Cancelar contratos aquí» está en la página Kiebitz Plus, a la que enlaza el pie de cada página. Ya lo has seguido.</span>
+          <span lang="zh">终止按钮：「在此终止合同」链接位于 Kiebitz Plus 页面，每个页面的页脚都通向那里，你已经通过它来到这里。</span>
+          <span lang="hi">रद्दीकरण बटन: «अनुबंध यहाँ रद्द करें» लिंक Kiebitz Plus पृष्ठ पर है, जिससे हर पृष्ठ का फ़ुटर जुड़ा है। आप उसी से यहाँ आए हैं।</span>
+          <span lang="ar">زر الإنهاء: يوجد رابط «أنهِ عقودك هنا» في صفحة Kiebitz Plus التي يربط بها تذييل كل صفحة، وقد وصلت من خلاله بالفعل.</span>
         </li>
         <li aria-current="step">
           <span lang="de">Bestätigungsseite: Angaben ausfüllen und mit „jetzt kündigen“ abschicken. Danach siehst du Vorgangsnummer und Eingangszeit.</span>
@@ -291,16 +291,6 @@
       <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
       <a href="../terms/index.html"><span lang="de">Vertragsbedingungen</span><span lang="en">Terms of service</span><span lang="fr">Conditions générales</span><span lang="es">Condiciones generales</span><span lang="zh">服务条款</span><span lang="hi">सेवा की शर्तें</span><span lang="ar">شروط الخدمة</span></a>
       <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
-      </div>
-      <div class="foot-links-legal">
-      <a class="foot-legal-action" href="../cancel/index.html">
-        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9l3.5 3.5V20H6Z"></path><path d="M9.5 12.5h5"></path></svg>
-        <span lang="de">Verträge hier kündigen</span><span lang="en">Cancel contracts here</span><span lang="fr">Résilier vos contrats ici</span><span lang="es">Cancelar contratos aquí</span><span lang="zh">在此终止合同</span><span lang="hi">अनुबंध यहाँ रद्द करें</span><span lang="ar">أنهِ عقودك هنا</span>
-      </a>
-      <a class="foot-legal-action" href="../withdraw/index.html">
-        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6 5.5 10.5 10 15"></path><path d="M5.5 10.5h8a5 5 0 0 1 0 10h-3"></path></svg>
-        <span lang="de">Vertrag widerrufen</span><span lang="en">Withdraw from a contract</span><span lang="fr">Rétractation du contrat</span><span lang="es">Desistir del contrato</span><span lang="zh">撤回合同</span><span lang="hi">अनुबंध निरस्त करें</span><span lang="ar">انسحب من العقد</span>
-      </a>
       </div>
     </nav>
   </div>

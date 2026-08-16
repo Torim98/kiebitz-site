@@ -208,17 +208,31 @@ for (const language of codes) {
     report(/terms\/index\.html/.test(html) && /privacy\/index\.html/.test(html), `${relative}: form must link the terms and the privacy policy`);
   }
 
-  // Der Weg zu beiden Erklärungen steht in jedem Footer.
+  // Beide Erklärungen stehen auf der Plus-Seite und im Konto · nicht mehr im Footer.
+  // § 312k BGB verlangt, dass die Kündigungsschaltfläche ständig verfügbar sowie
+  // unmittelbar und leicht zugänglich ist. Sie liegt deshalb auf einer Seite, die
+  // ohne Anmeldung erreichbar ist, und der Footer jeder Seite führt dorthin.
+  for (const page of ["plus", "plusAccount"]) {
+    const relative = fileFor(language, page);
+    const html = await readFile(path.join(root, ...relative.split("/")), "utf8");
+    const start = html.indexOf("data-legal-actions");
+    const actions = start === -1 ? "" : html.slice(start, html.indexOf("</section>", start));
+    report((actions.match(/foot-legal-action/g) || []).length === 2, `${relative}: page must offer both legal actions`);
+    report(/cancel\/index\.html/.test(actions), `${relative}: does not link the cancellation page`);
+    report(/withdraw\/index\.html/.test(actions), `${relative}: does not link the withdrawal page`);
+  }
+
   for (const page of Object.keys(pages)) {
     const relative = fileFor(language, page);
     const html = await readFile(path.join(root, ...relative.split("/")), "utf8");
     const footer = html.slice(html.indexOf('<footer class="foot">'));
-    const actions = footer.slice(footer.indexOf('class="foot-links-legal"'), footer.indexOf("</nav>"));
-    report((actions.match(/foot-legal-action/g) || []).length === 2, `${relative}: footer must offer both legal actions`);
-    // Auf der Seite selbst verkürzt der Build den Verweis auf „index.html“.
-    report(page === "cancel" || /cancel\/index\.html/.test(actions), `${relative}: footer does not link the cancellation page`);
-    report(page === "withdraw" || /withdraw\/index\.html/.test(actions), `${relative}: footer does not link the withdrawal page`);
-    report(!["cancel", "withdraw"].includes(page) || /href="index\.html"/.test(actions), `${relative}: footer must keep the self-reference of the current legal action`);
+    report(!/foot-links-legal/.test(footer), `${relative}: footer must not carry the legal actions any more`);
+    // Der Weg zur Kündigungsschaltfläche darf von keiner Seite abreißen.
+    // Unterhalb von plus/ verkürzt der Build den Verweis auf „../index.html“.
+    const linksPlus = pages[page].route.startsWith("plus/")
+      ? /href="\.\.\/index\.html"/.test(footer)
+      : /plus\/index\.html/.test(footer);
+    report(page === "plus" || linksPlus, `${relative}: footer does not link the Kiebitz Plus page`);
   }
 }
 
@@ -227,8 +241,8 @@ const germanLabels = [
   ["cancel", "Verträge hier kündigen", "cancellation button label"],
   ["cancel", "jetzt kündigen", "confirmation button label"],
   ["withdraw", "Widerruf bestätigen", "withdrawal button label"],
-  ["home", "Verträge hier kündigen", "footer cancellation label"],
-  ["home", "Vertrag widerrufen", "footer withdrawal label"]
+  ["plus", "Verträge hier kündigen", "cancellation entry label"],
+  ["plus", "Vertrag widerrufen", "withdrawal entry label"]
 ];
 for (const [page, label, what] of germanLabels) {
   const relative = fileFor("de", page);
