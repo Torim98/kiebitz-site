@@ -129,6 +129,16 @@
     .flock,
     .cta { position: relative; z-index: 1; }
 
+    /* Beim Wechsel zwischen Kampagnen blendet nur der Inhalt aus · Rahmen,
+       Brett und Lichtstreifen bleiben stehen, damit die Fläche nicht blinkt. */
+    .creative,
+    .copy,
+    .cta { transition: opacity 0.26s var(--ease); }
+
+    .ad[data-swap="out"] .creative,
+    .ad[data-swap="out"] .copy,
+    .ad[data-swap="out"] .cta { opacity: 0; }
+
     .creative {
       display: none;
       width: 46px;
@@ -310,6 +320,10 @@
       "use strict";
 
       const STATUS_SOURCE = "kiebitz-desktop-ad";
+      /* Die Fläche steht dauerhaft am unteren Rand. Eine einzige Kampagne pro
+         Sitzung würde dort festkleben; im Wechsel bekommt jede ihre Zeit. */
+      const ROTATE_MS = 11_000;
+      const FADE_MS = 260;
       const advertisementLabels = {
         de: "Werbung",
         en: "Advertisement",
@@ -361,6 +375,20 @@
         return weighted.at(-1)?.campaign || null;
       };
 
+      /* Reihenfolge für die Rotation: wiederholtes gewichtetes Ziehen ohne
+         Zurücklegen. Die erste gezeigte Kampagne folgt damit denselben
+         Gewichten wie bisher, danach kommt jede genau einmal an die Reihe. */
+      const weightedOrder = (campaigns) => {
+        const remaining = campaigns.slice();
+        const order = [];
+        while (remaining.length) {
+          const picked = chooseWeighted(remaining) || remaining[0];
+          order.push(picked);
+          remaining.splice(remaining.indexOf(picked), 1);
+        }
+        return order;
+      };
+
       const sameOriginImage = (value) => {
         if (!value) return null;
         try {
@@ -384,38 +412,51 @@
         .then((response) => response.ok ? response.json() : Promise.reject())
         .then((config) => {
           const now = Date.now();
-          const campaign = chooseWeighted((config.campaigns || []).filter((item) =>
+          const eligible = (config.campaigns || []).filter((item) =>
             item && item.enabled === true && httpsTarget(item.href) &&
             validDate(item.startsAt, now, true) && validDate(item.endsAt, now, false)
-          ));
-          if (!campaign) return status(false);
+          );
 
           const languages = navigator.languages?.length
             ? navigator.languages.map((item) => item.toLowerCase())
             : [(navigator.language || "en").toLowerCase()];
           const language = languages[0].split("-")[0];
-          const headline = localized(campaign.headline, languages);
-          if (!headline) return status(false);
+          const label = advertisementLabels[language] || advertisementLabels.en;
+
+          // Ohne Überschrift gibt es nichts zu zeigen · eine solche Kampagne
+          // wird übersprungen, statt die Fläche leer zu lassen.
+          const order = weightedOrder(eligible)
+            .filter((item) => localized(item.headline, languages));
+          if (!order.length) return status(false);
 
           const ad = document.getElementById("ad");
-          ad.href = httpsTarget(campaign.href);
-          const label = advertisementLabels[language] || advertisementLabels.en;
-          document.getElementById("advertiser").textContent = campaign.advertiser
-            ? `${label} · ${campaign.advertiser}`
-            : label;
-          document.getElementById("headline").textContent = headline;
-          document.getElementById("body").textContent = localized(campaign.body, languages);
-          document.getElementById("cta").textContent = localized(campaign.cta, languages) || "Learn more";
+          const creative = document.getElementById("creative");
 
-          const image = sameOriginImage(campaign.image);
-          if (image) {
-            const creative = document.getElementById("creative");
-            creative.src = image;
-            creative.alt = localized(campaign.imageAlt, languages);
-            creative.dataset.visible = "true";
-          }
+          const show = (campaign) => {
+            ad.href = httpsTarget(campaign.href);
+            document.getElementById("advertiser").textContent = campaign.advertiser
+              ? `${label} · ${campaign.advertiser}`
+              : label;
+            document.getElementById("headline").textContent = localized(campaign.headline, languages);
+            document.getElementById("body").textContent = localized(campaign.body, languages);
+            document.getElementById("cta").textContent = localized(campaign.cta, languages) || "Learn more";
 
+            const image = sameOriginImage(campaign.image);
+            if (image) {
+              creative.src = image;
+              creative.alt = localized(campaign.imageAlt, languages);
+              creative.dataset.visible = "true";
+            } else {
+              creative.removeAttribute("src");
+              creative.alt = "";
+              creative.dataset.visible = "false";
+            }
+          };
+
+          show(order[0]);
           document.body.dataset.ready = "true";
+          // Der Zeiger auf die Kampagne steckt in `ad.href`; der Handler bleibt
+          // deshalb über alle Wechsel hinweg derselbe.
           ad.addEventListener("click", (event) => {
             event.preventDefault();
             window.parent.postMessage({
@@ -425,6 +466,23 @@
             }, "*");
           });
           status(true);
+
+          if (order.length < 2) return;
+          const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+          let index = 0;
+          setInterval(() => {
+            // Im Hintergrund läuft die Rotation nicht weiter: Sonst wären beim
+            // Zurückkommen mehrere Wechsel verpufft, die niemand gesehen hat.
+            if (document.hidden) return;
+            index = (index + 1) % order.length;
+            const next = order[index];
+            if (reduceMotion.matches) return show(next);
+            ad.dataset.swap = "out";
+            setTimeout(() => {
+              show(next);
+              delete ad.dataset.swap;
+            }, FADE_MS);
+          }, ROTATE_MS);
         })
         .catch(() => status(false));
     })();

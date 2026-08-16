@@ -48,6 +48,52 @@
       }
     },
     {
+      "id": "kiebitz-plus",
+      "enabled": true,
+      "startsAt": null,
+      "endsAt": null,
+      "weight": 1,
+      "href": "https://kiebitz.dev/plus/",
+      "image": "../assets/icon-128.png",
+      "imageAlt": {
+        "de": "Kiebitz App-Icon",
+        "en": "Kiebitz app icon",
+        "fr": "Icône de l’application Kiebitz",
+        "es": "Icono de la aplicación Kiebitz",
+        "zh": "Kiebitz 应用图标",
+        "hi": "Kiebitz ऐप आइकन",
+        "ar": "أيقونة تطبيق Kiebitz"
+      },
+      "advertiser": "Kiebitz Plus",
+      "headline": {
+        "de": "Kiebitz Plus schaltet alles frei",
+        "en": "Kiebitz Plus unlocks everything",
+        "fr": "Kiebitz Plus débloque tout",
+        "es": "Kiebitz Plus lo desbloquea todo",
+        "zh": "Kiebitz Plus 解锁全部功能",
+        "hi": "Kiebitz Plus सब कुछ खोल देता है",
+        "ar": "‏Kiebitz Plus يفتح كل الميزات"
+      },
+      "body": {
+        "de": "Tiefe Analyse, eigene Puzzles, keine Werbung · 7 Tage gratis testen.",
+        "en": "Deeper analysis, personal puzzles, no ads · free for 7 days.",
+        "fr": "Analyse approfondie, puzzles personnels, sans publicité · 7 jours gratuits.",
+        "es": "Análisis más profundo, puzles propios, sin anuncios · 7 días gratis.",
+        "zh": "更深入的分析、专属战术题、没有广告 · 免费试用 7 天。",
+        "hi": "गहरा विश्लेषण, अपनी पहेलियाँ, बिना विज्ञापन · 7 दिन मुफ़्त।",
+        "ar": "تحليل أعمق وألغاز خاصة بك وبلا إعلانات · سبعة أيام مجانًا."
+      },
+      "cta": {
+        "de": "Plus ansehen",
+        "en": "See Plus",
+        "fr": "Découvrir Plus",
+        "es": "Ver Plus",
+        "zh": "了解 Plus",
+        "hi": "Plus देखें",
+        "ar": "‏استعراض Plus"
+      }
+    },
+    {
       "id": "example-campaign",
       "enabled": false,
       "startsAt": null,

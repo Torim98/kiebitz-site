@@ -11,10 +11,13 @@ To publish a campaign:
    and optionally set ISO-8601 `startsAt` and `endsAt` values.
 3. Run the normal website build and publish the website.
 
-When several campaigns are active, `weight` controls their relative chance on
-each load. An empty or invalid configuration tells the app to collapse the ad
-slot. The page uses no cookies, storage, identifiers, analytics, or remote
-scripts. The advertiser receives a request only after the user clicks the ad.
+When several campaigns are active they take turns: every 11 seconds the surface
+fades to the next one and starts over after the last. `weight` controls the
+order they are drawn in, so a heavier campaign is more likely to be the one
+shown first. Rotation pauses while the window is hidden. An empty or invalid
+configuration tells the app to collapse the ad slot. The page uses no cookies,
+storage, identifiers, analytics, or remote scripts. The advertiser receives a
+request only after the user clicks the ad.
 
 The surface follows the website's design: Inter from `assets/fonts/`, the
 Kiebitz accent, a faint chessboard texture and the footer's flock. All motion
