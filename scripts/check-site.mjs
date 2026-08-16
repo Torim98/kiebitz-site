@@ -146,6 +146,121 @@ for (const language of codes) {
   }
 }
 
+// ── Kündigung und Widerruf ──────────────────────────────────────────────────
+// Beide Seiten leben von ihren Zuständen: Fehlt einer im HTML, bliebe die
+// Eingangsbestätigung leer, weil das Skript nur ein- und ausblendet. Und ohne
+// den Weg aus jedem Footer wäre die Kündigungsschaltfläche nicht ständig
+// verfügbar.
+const legalRequirements = {
+  cancel: [
+    "data-legal-form",
+    'data-legal-view="form"',
+    'data-legal-view="received"',
+    'data-legal-field="request-id"',
+    'data-legal-field="received-at"',
+    'data-legal-email="sent"',
+    'data-legal-email="failed"',
+    "data-legal-message",
+    "data-legal-sending",
+    'name="name"',
+    'name="email"',
+    'name="provider"',
+    'name="contract_reference"',
+    'name="cancellation_type"',
+    'name="requested_end_mode"',
+    'name="reason"',
+    'value="stripe"',
+    'value="google_play"',
+    'value="unknown"',
+    'value="ordinary"',
+    'value="extraordinary"',
+    'value="Kiebitz Plus"'
+  ],
+  withdraw: [
+    "data-legal-form",
+    'data-legal-view="form"',
+    'data-legal-view="received"',
+    'data-legal-field="request-id"',
+    'data-legal-field="received-at"',
+    'data-legal-email="sent"',
+    'data-legal-email="failed"',
+    "data-legal-message",
+    "data-legal-sending",
+    'name="name"',
+    'name="email"',
+    'name="provider"',
+    'name="contract_reference"',
+    'name="reason"',
+    'value="Kiebitz Plus"'
+  ]
+};
+
+for (const language of codes) {
+  for (const [page, markers] of Object.entries(legalRequirements)) {
+    const relative = fileFor(language, page);
+    const html = await readFile(path.join(root, ...relative.split("/")), "utf8");
+    for (const marker of markers) {
+      report(html.includes(marker), `${relative}: missing ${marker}`);
+    }
+    report(/<script src="[^"]*assets\/legal\.js" defer><\/script>/.test(html), `${relative}: legal.js not loaded`);
+    // Ohne Anmeldung heißt ohne Anmeldung: kein Verweis auf eine Sitzung.
+    report(!/data-plus-account|plus\.js/.test(html), `${relative}: must not depend on the account script`);
+    report(/terms\/index\.html/.test(html) && /privacy\/index\.html/.test(html), `${relative}: form must link the terms and the privacy policy`);
+  }
+
+  // Der Weg zu beiden Erklärungen steht in jedem Footer.
+  for (const page of Object.keys(pages)) {
+    const relative = fileFor(language, page);
+    const html = await readFile(path.join(root, ...relative.split("/")), "utf8");
+    const footer = html.slice(html.indexOf('<footer class="foot">'));
+    const actions = footer.slice(footer.indexOf('class="foot-links-legal"'), footer.indexOf("</nav>"));
+    report((actions.match(/foot-legal-action/g) || []).length === 2, `${relative}: footer must offer both legal actions`);
+    // Auf der Seite selbst verkürzt der Build den Verweis auf „index.html“.
+    report(page === "cancel" || /cancel\/index\.html/.test(actions), `${relative}: footer does not link the cancellation page`);
+    report(page === "withdraw" || /withdraw\/index\.html/.test(actions), `${relative}: footer does not link the withdrawal page`);
+    report(!["cancel", "withdraw"].includes(page) || /href="index\.html"/.test(actions), `${relative}: footer must keep the self-reference of the current legal action`);
+  }
+}
+
+// Die deutschen Beschriftungen gibt das Gesetz vor · sie dürfen nicht driften.
+const germanLabels = [
+  ["cancel", "Verträge hier kündigen", "cancellation button label"],
+  ["cancel", "jetzt kündigen", "confirmation button label"],
+  ["withdraw", "Widerruf bestätigen", "withdrawal button label"],
+  ["home", "Verträge hier kündigen", "footer cancellation label"],
+  ["home", "Vertrag widerrufen", "footer withdrawal label"]
+];
+for (const [page, label, what] of germanLabels) {
+  const relative = fileFor("de", page);
+  const html = await readFile(path.join(root, ...relative.split("/")), "utf8");
+  report(html.includes(`>${label}<`), `${relative}: ${what} must read “${label}”`);
+}
+
+// Vertragsbedingungen und Datenschutzerklärung führen zu den Erklärungen hin.
+for (const language of codes) {
+  const terms = await readFile(path.join(root, ...fileFor(language, "terms").split("/")), "utf8");
+  const cancellationSection = terms.slice(terms.indexOf('id="t7"'), terms.indexOf('id="t8"'));
+  const withdrawalSection = terms.slice(terms.indexOf('id="t8"'), terms.indexOf('id="t9"'));
+  report(/cancel\/index\.html/.test(cancellationSection), `${fileFor(language, "terms")}: section 7 does not link the cancellation page`);
+  report(/withdraw\/index\.html/.test(withdrawalSection), `${fileFor(language, "terms")}: section 8 does not link the withdrawal page`);
+
+  const privacy = await readFile(path.join(root, ...fileFor(language, "privacy").split("/")), "utf8");
+  const legalData = privacy.slice(privacy.indexOf('id="c9"'), privacy.indexOf('id="c10"'));
+  report(legalData.length > 0, `${fileFor(language, "privacy")}: section 9 on cancellation and withdrawal is missing`);
+  report(/cancel\/index\.html/.test(legalData) && /withdraw\/index\.html/.test(legalData), `${fileFor(language, "privacy")}: section 9 must link both forms`);
+  report(/Resend/.test(legalData), `${fileFor(language, "privacy")}: section 9 must name the email processor`);
+}
+
+// Die Erklärungen laufen ohne Sitzung · schreibende Aufrufe brauchen den
+// CSRF-Kopf, und gespeichert wird nichts im Browser.
+const legalScript = await readFile(path.join(root, "assets", "legal.js"), "utf8");
+report(legalScript.includes('credentials: "omit"'), "assets/legal.js: the forms must work without a session");
+report(legalScript.includes('"X-Kiebitz-CSRF"'), "assets/legal.js: writing calls must send the CSRF header");
+report(!legalScript.includes("localStorage"), "assets/legal.js: declarations must never touch localStorage");
+report(legalScript.includes("/v1/contracts/cancellation"), "assets/legal.js: cancellation endpoint missing");
+report(legalScript.includes("/v1/contracts/withdrawal"), "assets/legal.js: withdrawal endpoint missing");
+report(legalScript.includes("legal_confirmation_failed"), "assets/legal.js: a stored declaration must survive a failed confirmation email");
+
 // Die Browsersitzung ist ein HttpOnly-Cookie · sie darf niemals durch
 // JavaScript laufen, und schreibende Aufrufe brauchen den CSRF-Kopf.
 const plusScript = await readFile(path.join(root, "assets", "plus.js"), "utf8");

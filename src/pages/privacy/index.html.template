@@ -91,12 +91,13 @@
         <li><a href="#c6">6 <span lang="de">Geräte-Sync</span><span lang="en">Device sync</span><span lang="fr">Sync entre appareils</span><span lang="es">Sync entre dispositivos</span><span lang="zh">设备同步</span><span lang="hi">डिवाइस सिंक</span><span lang="ar">مزامنة الأجهزة</span></a></li>
         <li><a href="#c7">7 <span lang="de">Werbung &amp; Datenschutz</span><span lang="en">Ads &amp; privacy</span><span lang="fr">Publicités &amp; confidentialité</span><span lang="es">Anuncios y privacidad</span><span lang="zh">广告与隐私</span><span lang="hi">विज्ञापन और गोपनीयता</span><span lang="ar">الإعلانات والخصوصية</span></a></li>
         <li><a href="#c8">8 <span lang="de">Konto &amp; Kiebitz Plus</span><span lang="en">Account &amp; Kiebitz Plus</span><span lang="fr">Compte &amp; Kiebitz Plus</span><span lang="es">Cuenta &amp; Kiebitz Plus</span><span lang="zh">账号与 Kiebitz Plus</span><span lang="hi">खाता और Kiebitz Plus</span><span lang="ar">الحساب وKiebitz Plus</span></a></li>
-        <li><a href="#c9">9 <span lang="de">Rechtsgrundlagen</span><span lang="en">Legal bases</span><span lang="fr">Bases légales</span><span lang="es">Bases jurídicas</span><span lang="zh">法律依据</span><span lang="hi">क़ानूनी आधार</span><span lang="ar">الأسس القانونية</span></a></li>
-        <li><a href="#c10">10 <span lang="de">Speicherdauer &amp; Löschung</span><span lang="en">Retention &amp; deletion</span><span lang="fr">Conservation &amp; suppression</span><span lang="es">Conservación &amp; borrado</span><span lang="zh">保存期限与删除</span><span lang="hi">भंडारण अवधि और विलोपन</span><span lang="ar">مدة الحفظ والحذف</span></a></li>
-        <li><a href="#c11">11 <span lang="de">Kinder</span><span lang="en">Children</span><span lang="fr">Enfants</span><span lang="es">Menores</span><span lang="zh">未成年人</span><span lang="hi">बच्चे</span><span lang="ar">الأطفال</span></a></li>
-        <li><a href="#c12">12 <span lang="de">Deine Rechte</span><span lang="en">Your rights</span><span lang="fr">Vos droits</span><span lang="es">Tus derechos</span><span lang="zh">你的权利</span><span lang="hi">आपके अधिकार</span><span lang="ar">حقوقك</span></a></li>
-        <li><a href="#c13">13 <span lang="de">Diese Website</span><span lang="en">This website</span><span lang="fr">Ce site web</span><span lang="es">Este sitio web</span><span lang="zh">本网站</span><span lang="hi">यह वेबसाइट</span><span lang="ar">هذا الموقع</span></a></li>
-        <li><a href="#c14">14 <span lang="de">Änderungen</span><span lang="en">Changes</span><span lang="fr">Modifications</span><span lang="es">Cambios</span><span lang="zh">变更</span><span lang="hi">परिवर्तन</span><span lang="ar">التعديلات</span></a></li>
+        <li><a href="#c9">9 <span lang="de">Kündigung &amp; Widerruf</span><span lang="en">Cancellation &amp; withdrawal</span><span lang="fr">Résiliation &amp; rétractation</span><span lang="es">Cancelación y desistimiento</span><span lang="zh">终止与撤回</span><span lang="hi">रद्दीकरण और निरस्तीकरण</span><span lang="ar">الإنهاء والانسحاب</span></a></li>
+        <li><a href="#c10">10 <span lang="de">Rechtsgrundlagen</span><span lang="en">Legal bases</span><span lang="fr">Bases légales</span><span lang="es">Bases jurídicas</span><span lang="zh">法律依据</span><span lang="hi">क़ानूनी आधार</span><span lang="ar">الأسس القانونية</span></a></li>
+        <li><a href="#c11">11 <span lang="de">Speicherdauer &amp; Löschung</span><span lang="en">Retention &amp; deletion</span><span lang="fr">Conservation &amp; suppression</span><span lang="es">Conservación &amp; borrado</span><span lang="zh">保存期限与删除</span><span lang="hi">भंडारण अवधि और विलोपन</span><span lang="ar">مدة الحفظ والحذف</span></a></li>
+        <li><a href="#c12">12 <span lang="de">Kinder</span><span lang="en">Children</span><span lang="fr">Enfants</span><span lang="es">Menores</span><span lang="zh">未成年人</span><span lang="hi">बच्चे</span><span lang="ar">الأطفال</span></a></li>
+        <li><a href="#c13">13 <span lang="de">Deine Rechte</span><span lang="en">Your rights</span><span lang="fr">Vos droits</span><span lang="es">Tus derechos</span><span lang="zh">你的权利</span><span lang="hi">आपके अधिकार</span><span lang="ar">حقوقك</span></a></li>
+        <li><a href="#c14">14 <span lang="de">Diese Website</span><span lang="en">This website</span><span lang="fr">Ce site web</span><span lang="es">Este sitio web</span><span lang="zh">本网站</span><span lang="hi">यह वेबसाइट</span><span lang="ar">هذا الموقع</span></a></li>
+        <li><a href="#c15">15 <span lang="de">Änderungen</span><span lang="en">Changes</span><span lang="fr">Modifications</span><span lang="es">Cambios</span><span lang="zh">变更</span><span lang="hi">परिवर्तन</span><span lang="ar">التعديلات</span></a></li>
       </ul>
     </aside>
 
@@ -583,7 +584,81 @@
       </section>
 
       <section id="c9">
-        <h2><span class="num">09</span><span lang="de">Rechtsgrundlagen</span><span lang="en">Legal bases</span><span lang="fr">Bases légales</span><span lang="es">Bases jurídicas</span><span lang="zh">法律依据</span><span lang="hi">क़ानूनी आधार</span><span lang="ar">الأسس القانونية</span></h2>
+        <h2><span class="num">09</span><span lang="de">Kündigung und Widerruf</span><span lang="en">Cancellation and withdrawal</span><span lang="fr">Résiliation et rétractation</span><span lang="es">Cancelación y desistimiento</span><span lang="zh">终止与撤回</span><span lang="hi">रद्दीकरण और निरस्तीकरण</span><span lang="ar">الإنهاء والانسحاب</span></h2>
+        <p lang="de">Auf den Seiten <a href="../cancel/index.html">Verträge hier kündigen</a> und <a href="../withdraw/index.html">Vertrag widerrufen</a> kannst du deine Erklärung ohne Anmeldung abgeben. Verarbeitet werden dabei:</p>
+        <ul class="bul" lang="de">
+        <li>Name und E-Mail-Adresse,</li>
+        <li>Zahlungsweg (Stripe, Google Play oder unbekannt) und Vertragsbezeichnung,</li>
+        <li>bei der Kündigung zusätzlich die Kündigungsart und das gewünschte Vertragsende,</li>
+        <li>deine freiwillige Begründung oder Mitteilung,</li>
+        <li>Vorgangsnummer und Zeitstempel des Eingangs.</li>
+        </ul>
+        <p lang="de" style="margin-top:14px">Zur Begrenzung missbräuchlicher Massenanfragen werden E-Mail- und IP-Adresse ausschließlich als Hashwert gespeichert; die Klartextadressen fließen dort nicht ein. Zweck der Verarbeitung sind die Entgegennahme, der Nachweis und die Bearbeitung deiner Erklärung. Rechtsgrundlagen sind Art. 6 Abs. 1 lit. b DSGVO (Erfüllung des Vertrags), Art. 6 Abs. 1 lit. c DSGVO (gesetzliche Pflichten) und Art. 6 Abs. 1 lit. f DSGVO (Nachweis berechtigter Ansprüche).</p>
+        <p lang="de">Die Eingangsbestätigung wird per E-Mail über <strong>Resend</strong> (Resend, Inc., USA) versendet. Rechtsvorgänge werden spätestens nach vier Jahren gelöscht, die Daten der Ratenbegrenzung nach zwei Tagen.</p>
+        <p lang="en">On the pages <a href="../cancel/index.html">Cancel contracts here</a> and <a href="../withdraw/index.html">Withdraw from a contract</a> you can submit your statement without signing in. Processed are:</p>
+        <ul class="bul" lang="en">
+        <li>name and email address,</li>
+        <li>payment route (Stripe, Google Play or unknown) and contract designation,</li>
+        <li>for a cancellation additionally the type of cancellation and the requested end of contract,</li>
+        <li>your voluntary reason or message,</li>
+        <li>request number and timestamp of receipt.</li>
+        </ul>
+        <p lang="en" style="margin-top:14px">To limit abusive bulk requests, the email and IP address are stored only as a hash; the plain addresses are not part of it. The purposes are receiving, evidencing and processing your statement. The legal bases are Art. 6(1)(b) GDPR (performance of the contract), Art. 6(1)(c) GDPR (legal obligations) and Art. 6(1)(f) GDPR (evidence of legitimate claims).</p>
+        <p lang="en">The confirmation of receipt is sent by email through <strong>Resend</strong> (Resend, Inc., USA). Legal requests are deleted after four years at the latest, rate-limiting data after two days.</p>
+        <p lang="fr">Sur les pages <a href="../cancel/index.html">Résilier vos contrats ici</a> et <a href="../withdraw/index.html">Rétractation du contrat</a>, vous pouvez déposer votre déclaration sans connexion. Sont traités :</p>
+        <ul class="bul" lang="fr">
+        <li>le nom et l’adresse e-mail,</li>
+        <li>la voie de paiement (Stripe, Google Play ou inconnue) et la désignation du contrat,</li>
+        <li>pour une résiliation, en plus le type de résiliation et la fin de contrat souhaitée,</li>
+        <li>votre motif ou message facultatif,</li>
+        <li>le numéro de dossier et l’horodatage de la réception.</li>
+        </ul>
+        <p lang="fr" style="margin-top:14px">Pour limiter les envois massifs abusifs, l’adresse e-mail et l’adresse IP ne sont conservées que sous forme de condensé ; les adresses en clair n’y figurent pas. Les finalités sont la réception, la preuve et le traitement de votre déclaration. Les bases légales sont l’art. 6, § 1, b) du RGPD (exécution du contrat), l’art. 6, § 1, c) (obligations légales) et l’art. 6, § 1, f) (preuve de droits légitimes).</p>
+        <p lang="fr">La confirmation de réception est envoyée par e-mail via <strong>Resend</strong> (Resend, Inc., États-Unis). Les dossiers juridiques sont supprimés au plus tard après quatre ans, les données de limitation de débit après deux jours.</p>
+        <p lang="es">En las páginas <a href="../cancel/index.html">Cancelar contratos aquí</a> y <a href="../withdraw/index.html">Desistir del contrato</a> puedes presentar tu declaración sin iniciar sesión. Se tratan:</p>
+        <ul class="bul" lang="es">
+        <li>nombre y dirección de correo,</li>
+        <li>vía de pago (Stripe, Google Play o desconocida) y designación del contrato,</li>
+        <li>en la cancelación, además el tipo de cancelación y el fin de contrato deseado,</li>
+        <li>tu motivo o mensaje voluntario,</li>
+        <li>número de trámite y marca de tiempo de la recepción.</li>
+        </ul>
+        <p lang="es" style="margin-top:14px">Para limitar los envíos masivos abusivos, la dirección de correo y la IP se guardan únicamente como hash; las direcciones en claro no forman parte de él. Las finalidades son la recepción, la prueba y la tramitación de tu declaración. Las bases jurídicas son el art. 6.1.b del RGPD (ejecución del contrato), el art. 6.1.c (obligaciones legales) y el art. 6.1.f (prueba de derechos legítimos).</p>
+        <p lang="es">La confirmación de recepción se envía por correo a través de <strong>Resend</strong> (Resend, Inc., EE. UU.). Los expedientes jurídicos se borran a más tardar a los cuatro años y los datos de limitación de peticiones a los dos días.</p>
+        <p lang="zh">在<a href="../cancel/index.html">在此终止合同</a>和<a href="../withdraw/index.html">撤回合同</a>页面，你可以无需登录提交声明。处理的数据包括：</p>
+        <ul class="bul" lang="zh">
+        <li>姓名和电子邮箱地址，</li>
+        <li>付款方式（Stripe、Google Play 或不清楚）以及合同名称，</li>
+        <li>终止合同时另有终止类型和希望的合同结束时间，</li>
+        <li>你自愿填写的理由或留言，</li>
+        <li>受理编号和收到时间戳。</li>
+        </ul>
+        <p lang="zh" style="margin-top:14px">为限制滥用式的大量请求，电子邮箱地址和 IP 地址仅以哈希值保存，明文地址不会进入其中。处理目的是接收、证明和办理你的声明。法律依据为 GDPR 第 6 条第 1 款 b 项（履行合同）、第 6 条第 1 款 c 项（法定义务）和第 6 条第 1 款 f 项（证明正当权利主张）。</p>
+        <p lang="zh">收到确认通过 <strong>Resend</strong>（Resend, Inc.，美国）以电子邮件发送。法律事项最迟在四年后删除，限流数据在两天后删除。</p>
+        <p lang="hi"><a href="../cancel/index.html">अनुबंध यहाँ रद्द करें</a> और <a href="../withdraw/index.html">अनुबंध निरस्त करें</a> पृष्ठों पर आप बिना साइन-इन अपनी घोषणा दे सकते हैं। इसमें संसाधित होते हैं:</p>
+        <ul class="bul" lang="hi">
+        <li>नाम और ईमेल पता,</li>
+        <li>भुगतान मार्ग (Stripe, Google Play या अज्ञात) और अनुबंध का नाम,</li>
+        <li>रद्दीकरण में अतिरिक्त रूप से रद्दीकरण का प्रकार और वांछित अनुबंध-समाप्ति,</li>
+        <li>आपका स्वैच्छिक कारण या संदेश,</li>
+        <li>प्रक्रिया संख्या और प्राप्ति का समयचिह्न।</li>
+        </ul>
+        <p lang="hi" style="margin-top:14px">दुरुपयोगपूर्ण सामूहिक अनुरोधों को सीमित करने के लिए ईमेल और IP पता केवल हैश के रूप में संग्रहीत होते हैं; स्पष्ट पते उसमें शामिल नहीं होते। प्रसंस्करण का उद्देश्य आपकी घोषणा को प्राप्त करना, प्रमाणित रखना और उस पर कार्रवाई करना है। क़ानूनी आधार GDPR अनुच्छेद 6(1)(b) (अनुबंध का निष्पादन), 6(1)(c) (क़ानूनी दायित्व) और 6(1)(f) (वैध दावों का प्रमाण) हैं।</p>
+        <p lang="hi">प्राप्ति की पुष्टि <strong>Resend</strong> (Resend, Inc., अमेरिका) के ज़रिए ईमेल से भेजी जाती है। क़ानूनी प्रक्रियाएँ अधिकतम चार वर्ष बाद मिटा दी जाती हैं, दर-सीमा का डेटा दो दिन बाद।</p>
+        <p lang="ar">في صفحتَي <a href="../cancel/index.html">أنهِ عقودك هنا</a> و<a href="../withdraw/index.html">انسحب من العقد</a> يمكنك تقديم إعلانك بلا تسجيل دخول. وتُعالَج عندها:</p>
+        <ul class="bul" lang="ar">
+        <li>الاسم وعنوان البريد الإلكتروني،</li>
+        <li>وسيلة الدفع (Stripe أو Google Play أو غير معروفة) وبيان العقد،</li>
+        <li>وفي حالة الإنهاء أيضًا نوع الإنهاء ونهاية العقد المطلوبة،</li>
+        <li>سببك أو رسالتك الاختيارية،</li>
+        <li>رقم المعاملة وطابع وقت الاستلام.</li>
+        </ul>
+        <p lang="ar" style="margin-top:14px">وللحدّ من الطلبات الجماعية المسيئة، يُحفَظ عنوانا البريد وIP بصيغة تجزئة فقط، ولا تدخل فيها العناوين الصريحة. والغرض هو استلام إعلانك وإثباته ومعالجته. والأسس القانونية هي المادة 6(1)(ب) من اللائحة (تنفيذ العقد) والمادة 6(1)(ج) (الالتزامات القانونية) والمادة 6(1)(و) (إثبات الحقوق المشروعة).</p>
+        <p lang="ar">ويُرسَل تأكيد الاستلام بالبريد الإلكتروني عبر <strong>Resend</strong>‏ (Resend, Inc.، الولايات المتحدة). وتُحذف المعاملات القانونية بعد أربع سنوات على أبعد تقدير، وبيانات تحديد المعدّل بعد يومين.</p>
+      </section>
+
+      <section id="c10">
+        <h2><span class="num">10</span><span lang="de">Rechtsgrundlagen</span><span lang="en">Legal bases</span><span lang="fr">Bases légales</span><span lang="es">Bases jurídicas</span><span lang="zh">法律依据</span><span lang="hi">क़ानूनी आधार</span><span lang="ar">الأسس القانونية</span></h2>
         <p lang="de">Soweit die App deine Schachdaten ausschließlich lokal verarbeitet, hat der Anbieter darauf keinen Zugriff. Für einzelne Netzwerk- und Werbevorgänge gelten insbesondere:</p>
         <ul class="bul" lang="de">
           <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong>: Bereitstellung der von dir angeforderten Funktionen, insbesondere der Import deiner Partien von chess.com bzw. Lichess und der Sync zwischen deinen Geräten.</li>
@@ -628,8 +703,8 @@
         </ul>
       </section>
 
-      <section id="c10">
-        <h2><span class="num">10</span><span lang="de">Speicherdauer und Löschung</span><span lang="en">Retention and deletion</span><span lang="fr">Conservation et suppression</span><span lang="es">Conservación y borrado</span><span lang="zh">保存期限与删除</span><span lang="hi">भंडारण अवधि और विलोपन</span><span lang="ar">مدة الحفظ والحذف</span></h2>
+      <section id="c11">
+        <h2><span class="num">11</span><span lang="de">Speicherdauer und Löschung</span><span lang="en">Retention and deletion</span><span lang="fr">Conservation et suppression</span><span lang="es">Conservación y borrado</span><span lang="zh">保存期限与删除</span><span lang="hi">भंडारण अवधि और विलोपन</span><span lang="ar">مدة الحفظ والحذف</span></h2>
         <p lang="de">Deine lokalen Schachdaten bleiben so lange gespeichert, wie du sie behalten möchtest; Kiebitz betreibt dafür keine serverseitige Aufbewahrung. Du kannst jederzeit:</p>
         <ul class="bul" lang="de">
           <li>einzelne Partien, Notizen, Tags oder Repertoire-Einträge in der App löschen,</li>
@@ -688,8 +763,8 @@
         <p lang="ar">يخضع احتفاظ Google Mobile Ads بالبيانات التقنية لشروط Google نفسها. ويمكنك إعادة فتح خيارات الإعلانات في Kiebitz وإعادة ضبط معرّف الإعلانات أو حذفه في Android.</p>
       </section>
 
-      <section id="c11">
-        <h2><span class="num">11</span><span lang="de">Kinder und Jugendliche</span><span lang="en">Children</span><span lang="fr">Enfants et adolescents</span><span lang="es">Menores</span><span lang="zh">儿童与青少年</span><span lang="hi">बच्चे और किशोर</span><span lang="ar">الأطفال والمراهقون</span></h2>
+      <section id="c12">
+        <h2><span class="num">12</span><span lang="de">Kinder und Jugendliche</span><span lang="en">Children</span><span lang="fr">Enfants et adolescents</span><span lang="es">Menores</span><span lang="zh">儿童与青少年</span><span lang="hi">बच्चे और किशोर</span><span lang="ar">الأطفال والمراهقون</span></h2>
         <p lang="de">Kiebitz richtet sich nicht speziell an Kinder. Für Werbung gelten die von Google und Google Play vorgesehenen Alters-, Einwilligungs- und Jugendschutzregeln; bei einer Einstufung für Kinder müssen außerdem die entsprechenden Familien- und Anzeigenanforderungen erfüllt werden. Beim Import von Partien gelten die Bedingungen des jeweiligen Schachportals.</p>
         <p lang="en">Kiebitz is not specifically directed at children. Advertising is subject to the age, consent and child-safety rules provided by Google and Google Play; if the app is classified for children, the applicable Families and advertising requirements must also be met. The terms of the respective chess platform apply when importing games.</p>
         <p lang="fr">Kiebitz ne s’adresse pas spécifiquement aux enfants. La publicité est soumise aux règles d’âge, de consentement et de protection des mineurs de Google et Google Play ; si l’application est classée pour les enfants, les exigences Familles et publicitaires correspondantes doivent aussi être respectées. Les conditions du portail d’échecs concerné s’appliquent à l’import.</p>
@@ -699,8 +774,8 @@
         <p lang="ar">لا يستهدف Kiebitz الأطفال على وجه الخصوص. وتخضع الإعلانات لقواعد العمر والموافقة وحماية الأطفال لدى Google وGoogle Play؛ وإذا صُنِّف التطبيق للأطفال فيجب كذلك استيفاء متطلبات العائلات والإعلانات ذات الصلة. وعند استيراد المباريات تسري شروط بوّابة الشطرنج المعنيّة.</p>
       </section>
 
-      <section id="c12">
-        <h2><span class="num">12</span><span lang="de">Deine Rechte</span><span lang="en">Your rights</span><span lang="fr">Vos droits</span><span lang="es">Tus derechos</span><span lang="zh">你的权利</span><span lang="hi">आपके अधिकार</span><span lang="ar">حقوقك</span></h2>
+      <section id="c13">
+        <h2><span class="num">13</span><span lang="de">Deine Rechte</span><span lang="en">Your rights</span><span lang="fr">Vos droits</span><span lang="es">Tus derechos</span><span lang="zh">你的权利</span><span lang="hi">आपके अधिकार</span><span lang="ar">حقوقك</span></h2>
         <p lang="de">Dir stehen nach der DSGVO die Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21) zu, ebenso das Recht, eine erteilte Einwilligung jederzeit zu widerrufen (Art. 7 Abs. 3).</p>
         <p lang="de">Kiebitz speichert keine Schachdaten über dich in einem eigenen Backend; lokale Daten kannst du selbst einsehen, exportieren und löschen. Für Kiebitz-Anfragen genügt eine E-Mail an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>. Rechte bezüglich der von Google verarbeiteten Werbedaten kannst du außerdem über Googles Datenschutzoptionen ausüben.</p>
         <p lang="de">Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz; du kannst dich auch an die Behörde deines Wohnorts wenden.</p>
@@ -724,8 +799,8 @@
         <p lang="ar">ولك كذلك الحق في تقديم شكوى إلى إحدى سلطات الإشراف على حماية البيانات. والسلطة المختصّة هي مفوّض ولاية راينلاند بفالتس لحماية البيانات وحرية المعلومات في ألمانيا؛ ويمكنك أيضًا مخاطبة السلطة في مكان إقامتك.</p>
       </section>
 
-      <section id="c13">
-        <h2><span class="num">13</span><span lang="de">Diese Website</span><span lang="en">This website</span><span lang="fr">Ce site web</span><span lang="es">Este sitio web</span><span lang="zh">本网站</span><span lang="hi">यह वेबसाइट</span><span lang="ar">هذا الموقع</span></h2>
+      <section id="c14">
+        <h2><span class="num">14</span><span lang="de">Diese Website</span><span lang="en">This website</span><span lang="fr">Ce site web</span><span lang="es">Este sitio web</span><span lang="zh">本网站</span><span lang="hi">यह वेबसाइट</span><span lang="ar">هذا الموقع</span></h2>
         <p lang="de">Diese Website ist statisch und wird über GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) ausgeliefert. Beim Aufruf verarbeitet GitHub als Hoster technisch notwendige Verbindungsdaten, insbesondere deine IP-Adresse, Datum und Uhrzeit, angeforderte Datei, Referrer und Browserkennung, in Server-Logfiles. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sicherer, störungsfreier Betrieb). Der Anbieter dieser Website hat keinen Zugriff auf diese Logdaten.</p>
         <p lang="de">Die öffentlich aufrufbaren Website-Seiten setzen keine Cookies, kein Analytics und keine Werbe- oder Social-Media-Skripte ein. Die ausschließlich in Kiebitz Desktop eingebettete Werbefläche verwendet ein lokales Skript zur Auswahl aktiver Kampagnen, aber ebenfalls keine Cookies, Speicherung, Nutzerkennungen, Analytics oder Drittanbieter-Skripte. Schriftarten, Stile und Werbemittel liegen auf demselben Server. Die von dir auf der Website gewählte Sprache wird ausschließlich lokal in deinem Browser (localStorage) gespeichert, damit die Seite beim nächsten Besuch in derselben Sprache erscheint; diese Angabe wird nicht übertragen. Datenschutzerklärung von GitHub: <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">docs.github.com</a>.</p>
         <p lang="de"><strong>Feedback-Formular:</strong> Nur wenn du eine Meldung absendest, werden die von dir eingetragenen Angaben (Art der Meldung, Kurzfassung, Details, optional Plattform, App-Version und E-Mail-Adresse) sowie technisch notwendige Verbindungsdaten an FormSubmit (formsubmit.co) übertragen und von dort per E-Mail an den Anbieter weitergeleitet. Es werden keine Daten automatisch aus der App ausgelesen oder angehängt. FormSubmit hält Einsendungen nach eigenen Angaben bis zu 30 Tage für die Zustellung und den Abruf vor. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit du Support anfragst, im Übrigen Art. 6 Abs. 1 lit. f DSGVO (Bearbeitung freiwilliger Rückmeldungen und Verbesserung der Software). Die beim Anbieter eingegangene E-Mail wird gelöscht, sobald sie für Bearbeitung und Rückfragen nicht mehr benötigt wird. Hinweise von FormSubmit: <a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">Datenschutz</a> und <a href="https://formsubmit.co/documentation" rel="noopener noreferrer">Dokumentation</a>.</p>
@@ -749,8 +824,8 @@
         <p lang="ar"><strong>نموذج الملاحظات:</strong> لا تُنقَل البيانات التي أدخلتها (نوع الرسالة، والملخّص، والتفاصيل، واختياريًا المنصّة وإصدار التطبيق والبريد الإلكتروني) مع بيانات الاتصال الضرورية تقنيًا إلى FormSubmit ‏(formsubmit.co) إلا عند إرسالك الرسالة، ومن هناك تُحوَّل بالبريد الإلكتروني إلى المزوّد. ولا تُقرأ أي بيانات من التطبيق تلقائيًا ولا تُرفَق. ووفق ما تذكره FormSubmit، تحتفظ بالرسائل حتى 30 يومًا لأغراض التسليم والاسترجاع. والأساس القانوني هو المادة 6(1)(ب) من اللائحة عند طلبك الدعم، وفيما عدا ذلك المادة 6(1)(و) (معالجة الملاحظات الطوعية وتحسين البرمجية). ويُحذف البريد الذي يتلقّاه المزوّد بمجرد انتفاء الحاجة إليه للمعالجة والاستفسارات اللاحقة. معلومات FormSubmit: <a href="https://formsubmit.co/privacy.pdf" rel="noopener noreferrer">الخصوصية</a> و<a href="https://formsubmit.co/documentation" rel="noopener noreferrer">التوثيق</a>.</p>
       </section>
 
-      <section id="c14">
-        <h2><span class="num">14</span><span lang="de">Änderungen dieser Erklärung</span><span lang="en">Changes to this policy</span><span lang="fr">Modifications de la présente politique</span><span lang="es">Cambios en esta política</span><span lang="zh">本政策的变更</span><span lang="hi">इस नीति में परिवर्तन</span><span lang="ar">تعديلات هذه السياسة</span></h2>
+      <section id="c15">
+        <h2><span class="num">15</span><span lang="de">Änderungen dieser Erklärung</span><span lang="en">Changes to this policy</span><span lang="fr">Modifications de la présente politique</span><span lang="es">Cambios en esta política</span><span lang="zh">本政策的变更</span><span lang="hi">इस नीति में परिवर्तन</span><span lang="ar">تعديلات هذه السياسة</span></h2>
         <p lang="de">Wird die App um Funktionen erweitert, die neue Datenverarbeitungen mit sich bringen, wird diese Erklärung vorher angepasst. Der jeweils aktuelle Stand ist oben datiert und dauerhaft unter dieser Adresse erreichbar.</p>
         <p lang="en">If the app gains functions that involve new data processing, this policy will be updated beforehand. The current version is dated above and permanently available at this address.</p>
         <p lang="fr">Si l’application se dote de fonctions impliquant de nouveaux traitements de données, la présente politique sera adaptée au préalable. La version en vigueur est datée ci-dessus et reste accessible en permanence à cette adresse.</p>
@@ -786,6 +861,16 @@
       <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
       <a href="../terms/index.html"><span lang="de">Vertragsbedingungen</span><span lang="en">Terms of service</span><span lang="fr">Conditions générales</span><span lang="es">Condiciones generales</span><span lang="zh">服务条款</span><span lang="hi">सेवा की शर्तें</span><span lang="ar">شروط الخدمة</span></a>
       <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span><span lang="fr">Code source</span><span lang="es">Código fuente</span><span lang="zh">源代码</span><span lang="hi">सोर्स कोड</span><span lang="ar">الشيفرة المصدرية</span></a>
+      </div>
+      <div class="foot-links-legal">
+      <a class="foot-legal-action" href="../cancel/index.html">
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9l3.5 3.5V20H6Z"></path><path d="M9.5 12.5h5"></path></svg>
+        <span lang="de">Verträge hier kündigen</span><span lang="en">Cancel contracts here</span><span lang="fr">Résilier vos contrats ici</span><span lang="es">Cancelar contratos aquí</span><span lang="zh">在此终止合同</span><span lang="hi">अनुबंध यहाँ रद्द करें</span><span lang="ar">أنهِ عقودك هنا</span>
+      </a>
+      <a class="foot-legal-action" href="../withdraw/index.html">
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6 5.5 10.5 10 15"></path><path d="M5.5 10.5h8a5 5 0 0 1 0 10h-3"></path></svg>
+        <span lang="de">Vertrag widerrufen</span><span lang="en">Withdraw from a contract</span><span lang="fr">Rétractation du contrat</span><span lang="es">Desistir del contrato</span><span lang="zh">撤回合同</span><span lang="hi">अनुबंध निरस्त करें</span><span lang="ar">انسحب من العقد</span>
+      </a>
       </div>
       <div class="foot-links-support">
       <a class="foot-support" href="https://github.com/sponsors/Torim98" target="_blank" rel="noopener noreferrer" data-sponsor-open>

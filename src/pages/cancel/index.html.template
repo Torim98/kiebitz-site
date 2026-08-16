@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-lang="en" data-title-de="Verträge hier kündigen · Kiebitz" data-title-en="Cancel contracts here · Kiebitz" data-title-fr="Résilier vos contrats ici · Kiebitz" data-title-es="Cancelar contratos aquí · Kiebitz" data-title-zh="在此终止合同 · Kiebitz" data-title-hi="अनुबंध यहाँ रद्द करें · Kiebitz" data-title-ar="أنهِ عقودك هنا · Kiebitz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cancel contracts here · Kiebitz</title>
+<meta name="description" content="Kiebitz Plus ohne Anmeldung kuendigen: Bestaetigungsseite nach § 312k BGB mit Eingangsbestaetigung. · Cancel Kiebitz Plus without signing in.">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+(function () {
+  var LANGS = { de: 1, en: 1, fr: 1, es: 1, zh: 1, hi: 1, ar: 1 };
+  var TAG = { de: "de", en: "en", fr: "fr", es: "es", zh: "zh-Hans", hi: "hi", ar: "ar" };
+  var l = "en";
+  try {
+    var s = localStorage.getItem("kiebitz-lang");
+    if (s && LANGS[s]) {
+      l = s;
+    } else {
+      var list = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || ""];
+      for (var i = 0; i < list.length; i++) {
+        var c = String(list[i]).toLowerCase().split("-")[0];
+        if (LANGS[c]) { l = c; break; }
+      }
+    }
+  } catch (e) { /* egal */ }
+  var d = document.documentElement;
+  d.setAttribute("data-lang", l);
+  d.setAttribute("lang", TAG[l]);
+  d.setAttribute("dir", l === "ar" ? "rtl" : "ltr");
+  try {
+    var m = localStorage.getItem("kiebitz-motion");
+    if (m === "on" || m === "off") d.setAttribute("data-motion", m);
+  } catch (e) { /* egal */ }
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span><span lang="fr">Aller au contenu</span><span lang="es">Ir al contenido</span><span lang="zh">跳到主要内容</span><span lang="hi">सामग्री पर जाएँ</span><span lang="ar">تخطَّ إلى المحتوى</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../index.html" aria-label="Kiebitz">
+      <img src="../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="de">Zug um Zugvogel</span><span lang="en">Moves take flight</span><span lang="fr">Coup d’aile</span><span lang="es">Jugadas que vuelan</span><span lang="zh">步步高飞</span><span lang="hi">हर चाल, एक उड़ान</span><span lang="ar">نقلة تُحلّق</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="../plus/index.html">Kiebitz Plus</a>
+      <a href="../plus/account/index.html"><span lang="de">Konto</span><span lang="en">Account</span><span lang="fr">Compte</span><span lang="es">Cuenta</span><span lang="zh">账号</span><span lang="hi">खाता</span><span lang="ar">الحساب</span></a>
+      <a href="../terms/index.html"><span lang="de">AGB</span><span lang="en">Terms</span><span lang="fr">CGV</span><span lang="es">Condiciones</span><span lang="zh">条款</span><span lang="hi">शर्तें</span><span lang="ar">الشروط</span></a>
+      <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="Sprache · Language · Langue · Idioma · 语言 · भाषा · اللغة">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-sm" href="../index.html"><span lang="de">Zurück</span><span lang="en">Back</span><span lang="fr">Retour</span><span lang="es">Volver</span><span lang="zh">返回</span><span lang="hi">वापस</span><span lang="ar">رجوع</span></a>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap">
+    <article class="plus-page">
+      <p class="eyebrow"><b>§</b> <span lang="de">Kündigung</span><span lang="en">Cancellation</span><span lang="fr">Résiliation</span><span lang="es">Cancelación</span><span lang="zh">终止合同</span><span lang="hi">रद्दीकरण</span><span lang="ar">الإنهاء</span></p>
+      <h1><span lang="de">Verträge hier kündigen</span><span lang="en">Cancel contracts here</span><span lang="fr">Résilier vos contrats ici</span><span lang="es">Cancelar contratos aquí</span><span lang="zh">在此终止合同</span><span lang="hi">अनुबंध यहाँ रद्द करें</span><span lang="ar">أنهِ عقودك هنا</span></h1>
+      <p class="doc-sub">
+        <span lang="de">Hier kündigst du Kiebitz Plus — ohne Anmeldung und ohne Konto. Kiebitz Free ist kostenlos und muss nicht gekündigt werden.</span>
+        <span lang="en">Cancel Kiebitz Plus here — without signing in and without an account. Kiebitz Free is free of charge and needs no cancellation.</span>
+        <span lang="fr">Résiliez ici Kiebitz Plus — sans connexion ni compte. Kiebitz Free est gratuit et n’a pas à être résilié.</span>
+        <span lang="es">Cancela aquí Kiebitz Plus, sin iniciar sesión y sin cuenta. Kiebitz Free es gratuito y no hay que cancelarlo.</span>
+        <span lang="zh">在这里终止 Kiebitz Plus——无需登录，也不需要账号。Kiebitz Free 是免费的，不需要终止。</span>
+        <span lang="hi">यहाँ आप Kiebitz Plus रद्द कर सकते हैं — बिना साइन-इन और बिना खाते के। Kiebitz Free मुफ़्त है और उसे रद्द करने की ज़रूरत नहीं।</span>
+        <span lang="ar">أنهِ اشتراك Kiebitz Plus من هنا — بلا تسجيل دخول وبلا حساب. أما Kiebitz Free فمجاني ولا يحتاج إلى إنهاء.</span>
+      </p>
+
+      <ol class="legal-steps">
+        <li>
+          <span lang="de">Kündigungsschaltfläche: der Link „Verträge hier kündigen“ steht im Footer jeder Seite. Du bist ihm bereits gefolgt.</span>
+          <span lang="en">Cancellation button: the link “Cancel contracts here” sits in the footer of every page. You have already followed it.</span>
+          <span lang="fr">Bouton de résiliation : le lien « Résilier vos contrats ici » figure dans le pied de page de chaque page. Vous l’avez déjà suivi.</span>
+          <span lang="es">Botón de cancelación: el enlace «Cancelar contratos aquí» está en el pie de cada página. Ya lo has seguido.</span>
+          <span lang="zh">终止按钮：每个页面的页脚都有「在此终止合同」链接，你已经通过它来到这里。</span>
+          <span lang="hi">रद्दीकरण बटन: «अनुबंध यहाँ रद्द करें» लिंक हर पृष्ठ के फ़ुटर में है। आप उसी से यहाँ आए हैं।</span>
+          <span lang="ar">زر الإنهاء: يوجد رابط «أنهِ عقودك هنا» في تذييل كل صفحة، وقد وصلت من خلاله بالفعل.</span>
+        </li>
+        <li aria-current="step">
+          <span lang="de">Bestätigungsseite: Angaben ausfüllen und mit „jetzt kündigen“ abschicken. Danach siehst du Vorgangsnummer und Eingangszeit.</span>
+          <span lang="en">Confirmation page: fill in the details and submit with “cancel now”. You then see the request number and the time of receipt.</span>
+          <span lang="fr">Page de confirmation : renseignez les informations et envoyez avec « résilier maintenant ». Le numéro de dossier et l’heure de réception s’affichent ensuite.</span>
+          <span lang="es">Página de confirmación: rellena los datos y envía con «cancelar ahora». Después verás el número de trámite y la hora de recepción.</span>
+          <span lang="zh">确认页面：填写信息并点击「立即终止合同」提交，随后会显示受理编号和收到时间。</span>
+          <span lang="hi">पुष्टि पृष्ठ: विवरण भरिए और «अभी रद्द करें» से भेजिए। इसके बाद आपको प्रक्रिया संख्या और प्राप्ति समय दिखेगा।</span>
+          <span lang="ar">صفحة التأكيد: املأ البيانات وأرسلها بزر «ألغِ الآن»، ثم يظهر رقم المعاملة ووقت الاستلام.</span>
+        </li>
+      </ol>
+
+      <section class="plus-card" data-legal-view="form" aria-labelledby="cancel-form-title">
+        <h2 id="cancel-form-title"><span lang="de">Kündigungserklärung</span><span lang="en">Cancellation statement</span><span lang="fr">Déclaration de résiliation</span><span lang="es">Declaración de cancelación</span><span lang="zh">终止声明</span><span lang="hi">रद्दीकरण घोषणा</span><span lang="ar">إعلان الإنهاء</span></h2>
+        <p class="small">
+          <span lang="de">Pflichtfelder sind mit * gekennzeichnet. Deine Angaben gehen an den Anbieter, nicht an Stripe oder Google.</span>
+          <span lang="en">Required fields are marked with *. Your details go to the provider, not to Stripe or Google.</span>
+          <span lang="fr">Les champs obligatoires sont signalés par *. Vos informations vont à l’éditeur, pas à Stripe ni à Google.</span>
+          <span lang="es">Los campos obligatorios están marcados con *. Tus datos van al proveedor, no a Stripe ni a Google.</span>
+          <span lang="zh">带 * 的为必填项。你的信息发送给提供者，而不是 Stripe 或 Google。</span>
+          <span lang="hi">आवश्यक फ़ील्ड * से चिह्नित हैं। आपकी जानकारी प्रदाता को जाती है, Stripe या Google को नहीं।</span>
+          <span lang="ar">الحقول الإلزامية مؤشَّرة بـ *. وتذهب بياناتك إلى المزوّد، لا إلى Stripe أو Google.</span>
+        </p>
+
+        <form class="legal-form" data-legal-form>
+          <div class="form-field">
+            <label for="cancel-name"><span lang="de">Name *</span><span lang="en">Name *</span><span lang="fr">Nom *</span><span lang="es">Nombre *</span><span lang="zh">姓名 *</span><span lang="hi">नाम *</span><span lang="ar">الاسم *</span></label>
+            <input id="cancel-name" name="name" type="text" required maxlength="120" autocomplete="name">
+          </div>
+
+          <div class="form-field">
+            <label for="cancel-email"><span lang="de">E-Mail-Adresse *</span><span lang="en">Email address *</span><span lang="fr">Adresse e-mail *</span><span lang="es">Dirección de correo *</span><span lang="zh">电子邮箱 *</span><span lang="hi">ईमेल पता *</span><span lang="ar">عنوان البريد الإلكتروني *</span></label>
+            <input id="cancel-email" name="email" type="email" required maxlength="160" autocomplete="email" inputmode="email" placeholder="name@example.com">
+            <span class="field-hint"><span lang="de">Am besten die Adresse, mit der du Kiebitz Plus gebucht hast. An sie geht die Bestätigung.</span><span lang="en">Ideally the address you used to buy Kiebitz Plus. The confirmation goes there.</span><span lang="fr">De préférence l’adresse utilisée pour souscrire Kiebitz Plus. La confirmation y sera envoyée.</span><span lang="es">Preferiblemente la dirección con la que contrataste Kiebitz Plus. Allí llegará la confirmación.</span><span lang="zh">最好是你购买 Kiebitz Plus 时使用的邮箱，确认信会发到该地址。</span><span lang="hi">बेहतर होगा वही पता जिससे आपने Kiebitz Plus लिया था। पुष्टि उसी पर जाएगी।</span><span lang="ar">يفضَّل العنوان الذي اشتريت به Kiebitz Plus، فإليه يُرسَل التأكيد.</span></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cancel-provider"><span lang="de">Zahlungsweg *</span><span lang="en">Payment route *</span><span lang="fr">Voie de paiement *</span><span lang="es">Vía de pago *</span><span lang="zh">付款方式 *</span><span lang="hi">भुगतान मार्ग *</span><span lang="ar">وسيلة الدفع *</span></label>
+              <select id="cancel-provider" name="provider" required>
+                <option value="" data-label-de="— bitte wählen —" data-label-en="— please choose —" data-label-fr="— veuillez choisir —" data-label-es="— elige una opción —" data-label-zh="— 请选择 —" data-label-hi="— कृपया चुनिए —" data-label-ar="— اختر من فضلك —">— please choose —</option>
+                <option value="stripe" data-label-de="Stripe (Kauf auf der Website)" data-label-en="Stripe (bought on the website)" data-label-fr="Stripe (achat sur le site)" data-label-es="Stripe (compra en el sitio web)" data-label-zh="Stripe（在网站购买）" data-label-hi="Stripe (वेबसाइट पर ख़रीद)" data-label-ar="‏Stripe (شراء عبر الموقع)">Stripe (bought on the website)</option>
+                <option value="google_play" data-label-de="Google Play (Kauf in der Android-App)" data-label-en="Google Play (bought in the Android app)" data-label-fr="Google Play (achat dans l’app Android)" data-label-es="Google Play (compra en la app de Android)" data-label-zh="Google Play（在 Android 应用内购买）" data-label-hi="Google Play (Android ऐप में ख़रीद)" data-label-ar="‏Google Play (شراء داخل تطبيق Android)">Google Play (bought in the Android app)</option>
+                <option value="unknown" data-label-de="Unbekannt" data-label-en="Unknown" data-label-fr="Inconnue" data-label-es="Desconocida" data-label-zh="不清楚" data-label-hi="अज्ञात" data-label-ar="غير معروفة">Unknown</option>
+              </select>
+              <span class="field-hint"><span lang="de">Über Google Play gekaufte Abos kündigst du zusätzlich im Play Store; diese Erklärung nehmen wir trotzdem entgegen.</span><span lang="en">Subscriptions bought through Google Play must also be cancelled in the Play Store; we accept this statement all the same.</span><span lang="fr">Les abonnements souscrits via Google Play se résilient aussi dans le Play Store ; nous enregistrons néanmoins cette déclaration.</span><span lang="es">Las suscripciones compradas en Google Play deben cancelarse también en Play Store; aun así registramos esta declaración.</span><span lang="zh">通过 Google Play 购买的订阅还需在 Play 商店中取消；我们仍会受理这份声明。</span><span lang="hi">Google Play से ली गई सदस्यता Play Store में भी रद्द करनी होती है; फिर भी हम यह घोषणा स्वीकार करते हैं।</span><span lang="ar">تُلغى الاشتراكات المشتراة عبر Google Play في متجر Play أيضًا؛ ومع ذلك نستلم هذا الإعلان.</span></span>
+            </div>
+            <div class="form-field">
+              <label for="cancel-contract"><span lang="de">Vertragsbezeichnung *</span><span lang="en">Contract *</span><span lang="fr">Désignation du contrat *</span><span lang="es">Designación del contrato *</span><span lang="zh">合同名称 *</span><span lang="hi">अनुबंध का नाम *</span><span lang="ar">بيان العقد *</span></label>
+              <input id="cancel-contract" name="contract_reference" type="text" required maxlength="120" value="Kiebitz Plus">
+            </div>
+          </div>
+
+          <fieldset class="legal-choice">
+            <legend><span lang="de">Art der Kündigung *</span><span lang="en">Type of cancellation *</span><span lang="fr">Type de résiliation *</span><span lang="es">Tipo de cancelación *</span><span lang="zh">终止类型 *</span><span lang="hi">रद्दीकरण का प्रकार *</span><span lang="ar">نوع الإنهاء *</span></legend>
+            <div class="legal-options">
+              <label><input type="radio" name="cancellation_type" value="ordinary" checked><span lang="de">Ordentliche Kündigung</span><span lang="en">Ordinary cancellation</span><span lang="fr">Résiliation ordinaire</span><span lang="es">Cancelación ordinaria</span><span lang="zh">普通终止</span><span lang="hi">सामान्य रद्दीकरण</span><span lang="ar">إنهاء عادي</span></label>
+              <label><input type="radio" name="cancellation_type" value="extraordinary"><span lang="de">Außerordentliche Kündigung</span><span lang="en">Extraordinary cancellation</span><span lang="fr">Résiliation extraordinaire</span><span lang="es">Cancelación extraordinaria</span><span lang="zh">特别终止</span><span lang="hi">असाधारण रद्दीकरण</span><span lang="ar">إنهاء استثنائي</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="legal-choice">
+            <legend><span lang="de">Gewünschtes Vertragsende *</span><span lang="en">Requested end of contract *</span><span lang="fr">Fin de contrat souhaitée *</span><span lang="es">Fin de contrato deseado *</span><span lang="zh">希望的合同结束时间 *</span><span lang="hi">वांछित अनुबंध-समाप्ति *</span><span lang="ar">نهاية العقد المطلوبة *</span></legend>
+            <div class="legal-options">
+              <label><input type="radio" name="requested_end_mode" value="earliest" checked><span lang="de">Zum frühestmöglichen Zeitpunkt</span><span lang="en">At the earliest possible date</span><span lang="fr">À la date la plus proche possible</span><span lang="es">En la fecha más próxima posible</span><span lang="zh">尽最早可能的时间</span><span lang="hi">जल्द से जल्द संभव तिथि पर</span><span lang="ar">في أقرب موعد ممكن</span></label>
+              <label><input type="radio" name="requested_end_mode" value="date"><span lang="de">Zu diesem Datum</span><span lang="en">On this date</span><span lang="fr">À cette date</span><span lang="es">En esta fecha</span><span lang="zh">在此日期</span><span lang="hi">इस तिथि पर</span><span lang="ar">في هذا التاريخ</span></label>
+            </div>
+          </fieldset>
+
+          <div class="form-field" data-legal-date-field hidden>
+            <label for="cancel-date"><span lang="de">Datum des Vertragsendes</span><span lang="en">Date of contract end</span><span lang="fr">Date de fin du contrat</span><span lang="es">Fecha de fin del contrato</span><span lang="zh">合同结束日期</span><span lang="hi">अनुबंध समाप्ति की तिथि</span><span lang="ar">تاريخ انتهاء العقد</span></label>
+            <input id="cancel-date" name="requested_end_date" type="date" disabled>
+          </div>
+
+          <div class="form-field">
+            <label for="cancel-reason">
+              <span lang="de">Kündigungsgrund</span><span lang="en">Reason for cancellation</span><span lang="fr">Motif de la résiliation</span><span lang="es">Motivo de la cancelación</span><span lang="zh">终止理由</span><span lang="hi">रद्दीकरण का कारण</span><span lang="ar">سبب الإنهاء</span>
+              <small data-legal-reason-optional><span lang="de">optional</span><span lang="en">optional</span><span lang="fr">facultatif</span><span lang="es">opcional</span><span lang="zh">选填</span><span lang="hi">वैकल्पिक</span><span lang="ar">اختياري</span></small>
+              <small data-legal-reason-required hidden><span lang="de">Pflichtangabe bei außerordentlicher Kündigung</span><span lang="en">required for an extraordinary cancellation</span><span lang="fr">obligatoire pour une résiliation extraordinaire</span><span lang="es">obligatorio en la cancelación extraordinaria</span><span lang="zh">特别终止时必填</span><span lang="hi">असाधारण रद्दीकरण में अनिवार्य</span><span lang="ar">إلزامي في الإنهاء الاستثنائي</span></small>
+            </label>
+            <textarea id="cancel-reason" name="reason" data-legal-reason rows="4" maxlength="2000"></textarea>
+          </div>
+
+          <div class="form-submit">
+            <p class="legal-note">
+              <span lang="de">Es gelten die <a href="../terms/index.html#t7">Vertragsbedingungen</a>; zur Verarbeitung deiner Angaben siehe die <a href="../privacy/index.html#c9">Datenschutzerklärung</a>.</span>
+              <span lang="en">The <a href="../terms/index.html#t7">terms of service</a> apply; on how your details are processed see the <a href="../privacy/index.html#c9">privacy policy</a>.</span>
+              <span lang="fr">Les <a href="../terms/index.html#t7">conditions générales</a> s’appliquent ; sur le traitement de vos données, voir la <a href="../privacy/index.html#c9">politique de confidentialité</a>.</span>
+              <span lang="es">Se aplican las <a href="../terms/index.html#t7">condiciones generales</a>; sobre el tratamiento de tus datos, véase la <a href="../privacy/index.html#c9">política de privacidad</a>.</span>
+              <span lang="zh">适用<a href="../terms/index.html#t7">服务条款</a>；数据处理见<a href="../privacy/index.html#c9">隐私政策</a>。</span>
+              <span lang="hi"><a href="../terms/index.html#t7">सेवा की शर्तें</a> लागू हैं; आपके डेटा के प्रसंस्करण के लिए <a href="../privacy/index.html#c9">गोपनीयता नीति</a> देखिए।</span>
+              <span lang="ar">تسري <a href="../terms/index.html#t7">شروط الخدمة</a>؛ وعن معالجة بياناتك راجع <a href="../privacy/index.html#c9">سياسة الخصوصية</a>.</span>
+            </p>
+            <button class="btn btn-primary" type="submit"><span lang="de">jetzt kündigen</span><span lang="en">cancel now</span><span lang="fr">résilier maintenant</span><span lang="es">cancelar ahora</span><span lang="zh">立即终止合同</span><span lang="hi">अभी रद्द करें</span><span lang="ar">ألغِ الآن</span></button>
+          </div>
+        </form>
+
+        <p class="form-status" data-legal-sending role="status" aria-live="polite" hidden>
+          <span lang="de">Deine Kündigung wird übermittelt …</span><span lang="en">Sending your cancellation …</span><span lang="fr">Envoi de votre résiliation …</span><span lang="es">Enviando tu cancelación …</span><span lang="zh">正在提交你的终止声明 …</span><span lang="hi">आपका रद्दीकरण भेजा जा रहा है …</span><span lang="ar">يجري إرسال إنهائك …</span>
+        </p>
+
+        <p class="plus-message" data-legal-message role="alert" hidden>
+          <span data-legal-error="generic"><span lang="de">Das hat gerade nicht geklappt. Bitte versuche es noch einmal oder schreib an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="en">That did not work just now. Please try again or write to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="fr">Cela n’a pas fonctionné à l’instant. Réessayez ou écrivez à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="es">Ahora mismo no ha funcionado. Inténtalo de nuevo o escribe a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="zh">刚才没有成功。请重试，或写信到 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>。</span><span lang="hi">अभी यह नहीं हो सका। कृपया दोबारा कोशिश कीजिए या <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर लिखिए।</span><span lang="ar">لم ينجح ذلك الآن. حاول مجددًا أو راسل <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span></span>
+          <span data-legal-error="network_unavailable" hidden><span lang="de">Keine Verbindung. Deine Kündigung wurde nicht übermittelt — bitte versuche es später noch einmal oder schreib an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="en">No connection. Your cancellation was not submitted — please try again later or write to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="fr">Pas de connexion. Votre résiliation n’a pas été transmise — réessayez plus tard ou écrivez à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="es">Sin conexión. Tu cancelación no se ha enviado; inténtalo más tarde o escribe a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="zh">没有连接。你的终止声明未被提交——请稍后重试，或写信到 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>。</span><span lang="hi">कोई कनेक्शन नहीं। आपका रद्दीकरण नहीं भेजा गया — बाद में कोशिश कीजिए या <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर लिखिए।</span><span lang="ar">لا يوجد اتصال. لم يُرسَل إنهاؤك — حاول لاحقًا أو راسل <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span></span>
+          <span data-legal-error="rate_limited" hidden><span lang="de">Zu viele Anfragen kurz hintereinander. Bitte warte einen Moment und sende noch einmal.</span><span lang="en">Too many requests in a row. Please wait a moment and send again.</span><span lang="fr">Trop de demandes coup sur coup. Patientez un instant et renvoyez.</span><span lang="es">Demasiadas peticiones seguidas. Espera un momento y vuelve a enviar.</span><span lang="zh">短时间内请求过多。请稍等片刻后重新提交。</span><span lang="hi">एक के बाद एक बहुत सारे अनुरोध। थोड़ा रुककर फिर भेजिए।</span><span lang="ar">طلبات كثيرة متتابعة. انتظر لحظة ثم أعد الإرسال.</span></span>
+          <span data-legal-error="invalid_email" hidden><span lang="de">Diese Adresse sieht nicht wie eine E-Mail-Adresse aus.</span><span lang="en">That does not look like an email address.</span><span lang="fr">Cela ne ressemble pas à une adresse e-mail.</span><span lang="es">Esto no parece una dirección de correo.</span><span lang="zh">这看起来不像一个邮箱地址。</span><span lang="hi">यह ईमेल पते जैसा नहीं लगता।</span><span lang="ar">هذا لا يبدو عنوان بريد إلكتروني.</span></span>
+          <span data-legal-error="validation_failed" hidden><span lang="de">Bitte prüfe deine Angaben: Etwas fehlt oder passt nicht zusammen.</span><span lang="en">Please check your entries: something is missing or does not fit together.</span><span lang="fr">Vérifiez vos saisies : il manque quelque chose ou une donnée est incohérente.</span><span lang="es">Revisa tus datos: falta algo o no encaja.</span><span lang="zh">请检查填写内容：有遗漏或不一致之处。</span><span lang="hi">कृपया अपनी जानकारी जाँचिए: कुछ छूट गया है या मेल नहीं खाता।</span><span lang="ar">يرجى مراجعة بياناتك: هناك ما ينقص أو لا يتّسق.</span></span>
+          <code data-legal-code></code>
+        </p>
+
+        <noscript><p class="small"><span lang="de">Ohne JavaScript kann dieses Formular nicht senden. Schicke deine Kündigung dann mit denselben Angaben an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>; der Eingang wird dir bestätigt.</span><span lang="en">Without JavaScript this form cannot send. In that case email your cancellation with the same details to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>; you will receive confirmation of receipt.</span><span lang="fr">Sans JavaScript, ce formulaire ne peut pas être envoyé. Adressez alors votre résiliation avec les mêmes informations à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> ; la réception vous sera confirmée.</span><span lang="es">Sin JavaScript este formulario no puede enviarse. Manda entonces tu cancelación con los mismos datos a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>; recibirás confirmación de recepción.</span><span lang="zh">没有 JavaScript，本表单无法提交。这时请把同样的信息发送到 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>，我们会向你确认收到。</span><span lang="hi">JavaScript के बिना यह फ़ॉर्म नहीं भेजा जा सकता। ऐसे में वही विवरण <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर भेजिए; प्राप्ति की पुष्टि की जाएगी।</span><span lang="ar">لا يمكن إرسال هذا النموذج بلا JavaScript. أرسل عندها إنهاءك بالبيانات نفسها إلى <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>، وسيُؤكَّد لك الاستلام.</span></p></noscript>
+      </section>
+
+      <section class="plus-card" data-legal-view="received" hidden aria-labelledby="cancel-received-title">
+        <h2 id="cancel-received-title" tabindex="-1" data-legal-focus><span lang="de">Kündigung eingegangen</span><span lang="en">Cancellation received</span><span lang="fr">Résiliation reçue</span><span lang="es">Cancelación recibida</span><span lang="zh">终止声明已收到</span><span lang="hi">रद्दीकरण प्राप्त हुआ</span><span lang="ar">تم استلام الإنهاء</span></h2>
+        <p>
+          <span lang="de">Deine Kündigungserklärung ist eingegangen und gespeichert.</span>
+          <span lang="en">Your cancellation statement has been received and stored.</span>
+          <span lang="fr">Votre déclaration de résiliation a été reçue et enregistrée.</span>
+          <span lang="es">Tu declaración de cancelación se ha recibido y guardado.</span>
+          <span lang="zh">你的终止声明已收到并已保存。</span>
+          <span lang="hi">आपकी रद्दीकरण घोषणा प्राप्त हुई और संग्रहीत कर ली गई है।</span>
+          <span lang="ar">وصل إعلان الإنهاء الخاص بك وتم حفظه.</span>
+        </p>
+        <dl class="legal-receipt">
+          <div>
+            <dt><span lang="de">Vorgangsnummer</span><span lang="en">Request number</span><span lang="fr">Numéro de dossier</span><span lang="es">Número de trámite</span><span lang="zh">受理编号</span><span lang="hi">प्रक्रिया संख्या</span><span lang="ar">رقم المعاملة</span></dt>
+            <dd data-legal-field="request-id">—</dd>
+          </div>
+          <div>
+            <dt><span lang="de">Eingang</span><span lang="en">Received at</span><span lang="fr">Réception</span><span lang="es">Recepción</span><span lang="zh">收到时间</span><span lang="hi">प्राप्ति</span><span lang="ar">وقت الاستلام</span></dt>
+            <dd data-legal-field="received-at">—</dd>
+          </div>
+        </dl>
+        <p data-legal-email="sent" hidden>
+          <span lang="de">Eine Bestätigung dieser Kündigung ist an deine E-Mail-Adresse unterwegs.</span>
+          <span lang="en">A confirmation of this cancellation is on its way to your email address.</span>
+          <span lang="fr">Une confirmation de cette résiliation est en route vers votre adresse e-mail.</span>
+          <span lang="es">Una confirmación de esta cancelación va camino de tu dirección de correo.</span>
+          <span lang="zh">这份终止声明的确认信正在发往你的邮箱。</span>
+          <span lang="hi">इस रद्दीकरण की पुष्टि आपके ईमेल पते पर भेजी जा रही है।</span>
+          <span lang="ar">تأكيد هذا الإنهاء في طريقه إلى عنوان بريدك الإلكتروني.</span>
+        </p>
+        <p data-legal-email="failed" hidden>
+          <span lang="de"><strong>Die Bestätigungs-E-Mail konnte gerade nicht versendet werden.</strong> Am Eingang ändert das nichts: Deine Kündigung ist mit der oben genannten Vorgangsnummer gespeichert. Notiere sie dir; bei Fragen genügt eine Nachricht an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span>
+          <span lang="en"><strong>The confirmation email could not be sent just now.</strong> That does not change the receipt: your cancellation is stored under the request number above. Please note it down; if anything is unclear, a message to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> is enough.</span>
+          <span lang="fr"><strong>L’e-mail de confirmation n’a pas pu être envoyé à l’instant.</strong> Cela ne change rien à la réception : votre résiliation est enregistrée sous le numéro ci-dessus. Notez-le ; en cas de doute, écrivez à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span>
+          <span lang="es"><strong>El correo de confirmación no ha podido enviarse ahora mismo.</strong> Eso no afecta a la recepción: tu cancelación está guardada con el número indicado arriba. Anótalo; ante cualquier duda basta un mensaje a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span>
+          <span lang="zh"><strong>确认邮件刚才没能发送。</strong>这不影响受理：你的终止声明已按上面的受理编号保存。请记下该编号；如有疑问，写信到 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> 即可。</span>
+          <span lang="hi"><strong>पुष्टि ईमेल अभी नहीं भेजा जा सका।</strong> इससे प्राप्ति पर कोई असर नहीं पड़ता: आपका रद्दीकरण ऊपर दी गई प्रक्रिया संख्या के साथ संग्रहीत है। इसे नोट कर लीजिए; कोई सवाल हो तो <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर संदेश भेज दीजिए।</span>
+          <span lang="ar"><strong>تعذّر إرسال رسالة التأكيد الآن.</strong> ولا يغيّر ذلك من الاستلام شيئًا: فإنهاؤك محفوظ برقم المعاملة أعلاه. دوّنه، وإن كان لديك سؤال فتكفي رسالة إلى <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span>
+        </p>
+        <p class="small">
+          <span lang="de">Was danach passiert, steht in <a href="../terms/index.html#t7">Abschnitt 7 der Vertragsbedingungen</a>: Kiebitz Plus bleibt bis zum Ende des bereits bezahlten Zeitraums aktiv und fällt danach auf Kiebitz Free zurück. Deine lokalen Daten bleiben unverändert.</span>
+          <span lang="en">What happens next is described in <a href="../terms/index.html#t7">section 7 of the terms</a>: Kiebitz Plus stays active until the end of the period already paid for and then falls back to Kiebitz Free. Your local data stays unchanged.</span>
+          <span lang="fr">La suite est décrite à la <a href="../terms/index.html#t7">section 7 des conditions</a> : Kiebitz Plus reste actif jusqu’à la fin de la période déjà payée, puis revient à Kiebitz Free. Vos données locales restent inchangées.</span>
+          <span lang="es">Lo que ocurre después se describe en la <a href="../terms/index.html#t7">sección 7 de las condiciones</a>: Kiebitz Plus sigue activo hasta el final del periodo ya pagado y luego vuelve a Kiebitz Free. Tus datos locales no cambian.</span>
+          <span lang="zh">后续流程见<a href="../terms/index.html#t7">条款第 7 节</a>：Kiebitz Plus 在已付费周期结束前仍然有效，之后回落到 Kiebitz Free。你的本地数据保持不变。</span>
+          <span lang="hi">आगे क्या होता है, यह <a href="../terms/index.html#t7">शर्तों के खंड 7</a> में है: Kiebitz Plus पहले से भुगतान की गई अवधि के अंत तक सक्रिय रहता है और फिर Kiebitz Free पर लौट आता है। आपका स्थानीय डेटा अपरिवर्तित रहता है।</span>
+          <span lang="ar">وما يحدث بعد ذلك موضّح في <a href="../terms/index.html#t7">القسم 7 من الشروط</a>: يبقى Kiebitz Plus فعّالًا حتى نهاية المدة المدفوعة ثم يعود إلى Kiebitz Free. وتبقى بياناتك المحلية كما هي.</span>
+        </p>
+      </section>
+
+      <p class="small">
+        <span lang="de">Möchtest du stattdessen einen frisch geschlossenen Vertrag widerrufen? Das geht über <a href="../withdraw/index.html">Vertrag widerrufen</a>.</span>
+        <span lang="en">Would you rather withdraw from a contract you have just concluded? Use <a href="../withdraw/index.html">withdraw from a contract</a>.</span>
+        <span lang="fr">Vous préférez vous rétracter d’un contrat tout juste conclu ? Utilisez <a href="../withdraw/index.html">rétractation du contrat</a>.</span>
+        <span lang="es">¿Prefieres desistir de un contrato recién celebrado? Usa <a href="../withdraw/index.html">desistir del contrato</a>.</span>
+        <span lang="zh">想撤回刚刚订立的合同？请使用<a href="../withdraw/index.html">撤回合同</a>。</span>
+        <span lang="hi">क्या आप अभी-अभी किया गया अनुबंध निरस्त करना चाहते हैं? इसके लिए <a href="../withdraw/index.html">अनुबंध निरस्त करें</a> देखिए।</span>
+        <span lang="ar">هل تودّ بدلًا من ذلك الانسحاب من عقد أبرمته للتو؟ استخدم <a href="../withdraw/index.html">انسحب من العقد</a>.</span>
+      </p>
+    </article>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="small" style="margin-top:8px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <div class="foot-links-main">
+      <a href="../index.html"><span lang="de">Startseite</span><span lang="en">Home</span><span lang="fr">Accueil</span><span lang="es">Inicio</span><span lang="zh">首页</span><span lang="hi">मुखपृष्ठ</span><span lang="ar">الصفحة الرئيسية</span></a>
+      <a href="../plus/index.html">Kiebitz Plus</a>
+      <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="../terms/index.html"><span lang="de">Vertragsbedingungen</span><span lang="en">Terms of service</span><span lang="fr">Conditions générales</span><span lang="es">Condiciones generales</span><span lang="zh">服务条款</span><span lang="hi">सेवा की शर्तें</span><span lang="ar">شروط الخدمة</span></a>
+      <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
+      </div>
+      <div class="foot-links-legal">
+      <a class="foot-legal-action" href="../cancel/index.html">
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9l3.5 3.5V20H6Z"></path><path d="M9.5 12.5h5"></path></svg>
+        <span lang="de">Verträge hier kündigen</span><span lang="en">Cancel contracts here</span><span lang="fr">Résilier vos contrats ici</span><span lang="es">Cancelar contratos aquí</span><span lang="zh">在此终止合同</span><span lang="hi">अनुबंध यहाँ रद्द करें</span><span lang="ar">أنهِ عقودك هنا</span>
+      </a>
+      <a class="foot-legal-action" href="../withdraw/index.html">
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6 5.5 10.5 10 15"></path><path d="M5.5 10.5h8a5 5 0 0 1 0 10h-3"></path></svg>
+        <span lang="de">Vertrag widerrufen</span><span lang="en">Withdraw from a contract</span><span lang="fr">Rétractation du contrat</span><span lang="es">Desistir del contrato</span><span lang="zh">撤回合同</span><span lang="hi">अनुबंध निरस्त करें</span><span lang="ar">انسحب من العقد</span>
+      </a>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+<script src="../assets/legal.js" defer></script>
+</body>
+</html>

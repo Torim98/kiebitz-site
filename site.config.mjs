@@ -209,6 +209,50 @@ export const pages = {
       ar: "شروط خدمة Kiebitz Plus: إبرام العقد والأسعار والفترة التجريبية والمدة والإلغاء وحق الانسحاب والمسؤولية."
     }
   },
+  cancel: {
+    source: "src/pages/cancel/index.html.template",
+    route: "cancel/",
+    titles: {
+      de: "Verträge hier kündigen · Kiebitz",
+      en: "Cancel contracts here · Kiebitz",
+      fr: "Résilier vos contrats ici · Kiebitz",
+      es: "Cancelar contratos aquí · Kiebitz",
+      zh: "在此终止合同 · Kiebitz",
+      hi: "अनुबंध यहाँ रद्द करें · Kiebitz",
+      ar: "أنهِ عقودك هنا · Kiebitz"
+    },
+    descriptions: {
+      de: "Kiebitz Plus ohne Anmeldung kündigen: Bestätigungsseite nach § 312k BGB mit Vorgangsnummer, Eingangszeit und Bestätigung per E-Mail.",
+      en: "Cancel Kiebitz Plus without signing in: confirmation page with request number, time of receipt and confirmation by email.",
+      fr: "Résilier Kiebitz Plus sans connexion : page de confirmation avec numéro de dossier, heure de réception et confirmation par e-mail.",
+      es: "Cancelar Kiebitz Plus sin iniciar sesión: página de confirmación con número de trámite, hora de recepción y confirmación por correo.",
+      zh: "无需登录即可终止 Kiebitz Plus：确认页面提供受理编号、收到时间和电子邮件确认。",
+      hi: "बिना साइन-इन Kiebitz Plus रद्द करें: पुष्टि पृष्ठ में प्रक्रिया संख्या, प्राप्ति समय और ईमेल पुष्टि।",
+      ar: "إنهاء Kiebitz Plus بلا تسجيل دخول: صفحة تأكيد برقم معاملة ووقت استلام وتأكيد بالبريد الإلكتروني."
+    }
+  },
+  withdraw: {
+    source: "src/pages/withdraw/index.html.template",
+    route: "withdraw/",
+    titles: {
+      de: "Vertrag widerrufen · Kiebitz",
+      en: "Withdraw from a contract · Kiebitz",
+      fr: "Rétractation du contrat · Kiebitz",
+      es: "Desistir del contrato · Kiebitz",
+      zh: "撤回合同 · Kiebitz",
+      hi: "अनुबंध निरस्त करें · Kiebitz",
+      ar: "انسحب من العقد · Kiebitz"
+    },
+    descriptions: {
+      de: "Widerruf von Kiebitz Plus ohne Anmeldung erklären: Formular mit Vorgangsnummer, Eingangszeit und Bestätigung per E-Mail.",
+      en: "Declare withdrawal from Kiebitz Plus without signing in: form with request number, time of receipt and confirmation by email.",
+      fr: "Déclarer la rétractation de Kiebitz Plus sans connexion : formulaire avec numéro de dossier, heure de réception et confirmation par e-mail.",
+      es: "Declarar el desistimiento de Kiebitz Plus sin iniciar sesión: formulario con número de trámite, hora de recepción y confirmación por correo.",
+      zh: "无需登录即可声明撤回 Kiebitz Plus：表单提供受理编号、收到时间和电子邮件确认。",
+      hi: "बिना साइन-इन Kiebitz Plus का निरस्तीकरण घोषित करें: फ़ॉर्म में प्रक्रिया संख्या, प्राप्ति समय और ईमेल पुष्टि।",
+      ar: "إعلان الانسحاب من Kiebitz Plus بلا تسجيل دخول: نموذج برقم معاملة ووقت استلام وتأكيد بالبريد الإلكتروني."
+    }
+  },
   impressum: {
     source: "src/pages/impressum/index.html.template",
     route: "impressum/",

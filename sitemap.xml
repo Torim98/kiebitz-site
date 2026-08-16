@@ -310,6 +310,160 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/terms/"/>
   </url>
   <url>
+    <loc>https://kiebitz.dev/de/cancel/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/cancel/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/cancel/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/cancel/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/fr/cancel/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/cancel/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/es/cancel/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/cancel/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/zh/cancel/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/cancel/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/hi/cancel/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/cancel/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/ar/cancel/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/cancel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/cancel/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/de/withdraw/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/withdraw/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/withdraw/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/withdraw/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/fr/withdraw/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/withdraw/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/es/withdraw/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/withdraw/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/zh/withdraw/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/withdraw/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/hi/withdraw/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/withdraw/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/ar/withdraw/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/withdraw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/withdraw/"/>
+  </url>
+  <url>
     <loc>https://kiebitz.dev/de/impressum/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/impressum/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/impressum/"/>

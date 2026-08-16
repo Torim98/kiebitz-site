@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-lang="en" data-title-de="Vertrag widerrufen · Kiebitz" data-title-en="Withdraw from a contract · Kiebitz" data-title-fr="Rétractation du contrat · Kiebitz" data-title-es="Desistir del contrato · Kiebitz" data-title-zh="撤回合同 · Kiebitz" data-title-hi="अनुबंध निरस्त करें · Kiebitz" data-title-ar="انسحب من العقد · Kiebitz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Withdraw from a contract · Kiebitz</title>
+<meta name="description" content="Widerruf von Kiebitz Plus ohne Anmeldung erklaeren, mit Vorgangsnummer und Eingangsbestaetigung. · Withdraw from Kiebitz Plus without signing in.">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+(function () {
+  var LANGS = { de: 1, en: 1, fr: 1, es: 1, zh: 1, hi: 1, ar: 1 };
+  var TAG = { de: "de", en: "en", fr: "fr", es: "es", zh: "zh-Hans", hi: "hi", ar: "ar" };
+  var l = "en";
+  try {
+    var s = localStorage.getItem("kiebitz-lang");
+    if (s && LANGS[s]) {
+      l = s;
+    } else {
+      var list = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || ""];
+      for (var i = 0; i < list.length; i++) {
+        var c = String(list[i]).toLowerCase().split("-")[0];
+        if (LANGS[c]) { l = c; break; }
+      }
+    }
+  } catch (e) { /* egal */ }
+  var d = document.documentElement;
+  d.setAttribute("data-lang", l);
+  d.setAttribute("lang", TAG[l]);
+  d.setAttribute("dir", l === "ar" ? "rtl" : "ltr");
+  try {
+    var m = localStorage.getItem("kiebitz-motion");
+    if (m === "on" || m === "off") d.setAttribute("data-motion", m);
+  } catch (e) { /* egal */ }
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span><span lang="fr">Aller au contenu</span><span lang="es">Ir al contenido</span><span lang="zh">跳到主要内容</span><span lang="hi">सामग्री पर जाएँ</span><span lang="ar">تخطَّ إلى المحتوى</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../index.html" aria-label="Kiebitz">
+      <img src="../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="de">Zug um Zugvogel</span><span lang="en">Moves take flight</span><span lang="fr">Coup d’aile</span><span lang="es">Jugadas que vuelan</span><span lang="zh">步步高飞</span><span lang="hi">हर चाल, एक उड़ान</span><span lang="ar">نقلة تُحلّق</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="../plus/index.html">Kiebitz Plus</a>
+      <a href="../plus/account/index.html"><span lang="de">Konto</span><span lang="en">Account</span><span lang="fr">Compte</span><span lang="es">Cuenta</span><span lang="zh">账号</span><span lang="hi">खाता</span><span lang="ar">الحساب</span></a>
+      <a href="../terms/index.html"><span lang="de">AGB</span><span lang="en">Terms</span><span lang="fr">CGV</span><span lang="es">Condiciones</span><span lang="zh">条款</span><span lang="hi">शर्तें</span><span lang="ar">الشروط</span></a>
+      <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="Sprache · Language · Langue · Idioma · 语言 · भाषा · اللغة">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-sm" href="../index.html"><span lang="de">Zurück</span><span lang="en">Back</span><span lang="fr">Retour</span><span lang="es">Volver</span><span lang="zh">返回</span><span lang="hi">वापस</span><span lang="ar">رجوع</span></a>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap">
+    <article class="plus-page">
+      <p class="eyebrow"><b>§</b> <span lang="de">Widerruf</span><span lang="en">Withdrawal</span><span lang="fr">Rétractation</span><span lang="es">Desistimiento</span><span lang="zh">撤回</span><span lang="hi">निरस्तीकरण</span><span lang="ar">الانسحاب</span></p>
+      <h1><span lang="de">Vertrag widerrufen</span><span lang="en">Withdraw from a contract</span><span lang="fr">Rétractation du contrat</span><span lang="es">Desistir del contrato</span><span lang="zh">撤回合同</span><span lang="hi">अनुबंध निरस्त करें</span><span lang="ar">انسحب من العقد</span></h1>
+      <p class="doc-sub">
+        <span lang="de">Hier erklärst du den Widerruf deines Kiebitz-Plus-Vertrags — ohne Anmeldung und ohne Konto. Die Frist und die Folgen stehen in <a href="../terms/index.html#t8">Abschnitt 8 der Vertragsbedingungen</a>.</span>
+        <span lang="en">Declare the withdrawal from your Kiebitz Plus contract here — without signing in and without an account. The period and the consequences are set out in <a href="../terms/index.html#t8">section 8 of the terms</a>.</span>
+        <span lang="fr">Déclarez ici la rétractation de votre contrat Kiebitz Plus — sans connexion ni compte. Le délai et les effets figurent à la <a href="../terms/index.html#t8">section 8 des conditions</a>.</span>
+        <span lang="es">Declara aquí el desistimiento de tu contrato de Kiebitz Plus, sin iniciar sesión y sin cuenta. El plazo y las consecuencias están en la <a href="../terms/index.html#t8">sección 8 de las condiciones</a>.</span>
+        <span lang="zh">在这里声明撤回你的 Kiebitz Plus 合同——无需登录，也不需要账号。期限与后果见<a href="../terms/index.html#t8">条款第 8 节</a>。</span>
+        <span lang="hi">यहाँ आप अपने Kiebitz Plus अनुबंध का निरस्तीकरण घोषित करते हैं — बिना साइन-इन और बिना खाते के। समय-सीमा और परिणाम <a href="../terms/index.html#t8">शर्तों के खंड 8</a> में हैं।</span>
+        <span lang="ar">أعلن هنا انسحابك من عقد Kiebitz Plus — بلا تسجيل دخول وبلا حساب. والمهلة والآثار مذكورة في <a href="../terms/index.html#t8">القسم 8 من الشروط</a>.</span>
+      </p>
+
+      <ol class="legal-steps">
+        <li>
+          <span lang="de">Widerrufsschaltfläche: der Link „Vertrag widerrufen“ steht im Footer jeder Seite. Du bist ihm bereits gefolgt.</span>
+          <span lang="en">Withdrawal button: the link “Withdraw from a contract” sits in the footer of every page. You have already followed it.</span>
+          <span lang="fr">Bouton de rétractation : le lien « Rétractation du contrat » figure dans le pied de page de chaque page. Vous l’avez déjà suivi.</span>
+          <span lang="es">Botón de desistimiento: el enlace «Desistir del contrato» está en el pie de cada página. Ya lo has seguido.</span>
+          <span lang="zh">撤回按钮：每个页面的页脚都有「撤回合同」链接，你已经通过它来到这里。</span>
+          <span lang="hi">निरस्तीकरण बटन: «अनुबंध निरस्त करें» लिंक हर पृष्ठ के फ़ुटर में है। आप उसी से यहाँ आए हैं।</span>
+          <span lang="ar">زر الانسحاب: يوجد رابط «انسحب من العقد» في تذييل كل صفحة، وقد وصلت من خلاله بالفعل.</span>
+        </li>
+        <li aria-current="step">
+          <span lang="de">Bestätigungsseite: Angaben ausfüllen und mit „Widerruf bestätigen“ abschicken. Danach siehst du Vorgangsnummer und Eingangszeit.</span>
+          <span lang="en">Confirmation page: fill in the details and submit with “confirm withdrawal”. You then see the request number and the time of receipt.</span>
+          <span lang="fr">Page de confirmation : renseignez les informations et envoyez avec « confirmer la rétractation ». Le numéro de dossier et l’heure de réception s’affichent ensuite.</span>
+          <span lang="es">Página de confirmación: rellena los datos y envía con «confirmar el desistimiento». Después verás el número de trámite y la hora de recepción.</span>
+          <span lang="zh">确认页面：填写信息并点击「确认撤回」提交，随后会显示受理编号和收到时间。</span>
+          <span lang="hi">पुष्टि पृष्ठ: विवरण भरिए और «निरस्तीकरण की पुष्टि करें» से भेजिए। इसके बाद आपको प्रक्रिया संख्या और प्राप्ति समय दिखेगा।</span>
+          <span lang="ar">صفحة التأكيد: املأ البيانات وأرسلها بزر «أكّد الانسحاب»، ثم يظهر رقم المعاملة ووقت الاستلام.</span>
+        </li>
+      </ol>
+
+      <section class="plus-card" data-legal-view="form" aria-labelledby="withdraw-form-title">
+        <h2 id="withdraw-form-title"><span lang="de">Widerrufserklärung</span><span lang="en">Withdrawal statement</span><span lang="fr">Déclaration de rétractation</span><span lang="es">Declaración de desistimiento</span><span lang="zh">撤回声明</span><span lang="hi">निरस्तीकरण घोषणा</span><span lang="ar">إعلان الانسحاب</span></h2>
+        <p class="small">
+          <span lang="de">Pflichtfelder sind mit * gekennzeichnet. Eine Begründung ist nicht nötig; das Feld ist freiwillig.</span>
+          <span lang="en">Required fields are marked with *. No reason is needed; the message field is voluntary.</span>
+          <span lang="fr">Les champs obligatoires sont signalés par *. Aucun motif n’est requis ; le message est facultatif.</span>
+          <span lang="es">Los campos obligatorios están marcados con *. No hace falta motivo; el mensaje es voluntario.</span>
+          <span lang="zh">带 * 的为必填项。无需说明理由；留言字段是自愿填写的。</span>
+          <span lang="hi">आवश्यक फ़ील्ड * से चिह्नित हैं। कारण बताना ज़रूरी नहीं; संदेश फ़ील्ड स्वैच्छिक है।</span>
+          <span lang="ar">الحقول الإلزامية مؤشَّرة بـ *. ولا يلزم إبداء سبب؛ وحقل الرسالة اختياري.</span>
+        </p>
+
+        <form class="legal-form" data-legal-form>
+          <div class="form-field">
+            <label for="withdraw-name"><span lang="de">Name *</span><span lang="en">Name *</span><span lang="fr">Nom *</span><span lang="es">Nombre *</span><span lang="zh">姓名 *</span><span lang="hi">नाम *</span><span lang="ar">الاسم *</span></label>
+            <input id="withdraw-name" name="name" type="text" required maxlength="120" autocomplete="name">
+          </div>
+
+          <div class="form-field">
+            <label for="withdraw-email"><span lang="de">E-Mail-Adresse *</span><span lang="en">Email address *</span><span lang="fr">Adresse e-mail *</span><span lang="es">Dirección de correo *</span><span lang="zh">电子邮箱 *</span><span lang="hi">ईमेल पता *</span><span lang="ar">عنوان البريد الإلكتروني *</span></label>
+            <input id="withdraw-email" name="email" type="email" required maxlength="160" autocomplete="email" inputmode="email" placeholder="name@example.com">
+            <span class="field-hint"><span lang="de">Am besten die Adresse, mit der du Kiebitz Plus gebucht hast. An sie geht die Bestätigung.</span><span lang="en">Ideally the address you used to buy Kiebitz Plus. The confirmation goes there.</span><span lang="fr">De préférence l’adresse utilisée pour souscrire Kiebitz Plus. La confirmation y sera envoyée.</span><span lang="es">Preferiblemente la dirección con la que contrataste Kiebitz Plus. Allí llegará la confirmación.</span><span lang="zh">最好是你购买 Kiebitz Plus 时使用的邮箱，确认信会发到该地址。</span><span lang="hi">बेहतर होगा वही पता जिससे आपने Kiebitz Plus लिया था। पुष्टि उसी पर जाएगी।</span><span lang="ar">يفضَّل العنوان الذي اشتريت به Kiebitz Plus، فإليه يُرسَل التأكيد.</span></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="withdraw-provider"><span lang="de">Zahlungsweg *</span><span lang="en">Payment route *</span><span lang="fr">Voie de paiement *</span><span lang="es">Vía de pago *</span><span lang="zh">付款方式 *</span><span lang="hi">भुगतान मार्ग *</span><span lang="ar">وسيلة الدفع *</span></label>
+              <select id="withdraw-provider" name="provider" required>
+                <option value="" data-label-de="— bitte wählen —" data-label-en="— please choose —" data-label-fr="— veuillez choisir —" data-label-es="— elige una opción —" data-label-zh="— 请选择 —" data-label-hi="— कृपया चुनिए —" data-label-ar="— اختر من فضلك —">— please choose —</option>
+                <option value="stripe" data-label-de="Stripe (Kauf auf der Website)" data-label-en="Stripe (bought on the website)" data-label-fr="Stripe (achat sur le site)" data-label-es="Stripe (compra en el sitio web)" data-label-zh="Stripe（在网站购买）" data-label-hi="Stripe (वेबसाइट पर ख़रीद)" data-label-ar="‏Stripe (شراء عبر الموقع)">Stripe (bought on the website)</option>
+                <option value="google_play" data-label-de="Google Play (Kauf in der Android-App)" data-label-en="Google Play (bought in the Android app)" data-label-fr="Google Play (achat dans l’app Android)" data-label-es="Google Play (compra en la app de Android)" data-label-zh="Google Play（在 Android 应用内购买）" data-label-hi="Google Play (Android ऐप में ख़रीद)" data-label-ar="‏Google Play (شراء داخل تطبيق Android)">Google Play (bought in the Android app)</option>
+                <option value="unknown" data-label-de="Unbekannt" data-label-en="Unknown" data-label-fr="Inconnue" data-label-es="Desconocida" data-label-zh="不清楚" data-label-hi="अज्ञात" data-label-ar="غير معروفة">Unknown</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="withdraw-contract"><span lang="de">Vertragsbezeichnung *</span><span lang="en">Contract *</span><span lang="fr">Désignation du contrat *</span><span lang="es">Designación del contrato *</span><span lang="zh">合同名称 *</span><span lang="hi">अनुबंध का नाम *</span><span lang="ar">بيان العقد *</span></label>
+              <input id="withdraw-contract" name="contract_reference" type="text" required maxlength="120" value="Kiebitz Plus">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="withdraw-reason">
+              <span lang="de">Mitteilung</span><span lang="en">Message</span><span lang="fr">Message</span><span lang="es">Mensaje</span><span lang="zh">留言</span><span lang="hi">संदेश</span><span lang="ar">رسالة</span>
+              <small><span lang="de">optional · zum Beispiel das Bestelldatum</span><span lang="en">optional · for example the order date</span><span lang="fr">facultatif · par exemple la date de commande</span><span lang="es">opcional · por ejemplo la fecha del pedido</span><span lang="zh">选填 · 例如下单日期</span><span lang="hi">वैकल्पिक · जैसे ऑर्डर की तारीख़</span><span lang="ar">اختياري · مثل تاريخ الطلب</span></small>
+            </label>
+            <textarea id="withdraw-reason" name="reason" rows="4" maxlength="2000"></textarea>
+          </div>
+
+          <div class="form-submit">
+            <p class="legal-note">
+              <span lang="de">Es gelten die <a href="../terms/index.html#t8">Vertragsbedingungen</a>; zur Verarbeitung deiner Angaben siehe die <a href="../privacy/index.html#c9">Datenschutzerklärung</a>.</span>
+              <span lang="en">The <a href="../terms/index.html#t8">terms of service</a> apply; on how your details are processed see the <a href="../privacy/index.html#c9">privacy policy</a>.</span>
+              <span lang="fr">Les <a href="../terms/index.html#t8">conditions générales</a> s’appliquent ; sur le traitement de vos données, voir la <a href="../privacy/index.html#c9">politique de confidentialité</a>.</span>
+              <span lang="es">Se aplican las <a href="../terms/index.html#t8">condiciones generales</a>; sobre el tratamiento de tus datos, véase la <a href="../privacy/index.html#c9">política de privacidad</a>.</span>
+              <span lang="zh">适用<a href="../terms/index.html#t8">服务条款</a>；数据处理见<a href="../privacy/index.html#c9">隐私政策</a>。</span>
+              <span lang="hi"><a href="../terms/index.html#t8">सेवा की शर्तें</a> लागू हैं; आपके डेटा के प्रसंस्करण के लिए <a href="../privacy/index.html#c9">गोपनीयता नीति</a> देखिए।</span>
+              <span lang="ar">تسري <a href="../terms/index.html#t8">شروط الخدمة</a>؛ وعن معالجة بياناتك راجع <a href="../privacy/index.html#c9">سياسة الخصوصية</a>.</span>
+            </p>
+            <button class="btn btn-primary" type="submit"><span lang="de">Widerruf bestätigen</span><span lang="en">confirm withdrawal</span><span lang="fr">confirmer la rétractation</span><span lang="es">confirmar el desistimiento</span><span lang="zh">确认撤回</span><span lang="hi">निरस्तीकरण की पुष्टि करें</span><span lang="ar">أكّد الانسحاب</span></button>
+          </div>
+        </form>
+
+        <p class="form-status" data-legal-sending role="status" aria-live="polite" hidden>
+          <span lang="de">Dein Widerruf wird übermittelt …</span><span lang="en">Sending your withdrawal …</span><span lang="fr">Envoi de votre rétractation …</span><span lang="es">Enviando tu desistimiento …</span><span lang="zh">正在提交你的撤回声明 …</span><span lang="hi">आपका निरस्तीकरण भेजा जा रहा है …</span><span lang="ar">يجري إرسال انسحابك …</span>
+        </p>
+
+        <p class="plus-message" data-legal-message role="alert" hidden>
+          <span data-legal-error="generic"><span lang="de">Das hat gerade nicht geklappt. Bitte versuche es noch einmal oder schreib an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="en">That did not work just now. Please try again or write to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="fr">Cela n’a pas fonctionné à l’instant. Réessayez ou écrivez à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="es">Ahora mismo no ha funcionado. Inténtalo de nuevo o escribe a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="zh">刚才没有成功。请重试，或写信到 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>。</span><span lang="hi">अभी यह नहीं हो सका। कृपया दोबारा कोशिश कीजिए या <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर लिखिए।</span><span lang="ar">لم ينجح ذلك الآن. حاول مجددًا أو راسل <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span></span>
+          <span data-legal-error="network_unavailable" hidden><span lang="de">Keine Verbindung. Dein Widerruf wurde nicht übermittelt — bitte versuche es später noch einmal oder schreib an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="en">No connection. Your withdrawal was not submitted — please try again later or write to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="fr">Pas de connexion. Votre rétractation n’a pas été transmise — réessayez plus tard ou écrivez à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="es">Sin conexión. Tu desistimiento no se ha enviado; inténtalo más tarde o escribe a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span><span lang="zh">没有连接。你的撤回声明未被提交——请稍后重试，或写信到 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>。</span><span lang="hi">कोई कनेक्शन नहीं। आपका निरस्तीकरण नहीं भेजा गया — बाद में कोशिश कीजिए या <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर लिखिए।</span><span lang="ar">لا يوجد اتصال. لم يُرسَل انسحابك — حاول لاحقًا أو راسل <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span></span>
+          <span data-legal-error="rate_limited" hidden><span lang="de">Zu viele Anfragen kurz hintereinander. Bitte warte einen Moment und sende noch einmal.</span><span lang="en">Too many requests in a row. Please wait a moment and send again.</span><span lang="fr">Trop de demandes coup sur coup. Patientez un instant et renvoyez.</span><span lang="es">Demasiadas peticiones seguidas. Espera un momento y vuelve a enviar.</span><span lang="zh">短时间内请求过多。请稍等片刻后重新提交。</span><span lang="hi">एक के बाद एक बहुत सारे अनुरोध। थोड़ा रुककर फिर भेजिए।</span><span lang="ar">طلبات كثيرة متتابعة. انتظر لحظة ثم أعد الإرسال.</span></span>
+          <span data-legal-error="invalid_email" hidden><span lang="de">Diese Adresse sieht nicht wie eine E-Mail-Adresse aus.</span><span lang="en">That does not look like an email address.</span><span lang="fr">Cela ne ressemble pas à une adresse e-mail.</span><span lang="es">Esto no parece una dirección de correo.</span><span lang="zh">这看起来不像一个邮箱地址。</span><span lang="hi">यह ईमेल पते जैसा नहीं लगता।</span><span lang="ar">هذا لا يبدو عنوان بريد إلكتروني.</span></span>
+          <span data-legal-error="validation_failed" hidden><span lang="de">Bitte prüfe deine Angaben: Etwas fehlt oder passt nicht zusammen.</span><span lang="en">Please check your entries: something is missing or does not fit together.</span><span lang="fr">Vérifiez vos saisies : il manque quelque chose ou une donnée est incohérente.</span><span lang="es">Revisa tus datos: falta algo o no encaja.</span><span lang="zh">请检查填写内容：有遗漏或不一致之处。</span><span lang="hi">कृपया अपनी जानकारी जाँचिए: कुछ छूट गया है या मेल नहीं खाता।</span><span lang="ar">يرجى مراجعة بياناتك: هناك ما ينقص أو لا يتّسق.</span></span>
+          <code data-legal-code></code>
+        </p>
+
+        <noscript><p class="small"><span lang="de">Ohne JavaScript kann dieses Formular nicht senden. Schicke deinen Widerruf dann mit denselben Angaben an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>; der Eingang wird dir bestätigt.</span><span lang="en">Without JavaScript this form cannot send. In that case email your withdrawal with the same details to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>; you will receive confirmation of receipt.</span><span lang="fr">Sans JavaScript, ce formulaire ne peut pas être envoyé. Adressez alors votre rétractation avec les mêmes informations à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> ; la réception vous sera confirmée.</span><span lang="es">Sin JavaScript este formulario no puede enviarse. Manda entonces tu desistimiento con los mismos datos a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>; recibirás confirmación de recepción.</span><span lang="zh">没有 JavaScript，本表单无法提交。这时请把同样的信息发送到 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>，我们会向你确认收到。</span><span lang="hi">JavaScript के बिना यह फ़ॉर्म नहीं भेजा जा सकता। ऐसे में वही विवरण <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर भेजिए; प्राप्ति की पुष्टि की जाएगी।</span><span lang="ar">لا يمكن إرسال هذا النموذج بلا JavaScript. أرسل عندها انسحابك بالبيانات نفسها إلى <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>، وسيُؤكَّد لك الاستلام.</span></p></noscript>
+      </section>
+
+      <section class="plus-card" data-legal-view="received" hidden aria-labelledby="withdraw-received-title">
+        <h2 id="withdraw-received-title" tabindex="-1" data-legal-focus><span lang="de">Widerruf eingegangen</span><span lang="en">Withdrawal received</span><span lang="fr">Rétractation reçue</span><span lang="es">Desistimiento recibido</span><span lang="zh">撤回声明已收到</span><span lang="hi">निरस्तीकरण प्राप्त हुआ</span><span lang="ar">تم استلام الانسحاب</span></h2>
+        <p>
+          <span lang="de">Deine Widerrufserklärung ist eingegangen und gespeichert.</span>
+          <span lang="en">Your withdrawal statement has been received and stored.</span>
+          <span lang="fr">Votre déclaration de rétractation a été reçue et enregistrée.</span>
+          <span lang="es">Tu declaración de desistimiento se ha recibido y guardado.</span>
+          <span lang="zh">你的撤回声明已收到并已保存。</span>
+          <span lang="hi">आपकी निरस्तीकरण घोषणा प्राप्त हुई और संग्रहीत कर ली गई है।</span>
+          <span lang="ar">وصل إعلان الانسحاب الخاص بك وتم حفظه.</span>
+        </p>
+        <dl class="legal-receipt">
+          <div>
+            <dt><span lang="de">Vorgangsnummer</span><span lang="en">Request number</span><span lang="fr">Numéro de dossier</span><span lang="es">Número de trámite</span><span lang="zh">受理编号</span><span lang="hi">प्रक्रिया संख्या</span><span lang="ar">رقم المعاملة</span></dt>
+            <dd data-legal-field="request-id">—</dd>
+          </div>
+          <div>
+            <dt><span lang="de">Eingang</span><span lang="en">Received at</span><span lang="fr">Réception</span><span lang="es">Recepción</span><span lang="zh">收到时间</span><span lang="hi">प्राप्ति</span><span lang="ar">وقت الاستلام</span></dt>
+            <dd data-legal-field="received-at">—</dd>
+          </div>
+        </dl>
+        <p data-legal-email="sent" hidden>
+          <span lang="de">Eine Bestätigung dieses Widerrufs ist an deine E-Mail-Adresse unterwegs.</span>
+          <span lang="en">A confirmation of this withdrawal is on its way to your email address.</span>
+          <span lang="fr">Une confirmation de cette rétractation est en route vers votre adresse e-mail.</span>
+          <span lang="es">Una confirmación de este desistimiento va camino de tu dirección de correo.</span>
+          <span lang="zh">这份撤回声明的确认信正在发往你的邮箱。</span>
+          <span lang="hi">इस निरस्तीकरण की पुष्टि आपके ईमेल पते पर भेजी जा रही है।</span>
+          <span lang="ar">تأكيد هذا الانسحاب في طريقه إلى عنوان بريدك الإلكتروني.</span>
+        </p>
+        <p data-legal-email="failed" hidden>
+          <span lang="de"><strong>Die Bestätigungs-E-Mail konnte gerade nicht versendet werden.</strong> Am Eingang ändert das nichts: Dein Widerruf ist mit der oben genannten Vorgangsnummer gespeichert. Notiere sie dir; bei Fragen genügt eine Nachricht an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span>
+          <span lang="en"><strong>The confirmation email could not be sent just now.</strong> That does not change the receipt: your withdrawal is stored under the request number above. Please note it down; if anything is unclear, a message to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> is enough.</span>
+          <span lang="fr"><strong>L’e-mail de confirmation n’a pas pu être envoyé à l’instant.</strong> Cela ne change rien à la réception : votre rétractation est enregistrée sous le numéro ci-dessus. Notez-le ; en cas de doute, écrivez à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span>
+          <span lang="es"><strong>El correo de confirmación no ha podido enviarse ahora mismo.</strong> Eso no afecta a la recepción: tu desistimiento está guardado con el número indicado arriba. Anótalo; ante cualquier duda basta un mensaje a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span>
+          <span lang="zh"><strong>确认邮件刚才没能发送。</strong>这不影响受理：你的撤回声明已按上面的受理编号保存。请记下该编号；如有疑问，写信到 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> 即可。</span>
+          <span lang="hi"><strong>पुष्टि ईमेल अभी नहीं भेजा जा सका।</strong> इससे प्राप्ति पर कोई असर नहीं पड़ता: आपका निरस्तीकरण ऊपर दी गई प्रक्रिया संख्या के साथ संग्रहीत है। इसे नोट कर लीजिए; कोई सवाल हो तो <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर संदेश भेज दीजिए।</span>
+          <span lang="ar"><strong>تعذّر إرسال رسالة التأكيد الآن.</strong> ولا يغيّر ذلك من الاستلام شيئًا: فانسحابك محفوظ برقم المعاملة أعلاه. دوّنه، وإن كان لديك سؤال فتكفي رسالة إلى <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</span>
+        </p>
+        <p class="small">
+          <span lang="de">Die Folgen des Widerrufs — insbesondere die Rückzahlung — stehen in <a href="../terms/index.html#t8">Abschnitt 8 der Vertragsbedingungen</a>.</span>
+          <span lang="en">The effects of withdrawal — the refund in particular — are described in <a href="../terms/index.html#t8">section 8 of the terms</a>.</span>
+          <span lang="fr">Les effets de la rétractation, notamment le remboursement, figurent à la <a href="../terms/index.html#t8">section 8 des conditions</a>.</span>
+          <span lang="es">Las consecuencias del desistimiento, en particular el reembolso, están en la <a href="../terms/index.html#t8">sección 8 de las condiciones</a>.</span>
+          <span lang="zh">撤回的后果，尤其是退款，见<a href="../terms/index.html#t8">条款第 8 节</a>。</span>
+          <span lang="hi">निरस्तीकरण के परिणाम — विशेष रूप से धन-वापसी — <a href="../terms/index.html#t8">शर्तों के खंड 8</a> में हैं।</span>
+          <span lang="ar">وآثار الانسحاب — ولا سيّما ردّ المبالغ — مذكورة في <a href="../terms/index.html#t8">القسم 8 من الشروط</a>.</span>
+        </p>
+      </section>
+
+      <p class="small">
+        <span lang="de">Läuft dein Vertrag schon länger? Dann ist die <a href="../cancel/index.html">Kündigung</a> der richtige Weg.</span>
+        <span lang="en">Has your contract been running for a while? Then <a href="../cancel/index.html">cancellation</a> is the right route.</span>
+        <span lang="fr">Votre contrat court depuis un certain temps ? La <a href="../cancel/index.html">résiliation</a> est alors la bonne voie.</span>
+        <span lang="es">¿Tu contrato lleva tiempo en marcha? Entonces la <a href="../cancel/index.html">cancelación</a> es el camino correcto.</span>
+        <span lang="zh">如果合同已经履行了一段时间，那么<a href="../cancel/index.html">终止合同</a>才是正确的途径。</span>
+        <span lang="hi">क्या आपका अनुबंध काफ़ी समय से चल रहा है? तब <a href="../cancel/index.html">रद्दीकरण</a> सही रास्ता है।</span>
+        <span lang="ar">هل مضى على عقدك وقت طويل؟ عندئذٍ يكون <a href="../cancel/index.html">الإنهاء</a> هو الطريق الصحيح.</span>
+      </p>
+    </article>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="small" style="margin-top:8px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <div class="foot-links-main">
+      <a href="../index.html"><span lang="de">Startseite</span><span lang="en">Home</span><span lang="fr">Accueil</span><span lang="es">Inicio</span><span lang="zh">首页</span><span lang="hi">मुखपृष्ठ</span><span lang="ar">الصفحة الرئيسية</span></a>
+      <a href="../plus/index.html">Kiebitz Plus</a>
+      <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="../terms/index.html"><span lang="de">Vertragsbedingungen</span><span lang="en">Terms of service</span><span lang="fr">Conditions générales</span><span lang="es">Condiciones generales</span><span lang="zh">服务条款</span><span lang="hi">सेवा की शर्तें</span><span lang="ar">شروط الخدمة</span></a>
+      <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
+      </div>
+      <div class="foot-links-legal">
+      <a class="foot-legal-action" href="../cancel/index.html">
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9l3.5 3.5V20H6Z"></path><path d="M9.5 12.5h5"></path></svg>
+        <span lang="de">Verträge hier kündigen</span><span lang="en">Cancel contracts here</span><span lang="fr">Résilier vos contrats ici</span><span lang="es">Cancelar contratos aquí</span><span lang="zh">在此终止合同</span><span lang="hi">अनुबंध यहाँ रद्द करें</span><span lang="ar">أنهِ عقودك هنا</span>
+      </a>
+      <a class="foot-legal-action" href="../withdraw/index.html">
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6 5.5 10.5 10 15"></path><path d="M5.5 10.5h8a5 5 0 0 1 0 10h-3"></path></svg>
+        <span lang="de">Vertrag widerrufen</span><span lang="en">Withdraw from a contract</span><span lang="fr">Rétractation du contrat</span><span lang="es">Desistir del contrato</span><span lang="zh">撤回合同</span><span lang="hi">अनुबंध निरस्त करें</span><span lang="ar">انسحب من العقد</span>
+      </a>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+<script src="../assets/legal.js" defer></script>
+</body>
+</html>

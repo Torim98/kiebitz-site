@@ -7,7 +7,7 @@ Live: <https://kiebitz.dev/>
 
 ## Build
 
-The published site is generated from seven multilingual source templates. Each
+The published site is generated from nine multilingual source templates. Each
 output page contains exactly one language so search engines and assistive
 technology see an unambiguous document.
 
@@ -30,6 +30,7 @@ index.html                         English landing page and x-default
 de/, fr/, es/, zh/, hi/, ar/       localized page trees
 plus/, plus/account/, plus/success/  Kiebitz Plus sign-in, account and checkout return
 privacy/, terms/, impressum/       English legal pages
+cancel/, withdraw/                 public cancellation and withdrawal forms
 assets/                            shared styles, script, fonts, images and social card
 robots.txt, sitemap.xml            generated crawler files
 ```
@@ -41,7 +42,8 @@ Do not edit generated HTML directly.
 
 English is served at `/` and acts as `x-default`. Other languages use stable
 subdirectories such as `/de/` and `/fr/`. Privacy and legal pages follow the
-same pattern, for example `/de/privacy/` and `/de/terms/`.
+same pattern, for example `/de/privacy/`, `/de/terms/`, `/de/cancel/` and
+`/de/withdraw/`.
 
 Every generated page includes:
 
@@ -130,6 +132,40 @@ Generated URLs: `/terms/` plus `/de/terms/`, `/fr/terms/`, `/es/terms/`,
 reciprocal `hreflang` links and are listed in `sitemap.xml`. Update the date at
 the top of the page whenever the terms change, and announce changes to
 subscribers as described in section 12.
+
+## Cancellation and withdrawal
+
+Two public forms let anyone end a contract without signing in — no session, no
+account, no `plus.js`. `/cancel/` is the confirmation page for the cancellation
+button required by § 312k BGB; `/withdraw/` takes withdrawal statements. Both
+are reachable from a permanent pill in every footer, labelled “Verträge hier
+kündigen” and “Vertrag widerrufen” in German and translated for the other six
+languages. The German button labels are prescribed, so `npm run check` pins
+them, along with the confirmation buttons “jetzt kündigen” and “Widerruf
+bestätigen”.
+
+`assets/legal.js` drives both pages. It posts to
+`https://api.kiebitz.dev/v1/contracts/cancellation` and
+`.../v1/contracts/withdrawal` with `credentials: "omit"` and
+`X-Kiebitz-CSRF: 1`, and it never touches `localStorage` — `npm run check`
+enforces all three. Every state is present in the HTML in all seven languages;
+the script only toggles which one is visible and fills in the request number and
+the time of receipt. A `201` shows the receipt; the error
+`legal_confirmation_failed` with `details.received` shows the same receipt plus
+a note that the confirmation email failed, because a stored declaration stays
+stored. Without JavaScript both pages point to `support@kiebitz.dev`.
+
+Cancellation collects name, email, payment route, contract, ordinary or
+extraordinary cancellation, the requested end (`earliest` or a date) and a
+reason that becomes mandatory for an extraordinary cancellation. Withdrawal
+collects name, email, payment route, contract and an optional message. Section 7
+and section 8 of the terms link the matching form, and section 9 of the privacy
+policy documents the processing.
+
+Generated URLs: `/cancel/` and `/withdraw/` plus the six localized variants each
+(`/de/cancel/`, `/de/withdraw/`, and the same for `fr`, `es`, `zh`, `hi`, `ar`).
+All are indexable and listed in `sitemap.xml`, because a cancellation button
+nobody can find is no cancellation button.
 
 ## Privacy and maintenance
 
