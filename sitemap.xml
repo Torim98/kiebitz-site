@@ -233,6 +233,83 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/privacy/"/>
   </url>
   <url>
+    <loc>https://kiebitz.dev/de/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/fr/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/es/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/zh/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/hi/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://kiebitz.dev/ar/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kiebitz.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kiebitz.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kiebitz.dev/zh/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://kiebitz.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kiebitz.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiebitz.dev/terms/"/>
+  </url>
+  <url>
     <loc>https://kiebitz.dev/de/impressum/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://kiebitz.dev/de/impressum/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kiebitz.dev/impressum/"/>

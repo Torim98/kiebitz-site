@@ -56,6 +56,7 @@
       <a href="../index.html#features"><span lang="de">Funktionen</span><span lang="en">Features</span><span lang="fr">Fonctions</span><span lang="es">Funciones</span><span lang="zh">功能</span><span lang="hi">विशेषताएँ</span><span lang="ar">المزايا</span></a>
       <a href="../index.html#download"><span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></a>
       <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="../terms/index.html"><span lang="de">AGB</span><span lang="en">Terms</span><span lang="fr">CGV</span><span lang="es">Condiciones</span><span lang="zh">条款</span><span lang="hi">शर्तें</span><span lang="ar">الشروط</span></a>
     </nav>
     <div class="lang">
       <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
@@ -245,6 +246,7 @@
       <div class="foot-links-main">
       <a href="../index.html"><span lang="de">Startseite</span><span lang="en">Home</span><span lang="fr">Accueil</span><span lang="es">Inicio</span><span lang="zh">首页</span><span lang="hi">मुखपृष्ठ</span><span lang="ar">الصفحة الرئيسية</span></a>
       <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="../terms/index.html"><span lang="de">Vertragsbedingungen</span><span lang="en">Terms of service</span><span lang="fr">Conditions générales</span><span lang="es">Condiciones generales</span><span lang="zh">服务条款</span><span lang="hi">सेवा की शर्तें</span><span lang="ar">شروط الخدمة</span></a>
       <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span><span lang="fr">Code source</span><span lang="es">Código fuente</span><span lang="zh">源代码</span><span lang="hi">सोर्स कोड</span><span lang="ar">الشيفرة المصدرية</span></a>
       </div>
       <div class="foot-links-support">

@@ -1023,6 +1023,15 @@ html[data-lang="hi"] .eyebrow { text-transform: none; }
 .plan-list + .plan-note,
 .plan-cta + .plan-note { margin-top: 22px; border-top: 1px solid var(--line); }
 
+/* ── Pflichtangaben am Kauf ───────────────────────────────────────────────── */
+/* Vertragsbedingungen und Datenschutz stehen dort, wo die Entscheidung fällt:
+   direkt unter dem Kauf-Button, leise im Ton, aber mit sichtbaren Links. */
+.legal-note { margin-top: 12px; font-size: 12.5px; line-height: 1.6; color: var(--ink3); }
+.legal-note a { color: var(--ink2); text-decoration: underline; text-underline-offset: 2px; }
+.legal-note a:hover { color: var(--accent); }
+.plan-cta + .legal-note { margin-top: 14px; }
+.plan-cta + .legal-note + .plan-note { margin-top: 22px; border-top: 1px solid var(--line); }
+
 /* ── Kiebitz Plus: Konto- und Kaufseiten ──────────────────────────────────── */
 /* Nur für Screenreader · die Matrix braucht Wörter, wo das Auge ein Häkchen
    sieht, und die Formulare eine Beschriftung ohne doppelte Überschrift. */

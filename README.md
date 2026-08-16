@@ -7,7 +7,7 @@ Live: <https://kiebitz.dev/>
 
 ## Build
 
-The published site is generated from three multilingual source templates. Each
+The published site is generated from seven multilingual source templates. Each
 output page contains exactly one language so search engines and assistive
 technology see an unambiguous document.
 
@@ -29,7 +29,7 @@ site.config.mjs                    canonical origin, version and localized SEO c
 index.html                         English landing page and x-default
 de/, fr/, es/, zh/, hi/, ar/       localized page trees
 plus/, plus/account/, plus/success/  Kiebitz Plus sign-in, account and checkout return
-privacy/, impressum/               English legal pages
+privacy/, terms/, impressum/       English legal pages
 assets/                            shared styles, script, fonts, images and social card
 robots.txt, sitemap.xml            generated crawler files
 ```
@@ -41,7 +41,7 @@ Do not edit generated HTML directly.
 
 English is served at `/` and acts as `x-default`. Other languages use stable
 subdirectories such as `/de/` and `/fr/`. Privacy and legal pages follow the
-same pattern, for example `/de/privacy/`.
+same pattern, for example `/de/privacy/` and `/de/terms/`.
 
 Every generated page includes:
 
@@ -107,6 +107,29 @@ out of the sitemap, because they only ever show the state of one session.
 
 Prices live in Stripe and Google Play. The website may name the current
 marketing price; the app and the API deliberately do not.
+
+## Contract terms
+
+`/terms/` carries the terms of service for the Kiebitz account and the Kiebitz
+Plus subscription: scope and provider, services, sign-in, conclusion of
+contract, prices, trial, term and cancellation, right of withdrawal with the
+model form, availability and changes, obligations, warranty and liability, and
+the final provisions. The page follows the same document layout, table of
+contents and seven languages as `/privacy/`; German is the binding version.
+
+The page is reachable from every footer and from the header navigation of the
+legal and Plus pages. Next to each purchase call to action — the pricing card on
+the landing page, the sign-in form on `/plus/`, and the checkout button on
+`/plus/account/` — a `legal-note` paragraph links the terms, the privacy policy
+and the withdrawal section `#t8` directly. `npm run check` enforces both: every
+page's footer must link `/terms/`, and each purchase call to action must be
+followed by a notice that links terms and privacy.
+
+Generated URLs: `/terms/` plus `/de/terms/`, `/fr/terms/`, `/es/terms/`,
+`/zh/terms/`, `/hi/terms/` and `/ar/terms/`. All seven are indexable, carry
+reciprocal `hreflang` links and are listed in `sitemap.xml`. Update the date at
+the top of the page whenever the terms change, and announce changes to
+subscribers as described in section 12.
 
 ## Privacy and maintenance
 

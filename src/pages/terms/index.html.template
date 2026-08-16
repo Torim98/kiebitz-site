@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-lang="en" data-title-de="Vertragsbedingungen (AGB) · Kiebitz" data-title-en="Terms of Service · Kiebitz" data-title-fr="Conditions générales · Kiebitz" data-title-es="Condiciones generales · Kiebitz" data-title-zh="服务条款 · Kiebitz" data-title-hi="सेवा की शर्तें · Kiebitz" data-title-ar="شروط الخدمة · Kiebitz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service · Kiebitz</title>
+<meta name="description" content="Vertragsbedingungen für Kiebitz Plus: Vertragsschluss, Preise, Testphase, Laufzeit, Kündigung und Widerrufsrecht. · Terms of service for Kiebitz Plus. · Deutsch, English, Français, Español, 中文, हिन्दी, العربية.">
+<meta name="theme-color" content="#0e0e0d">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="../assets/icon-128.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+(function () {
+  var LANGS = { de: 1, en: 1, fr: 1, es: 1, zh: 1, hi: 1, ar: 1 };
+  var TAG = { de: "de", en: "en", fr: "fr", es: "es", zh: "zh-Hans", hi: "hi", ar: "ar" };
+  var l = "en";
+  try {
+    var s = localStorage.getItem("kiebitz-lang");
+    if (s && LANGS[s]) {
+      l = s;
+    } else {
+      var list = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || ""];
+      for (var i = 0; i < list.length; i++) {
+        var c = String(list[i]).toLowerCase().split("-")[0];
+        if (LANGS[c]) { l = c; break; }
+      }
+    }
+  } catch (e) { /* egal */ }
+  var d = document.documentElement;
+  d.setAttribute("data-lang", l);
+  d.setAttribute("lang", TAG[l]);
+  d.setAttribute("dir", l === "ar" ? "rtl" : "ltr");
+  try {
+    var m = localStorage.getItem("kiebitz-motion");
+    if (m === "on" || m === "off") d.setAttribute("data-motion", m);
+  } catch (e) { /* egal */ }
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main"><span lang="de">Zum Inhalt springen</span><span lang="en">Skip to content</span><span lang="fr">Aller au contenu</span><span lang="es">Ir al contenido</span><span lang="zh">跳到主要内容</span><span lang="hi">सामग्री पर जाएँ</span><span lang="ar">تخطَّ إلى المحتوى</span></a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../index.html" aria-label="Kiebitz">
+      <img src="../assets/icon-128.png" width="30" height="30" alt="">
+      <span>
+        <span class="mark-name">Kiebitz</span>
+        <span class="mark-tag"><span lang="de">Zug um Zugvogel</span><span lang="en">Moves take flight</span><span lang="fr">Coup d’aile</span><span lang="es">Jugadas que vuelan</span><span lang="zh">步步高飞</span><span lang="hi">हर चाल, एक उड़ान</span><span lang="ar">نقلة تُحلّق</span></span>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Kiebitz">
+      <a href="../index.html#pricing"><span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></a>
+      <a href="../plus/index.html">Kiebitz Plus</a>
+      <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
+    </nav>
+    <div class="lang">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3.2 9h17.6M3.2 15h17.6M12 3c2.4 2.6 2.4 15.4 0 18-2.4-2.6-2.4-15.4 0-18Z"></path>
+      </svg>
+      <select class="lang-select" data-lang-select aria-label="Sprache · Language · Langue · Idioma · 语言 · भाषा · اللغة">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <a class="btn btn-sm" href="../index.html"><span lang="de">Zurück</span><span lang="en">Back</span><span lang="fr">Retour</span><span lang="es">Volver</span><span lang="zh">返回</span><span lang="hi">वापस</span><span lang="ar">رجوع</span></a>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap doc-grid">
+    <aside class="toc" aria-label="Inhalt">
+      <p class="toc-h"><span lang="de">Inhalt</span><span lang="en">Contents</span><span lang="fr">Sommaire</span><span lang="es">Contenido</span><span lang="zh">目录</span><span lang="hi">विषय-सूची</span><span lang="ar">المحتويات</span></p>
+      <ul>
+        <li><a href="#t1">1 <span lang="de">Geltungsbereich und Anbieter</span><span lang="en">Scope and provider</span><span lang="fr">Champ d’application et éditeur</span><span lang="es">Ámbito y proveedor</span><span lang="zh">适用范围与提供者</span><span lang="hi">दायरा और प्रदाता</span><span lang="ar">النطاق والمزوّد</span></a></li>
+        <li><a href="#t2">2 <span lang="de">Leistungen</span><span lang="en">Services</span><span lang="fr">Prestations</span><span lang="es">Prestaciones</span><span lang="zh">服务内容</span><span lang="hi">सेवाएँ</span><span lang="ar">الخدمات</span></a></li>
+        <li><a href="#t3">3 <span lang="de">Konto und Anmeldung</span><span lang="en">Account and sign-in</span><span lang="fr">Compte et connexion</span><span lang="es">Cuenta y acceso</span><span lang="zh">账号与登录</span><span lang="hi">खाता और साइन-इन</span><span lang="ar">الحساب وتسجيل الدخول</span></a></li>
+        <li><a href="#t4">4 <span lang="de">Vertragsschluss</span><span lang="en">Conclusion of contract</span><span lang="fr">Conclusion du contrat</span><span lang="es">Celebración del contrato</span><span lang="zh">合同的成立</span><span lang="hi">अनुबंध का गठन</span><span lang="ar">إبرام العقد</span></a></li>
+        <li><a href="#t5">5 <span lang="de">Preise und Zahlung</span><span lang="en">Prices and payment</span><span lang="fr">Prix et paiement</span><span lang="es">Precios y pago</span><span lang="zh">价格与付款</span><span lang="hi">क़ीमत और भुगतान</span><span lang="ar">الأسعار والدفع</span></a></li>
+        <li><a href="#t6">6 <span lang="de">Testzeitraum</span><span lang="en">Free trial</span><span lang="fr">Période d’essai</span><span lang="es">Periodo de prueba</span><span lang="zh">免费试用</span><span lang="hi">मुफ़्त परीक्षण</span><span lang="ar">الفترة التجريبية</span></a></li>
+        <li><a href="#t7">7 <span lang="de">Laufzeit und Kündigung</span><span lang="en">Term and cancellation</span><span lang="fr">Durée et résiliation</span><span lang="es">Duración y cancelación</span><span lang="zh">期限与取消</span><span lang="hi">अवधि और रद्दीकरण</span><span lang="ar">المدة والإلغاء</span></a></li>
+        <li><a href="#t8">8 <span lang="de">Widerrufsrecht</span><span lang="en">Right of withdrawal</span><span lang="fr">Droit de rétractation</span><span lang="es">Derecho de desistimiento</span><span lang="zh">撤回权</span><span lang="hi">निरस्तीकरण का अधिकार</span><span lang="ar">حق الانسحاب</span></a></li>
+        <li><a href="#t9">9 <span lang="de">Verfügbarkeit und Änderungen</span><span lang="en">Availability and changes</span><span lang="fr">Disponibilité et modifications</span><span lang="es">Disponibilidad y cambios</span><span lang="zh">可用性与变更</span><span lang="hi">उपलब्धता और बदलाव</span><span lang="ar">التوافر والتغييرات</span></a></li>
+        <li><a href="#t10">10 <span lang="de">Deine Pflichten</span><span lang="en">Your obligations</span><span lang="fr">Vos obligations</span><span lang="es">Tus obligaciones</span><span lang="zh">你的义务</span><span lang="hi">आपके दायित्व</span><span lang="ar">التزاماتك</span></a></li>
+        <li><a href="#t11">11 <span lang="de">Gewährleistung &amp; Haftung</span><span lang="en">Warranty &amp; liability</span><span lang="fr">Garantie &amp; responsabilité</span><span lang="es">Garantía y responsabilidad</span><span lang="zh">保证与责任</span><span lang="hi">वारंटी और दायित्व</span><span lang="ar">الضمان والمسؤولية</span></a></li>
+        <li><a href="#t12">12 <span lang="de">Schlussbestimmungen</span><span lang="en">Final provisions</span><span lang="fr">Dispositions finales</span><span lang="es">Disposiciones finales</span><span lang="zh">最终条款</span><span lang="hi">अंतिम प्रावधान</span><span lang="ar">أحكام ختامية</span></a></li>
+      </ul>
+    </aside>
+
+    <article>
+      <p class="eyebrow"><b>§</b> <span lang="de">Rechtstext</span><span lang="en">Legal text</span><span lang="fr">Texte juridique</span><span lang="es">Texto legal</span><span lang="zh">法律文本</span><span lang="hi">क़ानूनी पाठ</span><span lang="ar">نص قانوني</span></p>
+      <h1><span lang="de">Vertragsbedingungen</span><span lang="en">Terms of Service</span><span lang="fr">Conditions générales</span><span lang="es">Condiciones generales</span><span lang="zh">服务条款</span><span lang="hi">सेवा की शर्तें</span><span lang="ar">شروط الخدمة</span></h1>
+      <p class="doc-sub">
+        <span lang="de">Allgemeine Geschäftsbedingungen für das Kiebitz-Konto und das Abonnement <strong>Kiebitz Plus</strong>. Kiebitz Free bleibt kostenlos und ohne Konto vollständig nutzbar.</span>
+        <span lang="en">General terms for the Kiebitz account and the <strong>Kiebitz Plus</strong> subscription. Kiebitz Free stays free of charge and fully usable without an account.</span>
+        <span lang="fr">Conditions générales pour le compte Kiebitz et l’abonnement <strong>Kiebitz Plus</strong>. Kiebitz Free reste gratuit et pleinement utilisable sans compte.</span>
+        <span lang="es">Condiciones generales para la cuenta de Kiebitz y la suscripción <strong>Kiebitz Plus</strong>. Kiebitz Free sigue siendo gratuito y plenamente utilizable sin cuenta.</span>
+        <span lang="zh">适用于 Kiebitz 账号与 <strong>Kiebitz Plus</strong> 订阅的一般条款。Kiebitz Free 仍然免费，无需账号即可完整使用。</span>
+        <span lang="hi">Kiebitz खाते और <strong>Kiebitz Plus</strong> सदस्यता के लिए सामान्य शर्तें। Kiebitz Free मुफ़्त रहता है और बिना खाते के पूरी तरह इस्तेमाल किया जा सकता है।</span>
+        <span lang="ar">الشروط العامة لحساب Kiebitz ولاشتراك <strong>Kiebitz Plus</strong>. ويبقى Kiebitz Free مجانيًا وصالحًا للاستخدام بالكامل بلا حساب.</span>
+      </p>
+      <p class="doc-meta">
+        <span lang="de">Stand: 16. August 2026 · gültig für alle über diese Website und die App geschlossenen Verträge</span>
+        <span lang="en">Last updated: 16 August 2026 · applies to all contracts concluded through this website and the app. Translation for information only; in case of discrepancies the German version prevails.</span>
+        <span lang="fr">Mise à jour : 16 août 2026 · s’applique à tous les contrats conclus via ce site et l’application. Traduction fournie à titre d’information ; en cas de divergence, la version allemande fait foi.</span>
+        <span lang="es">Actualizado: 16 de agosto de 2026 · válido para todos los contratos celebrados a través de este sitio y de la app. Traducción a título informativo; en caso de discrepancia prevalece la versión alemana.</span>
+        <span lang="zh">更新日期：2026 年 8 月 16 日 · 适用于通过本网站和应用订立的所有合同。译文仅供参考；如有出入，以德文版本为准。</span>
+        <span lang="hi">अद्यतन: 16 अगस्त 2026 · इस वेबसाइट और ऐप के ज़रिए किए गए सभी अनुबंधों पर लागू। अनुवाद केवल जानकारी के लिए है; भिन्नता होने पर जर्मन संस्करण मान्य होगा।</span>
+        <span lang="ar">آخر تحديث: 16 أغسطس 2026 · تسري على جميع العقود المبرمة عبر هذا الموقع والتطبيق. هذه الترجمة للاطّلاع فقط، وعند الاختلاف يُعتدّ بالنسخة الألمانية.</span>
+      </p>
+
+      <section id="t1">
+        <h2><span class="num">01</span><span lang="de">Geltungsbereich und Anbieter</span><span lang="en">Scope and provider</span><span lang="fr">Champ d’application et éditeur</span><span lang="es">Ámbito de aplicación y proveedor</span><span lang="zh">适用范围与提供者</span><span lang="hi">दायरा और प्रदाता</span><span lang="ar">النطاق والمزوّد</span></h2>
+        <p lang="de">Diese Bedingungen gelten für das kostenlose Kiebitz-Konto und für das kostenpflichtige Abonnement Kiebitz Plus, gleich ob du es auf dieser Website oder in der Android-App buchst. Vertragspartner ist:</p>
+        <p lang="en">These terms apply to the free Kiebitz account and to the paid Kiebitz Plus subscription, whether you buy it on this website or in the Android app. Your contractual partner is:</p>
+        <p lang="fr">Les présentes conditions s’appliquent au compte Kiebitz gratuit et à l’abonnement payant Kiebitz Plus, que vous le souscriviez sur ce site ou dans l’application Android. Votre cocontractant est :</p>
+        <p lang="es">Estas condiciones se aplican a la cuenta gratuita de Kiebitz y a la suscripción de pago Kiebitz Plus, tanto si la contratas en este sitio como en la app de Android. Tu contraparte contractual es:</p>
+        <p lang="zh">本条款适用于免费的 Kiebitz 账号以及付费订阅 Kiebitz Plus，无论你是在本网站还是在 Android 应用中购买。合同相对方为：</p>
+        <p lang="hi">ये शर्तें मुफ़्त Kiebitz खाते और सशुल्क Kiebitz Plus सदस्यता पर लागू होती हैं, चाहे आप इसे इस वेबसाइट पर लें या Android ऐप में। आपका अनुबंध-भागीदार है:</p>
+        <p lang="ar">تسري هذه الشروط على حساب Kiebitz المجاني وعلى اشتراك Kiebitz Plus المدفوع، سواء اشتريته عبر هذا الموقع أو داخل تطبيق Android. والطرف المتعاقد معك هو:</p>
+        <div class="panel">
+          <address>
+            Tom Maurer<br>
+            Heidegarten 3<br>
+            56244 Helferskirchen<br>
+            <span lang="de">Deutschland</span><span lang="en">Germany</span><span lang="fr">Allemagne</span><span lang="es">Alemania</span><span lang="zh">德国</span><span lang="hi">जर्मनी</span><span lang="ar">ألمانيا</span><br>
+            <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>
+          </address>
+        </div>
+        <p style="margin-top:14px">
+          <span lang="de">Kiebitz Free braucht weder Konto noch Vertragsschluss; diese Bedingungen betreffen dich erst, sobald du ein Konto anlegst oder Kiebitz Plus buchst. Abweichende Bedingungen gelten nur, wenn der Anbieter ihnen ausdrücklich in Textform zustimmt. Weitere Angaben zum Anbieter stehen im <a href="../impressum/index.html">Impressum</a>, der Umgang mit personenbezogenen Daten in der <a href="../privacy/index.html">Datenschutzerklärung</a>.</span>
+          <span lang="en">Kiebitz Free needs neither an account nor a contract; these terms only concern you once you create an account or subscribe to Kiebitz Plus. Deviating terms apply only if the provider expressly agrees to them in text form. Further details about the provider are in the <a href="../impressum/index.html">legal notice</a>, and the handling of personal data in the <a href="../privacy/index.html">privacy policy</a>.</span>
+          <span lang="fr">Kiebitz Free ne nécessite ni compte ni contrat ; les présentes conditions ne vous concernent qu’à partir du moment où vous créez un compte ou souscrivez à Kiebitz Plus. Des conditions divergentes ne s’appliquent que si l’éditeur les accepte expressément par écrit. D’autres informations sur l’éditeur figurent dans les <a href="../impressum/index.html">mentions légales</a>, et le traitement des données personnelles dans la <a href="../privacy/index.html">politique de confidentialité</a>.</span>
+          <span lang="es">Kiebitz Free no requiere cuenta ni contrato; estas condiciones solo te afectan cuando creas una cuenta o contratas Kiebitz Plus. Las condiciones divergentes solo se aplican si el proveedor las acepta expresamente por escrito. Más datos sobre el proveedor están en el <a href="../impressum/index.html">aviso legal</a>, y el tratamiento de datos personales en la <a href="../privacy/index.html">política de privacidad</a>.</span>
+          <span lang="zh">Kiebitz Free 既不需要账号，也不需要订立合同；只有当你创建账号或订阅 Kiebitz Plus 时，本条款才与你相关。与本条款不一致的约定，仅在提供者以文本形式明确同意时才有效。关于提供者的更多信息见<a href="../impressum/index.html">法律声明</a>，个人数据的处理见<a href="../privacy/index.html">隐私政策</a>。</span>
+          <span lang="hi">Kiebitz Free के लिए न खाता चाहिए, न कोई अनुबंध; ये शर्तें तभी लागू होती हैं जब आप खाता बनाते हैं या Kiebitz Plus लेते हैं। भिन्न शर्तें केवल तभी लागू होती हैं जब प्रदाता उन्हें लिखित रूप में स्पष्ट रूप से स्वीकार करे। प्रदाता के बारे में और जानकारी <a href="../impressum/index.html">क़ानूनी सूचना</a> में है, और व्यक्तिगत डेटा का प्रबंधन <a href="../privacy/index.html">गोपनीयता नीति</a> में।</span>
+          <span lang="ar">لا يحتاج Kiebitz Free إلى حساب ولا إلى عقد؛ ولا تعنيك هذه الشروط إلا عندما تنشئ حسابًا أو تشترك في Kiebitz Plus. ولا تسري أي شروط مخالفة إلا إذا وافق عليها المزوّد صراحةً كتابةً. وتجد بيانات إضافية عن المزوّد في <a href="../impressum/index.html">البيان القانوني</a>، ومعالجة البيانات الشخصية في <a href="../privacy/index.html">سياسة الخصوصية</a>.</span>
+        </p>
+      </section>
+
+      <section id="t2">
+        <h2><span class="num">02</span><span lang="de">Leistungen</span><span lang="en">Services</span><span lang="fr">Prestations</span><span lang="es">Prestaciones</span><span lang="zh">服务内容</span><span lang="hi">सेवाएँ</span><span lang="ar">الخدمات</span></h2>
+        <p lang="de">Kiebitz ist ein local-first Schach-Begleiter für Desktop und Android. Analyse, Training und Datenhaltung laufen auf deinen Geräten; der Anbieter betreibt keinen Server, der deine Partien empfängt.</p>
+        <p lang="de">Kiebitz Plus schaltet die Funktionen frei, die in der Übersicht auf der Seite <a href="../plus/index.html">Kiebitz Plus</a> aufgeführt sind, und entfernt die Werbung. Die Freischaltung erfolgt über eine signierte Berechtigung, die dein Gerät lokal prüft; ein Konto gilt für Desktop und Android zusammen und ist für deine eigenen Geräte bestimmt.</p>
+        <p lang="de">Nicht geschuldet sind bestimmte Analyseergebnisse, ein bestimmter Spielstärkezuwachs oder die Verfügbarkeit fremder Dienste wie chess.com, Lichess, chessdb.cn, Stripe oder Google Play. Kiebitz Free bleibt in jedem Fall vollständig nutzbar.</p>
+        <p lang="en">Kiebitz is a local-first chess companion for desktop and Android. Analysis, training and data storage run on your devices; the provider operates no server that receives your games.</p>
+        <p lang="en">Kiebitz Plus unlocks the features listed in the overview on the <a href="../plus/index.html">Kiebitz Plus</a> page and removes the ads. Unlocking works through a signed entitlement that your device verifies locally; one account covers desktop and Android together and is meant for your own devices.</p>
+        <p lang="en">Specific analysis results, a specific gain in playing strength, or the availability of third-party services such as chess.com, Lichess, chessdb.cn, Stripe or Google Play are not owed. Kiebitz Free stays fully usable in any case.</p>
+        <p lang="fr">Kiebitz est un compagnon d’échecs local-first pour ordinateur et Android. L’analyse, l’entraînement et le stockage des données se font sur vos appareils ; l’éditeur n’exploite aucun serveur qui recevrait vos parties.</p>
+        <p lang="fr">Kiebitz Plus débloque les fonctions listées dans l’aperçu de la page <a href="../plus/index.html">Kiebitz Plus</a> et supprime la publicité. Le déblocage passe par un droit signé que votre appareil vérifie localement ; un compte couvre l’ordinateur et Android et est destiné à vos propres appareils.</p>
+        <p lang="fr">Aucun résultat d’analyse particulier, aucun gain de niveau de jeu et aucune disponibilité de services tiers tels que chess.com, Lichess, chessdb.cn, Stripe ou Google Play ne sont dus. Kiebitz Free reste en tout état de cause pleinement utilisable.</p>
+        <p lang="es">Kiebitz es un compañero de ajedrez local-first para escritorio y Android. El análisis, el entrenamiento y el almacenamiento de datos se ejecutan en tus dispositivos; el proveedor no opera ningún servidor que reciba tus partidas.</p>
+        <p lang="es">Kiebitz Plus desbloquea las funciones que aparecen en el resumen de la página <a href="../plus/index.html">Kiebitz Plus</a> y elimina la publicidad. El desbloqueo se realiza mediante un derecho firmado que tu dispositivo verifica localmente; una cuenta vale para escritorio y Android a la vez y está pensada para tus propios dispositivos.</p>
+        <p lang="es">No se deben resultados de análisis concretos, un aumento determinado de nivel de juego ni la disponibilidad de servicios de terceros como chess.com, Lichess, chessdb.cn, Stripe o Google Play. Kiebitz Free sigue siendo plenamente utilizable en cualquier caso.</p>
+        <p lang="zh">Kiebitz 是面向桌面端与 Android 的本地优先国际象棋助手。分析、训练和数据存储都在你的设备上进行；提供者不运营任何接收你对局的服务器。</p>
+        <p lang="zh">Kiebitz Plus 解锁 <a href="../plus/index.html">Kiebitz Plus</a> 页面功能一览中列出的功能，并去除广告。解锁通过一份签名权益完成，由你的设备在本地校验；一个账号同时覆盖桌面端和 Android，供你自己的设备使用。</p>
+        <p lang="zh">本服务不承诺特定的分析结果、特定的棋力提升，也不承诺 chess.com、Lichess、chessdb.cn、Stripe 或 Google Play 等第三方服务的可用性。无论如何，Kiebitz Free 都可完整使用。</p>
+        <p lang="hi">Kiebitz डेस्कटॉप और Android के लिए एक लोकल-फ़र्स्ट शतरंज साथी है। विश्लेषण, अभ्यास और डेटा-भंडारण आपके उपकरणों पर चलते हैं; प्रदाता कोई ऐसा सर्वर नहीं चलाता जो आपकी बाज़ियाँ प्राप्त करे।</p>
+        <p lang="hi">Kiebitz Plus उन सुविधाओं को खोलता है जो <a href="../plus/index.html">Kiebitz Plus</a> पृष्ठ की सूची में दी गई हैं, और विज्ञापन हटा देता है। अनलॉक एक हस्ताक्षरित अधिकार से होता है जिसे आपका उपकरण स्थानीय रूप से जाँचता है; एक खाता डेस्कटॉप और Android दोनों के लिए है और आपके अपने उपकरणों के लिए है।</p>
+        <p lang="hi">किसी विशेष विश्लेषण-परिणाम, खेल-क्षमता में किसी निश्चित बढ़ोतरी, या chess.com, Lichess, chessdb.cn, Stripe अथवा Google Play जैसी बाहरी सेवाओं की उपलब्धता का वादा नहीं किया जाता। हर हाल में Kiebitz Free पूरी तरह इस्तेमाल में रहता है।</p>
+        <p lang="ar">‏Kiebitz رفيق شطرنج محلي أولًا لسطح المكتب وAndroid. ويجري التحليل والتدريب وتخزين البيانات على أجهزتك؛ ولا يشغّل المزوّد أي خادم يتلقّى مبارياتك.</p>
+        <p lang="ar">يفتح Kiebitz Plus المزايا المذكورة في الجدول على صفحة <a href="../plus/index.html">Kiebitz Plus</a> ويزيل الإعلانات. ويتم التفعيل عبر استحقاق موقّع يتحقّق منه جهازك محليًا؛ ويغطّي الحساب الواحد سطح المكتب وAndroid معًا، وهو مخصّص لأجهزتك أنت.</p>
+        <p lang="ar">ولا تُلتزم نتائج تحليل بعينها ولا زيادة محدّدة في مستوى اللعب ولا توافر خدمات خارجية مثل chess.com أو Lichess أو chessdb.cn أو Stripe أو Google Play. ويبقى Kiebitz Free صالحًا للاستخدام بالكامل على أي حال.</p>
+      </section>
+
+      <section id="t3">
+        <h2><span class="num">03</span><span lang="de">Konto und Anmeldung</span><span lang="en">Account and sign-in</span><span lang="fr">Compte et connexion</span><span lang="es">Cuenta y acceso</span><span lang="zh">账号与登录</span><span lang="hi">खाता और साइन-इन</span><span lang="ar">الحساب وتسجيل الدخول</span></h2>
+        <p lang="de">Die Anmeldung läuft ohne Passwort: Du erhältst einen einmaligen Link per E-Mail, der 15 Minuten gültig ist und nur einmal verwendet werden kann. Halte dein E-Mail-Postfach deshalb sicher und gib Anmeldelinks nicht weiter.</p>
+        <p lang="de">Einen Vertrag über Kiebitz Plus kannst du nur schließen, wenn du unbeschränkt geschäftsfähig bist. Das Konto ist personengebunden; die Weitergabe an Dritte ist nicht gestattet. Du kannst dein Konto jederzeit auf der <a href="../plus/account/index.html">Kontoseite</a> oder in der App löschen; ein laufendes Abonnement ist zuvor zu kündigen.</p>
+        <p lang="en">Sign-in works without a password: you receive a one-time link by email that is valid for 15 minutes and can be used only once. Keep your mailbox secure and do not pass sign-in links on.</p>
+        <p lang="en">You can only enter into a Kiebitz Plus contract if you have full legal capacity. The account is personal; passing it to third parties is not permitted. You can delete your account at any time on the <a href="../plus/account/index.html">account page</a> or in the app; a running subscription must be cancelled first.</p>
+        <p lang="fr">La connexion se fait sans mot de passe : vous recevez par e-mail un lien à usage unique, valable 15 minutes. Gardez votre boîte mail sécurisée et ne transmettez pas les liens de connexion.</p>
+        <p lang="fr">Vous ne pouvez conclure un contrat Kiebitz Plus que si vous disposez de la pleine capacité juridique. Le compte est personnel ; sa transmission à des tiers n’est pas autorisée. Vous pouvez supprimer votre compte à tout moment sur la <a href="../plus/account/index.html">page de compte</a> ou dans l’application ; un abonnement en cours doit d’abord être résilié.</p>
+        <p lang="es">El acceso funciona sin contraseña: recibes por correo un enlace de un solo uso, válido 15 minutos. Mantén seguro tu buzón y no compartas los enlaces de acceso.</p>
+        <p lang="es">Solo puedes celebrar un contrato de Kiebitz Plus si tienes plena capacidad jurídica. La cuenta es personal; no está permitido cederla a terceros. Puedes borrar tu cuenta en cualquier momento en la <a href="../plus/account/index.html">página de cuenta</a> o en la app; una suscripción en curso debe cancelarse antes.</p>
+        <p lang="zh">登录无需密码：你会收到一封含一次性链接的邮件，有效期 15 分钟且只能使用一次。请妥善保管你的邮箱，不要转发登录链接。</p>
+        <p lang="zh">只有具备完全行为能力，你才能订立 Kiebitz Plus 合同。账号与个人绑定，不得转让给第三方。你可以随时在<a href="../plus/account/index.html">账号页面</a>或应用中删除账号；正在生效的订阅须先取消。</p>
+        <p lang="hi">साइन-इन बिना पासवर्ड होता है: आपको ईमेल पर एक बार चलने वाला लिंक मिलता है, जो 15 मिनट तक वैध है। अपना ईमेल-बॉक्स सुरक्षित रखिए और साइन-इन लिंक किसी को न दीजिए।</p>
+        <p lang="hi">Kiebitz Plus का अनुबंध आप केवल तभी कर सकते हैं जब आप पूर्ण रूप से क़ानूनी क्षमता रखते हों। खाता व्यक्तिगत है; इसे तीसरों को देना अनुमत नहीं है। आप अपना खाता कभी भी <a href="../plus/account/index.html">खाता पृष्ठ</a> पर या ऐप में मिटा सकते हैं; चल रही सदस्यता पहले रद्द करनी होगी।</p>
+        <p lang="ar">يتم تسجيل الدخول بلا كلمة مرور: يصلك رابط لمرة واحدة عبر البريد الإلكتروني، صالح 15 دقيقة ولا يُستخدم إلا مرة واحدة. فاحرص على أمان بريدك ولا تُشارك روابط الدخول.</p>
+        <p lang="ar">لا يمكنك إبرام عقد Kiebitz Plus إلا إذا كنت كامل الأهلية القانونية. والحساب شخصي، ولا يجوز نقله إلى الغير. ويمكنك حذف حسابك في أي وقت من <a href="../plus/account/index.html">صفحة الحساب</a> أو من التطبيق؛ وينبغي إلغاء أي اشتراك ساري قبل ذلك.</p>
+      </section>
+
+      <section id="t4">
+        <h2><span class="num">04</span><span lang="de">Vertragsschluss</span><span lang="en">Conclusion of contract</span><span lang="fr">Conclusion du contrat</span><span lang="es">Celebración del contrato</span><span lang="zh">合同的成立</span><span lang="hi">अनुबंध का गठन</span><span lang="ar">إبرام العقد</span></h2>
+        <p lang="de">Die Darstellung von Kiebitz Plus auf dieser Website und in der App ist kein bindendes Angebot, sondern eine Aufforderung zur Bestellung. Dein verbindliches Angebot gibst du ab, indem du die Bestellung im Bezahlvorgang abschließt; der Vertrag kommt zustande, sobald der Anbieter das Abonnement bestätigt oder freischaltet.</p>
+        <p lang="de">Auf dieser Website läuft der Bezahlvorgang über <strong>Stripe</strong>, in der Android-App über <strong>Google Play</strong>. Für die Abwicklung des Kaufs gelten dort zusätzlich die Bedingungen des jeweiligen Anbieters. Vor dem Abschluss werden dir Leistung, Laufzeit und Preis noch einmal angezeigt; Eingabefehler kannst du dort bis zum Absenden korrigieren.</p>
+        <p lang="de">Der Vertragstext wird nicht gesondert gespeichert. Diese Bedingungen sind jederzeit unter dieser Adresse abrufbar und lassen sich ausdrucken oder speichern; deine Bestelldaten findest du bei Stripe beziehungsweise in deinem Google-Konto.</p>
+        <p lang="en">The presentation of Kiebitz Plus on this website and in the app is not a binding offer but an invitation to order. You make a binding offer by completing the order in the checkout; the contract is concluded as soon as the provider confirms or unlocks the subscription.</p>
+        <p lang="en">On this website checkout runs through <strong>Stripe</strong>, in the Android app through <strong>Google Play</strong>. The respective provider’s terms additionally apply to processing the purchase. Before you complete the order, the service, term and price are shown again; you can correct input errors there until you submit.</p>
+        <p lang="en">The contract text is not stored separately. These terms are permanently available at this address and can be printed or saved; your order data is available at Stripe or in your Google account.</p>
+        <p lang="fr">La présentation de Kiebitz Plus sur ce site et dans l’application n’est pas une offre ferme, mais une invitation à commander. Vous faites une offre ferme en finalisant la commande lors du paiement ; le contrat est conclu dès que l’éditeur confirme ou débloque l’abonnement.</p>
+        <p lang="fr">Sur ce site, le paiement passe par <strong>Stripe</strong> ; dans l’application Android, par <strong>Google Play</strong>. Les conditions du prestataire concerné s’appliquent en outre au traitement de l’achat. Avant la finalisation, la prestation, la durée et le prix vous sont affichés une nouvelle fois ; vous pouvez y corriger vos saisies jusqu’à l’envoi.</p>
+        <p lang="fr">Le texte du contrat n’est pas archivé séparément. Les présentes conditions restent accessibles à cette adresse et peuvent être imprimées ou enregistrées ; vos données de commande se trouvent chez Stripe ou dans votre compte Google.</p>
+        <p lang="es">La presentación de Kiebitz Plus en este sitio y en la app no es una oferta vinculante, sino una invitación a pedir. Realizas una oferta vinculante al completar el pedido en el proceso de pago; el contrato se celebra en cuanto el proveedor confirma o desbloquea la suscripción.</p>
+        <p lang="es">En este sitio el pago se realiza a través de <strong>Stripe</strong> y en la app de Android a través de <strong>Google Play</strong>. Para la tramitación de la compra se aplican además las condiciones del proveedor correspondiente. Antes de finalizar se te muestran de nuevo la prestación, la duración y el precio; hasta el envío puedes corregir allí los errores de introducción.</p>
+        <p lang="es">El texto del contrato no se archiva por separado. Estas condiciones están disponibles de forma permanente en esta dirección y se pueden imprimir o guardar; los datos de tu pedido están en Stripe o en tu cuenta de Google.</p>
+        <p lang="zh">Kiebitz Plus 在本网站和应用中的展示并非具有约束力的要约，而是要约邀请。你在结账流程中完成订单即作出具约束力的要约；一旦提供者确认或解锁该订阅，合同即告成立。</p>
+        <p lang="zh">本网站的结账通过 <strong>Stripe</strong> 进行，Android 应用中的结账通过 <strong>Google Play</strong> 进行。购买的具体处理还适用相应服务商的条款。在完成订单之前，会再次显示服务内容、期限和价格；在提交之前你可以在那里更正输入错误。</p>
+        <p lang="zh">合同文本不会另行保存。本条款可随时在此地址查阅，并可打印或保存；你的订单数据可在 Stripe 或你的 Google 账号中查看。</p>
+        <p lang="hi">इस वेबसाइट और ऐप में Kiebitz Plus की प्रस्तुति कोई बाध्यकारी प्रस्ताव नहीं, बल्कि ऑर्डर का निमंत्रण है। चेकआउट में ऑर्डर पूरा करके आप बाध्यकारी प्रस्ताव देते हैं; जैसे ही प्रदाता सदस्यता की पुष्टि या अनलॉक करता है, अनुबंध बन जाता है।</p>
+        <p lang="hi">इस वेबसाइट पर भुगतान <strong>Stripe</strong> के ज़रिए और Android ऐप में <strong>Google Play</strong> के ज़रिए होता है। ख़रीद के निपटान पर संबंधित प्रदाता की शर्तें अतिरिक्त रूप से लागू होती हैं। पूरा करने से पहले सेवा, अवधि और क़ीमत दोबारा दिखाई जाती है; भेजने तक आप वहाँ इनपुट की ग़लतियाँ सुधार सकते हैं।</p>
+        <p lang="hi">अनुबंध का पाठ अलग से संग्रहीत नहीं किया जाता। ये शर्तें इस पते पर स्थायी रूप से उपलब्ध हैं और इन्हें छापा या सहेजा जा सकता है; आपके ऑर्डर का विवरण Stripe में या आपके Google खाते में मिलता है।</p>
+        <p lang="ar">عرض Kiebitz Plus على هذا الموقع وفي التطبيق ليس إيجابًا ملزِمًا بل دعوة إلى التعاقد. وتقدّم أنت إيجابًا ملزِمًا بإتمام الطلب في صفحة الدفع؛ ويُبرَم العقد بمجرّد أن يؤكّد المزوّد الاشتراك أو يفعّله.</p>
+        <p lang="ar">يتم الدفع على هذا الموقع عبر <strong>Stripe</strong>، وداخل تطبيق Android عبر <strong>Google Play</strong>. وتنطبق كذلك شروط الجهة المعنية على تنفيذ عملية الشراء. وقبل الإتمام تُعرض عليك الخدمة والمدة والسعر مرة أخرى، ويمكنك تصحيح ما أدخلته حتى لحظة الإرسال.</p>
+        <p lang="ar">لا يُحفَظ نص العقد على حدة. وهذه الشروط متاحة دائمًا على هذا العنوان ويمكن طباعتها أو حفظها؛ أما بيانات طلبك فتجدها لدى Stripe أو في حسابك على Google.</p>
+      </section>
+
+      <section id="t5">
+        <h2><span class="num">05</span><span lang="de">Preise und Zahlung</span><span lang="en">Prices and payment</span><span lang="fr">Prix et paiement</span><span lang="es">Precios y pago</span><span lang="zh">价格与付款</span><span lang="hi">क़ीमत और भुगतान</span><span lang="ar">الأسعار والدفع</span></h2>
+        <p lang="de">Kiebitz Plus kostet zurzeit 1,99 € pro Monat. Der Preis ist ein Endpreis und enthält die gesetzliche Umsatzsteuer, soweit sie anfällt. Maßgeblich ist stets der Preis, der dir im Bezahlvorgang angezeigt wird.</p>
+        <ul class="bul" lang="de">
+          <li>Die Abrechnung erfolgt monatlich im Voraus über das von dir gewählte Zahlungsmittel.</li>
+          <li>Zahlungsdaten liegen bei Stripe beziehungsweise Google, nicht bei Kiebitz; Belege stellen diese Anbieter bereit.</li>
+          <li>Bleibt eine Zahlung aus, kann der Zugang zu Plus nach vorheriger Ankündigung ausgesetzt oder der Vertrag gekündigt werden. Kiebitz Free bleibt nutzbar.</li>
+          <li>Preisänderungen werden mindestens 30 Tage vorher per E-Mail angekündigt und gelten ab dem folgenden Abrechnungszeitraum; bis dahin kannst du kündigen.</li>
+        </ul>
+        <p lang="en">Kiebitz Plus currently costs €1.99 per month. The price is a final price and includes statutory VAT where it applies. The price shown to you in the checkout always prevails.</p>
+        <ul class="bul" lang="en">
+          <li>Billing is monthly in advance via the payment method you selected.</li>
+          <li>Payment details stay with Stripe or Google, not with Kiebitz; those providers issue the receipts.</li>
+          <li>If a payment fails, access to Plus can be suspended after prior notice or the contract terminated. Kiebitz Free stays usable.</li>
+          <li>Price changes are announced by email at least 30 days in advance and apply from the following billing period; you can cancel until then.</li>
+        </ul>
+        <p lang="fr">Kiebitz Plus coûte actuellement 1,99 € par mois. Ce prix est un prix final et comprend la TVA légale lorsqu’elle s’applique. Le prix affiché lors du paiement fait toujours foi.</p>
+        <ul class="bul" lang="fr">
+          <li>La facturation est mensuelle et d’avance, via le moyen de paiement choisi.</li>
+          <li>Les données de paiement restent chez Stripe ou Google, pas chez Kiebitz ; ce sont eux qui fournissent les justificatifs.</li>
+          <li>En cas de défaut de paiement, l’accès à Plus peut être suspendu après préavis, ou le contrat résilié. Kiebitz Free reste utilisable.</li>
+          <li>Les changements de prix sont annoncés par e-mail au moins 30 jours à l’avance et s’appliquent à compter de la période de facturation suivante ; vous pouvez résilier d’ici là.</li>
+        </ul>
+        <p lang="es">Kiebitz Plus cuesta actualmente 1,99 € al mes. El precio es un precio final e incluye el IVA legal cuando corresponde. Siempre prevalece el precio que se te muestra en el proceso de pago.</p>
+        <ul class="bul" lang="es">
+          <li>La facturación es mensual y por adelantado, con el medio de pago que hayas elegido.</li>
+          <li>Los datos de pago quedan en Stripe o Google, no en Kiebitz; esos proveedores emiten los justificantes.</li>
+          <li>Si falla un pago, el acceso a Plus puede suspenderse previo aviso o el contrato puede resolverse. Kiebitz Free sigue siendo utilizable.</li>
+          <li>Los cambios de precio se anuncian por correo con al menos 30 días de antelación y rigen desde el siguiente periodo de facturación; hasta entonces puedes cancelar.</li>
+        </ul>
+        <p lang="zh">Kiebitz Plus 目前为每月 1,99 €。该价格为最终价格，并在适用时包含法定增值税。始终以结账时向你显示的价格为准。</p>
+        <ul class="bul" lang="zh">
+          <li>按月预付，通过你所选择的支付方式扣款。</li>
+          <li>支付信息保存在 Stripe 或 Google，而不是 Kiebitz；凭证由这些服务商提供。</li>
+          <li>若款项未能支付，可在事先通知后暂停 Plus 访问权限或终止合同。Kiebitz Free 仍可使用。</li>
+          <li>价格变动将至少提前 30 天通过电子邮件通知，并自下一个计费周期起生效；在此之前你可以取消。</li>
+        </ul>
+        <p lang="hi">Kiebitz Plus की क़ीमत फ़िलहाल 1,99 € प्रति माह है। यह अंतिम क़ीमत है और, जहाँ लागू हो, इसमें वैधानिक बिक्री-कर शामिल है। हमेशा वही क़ीमत मान्य है जो आपको भुगतान प्रक्रिया में दिखाई जाती है।</p>
+        <ul class="bul" lang="hi">
+          <li>बिलिंग मासिक और अग्रिम होती है, आपके चुने हुए भुगतान साधन से।</li>
+          <li>भुगतान की जानकारी Stripe या Google के पास रहती है, Kiebitz के पास नहीं; रसीदें वही प्रदाता देते हैं।</li>
+          <li>भुगतान न होने पर पूर्व सूचना के बाद Plus तक पहुँच रोकी जा सकती है या अनुबंध समाप्त किया जा सकता है। Kiebitz Free उपयोग में रहता है।</li>
+          <li>क़ीमत में बदलाव की सूचना कम से कम 30 दिन पहले ईमेल से दी जाती है और यह अगले बिलिंग चक्र से लागू होती है; तब तक आप रद्द कर सकते हैं।</li>
+        </ul>
+        <p lang="ar">تبلغ كلفة Kiebitz Plus حاليًا 1,99 € شهريًا. وهذا سعر نهائي يشمل ضريبة القيمة المضافة القانونية عند استحقاقها. والمعتمد دائمًا هو السعر المعروض عليك في صفحة الدفع.</p>
+        <ul class="bul" lang="ar">
+          <li>تتم الفوترة شهريًا ومقدَّمًا عبر وسيلة الدفع التي اخترتها.</li>
+          <li>تبقى بيانات الدفع لدى Stripe أو Google لا لدى Kiebitz؛ وهذه الجهات هي التي تصدر الإيصالات.</li>
+          <li>عند تعذّر السداد يجوز تعليق الوصول إلى Plus بعد إشعار مسبق أو إنهاء العقد. ويبقى Kiebitz Free قابلًا للاستخدام.</li>
+          <li>يُعلَن عن تغيّر الأسعار بالبريد الإلكتروني قبل 30 يومًا على الأقل، ويسري اعتبارًا من دورة الفوترة التالية؛ ويمكنك الإلغاء حتى ذلك الحين.</li>
+        </ul>
+      </section>
+
+      <section id="t6">
+        <h2><span class="num">06</span><span lang="de">Testzeitraum</span><span lang="en">Free trial</span><span lang="fr">Période d’essai</span><span lang="es">Periodo de prueba</span><span lang="zh">免费试用</span><span lang="hi">मुफ़्त परीक्षण</span><span lang="ar">الفترة التجريبية</span></h2>
+        <p lang="de">Kiebitz Plus lässt sich 7 Tage kostenlos testen. Der Testzeitraum steht je Person einmal zur Verfügung; Löschen und Neuanlegen eines Kontos erzeugt keinen zweiten Test. Für den Start wird ein gültiges Zahlungsmittel hinterlegt, im Testzeitraum wird jedoch nichts abgebucht.</p>
+        <p lang="de">Kündigst du nicht vor Ablauf des Testzeitraums, geht der Test automatisch in das kostenpflichtige Abonnement über und die erste Zahlung wird fällig. Das Enddatum siehst du jederzeit auf deiner Kontoseite.</p>
+        <p lang="en">Kiebitz Plus can be tried free for 7 days. The trial is available once per person; deleting and re-creating an account does not produce a second trial. A valid payment method is required to start, but nothing is charged during the trial.</p>
+        <p lang="en">If you do not cancel before the trial ends, it automatically turns into the paid subscription and the first payment falls due. You can see the end date at any time on your account page.</p>
+        <p lang="fr">Kiebitz Plus peut être essayé gratuitement pendant 7 jours. L’essai est disponible une fois par personne ; supprimer puis recréer un compte ne donne pas droit à un second essai. Un moyen de paiement valide est requis au démarrage, mais rien n’est débité pendant l’essai.</p>
+        <p lang="fr">Si vous ne résiliez pas avant la fin de l’essai, celui-ci se transforme automatiquement en abonnement payant et le premier paiement devient exigible. La date de fin est visible à tout moment sur votre page de compte.</p>
+        <p lang="es">Kiebitz Plus se puede probar gratis durante 7 días. La prueba está disponible una vez por persona; borrar y volver a crear una cuenta no genera una segunda prueba. Para empezar se necesita un medio de pago válido, pero durante la prueba no se cobra nada.</p>
+        <p lang="es">Si no cancelas antes de que termine la prueba, esta pasa automáticamente a ser la suscripción de pago y vence el primer cobro. Puedes ver la fecha de finalización en cualquier momento en tu página de cuenta.</p>
+        <p lang="zh">Kiebitz Plus 可免费试用 7 天。每人只能享受一次试用；删除后重新创建账号不会再获得一次试用。开始试用需要提供有效的支付方式，但试用期内不会扣款。</p>
+        <p lang="zh">若你未在试用期结束前取消，试用会自动转为付费订阅，并产生第一笔款项。结束日期可随时在你的账号页面查看。</p>
+        <p lang="hi">Kiebitz Plus को 7 दिन मुफ़्त आज़माया जा सकता है। परीक्षण प्रति व्यक्ति एक बार उपलब्ध है; खाता मिटाकर दोबारा बनाने से दूसरा परीक्षण नहीं मिलता। शुरू करने के लिए वैध भुगतान साधन चाहिए, पर परीक्षण अवधि में कुछ नहीं काटा जाता।</p>
+        <p lang="hi">यदि आप परीक्षण समाप्त होने से पहले रद्द नहीं करते, तो यह स्वतः सशुल्क सदस्यता में बदल जाता है और पहला भुगतान देय हो जाता है। समाप्ति तिथि आप कभी भी अपने खाता पृष्ठ पर देख सकते हैं।</p>
+        <p lang="ar">يمكن تجربة Kiebitz Plus مجانًا لمدة 7 أيام. وتُتاح التجربة مرة واحدة لكل شخص؛ ولا يمنح حذف الحساب وإعادة إنشائه تجربة ثانية. ويلزم لبدء التجربة وسيلة دفع صالحة، غير أنه لا يُخصم شيء أثناءها.</p>
+        <p lang="ar">وإذا لم تُلغِ قبل انتهاء التجربة، فإنها تتحوّل تلقائيًا إلى الاشتراك المدفوع ويستحقّ أول مبلغ. ويمكنك رؤية تاريخ الانتهاء في أي وقت على صفحة حسابك.</p>
+      </section>
+
+      <section id="t7">
+        <h2><span class="num">07</span><span lang="de">Laufzeit und Kündigung</span><span lang="en">Term and cancellation</span><span lang="fr">Durée et résiliation</span><span lang="es">Duración y cancelación</span><span lang="zh">期限与取消</span><span lang="hi">अवधि और रद्दीकरण</span><span lang="ar">المدة والإلغاء</span></h2>
+        <p lang="de">Das Abonnement läuft einen Monat und verlängert sich automatisch um jeweils einen weiteren Monat, solange du es nicht kündigst. Du kannst jederzeit zum Ende des laufenden Abrechnungszeitraums kündigen — ohne Frist und ohne Angabe von Gründen.</p>
+        <p lang="de">Über Stripe gekaufte Abonnements kündigst du auf der <a href="../plus/account/index.html">Kontoseite</a> unter „Abonnement verwalten“, über Google Play gekaufte im Play Store. Nach der Kündigung bleibt Kiebitz Plus bis zum Ende des bezahlten Zeitraums aktiv und fällt danach automatisch auf Kiebitz Free zurück. Deine lokalen Partien, Analysen und Trainingsdaten bleiben dabei unverändert auf deinen Geräten. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt für beide Seiten unberührt.</p>
+        <p lang="en">The subscription runs for one month and renews automatically by one further month unless you cancel. You can cancel at any time with effect from the end of the current billing period — no notice period, no reason required.</p>
+        <p lang="en">Subscriptions bought through Stripe are cancelled on the <a href="../plus/account/index.html">account page</a> under “Manage subscription”, those bought through Google Play in the Play Store. After cancellation Kiebitz Plus stays active until the end of the paid period and then falls back to Kiebitz Free automatically. Your local games, analyses and training data remain unchanged on your devices. The right to terminate for good cause remains unaffected for both sides.</p>
+        <p lang="fr">L’abonnement dure un mois et se renouvelle automatiquement d’un mois supplémentaire tant que vous ne résiliez pas. Vous pouvez résilier à tout moment avec effet à la fin de la période de facturation en cours — sans préavis ni motif.</p>
+        <p lang="fr">Les abonnements souscrits via Stripe se résilient sur la <a href="../plus/account/index.html">page de compte</a> sous « Gérer l’abonnement », ceux souscrits via Google Play dans le Play Store. Après la résiliation, Kiebitz Plus reste actif jusqu’à la fin de la période payée, puis retombe automatiquement sur Kiebitz Free. Vos parties, analyses et données d’entraînement locales restent inchangées sur vos appareils. Le droit de résiliation extraordinaire pour motif grave demeure réservé de part et d’autre.</p>
+        <p lang="es">La suscripción dura un mes y se renueva automáticamente por otro mes mientras no la canceles. Puedes cancelar en cualquier momento con efecto al final del periodo de facturación en curso, sin plazo de preaviso ni motivo.</p>
+        <p lang="es">Las suscripciones compradas con Stripe se cancelan en la <a href="../plus/account/index.html">página de cuenta</a>, en «Gestionar la suscripción»; las compradas en Google Play, en Play Store. Tras la cancelación, Kiebitz Plus sigue activo hasta el final del periodo pagado y después vuelve automáticamente a Kiebitz Free. Tus partidas, análisis y datos de entrenamiento locales permanecen intactos en tus dispositivos. El derecho a la resolución extraordinaria por causa justificada queda intacto para ambas partes.</p>
+        <p lang="zh">订阅期为一个月，若不取消则自动按月续订。你可以随时取消，自当前计费周期结束时生效——无需提前期，也无需说明理由。</p>
+        <p lang="zh">通过 Stripe 购买的订阅，在<a href="../plus/account/index.html">账号页面</a>的「管理订阅」中取消；通过 Google Play 购买的，在 Play 商店中取消。取消后，Kiebitz Plus 在已付费周期结束前仍然有效，之后自动回落到 Kiebitz Free。你在设备上的本地对局、分析和训练数据保持不变。双方因重大事由进行特别终止的权利不受影响。</p>
+        <p lang="hi">सदस्यता एक माह चलती है और जब तक आप रद्द न करें, स्वतः एक-एक माह बढ़ती रहती है। आप कभी भी चालू बिलिंग चक्र के अंत से प्रभावी रद्दीकरण कर सकते हैं — बिना किसी नोटिस अवधि और बिना कारण बताए।</p>
+        <p lang="hi">Stripe से ली गई सदस्यता <a href="../plus/account/index.html">खाता पृष्ठ</a> पर «सदस्यता प्रबंधित करें» से रद्द होती है, और Google Play से ली गई Play Store में। रद्द करने के बाद Kiebitz Plus भुगतान की गई अवधि के अंत तक सक्रिय रहता है और फिर स्वतः Kiebitz Free पर लौट आता है। आपकी स्थानीय बाज़ियाँ, विश्लेषण और अभ्यास डेटा आपके उपकरणों पर वैसे ही बने रहते हैं। महत्वपूर्ण कारण से असाधारण समाप्ति का अधिकार दोनों पक्षों के लिए अप्रभावित रहता है।</p>
+        <p lang="ar">يسري الاشتراك شهرًا واحدًا ويتجدّد تلقائيًا شهرًا آخر ما لم تُلغِه. ويمكنك الإلغاء في أي وقت اعتبارًا من نهاية دورة الفوترة الجارية — بلا مهلة إشعار وبلا إبداء أسباب.</p>
+        <p lang="ar">تُلغى الاشتراكات المشتراة عبر Stripe من <a href="../plus/account/index.html">صفحة الحساب</a> عبر «إدارة الاشتراك»، وتُلغى المشتراة عبر Google Play في متجر Play. وبعد الإلغاء يبقى Kiebitz Plus فعّالًا حتى نهاية المدة المدفوعة ثم يعود تلقائيًا إلى Kiebitz Free. وتبقى مبارياتك وتحليلاتك وبيانات تدريبك المحلية كما هي على أجهزتك. ويظلّ حق الإنهاء الاستثنائي لسبب جوهري محفوظًا للطرفين.</p>
+      </section>
+
+      <section id="t8">
+        <h2><span class="num">08</span><span lang="de">Widerrufsrecht für Verbraucher</span><span lang="en">Right of withdrawal for consumers</span><span lang="fr">Droit de rétractation des consommateurs</span><span lang="es">Derecho de desistimiento de los consumidores</span><span lang="zh">消费者撤回权</span><span lang="hi">उपभोक्ताओं का निरस्तीकरण अधिकार</span><span lang="ar">حق الانسحاب للمستهلكين</span></h2>
+        <p lang="de">Verbraucherinnen und Verbraucher haben das Recht, den Vertrag binnen 14 Tagen ab Vertragsschluss ohne Angabe von Gründen zu widerrufen. Für den Widerruf genügt eine eindeutige Erklärung — zum Beispiel eine E-Mail an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> oder ein Brief an die oben genannte Anschrift. Zur Wahrung der Frist reicht es, die Erklärung vor Ablauf der Frist abzusenden.</p>
+        <p lang="de"><strong>Vorzeitiges Erlöschen:</strong> Kiebitz Plus wird sofort freigeschaltet. Das Widerrufsrecht erlischt daher, wenn der Anbieter mit der Ausführung begonnen hat, nachdem du im Bezahlvorgang ausdrücklich zugestimmt hast, dass er vor Ablauf der Widerrufsfrist beginnt, und du bestätigt hast, dass du dadurch dein Widerrufsrecht verlierst. Hast du den Widerruf vorher erklärt, erstattet der Anbieter alle erhaltenen Zahlungen binnen 14 Tagen über dasselbe Zahlungsmittel; für die bis dahin erbrachte Leistung kann ein anteiliger Wertersatz anfallen.</p>
+        <p lang="en">Consumers have the right to withdraw from the contract within 14 days of its conclusion without giving reasons. An unambiguous statement is enough — for example an email to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> or a letter to the address above. Sending the statement before the deadline expires is sufficient to meet it.</p>
+        <p lang="en"><strong>Early expiry:</strong> Kiebitz Plus is unlocked immediately. The right of withdrawal therefore expires once the provider has begun performance after you expressly agreed in the checkout that performance should begin before the withdrawal period ends and confirmed that you thereby lose your right of withdrawal. If you withdraw beforehand, the provider refunds all payments received within 14 days using the same payment method; proportionate compensation may be due for the service already provided.</p>
+        <p lang="fr">Les consommateurs ont le droit de se rétracter du contrat dans un délai de 14 jours à compter de sa conclusion, sans avoir à se justifier. Une déclaration univoque suffit — par exemple un e-mail à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> ou un courrier à l’adresse ci-dessus. Il suffit d’envoyer la déclaration avant l’expiration du délai.</p>
+        <p lang="fr"><strong>Extinction anticipée :</strong> Kiebitz Plus est débloqué immédiatement. Le droit de rétractation s’éteint donc dès que l’éditeur a commencé l’exécution, après que vous avez expressément accepté lors du paiement qu’elle commence avant la fin du délai de rétractation et confirmé que vous perdez ainsi ce droit. Si vous vous rétractez avant, l’éditeur rembourse tous les paiements reçus dans les 14 jours, avec le même moyen de paiement ; une compensation proportionnelle peut être due pour la prestation déjà fournie.</p>
+        <p lang="es">Los consumidores tienen derecho a desistir del contrato en un plazo de 14 días desde su celebración, sin necesidad de justificación. Basta una declaración inequívoca, por ejemplo un correo a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> o una carta a la dirección indicada arriba. Para cumplir el plazo basta con enviar la declaración antes de que expire.</p>
+        <p lang="es"><strong>Extinción anticipada:</strong> Kiebitz Plus se desbloquea de inmediato. Por eso el derecho de desistimiento se extingue en cuanto el proveedor ha comenzado la prestación después de que tú hayas aceptado expresamente en el proceso de pago que comience antes de que finalice el plazo y hayas confirmado que con ello pierdes ese derecho. Si desistes antes, el proveedor reembolsa todos los pagos recibidos en un plazo de 14 días con el mismo medio de pago; por la prestación ya realizada puede corresponder una compensación proporcional.</p>
+        <p lang="zh">消费者有权在合同订立后 14 天内无需说明理由撤回合同。一份明确的声明即可——例如发送邮件至 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>，或寄信至上述地址。只要在期限届满前发出声明即视为遵守期限。</p>
+        <p lang="zh"><strong>提前消灭：</strong>Kiebitz Plus 会立即解锁。因此，如果你在结账时明确同意提供者在撤回期届满前开始履行，并确认由此丧失撤回权，则在提供者开始履行后，撤回权即告消灭。若你在此之前撤回，提供者将在 14 天内以同一支付方式退还已收款项；对已经提供的服务，可能需要按比例支付价值补偿。</p>
+        <p lang="hi">उपभोक्ताओं को अनुबंध की तारीख़ से 14 दिनों के भीतर बिना कारण बताए अनुबंध निरस्त करने का अधिकार है। एक स्पष्ट घोषणा पर्याप्त है — जैसे <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर ईमेल या ऊपर दिए पते पर पत्र। समय-सीमा पूरी होने से पहले घोषणा भेज देना ही पर्याप्त है।</p>
+        <p lang="hi"><strong>समय से पहले समाप्ति:</strong> Kiebitz Plus तुरंत अनलॉक हो जाता है। इसलिए यह अधिकार तब समाप्त हो जाता है जब प्रदाता ने निष्पादन शुरू कर दिया हो, बशर्ते आपने भुगतान प्रक्रिया में स्पष्ट रूप से सहमति दी हो कि वह निरस्तीकरण-अवधि समाप्त होने से पहले शुरू करे और यह पुष्टि की हो कि इससे आप अपना निरस्तीकरण अधिकार खो देते हैं। यदि आप इससे पहले निरस्त करते हैं, तो प्रदाता प्राप्त सभी भुगतान 14 दिनों के भीतर उसी साधन से लौटा देता है; तब तक दी गई सेवा के लिए आनुपातिक मूल्य-प्रतिकर देय हो सकता है।</p>
+        <p lang="ar">يحقّ للمستهلكين الانسحاب من العقد خلال 14 يومًا من إبرامه دون إبداء أسباب. ويكفي لذلك إعلان واضح — كرسالة إلى <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> أو خطاب إلى العنوان المذكور أعلاه. ويكفي لحفظ المهلة إرسال الإعلان قبل انقضائها.</p>
+        <p lang="ar"><strong>السقوط المبكر:</strong> يُفعَّل Kiebitz Plus فورًا. ولذلك يسقط حق الانسحاب متى بدأ المزوّد التنفيذ بعد أن وافقتَ صراحةً في صفحة الدفع على أن يبدأ قبل انقضاء مهلة الانسحاب وأقررتَ بأنك تفقد بذلك هذا الحق. وإذا انسحبت قبل ذلك، يردّ المزوّد كل المبالغ المستلمة خلال 14 يومًا بالوسيلة نفسها؛ وقد يُستحقّ تعويض تناسبي عن الخدمة المؤدّاة حتى تلك اللحظة.</p>
+        <div class="panel" style="margin-top:22px">
+          <p>
+            <span lang="de"><strong>Muster-Widerrufsformular</strong> — An Tom Maurer, Heidegarten 3, 56244 Helferskirchen, Deutschland, support@kiebitz.dev: Hiermit widerrufe(n) ich/wir den von mir/uns abgeschlossenen Vertrag über den Bezug von Kiebitz Plus. Bestellt am … · Name … · Anschrift … · E-Mail-Adresse des Kontos … · Datum … (bei Mitteilung auf Papier zusätzlich Unterschrift).</span>
+            <span lang="en"><strong>Model withdrawal form</strong> — To Tom Maurer, Heidegarten 3, 56244 Helferskirchen, Germany, support@kiebitz.dev: I/we hereby withdraw from the contract concluded by me/us for the supply of Kiebitz Plus. Ordered on … · Name … · Address … · Email address of the account … · Date … (signature only if sent on paper).</span>
+            <span lang="fr"><strong>Modèle de formulaire de rétractation</strong> — À Tom Maurer, Heidegarten 3, 56244 Helferskirchen, Allemagne, support@kiebitz.dev : Je/nous vous notifie/notifions par la présente ma/notre rétractation du contrat portant sur la fourniture de Kiebitz Plus. Commandé le … · Nom … · Adresse … · Adresse e-mail du compte … · Date … (signature uniquement en cas d’envoi papier).</span>
+            <span lang="es"><strong>Modelo de formulario de desistimiento</strong> — A Tom Maurer, Heidegarten 3, 56244 Helferskirchen, Alemania, support@kiebitz.dev: Por la presente le comunico/comunicamos que desisto/desistimos del contrato de suministro de Kiebitz Plus. Pedido el … · Nombre … · Dirección … · Correo de la cuenta … · Fecha … (firma solo si se envía en papel).</span>
+            <span lang="zh"><strong>撤回声明范本</strong> —— 致 Tom Maurer, Heidegarten 3, 56244 Helferskirchen, 德国, support@kiebitz.dev：本人／我们特此撤回本人／我们就取得 Kiebitz Plus 所订立的合同。订购日期 … · 姓名 … · 地址 … · 账号所用电子邮箱 … · 日期 …（仅以纸质寄送时需签名）。</span>
+            <span lang="hi"><strong>निरस्तीकरण फ़ॉर्म का नमूना</strong> — प्रति Tom Maurer, Heidegarten 3, 56244 Helferskirchen, जर्मनी, support@kiebitz.dev: मैं/हम एतद्द्वारा Kiebitz Plus की आपूर्ति हेतु किए गए अनुबंध को निरस्त करता/करते हूँ/हैं। ऑर्डर की तारीख़ … · नाम … · पता … · खाते का ईमेल … · दिनांक … (काग़ज़ पर भेजने पर हस्ताक्षर भी)।</span>
+            <span lang="ar"><strong>نموذج إعلان الانسحاب</strong> — إلى Tom Maurer, Heidegarten 3, 56244 Helferskirchen، ألمانيا، support@kiebitz.dev: أُعلن/نُعلن بموجب هذا انسحابي/انسحابنا من العقد المبرم بشأن الحصول على Kiebitz Plus. تاريخ الطلب … · الاسم … · العنوان … · البريد الإلكتروني للحساب … · التاريخ … (التوقيع عند الإرسال ورقيًا فقط).</span>
+          </p>
+        </div>
+      </section>
+
+      <section id="t9">
+        <h2><span class="num">09</span><span lang="de">Verfügbarkeit, Aktualisierungen und Änderungen</span><span lang="en">Availability, updates and changes</span><span lang="fr">Disponibilité, mises à jour et modifications</span><span lang="es">Disponibilidad, actualizaciones y cambios</span><span lang="zh">可用性、更新与变更</span><span lang="hi">उपलब्धता, अपडेट और बदलाव</span><span lang="ar">التوافر والتحديثات والتغييرات</span></h2>
+        <p lang="de">Die Konto- und Kauf-Schnittstelle unter <code>api.kiebitz.dev</code> wird mit angemessener Sorgfalt betrieben; eine bestimmte Verfügbarkeit ist nicht geschuldet. Wartungen und Störungen sind möglich. Weil die Freischaltung signiert auf deinem Gerät liegt, laufen die Plus-Funktionen auch dann weiter, wenn die Schnittstelle vorübergehend nicht erreichbar ist.</p>
+        <p lang="de">Der Anbieter stellt die Aktualisierungen bereit, die erforderlich sind, damit Kiebitz Plus während der Vertragslaufzeit vertragsgemäß bleibt — einschließlich Sicherheitsaktualisierungen. Darüber hinausgehende Änderungen der Leistung nimmt der Anbieter nur aus triftigem Grund vor, etwa wenn eine Schnittstelle Dritter wegfällt oder eine technische Anpassung nötig wird. Solche Änderungen werden rechtzeitig angekündigt; beeinträchtigen sie die Nutzbarkeit mehr als nur unerheblich, kannst du den Vertrag innerhalb von 30 Tagen kostenfrei kündigen.</p>
+        <p lang="en">The account and checkout interface at <code>api.kiebitz.dev</code> is operated with reasonable care; a specific level of availability is not owed. Maintenance and outages are possible. Because the entitlement is stored signed on your device, the Plus features keep working even while the interface is temporarily unreachable.</p>
+        <p lang="en">The provider supplies the updates needed to keep Kiebitz Plus in conformity during the contract term, including security updates. Changes to the service beyond that are only made for a valid reason, for example when a third-party interface disappears or a technical adjustment becomes necessary. Such changes are announced in good time; if they impair usability more than marginally, you can terminate the contract free of charge within 30 days.</p>
+        <p lang="fr">L’interface de compte et de paiement sur <code>api.kiebitz.dev</code> est exploitée avec un soin raisonnable ; aucune disponibilité déterminée n’est due. Des maintenances et des incidents sont possibles. Comme le droit signé se trouve sur votre appareil, les fonctions Plus continuent de fonctionner même lorsque l’interface est momentanément injoignable.</p>
+        <p lang="fr">L’éditeur fournit les mises à jour nécessaires pour que Kiebitz Plus reste conforme pendant la durée du contrat, y compris les mises à jour de sécurité. Les modifications allant au-delà ne sont apportées que pour un motif valable, par exemple la disparition d’une interface tierce ou une adaptation technique nécessaire. De telles modifications sont annoncées en temps utile ; si elles altèrent l’utilisation de manière non négligeable, vous pouvez résilier le contrat sans frais dans un délai de 30 jours.</p>
+        <p lang="es">La interfaz de cuenta y compra en <code>api.kiebitz.dev</code> se opera con la diligencia adecuada; no se debe una disponibilidad determinada. Puede haber mantenimientos e incidencias. Como el derecho firmado está en tu dispositivo, las funciones de Plus siguen funcionando aunque la interfaz no esté disponible temporalmente.</p>
+        <p lang="es">El proveedor facilita las actualizaciones necesarias para que Kiebitz Plus siga siendo conforme durante la vigencia del contrato, incluidas las de seguridad. Los cambios que vayan más allá solo se realizan por un motivo válido, por ejemplo si desaparece una interfaz de terceros o es necesaria una adaptación técnica. Tales cambios se anuncian con antelación; si merman el uso más que de forma insignificante, puedes resolver el contrato sin coste en un plazo de 30 días.</p>
+        <p lang="zh">位于 <code>api.kiebitz.dev</code> 的账号与购买接口以合理的注意程度运行；不承诺特定的可用性。可能出现维护和故障。由于签名权益存放在你的设备上，即使接口暂时不可达，Plus 功能仍会继续工作。</p>
+        <p lang="zh">提供者会提供必要的更新，使 Kiebitz Plus 在合同期内保持符合约定，包括安全更新。超出此范围的服务变更，仅在有正当理由时进行，例如第三方接口停用或必须进行技术调整。此类变更会及时通知；若其对可用性的影响并非微不足道，你可以在 30 天内免费终止合同。</p>
+        <p lang="hi"><code>api.kiebitz.dev</code> पर चलने वाला खाता व ख़रीद इंटरफ़ेस उचित सावधानी से संचालित होता है; किसी निश्चित उपलब्धता का वादा नहीं है। रखरखाव और व्यवधान संभव हैं। चूँकि हस्ताक्षरित अधिकार आपके उपकरण पर होता है, इसलिए इंटरफ़ेस अस्थायी रूप से अनुपलब्ध होने पर भी Plus सुविधाएँ चलती रहती हैं।</p>
+        <p lang="hi">प्रदाता वे अपडेट देता है जो अनुबंध अवधि में Kiebitz Plus को अनुबंध-अनुरूप बनाए रखने के लिए ज़रूरी हैं, सुरक्षा अपडेट सहित। इससे आगे के बदलाव केवल उचित कारण से किए जाते हैं, जैसे किसी बाहरी इंटरफ़ेस का बंद होना या ज़रूरी तकनीकी अनुकूलन। ऐसे बदलावों की सूचना समय रहते दी जाती है; यदि उनसे उपयोग पर मामूली से अधिक असर पड़ता है, तो आप 30 दिनों के भीतर नि:शुल्क अनुबंध समाप्त कर सकते हैं।</p>
+        <p lang="ar">تُشغَّل واجهة الحساب والشراء على <code>api.kiebitz.dev</code> بعناية معقولة، ولا يُلتزم بقدر محدّد من التوافر. وقد تحدث أعمال صيانة وأعطال. ولأن الاستحقاق الموقّع محفوظ على جهازك، تستمر مزايا Plus في العمل حتى لو تعذّر الوصول إلى الواجهة مؤقتًا.</p>
+        <p lang="ar">يوفّر المزوّد التحديثات اللازمة لبقاء Kiebitz Plus مطابقًا للعقد طوال مدته، بما فيها التحديثات الأمنية. أما التغييرات التي تتجاوز ذلك فلا تُجرى إلا لسبب وجيه، مثل توقّف واجهة لطرف ثالث أو الحاجة إلى تعديل تقني. ويُعلَن عن هذه التغييرات في وقت مناسب؛ وإذا أضرّت بقابلية الاستخدام بأكثر من قدر يسير، جاز لك إنهاء العقد مجانًا خلال 30 يومًا.</p>
+      </section>
+
+      <section id="t10">
+        <h2><span class="num">10</span><span lang="de">Deine Pflichten</span><span lang="en">Your obligations</span><span lang="fr">Vos obligations</span><span lang="es">Tus obligaciones</span><span lang="zh">你的义务</span><span lang="hi">आपके दायित्व</span><span lang="ar">التزاماتك</span></h2>
+        <ul class="bul" lang="de">
+          <li>Anmeldelinks, Sitzungen und die Freischaltung sind persönlich und dürfen nicht weitergegeben oder öffentlich zugänglich gemacht werden.</li>
+          <li>Die Freischaltung darf nicht umgangen, manipuliert oder nachgebildet werden; ein Zurückentwickeln ist nur in den gesetzlich zwingend erlaubten Fällen zulässig.</li>
+          <li>Die Schnittstelle darf nicht automatisiert in einem Umfang abgefragt werden, der den Betrieb beeinträchtigt.</li>
+          <li>Beim Import von Partien nutzt du ausschließlich eigene Konten bei chess.com und Lichess und beachtest deren Bedingungen.</li>
+          <li>Kiebitz ist source-available, nicht Open Source. Die Lizenzbedingungen des Repositorys bleiben unberührt; Stockfish steht unter GPL-3.0.</li>
+        </ul>
+        <ul class="bul" lang="en">
+          <li>Sign-in links, sessions and the unlock are personal and must not be passed on or made publicly accessible.</li>
+          <li>The unlock must not be circumvented, manipulated or reproduced; reverse engineering is permitted only in the cases mandatorily allowed by law.</li>
+          <li>The interface must not be queried automatically to an extent that impairs its operation.</li>
+          <li>When importing games you use only your own chess.com and Lichess accounts and observe their terms.</li>
+          <li>Kiebitz is source-available, not open source. The repository's license terms remain unaffected; Stockfish is licensed under GPL-3.0.</li>
+        </ul>
+        <ul class="bul" lang="fr">
+          <li>Les liens de connexion, les sessions et le déblocage sont personnels et ne doivent pas être transmis ni rendus publics.</li>
+          <li>Le déblocage ne doit pas être contourné, manipulé ni reproduit ; la rétro-ingénierie n’est permise que dans les cas impérativement autorisés par la loi.</li>
+          <li>L’interface ne doit pas être interrogée automatiquement dans une mesure qui en perturbe le fonctionnement.</li>
+          <li>Pour l’import de parties, vous n’utilisez que vos propres comptes chess.com et Lichess et respectez leurs conditions.</li>
+          <li>Kiebitz est source-available, pas open source. Les conditions de licence du dépôt demeurent applicables ; Stockfish est sous licence GPL-3.0.</li>
+        </ul>
+        <ul class="bul" lang="es">
+          <li>Los enlaces de acceso, las sesiones y el desbloqueo son personales y no deben cederse ni hacerse públicos.</li>
+          <li>El desbloqueo no puede eludirse, manipularse ni reproducirse; la ingeniería inversa solo se permite en los casos legalmente imperativos.</li>
+          <li>La interfaz no debe consultarse de forma automatizada en una medida que perjudique su funcionamiento.</li>
+          <li>Al importar partidas utilizas únicamente tus propias cuentas de chess.com y Lichess y respetas sus condiciones.</li>
+          <li>Kiebitz es source-available, no open source. Las condiciones de licencia del repositorio no se ven afectadas; Stockfish se distribuye bajo GPL-3.0.</li>
+        </ul>
+        <ul class="bul" lang="zh">
+          <li>登录链接、会话和解锁均属个人专用，不得转让或公开。</li>
+          <li>不得规避、篡改或仿制解锁机制；仅在法律强制允许的情形下才可进行逆向工程。</li>
+          <li>不得以影响接口运行的规模对其进行自动化请求。</li>
+          <li>导入对局时只使用你自己的 chess.com 与 Lichess 账号，并遵守其条款。</li>
+          <li>Kiebitz 源码可见但非开源。仓库的许可条款不受影响；Stockfish 采用 GPL-3.0 许可。</li>
+        </ul>
+        <ul class="bul" lang="hi">
+          <li>साइन-इन लिंक, सत्र और अनलॉक व्यक्तिगत हैं; इन्हें न किसी को दिया जाए, न सार्वजनिक किया जाए।</li>
+          <li>अनलॉक को न टाला जाए, न बदला जाए, न उसकी नक़ल बनाई जाए; रिवर्स इंजीनियरिंग केवल उन्हीं मामलों में अनुमत है जिनकी क़ानून अनिवार्य रूप से अनुमति देता है।</li>
+          <li>इंटरफ़ेस से इतनी मात्रा में स्वचालित अनुरोध न किए जाएँ कि उसका संचालन प्रभावित हो।</li>
+          <li>बाज़ियाँ आयात करते समय आप केवल अपने ही chess.com और Lichess खातों का उपयोग करते हैं और उनकी शर्तों का पालन करते हैं।</li>
+          <li>Kiebitz सोर्स-अवेलेबल है, ओपन सोर्स नहीं। रिपॉज़िटरी की लाइसेंस शर्तें अप्रभावित रहती हैं; Stockfish GPL-3.0 के अंतर्गत है।</li>
+        </ul>
+        <ul class="bul" lang="ar">
+          <li>روابط الدخول والجلسات والتفعيل أمور شخصية، ولا يجوز نقلها أو إتاحتها للعموم.</li>
+          <li>لا يجوز الالتفاف على التفعيل أو العبث به أو محاكاته؛ ولا تُسمح الهندسة العكسية إلا في الحالات التي يوجبها القانون.</li>
+          <li>لا يجوز استعلام الواجهة آليًا بقدر يضرّ بتشغيلها.</li>
+          <li>عند استيراد المباريات تستخدم حساباتك أنت فقط على chess.com وLichess وتلتزم بشروطهما.</li>
+          <li>شيفرة Kiebitz متاحة لكنها ليست مفتوحة المصدر. وتبقى شروط ترخيص المستودع سارية؛ ومحرّك Stockfish مرخّص بموجب GPL-3.0.</li>
+        </ul>
+      </section>
+
+      <section id="t11">
+        <h2><span class="num">11</span><span lang="de">Gewährleistung und Haftung</span><span lang="en">Warranty and liability</span><span lang="fr">Garantie et responsabilité</span><span lang="es">Garantía y responsabilidad</span><span lang="zh">保证与责任</span><span lang="hi">वारंटी और दायित्व</span><span lang="ar">الضمان والمسؤولية</span></h2>
+        <p lang="de">Für Mängel gelten die gesetzlichen Rechte; für digitale Produkte gelten insbesondere die §§ 327 ff. BGB. Melde Mängel bitte an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</p>
+        <p lang="de">Der Anbieter haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit, bei der Verletzung von Leben, Körper oder Gesundheit, bei arglistig verschwiegenen Mängeln, im Umfang einer übernommenen Garantie sowie nach dem Produkthaftungsgesetz. Bei einfacher Fahrlässigkeit haftet der Anbieter nur für die Verletzung wesentlicher Vertragspflichten, deren Erfüllung die ordnungsgemäße Durchführung des Vertrags überhaupt erst ermöglicht und auf deren Einhaltung du regelmäßig vertrauen darfst, und der Höhe nach begrenzt auf den vertragstypischen, vorhersehbaren Schaden. Eine weitergehende Haftung ist ausgeschlossen.</p>
+        <p lang="de">Deine Daten liegen auf deinen Geräten; der Anbieter hält davon keine Kopie vor. Sichere deine Partien und Analysen deshalb regelmäßig selbst, zum Beispiel über den PGN-Export.</p>
+        <p lang="en">Statutory rights apply to defects; for digital products in particular §§ 327 et seq. of the German Civil Code apply. Please report defects to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</p>
+        <p lang="en">The provider is liable without limitation for intent and gross negligence, for injury to life, body or health, for fraudulently concealed defects, within the scope of any guarantee given, and under the German Product Liability Act. For slight negligence the provider is liable only for breaching essential contractual duties whose fulfilment makes proper performance of the contract possible in the first place and on whose observance you may regularly rely, and only up to the foreseeable damage typical for this type of contract. Any further liability is excluded.</p>
+        <p lang="en">Your data lives on your devices; the provider keeps no copy of it. Please back up your games and analyses yourself on a regular basis, for example through the PGN export.</p>
+        <p lang="fr">Les droits légaux s’appliquent aux défauts ; pour les produits numériques, les §§ 327 et suivants du Code civil allemand s’appliquent en particulier. Signalez les défauts à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</p>
+        <p lang="fr">L’éditeur répond sans limitation en cas de dol et de faute lourde, d’atteinte à la vie, à l’intégrité physique ou à la santé, de défauts dissimulés frauduleusement, dans l’étendue d’une garantie assumée, ainsi qu’au titre de la loi allemande sur la responsabilité du fait des produits. En cas de négligence simple, sa responsabilité se limite à la violation d’obligations contractuelles essentielles dont l’exécution rend seule possible la bonne exécution du contrat et dont vous pouvez régulièrement attendre le respect, et se limite au dommage prévisible et typique du contrat. Toute responsabilité au-delà est exclue.</p>
+        <p lang="fr">Vos données se trouvent sur vos appareils ; l’éditeur n’en conserve aucune copie. Sauvegardez donc régulièrement vos parties et analyses vous-même, par exemple via l’export PGN.</p>
+        <p lang="es">A los defectos se aplican los derechos legales; para los productos digitales rigen en particular los §§ 327 y ss. del Código Civil alemán. Comunica los defectos a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</p>
+        <p lang="es">El proveedor responde sin limitación por dolo y culpa grave, por lesiones a la vida, el cuerpo o la salud, por defectos ocultados con dolo, en el alcance de una garantía asumida y conforme a la ley alemana de responsabilidad por productos. En caso de culpa leve responde únicamente por el incumplimiento de obligaciones contractuales esenciales cuyo cumplimiento hace posible la correcta ejecución del contrato y en cuya observancia puedes confiar de forma habitual, y limitado al daño previsible y típico del contrato. Queda excluida cualquier responsabilidad ulterior.</p>
+        <p lang="es">Tus datos están en tus dispositivos; el proveedor no conserva copia alguna. Por eso, haz copias de seguridad de tus partidas y análisis con regularidad, por ejemplo mediante la exportación en PGN.</p>
+        <p lang="zh">对于缺陷适用法定权利；数字产品尤其适用《德国民法典》第 327 条及以下各条。请将缺陷报告至 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>。</p>
+        <p lang="zh">对于故意和重大过失、生命身体健康的损害、恶意隐瞒的缺陷、所承担担保的范围以及依《德国产品责任法》的情形，提供者承担无限责任。对于一般过失，提供者仅就违反重大合同义务承担责任——即其履行方使合同得以正常执行、且你通常可以信赖其得到遵守的义务，并以该类合同典型的、可预见的损害为限。超出上述范围的责任均被排除。</p>
+        <p lang="zh">你的数据保存在你的设备上；提供者不留存任何副本。因此请自行定期备份对局与分析，例如通过 PGN 导出。</p>
+        <p lang="hi">दोषों पर वैधानिक अधिकार लागू होते हैं; डिजिटल उत्पादों पर विशेष रूप से जर्मन नागरिक संहिता की धारा 327 आदि लागू होती हैं। कृपया दोष <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर बताइए।</p>
+        <p lang="hi">प्रदाता जान-बूझकर किए गए कृत्यों और घोर लापरवाही, जीवन, शरीर या स्वास्थ्य की क्षति, छल से छिपाए गए दोषों, दी गई किसी गारंटी की सीमा तक, तथा जर्मन उत्पाद-दायित्व अधिनियम के अनुसार असीमित रूप से उत्तरदायी है। साधारण लापरवाही की स्थिति में वह केवल उन आवश्यक संविदात्मक दायित्वों के उल्लंघन के लिए उत्तरदायी है जिनका पालन ही अनुबंध के उचित निष्पादन को संभव बनाता है और जिन पर आप सामान्यतः भरोसा कर सकते हैं — और वह भी इस प्रकार के अनुबंध में सामान्य, पूर्वानुमेय क्षति तक सीमित। इससे आगे का कोई दायित्व नहीं है।</p>
+        <p lang="hi">आपका डेटा आपके उपकरणों पर रहता है; प्रदाता उसकी कोई प्रति नहीं रखता। इसलिए अपनी बाज़ियों और विश्लेषणों का नियमित बैकअप स्वयं लीजिए, जैसे PGN निर्यात के ज़रिए।</p>
+        <p lang="ar">تسري على العيوب الحقوق القانونية؛ وتنطبق على المنتجات الرقمية خصوصًا المواد 327 وما بعدها من القانون المدني الألماني. ويرجى الإبلاغ عن العيوب إلى <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>.</p>
+        <p lang="ar">يتحمّل المزوّد مسؤولية غير محدودة في حالات العمد والإهمال الجسيم، والإضرار بالحياة أو الجسد أو الصحة، والعيوب المخفاة بغش، وفي حدود أي ضمان التزم به، وبموجب قانون المسؤولية عن المنتجات الألماني. أما في حالة الإهمال البسيط فلا يسأل إلا عن الإخلال بالالتزامات العقدية الجوهرية التي يجعل الوفاء بها تنفيذ العقد ممكنًا أصلًا والتي يجوز لك عادةً الاعتماد على مراعاتها، وبحدود الضرر المتوقّع المعتاد لمثل هذا العقد. وتُستبعد أي مسؤولية تتجاوز ذلك.</p>
+        <p lang="ar">بياناتك موجودة على أجهزتك، ولا يحتفظ المزوّد بأي نسخة منها. لذا احرص على عمل نسخ احتياطية لمبارياتك وتحليلاتك بانتظام، مثلًا عبر تصدير PGN.</p>
+      </section>
+
+      <section id="t12">
+        <h2><span class="num">12</span><span lang="de">Schlussbestimmungen</span><span lang="en">Final provisions</span><span lang="fr">Dispositions finales</span><span lang="es">Disposiciones finales</span><span lang="zh">最终条款</span><span lang="hi">अंतिम प्रावधान</span><span lang="ar">أحكام ختامية</span></h2>
+        <p lang="de"><strong>Änderungen dieser Bedingungen</strong> kündigt der Anbieter mindestens 30 Tage vorher per E-Mail an. Widersprichst du nicht bis zum Wirksamwerden oder kündigst du bis dahin, gelten die geänderten Bedingungen ab dem folgenden Abrechnungszeitraum. Auf dein Widerspruchs- und Kündigungsrecht wird in der Ankündigung ausdrücklich hingewiesen.</p>
+        <p lang="de">Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts. Bist du Verbraucher, bleiben die zwingenden Verbraucherschutzvorschriften deines gewöhnlichen Aufenthaltsstaats unberührt. Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle ist der Anbieter nicht verpflichtet und nicht bereit.</p>
+        <p lang="de">Sollte eine Bestimmung unwirksam sein oder werden, bleibt der Vertrag im Übrigen wirksam. Vertragssprache ist Deutsch; Übersetzungen dieser Seite dienen nur der Information, maßgeblich ist die deutsche Fassung.</p>
+        <p lang="en"><strong>Changes to these terms</strong> are announced by the provider at least 30 days in advance by email. If you do not object before they take effect and do not cancel by then, the amended terms apply from the following billing period. The announcement expressly points out your right to object and to cancel.</p>
+        <p lang="en">German law applies, excluding the UN Convention on Contracts for the International Sale of Goods. If you are a consumer, the mandatory consumer protection rules of your country of habitual residence remain unaffected. The provider is neither obliged nor willing to take part in dispute resolution proceedings before a consumer arbitration board.</p>
+        <p lang="en">Should a provision be or become invalid, the remainder of the contract stays effective. The contract language is German; translations of this page are for information only, and the German version prevails.</p>
+        <p lang="fr"><strong>Les modifications des présentes conditions</strong> sont annoncées par e-mail au moins 30 jours à l’avance. Si vous ne vous y opposez pas avant leur entrée en vigueur et ne résiliez pas d’ici là, les conditions modifiées s’appliquent à compter de la période de facturation suivante. L’annonce mentionne expressément votre droit d’opposition et de résiliation.</p>
+        <p lang="fr">Le droit allemand s’applique, à l’exclusion de la Convention de Vienne. Si vous êtes consommateur, les dispositions impératives de protection des consommateurs de votre État de résidence habituelle demeurent applicables. L’éditeur n’est ni tenu ni disposé à participer à une procédure de règlement des litiges devant un organe de conciliation pour consommateurs.</p>
+        <p lang="fr">Si une clause est ou devient nulle, le contrat reste valable pour le surplus. La langue du contrat est l’allemand ; les traductions de cette page sont fournies à titre d’information et la version allemande fait foi.</p>
+        <p lang="es"><strong>Los cambios en estas condiciones</strong> se anuncian por correo con al menos 30 días de antelación. Si no te opones antes de su entrada en vigor ni cancelas hasta entonces, las condiciones modificadas rigen desde el siguiente periodo de facturación. El anuncio advierte expresamente de tu derecho de oposición y de cancelación.</p>
+        <p lang="es">Se aplica el Derecho alemán, con exclusión de la Convención de Viena. Si eres consumidor, quedan intactas las normas imperativas de protección al consumidor de tu país de residencia habitual. El proveedor no está obligado ni dispuesto a participar en procedimientos de resolución de litigios ante una junta arbitral de consumo.</p>
+        <p lang="es">Si alguna disposición fuera o llegara a ser ineficaz, el contrato seguirá siendo válido en lo demás. La lengua del contrato es el alemán; las traducciones de esta página son solo informativas y prevalece la versión alemana.</p>
+        <p lang="zh"><strong>本条款的变更</strong>将由提供者至少提前 30 天通过电子邮件通知。若你在生效前未提出异议，也未在此之前取消，则修改后的条款自下一个计费周期起适用。通知中会明确提示你的异议权和取消权。</p>
+        <p lang="zh">适用德国法律，排除《联合国国际货物销售合同公约》。若你是消费者，你惯常居所地强制性的消费者保护规定不受影响。提供者没有义务、也不愿意参加消费者仲裁机构的争议解决程序。</p>
+        <p lang="zh">若某一条款无效或变为无效，合同其余部分仍然有效。合同语言为德语；本页译文仅供参考，以德文版本为准。</p>
+        <p lang="hi"><strong>इन शर्तों में बदलाव</strong> की सूचना प्रदाता कम से कम 30 दिन पहले ईमेल से देता है। यदि आप प्रभावी होने से पहले आपत्ति नहीं करते और तब तक रद्द भी नहीं करते, तो बदली हुई शर्तें अगले बिलिंग चक्र से लागू होती हैं। सूचना में आपके आपत्ति और रद्दीकरण के अधिकार का स्पष्ट उल्लेख किया जाता है।</p>
+        <p lang="hi">जर्मन क़ानून लागू होता है, संयुक्त राष्ट्र विक्रय-अनुबंध कन्वेंशन को छोड़कर। यदि आप उपभोक्ता हैं, तो आपके सामान्य निवास-राज्य के अनिवार्य उपभोक्ता-संरक्षण नियम अप्रभावित रहते हैं। प्रदाता किसी उपभोक्ता-मध्यस्थता निकाय के समक्ष विवाद-निपटान प्रक्रिया में भाग लेने के लिए न बाध्य है, न इच्छुक।</p>
+        <p lang="hi">यदि कोई प्रावधान अप्रभावी हो या हो जाए, तो शेष अनुबंध प्रभावी बना रहता है। अनुबंध की भाषा जर्मन है; इस पृष्ठ के अनुवाद केवल जानकारी के लिए हैं और जर्मन संस्करण मान्य है।</p>
+        <p lang="ar"><strong>تعديلات هذه الشروط</strong> يُعلنها المزوّد بالبريد الإلكتروني قبل 30 يومًا على الأقل. وإذا لم تعترض قبل نفاذها ولم تُلغِ حتى ذلك الحين، سرت الشروط المعدَّلة اعتبارًا من دورة الفوترة التالية. ويُنبَّه في الإعلان صراحةً إلى حقك في الاعتراض والإلغاء.</p>
+        <p lang="ar">يسري القانون الألماني مع استبعاد اتفاقية الأمم المتحدة للبيع الدولي للبضائع. وإذا كنت مستهلكًا، تبقى قواعد حماية المستهلك الآمرة في دولة إقامتك المعتادة سارية. والمزوّد غير ملزَم بالمشاركة في إجراءات تسوية المنازعات أمام هيئة تحكيم استهلاكية وغير مستعدّ لها.</p>
+        <p lang="ar">وإذا كان أحد البنود باطلًا أو أصبح كذلك، يظلّ العقد نافذًا فيما عداه. ولغة العقد هي الألمانية؛ وترجمات هذه الصفحة للاطّلاع فقط، والنسخة الألمانية هي المعتمدة.</p>
+        <div class="panel" style="margin-top:22px">
+          <p>
+            <span lang="de">Fragen zum Vertrag? Schreib an <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>. Wie mit personenbezogenen Daten umgegangen wird, steht in der <a href="../privacy/index.html">Datenschutzerklärung</a>; die Anbieterangaben stehen im <a href="../impressum/index.html">Impressum</a>.</span>
+            <span lang="en">Questions about the contract? Write to <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>. How personal data is handled is described in the <a href="../privacy/index.html">privacy policy</a>; provider details are in the <a href="../impressum/index.html">legal notice</a>.</span>
+            <span lang="fr">Des questions sur le contrat ? Écrivez à <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>. Le traitement des données personnelles est décrit dans la <a href="../privacy/index.html">politique de confidentialité</a> ; les informations sur l’éditeur figurent dans les <a href="../impressum/index.html">mentions légales</a>.</span>
+            <span lang="es">¿Dudas sobre el contrato? Escribe a <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>. El tratamiento de los datos personales se describe en la <a href="../privacy/index.html">política de privacidad</a>; los datos del proveedor están en el <a href="../impressum/index.html">aviso legal</a>.</span>
+            <span lang="zh">对合同有疑问？请写信到 <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>。个人数据的处理方式见<a href="../privacy/index.html">隐私政策</a>；提供者信息见<a href="../impressum/index.html">法律声明</a>。</span>
+            <span lang="hi">अनुबंध से जुड़े सवाल? <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a> पर लिखिए। व्यक्तिगत डेटा के प्रबंधन की जानकारी <a href="../privacy/index.html">गोपनीयता नीति</a> में है; प्रदाता का विवरण <a href="../impressum/index.html">क़ानूनी सूचना</a> में।</span>
+            <span lang="ar">أسئلة عن العقد؟ راسل <a href="mailto:support@kiebitz.dev">support@kiebitz.dev</a>. وطريقة التعامل مع البيانات الشخصية موضّحة في <a href="../privacy/index.html">سياسة الخصوصية</a>، وبيانات المزوّد في <a href="../impressum/index.html">البيان القانوني</a>.</span>
+          </p>
+        </div>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="mark-name">Kiebitz</p>
+      <p class="small" style="margin-top:8px">© 2026 Tom Maurer</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <div class="foot-links-main">
+      <a href="../index.html"><span lang="de">Startseite</span><span lang="en">Home</span><span lang="fr">Accueil</span><span lang="es">Inicio</span><span lang="zh">首页</span><span lang="hi">मुखपृष्ठ</span><span lang="ar">الصفحة الرئيسية</span></a>
+      <a href="../plus/index.html">Kiebitz Plus</a>
+      <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span><span lang="fr">Code source</span><span lang="es">Código fuente</span><span lang="zh">源代码</span><span lang="hi">सोर्स कोड</span><span lang="ar">الشيفرة المصدرية</span></a>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

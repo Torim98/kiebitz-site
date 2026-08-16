@@ -105,6 +105,47 @@ for (const language of codes) {
   report(/href="[^"]*plus\/index\.html"/.test(home), `${fileFor(language, "home")}: pricing has no link to /plus/`);
 }
 
+// ── Vertragsbedingungen ─────────────────────────────────────────────────────
+// Kaufen heißt einen Vertrag schließen: Die Bedingungen müssen aus jedem Footer
+// erreichbar sein und unmittelbar neben dem Kauf-Aufruf stehen — zusammen mit
+// der Datenschutzerklärung, weil beides zur selben Entscheidung gehört.
+const purchaseCalls = {
+  home: "plan-cta",
+  plus: "plus-form",
+  plusAccount: 'data-plus-action="checkout"'
+};
+
+for (const language of codes) {
+  const termsFile = fileFor(language, "terms");
+  const terms = await readFile(path.join(root, ...termsFile.split("/")), "utf8");
+  // Widerruf (t8) und Kündigung (t7) sind die Abschnitte, auf die die
+  // Kaufhinweise verweisen · fehlen sie, laufen diese Links ins Leere.
+  for (const marker of ['id="t7"', 'id="t8"', "privacy/index.html", "impressum/index.html", "mailto:support@kiebitz.dev"]) {
+    report(terms.includes(marker), `${termsFile}: missing ${marker}`);
+  }
+
+  for (const page of Object.keys(pages)) {
+    const relative = fileFor(language, page);
+    const html = await readFile(path.join(root, ...relative.split("/")), "utf8");
+    const footer = html.slice(html.indexOf('<footer class="foot">'));
+    report(page === "terms" || /terms\/index\.html/.test(footer), `${relative}: footer does not link the terms`);
+  }
+
+  for (const [page, call] of Object.entries(purchaseCalls)) {
+    const relative = fileFor(language, page);
+    const html = await readFile(path.join(root, ...relative.split("/")), "utf8");
+    const callIndex = html.indexOf(call);
+    const noticeIndex = html.indexOf('class="legal-note"', callIndex);
+    const nearby = callIndex !== -1 && noticeIndex !== -1 && noticeIndex - callIndex < 4000;
+    report(nearby, `${relative}: no contract notice next to the purchase call to action`);
+    const notice = nearby ? html.slice(noticeIndex, html.indexOf("</p>", noticeIndex)) : "";
+    report(
+      /terms\/index\.html/.test(notice) && /privacy\/index\.html/.test(notice),
+      `${relative}: purchase notice must link the terms and the privacy policy`
+    );
+  }
+}
+
 // Die Browsersitzung ist ein HttpOnly-Cookie · sie darf niemals durch
 // JavaScript laufen, und schreibende Aufrufe brauchen den CSRF-Kopf.
 const plusScript = await readFile(path.join(root, "assets", "plus.js"), "utf8");

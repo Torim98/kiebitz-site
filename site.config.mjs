@@ -187,6 +187,28 @@ export const pages = {
       ar: "سياسة خصوصية Kiebitz: بيانات الشطرنج المحلية والوصول إلى الشبكة والأذونات والمزامنة عبر الشبكة المحلية وخدمات الأطراف الثالثة."
     }
   },
+  terms: {
+    source: "src/pages/terms/index.html.template",
+    route: "terms/",
+    titles: {
+      de: "Vertragsbedingungen (AGB) · Kiebitz",
+      en: "Terms of Service · Kiebitz",
+      fr: "Conditions générales · Kiebitz",
+      es: "Condiciones generales · Kiebitz",
+      zh: "服务条款 · Kiebitz",
+      hi: "सेवा की शर्तें · Kiebitz",
+      ar: "شروط الخدمة · Kiebitz"
+    },
+    descriptions: {
+      de: "Vertragsbedingungen für Kiebitz Plus: Vertragsschluss, Preise, Testzeitraum, Laufzeit, Kündigung, Widerrufsrecht und Haftung.",
+      en: "Terms of service for Kiebitz Plus: conclusion of contract, prices, free trial, term, cancellation, right of withdrawal and liability.",
+      fr: "Conditions générales de Kiebitz Plus : conclusion du contrat, prix, période d’essai, durée, résiliation, droit de rétractation et responsabilité.",
+      es: "Condiciones generales de Kiebitz Plus: celebración del contrato, precios, periodo de prueba, duración, cancelación, derecho de desistimiento y responsabilidad.",
+      zh: "Kiebitz Plus 服务条款：合同成立、价格、免费试用、期限、取消、撤回权与责任。",
+      hi: "Kiebitz Plus की सेवा शर्तें: अनुबंध का गठन, क़ीमत, मुफ़्त परीक्षण, अवधि, रद्दीकरण, निरस्तीकरण अधिकार और दायित्व।",
+      ar: "شروط خدمة Kiebitz Plus: إبرام العقد والأسعار والفترة التجريبية والمدة والإلغاء وحق الانسحاب والمسؤولية."
+    }
+  },
   impressum: {
     source: "src/pages/impressum/index.html.template",
     route: "impressum/",

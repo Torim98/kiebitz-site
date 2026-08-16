@@ -57,6 +57,7 @@
       <a href="../index.html#pricing"><span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></a>
       <a href="../index.html#download"><span lang="de">Download</span><span lang="en">Download</span><span lang="fr">Téléchargement</span><span lang="es">Descarga</span><span lang="zh">下载</span><span lang="hi">डाउनलोड</span><span lang="ar">التنزيل</span></a>
       <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="../terms/index.html"><span lang="de">AGB</span><span lang="en">Terms</span><span lang="fr">CGV</span><span lang="es">Condiciones</span><span lang="zh">条款</span><span lang="hi">शर्तें</span><span lang="ar">الشروط</span></a>
     </nav>
     <div class="lang">
       <svg class="lang-globe" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
@@ -118,6 +119,15 @@
             <input id="plus-email" type="email" name="email" required autocomplete="email" inputmode="email" placeholder="name@example.com">
             <button class="btn btn-primary" type="submit"><span lang="de">Link senden</span><span lang="en">Send link</span><span lang="fr">Envoyer le lien</span><span lang="es">Enviar enlace</span><span lang="zh">发送链接</span><span lang="hi">लिंक भेजें</span><span lang="ar">إرسال الرابط</span></button>
           </form>
+          <p class="legal-note">
+            <span lang="de">Für Konto und Kauf gelten die <a href="../terms/index.html">Vertragsbedingungen</a> und die <a href="../privacy/index.html">Datenschutzerklärung</a>. Kiebitz Plus kostet nach dem Testzeitraum 1,99 € pro Monat und ist jederzeit kündbar; zum Widerrufsrecht siehe <a href="../terms/index.html#t8">Abschnitt 8</a>.</span>
+            <span lang="en">The <a href="../terms/index.html">terms of service</a> and the <a href="../privacy/index.html">privacy policy</a> apply to the account and the purchase. After the trial, Kiebitz Plus costs €1.99 per month and can be cancelled any time; on the right of withdrawal see <a href="../terms/index.html#t8">section 8</a>.</span>
+            <span lang="fr">Les <a href="../terms/index.html">conditions générales</a> et la <a href="../privacy/index.html">politique de confidentialité</a> s’appliquent au compte et à l’achat. Après l’essai, Kiebitz Plus coûte 1,99 € par mois et reste résiliable à tout moment ; sur le droit de rétractation, voir la <a href="../terms/index.html#t8">section 8</a>.</span>
+            <span lang="es">A la cuenta y a la compra se aplican las <a href="../terms/index.html">condiciones generales</a> y la <a href="../privacy/index.html">política de privacidad</a>. Tras la prueba, Kiebitz Plus cuesta 1,99 € al mes y se puede cancelar en cualquier momento; sobre el derecho de desistimiento, véase la <a href="../terms/index.html#t8">sección 8</a>.</span>
+            <span lang="zh">账号与购买适用<a href="../terms/index.html">服务条款</a>和<a href="../privacy/index.html">隐私政策</a>。试用结束后，Kiebitz Plus 为每月 1,99 €，可随时取消；关于撤回权见<a href="../terms/index.html#t8">第 8 节</a>。</span>
+            <span lang="hi">खाते और ख़रीद पर <a href="../terms/index.html">सेवा की शर्तें</a> और <a href="../privacy/index.html">गोपनीयता नीति</a> लागू होती हैं। परीक्षण के बाद Kiebitz Plus की क़ीमत 1,99 € प्रति माह है और इसे कभी भी रद्द किया जा सकता है; निरस्तीकरण अधिकार के लिए <a href="../terms/index.html#t8">खंड 8</a> देखिए।</span>
+            <span lang="ar">تسري على الحساب والشراء <a href="../terms/index.html">شروط الخدمة</a> و<a href="../privacy/index.html">سياسة الخصوصية</a>. وبعد التجربة تبلغ كلفة Kiebitz Plus‏ 1,99 € شهريًا مع إمكانية الإلغاء في أي وقت؛ وعن حق الانسحاب راجع <a href="../terms/index.html#t8">القسم 8</a>.</span>
+          </p>
           <noscript><p class="small"><span lang="de">Für Anmeldung und Kauf wird JavaScript gebraucht. Kiebitz selbst läuft davon unabhängig.</span><span lang="en">Signing in and buying need JavaScript. Kiebitz itself runs independently of it.</span><span lang="fr">La connexion et l’achat nécessitent JavaScript. Kiebitz lui-même fonctionne indépendamment.</span><span lang="es">El acceso y la compra necesitan JavaScript. Kiebitz en sí funciona sin él.</span><span lang="zh">登录和购买需要 JavaScript。Kiebitz 本身与此无关。</span><span lang="hi">साइन-इन और ख़रीद के लिए JavaScript चाहिए। Kiebitz ख़ुद इससे स्वतंत्र चलता है।</span><span lang="ar">يحتاج تسجيل الدخول والشراء إلى JavaScript. أما Kiebitz نفسه فيعمل بمعزل عن ذلك.</span></p></noscript>
         </div>
 
@@ -166,6 +176,7 @@
       <a href="../index.html#pricing"><span lang="de">Preise</span><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span><span lang="zh">价格</span><span lang="hi">क़ीमत</span><span lang="ar">الأسعار</span></a>
       <a href="../plus/index.html">Kiebitz Plus</a>
       <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
+      <a href="../terms/index.html"><span lang="de">Vertragsbedingungen</span><span lang="en">Terms of service</span><span lang="fr">Conditions générales</span><span lang="es">Condiciones generales</span><span lang="zh">服务条款</span><span lang="hi">सेवा की शर्तें</span><span lang="ar">شروط الخدمة</span></a>
       <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
       <a href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">Releases</a>
       </div>

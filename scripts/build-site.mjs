@@ -194,6 +194,7 @@ function rewriteLocalReferences(html, language, page, outputRelativePath) {
     ["/plus/account/index.html", "plusAccount"],
     ["/plus/success/index.html", "plusSuccess"],
     ["/privacy/index.html", "privacy"],
+    ["/terms/index.html", "terms"],
     ["/impressum/index.html", "impressum"]
   ]);
 
@@ -293,7 +294,7 @@ async function main() {
   await mkdir(client, { recursive: true });
 
   for (const entry of [
-    "index.html", "plus", "privacy", "impressum", "desktop-ad", "assets", "robots.txt", "sitemap.xml", ".nojekyll",
+    "index.html", "plus", "privacy", "terms", "impressum", "desktop-ad", "assets", "robots.txt", "sitemap.xml", ".nojekyll",
     ...languageCodes.filter((code) => languages[code].path)
   ]) {
     await cp(path.join(root, entry), path.join(client, entry), { recursive: true });
