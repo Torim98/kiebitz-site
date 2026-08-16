@@ -111,7 +111,7 @@ export const pages = {
     },
     descriptions: {
       de: "Kiebitz Plus: 7 Tage kostenlos testen, danach 1,99 € pro Monat, jederzeit kündbar. Anmeldung ohne Passwort, Freischaltung für Desktop und Android.",
-      en: "Kiebitz Plus: try free for 7 days, then €1.99 per month, cancel any time. Passwordless sign-in, unlocked on desktop and Android.",
+      en: "Kiebitz Plus: try it for 7 days, then €1.99 per month, cancel any time. Passwordless sign-in, unlocked on desktop and Android.",
       fr: "Kiebitz Plus : 7 jours gratuits, puis 1,99 € par mois, résiliable à tout moment. Connexion sans mot de passe, débloqué sur ordinateur et Android.",
       es: "Kiebitz Plus: 7 días gratis, después 1,99 € al mes, cancelable en cualquier momento. Acceso sin contraseña, desbloqueado en escritorio y Android.",
       zh: "Kiebitz Plus：免费试用 7 天，之后每月 1,99 €，随时可取消。无需密码登录，桌面端与 Android 一并解锁。",

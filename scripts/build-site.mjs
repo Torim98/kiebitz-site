@@ -2,6 +2,7 @@ import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { languages, pages, site } from "../site.config.mjs";
+import { buildContractAnnex } from "./contract-annex.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const posix = path.posix;
@@ -285,6 +286,10 @@ async function main() {
     }
   }
 
+  // Erst jetzt, denn die Anlage liest die eben gebaute deutsche Terms-Seite:
+  // Was dort steht, steht damit auch im Anhang der Vertragsbestätigung.
+  const annex = await buildContractAnnex(root, baseUrl.href);
+
   await writeFile(path.join(root, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /src/\nSitemap: ${new URL("sitemap.xml", baseUrl).href}\n`, "utf8");
   await writeFile(path.join(root, "sitemap.xml"), buildSitemap(), "utf8");
   await writeFile(path.join(root, ".nojekyll"), "", "utf8");
@@ -296,7 +301,7 @@ async function main() {
   await mkdir(client, { recursive: true });
 
   for (const entry of [
-    "index.html", "plus", "privacy", "terms", "cancel", "withdraw", "impressum", "desktop-ad", "assets", "robots.txt", "sitemap.xml", ".nojekyll",
+    "index.html", "plus", "privacy", "terms", "cancel", "withdraw", "impressum", "legal", "desktop-ad", "assets", "robots.txt", "sitemap.xml", ".nojekyll",
     ...languageCodes.filter((code) => languages[code].path)
   ]) {
     await cp(path.join(root, entry), path.join(client, entry), { recursive: true });
@@ -315,7 +320,7 @@ export default {
 };
 `, "utf8");
 
-  console.log(`Built ${languageCodes.length * pageEntries.length} localized pages for ${baseUrl.href}`);
+  console.log(`Built ${languageCodes.length * pageEntries.length} localized pages and ${annex} for ${baseUrl.href}`);
 }
 
 await main();

@@ -138,6 +138,20 @@
     window.location.assign(url);
   }
 
+  /**
+   * Sprache dieser Seite · nicht die des Browsers.
+   *
+   * Wer die Website auf Spanisch liest, hat sich für Spanisch entschieden;
+   * die Spracheinstellung des Browsers verrät stattdessen das Betriebssystem
+   * und schickte Anmeldelink samt Vertragsbestätigung womöglich in einer
+   * anderen Sprache. Die API kürzt zusammengesetzte Kennungen selbst auf ihre
+   * Grundsprache (aus
+   * `zh-Hans` wird `zh`) und fällt sonst auf Englisch zurück.
+   */
+  function documentLocale() {
+    return root.getAttribute("lang") || "en";
+  }
+
   /* ── /plus/ · Anmeldung und Kauf ─────────────────────────────────────────── */
 
   function initSignIn() {
@@ -163,7 +177,7 @@
       busy(button, true);
       api("/v1/auth/magic-link/request", {
         method: "POST",
-        body: { email: address, client: "web" }
+        body: { email: address, client: "web", locale: documentLocale() }
       }).then(function () {
         fill("email", address);
         showView("sent");
@@ -250,7 +264,10 @@
     function startCheckout(button) {
       hideMessage("account");
       busy(button, true);
-      api("/v1/billing/stripe/checkout", { method: "POST" }).then(function (session) {
+      api("/v1/billing/stripe/checkout", {
+        method: "POST",
+        body: { locale: documentLocale() }
+      }).then(function (session) {
         if (session && session.checkout_url) leaveTo(session.checkout_url);
         else showMessage("account", "stripe_checkout_failed");
       }, function (error) {

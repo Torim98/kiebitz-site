@@ -267,6 +267,68 @@ const plusScript = await readFile(path.join(root, "assets", "plus.js"), "utf8");
 report(plusScript.includes('credentials: "include"'), "assets/plus.js: browser calls must send the session cookie");
 report(plusScript.includes('"X-Kiebitz-CSRF"'), "assets/plus.js: writing calls must send the CSRF header");
 report(!plusScript.includes("localStorage"), "assets/plus.js: session state must never touch localStorage");
+// Anmeldelink und Vertragsbestätigung kommen in der Sprache, die der Besucher
+// auf dieser Website liest · nicht in der seines Betriebssystems.
+report(!plusScript.includes("navigator.language"), "assets/plus.js: the locale must come from the page, not from the browser");
+report(
+  /function documentLocale\(\)\s*\{\s*return root\.getAttribute\("lang"\) \|\| "en";/.test(plusScript),
+  "assets/plus.js: the locale must be read from the rendered document language"
+);
+for (const call of ["/v1/auth/magic-link/request", "/v1/billing/stripe/checkout"]) {
+  const index = plusScript.indexOf(call);
+  const body = index === -1 ? "" : plusScript.slice(index, plusScript.indexOf("}", plusScript.indexOf("body:", index)));
+  report(/locale: documentLocale\(\)/.test(body), `assets/plus.js: ${call} must send the page locale`);
+}
+
+// ── Vertragsanlage ──────────────────────────────────────────────────────────
+// Die Vertragsbestätigung hängt diese Datei an. Sie landet auf fremden
+// Festplatten und wird dort ohne Server geöffnet: Was sie nicht selbst
+// mitbringt, fehlt dann für immer.
+const annexPath = path.join(root, "legal", "kiebitz-vertragsbedingungen.html");
+let annex = "";
+try {
+  annex = await readFile(annexPath, "utf8");
+} catch {
+  errors.push("legal/kiebitz-vertragsbedingungen.html: the contract annex is missing");
+}
+
+if (annex) {
+  const name = "legal/kiebitz-vertragsbedingungen.html";
+  report(/<html lang="de">/.test(annex), `${name}: the binding version must declare lang="de"`);
+  report(/<meta charset="utf-8">/i.test(annex), `${name}: character encoding missing`);
+  report(!/<script/i.test(annex), `${name}: must not contain a script`);
+  report(!/<link\b[^>]*stylesheet/i.test(annex), `${name}: must not link an external stylesheet`);
+  report(!/@import/i.test(annex), `${name}: must not import an external stylesheet`);
+  report(/<style>[\s\S]*<\/style>/.test(annex), `${name}: the stylesheet must be inline`);
+  report(/@media print/.test(annex), `${name}: a print stylesheet is missing`);
+  report(!/<nav\b|lang-select|class="top"|class="foot"/.test(annex), `${name}: website navigation must not leak into the annex`);
+
+  for (const [attribute, value] of [...annex.matchAll(/\b(href|src)="([^"]+)"/g)].map((m) => [m[1], m[2]])) {
+    const absolute = value.startsWith("#")
+      || value.startsWith("https://")
+      || value.startsWith("mailto:")
+      || value.startsWith("tel:");
+    report(absolute, `${name}: ${attribute}="${value}" is not an absolute reference`);
+  }
+
+  for (let section = 1; section <= 12; section += 1) {
+    report(annex.includes(`id="t${section}"`), `${name}: section ${section} is missing`);
+  }
+  report((annex.match(/<section id="t\d+">/g) || []).length === 12, `${name}: expected exactly twelve sections`);
+
+  report(/Widerrufsrecht/.test(annex), `${name}: the withdrawal instruction is missing`);
+  report(/Widerrufsfrist beträgt vierzehn Tage/.test(annex), `${name}: the withdrawal period is missing`);
+  report(/Folgen des Widerrufs/.test(annex), `${name}: the consequences of withdrawal are missing`);
+  report(/Muster-Widerrufsformular/.test(annex), `${name}: the model withdrawal form is missing`);
+  report(/Stand: /.test(annex), `${name}: the date of the terms must stay visible`);
+  report(/Heidegarten 3/.test(annex) && /support@kiebitz\.dev/.test(annex), `${name}: the provider details must stay visible`);
+
+  // Die Anlage wiederholt /de/terms/ · sie darf den Suchindex nicht spalten.
+  report(/content="noindex/.test(annex), `${name}: the annex must not be indexed`);
+
+  // Was gebaut wird, muss auch ausgeliefert werden.
+  await access(path.join(root, "dist", "client", "legal", "kiebitz-vertragsbedingungen.html"));
+}
 
 const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
 // Konto- und Rückkehrseite stehen bewusst nicht im Index und nicht im Sitemap.
