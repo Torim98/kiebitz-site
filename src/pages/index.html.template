@@ -170,13 +170,13 @@
           </a>
         </div>
         <p class="band-note">
-          <span lang="de">Kiebitz bleibt local-first: keine Konten, keine Cloud, keine Telemetrie – auch im Play Store nicht.</span>
-          <span lang="en">Kiebitz stays local-first: no accounts, no cloud, no telemetry – on the Play Store as well.</span>
-          <span lang="fr">Kiebitz reste local-first : pas de comptes, pas de cloud, pas de télémétrie, y compris sur le Play Store.</span>
-          <span lang="es">Kiebitz sigue siendo local-first: sin cuentas, sin nube y sin telemetría, también en Play Store.</span>
-          <span lang="zh">Kiebitz 依然本地优先：没有账号、没有云端、没有遥测，上架 Play 商店后也一样。</span>
-          <span lang="hi">Kiebitz लोकल-फ़र्स्ट ही रहता है: न खाते, न क्लाउड, न टेलीमेट्री — Play Store पर भी नहीं।</span>
-          <span lang="ar">يبقى Kiebitz محليًا أولًا: بلا حسابات ولا سحابة ولا قياس عن بُعد، حتى في متجر Play.</span>
+          <span lang="de">Kiebitz bleibt local-first: keine Konten, keine Cloud, keine Telemetrie ohne deine Einwilligung – auch im Play Store nicht.</span>
+          <span lang="en">Kiebitz stays local-first: no accounts, no cloud, no telemetry unless you opt in – on the Play Store as well.</span>
+          <span lang="fr">Kiebitz reste local-first : pas de comptes, pas de cloud, pas de télémétrie sans votre consentement, y compris sur le Play Store.</span>
+          <span lang="es">Kiebitz sigue siendo local-first: sin cuentas, sin nube y sin telemetría salvo que tú la actives, también en Play Store.</span>
+          <span lang="zh">Kiebitz 依然本地优先：没有账号、没有云端，未经你同意也没有遥测，上架 Play 商店后也一样。</span>
+          <span lang="hi">Kiebitz लोकल-फ़र्स्ट ही रहता है: न खाते, न क्लाउड, और आपकी सहमति के बिना कोई टेलीमेट्री नहीं — Play Store पर भी नहीं।</span>
+          <span lang="ar">يبقى Kiebitz محليًا أولًا: بلا حسابات ولا سحابة ولا قياس عن بُعد دون موافقتك، حتى في متجر Play.</span>
         </p>
       </div>
 
