@@ -107,8 +107,6 @@
         </tbody>
       </table>
 
-      <p class="small" style="margin-top:14px"><span lang="de">Widgets gibt es auf dem Android-Startbildschirm. Für den Desktop sind keine geplant.</span><span lang="en">Widgets live on the Android home screen. None are planned for the desktop.</span><span lang="fr">Les widgets vivent sur l’écran d’accueil Android. Aucun n’est prévu pour l’ordinateur.</span><span lang="es">Los widgets están en la pantalla de inicio de Android. No hay ninguno previsto para escritorio.</span><span lang="zh">小组件用于 Android 主屏幕。桌面端没有相关计划。</span><span lang="hi">विजेट Android होम स्क्रीन के लिए हैं। डेस्कटॉप के लिए कोई योजना नहीं है।</span><span lang="ar">المكوّنات موجودة على شاشة Android الرئيسية، ولا شيء منها مخطّط لسطح المكتب.</span></p>
-
       <section class="plus-card" aria-labelledby="plus-signin-title">
         <h2 id="plus-signin-title"><span lang="de">Anmelden und freischalten</span><span lang="en">Sign in and unlock</span><span lang="fr">Se connecter et débloquer</span><span lang="es">Iniciar sesión y desbloquear</span><span lang="zh">登录并解锁</span><span lang="hi">साइन इन कीजिए और अनलॉक कीजिए</span><span lang="ar">سجّل الدخول وفعّل</span></h2>
 
@@ -188,14 +186,12 @@
     </div>
     <nav class="foot-links" aria-label="Footer">
       <div class="foot-links-main">
-      <a href="../index.html#feedback"><span lang="de">Feedback melden</span><span lang="en">Send feedback</span><span lang="fr">Envoyer un retour</span><span lang="es">Enviar comentarios</span><span lang="zh">发送反馈</span><span lang="hi">फ़ीडबैक भेजें</span><span lang="ar">أرسل ملاحظة</span></a>
       <a href="../plus/index.html">Kiebitz Plus</a>
-      <a href="../plus/account/index.html"><span lang="de">Konto</span><span lang="en">Account</span><span lang="fr">Compte</span><span lang="es">Cuenta</span><span lang="zh">账号</span><span lang="hi">खाता</span><span lang="ar">الحساب</span></a>
+      <a href="../index.html#feedback"><span lang="de">Feedback melden</span><span lang="en">Send feedback</span><span lang="fr">Envoyer un retour</span><span lang="es">Enviar comentarios</span><span lang="zh">发送反馈</span><span lang="hi">फ़ीडबैक भेजें</span><span lang="ar">أرسل ملاحظة</span></a>
       <a href="../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
       <a href="../terms/index.html"><span lang="de">Vertragsbedingungen</span><span lang="en">Terms of service</span><span lang="fr">Conditions générales</span><span lang="es">Condiciones generales</span><span lang="zh">服务条款</span><span lang="hi">सेवा की शर्तें</span><span lang="ar">شروط الخدمة</span></a>
       <a href="../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
-      <a href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">Releases</a>
-      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span><span lang="fr">Code source</span><span lang="es">Código fuente</span><span lang="zh">源代码</span><span lang="hi">सोर्स कोड</span><span lang="ar">الشيفرة المصدرية</span></a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener">GitHub</a>
       </div>
       <div class="foot-links-support">
       <a class="foot-support" href="https://github.com/sponsors/Torim98" target="_blank" rel="noopener noreferrer" data-sponsor-open>

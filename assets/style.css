@@ -1800,6 +1800,9 @@ html[dir="rtl"] .doc address { direction: rtl; }
 
 /* ── Responsive ───────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
+  /* Unterhalb dieser Breite drückt die Navigation Wortmarke und Zeile um; in
+     der längsten Sprache braucht die Kopfzeile rund 870 px. Also lieber weg. */
+  .top-nav { display: none; }
   .hero-grid, .feature, .doc-grid, .feedback-grid { grid-template-columns: minmax(0, 1fr); }
   .foot-in { grid-template-columns: minmax(0, 1fr); }
   .foot-links { align-items: flex-start; }
@@ -1818,7 +1821,6 @@ html[dir="rtl"] .doc address { direction: rtl; }
 }
 
 @media (max-width: 640px) {
-  .top-nav { display: none; }
   .top-in {
     gap: 8px;
     padding-inline: 14px;

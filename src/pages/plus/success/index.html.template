@@ -141,14 +141,12 @@
     </div>
     <nav class="foot-links" aria-label="Footer">
       <div class="foot-links-main">
-      <a href="../../index.html#feedback"><span lang="de">Feedback melden</span><span lang="en">Send feedback</span><span lang="fr">Envoyer un retour</span><span lang="es">Enviar comentarios</span><span lang="zh">发送反馈</span><span lang="hi">फ़ीडबैक भेजें</span><span lang="ar">أرسل ملاحظة</span></a>
       <a href="../../plus/index.html">Kiebitz Plus</a>
-      <a href="../../plus/account/index.html"><span lang="de">Konto</span><span lang="en">Account</span><span lang="fr">Compte</span><span lang="es">Cuenta</span><span lang="zh">账号</span><span lang="hi">खाता</span><span lang="ar">الحساب</span></a>
+      <a href="../../index.html#feedback"><span lang="de">Feedback melden</span><span lang="en">Send feedback</span><span lang="fr">Envoyer un retour</span><span lang="es">Enviar comentarios</span><span lang="zh">发送反馈</span><span lang="hi">फ़ीडबैक भेजें</span><span lang="ar">أرسل ملاحظة</span></a>
       <a href="../../privacy/index.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="fr">Confidentialité</span><span lang="es">Privacidad</span><span lang="zh">隐私</span><span lang="hi">गोपनीयता</span><span lang="ar">الخصوصية</span></a>
       <a href="../../terms/index.html"><span lang="de">Vertragsbedingungen</span><span lang="en">Terms of service</span><span lang="fr">Conditions générales</span><span lang="es">Condiciones generales</span><span lang="zh">服务条款</span><span lang="hi">सेवा की शर्तें</span><span lang="ar">شروط الخدمة</span></a>
       <a href="../../impressum/index.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span><span lang="fr">Mentions légales</span><span lang="es">Aviso legal</span><span lang="zh">法律声明</span><span lang="hi">क़ानूनी सूचना</span><span lang="ar">بيان قانوني</span></a>
-      <a href="https://github.com/Torim98/Kiebitz/releases" rel="noopener">Releases</a>
-      <a href="https://github.com/Torim98/Kiebitz" rel="noopener"><span lang="de">Quellcode</span><span lang="en">Source code</span><span lang="fr">Code source</span><span lang="es">Código fuente</span><span lang="zh">源代码</span><span lang="hi">सोर्स कोड</span><span lang="ar">الشيفرة المصدرية</span></a>
+      <a href="https://github.com/Torim98/Kiebitz" rel="noopener">GitHub</a>
       </div>
       <div class="foot-links-support">
       <a class="foot-support" href="https://github.com/sponsors/Torim98" target="_blank" rel="noopener noreferrer" data-sponsor-open>
