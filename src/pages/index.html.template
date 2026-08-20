@@ -550,13 +550,13 @@
             <span lang="ar">بالطلب تسري <a href="terms/index.html">شروط الخدمة</a> و<a href="privacy/index.html">سياسة الخصوصية</a>. ويمكن الإلغاء في أي وقت؛ وعن حق الانسحاب راجع <a href="terms/index.html#t8">القسم 8</a>.</span>
           </p>
           <p class="plan-note">
-            <span lang="de">Die LAN-Synchronisierung läuft direkt zwischen deinen Geräten im eigenen Netz · es gibt keine Cloud-Synchronisierung. Widgets gibt es auf Android; für den Desktop sind keine geplant.</span>
-            <span lang="en">LAN synchronization runs directly between your devices on your own network · there is no cloud sync. Widgets are for Android; none are planned for the desktop.</span>
-            <span lang="fr">La synchronisation LAN se fait directement entre vos appareils sur votre réseau · il n’y a pas de synchronisation dans le nuage. Les widgets sont pour Android ; aucun n’est prévu pour l’ordinateur.</span>
-            <span lang="es">La sincronización LAN va directamente entre tus dispositivos en tu propia red · no hay sincronización en la nube. Los widgets son para Android; no hay ninguno previsto para escritorio.</span>
-            <span lang="zh">局域网同步在你自己的网络里、设备之间直接进行 · 没有云同步。小组件用于 Android；桌面端没有相关计划。</span>
-            <span lang="hi">LAN सिंक आपके अपने नेटवर्क में उपकरणों के बीच सीधे चलता है · कोई क्लाउड सिंक नहीं है। विजेट Android के लिए हैं; डेस्कटॉप के लिए कोई योजना नहीं।</span>
-            <span lang="ar">تجري المزامنة عبر الشبكة المحلية مباشرة بين أجهزتك داخل شبكتك · ولا توجد مزامنة سحابية. والمكوّنات مخصّصة لـAndroid، ولا شيء منها مخطّط لسطح المكتب.</span>
+            <span lang="de">Die LAN-Synchronisierung läuft direkt zwischen deinen Geräten im eigenen Netz · es gibt keine Cloud-Synchronisierung.</span>
+            <span lang="en">LAN synchronization runs directly between your devices on your own network · there is no cloud sync.</span>
+            <span lang="fr">La synchronisation LAN se fait directement entre vos appareils sur votre réseau · il n’y a pas de synchronisation dans le nuage.</span>
+            <span lang="es">La sincronización LAN va directamente entre tus dispositivos en tu propia red · no hay sincronización en la nube.</span>
+            <span lang="zh">局域网同步在你自己的网络里、设备之间直接进行 · 没有云同步。</span>
+            <span lang="hi">LAN सिंक आपके अपने नेटवर्क में उपकरणों के बीच सीधे चलता है · कोई क्लाउड सिंक नहीं है।</span>
+            <span lang="ar">تجري المزامنة عبر الشبكة المحلية مباشرة بين أجهزتك داخل شبكتك · ولا توجد مزامنة سحابية.</span>
           </p>
         </article>
       </div>
