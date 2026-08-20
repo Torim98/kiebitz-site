@@ -31,6 +31,11 @@ for (const language of codes) {
     report(html.includes('name="twitter:card" content="summary_large_image"'), `${relative}: Twitter large card missing`);
     report(html.includes('property="og:image:width" content="1200"'), `${relative}: Open Graph dimensions missing`);
     report(page !== "home" || html.includes('"@type": "SoftwareApplication"'), `${relative}: SoftwareApplication JSON-LD missing`);
+    if (site.webAnalyticsToken) {
+      report((html.match(/static\.cloudflareinsights\.com\/beacon\.min\.js/g) || []).length === 1, `${relative}: Cloudflare Web Analytics missing or duplicated`);
+      report(html.includes(`&quot;token&quot;`) === false, `${relative}: analytics token was HTML-escaped inside JSON`);
+      report(html.includes(site.webAnalyticsToken), `${relative}: wrong Cloudflare Web Analytics token`);
+    }
 
     const documentDirectory = path.dirname(filename);
     for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
@@ -46,6 +51,9 @@ for (const language of codes) {
     }
   }
 }
+
+const desktopAd = await readFile(path.join(root, "desktop-ad", "index.html"), "utf8");
+report(!desktopAd.includes("cloudflareinsights.com"), "desktop-ad: embedded advertising surface must not inherit website analytics");
 
 // ── Kiebitz Plus ────────────────────────────────────────────────────────────
 // Die Kauf- und Kontoseiten leben von ihren Zuständen: Fehlt einer im HTML,

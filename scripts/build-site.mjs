@@ -231,6 +231,19 @@ function injectResolvedIconPaths(html) {
   return html.replaceAll("__ICON_128__", icon128).replaceAll("__ICON__", icon);
 }
 
+function injectWebAnalytics(html) {
+  const token = site.webAnalyticsToken.trim();
+  if (!token) return html;
+  if (!/^[a-f0-9]{32}$/i.test(token)) {
+    throw new Error("CLOUDFLARE_WEB_ANALYTICS_TOKEN must be a 32-character hexadecimal token");
+  }
+  const snippet = `<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='${JSON.stringify({ token })}'></script>
+<!-- End Cloudflare Web Analytics -->`;
+  if (!html.includes("</body>")) throw new Error("Could not inject Cloudflare Web Analytics before </body>");
+  return html.replace("</body>", `${snippet}\n</body>`);
+}
+
 async function buildPage(language, page, template) {
   const outputRelativePath = outputFileFor(language, page);
   let html = removeLanguageBootstrap(template);
@@ -238,6 +251,7 @@ async function buildPage(language, page, template) {
   html = rewriteDocumentShell(html, language, page);
   html = rewriteLocalReferences(html, language, page, outputRelativePath);
   html = injectResolvedIconPaths(html);
+  html = injectWebAnalytics(html);
   html = html.replace(/[ \t]+$/gm, "");
 
   const outputPath = path.join(root, ...outputRelativePath.split("/"));

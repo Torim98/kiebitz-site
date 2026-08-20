@@ -196,9 +196,12 @@ nobody can find is no cancellation button.
 
 ## Privacy and maintenance
 
-The site loads no CDN resources, analytics, advertising, or social scripts.
-Fonts, styles, JavaScript, screenshots and the social card are self-hosted. The
-language and motion preferences remain in browser `localStorage`.
+The public site uses Cloudflare Web Analytics for cookie-free, aggregated page
+views and visits. Set `CLOUDFLARE_WEB_ANALYTICS_TOKEN` while running the build;
+the generated pages then load Cloudflare's beacon exactly once. The embedded
+`desktop-ad/` surface deliberately never receives that beacon. Fonts, styles,
+the application's own JavaScript, screenshots and the social card remain
+self-hosted. Language and motion preferences remain in browser `localStorage`.
 
 Update the privacy policy date whenever the app or site gains a function that
 changes data processing. Keep the version in `site.config.mjs` aligned with the

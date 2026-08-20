@@ -5,7 +5,9 @@ export const site = {
   repository: "https://github.com/Torim98/Kiebitz",
   downloadUrl: "https://github.com/Torim98/Kiebitz/releases",
   playStoreUrl: "https://play.google.com/store/apps/details?id=de.torim.kiebitz",
-  socialImage: "assets/og-kiebitz.png"
+  socialImage: "assets/og-kiebitz.png",
+  // Öffentliche Kennung aus Cloudflare Web Analytics; kein Geheimnis.
+  webAnalyticsToken: process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN || "1b4e228e0b0d4095ae2c4a9a7abd5c95"
 };
 
 export const languages = {
